@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
             name="description"
-            content="Flights of Fancy: historical maps of India and a field guide to the birds of the Western Ghats."
+            content="Curiosities: independent projects on historical maps, birds of the Western Ghats, and law."
         />
         <meta name="color-scheme" content="light dark" />
-        <title>Flights of Fancy: Maps and Birds</title>
+        <title>Curiosities: Maps, Birds, and Law</title>
 
         <script>
             (function () {
@@ -36,6 +36,7 @@
                 --line: #d8d0c3;
                 --map: #9e5b2b;
                 --birds: #2c6e49;
+                --law: #8b3f50;
             }
 
             :root[data-theme="dark"] {
@@ -45,6 +46,7 @@
                 --line: #353934;
                 --map: #d09a68;
                 --birds: #83bc99;
+                --law: #d78398;
             }
 
             * {
@@ -176,6 +178,11 @@
                 color: var(--birds);
             }
 
+            .project--law:hover h2,
+            .project--law:focus-visible h2 {
+                color: var(--law);
+            }
+
             .project:hover span,
             .project:focus-visible span {
                 color: var(--text);
@@ -221,8 +228,8 @@
 
             <main>
                 <section class="intro" aria-labelledby="page-title">
-                    <h1 id="page-title">Flights of Fancy</h1>
-                    <p>Maps and Birds</p>
+                    <h1 id="page-title">Curiosities</h1>
+                    <p>Maps, Birds, and Law</p>
                 </section>
 
                 <section class="projects" aria-label="Projects">
@@ -251,6 +258,21 @@
                                 A searchable field guide to the birds of the
                                 Western Ghats, with species notes,
                                 classification, status, and photographs.
+                            </p>
+                        </div>
+                        <span aria-hidden="true">Visit →</span>
+                    </a>
+
+                    <a
+                        class="project project--law"
+                        href="https://naniwadekar.com/law-courts-constitutions"
+                    >
+                        <div>
+                            <h2>Law, Courts, and Constitutions</h2>
+                            <p>
+                                Comparative legal history, doctrine, and leading
+                                cases across legal traditions, courts, and
+                                constitutional systems.
                             </p>
                         </div>
                         <span aria-hidden="true">Visit →</span>
