@@ -1,10 +1,280 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    <p></p>
-    <p><a href="https://naniwadekar.com/european-gaze">European Maps of India</a>.</p>
-        <p><a href="https://naniwadekar.com/sahyadri-birds">Birds of the Sayhadris</a>.</p>
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="Independent digital projects by Mihir Naniwadekar."
+        />
+        <meta name="color-scheme" content="light dark" />
+        <title>Mihir Naniwadekar</title>
+
+        <script>
+            (function () {
+                try {
+                    var saved = localStorage.getItem("root-theme");
+                    var prefersDark = window.matchMedia(
+                        "(prefers-color-scheme: dark)",
+                    ).matches;
+                    document.documentElement.dataset.theme =
+                        saved || (prefersDark ? "dark" : "light");
+                } catch (error) {
+                    document.documentElement.dataset.theme = "light";
+                }
+            })();
+        </script>
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:wght@400&display=swap");
+
+            :root,
+            :root[data-theme="light"] {
+                --bg: #f5f1e8;
+                --text: #27231e;
+                --muted: #6f685d;
+                --line: #d8d0c3;
+                --map: #9e5b2b;
+                --birds: #2c6e49;
+            }
+
+            :root[data-theme="dark"] {
+                --bg: #111311;
+                --text: #ece7dd;
+                --muted: #aaa397;
+                --line: #353934;
+                --map: #d09a68;
+                --birds: #83bc99;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background: var(--bg);
+                color: var(--text);
+                font-family: "Spectral", Georgia, serif;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+
+            a {
+                color: inherit;
+            }
+
+            .page {
+                width: min(100% - 2rem, 920px);
+                margin: 0 auto;
+                padding: 2rem 0 4rem;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                padding-bottom: 1.25rem;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .name {
+                margin: 0;
+                font-family: "Cormorant Garamond", Georgia, serif;
+                font-size: 1.65rem;
+                font-weight: 600;
+            }
+
+            .theme-toggle {
+                border: 0;
+                padding: 0;
+                background: none;
+                color: var(--muted);
+                font: inherit;
+                font-size: 0.85rem;
+                cursor: pointer;
+            }
+
+            .theme-toggle:hover,
+            .theme-toggle:focus-visible {
+                color: var(--text);
+                text-decoration: underline;
+                outline: none;
+            }
+
+            main {
+                padding-top: 4rem;
+            }
+
+            h1 {
+                max-width: 680px;
+                margin: 0;
+                font-family: "Cormorant Garamond", Georgia, serif;
+                font-size: clamp(2.7rem, 7vw, 4.8rem);
+                font-weight: 500;
+                line-height: 1;
+            }
+
+            .intro {
+                max-width: 620px;
+                margin: 1.3rem 0 3.5rem;
+                color: var(--muted);
+                font-size: 1.1rem;
+            }
+
+            .projects {
+                border-top: 1px solid var(--line);
+            }
+
+            .project {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 2rem;
+                align-items: start;
+                padding: 1.8rem 0;
+                border-bottom: 1px solid var(--line);
+                text-decoration: none;
+            }
+
+            .project h2 {
+                margin: 0 0 0.35rem;
+                font-family: "Cormorant Garamond", Georgia, serif;
+                font-size: clamp(1.7rem, 4vw, 2.35rem);
+                font-weight: 500;
+                line-height: 1.1;
+            }
+
+            .project p {
+                max-width: 610px;
+                margin: 0;
+                color: var(--muted);
+            }
+
+            .project span {
+                padding-top: 0.45rem;
+                color: var(--muted);
+                white-space: nowrap;
+            }
+
+            .project--maps:hover h2,
+            .project--maps:focus-visible h2 {
+                color: var(--map);
+            }
+
+            .project--birds:hover h2,
+            .project--birds:focus-visible h2 {
+                color: var(--birds);
+            }
+
+            .project:hover span,
+            .project:focus-visible span {
+                color: var(--text);
+            }
+
+            .project:focus-visible {
+                outline: 2px solid currentColor;
+                outline-offset: 6px;
+            }
+
+            @media (max-width: 620px) {
+                .page {
+                    width: min(100% - 1.4rem, 920px);
+                }
+                main {
+                    padding-top: 3rem;
+                }
+                .project {
+                    grid-template-columns: 1fr;
+                    gap: 0.75rem;
+                }
+                .project span {
+                    padding-top: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page">
+            <header>
+                <span aria-hidden="true"></span>
+                <button
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    type="button"
+                    aria-label="Toggle light and dark theme"
+                >
+                    Dark
+                </button>
+            </header>
+
+            <main>
+                <h1>Two projects about India.</h1>
+                <p class="intro">
+                    One is a collection of historical maps. The other is a field
+                    guide to birds of the Western Ghats.
+                </p>
+
+                <section class="projects" aria-label="Projects">
+                    <a
+                        class="project project--maps"
+                        href="https://naniwadekar.com/european-gaze/"
+                    >
+                        <div>
+                            <h2>The European Gaze on India</h2>
+                            <p>
+                                Four centuries of European maps of India, from
+                                1519 to 1946, arranged as a thematic and
+                                chronological collection.
+                            </p>
+                        </div>
+                        <span aria-hidden="true">Visit →</span>
+                    </a>
+
+                    <a
+                        class="project project--birds"
+                        href="https://naniwadekar.com/sahyadri-birds/"
+                    >
+                        <div>
+                            <h2>Birds of the Sahyadris</h2>
+                            <p>
+                                A searchable field guide to the birds of the
+                                Western Ghats, with species notes,
+                                classification, status, and photographs.
+                            </p>
+                        </div>
+                        <span aria-hidden="true">Visit →</span>
+                    </a>
+                </section>
+            </main>
+        </div>
+
+        <script>
+            (function () {
+                var button = document.getElementById("theme-toggle");
+
+                function updateLabel() {
+                    var dark =
+                        document.documentElement.dataset.theme === "dark";
+                    button.textContent = dark ? "Light" : "Dark";
+                    button.setAttribute("aria-pressed", String(dark));
+                }
+
+                button.addEventListener("click", function () {
+                    var next =
+                        document.documentElement.dataset.theme === "dark"
+                            ? "light"
+                            : "dark";
+                    document.documentElement.dataset.theme = next;
+                    try {
+                        localStorage.setItem("root-theme", next);
+                    } catch (error) {}
+                    updateLabel();
+                });
+
+                updateLabel();
+            })();
+        </script>
+    </body>
 </html>
