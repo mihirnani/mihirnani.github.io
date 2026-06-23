@@ -33,6 +33,7 @@
                 --line: #d8d0c3;
                 --map: #9e5b2b;
                 --birds: #2c6e49;
+                --ants: #a8661c;
                 --law: #8b3f50;
             }
 
@@ -43,6 +44,7 @@
                 --line: #353934;
                 --map: #d09a68;
                 --birds: #83bc99;
+                --ants: #d8a45a;
                 --law: #d78398;
             }
 
@@ -184,6 +186,11 @@
                 color: var(--birds);
             }
 
+            .project--ants:hover h2,
+            .project--ants:focus-visible h2 {
+                color: var(--ants);
+            }
+
             .project--law:hover h2,
             .project--law:focus-visible h2 {
                 color: var(--law);
@@ -197,6 +204,30 @@
             .project:focus-visible {
                 outline: 2px solid currentColor;
                 outline-offset: 6px;
+            }
+
+            .about {
+                margin-top: clamp(2.5rem, 6vw, 4rem);
+                max-width: 640px;
+            }
+
+            .about h2 {
+                margin: 0 0 0.7rem;
+                font-size: 0.72rem;
+                font-weight: 400;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                color: var(--muted);
+            }
+
+            .about p {
+                margin: 0 0 0.8rem;
+                color: var(--text);
+            }
+
+            .about .colophon {
+                color: var(--muted);
+                font-size: 0.9rem;
             }
 
             @media (max-width: 620px) {
@@ -235,7 +266,10 @@
             <main>
                 <section class="intro" aria-labelledby="page-title">
                     <h1 id="page-title">Curiosities</h1>
-                    <p></p>
+                    <p>
+                        Open, non-commercial study collections — made for the
+                        pleasure of looking closely.
+                    </p>
                 </section>
 
                 <section class="projects" aria-label="Projects">
@@ -270,6 +304,21 @@
                     </a>
 
                     <a
+                        class="project project--ants"
+                        href="https://naniwadekar.com/sahyadri-ants/"
+                    >
+                        <div>
+                            <h2>Ants of the Sahyadris</h2>
+                            <p>
+                                A field guide to the ants of the Western Ghats —
+                                identification, behaviour, nesting habit, and
+                                habitat, arranged by subfamily.
+                            </p>
+                        </div>
+                        <span aria-hidden="true">Visit →</span>
+                    </a>
+
+                    <a
                         class="project project--law"
                         href="https://naniwadekar.com/law-courts-constitutions/"
                     >
@@ -283,6 +332,20 @@
                         </div>
                         <span aria-hidden="true">Visit →</span>
                     </a>
+                </section>
+
+                <section class="about" aria-labelledby="about-title">
+                    <h2 id="about-title">About</h2>
+                    <p>
+                        Curiosities is a personal collection of open,
+                        non-commercial study projects — on maps, birds, ants,
+                        and law. Each is a work in progress, built for its own
+                        sake and added to over time.
+                    </p>
+                    <p class="colophon">
+                        An open, non-commercial collection. Corrections and
+                        contributions are always welcome.
+                    </p>
                 </section>
             </main>
         </div>
