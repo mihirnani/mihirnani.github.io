@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Math Quest 🚀</title>
+<link rel="manifest" href="/mathquest-manifest.json">
+<link rel="apple-touch-icon" href="/mathquest-icon-180.png">
+<meta name="theme-color" content="#7c4dff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Math Quest">
 <style>
 :root{
   --bg1:#c7e9ff; --bg2:#e8d5ff;
@@ -4163,6 +4170,15 @@ window.addEventListener('DOMContentLoaded', () => {
   render();
   if(!state.profile.name) openProfile(true);
 });
+</script>
+<script>
+/* PWA registration: deliberately scoped to this page only. */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/mathquest-sw.js', { scope: '/mathquest.html' })
+      .catch(err => console.warn('Math Quest offline mode unavailable:', err));
+  });
+}
 </script>
 </body>
 </html>
