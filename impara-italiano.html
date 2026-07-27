@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Impara l'Italiano — A1 to B2 Italian Course</title>
+<meta name="description" content="A self-study Italian course from A1 to B2 with grammar, vocabulary, exercises, quizzes and spaced repetition.">
+<meta name="theme-color" content="#008300">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Italiano">
+<link rel="manifest" href="./impara-italiano-manifest.json">
+<link rel="apple-touch-icon" href="./impara-italiano-icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="./impara-italiano-icon-192.png">
+
 <style>
   :root {
     color-scheme: light;
@@ -3508,6 +3517,17 @@ function resetAll() {
 store.load();
 applyTheme();
 render();
+
+/* PWA: register a service worker scoped only to this application page. */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "./impara-italiano-sw.js",
+      { scope: "./impara-italiano.html" }
+    ).catch(err => console.warn("Italiano offline support was not installed:", err));
+  });
+}
+
 </script>
 </body>
 </html>
