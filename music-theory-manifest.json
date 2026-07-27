@@ -2,7 +2,7 @@
   "id": "/music-theory.html",
   "name": "Harmonia",
   "short_name": "Harmonia",
-  "description": "Interactive music theory with adaptive ear training, rhythm practice, notation, harmony laboratories, quizzes and spaced repetition.",
+  "description": "Interactive music theory with adaptive ear training, rhythm, notation and harmony laboratories, plus a 30-excerpt guided listening room.",
   "lang": "en",
   "start_url": "/music-theory.html",
   "scope": "/music-theory.html",
