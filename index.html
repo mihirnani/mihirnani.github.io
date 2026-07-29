@@ -258,6 +258,49 @@
                 font-size: 0.9rem;
             }
 
+            .install {
+                margin-top: clamp(2rem, 5vw, 3rem);
+                max-width: 640px;
+            }
+
+            .install h2 {
+                margin: 0 0 0.7rem;
+                font-size: 0.72rem;
+                font-weight: 400;
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                color: var(--muted);
+            }
+
+            .install p {
+                margin: 0 0 0.8rem;
+                color: var(--text);
+            }
+
+            .install ol {
+                margin: 0 0 0.8rem;
+                padding-left: 1.2rem;
+                color: var(--text);
+            }
+
+            .install li {
+                margin: 0 0 0.35rem;
+            }
+
+            .install .share-glyph {
+                display: inline-block;
+                border: 1px solid var(--line);
+                border-radius: 5px;
+                padding: 0 0.35em;
+                font-size: 0.85em;
+                line-height: 1.4;
+            }
+
+            .install .note {
+                color: var(--muted);
+                font-size: 0.9rem;
+            }
+
             @media (max-width: 620px) {
                 .page {
                     width: min(100% - 1.4rem, 920px);
@@ -428,6 +471,31 @@
      </p>
      <p class="colophon">
       Corrections and contributions are always welcome.
+     </p>
+    </section>
+    <section aria-labelledby="install-title" class="install">
+     <h2 id="install-title">
+      Get this as an app
+     </h2>
+     <p>
+      Any of these projects can live on your iPhone or iPad Home
+      Screen and open full-screen, like an app &mdash; and each one
+      keeps working offline once you&rsquo;ve opened it.
+     </p>
+     <ol>
+      <li>Open the project you want in <strong>Safari</strong>.</li>
+      <li>
+       Tap the <strong>Share</strong> button
+       <span class="share-glyph" aria-hidden="true">&#x2191;</span>
+       &mdash; the square with an upward arrow, in the toolbar.
+      </li>
+      <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+      <li>Tap <strong>Add</strong>. Its icon appears with your other apps.</li>
+     </ol>
+     <p class="note">
+      On Android, open the project in Chrome, tap the &#8942; menu, and
+      choose <strong>Install app</strong> or <strong>Add to Home
+      screen</strong>.
      </p>
     </section>
    </main>
