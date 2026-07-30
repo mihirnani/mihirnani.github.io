@@ -1,0 +1,29 @@
+{
+  "id": "./university-physics-mechanics.html",
+  "name": "University Physics — Vols. 1 & 2",
+  "short_name": "Physics",
+  "description": "A self-study physics course based on OpenStax University Physics Vols. 1 & 2 (mechanics, waves, thermodynamics, electromagnetism), with the full text, quizzes, generated practice problems and spaced-repetition flashcards.",
+  "lang": "en",
+  "start_url": "./university-physics-mechanics.html",
+  "scope": "./university-physics-mechanics.html",
+  "display": "standalone",
+  "background_color": "#f7f8fa",
+  "theme_color": "#0d47a1",
+  "orientation": "any",
+  "categories": ["education", "science"],
+  "icons": [
+    {
+      "src": "./university-physics-mechanics-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./university-physics-mechanics-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}
