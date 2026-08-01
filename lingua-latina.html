@@ -664,9 +664,52 @@ matchMedia("(prefers-color-scheme:dark)").addEventListener?.("change", () => { i
 // PWA: the manifest, icons and service worker are shipped as separate files
 // alongside this page. Keep them in the same directory.
 if ("serviceWorker" in navigator) {
-  addEventListener("load", () =>
-    navigator.serviceWorker.register("./lingua-latina-sw.js").catch(() => {})
-  );
+  addEventListener("load", async () => {
+    try {
+      /*
+        Remove an older root-scoped Lingua Latina registration, if one
+        already exists from previous versions.
+      */
+      const registrations =
+        await navigator.serviceWorker.getRegistrations();
+
+      for (const registration of registrations) {
+        const worker =
+          registration.active ||
+          registration.waiting ||
+          registration.installing;
+
+        const scriptPath = worker
+          ? new URL(worker.scriptURL).pathname
+          : "";
+
+        const scopePath =
+          new URL(registration.scope).pathname;
+
+        if (
+          scopePath === "/" &&
+          scriptPath === "/lingua-latina-sw.js"
+        ) {
+          await registration.unregister();
+        }
+      }
+
+      /*
+        Register Latin with its own page-specific scope.
+      */
+      await navigator.serviceWorker.register(
+        "/lingua-latina-sw.js",
+        {
+          scope: "/lingua-latina.html"
+        }
+      );
+    } catch (error) {
+      console.warn(
+        "Lingua Latina offline support was not installed:",
+        error
+      );
+    }
+  });
 }
 
 render();
