@@ -548,6 +548,11 @@ matchMedia("(prefers-color-scheme:dark)").addEventListener?.("change", () => { i
   } catch (e) { /* file:// or a strict CSP — the app works regardless */ }
 })();
 
+if ("serviceWorker" in navigator) {
+  addEventListener("load", () =>
+    navigator.serviceWorker.register("./lingua-latina-sw.js").catch(() => {})
+  );
+}
 render();
 
 </script>
