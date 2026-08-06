@@ -1,0 +1,32 @@
+{
+  "id": "./software-systems.html",
+  "name": "Foundations of Software Systems",
+  "short_name": "Software",
+  "description": "A self-study course on the foundations of software systems: algorithms, data structures and computational problem-solving — with pseudocode, an interactive lab, quizzes, spaced-repetition flashcards and an algorithm reference library.",
+  "lang": "en",
+  "start_url": "./software-systems.html",
+  "scope": "./software-systems.html",
+  "display": "standalone",
+  "background_color": "#f7f7fa",
+  "theme_color": "#4f46e5",
+  "orientation": "any",
+  "categories": [
+    "education",
+    "developer"
+  ],
+  "icons": [
+    {
+      "src": "./software-systems-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./software-systems-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false
+}
