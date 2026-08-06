@@ -1,607 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+<head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Curiosities — a personal collection of study projects: historical maps of India, birds of the Western Ghats, mathematics, astronomy, and language courses." name="description">
-  <meta content="light dark" name="color-scheme">
-  <title>
-   Curiosities
-  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Curiosities — a personal collection of open study projects in maps, natural history, mathematics, astronomy, languages, and computer science.">
+  <meta name="color-scheme" content="light dark">
+  <title>Curiosities</title>
+
   <script>
-   (function () {
-                try {
-                    var saved = localStorage.getItem("root-theme");
-                    var prefersDark = window.matchMedia(
-                        "(prefers-color-scheme: dark)",
-                    ).matches;
-                    document.documentElement.dataset.theme =
-                        saved || (prefersDark ? "dark" : "light");
-                } catch (error) {
-                    document.documentElement.dataset.theme = "light";
-                }
-            })();
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
   </script>
+
   <style>
-   @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:wght@400&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:wght@400&display=swap");
 
-            :root,
-            :root[data-theme="light"] {
-                --bg: #f5f1e8;
-                --text: #27231e;
-                --muted: #6f685d;
-                --line: #d8d0c3;
-                --map: #9e5b2b;
-                --birds: #2c6e49;
-                --ants: #a8661c;
-                --law: #8b3f50;
-                --math: #6f4aa8;
-                --astronomy: #4f3196;
-                --italian: #21845b;
-                --french: #1f5f9f;
-                --german: #9a6f00;
-                --latin: #7b1f2d;
-                --music: #8f3d74;
-                --systems: #0e7490;
-                --software: #4f46e5;
-            }
+    :root,
+    :root[data-theme="light"] {
+      --bg: #f5f1e8;
+      --text: #27231e;
+      --muted: #6f685d;
+      --line: #d8d0c3;
+      --map: #9e5b2b;
+      --birds: #2c6e49;
+      --math: #6f4aa8;
+      --astronomy: #4f3196;
+      --italian: #21845b;
+      --french: #1f5f9f;
+      --latin: #7b1f2d;
+      --software: #4f46e5;
+    }
 
-            :root[data-theme="dark"] {
-                --bg: #111311;
-                --text: #ece7dd;
-                --muted: #aaa397;
-                --line: #353934;
-                --map: #d09a68;
-                --birds: #83bc99;
-                --ants: #d8a45a;
-                --law: #d78398;
-                --math: #b69ae0;
-                --astronomy: #b7a0ef;
-                --italian: #82c7a4;
-                --french: #85b9e7;
-                --german: #e1bd62;
-                --latin: #e48b97;
-                --music: #d791bd;
-                --systems: #5fc0da;
-                --software: #a5a0f7;
-            }
+    :root[data-theme="dark"] {
+      --bg: #111311;
+      --text: #ece7dd;
+      --muted: #aaa397;
+      --line: #353934;
+      --map: #d09a68;
+      --birds: #83bc99;
+      --math: #b69ae0;
+      --astronomy: #b7a0ef;
+      --italian: #82c7a4;
+      --french: #85b9e7;
+      --latin: #e48b97;
+      --software: #a5a0f7;
+    }
 
-            * {
-                box-sizing: border-box;
-            }
+    * { box-sizing: border-box; }
 
-            body {
-                margin: 0;
-                min-height: 100vh;
-                background: var(--bg);
-                color: var(--text);
-                font-family:
-                    "Palatino", "Palatino Linotype", "Book Antiqua", Georgia,
-                    serif;
-                font-size: 1rem;
-                line-height: 1.6;
-            }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
 
-            a {
-                color: inherit;
-            }
+    a { color: inherit; }
 
-            .page {
-                width: min(100% - 2rem, 920px);
-                margin: 0 auto;
-                padding: 2rem 0 4rem;
-            }
+    .page {
+      width: min(100% - 2rem, 920px);
+      margin: 0 auto;
+      padding: 2rem 0 4rem;
+    }
 
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 1rem;
-                padding-bottom: 1.25rem;
-                border-bottom: 1px solid var(--line);
-            }
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
 
-            .name {
-                margin: 0;
-                font-family:
-                    "Cormorant Garamond", "Adobe Garamond Pro", "Garamond",
-                    "Georgia", serif;
-                font-size: 1.65rem;
-                font-weight: 600;
-            }
+    .theme-toggle {
+      border: 0;
+      padding: 0;
+      background: none;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
 
-            .theme-toggle {
-                margin-left: auto;
-                border: 0;
-                padding: 0;
-                background: none;
-                color: var(--muted);
-                font: inherit;
-                font-size: 0.85rem;
-                cursor: pointer;
-            }
+    .theme-toggle:hover,
+    .theme-toggle:focus-visible {
+      color: var(--text);
+      text-decoration: underline;
+      outline: none;
+    }
 
-            .theme-toggle:hover,
-            .theme-toggle:focus-visible {
-                color: var(--text);
-                text-decoration: underline;
-                outline: none;
-            }
+    main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 
-            main {
-                padding-top: clamp(2.5rem, 7vw, 4.5rem);
-            }
+    .intro { margin-bottom: clamp(2.5rem, 6vw, 4rem); }
 
-            .intro {
-                margin-bottom: clamp(2.5rem, 6vw, 4rem);
-            }
+    .intro h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+      font-size: clamp(2.3rem, 7vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: 0.01em;
+    }
 
-            .intro h1 {
-                max-width: 760px;
-                margin: 0;
-                font-family:
-                    "Cormorant Garamond", "Adobe Garamond Pro", "Garamond",
-                    "Georgia", serif;
-                font-size: clamp(2.3rem, 7vw, 4.5rem);
-                font-weight: 500;
-                line-height: 1.02;
-                letter-spacing: 0.01em;
-            }
+    .intro p {
+      max-width: 690px;
+      margin: 0.9rem 0 0;
+      color: var(--muted);
+      font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      letter-spacing: 0.025em;
+    }
 
-            .intro p {
-                margin: 0.75rem 0 0;
-                color: var(--muted);
-                font-family:
-                    "Cormorant Garamond", "Adobe Garamond Pro", "Garamond",
-                    "Georgia", serif;
-                font-size: clamp(1rem, 2.5vw, 1.2rem);
-                letter-spacing: 0.04em;
-            }
+    .projects { border-top: 1px solid var(--line); }
 
-            .projects {
-                border-top: 1px solid var(--line);
-            }
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2rem;
+      align-items: start;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--line);
+      text-decoration: none;
+    }
 
-            .project {
-                display: grid;
-                grid-template-columns: minmax(0, 1fr) auto;
-                gap: 2rem;
-                align-items: start;
-                padding: 1.8rem 0;
-                border-bottom: 1px solid var(--line);
-                text-decoration: none;
-            }
+    .project h2 {
+      margin: 0 0 0.35rem;
+      font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      font-weight: 500;
+      line-height: 1.1;
+    }
 
-            .project h2 {
-                margin: 0 0 0.35rem;
-                font-family:
-                    "Cormorant Garamond", "Adobe Garamond Pro", "Garamond",
-                    "Georgia", serif;
-                font-size: clamp(1.7rem, 4vw, 2.35rem);
-                font-weight: 500;
-                line-height: 1.1;
-            }
+    .project p {
+      max-width: 640px;
+      margin: 0;
+      color: var(--muted);
+    }
 
-            .project p {
-                max-width: 610px;
-                margin: 0;
-                color: var(--muted);
-            }
+    .project span {
+      padding-top: 0.45rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
 
-            .project span {
-                padding-top: 0.45rem;
-                color: var(--muted);
-                white-space: nowrap;
-            }
+    .project--maps:hover h2,
+    .project--maps:focus-visible h2 { color: var(--map); }
+    .project--birds:hover h2,
+    .project--birds:focus-visible h2 { color: var(--birds); }
+    .project--math:hover h2,
+    .project--math:focus-visible h2 { color: var(--math); }
+    .project--astronomy:hover h2,
+    .project--astronomy:focus-visible h2 { color: var(--astronomy); }
+    .project--italian:hover h2,
+    .project--italian:focus-visible h2 { color: var(--italian); }
+    .project--french:hover h2,
+    .project--french:focus-visible h2 { color: var(--french); }
+    .project--latin:hover h2,
+    .project--latin:focus-visible h2 { color: var(--latin); }
+    .project--software:hover h2,
+    .project--software:focus-visible h2 { color: var(--software); }
 
-            .project--maps:hover h2,
-            .project--maps:focus-visible h2 {
-                color: var(--map);
-            }
+    .project:hover span,
+    .project:focus-visible span { color: var(--text); }
 
-            .project--birds:hover h2,
-            .project--birds:focus-visible h2 {
-                color: var(--birds);
-            }
+    .project:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 6px;
+    }
 
-            .project--ants:hover h2,
-            .project--ants:focus-visible h2 {
-                color: var(--ants);
-            }
+    .about,
+    .install {
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      max-width: 690px;
+    }
 
-            .project--law:hover h2,
-            .project--law:focus-visible h2 {
-                color: var(--law);
-            }
+    .about h2,
+    .install h2 {
+      margin: 0 0 0.7rem;
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
-            .project--math:hover h2,
-            .project--math:focus-visible h2 {
-                color: var(--math);
-            }
+    .about p,
+    .install p { margin: 0 0 0.8rem; }
 
-            .project--astronomy:hover h2,
-            .project--astronomy:focus-visible h2 {
-                color: var(--astronomy);
-            }
+    .about .colophon,
+    .install .note {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
 
-            .project--italian:hover h2,
-            .project--italian:focus-visible h2 {
-                color: var(--italian);
-            }
+    .install ol {
+      margin: 0 0 0.8rem;
+      padding-left: 1.2rem;
+    }
 
-            .project--french:hover h2,
-            .project--french:focus-visible h2 {
-                color: var(--french);
-            }
+    .install li { margin: 0 0 0.35rem; }
 
-            .project--german:hover h2,
-            .project--german:focus-visible h2 {
-                color: var(--german);
-            }
+    .install .share-glyph {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 0 0.35em;
+      font-size: 0.85em;
+      line-height: 1.4;
+    }
 
-            .project--latin:hover h2,
-            .project--latin:focus-visible h2 {
-                color: var(--latin);
-            }
-
-            .project--music:hover h2,
-            .project--music:focus-visible h2 {
-                color: var(--music);
-            }
-
-            .project--systems:hover h2,
-            .project--systems:focus-visible h2 {
-                color: var(--systems);
-            }
-
-            .project--software:hover h2,
-            .project--software:focus-visible h2 {
-                color: var(--software);
-            }
-
-            .project:hover span,
-            .project:focus-visible span {
-                color: var(--text);
-            }
-
-            .project:focus-visible {
-                outline: 2px solid currentColor;
-                outline-offset: 6px;
-            }
-
-            .about {
-                margin-top: clamp(2.5rem, 6vw, 4rem);
-                max-width: 640px;
-            }
-
-            .about h2 {
-                margin: 0 0 0.7rem;
-                font-size: 0.72rem;
-                font-weight: 400;
-                letter-spacing: 0.22em;
-                text-transform: uppercase;
-                color: var(--muted);
-            }
-
-            .about p {
-                margin: 0 0 0.8rem;
-                color: var(--text);
-            }
-
-            .about .colophon {
-                color: var(--muted);
-                font-size: 0.9rem;
-            }
-
-            .install {
-                margin-top: clamp(2rem, 5vw, 3rem);
-                max-width: 640px;
-            }
-
-            .install h2 {
-                margin: 0 0 0.7rem;
-                font-size: 0.72rem;
-                font-weight: 400;
-                letter-spacing: 0.22em;
-                text-transform: uppercase;
-                color: var(--muted);
-            }
-
-            .install p {
-                margin: 0 0 0.8rem;
-                color: var(--text);
-            }
-
-            .install ol {
-                margin: 0 0 0.8rem;
-                padding-left: 1.2rem;
-                color: var(--text);
-            }
-
-            .install li {
-                margin: 0 0 0.35rem;
-            }
-
-            .install .share-glyph {
-                display: inline-block;
-                border: 1px solid var(--line);
-                border-radius: 5px;
-                padding: 0 0.35em;
-                font-size: 0.85em;
-                line-height: 1.4;
-            }
-
-            .install .note {
-                color: var(--muted);
-                font-size: 0.9rem;
-            }
-
-            @media (max-width: 620px) {
-                .page {
-                    width: min(100% - 1.4rem, 920px);
-                }
-                main {
-                    padding-top: 2.5rem;
-                }
-                .intro {
-                    margin-bottom: 2.5rem;
-                }
-                .project {
-                    grid-template-columns: 1fr;
-                    gap: 0.75rem;
-                }
-                .project span {
-                    padding-top: 0;
-                }
-            }
+    @media (max-width: 620px) {
+      .page { width: min(100% - 1.4rem, 920px); }
+      main { padding-top: 2.5rem; }
+      .intro { margin-bottom: 2.5rem; }
+      .project {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      .project span { padding-top: 0; }
+    }
   </style>
 
-<link rel="icon" href="curiosities-icon-32.png" sizes="32x32" type="image/png"><link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png"><link rel="apple-touch-icon" href="curiosities-icon-180.png"><link rel="canonical" href="https://naniwadekar.com/"><meta property="og:title" content="Curiosities"><meta property="og:description" content="Curiosities — a personal collection of study projects: historical maps of India, birds of the Western Ghats, mathematics, astronomy, and language courses."><meta property="og:type" content="website"><meta property="og:url" content="https://naniwadekar.com/"><meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
+  <link rel="icon" href="curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="curiosities-icon-180.png">
+  <link rel="canonical" href="https://naniwadekar.com/">
+  <meta property="og:title" content="Curiosities">
+  <meta property="og:description" content="A personal collection of open study projects in maps, natural history, mathematics, astronomy, languages, and computer science.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naniwadekar.com/">
+  <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
 </head>
- <body>
+<body>
   <div class="page">
-   <header>
-    <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">
-     Dark
-    </button>
-   </header>
-   <main>
-    <section aria-labelledby="page-title" class="intro">
-     <h1 id="page-title">
-      Curiosities
-     </h1>
-    </section>
-    <section aria-label="Projects" class="projects">
-     <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
-      <div>
-       <h2>
-        The European Gaze on India
-       </h2>
-       <p>
-        Four centuries of European maps of India, from
-                                1519 to 1946, arranged as a thematic and
-                                chronological collection. Maps chosen and arranged by me, much of the code and textual content is by Claude. The content will be updated from time to time.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-     <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
-      <div>
-       <h2>
-        Birds of the Sahyadris
-       </h2>
-       <p>
-        A searchable field guide to the birds of the
-                                Western Ghats, with species notes,
-                                classification, status, and photographs. Species details and photos chosen and arranged by me, much of the code and textual content is by Claude, although I have tried to verify the correctness. The verification is still a work in progress, and new details/species/photos will be added from time to time.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-    <!-- <a class="project project--ants" href="https://naniwadekar.com/sahyadri-ants/">
-      <div>
-       <h2>
-        Ants of the Sahyadris
-       </h2>
-       <p>
-        A field guide to the ants of the Western Ghats &mdash;
-                                identification, behaviour, nesting habit, and
-                                habitat, arranged by subfamily.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-      -->
-     <!-- Law — hidden for now; uncomment to restore.
-                    <a
-                        class="project project--law"
-                        href="https://naniwadekar.com/law-courts-constitutions/"
-                    >
-                        <div>
-                            <h2>Law, Courts, and Constitutions</h2>
-                            <p>
-                                Comparative legal history, doctrine, and leading
-                                cases across legal traditions, courts, and
-                                constitutional systems.
-                            </p>
-                        </div>
-                        <span aria-hidden="true">Visit →</span>
-                    </a>
-                    -->
-     <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
-      <div>
-       <h2>
-        MathQuest
-       </h2>
-       <p>
-           An interactive mathematics learning app for children aged 7–10, with lessons, practice, quizzes, and a structured learning path. Built by Claude, more than me.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-     <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
-      <div>
-       <h2>
-        Astronomy
-       </h2>
-       <p>
-        An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete 30-chapter text, figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-     <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
-      <div>
-       <h2>
-        Foundations of Software Systems
-       </h2>
-       <p>
-        Algorithms and data structures from first principles &mdash; pseudocode lessons with proofs and worked traces, an interactive lab with step-through tracing, live timing experiments, and executable coding challenges, three synthesis capstones, an initial placement check, adaptive review, and an algorithm reference library. Built by Claude, more than me.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
+    <header>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
 
-     <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
-      <div>
-       <h2>
-        Impara l&rsquo;Italiano
-       </h2>
-       <p>
-        A structured Italian self-study course from A1 to B2,
-            with grammar, vocabulary, exercises, quizzes, audio,
-            and spaced repetition. Built by Claude, more than me.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
+    <main>
+      <section aria-labelledby="page-title" class="intro">
+        <h1 id="page-title">Curiosities</h1>
+        <p>A personal collection of open study projects, made for curiosity and revised over time.</p>
+      </section>
 
+      <section aria-label="Projects" class="projects">
+        <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
+          <div>
+            <h2>The European Gaze on India</h2>
+            <p>Four centuries of European maps of India, from 1519 to 1946, arranged as a thematic and chronological exploration of cartography, commerce, survey, empire, and knowledge.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
 
-     <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
-      <div>
-       <h2>
-        Apprendre le fran&ccedil;ais
-       </h2>
-       <p>
-        A structured French self-study course from A1 to C2,
-            with grammar, vocabulary, exercises, quizzes, audio,
-            and spaced repetition. Built by Claude, more than me.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-<!--
-     <a class="project project--german" href="https://naniwadekar.com/deutsch-lernen.html">
-      <div>
-       <h2>
-        Deutsch lernen
-       </h2>
-       <p>
-        A structured German self-study course from A1 foundations to advanced C1 topics, with grammar, case and adjective-ending laboratories, vocabulary, exercises, pronunciation, quizzes, and spaced repetition.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
- -->
-     <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
-      <div>
-       <h2>
-        Lingua Latina
-       </h2>
-       <p>
-        A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, spaced repetition, and a graded library of prose and poetry.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
+        <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
+          <div>
+            <h2>Birds of the Sahyadris</h2>
+            <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Verification and expansion remain ongoing.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
 
-     <!--<a class="project project--music" href="https://naniwadekar.com/music-theory.html">
-      <div>
-       <h2>
-        Harmonia
-       </h2>
-       <p>
-           A music theory and ear-training course from foundations to advanced harmony, with interactive notation, rhythm and harmony laboratories, and a guided listening room.
-       </p>
-      </div>
-      <span aria-hidden="true">
-       Visit &rarr;
-      </span>
-     </a>
-     -->
-    </section>
-    <section aria-labelledby="install-title" class="install">
-     <h2 id="install-title">
-      Get this as an app
-     </h2>
-     <p>
-      Any of these projects can live on your iPhone or iPad Home
-      Screen and open full-screen, like an app &mdash; and each one
-      keeps working offline once you&rsquo;ve opened it.
-     </p>
-     <ol>
-      <li>Open the project you want in <strong>Safari</strong>.</li>
-      <li>
-       Tap the <strong>Share</strong> button
-       <span class="share-glyph" aria-hidden="true">&#x2191;</span>
-       &mdash; the square with an upward arrow, in the toolbar.
-      </li>
-      <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
-      <li>Tap <strong>Add</strong>. Its icon appears with your other apps.</li>
-     </ol>
-     <p class="note">
-      On Android, open the project in Chrome, tap the &#8942; menu, and
-      choose <strong>Install app</strong> or <strong>Add to Home
-      screen</strong>.
-     </p>
-    </section>
-   </main>
+        <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
+          <div>
+            <h2>MathQuest</h2>
+            <p>An interactive mathematics learning app for children aged 7–10, with lessons, generated practice, quizzes, rewards, and a structured learning path.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+
+        <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
+          <div>
+            <h2>Astronomy</h2>
+            <p>An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete text and figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+
+        <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
+          <div>
+            <h2>Foundations of Software Systems</h2>
+            <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+
+        <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
+          <div>
+            <h2>Impara l&rsquo;Italiano</h2>
+            <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+
+        <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
+          <div>
+            <h2>Apprendre le fran&ccedil;ais</h2>
+            <p>A structured French self-study course from beginner foundations to advanced grammar and usage, with vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+
+        <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
+          <div>
+            <h2>Lingua Latina</h2>
+            <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, spaced repetition, and a graded library of prose and poetry.</p>
+          </div>
+          <span aria-hidden="true">Visit &rarr;</span>
+        </a>
+      </section>
+
+      <section aria-labelledby="about-title" class="about">
+        <h2 id="about-title">About the collection</h2>
+        <p>These projects began as ways of studying subjects that interested me. Some are works of selection and curation; others are interactive courses and tools. They are published openly and will continue to change as I learn, verify, and revise.</p>
+        <p class="colophon">Several interactive projects were developed with substantial assistance from Claude by Anthropic and ChatGPT by OpenAI. I chose the subjects, shaped the structure and editorial direction, tested the applications, and continue to review and revise them. Source attributions and any material still undergoing verification are identified within the relevant projects.</p>
+      </section>
+
+      <section aria-labelledby="install-title" class="install">
+        <h2 id="install-title">Get this as an app</h2>
+        <p>Any of these projects can live on your iPhone or iPad Home Screen and open full-screen, like an app. Each one also works offline after it has been opened once.</p>
+        <ol>
+          <li>Open the project you want in <strong>Safari</strong>.</li>
+          <li>Tap the <strong>Share</strong> button <span class="share-glyph" aria-hidden="true">&uarr;</span> — the square with an upward arrow.</li>
+          <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+          <li>Tap <strong>Add</strong>. Its icon appears with your other apps.</li>
+        </ol>
+        <p class="note">On Android, open the project in Chrome, tap the &#8942; menu, and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p>
+      </section>
+    </main>
   </div>
+
   <script>
-   (function () {
-                var button = document.getElementById("theme-toggle");
+    (function () {
+      var button = document.getElementById("theme-toggle");
 
-                function updateLabel() {
-                    var dark =
-                        document.documentElement.dataset.theme === "dark";
-                    button.textContent = dark ? "Light" : "Dark";
-                    button.setAttribute("aria-pressed", String(dark));
-                }
+      function updateLabel() {
+        var dark = document.documentElement.dataset.theme === "dark";
+        button.textContent = dark ? "Light" : "Dark";
+        button.setAttribute("aria-pressed", String(dark));
+      }
 
-                button.addEventListener("click", function () {
-                    var next =
-                        document.documentElement.dataset.theme === "dark"
-                            ? "light"
-                            : "dark";
-                    document.documentElement.dataset.theme = next;
-                    try {
-                        localStorage.setItem("root-theme", next);
-                    } catch (error) {}
-                    updateLabel();
-                });
+      button.addEventListener("click", function () {
+        var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("root-theme", next);
+        } catch (error) {}
+        updateLabel();
+      });
 
-                updateLabel();
-            })();
+      updateLabel();
+    })();
   </script>
- </body>
+</body>
 </html>

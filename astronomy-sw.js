@@ -5,6 +5,7 @@
 const CACHE_PREFIX = "astronomy-2e-";
 const CACHE_VERSION = "v1";
 const APP_CACHE = `${CACHE_PREFIX}${CACHE_VERSION}`;
+const APP_PAGE = new URL("./astronomy.html", self.location.href).pathname;
 
 const APP_FILES = [
   "./astronomy.html",
@@ -48,7 +49,11 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   const sameOrigin = url.origin === self.location.origin;
 
-  if (request.mode === "navigate" && sameOrigin) {
+  if (
+    request.mode === "navigate" &&
+    sameOrigin &&
+    url.pathname === APP_PAGE
+  ) {
     event.respondWith(networkFirstAppPage(request));
     return;
   }
@@ -75,7 +80,7 @@ async function networkFirstAppPage(request) {
     return (
       (await cache.match("./astronomy.html")) ||
       new Response(
-        ""<!doctype html><meta charset='utf-8'><title>Astronomy offline</title>" +
+        "<!doctype html><meta charset='utf-8'><title>Astronomy offline</title>" +
         "<main style='font:16px system-ui;padding:2rem;max-width:40rem'>" +
         "<h1>Astronomy</h1>" +
         "<p>The course is not cached yet. Reconnect to the internet and open it once.</p>" +
