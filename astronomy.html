@@ -731,8 +731,19 @@ applyTheme();
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",applyTheme);
 document.getElementById("menubtn").addEventListener("click",()=>document.getElementById("sidebar").classList.toggle("open"));
 render();
-if("serviceWorker" in navigator){
-  window.addEventListener("load",()=>{navigator.serviceWorker.register("./astronomy-sw.js").catch(()=>{});});
+/* PWA: register the service worker only for the Astronomy page. */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "./astronomy-sw.js",
+      { scope: "./astronomy.html" }
+    ).catch((error) => {
+      console.warn(
+        "Astronomy offline support was not installed:",
+        error
+      );
+    });
+  });
 }
 
 </script>

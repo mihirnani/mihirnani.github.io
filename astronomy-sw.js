@@ -75,7 +75,7 @@ async function networkFirstAppPage(request) {
     return (
       (await cache.match("./astronomy.html")) ||
       new Response(
-        "<!doctype html><meta charset='utf-8'><title>Physics offline</title>" +
+        ""<!doctype html><meta charset='utf-8'><title>Astronomy offline</title>" +
         "<main style='font:16px system-ui;padding:2rem;max-width:40rem'>" +
         "<h1>Astronomy</h1>" +
         "<p>The course is not cached yet. Reconnect to the internet and open it once.</p>" +
