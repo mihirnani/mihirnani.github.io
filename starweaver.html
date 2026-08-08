@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>STARWEAVER — The Cluster Charter</title>
+<meta name="description" content="A gentle procedurally generated space exploration and strategy game: chart a star cluster, follow clues, recover three Star Keys, and reach the Celestial Gate.">
+<meta name="theme-color" content="#070a14">
+<meta name="application-name" content="STARWEAVER">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="STARWEAVER">
+<link rel="manifest" href="/starweaver-manifest.json">
+<link rel="apple-touch-icon" href="/starweaver-icon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/starweaver-icon-192.png">
+<link rel="canonical" href="https://naniwadekar.com/starweaver.html">
+<meta property="og:title" content="STARWEAVER — The Cluster Charter">
+<meta property="og:description" content="Chart an unknown star cluster, follow true clues, recover three Star Keys, and reach the Celestial Gate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://naniwadekar.com/starweaver.html">
+<meta property="og:image" content="https://naniwadekar.com/starweaver-icon-512.png">
+<style>
+:root{
+  --bg:#070a14; --panel:#0e1424; --panel2:#141c33; --edge:#26314f;
+  --ink:#dfe7ff; --dim:#8d9ac0; --gold:#ffcf6b; --cyan:#5fd6e8; --green:#7fe0a0;
+  --red:#ff8080; --violet:#b79bff; --accent:#3b6ef5;
+}
+*{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent;}
+html,body{height:100%; overflow:hidden;}
+body{
+  background:var(--bg); color:var(--ink);
+  font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;
+  font-size:15px; display:flex; flex-direction:column;
+}
+button{font-family:inherit;}
+/* ---------- header ---------- */
+#hdr{
+  display:flex; align-items:center; gap:10px; padding:7px 14px;
+  background:linear-gradient(180deg,#101731,#0b1122); border-bottom:1px solid var(--edge);
+  flex:0 0 auto; z-index:20;
+}
+#hdr h1{font-size:17px; letter-spacing:3px; color:var(--gold); font-weight:700; white-space:nowrap;}
+#hdr h1 span{color:var(--cyan); font-weight:400;}
+#seedTag{font-size:12px; color:var(--dim); cursor:pointer; white-space:nowrap;}
+#seedTag:hover{color:var(--cyan);}
+#hdr .spacer{flex:1;}
+.hbtn{
+  background:var(--panel2); color:var(--ink); border:1px solid var(--edge);
+  border-radius:8px; padding:5px 11px; font-size:13px; cursor:pointer; white-space:nowrap;
+}
+.hbtn:hover{border-color:var(--cyan); color:var(--cyan);}
+/* ---------- layout ---------- */
+#main{flex:1; display:flex; min-height:0;}
+#mapWrap{flex:1; position:relative; min-width:0; background:#04060d;}
+#cv{position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab;}
+#cv.drag{cursor:grabbing;}
+#mapBtns{position:absolute; right:12px; bottom:12px; display:flex; flex-direction:column; gap:6px; z-index:5;}
+.mbtn{
+  width:38px; height:38px; border-radius:10px; border:1px solid var(--edge);
+  background:rgba(14,20,36,.88); color:var(--ink); font-size:17px; cursor:pointer;
+}
+.mbtn:hover{border-color:var(--cyan); color:var(--cyan);}
+#hoverTip{
+  position:absolute; pointer-events:none; z-index:6; display:none;
+  background:rgba(10,15,30,.94); border:1px solid var(--edge); border-radius:8px;
+  padding:6px 10px; font-size:12.5px; max-width:230px; line-height:1.45;
+}
+#hoverTip b{color:var(--gold);}
+#hoverTip .cost{color:var(--cyan);}
+#hoverTip .warn{color:var(--red);}
+/* ---------- sidebar ---------- */
+#side{
+  flex:0 0 330px; background:var(--panel); border-left:1px solid var(--edge);
+  display:flex; flex-direction:column; min-height:0;
+}
+#statusBox{padding:10px 12px 8px; border-bottom:1px solid var(--edge); flex:0 0 auto;}
+#dayRow{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px;}
+#dayRow .day{font-size:15px; color:var(--gold); font-weight:600;}
+#dayRow .keys{font-size:15px; letter-spacing:2px;}
+.bar{height:15px; border-radius:8px; background:#0a0f1e; border:1px solid var(--edge);
+  position:relative; overflow:hidden; margin-bottom:6px;}
+.bar .fill{position:absolute; inset:0; border-radius:7px; transition:width .3s;}
+.bar .lbl{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  font-size:10.5px; letter-spacing:1px; color:#eaf0ff; text-shadow:0 1px 2px #000; font-weight:600;}
+#fuelFill{background:linear-gradient(90deg,#1f7fe0,#5fd6e8);}
+#hullFill{background:linear-gradient(90deg,#2e9e63,#7fe0a0);}
+#credRow{display:flex; justify-content:space-between; font-size:14px; margin-top:2px;}
+#credRow .cr{color:var(--gold); font-weight:600;}
+#credRow .cargo{color:var(--dim);}
+/* ---------- tabs ---------- */
+#tabs{display:flex; border-bottom:1px solid var(--edge); flex:0 0 auto;}
+.tab{flex:1; padding:7px 0; text-align:center; font-size:12.5px; letter-spacing:.5px;
+  color:var(--dim); cursor:pointer; border-bottom:2px solid transparent; user-select:none;}
+.tab.on{color:var(--cyan); border-bottom-color:var(--cyan); background:rgba(95,214,232,.05);}
+.tab .dot{display:none; color:var(--gold);}
+.tab.alert .dot{display:inline;}
+#panels{flex:1; overflow-y:auto; min-height:0; scrollbar-width:thin; scrollbar-color:#26314f transparent;}
+.panel{display:none; padding:10px 12px 20px;}
+.panel.on{display:block;}
+.panel h3{font-size:13px; letter-spacing:1.5px; color:var(--gold); margin:10px 0 6px; text-transform:uppercase;}
+.panel h3:first-child{margin-top:0;}
+.small{font-size:12.5px; color:var(--dim); line-height:1.5;}
+/* here panel */
+#hereName{font-size:16.5px; font-weight:700; margin-bottom:2px;}
+#hereSub{font-size:12.5px; color:var(--dim); margin-bottom:8px; line-height:1.5;}
+.abtn{
+  display:block; width:100%; margin:6px 0; padding:9px 12px; text-align:left;
+  background:var(--panel2); border:1px solid var(--edge); border-radius:9px;
+  color:var(--ink); font-size:13.5px; cursor:pointer; line-height:1.35;
+}
+.abtn:hover:not(:disabled){border-color:var(--cyan);}
+.abtn:disabled{opacity:.45; cursor:default;}
+.abtn .sub{display:block; font-size:11.5px; color:var(--dim); margin-top:1px;}
+.abtn.gold{border-color:#6b5a2a;} .abtn.gold:hover:not(:disabled){border-color:var(--gold);}
+/* planets list */
+.planet{display:flex; align-items:center; gap:8px; padding:5px 0; font-size:13px;}
+.planet .pd{color:var(--dim); font-size:12px;}
+.pdot{width:11px; height:11px; border-radius:50%; flex:0 0 auto;}
+/* cargo */
+#cargoList{display:flex; flex-direction:column; gap:4px;}
+.cargoRow{display:flex; justify-content:space-between; padding:5px 8px; background:var(--panel2);
+  border-radius:7px; font-size:13px;}
+.cargoRow .q{color:var(--gold);}
+/* clues */
+.clueGroup{margin-bottom:12px;}
+.clueGroup h4{font-size:13px; color:var(--violet); margin-bottom:4px;}
+.clue{font-size:12.8px; color:var(--ink); padding:5px 8px; background:var(--panel2);
+  border-left:3px solid var(--violet); border-radius:0 7px 7px 0; margin-bottom:4px; line-height:1.45;}
+.clue.done{opacity:.5; border-left-color:var(--green);}
+/* log */
+#logList{display:flex; flex-direction:column-reverse; gap:5px;}
+.logRow{font-size:12.5px; color:var(--dim); line-height:1.45; padding:4px 8px;
+  background:var(--panel2); border-radius:7px;}
+.logRow b{color:var(--ink); font-weight:600;}
+.logRow .d{color:var(--cyan); font-size:11px; margin-right:5px;}
+/* mission */
+.missionBox{background:var(--panel2); border:1px solid var(--edge); border-radius:9px;
+  padding:9px 11px; font-size:13px; line-height:1.5; margin-bottom:8px;}
+.missionBox b{color:var(--gold);}
+/* ---------- modal ---------- */
+#shade{position:fixed; inset:0; background:rgba(3,5,12,.72); z-index:40; display:none;
+  align-items:center; justify-content:center; padding:16px; backdrop-filter:blur(3px);}
+#shade.on{display:flex;}
+#modal{
+  width:min(560px,96vw); max-height:88vh; overflow-y:auto; scrollbar-width:thin;
+  background:linear-gradient(180deg,#131b34,#0d1326); border:1px solid #34406b;
+  border-radius:16px; padding:22px 24px; box-shadow:0 18px 60px rgba(0,0,0,.6);
+}
+#modal h2{font-size:19px; color:var(--gold); margin-bottom:4px; letter-spacing:.5px;}
+#modal .msub{font-size:12.5px; color:var(--dim); margin-bottom:12px;}
+#modal p{font-size:14px; line-height:1.6; margin-bottom:10px; color:var(--ink);}
+#modal p.flavor{color:#c6d2f5;}
+.mrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px;}
+.mbtn2{
+  flex:1 1 auto; min-width:130px; padding:10px 14px; border-radius:10px; cursor:pointer;
+  background:var(--panel2); border:1px solid var(--edge); color:var(--ink);
+  font-size:13.5px; text-align:left; line-height:1.35;
+}
+.mbtn2:hover:not(:disabled){border-color:var(--cyan);}
+.mbtn2:disabled{opacity:.4; cursor:default;}
+.mbtn2 .sub{display:block; font-size:11.5px; color:var(--dim); margin-top:2px;}
+.mbtn2.primary{background:linear-gradient(180deg,#2b55c9,#1d3d9e); border-color:#4a72e8;}
+.mbtn2.primary:hover{border-color:#8fb0ff;}
+/* market table */
+table.mkt{width:100%; border-collapse:collapse; font-size:13px; margin:6px 0 10px;}
+table.mkt th{font-size:11px; color:var(--dim); text-transform:uppercase; letter-spacing:1px;
+  text-align:left; padding:4px 6px; border-bottom:1px solid var(--edge);}
+table.mkt td{padding:6px 6px; border-bottom:1px solid #1b2440;}
+table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .hi{color:var(--red);}
+.tbtn{padding:3px 9px; margin-left:4px; border-radius:6px; border:1px solid var(--edge);
+  background:var(--panel2); color:var(--ink); cursor:pointer; font-size:12px;}
+.tbtn:hover:not(:disabled){border-color:var(--cyan);}
+.tbtn:disabled{opacity:.35; cursor:default;}
+/* shop */
+.shopItem{display:flex; justify-content:space-between; align-items:center; gap:10px;
+  padding:8px 10px; background:var(--panel2); border:1px solid var(--edge); border-radius:9px; margin-bottom:7px;}
+.shopItem .si-l{font-size:13.5px; line-height:1.4;}
+.shopItem .si-l .sub{display:block; font-size:11.5px; color:var(--dim);}
+/* toast */
+#toast{position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(20px);
+  background:#182246; border:1px solid #3a4a80; color:var(--ink); padding:9px 18px;
+  border-radius:10px; font-size:13.5px; opacity:0; transition:all .3s; z-index:60;
+  pointer-events:none; max-width:80vw; text-align:center;}
+#toast.on{opacity:1; transform:translateX(-50%) translateY(0);}
+/* key pips */
+.keypip{opacity:.25; filter:grayscale(1);}
+.keypip.got{opacity:1; filter:none; text-shadow:0 0 8px var(--gold);}
+.howstep{display:flex;gap:10px;align-items:flex-start;padding:9px 10px;margin:7px 0;background:var(--panel2);border:1px solid var(--edge);border-radius:9px;line-height:1.45;}
+.howstep .n{flex:0 0 24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#223767;color:var(--cyan);font-weight:700;font-size:12px;}
+.howstep b{color:var(--gold);}
+.tipbox{padding:9px 11px;margin:9px 0;background:rgba(95,214,232,.06);border:1px solid rgba(95,214,232,.25);border-radius:9px;font-size:12.8px;line-height:1.5;}
+.clusterCard{padding:14px 15px;margin:10px 0 12px;background:linear-gradient(180deg,rgba(255,207,107,.08),rgba(95,214,232,.04));border:1px solid #4b4660;border-radius:12px;text-align:center;}
+.clusterCard .eyebrow{font-size:10.5px;text-transform:uppercase;letter-spacing:1.7px;color:var(--dim);margin-bottom:4px;}
+.clusterCard .clusterName{font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.3px;margin-bottom:3px;}
+.clusterCard .clusterSub{font-size:12px;color:var(--dim);line-height:1.4;}
+.clusterTools{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;margin-top:10px;}
+.clusterTools .mbtn2{flex:0 1 auto;min-width:150px;text-align:center;}
+.sharedBox{margin-top:12px;padding-top:10px;border-top:1px solid var(--edge);}
+.sharedRow{display:flex;gap:7px;align-items:stretch;margin-top:6px;}
+.sharedRow input{min-width:0;flex:1;padding:9px 11px;background:#0a0f1e;color:var(--ink);border:1px solid var(--edge);border-radius:8px;font-size:13px;}
+.sharedRow button{flex:0 0 auto;}
+.ruinNote{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 8px;margin:4px 0;background:var(--panel2);border-radius:7px;font-size:12.5px;}
+.ruinNote .where{color:var(--dim);font-size:11.5px;}
+.markSuspect{color:var(--gold);border-color:#6b5a2a;}
+.markExclude{color:var(--red);border-color:#62343b;}
+@media (max-width:760px){
+  #side{flex-basis:270px;}
+  body{font-size:14px;}
+}
+@media (max-width:600px){
+  #main{flex-direction:column;}
+  #side{flex:0 0 48%; border-left:none; border-top:1px solid var(--edge);}
+  #hdr{gap:5px;padding:6px 8px;}
+  #hdr h1{font-size:13px;letter-spacing:1.5px;}
+  #hdr h1 span,#seedTag{display:none;}
+  .hbtn{padding:4px 7px;font-size:11.5px;border-radius:7px;}
+}
+</style>
+</head>
+<body>
+<div id="hdr">
+  <h1>STARWEAVER <span>· The Cluster Charter</span></h1>
+  <div id="seedTag" title="Click to copy this cluster code"></div>
+  <div class="spacer"></div>
+  <button class="hbtn" id="btnHelp">How to Play</button>
+  <button class="hbtn" id="btnSave">Save</button>
+  <button class="hbtn" id="btnNew">New Voyage</button>
+  <button class="hbtn" id="btnMute" title="Toggle sound">🔊</button>
+</div>
+
+<div id="main">
+  <div id="mapWrap">
+    <canvas id="cv"></canvas>
+    <div id="mapBtns">
+      <button class="mbtn" id="btnZin" title="Zoom in">+</button>
+      <button class="mbtn" id="btnZout" title="Zoom out">−</button>
+      <button class="mbtn" id="btnHome" title="Center on ship">◎</button>
+    </div>
+    <div id="hoverTip"></div>
+  </div>
+
+  <div id="side">
+    <div id="statusBox">
+      <div id="dayRow">
+        <span class="day" id="dayLbl">Day 1 / 110</span>
+        <span class="keys" id="keyLbl"></span>
+      </div>
+      <div class="bar"><div class="fill" id="fuelFill"></div><div class="lbl" id="fuelLbl">FUEL</div></div>
+      <div class="bar"><div class="fill" id="hullFill"></div><div class="lbl" id="hullLbl">HULL</div></div>
+      <div id="credRow"><span class="cr" id="credLbl">◈ 300</span><span class="cargo" id="cargoLbl">Cargo 0/6</span></div>
+    </div>
+    <div id="tabs">
+      <div class="tab on" data-p="here">Here</div>
+      <div class="tab" data-p="cargo">Cargo</div>
+      <div class="tab" data-p="clues">Clues <span class="dot">●</span></div>
+      <div class="tab" data-p="log">Log</div>
+    </div>
+    <div id="panels">
+      <div class="panel on" id="p-here"></div>
+      <div class="panel" id="p-cargo"></div>
+      <div class="panel" id="p-clues"></div>
+      <div class="panel" id="p-log"><div id="logList"></div></div>
+    </div>
+  </div>
+</div>
+
+<div id="shade"><div id="modal"></div></div>
+<div id="toast"></div>
+
+<script>
+"use strict";
+/* ============================================================
+   STARWEAVER — a procedurally generated exploration strategy game
+   Single-file HTML5. Every seed weaves a brand-new star cluster.
+   ============================================================ */
+
+/* ---------- seeded RNG ---------- */
+function hashStr(s){
+  let h=1779033703^s.length;
+  for(let i=0;i<s.length;i++){h=Math.imul(h^s.charCodeAt(i),3432918353); h=(h<<13)|(h>>>19);}
+  h=Math.imul(h^(h>>>16),2246822507); h=Math.imul(h^(h>>>13),3266489909);
+  return (h^(h>>>16))>>>0;
+}
+function mulberry32(a){
+  return function(){
+    a|=0; a=(a+0x6D2B79F5)|0;
+    let t=Math.imul(a^(a>>>15),1|a);
+    t=(t+Math.imul(t^(t>>>7),61|t))^t;
+    return ((t^(t>>>14))>>>0)/4294967296;
+  };
+}
+let R=mulberry32(1);                     // world-gen rng (re-seeded per game)
+let RD=mulberry32(2);                    // drama rng — separate, tracked stream
+let rdCalls=0;                           // saved so future events resume exactly
+const ri=(a,b)=>a+Math.floor(R()*(b-a+1));
+const pick=arr=>arr[Math.floor(R()*arr.length)];
+const shuffle=arr=>{const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(R()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a;};
+const drand=()=>{ rdCalls++; return RD(); };
+const dpick=arr=>arr[Math.floor(drand()*arr.length)];
+const dri=(a,b)=>a+Math.floor(drand()*(b-a+1));
+const dchance=p=>drand()<p;
+
+/* ---------- hex math (axial, pointy-top) ---------- */
+const SQ3=Math.sqrt(3);
+const DIRS=[[1,0],[1,-1],[0,-1],[-1,0],[-1,1],[0,1]];
+const hk=(q,r)=>q+","+r;
+function hexDist(a,b){
+  return (Math.abs(a.q-b.q)+Math.abs(a.q+a.r-b.q-b.r)+Math.abs(a.r-b.r))/2;
+}
+function axialPx(q,r,s){ return {x:s*SQ3*(q+r/2), y:s*1.5*r}; }
+
+/* ---------- static data ---------- */
+const MAP_R=8;                 // hex radius of the cluster
+const GOODS=[
+  {id:"ore",   name:"Ore",        icon:"⛏", base:28,  col:"#b8a98f"},
+  {id:"bot",   name:"Botanicals", icon:"🌿", base:46,  col:"#7fe0a0"},
+  {id:"med",   name:"Medicine",   icon:"⚕", base:74,  col:"#8fd0ff"},
+  {id:"tech",  name:"Tech Parts", icon:"⚙", base:105, col:"#c9d4e8"},
+  {id:"cry",   name:"Crystals",   icon:"◆", base:150, col:"#b79bff"},
+  {id:"dust",  name:"Stardust",   icon:"✦", base:215, col:"#ffcf6b"},
+];
+const GOOD=Object.fromEntries(GOODS.map(g=>[g.id,g]));
+const STAR_COLORS=[
+  {id:"red",    name:"red",    col:"#ff7b6b", glow:"#ff4830"},
+  {id:"orange", name:"orange", col:"#ffb35c", glow:"#ff9020"},
+  {id:"yellow", name:"golden", col:"#ffe08a", glow:"#ffcc40"},
+  {id:"white",  name:"white",  col:"#eef2ff", glow:"#c8d6ff"},
+  {id:"blue",   name:"blue",   col:"#9cc4ff", glow:"#5f9dff"},
+];
+const SYL1=["Al","Be","Cas","Dra","El","Fen","Gal","Hy","Ix","Jun","Kel","Lyr","Mi","No","Or","Pra","Qi","Ri","Sol","Tau","Um","Vel","Wy","Xan","Yl","Zel","Tha","Nova"];
+const SYL2=["da","ne","ri","los","mar","tis","va","dor","eth","ion","ara","um","is","os","ea","une","ax","ophe","ilia","or"];
+const SUFFIX=["","",""," Prime"," Minor"," Reach"," Haven"];
+const DIFF={
+  relaxed:  {label:"Relaxed",   days:135, fuel:26, fuelMax:26, credits:420, hint:"Gentle margins, plenty of days. Great first voyage."},
+  standard: {label:"Standard",  days:110, fuel:20, fuelMax:20, credits:300, hint:"The intended experience. Plan your routes."},
+  challenge:{label:"Challenge", days:88,  fuel:18, fuelMax:18, credits:220, hint:"Tight fuel, ticking clock. For seasoned captains."},
+};
+const KEY_PUZZLES=[
+  {q:"Three doors show a SUNRISE, a NOON blaze, and a field of NIGHT stars. A riddle glows: <i>“Enter as every voyage ends.”</i>",a:["Sunrise door","Noon door","Night door"],correct:2,why:"Voyages end beneath the night sky, when the traveller finally rests and takes stock."},
+  {q:"A stone orrery spins. A voice says: <i>“Set the worlds to the slowest dance.”</i>",a:["Closest to their sun","Farthest from their sun","All in a straight line"],correct:1,why:"The farther a world is from its star, the longer its orbit generally takes."},
+  {q:"A silver basin mirrors the galaxy. Words ripple: <i>“Feed the sky what the sky first gave.”</i>",a:["Pour in fuel","Scatter stardust","Drop in a credit chip"],correct:1,why:"The clue points to stardust: the old poetic substance from which stars and worlds are made."},
+  {q:"Three bells are marked ONE, TWO, and THREE. The wall reads: <i>“Strike the number of Star Keys in the Charter.”</i>",a:["One","Two","Three"],correct:2,why:"The Charter asks you to recover three Star Keys."},
+  {q:"A compass rose has eight points. The inscription says: <i>“Choose the direction opposite east.”</i>",a:["North","West","South"],correct:1,why:"West is directly opposite east."},
+  {q:"Three lamps burn blue, gold, and red. The riddle says: <i>“Choose the colour of the hottest ordinary star.”</i>",a:["Blue","Gold","Red"],correct:0,why:"Blue stars have the highest surface temperatures of these three colours."},
+  {q:"A clockwork moon circles a tiny sun. The inscription reads: <i>“What keeps a moon from flying away?”</i>",a:["Gravity","Starlight","Magnetism"],correct:0,why:"Gravity keeps moons in orbit around their planets."},
+  {q:"A map shows a straight route of four adjacent hexes. The wall asks: <i>“How many jumps from the first hex to the last?”</i>",a:["Two","Three","Four"],correct:1,why:"Moving across four adjacent hexes requires three jumps between them."},
+  {q:"Three sealed jars are labelled ICE, STEAM, and VACUUM. The riddle says: <i>“Choose what is still water.”</i>",a:["Ice","Steam","Vacuum"],correct:0,why:"Ice is water in solid form."},
+  {q:"A miniature planet turns once beneath a fixed lamp. The inscription asks: <i>“What does one full turn make?”</i>",a:["A day","A year","A season"],correct:0,why:"A planet's rotation defines its day; its orbit defines its year."},
+  {q:"A sequence glows on the floor: 2, 4, 8, 16, __. The vault asks for the next mark.",a:["18","24","32"],correct:2,why:"Each number doubles the previous one, so 16 becomes 32."},
+  {q:"Three paths are labelled STAR, PLANET, and MOON. The inscription says: <i>“Choose the one that makes its own light.”</i>",a:["Star","Planet","Moon"],correct:0,why:"Stars generate their own light; planets and moons mainly reflect it."}
+];
+const DIRNAMES=["east","northeast","northwest","west","southwest","southeast"];
+
+/* ============================================================
+   GALAXY GENERATION
+   ============================================================ */
+let W=null;   // world (immutable per seed)
+let S=null;   // mutable game state
+
+function genGalaxy(seedStr){
+  R=mulberry32(hashStr(seedStr));
+  const cells=new Map();
+  for(let q=-MAP_R;q<=MAP_R;q++){
+    for(let r=Math.max(-MAP_R,-q-MAP_R); r<=Math.min(MAP_R,-q+MAP_R); r++){
+      cells.set(hk(q,r),{q,r,type:"space"});
+    }
+  }
+  const all=[...cells.values()];
+  const at=(q,r)=>cells.get(hk(q,r));
+  const center={q:0,r:0};
+
+  /* nebula blobs — drifting random walks */
+  const nebCount=ri(3,4);
+  for(let n=0;n<nebCount;n++){
+    let c=pick(all.filter(c=>hexDist(c,center)>=3));
+    const len=ri(5,9);
+    for(let i=0;i<len;i++){
+      if(c && c.type==="space") c.type="nebula";
+      const d=pick(DIRS);
+      const nx=at(c.q+d[0], c.r+d[1]);
+      if(nx) c=nx;
+    }
+  }
+  /* asteroid fields */
+  let empt=shuffle(all.filter(c=>c.type==="space" && hexDist(c,center)>=2));
+  for(let i=0;i<13 && empt.length;i++){ empt.pop().type="asteroid"; }
+
+  /* star systems — spaced out */
+  const stars=[];
+  const usedNames=new Set();
+  const mkName=()=>{
+    for(let t=0;t<40;t++){
+      const n=pick(SYL1)+pick(SYL2)+(R()<.22?pick(SUFFIX):"");
+      if(!usedNames.has(n)){usedNames.add(n); return n;}
+    }
+    return "Star-"+ri(100,999);
+  };
+  let cand=shuffle(all.filter(c=>c.type==="space"));
+  for(const c of cand){
+    if(stars.length>=26) break;
+    if(stars.some(s=>hexDist(s,c)<2)) continue;
+    c.type="star";
+    c.name=mkName();
+    c.color=pick(STAR_COLORS);
+    c.planets=[];
+    const np=ri(1,3);
+    const goodPool=shuffle(GOODS.map(g=>g.id));
+    for(let p=0;p<np;p++){
+      c.planets.push({
+        name:c.name+" "+["I","II","III"][p],
+        kind:pick(["rocky","oceanic","gas giant","frozen","verdant","desert"]),
+      });
+    }
+    /* economy: produces are cheap here, wants are pricey */
+    c.produces=goodPool.slice(0,ri(1,2));
+    c.wants=goodPool.slice(3,3+ri(1,2)).filter(g=>!c.produces.includes(g));
+    c.hasStation=R()<.6;
+    c.fuelPrice=ri(7,13);          // per unit
+    c.gasGiant=c.planets.some(p=>p.kind==="gas giant");
+    stars.push(c);
+  }
+  /* guarantee a healthy station count */
+  const stationStars=stars.filter(s=>s.hasStation);
+  if(stationStars.length<9){
+    for(const s of shuffle(stars.filter(s=>!s.hasStation)).slice(0,9-stationStars.length)) s.hasStation=true;
+  }
+
+  /* start: station system nearest center */
+  const start=stars.filter(s=>s.hasStation).sort((a,b)=>hexDist(a,center)-hexDist(b,center))[0];
+
+  /* ruins — 9, spread out, 3 hide the Star Keys */
+  const ruins=[];
+  cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=3));
+  for(const c of cand){
+    if(ruins.length>=9) break;
+    if(ruins.some(rr=>hexDist(rr,c)<3)) continue;
+    c.type="ruin";
+    c.ruinName=pick(["Halls","Spire","Vault","Archive","Sanctum","Beacon","Temple","Orrery","Bastion"])+" of "+pick(["Ael","Vor","Ish","Ka","Ther","Om","Ryn","Zha"])+pick(["dun","reth","mai","sol","vek","ora","ith"]);
+    ruins.push(c);
+  }
+  /* key ruins: far from start & in different thirds of the compass */
+  const scored=ruins.slice().sort((a,b)=>hexDist(b,start)-hexDist(a,start));
+  const keyRuins=[];
+  for(const rn of scored){
+    if(keyRuins.length>=3) break;
+    const ang=Math.atan2(axialPx(rn.q,rn.r,1).y, axialPx(rn.q,rn.r,1).x);
+    if(keyRuins.every(k=>{
+      const ka=Math.atan2(axialPx(k.q,k.r,1).y, axialPx(k.q,k.r,1).x);
+      let d=Math.abs(ang-ka); if(d>Math.PI) d=2*Math.PI-d;
+      return d>1.1;
+    })) keyRuins.push(rn);
+  }
+  while(keyRuins.length<3){ const rn=scored.find(r=>!keyRuins.includes(r)); keyRuins.push(rn); }
+  keyRuins.forEach((rn,i)=>{ rn.keyIndex=i; });
+
+  /* anomalies */
+  cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=2));
+  const anomalies=[];
+  for(const c of cand){
+    if(anomalies.length>=10) break;
+    if(anomalies.some(a=>hexDist(a,c)<2)) continue;
+    c.type="anomaly";
+    anomalies.push(c);
+  }
+
+  /* the Celestial Gate — a far rim hex, hidden until 3 keys are found */
+  const rim=all.filter(c=>hexDist(c,center)>=MAP_R-1 && c.type==="space")
+               .sort((a,b)=>hexDist(b,start)-hexDist(a,start));
+  const gate=rim[ri(0,Math.min(4,rim.length-1))];
+  gate.type="gate";
+
+  /* starfield backdrop (deterministic pretty dots) */
+  const bgStars=[];
+  for(let i=0;i<420;i++){
+    bgStars.push({x:R()*2-1, y:R()*2-1, s:R()*1.6+.4, a:R()*.5+.15, tw:R()*6.28});
+  }
+
+  const puzzleIds=shuffle(KEY_PUZZLES.map((_,i)=>i)).slice(0,3);
+  const world={seed:seedStr, cells, stars, ruins, keyRuins, anomalies, gate, start, bgStars, puzzleIds};
+  world.clues=genClues(world);
+  return world;
+}
+
+/* ---------- clue engine: true statements about each key ruin ---------- */
+function genClues(world){
+  const {cells, stars}=world;
+  const all=[...cells.values()];
+  const clues=[[],[],[]];
+  world.keyRuins.forEach((kr,i)=>{
+    const px=axialPx(kr.q,kr.r,1);
+    /* direction clue */
+    let ang=Math.atan2(-px.y,px.x)*180/Math.PI; if(ang<0)ang+=360;
+    const oct=["east","north","west","south"][Math.round(ang/90)%4];
+    clues[i].push(`lies in the broad ${oct}ern quarter of the cluster`);
+    /* ring clue */
+    const d=hexDist(kr,{q:0,r:0});
+    clues[i].push(d>=6?`rests far from the cluster's heart — the outer reaches`:
+                  d<=3?`rests near the cluster's bright heart`:
+                  `rests in the middle rings, neither heart nor rim`);
+    /* nearest star clue */
+    const near=stars.slice().sort((a,b)=>hexDist(a,kr)-hexDist(b,kr))[0];
+    if(hexDist(near,kr)<=3) clues[i].push(`waits ${hexDist(near,kr)} jump${hexDist(near,kr)>1?"s":""} from its nearest star`);
+    else clues[i].push(`hides in deep space, no star within 3 jumps`);
+    /* feature clue */
+    const nearNeb=all.some(c=>c.type==="nebula" && hexDist(c,kr)<=2);
+    const nearAst=all.some(c=>c.type==="asteroid" && hexDist(c,kr)<=2);
+    if(nearNeb) clues[i].push(`is veiled — a nebula drifts within 2 jumps`);
+    else if(nearAst) clues[i].push(`is guarded — an asteroid field tumbles within 2 jumps`);
+    else clues[i].push(`sits in clear, open space — no nebula or asteroids within 2 jumps`);
+    /* nearest-star character clue — useful in combination, not a direct name reveal */
+    clues[i].push(`has a ${near.color.name} star as its nearest sun, ${near.hasStation?"with a station in that system":"with no station in that system"}`);
+  });
+  return clues;
+}
+/* ============================================================
+   GAME STATE
+   ============================================================ */
+function newGame(seedStr, diffKey){
+  W=genGalaxy(seedStr);
+  RD=mulberry32(hashStr(seedStr+"::drama")^0x9e3779b9);
+  rdCalls=0;
+  const D=DIFF[diffKey];
+  S={
+    seed:seedStr, diff:diffKey,
+    day:1, dayLimit:D.days,
+    fuel:D.fuel, fuelMax:D.fuelMax,
+    hull:10, hullMax:10,
+    credits:D.credits,
+    cargo:{}, cargoMax:6,
+    scanRange:2, speed:1,
+    upgrades:{tank:0,cargo:0,scanner:0,engine:0,mining:false,hull:0},
+    pos:{q:W.start.q, r:W.start.r},
+    visited:new Set(), scanned:new Set(),
+    keys:[false,false,false],
+    foundClues:[[],[],[]],           // indices into W.clues[i]
+    ruinsDone:new Set(),             // hk of explored ruins
+    anomsDone:new Set(),
+    ruinMarks:{},                  // manual chart notes: suspect / exclude
+    gateRevealed:false,
+    mission:null, freePlay:false, over:false, won:false,
+    log:[],
+    eventCooldown:0,
+    pendingEvent:null,              // lets autosave restore an unresolved encounter
+    marketMemory:{},                 // per-star daily wiggles are derived, not stored
+  };
+  scanAround(S.pos, S.scanRange);
+  visit(S.pos);
+  log(`Charter granted. The <b>${W.start.name}</b> station wishes you fair skies.`);
+  log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> — all before day ${S.dayLimit}.`);
+  cam.x=0; cam.y=0; cam.zoom=1;
+  centerOnShip(false);
+  selected=null;
+  refreshAll();
+}
+
+function cellAt(q,r){ return W.cells.get(hk(q,r)); }
+function curCell(){ return cellAt(S.pos.q,S.pos.r); }
+function scanAround(pos,rad){
+  for(const c of W.cells.values()){
+    if(hexDist(c,pos)<=rad) S.scanned.add(hk(c.q,c.r));
+  }
+}
+function visit(pos){ S.visited.add(hk(pos.q,pos.r)); }
+function isScanned(c){ return S.scanned.has(hk(c.q,c.r)); }
+function isVisited(c){ return S.visited.has(hk(c.q,c.r)); }
+function cargoCount(){ return Object.values(S.cargo).reduce((a,b)=>a+b,0); }
+function log(msg){
+  S.log.push({d:S.day, msg});
+  if(S.log.length>80) S.log.shift();
+  renderLog();
+}
+
+/* ---------- prices: deterministic per star per day ---------- */
+function priceOf(star, goodId){
+  const g=GOOD[goodId];
+  let m=1;
+  if(star.produces.includes(goodId)) m=0.55+0.1*wiggle(star.name+goodId,0);
+  else if(star.wants.includes(goodId)) m=1.55+0.35*wiggle(star.name+goodId,1);
+  else m=0.92+0.22*wiggle(star.name+goodId,2);
+  const w=0.9+0.2*wiggle(star.name+goodId+Math.floor(S.day/3),3);
+  return Math.max(4, Math.round(g.base*m*w));
+}
+function wiggle(str,salt){ return mulberry32(hashStr(str+"|"+salt))(); }
+
+/* ============================================================
+   RENDERING
+   ============================================================ */
+const cv=document.getElementById("cv");
+const cx=cv.getContext("2d");
+const cam={x:0,y:0,zoom:1};
+const HEX=34;                       // base hex size in world units
+let DPR=1, cw=0, ch=0;
+let selected=null;                  // {q,r} selected target cell
+let hoverCell=null;
+let animT=0;
+
+function resize(){
+  DPR=window.devicePixelRatio||1;
+  const rct=cv.getBoundingClientRect();
+  cw=rct.width; ch=rct.height;
+  cv.width=Math.round(cw*DPR); cv.height=Math.round(ch*DPR);
+}
+window.addEventListener("resize",resize);
+
+function worldToScreen(wx,wy){
+  return {x:(wx-cam.x)*cam.zoom + cw/2, y:(wy-cam.y)*cam.zoom + ch/2};
+}
+function screenToWorld(sx,sy){
+  return {x:(sx-cw/2)/cam.zoom + cam.x, y:(sy-ch/2)/cam.zoom + cam.y};
+}
+function pxToHex(wx,wy){
+  const q=(SQ3/3*wx - 1/3*wy)/HEX, r=(2/3*wy)/HEX;
+  /* cube round */
+  let x=q, z=r, y=-x-z;
+  let rx=Math.round(x), ry=Math.round(y), rz=Math.round(z);
+  const dx=Math.abs(rx-x), dy=Math.abs(ry-y), dz=Math.abs(rz-z);
+  if(dx>dy&&dx>dz) rx=-ry-rz; else if(dy>dz) ry=-rx-rz; else rz=-rx-ry;
+  return {q:rx,r:rz};
+}
+function hexCorners(cxp,cyp,s){
+  const pts=[];
+  for(let i=0;i<6;i++){
+    const a=Math.PI/180*(60*i-30);
+    pts.push([cxp+s*Math.cos(a), cyp+s*Math.sin(a)]);
+  }
+  return pts;
+}
+function tracePoly(pts){
+  cx.beginPath(); cx.moveTo(pts[0][0],pts[0][1]);
+  for(let i=1;i<pts.length;i++) cx.lineTo(pts[i][0],pts[i][1]);
+  cx.closePath();
+}
+
+function centerOnShip(smooth){
+  const p=axialPx(S.pos.q,S.pos.r,HEX);
+  if(smooth){ camTarget={x:p.x,y:p.y}; } else { cam.x=p.x; cam.y=p.y; camTarget=null; }
+}
+let camTarget=null;
+
+function draw(ts){
+  animT=ts/1000;
+  if(camTarget){
+    cam.x+=(camTarget.x-cam.x)*.12; cam.y+=(camTarget.y-cam.y)*.12;
+    if(Math.abs(camTarget.x-cam.x)<0.5 && Math.abs(camTarget.y-cam.y)<0.5) camTarget=null;
+  }
+  cx.setTransform(DPR,0,0,DPR,0,0);
+  cx.clearRect(0,0,cw,ch);
+  /* backdrop */
+  const bg=cx.createRadialGradient(cw/2,ch/2,60,cw/2,ch/2,Math.max(cw,ch)*.75);
+  bg.addColorStop(0,"#0a1024"); bg.addColorStop(.55,"#060a18"); bg.addColorStop(1,"#03040a");
+  cx.fillStyle=bg; cx.fillRect(0,0,cw,ch);
+  if(W){
+    /* parallax starfield */
+    for(const st of W.bgStars){
+      const px=((st.x*900 - cam.x*.25)%1800+1800)%1800-900;
+      const py=((st.y*900 - cam.y*.25)%1800+1800)%1800-900;
+      const sx=px+cw/2, sy=py+ch/2;
+      if(sx<-5||sy<-5||sx>cw+5||sy>ch+5) continue;
+      const tw=.6+.4*Math.sin(animT*1.3+st.tw);
+      cx.globalAlpha=st.a*tw;
+      cx.fillStyle="#cdd8ff";
+      cx.fillRect(sx,sy,st.s,st.s);
+    }
+    cx.globalAlpha=1;
+    drawCluster();
+  }
+  requestAnimationFrame(draw);
+}
+
+function drawCluster(){
+  const hs=HEX*cam.zoom;
+  const pathSet=previewPath? new Set(previewPath.map(c=>hk(c.q,c.r))) : null;
+  for(const c of W.cells.values()){
+    const p=axialPx(c.q,c.r,HEX);
+    const s=worldToScreen(p.x,p.y);
+    if(s.x<-hs*2||s.y<-hs*2||s.x>cw+hs*2||s.y>ch+hs*2) continue;
+    const scanned=isScanned(c), visited=isVisited(c);
+    const pts=hexCorners(s.x,s.y,hs*.96);
+    /* fill */
+    if(!scanned){
+      tracePoly(pts); cx.fillStyle="rgba(16,22,44,.42)"; cx.fill();
+      cx.strokeStyle="rgba(52,66,110,.28)"; cx.lineWidth=1; cx.stroke();
+      continue;
+    }
+    tracePoly(pts);
+    let fill="rgba(22,32,62,.55)";
+    if(c.type==="nebula") fill="rgba(120,80,200,.30)";
+    cx.fillStyle=fill; cx.fill();
+    cx.strokeStyle=visited?"rgba(95,150,220,.55)":"rgba(60,80,140,.5)";
+    cx.lineWidth=visited?1.4:1;
+    cx.stroke();
+    /* path highlight */
+    if(pathSet && pathSet.has(hk(c.q,c.r))){
+      tracePoly(hexCorners(s.x,s.y,hs*.82));
+      cx.strokeStyle="rgba(95,214,232,.85)"; cx.lineWidth=2; cx.stroke();
+    }
+    /* selected */
+    if(selected && selected.q===c.q && selected.r===c.r){
+      tracePoly(hexCorners(s.x,s.y,hs*.9));
+      cx.strokeStyle="#ffcf6b"; cx.lineWidth=2.2; cx.stroke();
+    }
+    drawFeature(c,s,hs,visited);
+  }
+  /* the ship */
+  const sp=axialPx(S.pos.q,S.pos.r,HEX);
+  const ss=worldToScreen(sp.x,sp.y);
+  const pulse=1+0.08*Math.sin(animT*3);
+  cx.save();
+  cx.translate(ss.x,ss.y);
+  cx.scale(cam.zoom*pulse,cam.zoom*pulse);
+  cx.shadowColor="#5fd6e8"; cx.shadowBlur=14;
+  cx.fillStyle="#eaf6ff";
+  cx.beginPath();
+  cx.moveTo(0,-12); cx.lineTo(9,10); cx.lineTo(0,5); cx.lineTo(-9,10); cx.closePath();
+  cx.fill();
+  cx.shadowBlur=0;
+  cx.fillStyle="#5fd6e8";
+  cx.beginPath(); cx.arc(0,0,3,0,7); cx.fill();
+  cx.restore();
+}
+
+function drawFeature(c,s,hs,visited){
+  const dim=visited?1:.62;
+  cx.save();
+  cx.translate(s.x,s.y);
+  cx.globalAlpha=dim;
+  if(c.type==="star"){
+    const grad=cx.createRadialGradient(0,0,1,0,0,hs*.55);
+    grad.addColorStop(0,c.color.col); grad.addColorStop(.45,c.color.col+"");
+    grad.addColorStop(1,"rgba(0,0,0,0)");
+    cx.fillStyle=grad;
+    cx.beginPath(); cx.arc(0,0,hs*.55,0,7); cx.fill();
+    cx.fillStyle="#fff";
+    cx.beginPath(); cx.arc(0,0,hs*.16,0,7); cx.fill();
+    if(c.hasStation){
+      cx.strokeStyle="#dfe7ff"; cx.lineWidth=1.4*cam.zoom;
+      cx.strokeRect(hs*.28,-hs*.5,hs*.24,hs*.24);
+    }
+    if(visited || hexDist(c,S.pos)<=S.scanRange+1){
+      cx.fillStyle="rgba(223,231,255,.85)";
+      cx.font=`${Math.max(9,10*cam.zoom)}px sans-serif`;
+      cx.textAlign="center";
+      cx.fillText(c.name, 0, hs*.85);
+    }
+  }else if(c.type==="nebula"){
+    for(let i=0;i<3;i++){
+      const a=i*2.1+ (c.q*3+c.r*7)%6;
+      cx.fillStyle=`rgba(${150+i*20},${90+i*15},${220},${.14})`;
+      cx.beginPath(); cx.arc(Math.cos(a)*hs*.25, Math.sin(a)*hs*.22, hs*.38,0,7); cx.fill();
+    }
+  }else if(c.type==="asteroid"){
+    cx.fillStyle="#9aa2b5";
+    const seedn=(c.q*31+c.r*17);
+    for(let i=0;i<5;i++){
+      const a=i*1.256+seedn, rr=hs*(.12+.22*((seedn+i*7)%10)/10);
+      cx.beginPath(); cx.arc(Math.cos(a)*rr, Math.sin(a)*rr, hs*.07+((i%3))*hs*.02,0,7); cx.fill();
+    }
+  }else if(c.type==="ruin"){
+    const done=S.ruinsDone.has(hk(c.q,c.r));
+    cx.strokeStyle=done?"#8d9ac0":"#b79bff";
+    cx.lineWidth=2*cam.zoom;
+    cx.beginPath();
+    cx.moveTo(-hs*.26,hs*.28); cx.lineTo(-hs*.26,-hs*.18);
+    cx.moveTo(0,hs*.28); cx.lineTo(0,-hs*.34);
+    cx.moveTo(hs*.26,hs*.28); cx.lineTo(hs*.26,-hs*.18);
+    cx.stroke();
+    cx.beginPath(); cx.moveTo(-hs*.36,hs*.3); cx.lineTo(hs*.36,hs*.3); cx.stroke();
+    if(!done){
+      cx.fillStyle="rgba(183,155,255,.85)";
+      const tw=.5+.5*Math.sin(animT*2.2+c.q);
+      cx.globalAlpha=dim*tw;
+      cx.beginPath(); cx.arc(0,-hs*.44,hs*.07,0,7); cx.fill();
+      cx.globalAlpha=dim;
+    }
+    const mark=S.ruinMarks&&S.ruinMarks[hk(c.q,c.r)];
+    if(mark){
+      cx.globalAlpha=1;
+      cx.font=`${Math.max(11,14*cam.zoom)}px sans-serif`;
+      cx.textAlign="center";
+      cx.fillStyle=mark==="suspect"?"#ffcf6b":"#ff8080";
+      cx.fillText(mark==="suspect"?"★":"×", hs*.42,-hs*.38);
+    }
+  }else if(c.type==="anomaly"){
+    if(!S.anomsDone.has(hk(c.q,c.r))){
+      const tw=.55+.45*Math.sin(animT*2.6+c.r);
+      cx.globalAlpha=dim*tw;
+      cx.strokeStyle="#5fd6e8"; cx.lineWidth=1.6*cam.zoom;
+      cx.beginPath();
+      cx.moveTo(0,-hs*.3); cx.lineTo(hs*.26,0); cx.lineTo(0,hs*.3); cx.lineTo(-hs*.26,0);
+      cx.closePath(); cx.stroke();
+      cx.fillStyle="#5fd6e8";
+      cx.beginPath(); cx.arc(0,0,hs*.06,0,7); cx.fill();
+    }
+  }else if(c.type==="gate"){
+    if(S.gateRevealed){
+      const tw=1+.12*Math.sin(animT*2);
+      cx.strokeStyle="#ffcf6b"; cx.lineWidth=3*cam.zoom;
+      cx.shadowColor="#ffcf6b"; cx.shadowBlur=16;
+      cx.beginPath(); cx.arc(0,0,hs*.42*tw,0,7); cx.stroke();
+      cx.beginPath(); cx.arc(0,0,hs*.2,0,7);
+      cx.strokeStyle="#fff"; cx.lineWidth=1.5*cam.zoom; cx.stroke();
+      cx.shadowBlur=0;
+    }
+  }
+  /* key glint on visited-but-undone key ruins is intentionally hidden — clues guide you */
+  cx.restore();
+}
+/* ============================================================
+   INPUT: pan / zoom / hover / select
+   ============================================================ */
+let dragging=false, dragMoved=false, lastMx=0, lastMy=0;
+let previewPath=null;
+
+cv.addEventListener("mousedown",e=>{ dragging=true; dragMoved=false; lastMx=e.clientX; lastMy=e.clientY; cv.classList.add("drag"); });
+window.addEventListener("mousemove",e=>{
+  if(dragging){
+    const dx=e.clientX-lastMx, dy=e.clientY-lastMy;
+    if(Math.abs(dx)+Math.abs(dy)>3) dragMoved=true;
+    cam.x-=dx/cam.zoom; cam.y-=dy/cam.zoom;
+    lastMx=e.clientX; lastMy=e.clientY;
+    camTarget=null;
+  }
+});
+window.addEventListener("mouseup",()=>{ dragging=false; cv.classList.remove("drag"); });
+cv.addEventListener("mouseleave",()=>{ hoverCell=null; previewPath=selected?previewPath:null; tipHide(); });
+
+cv.addEventListener("mousemove",e=>{
+  if(!W||S.over) return;
+  const rct=cv.getBoundingClientRect();
+  const wpt=screenToWorld(e.clientX-rct.left, e.clientY-rct.top);
+  const h=pxToHex(wpt.x,wpt.y);
+  const c=cellAt(h.q,h.r);
+  hoverCell=c||null;
+  updateHoverPreview(e.clientX-rct.left, e.clientY-rct.top);
+});
+
+cv.addEventListener("wheel",e=>{
+  e.preventDefault();
+  const f=e.deltaY<0?1.12:0.89;
+  cam.zoom=Math.min(2.6,Math.max(.45,cam.zoom*f));
+},{passive:false});
+
+cv.addEventListener("click",e=>{
+  if(dragMoved||!W||S.over&&!S.freePlay) return;
+  const rct=cv.getBoundingClientRect();
+  const wpt=screenToWorld(e.clientX-rct.left, e.clientY-rct.top);
+  const h=pxToHex(wpt.x,wpt.y);
+  const c=cellAt(h.q,h.r);
+  if(!c||!isScanned(c)) { selected=null; previewPath=null; renderHere(); return; }
+  if(c.q===S.pos.q&&c.r===S.pos.r){ selected=null; previewPath=null; renderHere(); return; }
+  const path=findPath(S.pos,c);
+  if(!path){ toast("No charted route — scan closer first."); return; }
+  if(selected && selected.q===c.q && selected.r===c.r){
+    travelTo(c,path);
+  }else{
+    selected={q:c.q,r:c.r};
+    previewPath=path;
+    sfx("click");
+    renderHere();
+  }
+});
+
+/* touch: single-finger pan + tap, pinch zoom */
+let touchState=null;
+cv.addEventListener("touchstart",e=>{
+  if(e.touches.length===1){
+    const t=e.touches[0];
+    touchState={mode:"pan", x:t.clientX, y:t.clientY, moved:false};
+  }else if(e.touches.length===2){
+    const [a,b]=e.touches;
+    touchState={mode:"pinch", d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY), z:cam.zoom};
+  }
+},{passive:true});
+cv.addEventListener("touchmove",e=>{
+  if(!touchState) return;
+  if(touchState.mode==="pan"&&e.touches.length===1){
+    const t=e.touches[0];
+    const dx=t.clientX-touchState.x, dy=t.clientY-touchState.y;
+    if(Math.abs(dx)+Math.abs(dy)>6) touchState.moved=true;
+    cam.x-=dx/cam.zoom; cam.y-=dy/cam.zoom;
+    touchState.x=t.clientX; touchState.y=t.clientY;
+    camTarget=null;
+  }else if(touchState.mode==="pinch"&&e.touches.length===2){
+    const [a,b]=e.touches;
+    const d=Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);
+    cam.zoom=Math.min(2.6,Math.max(.45,touchState.z*d/touchState.d));
+  }
+  e.preventDefault();
+},{passive:false});
+cv.addEventListener("touchend",e=>{
+  if(touchState&&touchState.mode==="pan"&&!touchState.moved&&e.changedTouches.length===1){
+    const t=e.changedTouches[0];
+    const rct=cv.getBoundingClientRect();
+    const wpt=screenToWorld(t.clientX-rct.left,t.clientY-rct.top);
+    const h=pxToHex(wpt.x,wpt.y);
+    const c=cellAt(h.q,h.r);
+    if(c&&isScanned(c)&&!(c.q===S.pos.q&&c.r===S.pos.r)){
+      const path=findPath(S.pos,c);
+      if(path){
+        if(selected&&selected.q===c.q&&selected.r===c.r) travelTo(c,path);
+        else{ selected={q:c.q,r:c.r}; previewPath=path; renderHere(); }
+      }
+    }
+  }
+  touchState=null;
+});
+
+const tip=document.getElementById("hoverTip");
+function tipHide(){ tip.style.display="none"; }
+function updateHoverPreview(mx,my){
+  if(!hoverCell||!isScanned(hoverCell)){ tipHide(); if(!selected) previewPath=null; return; }
+  const c=hoverCell;
+  let html="";
+  if(c.type==="star") html=`<b>${c.name}</b> — ${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
+  else if(c.type==="nebula") html=`<b>Nebula</b> — costs 2 fuel to cross`;
+  else if(c.type==="asteroid") html=`<b>Asteroid field</b>${S.upgrades.mining?" — mineable":""}`;
+  else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" — explored":""}`;
+  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>Quiet space</b>`:`<b>Anomaly</b> — something shimmers here`;
+  else if(c.type==="gate"&&S.gateRevealed) html=`<b>The Celestial Gate</b>`;
+  else html=`<b>Open space</b>`;
+  if(!(c.q===S.pos.q&&c.r===S.pos.r)){
+    const path=findPath(S.pos,c);
+    if(path){
+      if(!selected) previewPath=path;
+      const fc=pathFuel(path), dc=pathDays(path);
+      const bad=fc>S.fuel;
+      html+=`<br><span class="cost">Route: ${path.length} jump${path.length>1?"s":""} · ${fc} fuel · ${dc} day${dc>1?"s":""}</span>`;
+      if(bad) html+=`<br><span class="warn">Not enough fuel!</span>`;
+      html+=`<br><span style="color:#8d9ac0">${selected&&selected.q===c.q&&selected.r===c.r?"Click again to travel":"Click to plot course"}</span>`;
+    }else{
+      html+=`<br><span class="warn">No charted route</span>`;
+    }
+  }else html+=`<br><span style="color:#8d9ac0">Your position</span>`;
+  tip.innerHTML=html;
+  tip.style.display="block";
+  const wrap=document.getElementById("mapWrap").getBoundingClientRect();
+  tip.style.left=Math.min(mx+16, wrap.width-tip.offsetWidth-8)+"px";
+  tip.style.top=Math.min(my+16, wrap.height-tip.offsetHeight-8)+"px";
+}
+
+/* ---------- A* over scanned cells ---------- */
+function moveCost(c){ return c.type==="nebula"?2:1; }
+function findPath(from,to){
+  const toC=cellAt(to.q,to.r);
+  if(!toC||!isScanned(toC)) return null;
+  const open=new Map(), came=new Map(), gScore=new Map();
+  const sk=hk(from.q,from.r), tk=hk(to.q,to.r);
+  gScore.set(sk,0);
+  open.set(sk,hexDist(from,to));
+  while(open.size){
+    let bestK=null,bestF=1e9;
+    for(const [k,f] of open){ if(f<bestF){bestF=f;bestK=k;} }
+    if(bestK===tk){
+      const path=[]; let k=tk;
+      while(k!==sk){ const [q,r]=k.split(",").map(Number); path.unshift({q,r}); k=came.get(k); }
+      return path;
+    }
+    open.delete(bestK);
+    const [cq,cr]=bestK.split(",").map(Number);
+    for(const d of DIRS){
+      const nq=cq+d[0], nr=cr+d[1], nk=hk(nq,nr);
+      const nc=cellAt(nq,nr);
+      if(!nc||!isScanned(nc)) continue;
+      const g=gScore.get(bestK)+moveCost(nc);
+      if(g<(gScore.get(nk)??1e9)){
+        came.set(nk,bestK); gScore.set(nk,g);
+        open.set(nk,g+hexDist({q:nq,r:nr},to));
+      }
+    }
+  }
+  return null;
+}
+function pathFuel(path){ return path.reduce((a,c)=>a+moveCost(cellAt(c.q,c.r)),0); }
+function pathDays(path){ return Math.max(1,Math.ceil(path.length/S.speed)); }
+
+/* ============================================================
+   TRAVEL & TURNS
+   ============================================================ */
+function travelTo(dest,path){
+  /* A long plotted course pauses at the first unexplored ruin/anomaly it crosses.
+     This makes discoveries on the map physically matter instead of being silently flown through. */
+  let route=path, interrupted=false;
+  for(let i=0;i<path.length-1;i++){
+    const c=cellAt(path[i].q,path[i].r);
+    const stop=(c.type==="ruin"&&!S.ruinsDone.has(hk(c.q,c.r))) ||
+               (c.type==="anomaly"&&!S.anomsDone.has(hk(c.q,c.r))) ||
+               (c.type==="gate"&&S.gateRevealed);
+    if(stop){ route=path.slice(0,i+1); dest=c; interrupted=true; break; }
+  }
+  const fc=pathFuel(route);
+  if(fc>S.fuel){ toast("Not enough fuel for that route."); sfx("bad"); return; }
+  selected=null; previewPath=null; tipHide();
+  S.fuel-=fc;
+  const days=pathDays(route);
+  for(const step of route){
+    S.pos={q:step.q,r:step.r};
+    scanAround(S.pos,S.scanRange);
+    visit(S.pos);
+  }
+  advanceDays(days);
+  centerOnShip(true);
+  sfx("engine");
+  if(S.over&&!S.freePlay) return;
+  if(interrupted) log(`<b>Course paused.</b> Your route crossed something worth investigating.`);
+  onArrive();
+  refreshAll();
+  if(interrupted && !shade.classList.contains("on")) toast("Course paused at a discovery. Plot again when ready.");
+}
+
+function advanceDays(n){
+  S.day+=n;
+  if(S.mission && S.day>S.mission.due && !S.mission.failedNoted){
+    S.mission.failedNoted=true;
+    log(`The delivery window for <b>${S.mission.star}</b> has closed. The contract lapsed.`);
+    S.mission=null;
+    toast("Mission expired.");
+  }
+  if(!S.freePlay && S.day>S.dayLimit && !S.won){
+    charterExpires();
+  }
+}
+
+function onArrive(){
+  const c=curCell();
+  if(S.eventCooldown>0) S.eventCooldown--;
+  if(c.type==="anomaly" && !S.anomsDone.has(hk(c.q,c.r))){
+    S.anomsDone.add(hk(c.q,c.r));
+    fireEvent(true);
+    return;
+  }
+  if(c.type==="gate" && S.gateRevealed){ winGame(); return; }
+  if(c.type==="star"){
+    log(`Arrived at <b>${c.name}</b>.`);
+    if(S.mission && S.mission.star===c.name) checkMissionDelivery(c);
+  }
+  if(c.type==="ruin" && !S.ruinsDone.has(hk(c.q,c.r))){
+    log(`You've reached the <b>${c.ruinName}</b> — an ancient ruin drifts silently here.`);
+  }
+  /* random travel encounter in open space */
+  if((c.type==="space"||c.type==="asteroid"||c.type==="nebula") && S.eventCooldown===0 && dchance(0.16)){
+    S.eventCooldown=3;
+    fireEvent(false);
+  }
+}
+
+/* ---------- fuel emergency: stranded ---------- */
+function checkStranded(){
+  if(S.fuel>0) return;
+  const c=curCell();
+  if(c.type==="star"&&c.hasStation) return;      // can buy fuel here
+  const reach=[...W.cells.values()].some(n=>isScanned(n)&&hexDist(n,S.pos)===1&&moveCost(n)<=S.fuel);
+  if(reach) return;
+  /* tow to nearest visited station */
+  const st=W.stars.filter(s=>s.hasStation&&isVisited(s)).sort((a,b)=>hexDist(a,S.pos)-hexDist(b,S.pos))[0]||W.start;
+  const fee=Math.min(S.credits,90);
+  S.credits-=fee;
+  S.pos={q:st.q,r:st.r};
+  S.fuel=4;
+  advanceDays(4);
+  visit(S.pos);
+  log(`<b>Out of fuel!</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard.`);
+  modalInfo("Stranded!", `Your tanks ran dry in deep space. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel. Watch that fuel gauge, captain!`);
+  centerOnShip(true);
+}
+
+/* ---------- endings ---------- */
+function calcScore(){
+  const daysLeft=Math.max(0,S.dayLimit-S.day);
+  const sysV=W.stars.filter(s=>isVisited(s)).length;
+  const parts=[
+    ["Star Keys", S.keys.filter(Boolean).length+" × 600", S.keys.filter(Boolean).length*600],
+    ["Days to spare", daysLeft+" × 12", daysLeft*12],
+    ["Systems visited", sysV+" × 25", sysV*25],
+    ["Space charted", S.scanned.size+" × 2", S.scanned.size*2],
+    ["Credits", "◈"+S.credits+" ÷ 2", Math.floor(S.credits/2)],
+  ];
+  if(S.won) parts.unshift(["Gate reached","",1500]);
+  return {parts, total:parts.reduce((a,p)=>a+p[2],0)};
+}
+function rankFor(sc){
+  if(sc>=4200) return "Legendary Starweaver";
+  if(sc>=3300) return "Master Cartographer";
+  if(sc>=2500) return "Renowned Navigator";
+  if(sc>=1700) return "Seasoned Captain";
+  if(sc>=1000) return "Promising Pilot";
+  return "Bold Apprentice";
+}
+function winGame(){
+  S.won=true; S.over=true;
+  sfx("fanfare");
+  const sc=calcScore();
+  log(`<b>You sailed through the Celestial Gate!</b> The cluster is charted and the ancients' road lies open.`);
+  modalHtml(`
+    <h2>🌌 Through the Gate!</h2>
+    <div class="msub">Day ${S.day} · ${clusterDisplayName(S.seed)} · ${DIFF[S.diff].label}</div>
+    <p class="flavor">The three Star Keys turn as one. The great ring wakes, spilling light older than any sun, and your little ship glides through to skies no chart has ever named.</p>
+    <p><b>${rankFor(sc.total)}</b></p>
+    ${scoreTable(sc)}
+    <div class="mrow">
+      <button class="mbtn2 primary" onclick="closeModal(); showNewGame();">New voyage</button>
+      <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll();">Keep exploring this cluster</button>
+    </div>`);
+}
+function charterExpires(){
+  S.over=true;
+  sfx("bad");
+  const sc=calcScore();
+  log(`<b>Day ${S.dayLimit} has passed.</b> The charter expires — but the stars aren't going anywhere.`);
+  modalHtml(`
+    <h2>⏳ The Charter Expires</h2>
+    <div class="msub">${clusterDisplayName(S.seed)} · ${DIFF[S.diff].label}</div>
+    <p class="flavor">The Cartographers' Guild recalls its commission. You found ${S.keys.filter(Boolean).length} of 3 Star Keys — the Gate keeps its secret a little longer. Every great captain has a voyage like this one; the next chart is always the finest.</p>
+    <p><b>${rankFor(sc.total)}</b></p>
+    ${scoreTable(sc)}
+    <div class="mrow">
+      <button class="mbtn2 primary" onclick="closeModal(); showNewGame();">New voyage</button>
+      <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll(); toast('Free play — no clock, just stars.');">Keep exploring anyway</button>
+    </div>`);
+}
+function scoreTable(sc){
+  return `<table class="mkt"><tbody>${
+    sc.parts.map(p=>`<tr><td>${p[0]}</td><td class="small">${p[1]}</td><td class="pr" style="text-align:right">${p[2]}</td></tr>`).join("")
+  }<tr><td><b>Total score</b></td><td></td><td class="pr" style="text-align:right"><b>${sc.total}</b></td></tr></tbody></table>`;
+}
+/* ============================================================
+   SIDEBAR UI
+   ============================================================ */
+const $=id=>document.getElementById(id);
+document.querySelectorAll(".tab").forEach(t=>{
+  t.addEventListener("click",()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
+    document.querySelectorAll(".panel").forEach(x=>x.classList.remove("on"));
+    t.classList.add("on");
+    $("p-"+t.dataset.p).classList.add("on");
+    if(t.dataset.p==="clues") t.classList.remove("alert");
+  });
+});
+
+function refreshAll(){
+  renderStatus(); renderHere(); renderCargo(); renderClues(); renderLog();
+  updateSeedTag();
+  checkStranded();
+  autoSave();
+}
+function updateSeedTag(){ $("seedTag").textContent=clusterDisplayName(S.seed); }
+$("seedTag").addEventListener("click",()=>{
+  copyText(S.seed).then(()=>toast("Cluster code copied — anyone can use it to explore the same cluster."));
+});
+
+function renderStatus(){
+  $("dayLbl").textContent=S.freePlay?`Day ${S.day} · free play`:`Day ${S.day} / ${S.dayLimit}`;
+  $("dayLbl").style.color=(!S.freePlay&&S.dayLimit-S.day<=12)?"var(--red)":"var(--gold)";
+  $("keyLbl").innerHTML=[0,1,2].map(i=>`<span class="keypip${S.keys[i]?" got":""}">🗝️</span>`).join("");
+  $("fuelFill").style.width=(100*S.fuel/S.fuelMax)+"%";
+  $("fuelLbl").textContent=`FUEL ${S.fuel}/${S.fuelMax}`;
+  $("hullFill").style.width=(100*S.hull/S.hullMax)+"%";
+  $("hullLbl").textContent=`HULL ${S.hull}/${S.hullMax}`;
+  $("credLbl").textContent="◈ "+S.credits;
+  $("cargoLbl").textContent=`Cargo ${cargoCount()}/${S.cargoMax}`;
+}
+
+function renderHere(){
+  const c=curCell();
+  const p=$("p-here");
+  let h="";
+  const missionH=S.mission?`<div class="missionBox">📦 Deliver <b>${S.mission.qty} ${GOOD[S.mission.good].name}</b> to <b>${S.mission.star}</b> by day ${S.mission.due} · reward <b>◈${S.mission.reward}</b><br><span class="small">${S.mission.hint}</span></div>`:"";
+  if(c.type==="star"){
+    h+=`<div id="hereName" style="color:${c.color.col}">${c.name}</div>
+        <div id="hereSub">A ${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.${c.hasStation?" A trade station glitters in orbit.":" No station here — just quiet worlds."}</div>`;
+    h+=missionH;
+    for(const pl of c.planets){
+      h+=`<div class="planet"><span class="pdot" style="background:${planetCol(pl.kind)}"></span>${pl.name} <span class="pd">· ${pl.kind}</span></div>`;
+    }
+    if(c.hasStation){
+      h+=`<button class="abtn gold" onclick="openStation()">🛰 Dock at station<span class="sub">Market · Shipyard · Lounge</span></button>`;
+    }
+    if(c.gasGiant){
+      const can=S.fuel<S.fuelMax;
+      h+=`<button class="abtn" onclick="scoopFuel()" ${can?"":"disabled"}>⛽ Scoop fuel at the gas giant<span class="sub">+5 fuel, takes 1 day — free!</span></button>`;
+    }
+  }else if(c.type==="ruin"){
+    const done=S.ruinsDone.has(hk(c.q,c.r));
+    h+=`<div id="hereName" style="color:var(--violet)">${c.ruinName}</div>
+        <div id="hereSub">${done?"You have already explored this ruin. Its halls are quiet now.":"Ancient walls drift in the dark, older than any charted star. Carvings glow faintly as you approach."}</div>`;
+    h+=missionH;
+    if(!done) h+=`<button class="abtn gold" onclick="exploreRuin()">🏛 Explore the ruin<span class="sub">Takes 1 day. Who knows what waits inside…</span></button>`;
+  }else if(c.type==="asteroid"){
+    h+=`<div id="hereName">Asteroid Field</div><div id="hereSub">Tumbling rock and glittering dust.</div>`;
+    h+=missionH;
+    if(S.upgrades.mining){
+      h+=`<button class="abtn" onclick="mineHere()" ${cargoCount()<S.cargoMax?"":"disabled"}>⛏ Mine the field<span class="sub">1 day · yields ore, sometimes crystals</span></button>`;
+    }else{
+      h+=`<div class="small">A mining rig (sold at stations) would let you harvest ore here.</div>`;
+    }
+  }else if(c.type==="nebula"){
+    h+=`<div id="hereName" style="color:var(--violet)">Nebula</div><div id="hereSub">Rose and violet dust folds around the ship. Beautiful — and thirsty work for the engines (2 fuel per jump).</div>`+missionH;
+  }else if(c.type==="gate"&&S.gateRevealed){
+    h+=`<div id="hereName" style="color:var(--gold)">The Celestial Gate</div><div id="hereSub">It is waiting.</div>`;
+  }else{
+    h+=`<div id="hereName">Open Space</div><div id="hereSub">Silence, starlight, and the hum of your ship.</div>`+missionH;
+  }
+  h+=`<h3>Captain's tools</h3>`;
+  const scanCost=3;
+  h+=`<button class="abtn" onclick="deepScan()" ${S.fuel>=1?"":"disabled"}>📡 Deep scan<span class="sub">1 fuel, 1 day · reveals a wide ring (range ${S.scanRange+2}) around you</span></button>`;
+  h+=`<button class="abtn" onclick="waitDay()">🌙 Hold position<span class="sub">Pass 1 day (markets drift, engines cool)</span></button>`;
+  p.innerHTML=h;
+  renderStatus();
+}
+function planetCol(kind){
+  return {rocky:"#b8a98f",oceanic:"#5fa8e8",["gas giant"]:"#e8b45f",frozen:"#bcd8ef",verdant:"#7fe0a0",desert:"#e0c080"}[kind]||"#999";
+}
+
+function renderCargo(){
+  const p=$("p-cargo");
+  let h=`<h3>Hold — ${cargoCount()}/${S.cargoMax}</h3><div id="cargoList">`;
+  const keys=Object.keys(S.cargo).filter(k=>S.cargo[k]>0);
+  if(!keys.length) h+=`<div class="small">Empty. Buy low at producing systems, sell high where goods are wanted.</div>`;
+  for(const k of keys){
+    h+=`<div class="cargoRow"><span>${GOOD[k].icon} ${GOOD[k].name}</span><span class="q">× ${S.cargo[k]}</span></div>`;
+  }
+  h+=`</div><h3>Ship</h3><div class="small">
+    Scanner range ${S.scanRange} · Speed ${S.speed} jump${S.speed>1?"s":""}/day · Tank ${S.fuelMax} · Hold ${S.cargoMax}${S.upgrades.mining?" · Mining rig ⛏":""}
+  </div>`;
+  p.innerHTML=h;
+}
+
+function renderClues(){
+  const p=$("p-clues");
+  const kn=["First Key","Second Key","Third Key"];
+  let h=`<div class="small" style="margin-bottom:10px">Every clue is true. Combine several clues, then use the chart notes below to mark ruins you suspect or rule out.</div>`;
+  for(let i=0;i<3;i++){
+    h+=`<div class="clueGroup"><h4>🗝️ ${kn[i]} ${S.keys[i]?'<span style="color:var(--green)">— FOUND</span>':""}</h4>`;
+    if(!S.foundClues[i].length&&!S.keys[i]) h+=`<div class="small">No clues yet. Explore ruins or buy a rumor in a station lounge.</div>`;
+    for(const ci of S.foundClues[i]){
+      h+=`<div class="clue${S.keys[i]?" done":""}">The ${kn[i]} ${W.clues[i][ci]}.</div>`;
+    }
+    h+=`</div>`;
+  }
+  const seenRuins=W.ruins.filter(r=>isScanned(r));
+  h+=`<h3>Chart notes</h3>`;
+  if(!seenRuins.length) h+=`<div class="small">No ruins charted yet. Scanner contacts will appear here.</div>`;
+  else{
+    h+=`<div class="small" style="margin-bottom:6px">Tap a marker: unmarked → ★ suspect → × ruled out → unmarked. These are only your notes; the game never marks the answer for you.</div>`;
+    for(const r of seenRuins){
+      const k=hk(r.q,r.r), mark=(S.ruinMarks&&S.ruinMarks[k])||"";
+      const label=mark==="suspect"?"★ Suspect":mark==="exclude"?"× Ruled out":"○ Unmarked";
+      const cls=mark==="suspect"?"markSuspect":mark==="exclude"?"markExclude":"";
+      h+=`<div class="ruinNote"><div><b>${isVisited(r)?r.ruinName:"Ancient ruin"}</b><div class="where">hex ${r.q}, ${r.r}${S.ruinsDone.has(k)?" · explored":""}</div></div><button class="tbtn ${cls}" onclick="cycleRuinMark('${k}')">${label}</button></div>`;
+    }
+  }
+  p.innerHTML=h;
+}
+function cycleRuinMark(k){
+  if(!S.ruinMarks) S.ruinMarks={};
+  const cur=S.ruinMarks[k];
+  if(!cur) S.ruinMarks[k]="suspect";
+  else if(cur==="suspect") S.ruinMarks[k]="exclude";
+  else delete S.ruinMarks[k];
+  renderClues(); autoSave(); sfx("click");
+}
+
+function renderLog(){
+  const l=$("logList");
+  if(!S){l.innerHTML=""; return;}
+  l.innerHTML=S.log.map(e=>`<div class="logRow"><span class="d">d${e.d}</span>${e.msg}</div>`).join("");
+}
+
+function giveClue(source){
+  /* pick an unfound clue for an unfound key */
+  const opts=[];
+  for(let i=0;i<3;i++){
+    if(S.keys[i]) continue;
+    for(let ci=0;ci<W.clues[i].length;ci++){
+      if(!S.foundClues[i].includes(ci)) opts.push([i,ci]);
+    }
+  }
+  if(!opts.length) return null;
+  const [i,ci]=dpick(opts);
+  S.foundClues[i].push(ci);
+  document.querySelector('.tab[data-p="clues"]').classList.add("alert");
+  renderClues();
+  return {key:i, text:`The ${["First","Second","Third"][i]} Key ${W.clues[i][ci]}.`};
+}
+
+/* ============================================================
+   ACTIONS
+   ============================================================ */
+function deepScan(){
+  if(S.fuel<1) return;
+  S.fuel-=1;
+  scanAround(S.pos,S.scanRange+2);
+  advanceDays(1);
+  log("Deep scan complete — the charts grow.");
+  sfx("scan");
+  refreshAll();
+}
+function waitDay(){ advanceDays(1); log("You hold position and watch the stars turn."); refreshAll(); }
+function scoopFuel(){
+  const c=curCell();
+  if(!c.gasGiant||S.fuel>=S.fuelMax) return;
+  S.fuel=Math.min(S.fuelMax,S.fuel+5);
+  advanceDays(1);
+  log(`Skimmed the clouds of ${c.name}'s gas giant. +5 fuel.`);
+  sfx("good");
+  refreshAll();
+}
+function mineHere(){
+  if(!S.upgrades.mining||cargoCount()>=S.cargoMax) return;
+  advanceDays(1);
+  const n=Math.min(dri(1,3), S.cargoMax-cargoCount());
+  let msg;
+  if(dchance(.22)&&S.cargoMax-cargoCount()>0){
+    S.cargo.cry=(S.cargo.cry||0)+1;
+    msg=`The drills strike a crystal seam! +1 ${GOOD.cry.name}`;
+    if(n>1){ S.cargo.ore=(S.cargo.ore||0)+Math.min(n-1,S.cargoMax-cargoCount()); msg+=` and +${Math.min(n-1,99)} Ore`; }
+  }else{
+    S.cargo.ore=(S.cargo.ore||0)+n;
+    msg=`Mining haul: +${n} Ore.`;
+  }
+  if(dchance(.12)){ S.hull=Math.max(1,S.hull-1); msg+=" A stray rock dinged the hull (−1)."; }
+  log(msg);
+  sfx("good");
+  refreshAll();
+}
+
+/* ---------- ruins & keys ---------- */
+function exploreRuin(){
+  const c=curCell();
+  if(c.type!=="ruin"||S.ruinsDone.has(hk(c.q,c.r))) return;
+  advanceDays(1);
+  if(S.over&&!S.freePlay){ refreshAll(); return; }
+  S.ruinsDone.add(hk(c.q,c.r));
+  if(c.keyIndex!==undefined && !S.keys[c.keyIndex]){
+    keyPuzzle(c);
+  }else{
+    /* a clue, and sometimes a small treasure */
+    const clue=giveClue("ruin");
+    let extra="";
+    if(dchance(.5)){
+      const cr=dri(30,90); S.credits+=cr;
+      extra=`<p>Among the dust you also find old trade tokens worth <b>◈${cr}</b>.</p>`;
+    }else if(dchance(.5)&&cargoCount()<S.cargoMax){
+      S.cargo.dust=(S.cargo.dust||0)+1;
+      extra=`<p>A sealed vial glimmers on an altar: <b>+1 Stardust</b>.</p>`;
+    }
+    log(`Explored the ${c.ruinName}.${clue?" A carving speaks: <i>"+clue.text+"</i>":""}`);
+    modalHtml(`
+      <h2>🏛 ${c.ruinName}</h2>
+      <p class="flavor">${dpick([
+        "Your bootsteps echo down halls that remember older light. Star-charts cover every wall, etched by hands with too many fingers.",
+        "Murals of comets and long-tailed ships wind along the corridor. At its end, a single carving still glows.",
+        "The ruin hums very softly, like a song remembered halfway. Dust rises and settles as if breathing.",
+      ])}</p>
+      ${clue?`<div class="clue" style="margin:10px 0">${clue.text}</div>`:"<p>The carvings here have faded beyond reading — but the ruin feels peaceful.</p>"}
+      ${extra}
+      <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Back to the ship</button></div>`);
+    sfx("event");
+    refreshAll();
+  }
+}
+
+function keyPuzzle(c){
+  const i=c.keyIndex;
+  const pid=(W.puzzleIds&&W.puzzleIds[i]!==undefined)?W.puzzleIds[i]:i%KEY_PUZZLES.length;
+  const pz=KEY_PUZZLES[pid];
+  modalHtml(`
+    <h2>🗝️ ${c.ruinName}</h2>
+    <p class="flavor">Deep in the ruin, a vault door of black glass. Behind it, unmistakable: the glow of a <b>Star Key</b>.</p>
+    <p>${pz.q}</p>
+    <div class="mrow">${pz.a.map((a,ix)=>`<button class="mbtn2" onclick="keyAnswer(${i},${ix},${pz.correct},${pid})">${a}</button>`).join("")}</div>
+    <p class="small" style="margin-top:10px">A wrong answer costs one day while the patient old vault resets. It will not take the Key away.</p>`);
+}
+function keyAnswer(i,ix,correct,pid){
+  const right=ix===correct;
+  if(!right){
+    advanceDays(1);
+    if(S.over&&!S.freePlay){ refreshAll(); return; }
+  }
+  S.keys[i]=true;
+  const bonus=right?dri(60,120):0;
+  if(bonus) S.credits+=bonus;
+  const got=S.keys.filter(Boolean).length;
+  if(got>=3&&!S.gateRevealed){
+    S.gateRevealed=true;
+    S.scanned.add(hk(W.gate.q,W.gate.r));
+  }
+  const pz=KEY_PUZZLES[pid]||KEY_PUZZLES[0];
+  log(`<b>You hold the ${["First","Second","Third"][i]} Star Key!</b>${right?" The vault opened at your first touch — the keepers left a gift of ◈"+bonus+".":" (The vault took a day to forgive your guess.)"}`);
+  sfx("fanfare");
+  modalHtml(`
+    <h2>🗝️ The ${["First","Second","Third"][i]} Star Key!</h2>
+    <p class="flavor">${right?
+      "The door drinks your answer and sighs open. On a plinth of frozen light rests the Star Key — warm, humming, glad to be found. The keepers' gift of <b>◈"+bonus+"</b> rests beside it.":
+      "The door dims… then, patient as tide, resets and opens anyway. The ancients built for wonder, not punishment. The Star Key is yours — though the vault kept you a day."}</p>
+    <div class="tipbox"><b>Why:</b> ${pz.why}</div>
+    ${got>=3?`<p><b>All three Keys sing together — and far away, something answers. The CELESTIAL GATE has appeared on your chart!</b> Reach it to complete your charter.</p>`:
+      `<p>${3-got} Key${3-got>1?"s":""} remain${3-got>1?"":"s"} hidden among the ruins.</p>`}
+    <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Onward!</button></div>`);
+  refreshAll();
+}
+
+/* ---------- missions ---------- */
+function offerMission(star){
+  if(S.mission) return null;
+  const others=W.stars.filter(s=>s!==star&&s.hasStation);
+  if(!others.length) return null;
+  const dest=dpick(others);
+  const good=dpick(GOODS).id;
+  const qty=dri(2,4);
+  const dist=hexDist(star,dest);
+  const due=S.day+dist*2+dri(8,14);
+  const reward=Math.round((GOOD[good].base*qty*1.6+dist*22)/10)*10;
+  const px=axialPx(dest.q,dest.r,1), here=axialPx(star.q,star.r,1);
+  let ang=Math.atan2(-(px.y-here.y),px.x-here.x)*180/Math.PI; if(ang<0)ang+=360;
+  const oct=["east","northeast","north","northwest","west","southwest","south","southeast"][Math.round(ang/45)%8];
+  const hint=isVisited(dest)?`${dest.name} is already on your charts.`:`${dest.name} lies roughly ${dist} jumps to the ${oct}.`;
+  return {star:dest.name, good, qty, due, reward, hint};
+}
+function checkMissionDelivery(star){
+  const m=S.mission;
+  if(!m||m.star!==star.name) return;
+  if((S.cargo[m.good]||0)>=m.qty){
+    S.cargo[m.good]-=m.qty;
+    S.credits+=m.reward;
+    log(`Delivered ${m.qty} ${GOOD[m.good].name} to ${star.name}. <b>+◈${m.reward}</b>!`);
+    toast(`Mission complete! +◈${m.reward}`);
+    sfx("coin");
+    S.mission=null;
+  }else{
+    toast(`Mission: need ${m.qty} ${GOOD[m.good].name} aboard to deliver here.`);
+  }
+}
+/* ============================================================
+   STATION: market / shipyard / lounge
+   ============================================================ */
+let stationTab="market";
+function openStation(tab){
+  const c=curCell();
+  if(c.type!=="star"||!c.hasStation) return;
+  stationTab=tab||stationTab||"market";
+  const tabs=[["market","🛒 Market"],["yard","🔧 Shipyard"],["lounge","🍹 Lounge"]];
+  let h=`<h2>🛰 ${c.name} Station</h2><div class="msub">Fuel ◈${c.fuelPrice}/unit · Day ${S.day}</div>
+  <div class="mrow" style="margin:0 0 12px">${tabs.map(t=>`<button class="mbtn2 ${stationTab===t[0]?"primary":""}" style="min-width:90px;flex:1" onclick="openStation('${t[0]}')">${t[1]}</button>`).join("")}</div>`;
+  if(stationTab==="market") h+=marketHtml(c);
+  else if(stationTab==="yard") h+=yardHtml(c);
+  else h+=loungeHtml(c);
+  h+=`<div class="mrow"><button class="mbtn2" onclick="closeModal()">Undock</button></div>`;
+  modalHtml(h);
+}
+function marketHtml(c){
+  let h=`<table class="mkt"><tr><th>Good</th><th>Price</th><th>Held</th><th style="text-align:right">Trade</th></tr>`;
+  for(const g of GOODS){
+    const pr=priceOf(c,g.id);
+    const cls=c.produces.includes(g.id)?"lo":c.wants.includes(g.id)?"hi":"";
+    const held=S.cargo[g.id]||0;
+    const canBuy=S.credits>=pr&&cargoCount()<S.cargoMax;
+    h+=`<tr><td>${g.icon} ${g.name}</td>
+      <td class="pr ${cls}">◈${pr}${cls==="lo"?" ▼":cls==="hi"?" ▲":""}</td>
+      <td>${held||"—"}</td>
+      <td style="text-align:right">
+        <button class="tbtn" ${canBuy?"":"disabled"} onclick="trade('${g.id}',1)">Buy</button>
+        <button class="tbtn" ${held?"":"disabled"} onclick="trade('${g.id}',-1)">Sell</button>
+      </td></tr>`;
+  }
+  h+=`</table><div class="small">▼ produced here (cheap) · ▲ wanted here (pays well). Prices drift every few days.</div>`;
+  /* refuel */
+  const need=S.fuelMax-S.fuel;
+  const cost1=c.fuelPrice, costAll=need*c.fuelPrice;
+  h+=`<h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:12px 0 6px">REFUEL & REPAIR</h3>
+  <div class="mrow" style="margin-top:0">
+    <button class="mbtn2" ${need>0&&S.credits>=cost1?"":"disabled"} onclick="buyFuel(1)">+1 fuel <span class="sub">◈${cost1}</span></button>
+    <button class="mbtn2" ${need>0?"":"disabled"} onclick="buyFuel(${need})">Fill tank <span class="sub">◈${costAll}${S.credits<costAll?" — partial fill for what you have":""}</span></button>
+    <button class="mbtn2" ${S.hull<S.hullMax&&S.credits>=25?"":"disabled"} onclick="repairHull()">Repair hull <span class="sub">◈25 per point</span></button>
+  </div>`;
+  return h;
+}
+function trade(gid,dir){
+  const c=curCell();
+  const pr=priceOf(c,gid);
+  if(dir>0){
+    if(S.credits<pr||cargoCount()>=S.cargoMax) return;
+    S.credits-=pr; S.cargo[gid]=(S.cargo[gid]||0)+1;
+  }else{
+    if(!(S.cargo[gid]>0)) return;
+    S.credits+=pr; S.cargo[gid]--;
+  }
+  sfx("coin");
+  openStation("market"); renderStatus(); renderCargo();
+}
+function buyFuel(n){
+  const c=curCell();
+  n=Math.min(n, S.fuelMax-S.fuel, Math.floor(S.credits/c.fuelPrice));
+  if(n<=0) return;
+  S.credits-=n*c.fuelPrice; S.fuel+=n;
+  sfx("coin");
+  openStation("market"); renderStatus();
+}
+function repairHull(){
+  const n=Math.min(S.hullMax-S.hull, Math.floor(S.credits/25));
+  if(n<=0) return;
+  S.credits-=25*n; S.hull+=n;
+  sfx("good");
+  openStation("market"); renderStatus();
+}
+function yardHtml(c){
+  const U=S.upgrades;
+  const items=[];
+  const tanks=[[30,160],[42,380]];
+  if(U.tank<2) items.push({k:"tank",n:`Fuel tank Mk${U.tank+2}`,d:`Capacity ${S.fuelMax} → ${tanks[U.tank][0]}`,p:tanks[U.tank][1],
+    f(){U.tank++; S.fuelMax=tanks[U.tank-1][0];}});
+  const holds=[[10,150],[16,360]];
+  if(U.cargo<2) items.push({k:"cargo",n:`Cargo hold Mk${U.cargo+2}`,d:`Capacity ${S.cargoMax} → ${holds[U.cargo][0]}`,p:holds[U.cargo][1],
+    f(){U.cargo++; S.cargoMax=holds[U.cargo-1][0];}});
+  const scans=[[3,220],[4,480]];
+  if(U.scanner<2) items.push({k:"scanner",n:`Scanner array Mk${U.scanner+2}`,d:`Range ${S.scanRange} → ${scans[U.scanner][0]} — see farther as you fly`,p:scans[U.scanner][1],
+    f(){U.scanner++; S.scanRange=scans[U.scanner-1][0]; scanAround(S.pos,S.scanRange);}});
+  if(!U.engine) items.push({k:"engine",n:"Skip-drive engine",d:"2 jumps per day — halves travel time",p:520,
+    f(){U.engine=1; S.speed=2;}});
+  if(!U.mining) items.push({k:"mining",n:"Mining rig",d:"Harvest ore & crystals in asteroid fields",p:240,
+    f(){U.mining=true;}});
+  if(!U.hull) items.push({k:"hull",n:"Reinforced hull",d:`Max hull 10 → 16, fully patched up`,p:200,
+    f(){U.hull=1; S.hullMax=16; S.hull=16;}});
+  let h="";
+  if(!items.length) h+=`<p>Your ship carries every upgrade this yard can fit. She's a beauty, captain.</p>`;
+  for(const it of items){
+    h+=`<div class="shopItem"><div class="si-l"><b>${it.n}</b><span class="sub">${it.d}</span></div>
+      <button class="tbtn" style="padding:6px 12px" ${S.credits>=it.p?"":"disabled"} onclick="buyUpgrade('${it.k}')">◈${it.p}</button></div>`;
+  }
+  yardItems=items;
+  return h;
+}
+let yardItems=[];
+function buyUpgrade(k){
+  const it=yardItems.find(i=>i.k===k);
+  if(!it||S.credits<it.p) return;
+  S.credits-=it.p;
+  it.f();
+  log(`Upgrade installed: <b>${it.n}</b>.`);
+  sfx("fanfare");
+  openStation("yard"); refreshAll();
+}
+function loungeHtml(c){
+  let h=`<p class="flavor">${dpick([
+    "The lounge smells of coffee and engine oil. Travellers from six systems swap tall tales under a slowly turning mobile of the cluster.",
+    "A band of moth-like aliens plays something between jazz and weather. Everyone hums along wrong, happily.",
+    "Star-charts paper the walls, annotated in a dozen alphabets and at least one kind of glitter.",
+  ])}</p>`;
+  const cluesLeft=W.clues.some((cl,i)=>!S.keys[i]&&S.foundClues[i].length<cl.length);
+  h+=`<div class="mrow" style="margin-top:8px">
+    <button class="mbtn2" ${cluesLeft&&S.credits>=60?"":"disabled"} onclick="buyRumor()">🗝️ Buy a rumor <span class="sub">◈60 — a true clue about a Star Key</span></button>
+    <button class="mbtn2" ${S.mission?"disabled":""} onclick="takeMission()">${S.mission?"📦 Contract in progress":"📦 Ask for work"} <span class="sub">${S.mission?`${S.mission.qty} ${GOOD[S.mission.good].name} → ${S.mission.star}`:"a delivery contract, good pay"}</span></button>
+  </div>`;
+  if(!cluesLeft) h+=`<p class="small" style="margin-top:8px">No fresh rumors — you already know all there is to whisper.</p>`;
+  return h;
+}
+function buyRumor(){
+  if(S.credits<60) return;
+  const clue=giveClue("lounge");
+  if(!clue) return;
+  S.credits-=60;
+  log(`A traveller leans close: <i>${clue.text}</i>`);
+  sfx("event");
+  modalHtml(`<h2>🍹 A whisper over drinks</h2>
+    <p class="flavor">A spacer with kind eyes and four thumbs trades your credits for a secret:</p>
+    <div class="clue" style="margin:10px 0">${clue.text}</div>
+    <div class="mrow"><button class="mbtn2 primary" onclick="openStation('lounge')">Back to the lounge</button></div>`);
+}
+function takeMission(){
+  const c=curCell();
+  const m=offerMission(c);
+  if(!m){ toast("No contracts on the board today."); return; }
+  S.mission=m;
+  log(`Contract signed: deliver ${m.qty} ${GOOD[m.good].name} to <b>${m.star}</b> by day ${m.due} for ◈${m.reward}.`);
+  sfx("coin");
+  openStation("lounge"); renderHere();
+}
+
+/* ============================================================
+   EVENTS — little stories among the stars
+   ============================================================ */
+function fireEvent(isAnomaly,forcedIndex=null){
+  const list=isAnomaly?ANOMALY_EVENTS:SPACE_EVENTS;
+  const idx=forcedIndex===null?Math.floor(drand()*list.length):forcedIndex;
+  const ev=list[idx];
+  currentEvent=ev;
+  S.pendingEvent={isAnomaly:!!isAnomaly,index:idx};
+  let h=`<h2>${ev.title}</h2><p class="flavor">${ev.text()}</p><div class="mrow">`;
+  ev.choices.forEach((ch,i)=>{
+    const ok=!ch.cond||ch.cond();
+    h+=`<button class="mbtn2" ${ok?"":"disabled"} onclick="eventChoice(${i})">${ch.label()}</button>`;
+  });
+  h+=`</div>`;
+  modalHtml(h,true);
+  autoSave();
+  sfx("event");
+}
+function restorePendingEvent(){
+  if(!S||!S.pendingEvent) return;
+  const pe=S.pendingEvent;
+  fireEvent(pe.isAnomaly,pe.index);
+}
+let currentEvent=null;
+function eventChoice(i){
+  if(!currentEvent) return;
+  const title=currentEvent.title;
+  const ch=currentEvent.choices[i];
+  const out=ch.effect();
+  log(out.replace(/<[^>]+>/g,m=>m));
+  currentEvent=null;
+  S.pendingEvent=null;
+  if(S.over&&!S.freePlay){ refreshAll(); return; }
+  modalHtml(`<h2>${title}</h2><p class="flavor">${out}</p>
+    <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Continue</button></div>`);
+  refreshAll();
+}
+const gainCargo=(gid,n)=>{ const room=S.cargoMax-cargoCount(); const g=Math.min(n,room); if(g>0) S.cargo[gid]=(S.cargo[gid]||0)+g; return g; };
+const SPACE_EVENTS=[
+  {title:"🛰 A Drifting Probe", text:()=>"An old survey probe tumbles past, antenna bent, still faithfully beeping its findings to no one.",
+   choices:[
+     {label:()=>"Take it aboard and fix it", effect(){ if(dchance(.7)){const c=dri(40,90);S.credits+=c;return `A little solder, a lot of patience — the probe wakes and beams its charts to the Guild. Finder's fee: <b>+◈${c}</b>.`;} advanceDays(1); return "Its memory core is scrambled beyond saving, but you tuck it in the hold anyway. It beeps gratefully. (1 day tinkering.)"; }},
+     {label:()=>"Copy its star-charts remotely", effect(){ scanAround(S.pos,S.scanRange+2); return "You copy what it saw. New space blooms across your chart!"; }},
+     {label:()=>"Leave it to its journey", effect(){ return "You dip your wings in salute. Some travellers prefer the long way."; }},
+   ]},
+  {title:"🐋 The Star-Whale", text:()=>"Something vast and gentle swims out of the dark — a star-whale, barnacled with tiny satellites, singing in radio.",
+   choices:[
+     {label:()=>`Offer it botanicals ${S.cargo.bot?`(have ${S.cargo.bot})`:"(none aboard)"}`, cond:()=>S.cargo.bot>0,
+      effect(){ S.cargo.bot--; const f=Math.min(S.fuelMax-S.fuel,6); S.fuel+=f; return `It nibbles the greens from your airlock, delighted, then exhales a shimmering cloud your scoops drink up. <b>+${f} fuel</b>, and a friend for life.`; }},
+     {label:()=>"Swim alongside a while", effect(){ if(dchance(.5)){ scanAround(S.pos,S.scanRange+3); return "It leads you along its ancient migration route. Your charts grow wonderfully."; } const c=dri(20,60); S.credits+=c; return `Its song shakes loose a few crystal barnacles, which you politely collect. <b>+◈${c}</b> in trinkets.`; }},
+     {label:()=>"Keep a respectful distance", effect(){ return "The whale rolls one moon-sized eye at you, winks, and dives back into the dark."; }},
+   ]},
+  {title:"⚙️ Merchant in a Pickle", text:()=>"A trader's barge hails you, engines coughing glitter. “Swap you cargo for parts, friend? I'm rich in goods and poor in luck.”",
+   choices:[
+     {label:()=>"Trade spare parts (−1 fuel)", cond:()=>S.fuel>1,
+      effect(){ S.fuel--; const g=dpick(GOODS).id; const got=gainCargo(g,2); return got>0?`She patches her drive with your spares and insists you take <b>${got} ${GOOD[g].name}</b>. “May your tanks stay full!”`:`She offers goods, but your hold is full — so she pays cash instead. <b>+◈80</b>. ${S.credits+=80,""}`; }},
+     {label:()=>"Escort her to safety (1 day)", effect(){ advanceDays(1); const c=dri(50,110); S.credits+=c; return `You fly wing-to-wing until her engines steady. The merchant guild wires you <b>◈${c}</b> with a thank-you note in curly handwriting.`; }},
+     {label:()=>"Wish her luck and move on", effect(){ return "“Luck!” she laughs. “I'll trade for that too!” Her barge limps on, trailing sparkles."; }},
+   ]},
+  {title:"🪨 Micro-meteor Shower", text:()=>"The forward screens light up: a stream of pebbles, pretty and fast, right across your path.",
+   choices:[
+     {label:()=>"Thread the stream (pilot's chance)", effect(){ if(dchance(.6)) return "You dance the ship through the sparkling hail without a scratch. The autopilot is speechless."; S.hull=Math.max(1,S.hull-2); return "Two sharp pings ring the hull like a bell. <b>−2 hull</b> — but what a ride."; }},
+     {label:()=>"Shield up and push through (−1 fuel)", cond:()=>S.fuel>=1, effect(){ S.fuel--; return "Shields shrug off the pebbles in little flashes, like rain on a window."; }},
+     {label:()=>"Wait for it to pass (1 day)", effect(){ advanceDays(1); return "You brew something warm and watch the prettiest storm in the sector slide by."; }},
+   ]},
+  {title:"📦 Sealed Cargo Pod", text:()=>"A jettisoned cargo pod floats in the black, transponder blinking a friendly green. Salvage law says it's yours.",
+   choices:[
+     {label:()=>"Crack it open", effect(){ const roll=drand(); if(roll<.45){const g=dpick(GOODS).id; const got=gainCargo(g,2); return got>0?`Inside: <b>${got} ${GOOD[g].name}</b>, packed in foam like eggs.`:"Inside: goods you have no room for. You reseal it for the next lucky captain.";} if(roll<.8){const c=dri(40,120);S.credits+=c;return `Inside: a strongbox of trade chips. <b>+◈${c}</b>.`;} return "Inside: four thousand rubber ducks. You keep one for the console and leave the rest as a gift to the universe."; }},
+     {label:()=>"Scan first, then decide", effect(){ const g=dpick(GOODS).id; const got=gainCargo(g,1); return got>0?`Scans read clean. You transfer <b>1 ${GOOD[g].name}</b> neatly aboard.`:"Scans read clean, but your hold is packed tight. You log its position for later."; }},
+     {label:()=>"Not your pod, not your problem", effect(){ return "You leave it be. Somewhere, an absent-minded freighter captain will be very relieved."; }},
+   ]},
+  {title:"🤖 Scrap-Drones!", text:()=>"Three rattletrap drones swarm close, magnet-arms snapping. They want to nibble your hull plating — it's nothing personal.",
+   choices:[
+     {label:()=>"Outrun them (−2 fuel)", cond:()=>S.fuel>=2, effect(){ S.fuel-=2; return "You light the engines and leave them squabbling in your wake, disappointed little magpies."; }},
+     {label:()=>"Toss them 1 Ore as a snack", cond:()=>S.cargo.ore>0, effect(){ S.cargo.ore--; return "They fall upon the ore chunk with delighted beeps, instantly forgetting you exist. Cheap at the price."; }},
+     {label:()=>"Shoo them off by hand", effect(){ if(dchance(.5)) return "You bang the airlock, wave a wrench, and generally make yourself a terrible meal. They sulk off."; S.hull=Math.max(1,S.hull-2); return "They get two good bites in (<b>−2 hull</b>) before deciding you taste like paperwork."; }},
+   ]},
+  {title:"🎈 The Festival Flotilla", text:()=>"A convoy of pleasure barges drifts by, strung with lanterns — a travelling festival, celebrating some holiday from a world you've never heard of.",
+   choices:[
+     {label:()=>"Join for a day (1 day)", effect(){ advanceDays(1); if(dchance(.5)){const c=dri(30,80);S.credits+=c;return `You win <b>◈${c}</b> at a guessing game involving jellied comets. The recipe is a secret. Probably wise.`;} const clue=giveClue("festival"); return clue?`Between dances, an old pilot murmurs a secret: <i>${clue.text}</i>`:"You dance until the lanterns dim, and remember why people cross oceans of night to find each other."; }},
+     {label:()=>"Trade politely from the airlock", effect(){ const c=dri(15,45); S.credits+=c; return `You sell snacks and small talk. <b>+◈${c}</b> and three new recipes.`; }},
+     {label:()=>"Sail on by", effect(){ return "Their music follows you for a surprising distance, as if reluctant to let go."; }},
+   ]},
+  {title:"🧭 Old Beacon", text:()=>"A navigation beacon from some earlier age still turns here, painting the dark with slow spokes of light.",
+   choices:[
+     {label:()=>"Sync your charts to it", effect(){ scanAround(S.pos,S.scanRange+2); return "The beacon shares everything it has watched over the centuries. Your chart drinks it in."; }},
+     {label:()=>"Wind it up (small repair)", effect(){ if(dchance(.65)){const c=dri(30,70);S.credits+=c; return `You oil its bearings and true its mirror. The Beacon-Keepers' Trust transmits an honorarium: <b>+◈${c}</b>.`;} return "You tighten what you can. It shines a little straighter — payment enough, somehow."; }},
+   ]},
+];
+const ANOMALY_EVENTS=[
+  {title:"🌀 A Fold in Space", text:()=>"Here the stars bend, like the sky seen through a glass of water. Your instruments giggle. This is the anomaly your scanners flagged.",
+   choices:[
+     {label:()=>"Ride the fold", effect(){ const opts=[...W.cells.values()].filter(c=>hexDist(c,S.pos)>=3&&hexDist(c,S.pos)<=5&&c.type!=="gate"); const d=dpick(opts); S.pos={q:d.q,r:d.r}; scanAround(S.pos,S.scanRange); visit(S.pos); centerOnShip(true); return "Space folds — a hiccup, a flash — and you are somewhere <b>else</b>, instantly. The chart scrambles to keep up."; }},
+     {label:()=>"Study it from the edge", effect(){ scanAround(S.pos,S.scanRange+3); const c=dri(20,60); S.credits+=c; return `Your careful measurements will make three astronomers very happy. <b>+◈${c}</b> in data bounties, and wide new charts.`; }},
+   ]},
+  {title:"💠 Crystal Garden", text:()=>"An unfinished world: shards of crystal the size of cathedrals, growing slowly in the light of distant suns.",
+   choices:[
+     {label:()=>"Harvest carefully", effect(){ const got=gainCargo("cry",2); if(got>0) return `You cut <b>${got} Crystal${got>1?"s":""}</b> free without waking an echo. The garden chimes softly as you go.`; const c=dri(60,100); S.credits+=c; return `Your hold is full, so you photograph everything instead. The image rights fetch <b>◈${c}</b>.`; }},
+     {label:()=>"Just… look, for a while", effect(){ const f=Math.min(S.fuelMax-S.fuel,2); S.fuel+=f; return `You drift among the spires in silence. When you finally leave, you're steadier at the helm${f?` — and the light itself seems to have fed your collectors (<b>+${f} fuel</b>)`:""}. Some places are payment enough.`; }},
+   ]},
+  {title:"👻 The Silent Ship", text:()=>"A great liner from a century past, dark and whole, hangs here like a held breath. Her name-plate reads VELVET DAWN.",
+   choices:[
+     {label:()=>"Board her", effect(){ const roll=drand(); if(roll<.5){const c=dri(80,160);S.credits+=c;return `Her holds were emptied long ago — but the captain's safe still holds a purse of antique chips. <b>+◈${c}</b>. You log her position so her family's line can bring her home.`;} const clue=giveClue("wreck"); return clue?`In the chart-room you find a navigator's diary, and in it, underlined twice: <i>${clue.text}</i>`:`In the chart-room, a diary: her crew reached port safely in lifeboats, every one. You leave the Velvet Dawn to her rest, lighter of heart.`; }},
+     {label:()=>"Salute and pass on", effect(){ return "You dim your running lights as you pass, ship's custom older than any of us. The Velvet Dawn keeps her silence."; }},
+   ]},
+  {title:"🔮 The Question Stone", text:()=>"A perfectly smooth sphere of black stone, humming. As you near, words form gently inside your mind: <i>“ASK.”</i>",
+   choices:[
+     {label:()=>"“Where is a Star Key?”", effect(){ const clue=giveClue("stone"); return clue?`The stone considers you for a long moment. Then, kindly: <i>${clue.text}</i>`:"The stone hums: <i>“You already know all that can be told. Trust your chart, captain.”</i>"; }},
+     {label:()=>"“What should I ask?”", effect(){ const c=dri(40,90); S.credits+=c; return `The stone laughs — a sound like bells underwater — and coordinates for a forgotten cargo cache appear on your console. <b>+◈${c}</b>. “Wisdom,” it says, “is knowing what you don't know.”`; }},
+     {label:()=>"Ask nothing; leave a gift", effect(){ const f=Math.min(S.fuelMax-S.fuel,4); S.fuel+=f; S.hull=S.hullMax; return `You leave a ration bar and a paper star folded from an old chart. The stone glows warm; your ship is suddenly humming too — <b>hull patched, +${f} fuel</b>. Kindness, returned with interest.`; }},
+   ]},
+  {title:"⏳ Time Eddy", text:()=>"A pocket of slow time, shimmering like heat-haze. Inside it, a minute is a day — or is it the other way round?",
+   choices:[
+     {label:()=>"Dip through the fast side", effect(){ if(S.day>2){S.day=Math.max(1,S.day-2); return "You surf the eddy's edge and slip out <b>two days younger</b> than you went in. Your log refuses to discuss it.";} return "The eddy burps politely. Nothing happens. Perhaps you were early."; }},
+     {label:()=>"Anchor and study it", effect(){ const c=dri(50,120); S.credits+=c; return `Your readings on the eddy are the finest ever taken. The Temporal Society pays <b>◈${c}</b> and asks you, please, never to do that again.`; }},
+   ]},
+];
+
+/* ============================================================
+   MODALS, TOAST, SOUND, SAVE
+   ============================================================ */
+const shade=$("shade"), modalEl=$("modal");
+let modalLocked=false;
+function modalHtml(h,locked){ modalEl.innerHTML=h; shade.classList.add("on"); modalLocked=!!locked; }
+function modalInfo(title,body){ modalHtml(`<h2>${title}</h2><p>${body}</p><div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">OK</button></div>`); }
+function closeModal(){ shade.classList.remove("on"); modalLocked=false; }
+shade.addEventListener("click",e=>{ if(e.target===shade&&!modalLocked) closeModal(); });
+
+let toastTimer=null;
+function toast(msg){
+  const t=$("toast");
+  t.textContent=msg; t.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.classList.remove("on"),2600);
+}
+function copyText(txt){
+  if(navigator.clipboard&&navigator.clipboard.writeText) return navigator.clipboard.writeText(txt).catch(()=>fallbackCopy(txt));
+  return Promise.resolve(fallbackCopy(txt));
+}
+function fallbackCopy(txt){
+  const ta=document.createElement("textarea");
+  ta.value=txt; document.body.appendChild(ta); ta.select();
+  try{document.execCommand("copy");}catch(e){}
+  ta.remove();
+}
+
+/* ---------- sound: tiny WebAudio synth ---------- */
+let AC=null, muted=false;
+function ac(){ if(!AC){ try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){} } return AC; }
+function tone(freq,dur,type,vol,when){
+  const a=ac(); if(!a||muted) return;
+  const o=a.createOscillator(), g=a.createGain();
+  o.type=type||"sine"; o.frequency.value=freq;
+  g.gain.setValueAtTime(0,a.currentTime+(when||0));
+  g.gain.linearRampToValueAtTime(vol||.12,a.currentTime+(when||0)+.01);
+  g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+(when||0)+dur);
+  o.connect(g); g.connect(a.destination);
+  o.start(a.currentTime+(when||0)); o.stop(a.currentTime+(when||0)+dur+.05);
+}
+function sfx(kind){
+  if(muted) return;
+  switch(kind){
+    case "click": tone(660,.06,"sine",.06); break;
+    case "coin": tone(880,.07,"triangle",.1); tone(1320,.09,"triangle",.08,.06); break;
+    case "engine": tone(120,.25,"sawtooth",.05); tone(180,.2,"sawtooth",.04,.05); break;
+    case "scan": tone(440,.1,"sine",.07); tone(660,.1,"sine",.06,.09); tone(880,.12,"sine",.05,.18); break;
+    case "good": tone(523,.1,"triangle",.09); tone(784,.14,"triangle",.08,.09); break;
+    case "bad": tone(220,.18,"square",.06); tone(165,.22,"square",.05,.12); break;
+    case "event": tone(392,.12,"sine",.08); tone(494,.12,"sine",.07,.1); tone(587,.16,"sine",.07,.2); break;
+    case "fanfare": [523,659,784,1047].forEach((f,i)=>tone(f,.22,"triangle",.09,i*.11)); break;
+  }
+}
+$("btnMute").addEventListener("click",()=>{
+  muted=!muted;
+  $("btnMute").textContent=muted?"🔇":"🔊";
+});
+
+/* ---------- save / load + automatic local resume ---------- */
+const AUTO_KEY="starweaver.autosave.v2";
+function saveCode(){
+  const state={...S, dramaCalls:rdCalls, visited:[...S.visited], scanned:[...S.scanned], ruinsDone:[...S.ruinsDone], anomsDone:[...S.anomsDone]};
+  return "SW2."+btoa(unescape(encodeURIComponent(JSON.stringify(state))));
+}
+function autoSave(){
+  if(!S) return;
+  try{ localStorage.setItem(AUTO_KEY,saveCode()); }catch(e){}
+}
+function hasAutoSave(){
+  try{ return !!localStorage.getItem(AUTO_KEY); }catch(e){ return false; }
+}
+function loadAutoSave(){
+  try{ const code=localStorage.getItem(AUTO_KEY); return code?loadCode(code):false; }catch(e){ return false; }
+}
+function clearAutoSave(){ try{localStorage.removeItem(AUTO_KEY);}catch(e){} }
+function loadCode(code){
+  try{
+    const prefix=code.startsWith("SW2.")?"SW2.":code.startsWith("SW1.")?"SW1.":null;
+    if(!prefix) throw 0;
+    const state=JSON.parse(decodeURIComponent(escape(atob(code.slice(prefix.length)))));
+    W=genGalaxy(state.seed);
+    RD=mulberry32(hashStr(state.seed+"::drama")^0x9e3779b9);
+    rdCalls=0;
+    const targetCalls=Number.isFinite(state.dramaCalls)?state.dramaCalls:0;
+    for(let i=0;i<targetCalls;i++) RD();
+    rdCalls=targetCalls;
+    S=state;
+    S.visited=new Set(state.visited||[]); S.scanned=new Set(state.scanned||[]);
+    S.ruinsDone=new Set(state.ruinsDone||[]); S.anomsDone=new Set(state.anomsDone||[]);
+    if(!S.ruinMarks) S.ruinMarks={};
+    if(S.pendingEvent===undefined) S.pendingEvent=null;
+    centerOnShip(false);
+    refreshAll();
+    closeModal();
+    if(S.pendingEvent) restorePendingEvent();
+    toast(prefix==="SW2."?"Voyage restored. Welcome back, captain.":"Older voyage restored. Future chance events may differ from the original run.");
+    return true;
+  }catch(e){ toast("That save code didn't parse — check it and try again."); return false; }
+}
+$("btnSave").addEventListener("click",()=>{
+  autoSave();
+  const code=saveCode();
+  modalHtml(`<h2>💾 Save & Resume</h2>
+    <p><b>${clusterDisplayName(S.seed)}</b> · cluster code <b>${S.seed}</b></p>
+    <p><b>Your voyage is saved automatically on this device.</b> The long code below is a portable <em>save</em> backup containing your exact progress; the short cluster code above only recreates the starting cluster.</p>
+    <textarea id="saveTa" style="width:100%;height:90px;background:#0a0f1e;color:#9fe;border:1px solid var(--edge);border-radius:8px;padding:8px;font-size:11px;word-break:break-all">${code}</textarea>
+    <div class="mrow">
+      <button class="mbtn2 primary" onclick="copyText(document.getElementById('saveTa').value).then(()=>toast('Save code copied!'))">Copy backup code</button>
+      <button class="mbtn2" onclick="loadCode(document.getElementById('saveTa').value.trim())">Load pasted code</button>
+      <button class="mbtn2" onclick="closeModal()">Close</button>
+    </div>
+    <p class="small">SW2 saves preserve the future random-event sequence as well as your map, cargo, upgrades, clues and log.</p>`);
+});
+
+/* ============================================================
+   NEW GAME / HELP / BOOT
+   ============================================================ */
+function randomSeed(){
+  const words=["comet","nova","lyra","orion","zephyr","aurora","quasar","vega","halley","cosmo","stellar","nimbus","astra","borealis","meteor","pulsar"];
+  return words[Math.floor(Math.random()*words.length)]+"-"+Math.floor(Math.random()*900+100);
+}
+function clusterDisplayName(seed){
+  const first=["Vesper","Aurora","Cinder","Sapphire","Halcyon","Peregrine","Lantern","Aster","Silver","Ember","Velvet","Lyra","Morrow","Echo","Solstice","Zephyr","Cerulean","Starfall","Quiet","Orion","Indigo","Luminous","Wayfarer","Amber"];
+  const last=["Reach","Expanse","Drift","March","Veil","Basin","Hollows","Crossing","Fields","Crown","Arc","Wilds","Current","Frontier","Span","Reaches","Garden","Passage","Shallows","Marches"];
+  const rr=mulberry32(hashStr("cluster-name|"+seed));
+  return "The "+first[Math.floor(rr()*first.length)]+" "+last[Math.floor(rr()*last.length)];
+}
+function rerollCluster(){
+  const seed=randomSeed();
+  const input=$("seedInput");
+  if(input) input.value=seed;
+  const n=$("clusterNamePreview");
+  if(n) n.textContent=clusterDisplayName(seed);
+  const c=$("clusterCodePreview");
+  if(c) c.textContent="Cluster code: "+seed;
+}
+function useSharedCluster(){
+  const shared=$("sharedCodeInput");
+  const code=(shared&&shared.value.trim()).slice(0,40);
+  if(!code){ toast("Enter a cluster code first."); return; }
+  $("seedInput").value=code;
+  $("clusterNamePreview").textContent=clusterDisplayName(code);
+  $("clusterCodePreview").textContent="Cluster code: "+code;
+  toast("Shared cluster selected. Choose a difficulty to begin.");
+}
+function showNewGame(first){
+  const seed=randomSeed();
+  const resume=hasAutoSave();
+  modalHtml(`
+    <h2>${first?"🌌 Welcome, Captain":"🌌 A New Voyage"}</h2>
+    ${first?`<p class="flavor">The Cartographers' Guild has granted you a charter: explore an unmapped cluster, recover <b>three Star Keys</b>, and open the <b>Celestial Gate</b> before time runs out.</p>`:""}
+    ${resume?`<div class="mrow" style="margin:2px 0 14px"><button class="mbtn2 primary" onclick="loadAutoSave()">▶ Resume saved voyage<span class="sub">Continue the automatic save on this device</span></button></div>`:""}
+
+    <div class="clusterCard">
+      <div class="eyebrow">Your assigned destination</div>
+      <div class="clusterName" id="clusterNamePreview">${clusterDisplayName(seed)}</div>
+      <div class="clusterSub">Every voyage is a newly generated cluster. You do not need to know or choose from a list.</div>
+      <div class="clusterSub" id="clusterCodePreview" style="margin-top:4px">Cluster code: ${seed}</div>
+      <input id="seedInput" type="hidden" value="${seed}">
+      <div class="clusterTools">
+        <button class="mbtn2" onclick="rerollCluster()">🎲 Another cluster<span class="sub">Ask the Guild for a different chart</span></button>
+      </div>
+      <div class="sharedBox">
+        <div class="small"><b style="color:var(--ink)">Have a friend's cluster code?</b> Enter it to generate exactly the same cluster.</div>
+        <div class="sharedRow"><input id="sharedCodeInput" maxlength="40" placeholder="e.g. aurora-527" aria-label="Shared cluster code"><button class="tbtn" onclick="useSharedCluster()">Use code</button></div>
+      </div>
+    </div>
+
+    <p><b>Choose difficulty</b></p>
+    <div class="mrow" style="margin-top:4px">
+      ${Object.entries(DIFF).map(([k,d])=>`
+        <button class="mbtn2 ${k==="standard"?"primary":""}" onclick="startFrom('${k}')">${d.label}
+          <span class="sub">${d.days} days · ${d.fuel} fuel · ◈${d.credits}</span>
+          <span class="sub">${d.hint}</span></button>`).join("")}
+    </div>
+    ${first?"":`<div class="mrow"><button class="mbtn2" onclick="closeModal()">Cancel</button></div>`}
+  `, first);
+}
+function startFrom(diffKey){
+  const seed=($("seedInput").value.trim()||randomSeed()).slice(0,40);
+  closeModal();
+  newGame(seed,diffKey);
+  if(!seenHelp){ seenHelp=true; showHelp(true); }
+}
+let seenHelp=false;
+function showHelp(first){
+  modalHtml(`
+    <h2>📖 How to Play</h2>
+    ${first?`<p class="flavor">You can learn everything while playing. This is the whole game in about a minute:</p>`:""}
+
+    <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
+
+    <div class="tipbox"><b>About clusters:</b> there is no fixed list. STARWEAVER generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+
+    <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
+    <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Click the same hex <b>again</b> to fly there. Nebula hexes cost 2 fuel instead of 1.</div></div>
+    <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or—most importantly—<b>true clues</b> about the Key ruins.</div></div>
+    <div class="howstep"><span class="n">4</span><div><b>Use clues instead of guessing.</b><br>Open the <b>Clues</b> tab. Combine clues such as direction, distance from the centre, nearby star colour and terrain. Use ★ <b>Suspect</b> and × <b>Ruled out</b> notes on charted ruins.</div></div>
+    <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or scoop it free at systems with gas giants. If you run dry in deep space, a rescue tug will tow you—but it costs credits and days.</div></div>
+    <div class="howstep"><span class="n">6</span><div><b>Stations make the voyage easier.</b><br><b>Market:</b> buy ▼ goods cheaply and sell them where they show ▲. <b>Shipyard:</b> improve tank, hold, scanner, hull and engine. <b>Lounge:</b> buy true rumours or take delivery contracts.</div></div>
+    <div class="howstep"><span class="n">7</span><div><b>Open the Gate.</b><br>Recover all 3 Keys and the Celestial Gate is revealed automatically. Fly to it to finish the charter and receive your score.</div></div>
+
+    <h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:14px 0 6px">FIRST-VOYAGE TIPS</h3>
+    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.</div>
+
+    <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">${first?"Cast off!":"Back to the stars"}</button></div>
+  `);
+}
+$("btnHelp").addEventListener("click",()=>showHelp(false));
+$("btnNew").addEventListener("click",()=>showNewGame(false));
+$("btnZin").addEventListener("click",()=>{cam.zoom=Math.min(2.6,cam.zoom*1.2);});
+$("btnZout").addEventListener("click",()=>{cam.zoom=Math.max(.45,cam.zoom/1.2);});
+$("btnHome").addEventListener("click",()=>centerOnShip(true));
+window.addEventListener("keydown",e=>{
+  if(e.key==="Escape"&&!modalLocked) closeModal();
+});
+document.body.addEventListener("pointerdown",()=>{ const a=ac(); if(a&&a.state==="suspended") a.resume(); },{once:true});
+window.addEventListener("beforeunload",autoSave);
+
+/* boot */
+resize();
+requestAnimationFrame(draw);
+showNewGame(true);
+
+/* test hooks (harmless in play) */
+window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPath, travelTo, saveCode, loadCode, loadAutoSave, cellAt, openStation, exploreRuin};
+
+</script>
+
+<script>
+/* PWA registration: deliberately scoped to STARWEAVER only. */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/starweaver-sw.js', { scope: '/starweaver.html' })
+      .catch(err => console.warn('STARWEAVER offline mode unavailable:', err));
+  });
+}
+</script>
+</body>
+</html>
