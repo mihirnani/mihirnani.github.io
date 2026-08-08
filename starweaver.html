@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>StarWeaver — The Cluster Charter</title>
 <meta name="description" content="A procedural space exploration and strategy game with contextual astronomy, distinct Galactic environments, evolving encounters and a Captain's Atlas.">
 <meta name="theme-color" content="#070a14">
@@ -28,21 +28,25 @@
 }
 *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent;}
 html,body{height:100%; overflow:hidden;}
+@supports (height:100dvh){html,body{height:100dvh;}}
 body{
   background:var(--bg); color:var(--ink);
   font-family:"Avenir Next","Segoe UI",system-ui,sans-serif;
   font-size:15px; display:flex; flex-direction:column;
+  min-height:100%;
 }
+@supports (height:100dvh){body{min-height:100dvh;}}
 button{font-family:inherit;}
 /* ---------- header ---------- */
 #hdr{
-  display:flex; align-items:center; gap:10px; padding:7px 14px;
+  display:flex; align-items:center; gap:10px;
+  padding:calc(7px + env(safe-area-inset-top,0px)) calc(14px + env(safe-area-inset-right,0px)) 7px calc(14px + env(safe-area-inset-left,0px));
   background:linear-gradient(180deg,#101731,#0b1122); border-bottom:1px solid var(--edge);
   flex:0 0 auto; z-index:20;
 }
-#hdr h1{font-size:17px; letter-spacing:3px; color:var(--gold); font-weight:700; white-space:nowrap;}
+#hdr h1{font-size:17px; letter-spacing:3px; color:var(--gold); font-weight:700; white-space:nowrap; min-width:0; overflow:hidden; text-overflow:ellipsis;}
 #hdr h1 span{color:var(--cyan); font-weight:400;}
-#seedTag{font-size:12px; color:var(--dim); cursor:pointer; white-space:nowrap;}
+#seedTag{font-size:12px; color:var(--dim); cursor:pointer; white-space:nowrap; min-width:0; overflow:hidden; text-overflow:ellipsis;}
 #seedTag:hover{color:var(--cyan);}
 #hdr .spacer{flex:1;}
 .hbtn{
@@ -50,6 +54,12 @@ button{font-family:inherit;}
   border-radius:8px; padding:5px 11px; font-size:13px; cursor:pointer; white-space:nowrap;
 }
 .hbtn:hover{border-color:var(--cyan); color:var(--cyan);}
+#btnMenu{display:none;font-size:20px;line-height:1;padding:7px 10px;min-width:44px;min-height:44px;text-align:center;}
+#headerMenu{display:none;position:absolute;right:calc(8px + env(safe-area-inset-right,0px));top:calc(100% + 6px);z-index:35;width:min(240px,calc(100vw - 20px));padding:7px;background:#101831;border:1px solid #34406b;border-radius:11px;box-shadow:0 16px 44px rgba(0,0,0,.5);}
+#headerMenu.on{display:block;}
+#headerMenu button{display:block;width:100%;min-height:44px;padding:9px 11px;border:0;border-bottom:1px solid rgba(38,49,79,.75);background:transparent;color:var(--ink);text-align:left;font:inherit;font-size:14px;cursor:pointer;}
+#headerMenu button:last-child{border-bottom:0;}
+#headerMenu button:hover,#headerMenu button:focus-visible{background:var(--panel2);outline:none;}
 /* ---------- layout ---------- */
 #main{flex:1; display:flex; min-height:0;}
 #mapWrap{flex:1; position:relative; min-width:0; background:#04060d;}
@@ -57,7 +67,7 @@ button{font-family:inherit;}
 #cv.drag{cursor:grabbing;}
 #mapBtns{position:absolute; right:12px; bottom:12px; display:flex; flex-direction:column; gap:6px; z-index:5;}
 .mbtn{
-  width:38px; height:38px; border-radius:10px; border:1px solid var(--edge);
+  width:44px; height:44px; border-radius:10px; border:1px solid var(--edge);
   background:rgba(14,20,36,.88); color:var(--ink); font-size:17px; cursor:pointer;
 }
 .mbtn:hover{border-color:var(--cyan); color:var(--cyan);}
@@ -78,6 +88,10 @@ button{font-family:inherit;}
 .routeCard{margin:0 0 10px;padding:9px 10px;border:1px solid rgba(95,214,232,.32);border-radius:9px;background:rgba(95,214,232,.055);}
 .routeCard .routeTitle{font-size:12px;text-transform:uppercase;letter-spacing:1.1px;color:var(--cyan);margin-bottom:4px;}
 .routeCard b{color:var(--gold);}
+.routeActions{display:flex;gap:7px;margin-top:8px;}
+.routeActions .flyBtn{flex:1;min-height:44px;padding:9px 12px;margin:0;border-radius:8px;border:1px solid #4a72e8;background:linear-gradient(180deg,#2b55c9,#1d3d9e);color:#fff;font-weight:700;font-size:13px;cursor:pointer;}
+.routeActions .flyBtn:disabled{opacity:.4;cursor:default;}
+.routeActions .cancelBtn{min-height:44px;padding:9px 12px;margin:0;}
 .destList{margin-top:8px;border-top:1px solid var(--edge);padding-top:7px;}
 .destList summary{cursor:pointer;color:var(--dim);font-size:12px;user-select:none;}
 .destRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(38,49,79,.55);}
@@ -92,6 +106,9 @@ canvas:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px;}
   flex:0 0 330px; background:var(--panel); border-left:1px solid var(--edge);
   display:flex; flex-direction:column; min-height:0;
 }
+#sheetHandle{display:none;align-items:center;justify-content:center;gap:7px;width:100%;min-height:32px;border:0;border-bottom:1px solid var(--edge);background:var(--panel);color:var(--dim);font:inherit;font-size:11px;letter-spacing:.6px;cursor:pointer;}
+#sheetHandle::before{content:"";width:36px;height:4px;border-radius:99px;background:#405070;}
+#sheetHandle:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px;}
 #statusBox{padding:10px 12px 8px; border-bottom:1px solid var(--edge); flex:0 0 auto;}
 #dayRow{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:7px;}
 #dayRow .day{font-size:15px; color:var(--gold); font-weight:600;}
@@ -108,7 +125,7 @@ canvas:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px;}
 #credRow .cargo{color:var(--dim);}
 /* ---------- tabs ---------- */
 #tabs{display:flex; border-bottom:1px solid var(--edge); flex:0 0 auto;}
-.tab{flex:1; padding:7px 0; text-align:center; font-size:12.5px; letter-spacing:.5px;
+.tab{flex:1; min-height:44px; padding:7px 0; display:flex;align-items:center;justify-content:center; text-align:center; font-size:12.5px; letter-spacing:.5px;
   color:var(--dim); cursor:pointer; border-bottom:2px solid transparent; user-select:none;}
 .tab.on{color:var(--cyan); border-bottom-color:var(--cyan); background:rgba(95,214,232,.05);}
 .tab .dot{display:none; color:var(--gold);}
@@ -125,7 +142,7 @@ canvas:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px;}
 .abtn{
   display:block; width:100%; margin:6px 0; padding:9px 12px; text-align:left;
   background:var(--panel2); border:1px solid var(--edge); border-radius:9px;
-  color:var(--ink); font-size:13.5px; cursor:pointer; line-height:1.35;
+  color:var(--ink); font-size:13.5px; cursor:pointer; line-height:1.35; min-height:44px;
 }
 .abtn:hover:not(:disabled){border-color:var(--cyan);}
 .abtn:disabled{opacity:.45; cursor:default;}
@@ -171,7 +188,7 @@ canvas:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px;}
 #modal p.flavor{color:#c6d2f5;}
 .mrow{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px;}
 .mbtn2{
-  flex:1 1 auto; min-width:130px; padding:10px 14px; border-radius:10px; cursor:pointer;
+  flex:1 1 auto; min-width:130px; min-height:44px; padding:10px 14px; border-radius:10px; cursor:pointer;
   background:var(--panel2); border:1px solid var(--edge); color:var(--ink);
   font-size:13.5px; text-align:left; line-height:1.35;
 }
@@ -186,7 +203,16 @@ table.mkt th{font-size:11px; color:var(--dim); text-transform:uppercase; letter-
   text-align:left; padding:4px 6px; border-bottom:1px solid var(--edge);}
 table.mkt td{padding:6px 6px; border-bottom:1px solid #1b2440;}
 table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .hi{color:var(--red);}
-.tbtn{padding:3px 9px; margin-left:4px; border-radius:6px; border:1px solid var(--edge);
+ .marketCards{display:none;}
+.marketCard{padding:10px 11px;margin:7px 0;background:var(--panel2);border:1px solid var(--edge);border-radius:10px;}
+.marketCardTop{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:7px;}
+.marketCardName{font-weight:700;font-size:14px;}
+.marketCardHeld{font-size:12px;color:var(--dim);white-space:nowrap;}
+.marketCardPrice{font-size:12.5px;color:var(--gold);margin-bottom:8px;}
+.marketCardPrice.lo{color:var(--green)}.marketCardPrice.hi{color:var(--red)}
+.marketCardActions{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.marketCardActions .tbtn{margin:0;min-height:44px;}
+.tbtn{min-height:40px; min-width:40px; padding:7px 11px; margin-left:4px; border-radius:6px; border:1px solid var(--edge);
   background:var(--panel2); color:var(--ink); cursor:pointer; font-size:12px;}
 .tbtn:hover:not(:disabled){border-color:var(--cyan);}
 .tbtn:disabled{opacity:.35; cursor:default;}
@@ -202,6 +228,13 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 }
 .contextCard{border-left:3px solid var(--cyan);}
 .scienceCard{border-left:3px solid var(--cyan);}
+.fieldNotesDetails{margin-top:10px;}
+.fieldNotesDetails>summary{list-style:none;cursor:pointer;min-height:44px;display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border:1px solid var(--edge);border-radius:9px;background:rgba(95,214,232,.05);color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:1.2px;font-weight:700;}
+.fieldNotesDetails>summary::-webkit-details-marker{display:none;}
+.fieldNotesDetails>summary::after{content:"▾";color:var(--cyan);font-size:14px;}
+.fieldNotesDetails:not([open])>summary::after{content:"▸";}
+.fieldNotesDetails[open]>summary{border-bottom-left-radius:6px;border-bottom-right-radius:6px;}
+.fieldNotesDetails .scienceCard{margin-top:7px;}
 .scienceCard .stitle,.atlasCard .stitle{font-size:13.5px;font-weight:700;color:var(--cyan);margin-bottom:4px;}
 .scienceCard p,.atlasCard p{font-size:12.7px;line-height:1.52;margin:5px 0;color:var(--ink);}
 .scienceMeta{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0;}
@@ -253,14 +286,50 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 @media (max-width:760px){
   #side{flex-basis:270px;}
   body{font-size:14px;}
-  #hdr{gap:5px;padding:6px 8px;}
-  #hdr h1{font-size:13px;letter-spacing:1.5px;}
+  #hdr{gap:5px;padding:calc(6px + env(safe-area-inset-top,0px)) calc(8px + env(safe-area-inset-right,0px)) 6px calc(8px + env(safe-area-inset-left,0px));position:relative;}
+  #hdr h1{font-size:14px;letter-spacing:1.5px;}
   #hdr h1 span,#seedTag{display:none;}
-  .hbtn{padding:4px 7px;font-size:11.5px;border-radius:7px;}
+  #btnHelp,#btnSave,#btnNew{display:none;}
+  #btnMenu{display:inline-block;}
+  .hbtn{min-height:44px;padding:6px 9px;font-size:12px;border-radius:8px;}
+}
+@media (max-width:900px) and (orientation:portrait){
+  #main{flex-direction:column;}
+  #mapWrap{min-height:0;}
+  #side{flex:0 0 40%;min-height:300px;width:100%;border-left:none;border-top:1px solid var(--edge);transition:flex-basis .22s ease;padding-bottom:env(safe-area-inset-bottom,0px);}
+  #side.expanded{flex-basis:70%;}
+  #sheetHandle{display:flex;}
+  #panels{overscroll-behavior:contain;}
 }
 @media (max-width:600px){
   #main{flex-direction:column;}
-  #side{flex:0 0 48%; border-left:none; border-top:1px solid var(--edge);}
+  #mapWrap{min-height:0;}
+  #side{flex:0 0 42%;min-height:220px;border-left:none;border-top:1px solid var(--edge);transition:flex-basis .22s ease; padding-bottom:env(safe-area-inset-bottom,0px);}
+  #side.expanded{flex-basis:75%;}
+  #sheetHandle{display:flex;}
+  #statusBox{padding:7px 11px 6px;}
+  #sectorLbl{display:none;}
+  #panels{overscroll-behavior:contain;}
+  .panel{padding:10px 11px calc(18px + env(safe-area-inset-bottom,0px));}
+  .routeCard{position:sticky;top:0;z-index:8;margin:-2px -2px 10px;box-shadow:0 6px 18px rgba(0,0,0,.34);}
+  .routeActions .flyBtn{font-size:14px;}
+  .scienceCard p,.atlasCard p{font-size:14px;line-height:1.56;}
+  .small{font-size:13px;}
+  table.mkt.desktopMarket{display:none;}
+  .marketCards{display:block;}
+  #modal{width:min(560px,calc(100vw - 18px));max-height:calc(100dvh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px) - 18px);padding:18px 16px calc(18px + env(safe-area-inset-bottom,0px));}
+  #shade{padding:calc(9px + env(safe-area-inset-top,0px)) calc(9px + env(safe-area-inset-right,0px)) calc(9px + env(safe-area-inset-bottom,0px)) calc(9px + env(safe-area-inset-left,0px));}
+  #toast{bottom:calc(16px + env(safe-area-inset-bottom,0px));}
+  #mapBtns{right:calc(9px + env(safe-area-inset-right,0px));bottom:9px;}
+}
+@media (max-width:390px){
+  #hdr h1{font-size:13px;letter-spacing:1px;}
+  #dayRow .day{font-size:13px;}
+  #credRow{font-size:12.5px;}
+}
+@media (pointer:coarse){
+  .tbtn,.mbtn,.hbtn,.tab,.abtn,.mbtn2{min-height:44px;}
+  .ruinNote .tbtn{min-width:44px;}
 }
 </style>
 </head>
@@ -272,7 +341,13 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
   <button class="hbtn" id="btnHelp">How to Play</button>
   <button class="hbtn" id="btnSave">Save</button>
   <button class="hbtn" id="btnNew">New Voyage</button>
-  <button class="hbtn" id="btnMute" title="Toggle sound">🔊</button>
+  <button class="hbtn" id="btnMute" title="Toggle sound" aria-label="Toggle sound">🔊</button>
+  <button class="hbtn" id="btnMenu" title="More options" aria-label="More options" aria-expanded="false">⋯</button>
+  <div id="headerMenu" role="menu" aria-label="StarWeaver options">
+    <button type="button" id="menuHelp">How to Play</button>
+    <button type="button" id="menuSave">Save voyage</button>
+    <button type="button" id="menuNew">New Voyage</button>
+  </div>
 </div>
 
 <div id="main">
@@ -288,6 +363,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
   </div>
 
   <div id="side">
+    <button id="sheetHandle" type="button" aria-expanded="false" aria-label="Expand information panel"><span id="sheetHandleText">Expand panel</span></button>
     <div id="statusBox">
       <div id="dayRow">
         <span class="day" id="dayLbl">Day 1 / 110</span>
@@ -447,6 +523,7 @@ function interpLogSubtype(range,subtype){
 }
 function formatLifetimeGyr(gyr){
   if(gyr<1){const myr=gyr*1000;return `${myr<10?Math.round(myr*10)/10:Math.round(myr)} million years`;}
+  if(gyr>=1000){const t=gyr/1000;return `${t<10?Math.round(t*10)/10:Math.round(t)} trillion years`;}
   const rounded=gyr<10?Math.round(gyr*10)/10:gyr<100?Math.round(gyr):Math.round(gyr/10)*10;
   return `${rounded.toLocaleString()} billion years`;
 }
@@ -946,7 +1023,7 @@ function newGame(seedStr, diffKey){
   log(`Scientific setting: <b>${W.context.place}</b>, about <b>${W.context.distanceLy.toLocaleString()} light-years</b> from the Solar System (fictional survey chart in a real Galactic context).`);
   log(`Survey character: <b>${W.profile.name}</b> — ${W.profile.blurb}`);
   log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> — all before day ${S.dayLimit}.`);
-  cam.x=0; cam.y=0; cam.zoom=1;
+  cam.x=0; cam.y=0; cam.zoom=initialChartZoom();
   centerOnShip(false);
   selected=null;
   refreshAll();
@@ -994,17 +1071,24 @@ const HEX=34;                       // base hex size in world units
 let DPR=1, cw=0, ch=0;
 let selected=null;                  // {q,r} selected target cell
 let hoverCell=null;
-let animT=0;
+let animT=0, lastFrame=0;
 let recentRoute=null, routeTrailUntil=0, scanPulse=null;
 const REDUCED_MOTION=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+function initialChartZoom(){
+  const w=window.innerWidth||1024,h=window.innerHeight||768;
+  if(w<=600) return .78;
+  if(w<=900 || (w<=1100&&h>w)) return .90;
+  return 1;
+}
 function resize(){
-  DPR=window.devicePixelRatio||1;
+  DPR=Math.min(2,window.devicePixelRatio||1);
   const rct=cv.getBoundingClientRect();
   cw=rct.width; ch=rct.height;
   cv.width=Math.round(cw*DPR); cv.height=Math.round(ch*DPR);
 }
-window.addEventListener("resize",resize);
+window.addEventListener("resize",()=>{resize();if(!isSheetUI())setSheetExpanded(false);});
+if(window.visualViewport) window.visualViewport.addEventListener("resize",resize);
 
 function worldToScreen(wx,wy){
   return {x:(wx-cam.x)*cam.zoom + cw/2, y:(wy-cam.y)*cam.zoom + ch/2};
@@ -1042,6 +1126,10 @@ function centerOnShip(smooth){
 let camTarget=null;
 
 function draw(ts){
+  const frameInterval=REDUCED_MOTION?100:33.333;
+  if(document.hidden){requestAnimationFrame(draw);return;}
+  if(lastFrame&&ts-lastFrame<frameInterval){requestAnimationFrame(draw);return;}
+  lastFrame=ts;
   animT=ts/1000;
   if(camTarget){
     cam.x+=(camTarget.x-cam.x)*.12; cam.y+=(camTarget.y-cam.y)*.12;
@@ -1508,12 +1596,13 @@ function checkStranded(){
   S.credits-=fee;
   S.pos={q:st.q,r:st.r};
   S.fuel=4;
+  S.hull=Math.max(S.hull,3);
   advanceDays(4);
   visit(S.pos);
-  log(`<b>Unable to continue under your own power.</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard.`);
+  log(`<b>Unable to continue under your own power.</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard; hull patched to at least 3.`);
   centerOnShip(true);
   if(S.over&&!S.freePlay){ refreshAll(); return; }
-  modalInfo("Stranded!", `No charted neighbouring jump was within your remaining fuel. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel. Watch that fuel gauge, captain!`);
+  modalInfo("Stranded!", `No charted neighbouring jump was within your remaining fuel. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel and patched the hull to a safe minimum. Watch that fuel gauge, captain!`);
 }
 
 /* ---------- endings ---------- */
@@ -1581,6 +1670,23 @@ function scoreTable(sc){
    SIDEBAR UI
    ============================================================ */
 const $=id=>document.getElementById(id);
+function isPhoneUI(){return window.matchMedia&&window.matchMedia("(max-width: 600px)").matches;}
+function isSheetUI(){return window.matchMedia&&window.matchMedia("(max-width: 900px) and (orientation: portrait)").matches;}
+function setSheetExpanded(expanded){
+  const side=$("side"),handle=$("sheetHandle"),txt=$("sheetHandleText"); if(!side||!handle)return;
+  side.classList.toggle("expanded",!!expanded);
+  handle.setAttribute("aria-expanded",expanded?"true":"false");
+  handle.setAttribute("aria-label",expanded?"Collapse information panel":"Expand information panel");
+  if(txt)txt.textContent=expanded?"Collapse panel":"Expand panel";
+  requestAnimationFrame(resize);
+}
+$("sheetHandle").addEventListener("click",()=>setSheetExpanded(!$("side").classList.contains("expanded")));
+function closeHeaderMenu(){const m=$("headerMenu"),b=$("btnMenu");if(m)m.classList.remove("on");if(b)b.setAttribute("aria-expanded","false");}
+$("btnMenu").addEventListener("click",e=>{e.stopPropagation();const m=$("headerMenu"),b=$("btnMenu"),open=!m.classList.contains("on");m.classList.toggle("on",open);b.setAttribute("aria-expanded",open?"true":"false");});
+$("menuHelp").addEventListener("click",()=>{closeHeaderMenu();$("btnHelp").click();});
+$("menuSave").addEventListener("click",()=>{closeHeaderMenu();$("btnSave").click();});
+$("menuNew").addEventListener("click",()=>{closeHeaderMenu();$("btnNew").click();});
+document.addEventListener("click",e=>{if(!$("headerMenu").contains(e.target)&&e.target!==$("btnMenu"))closeHeaderMenu();});
 document.querySelectorAll(".tab").forEach(t=>{
   t.addEventListener("click",()=>{
     document.querySelectorAll(".tab").forEach(x=>x.classList.remove("on"));
@@ -1588,6 +1694,7 @@ document.querySelectorAll(".tab").forEach(t=>{
     t.classList.add("on");
     $("p-"+t.dataset.p).classList.add("on");
     if(t.dataset.p==="clues"||t.dataset.p==="atlas") t.classList.remove("alert");
+    if(isSheetUI()&&(t.dataset.p==="clues"||t.dataset.p==="atlas"||t.dataset.p==="log")) setSheetExpanded(true);
   });
 });
 
@@ -1656,12 +1763,12 @@ function renderHere(){
   }else{
     h+=`<div id="hereName">Open Space</div><div id="hereSub">Silence, starlight, and the hum of your ship.</div>`+missionH;
   }
-  h+=fieldNotesHtml(c);
   if(hullCritical()) h+=`<div class="missionBox" style="border-color:var(--red)">⚠ <b>Critical hull integrity.</b> Shielding and containment draw extra power: every jump costs <b>+1 fuel</b> until the hull is repaired above 2.</div>`;
   h+=`<h3>Captain's tools</h3>`;
   h+=`<button class="abtn" onclick="deepScan()" ${S.fuel>=1?"":"disabled"}>📡 Deep scan<span class="sub">1 fuel, 1 day · reveals a wide ring (range ${S.scanRange+2}) around you</span></button>`;
   h+=`<button class="abtn" onclick="waitDay()">🌙 Hold position<span class="sub">Pass 1 day (markets drift, engines cool)</span></button>`;
   h+=chartedDestinationsHtml();
+  h+=fieldNotesHtml(c);
   p.innerHTML=h;
   renderStatus();
 }
@@ -1676,7 +1783,7 @@ function cellLabel(c){
 function routeCardHtml(){
   if(!selected)return ""; const c=cellAt(selected.q,selected.r); if(!c)return ""; const path=findPath(S.pos,c); if(!path)return "";
   const fuel=pathFuel(path),days=pathDays(path),bad=fuel>S.fuel;
-  return `<div class="routeCard"><div class="routeTitle">Plotted course</div><b>${cellLabel(c)}</b><div class="small">${path.length} jump${path.length===1?"":"s"} · ${fuel} fuel · ${days} day${days===1?"":"s"}${bad?` · <span style="color:var(--red)">insufficient fuel</span>`:""}</div><div class="mrow" style="margin-top:7px"><button class="tbtn" ${bad?"disabled":""} onclick="flySelected()">Fly course</button><button class="tbtn" onclick="cancelRoute()">Cancel</button></div></div>`;
+  return `<div class="routeCard"><div class="routeTitle">Plotted course</div><b>${cellLabel(c)}</b><div class="small">${path.length} jump${path.length===1?"":"s"} · ${fuel} fuel · ${days} day${days===1?"":"s"}${bad?` · <span style="color:var(--red)">insufficient fuel</span>`:""}</div><div class="routeActions"><button class="flyBtn" ${bad?"disabled":""} onclick="flySelected()">Fly to ${cellLabel(c)} · ${fuel} fuel · ${days} day${days===1?"":"s"}</button><button class="tbtn cancelBtn" onclick="cancelRoute()">Cancel</button></div></div>`;
 }
 function flySelected(){if(!selected)return;const c=cellAt(selected.q,selected.r),p=findPath(S.pos,c);if(p)travelTo(c,p);}
 function cancelRoute(){selected=null;previewPath=null;tipHide();renderHere();}
@@ -1771,7 +1878,8 @@ function discoverScienceAt(c,quiet,includeContext=false){
 function fieldNotesHtml(c){
   if(!W||!S) return "";
   const surveyed=S.surveysDone instanceof Set&&S.surveysDone.has(hk(c.q,c.r));
-  let h=`<h3>Field notes</h3>`;
+  const openAttr=isPhoneUI()?"":" open";
+  let h=`<details class="fieldNotesDetails"${openAttr}><summary>Field Notes</summary>`;
   if(c.type==="star"&&c.astro){
     const a=c.astro;
     h+=`<div class="scienceCard"><div class="stitle">🔭 ${a.spectralClass}-type stellar reading</div>
@@ -1794,7 +1902,7 @@ function fieldNotesHtml(c){
   }else{
     h+=`<div class="scienceCard"><div class="stitle">✦ Interstellar scale</div><p><span class="truthTag">Real astronomy</span> Stars are normally separated by light-years. The hex chart radically compresses distance so that a voyage can be played in minutes rather than millennia.</p>${scienceSourceLink("milky")}</div>`;
   }
-  return h;
+  return h+`</details>`;
 }
 function observationButton(c,surveyed){
   if(!["star","nebula","asteroid"].includes(c.type)) return "";
@@ -2051,7 +2159,7 @@ function openStation(tab){
   modalHtml(h);
 }
 function marketHtml(c){
-  let h=`<table class="mkt"><tr><th>Good</th><th>Buy / sell</th><th>Held</th><th style="text-align:right">Trade</th></tr>`;
+  let h=`<table class="mkt desktopMarket"><tr><th>Good</th><th>Buy / sell</th><th>Held</th><th style="text-align:right">Trade</th></tr>`;
   for(const g of GOODS){
     const buyPr=buyPriceOf(c,g.id),sellPr=sellPriceOf(c,g.id);
     const cls=c.produces.includes(g.id)?"lo":c.wants.includes(g.id)?"hi":"";
@@ -2065,7 +2173,7 @@ function marketHtml(c){
         <button class="tbtn" ${held?"":"disabled"} onclick="trade('${g.id}',-1)">Sell</button>
       </td></tr>`;
   }
-  h+=`</table><div class="small">Prices show buy / sell. ▼ produced here (cheap) · ▲ wanted here (pays well). A small station spread prevents costless round trips; prices drift every few days.</div>`;
+  h+=`</table><div class="marketCards">${GOODS.map(g=>{const buyPr=buyPriceOf(c,g.id),sellPr=sellPriceOf(c,g.id),cls=c.produces.includes(g.id)?"lo":c.wants.includes(g.id)?"hi":"",held=S.cargo[g.id]||0,canBuy=S.credits>=buyPr&&cargoCount()<S.cargoMax;return `<div class="marketCard"><div class="marketCardTop"><span class="marketCardName">${g.icon} ${g.name}</span><span class="marketCardHeld">Held ${held}</span></div><div class="marketCardPrice ${cls}">Buy ◈${buyPr} · Sell ◈${sellPr}${cls==="lo"?" ▼ produced here":cls==="hi"?" ▲ wanted here":""}</div><div class="marketCardActions"><button class="tbtn" ${canBuy?"":"disabled"} onclick="trade('${g.id}',1)">Buy</button><button class="tbtn" ${held?"":"disabled"} onclick="trade('${g.id}',-1)">Sell</button></div></div>`;}).join("")}</div><div class="small">Prices show buy / sell. ▼ produced here (cheap) · ▲ wanted here (pays well). A small station spread prevents costless round trips; prices drift every few days.</div>`;
   /* refuel */
   const need=S.fuelMax-S.fuel;
   const cost1=c.fuelPrice, costAll=need*c.fuelPrice;
@@ -2151,7 +2259,7 @@ function loungeHtml(c){
   ])}</p>`;
   const cluesLeft=W.clues.some((cl,i)=>!S.keys[i]&&S.foundClues[i].length<cl.length);
   h+=`<div class="mrow" style="margin-top:8px">
-    <button class="mbtn2" ${cluesLeft&&S.credits>=60?"":"disabled"} onclick="buyRumor()">🗝️ Buy a rumor <span class="sub">◈60 — a true clue about a Star Key</span></button>
+    <button class="mbtn2" ${cluesLeft&&S.credits>=60?"":"disabled"} onclick="buyRumor()">🗝️ Buy a rumor <span class="sub">◈60 — a clue about a Star Key</span></button>
     <button class="mbtn2" ${S.mission?"disabled":""} onclick="takeMission()">${S.mission?"📦 Contract in progress":"📦 Ask for work"} <span class="sub">${S.mission?`${S.mission.qty} ${GOOD[S.mission.good].name} → ${S.mission.star}`:"a delivery contract, good pay"}</span></button>
   </div>`;
   if(!cluesLeft) h+=`<p class="small" style="margin-top:8px">No fresh rumors — you already know all there is to whisper.</p>`;
@@ -2455,6 +2563,7 @@ function loadCode(code){
     if(!S.ruinMarks) S.ruinMarks={};
     if(S.pendingEvent===undefined) S.pendingEvent=null;
     if(S.pendingArrival===undefined) S.pendingArrival=false;
+    cam.zoom=initialChartZoom();
     centerOnShip(false);
     refreshAll();
     closeModal();
@@ -2576,10 +2685,10 @@ function showHelp(first){
 
     <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
 
-    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Orion Spur or Galactic halo. Those contexts now also bias the generated chart: halo voyages tend to be quieter and cool-star heavy; gas-rich arm voyages tend to contain more nebular terrain and luminous stars. These are procedural game biases, not a catalogue of real systems. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Local Arm (Orion Arm/Spur) or Galactic halo. Those contexts now also bias the generated chart: halo voyages tend to be quieter and cool-star heavy; gas-rich arm voyages tend to contain more nebular terrain and luminous stars. These are procedural game biases, not a catalogue of real systems. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
 
     <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
-    <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Click the same hex <b>again</b> to fly there. Nebula hexes cost 2 fuel instead of 1.</div></div>
+    <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Tap or click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Tap the large <b>Fly</b> button (or tap/click the same hex again) to travel. Nebula hexes cost 2 fuel instead of 1.</div></div>
     <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or—most importantly—<b>clues</b> about the Key ruins.</div></div>
     <div class="howstep"><span class="n">4</span><div><b>Use clues instead of guessing.</b><br>Open the <b>Clues</b> tab. Combine clues such as direction, distance from the centre, nearby star colour and terrain. Use ★ <b>Suspect</b> and × <b>Ruled out</b> notes on charted ruins.</div></div>
     <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or take one 5-fuel scoop from each gas-giant system you discover. If you cannot make any charted neighbouring jump, a rescue tug will tow you—but it costs credits and days. Hull 2 or below is critical and adds 1 fuel to every jump until repaired.</div></div>
@@ -2600,6 +2709,7 @@ $("btnZout").addEventListener("click",()=>{cam.zoom=Math.max(.45,cam.zoom/1.2);}
 $("btnHome").addEventListener("click",()=>centerOnShip(true));
 window.addEventListener("keydown",e=>{
   const tag=(e.target&&e.target.tagName||"").toLowerCase(); if(tag==="input"||tag==="textarea")return;
+  if(e.key==="Escape"&&$("headerMenu").classList.contains("on")){closeHeaderMenu();return;}
   if(e.key==="Escape"&&!modalLocked){closeModal();cancelRoute();return;}
   if(shade.classList.contains("on"))return;
   if(e.key==="+"||e.key==="="){cam.zoom=Math.min(2.6,cam.zoom*1.15);e.preventDefault();}
@@ -2610,7 +2720,9 @@ window.addEventListener("keydown",e=>{
   else if(e.key>="1"&&e.key<="5"){const tabs=[...document.querySelectorAll("#tabs .tab")];const t=tabs[Number(e.key)-1];if(t)t.click();}
   else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){const d=60/cam.zoom;if(e.key==="ArrowLeft")cam.x-=d;if(e.key==="ArrowRight")cam.x+=d;if(e.key==="ArrowUp")cam.y-=d;if(e.key==="ArrowDown")cam.y+=d;camTarget=null;e.preventDefault();}
 });
-document.body.addEventListener("pointerdown",()=>{ const a=ac(); if(a&&a.state==="suspended") a.resume(); },{once:true});
+function wakeAudio(){const a=ac();if(a&&a.state==="suspended")a.resume();}
+document.body.addEventListener("pointerdown",wakeAudio,{once:true});
+document.body.addEventListener("keydown",wakeAudio,{once:true});
 window.addEventListener("beforeunload",autoSave);
 
 /* boot */
