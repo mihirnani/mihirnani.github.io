@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>StarWeaver — The Cluster Charter</title>
-<meta name="description" content="A gentle procedurally generated space exploration and strategy game: chart a star cluster, follow clues, recover three Star Keys, and reach the Celestial Gate.">
+<meta name="description" content="A gentle procedural space exploration and strategy game with contextual astronomy: chart a fictional survey cluster in the real Milky Way, follow clues, build a Captain's Atlas, recover three Star Keys, and reach the Celestial Gate.">
 <meta name="theme-color" content="#070a14">
 <meta name="application-name" content="StarWeaver">
 <meta name="mobile-web-app-capable" content="yes">
@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/starweaver-icon-192.png">
 <link rel="canonical" href="https://naniwadekar.com/starweaver.html">
 <meta property="og:title" content="StarWeaver — The Cluster Charter">
-<meta property="og:description" content="Chart an unknown star cluster, follow true clues, recover three Star Keys, and reach the Celestial Gate.">
+<meta property="og:description" content="Explore a fictional survey cluster set in the real Milky Way, learn astronomy through field notes and observations, recover three Star Keys, and reach the Celestial Gate.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://naniwadekar.com/starweaver.html">
 <meta property="og:image" content="https://naniwadekar.com/starweaver-icon-512.png">
@@ -177,6 +177,34 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
   padding:8px 10px; background:var(--panel2); border:1px solid var(--edge); border-radius:9px; margin-bottom:7px;}
 .shopItem .si-l{font-size:13.5px; line-height:1.4;}
 .shopItem .si-l .sub{display:block; font-size:11.5px; color:var(--dim);}
+/* ---------- astronomy / atlas ---------- */
+.contextCard,.scienceCard,.atlasCard{
+  background:linear-gradient(180deg,rgba(20,28,51,.96),rgba(14,20,36,.96));
+  border:1px solid var(--edge); border-radius:10px; padding:10px 11px; margin:8px 0;
+}
+.contextCard{border-left:3px solid var(--cyan);}
+.scienceCard{border-left:3px solid var(--cyan);}
+.scienceCard .stitle,.atlasCard .stitle{font-size:13.5px;font-weight:700;color:var(--cyan);margin-bottom:4px;}
+.scienceCard p,.atlasCard p{font-size:12.7px;line-height:1.52;margin:5px 0;color:var(--ink);}
+.scienceMeta{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0;}
+.sciencePill{font-size:10.8px;padding:2px 7px;border-radius:999px;border:1px solid var(--edge);background:#0b1122;color:var(--dim);}
+.truthTag,.simTag,.fictionTag{display:inline-block;font-size:10px;letter-spacing:.65px;text-transform:uppercase;font-weight:700;border-radius:5px;padding:2px 6px;margin-right:4px;}
+.truthTag{color:var(--green);background:rgba(127,224,160,.09);border:1px solid rgba(127,224,160,.28);}
+.simTag{color:var(--cyan);background:rgba(95,214,232,.08);border:1px solid rgba(95,214,232,.25);}
+.fictionTag{color:var(--violet);background:rgba(183,155,255,.08);border:1px solid rgba(183,155,255,.25);}
+.sourceLink{color:var(--cyan);font-size:11.5px;text-decoration:none;}
+.sourceLink:hover{text-decoration:underline;}
+.atlasProgress{height:7px;border-radius:99px;background:#080d1b;overflow:hidden;border:1px solid var(--edge);margin:5px 0 9px;}
+.atlasProgress>i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--cyan));}
+.atlasGrid{display:grid;grid-template-columns:1fr;gap:7px;}
+.atlasLocked{opacity:.48;border-style:dashed;}
+.atlasCat{display:flex;justify-content:space-between;align-items:baseline;margin:13px 0 5px;color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:1.1px;}
+.atlasCat span{color:var(--dim);font-size:10.5px;letter-spacing:0;text-transform:none;}
+.scienceContext{margin-top:10px;padding:9px 10px;border:1px solid #2b4964;border-radius:9px;background:rgba(95,214,232,.05);}
+.scienceContext b{color:var(--cyan);}
+.observationBox{padding:10px 11px;border-radius:9px;background:#101a31;border:1px solid #294d67;margin:8px 0;}
+.obsAnswer{border-left:3px solid var(--green);padding-left:9px;margin:8px 0;font-size:13px;line-height:1.5;}
+.atlasBadge{font-size:11px;color:var(--gold);}
 /* toast */
 #toast{position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(20px);
   background:#182246; border:1px solid #3a4a80; color:var(--ink); padding:9px 18px;
@@ -249,17 +277,20 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
       <div class="bar"><div class="fill" id="fuelFill"></div><div class="lbl" id="fuelLbl">FUEL</div></div>
       <div class="bar"><div class="fill" id="hullFill"></div><div class="lbl" id="hullLbl">HULL</div></div>
       <div id="credRow"><span class="cr" id="credLbl">◈ 300</span><span class="cargo" id="cargoLbl">Cargo 0/6</span></div>
+      <div id="sectorLbl" class="small" style="margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis" title="Scientific setting"></div>
     </div>
     <div id="tabs">
       <div class="tab on" data-p="here">Here</div>
       <div class="tab" data-p="cargo">Cargo</div>
       <div class="tab" data-p="clues">Clues <span class="dot">●</span></div>
+      <div class="tab" data-p="atlas">Atlas <span class="dot">●</span></div>
       <div class="tab" data-p="log">Log</div>
     </div>
     <div id="panels">
       <div class="panel on" id="p-here"></div>
       <div class="panel" id="p-cargo"></div>
       <div class="panel" id="p-clues"></div>
+      <div class="panel" id="p-atlas"></div>
       <div class="panel" id="p-log"><div id="logList"></div></div>
     </div>
   </div>
@@ -272,7 +303,8 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 "use strict";
 /* ============================================================
    StarWeaver — a procedurally generated exploration strategy game
-   Single-file HTML5. Every seed weaves a brand-new star cluster.
+   with an optional contextual astronomy layer. Every seed weaves a fictional
+   survey cluster inside a real Milky Way setting.
    ============================================================ */
 
 /* ---------- seeded RNG ---------- */
@@ -328,6 +360,97 @@ const STAR_COLORS=[
   {id:"white",  name:"white",  col:"#eef2ff", glow:"#c8d6ff"},
   {id:"blue",   name:"blue",   col:"#9cc4ff", glow:"#5f9dff"},
 ];
+
+/* Astronomy layer. The game map remains fictional; these contexts and notes are grounded in real astronomy. */
+const GALACTIC_SECTORS=[
+  {id:"orion",name:"Orion Spur survey",place:"Orion Spur (Local Arm)",distance:[700,2400],atlas:"spiral_arms",
+   focus:"our local Galactic neighbourhood",summary:"The Sun sits in the Orion Spur, a smaller structure between the Sagittarius and Perseus arms. Your charter is fictional, but this placement is in the same broad Milky Way neighbourhood."},
+  {id:"perseus",name:"Perseus Arm frontier",place:"Perseus Arm",distance:[5600,9800],atlas:"spiral_arms",
+   focus:"spiral-arm structure and young stars",summary:"The Perseus Arm is one of the Milky Way’s major spiral arms. Spiral arms contain concentrations of gas, dust and star-forming regions as well as older stars."},
+  {id:"sagittarius",name:"Sagittarius Arm lane",place:"Sagittarius Arm",distance:[4200,8200],atlas:"spiral_arms",
+   focus:"gas, dust and star formation",summary:"The Sagittarius Arm is a gas-rich region of the Galactic disk with prominent star-forming complexes. Dust can hide visible-light objects while infrared observations reveal more."},
+  {id:"scutum",name:"Inner-disk expedition",place:"Scutum–Centaurus Arm region",distance:[10500,18500],atlas:"spiral_arms",
+   focus:"the crowded inner Galactic disk",summary:"Toward the inner Milky Way, stars, gas and dust become more crowded along our line of sight. Astronomers often combine infrared and radio observations to study obscured regions."},
+  {id:"outer",name:"Outer-disk frontier",place:"Outer Milky Way disk",distance:[15000,30000],atlas:"galactic_disk",
+   focus:"the thin stellar disk far from the Galactic centre",summary:"The Milky Way’s disk extends far beyond the Sun. The outer disk is more sparsely populated than the inner Galaxy and is useful for studying how the disk changes with distance from the centre."},
+  {id:"halo",name:"Halo crossing",place:"Galactic halo",distance:[18000,48000],atlas:"galactic_halo",
+   focus:"the Milky Way beyond its bright disk",summary:"The Galactic halo is a vast, diffuse region surrounding the disk. It contains old stars and globular clusters and sits inside a much larger halo dominated by dark matter."}
+];
+const SPECTRAL_BY_COLOR={
+  blue:[
+    {cls:"O",t:[30000,45000],m:[16,40],life:[3,10],lifeUnit:"million years",desc:"extremely hot, massive and short-lived"},
+    {cls:"B",t:[10000,30000],m:[2.1,16],life:[10,500],lifeUnit:"million years",desc:"hot, blue-white and generally much more massive than the Sun"}
+  ],
+  white:[
+    {cls:"A",t:[7500,10000],m:[1.4,2.1],life:[1,3],lifeUnit:"billion years",desc:"hotter and more massive than the Sun"},
+    {cls:"F",t:[6000,7500],m:[1.04,1.4],life:[3,7],lifeUnit:"billion years",desc:"somewhat hotter and more massive than the Sun"}
+  ],
+  yellow:[{cls:"G",t:[5200,6000],m:[0.8,1.04],life:[8,15],lifeUnit:"billion years",desc:"Sun-like in temperature and mass"}],
+  orange:[{cls:"K",t:[3700,5200],m:[0.45,0.8],life:[15,40],lifeUnit:"billion years",desc:"cooler, smaller and longer-lived than the Sun"}],
+  red:[{cls:"M",t:[2400,3700],m:[0.1,0.45],life:[50,500],lifeUnit:"billion years",desc:"cool, low-mass and exceptionally long-lived"}]
+};
+const SCIENCE_SOURCES={
+  milky:{name:"NASA Science · The Milky Way Galaxy",url:"https://science.nasa.gov/resource/the-milky-way-galaxy/"},
+  stars:{name:"NASA Science · Stars",url:"https://science.nasa.gov/universe/stars/"},
+  worlds:{name:"NASA Science · Exoplanets",url:"https://science.nasa.gov/exoplanets/"},
+  asteroids:{name:"NASA Science · Asteroids",url:"https://science.nasa.gov/solar-system/asteroids/"},
+  nebula:{name:"NASA Science · Nebulae",url:"https://science.nasa.gov/mission/hubble/science/universe-uncovered/hubble-nebulae/"}
+};
+const ASTRO_ATLAS=[
+  {id:"milky_way",cat:"Galaxy",title:"The Milky Way",src:"milky",body:"The Milky Way is our barred spiral galaxy, containing well over 100 billion stars. The Solar System lies in the disk, not at the centre."},
+  {id:"spiral_arms",cat:"Galaxy",title:"Spiral arms",src:"milky",body:"Spiral arms are regions of enhanced stellar density, gas and dust. They often contain active star formation. The Sun lies in the Orion Spur between larger arms."},
+  {id:"galactic_disk",cat:"Galaxy",title:"The Galactic disk",src:"milky",body:"Most visible stars, gas and dust in the Milky Way occupy a flattened disk. The disk extends tens of thousands of light-years from the Galactic centre."},
+  {id:"galactic_halo",cat:"Galaxy",title:"The Galactic halo",src:"milky",body:"A diffuse halo surrounds the Milky Way’s disk. It contains old stars and globular clusters and is embedded in a much larger dark-matter halo."},
+  {id:"galactic_scale",cat:"Galaxy",title:"Distances between stars",src:"milky",body:"Interstellar space is enormous. Nearby stars are typically separated by light-years. StarWeaver compresses those distances into adjacent hexes so a voyage can work as a game."},
+  {id:"star_colour",cat:"Stars",title:"Star colour and temperature",src:"stars",body:"A star’s colour is related to its surface temperature: blue stars are hotter, red stars cooler. The map exaggerates colour so the distinction is easy to see."},
+  {id:"spectral_types",cat:"Stars",title:"OBAFGKM spectral classes",src:"stars",body:"Astronomers classify ordinary stars by spectra and temperature. From hottest to coolest, the familiar sequence is O, B, A, F, G, K, M. The Sun is a G-type star."},
+  {id:"stellar_lifetimes",cat:"Stars",title:"Mass and stellar lifetime",src:"stars",body:"Massive stars burn nuclear fuel at far higher rates and can live only millions of years. Low-mass red dwarfs use fuel slowly and can outlive the present age of the Universe by enormous factors."},
+  {id:"spectroscopy",cat:"Methods",title:"Spectroscopy",src:"stars",body:"A spectrum spreads light by wavelength. Absorption and emission lines reveal chemical composition, temperature, motion and other physical conditions that a simple image cannot."},
+  {id:"parallax",cat:"Methods",title:"Stellar parallax",src:"stars",body:"As Earth orbits the Sun, a nearby star appears to shift slightly against more distant stars. Measuring this tiny angle gives a geometric distance."},
+  {id:"infrared",cat:"Methods",title:"Infrared astronomy",src:"nebula",body:"Infrared light passes through some dusty regions more readily than visible light. Infrared telescopes can therefore reveal stars and structures hidden inside obscuring clouds."},
+  {id:"exoplanets",cat:"Worlds",title:"Exoplanets",src:"worlds",body:"Planets orbiting stars beyond the Solar System are exoplanets. Thousands are confirmed, and astronomers infer their properties from effects such as transits, stellar motion and spectra."},
+  {id:"rocky_planets",cat:"Worlds",title:"Rocky worlds",src:"worlds",body:"Terrestrial planets are dominated by rock and metal. Their atmospheres and surfaces can vary enormously. StarWeaver’s ‘desert’, ‘frozen’ and ‘oceanic’ labels are fictional survey shorthand."},
+  {id:"gas_giants",cat:"Worlds",title:"Gas giants",src:"worlds",body:"Jupiter and Saturn are gas giants, composed mostly of hydrogen and helium. They do not have a solid surface like Earth. StarWeaver’s fuel-scooping mechanic is science fiction."},
+  {id:"nebulae",cat:"Interstellar",title:"Nebulae",src:"nebula",body:"Nebulae are clouds of gas and dust. Some are places where stars form; others are material shed or expelled by evolved stars. They are vastly more diffuse than game artwork suggests."},
+  {id:"molecular_clouds",cat:"Interstellar",title:"Molecular clouds",src:"stars",body:"Stars form inside cold molecular clouds when dense regions collapse under gravity. These clouds can span many light-years and contain enough material to form large numbers of stars."},
+  {id:"asteroid_belts",cat:"Worlds",title:"Asteroid belts",src:"asteroids",body:"Real asteroid belts are mostly empty space: objects are separated by huge distances. StarWeaver deliberately compresses an asteroid field into a hazardous-looking hex for gameplay."}
+];
+const ATLAS_BY_ID=Object.fromEntries(ASTRO_ATLAS.map(x=>[x.id,x]));
+function seededUnit(seed,key){return mulberry32(hashStr(seed+"|astro|"+key))();}
+function galacticContext(seed){
+  const r=mulberry32(hashStr("galactic-context|"+seed));
+  const base=GALACTIC_SECTORS[Math.floor(r()*GALACTIC_SECTORS.length)];
+  const d=Math.round((base.distance[0]+r()*(base.distance[1]-base.distance[0]))/50)*50;
+  return {...base,distanceLy:d};
+}
+function initialAtlasForContext(ctx){
+  const ids=["milky_way"];
+  if(ctx.atlas==="spiral_arms") ids.push("galactic_disk","spiral_arms");
+  else ids.push(ctx.atlas);
+  return ids;
+}
+function atlasEntriesForWorld(){
+  if(!W||!W.context) return ASTRO_ATLAS;
+  const relevantGalaxy=new Set(["milky_way","galactic_scale"]);
+  if(W.context.atlas==="spiral_arms"){relevantGalaxy.add("galactic_disk");relevantGalaxy.add("spiral_arms");}
+  else relevantGalaxy.add(W.context.atlas);
+  return ASTRO_ATLAS.filter(e=>e.cat!=="Galaxy"||relevantGalaxy.has(e.id));
+}
+function attachStarAstronomy(world){
+  world.context=galacticContext(world.seed);
+  world.stars.forEach((st,i)=>{
+    const rr=mulberry32(hashStr(world.seed+"|star-astro|"+i+"|"+st.name));
+    const options=SPECTRAL_BY_COLOR[st.color.id]||SPECTRAL_BY_COLOR.yellow;
+    const spec=options[Math.floor(rr()*options.length)];
+    const temp=Math.round((spec.t[0]+rr()*(spec.t[1]-spec.t[0]))/50)*50;
+    const mass=Math.round((spec.m[0]+rr()*(spec.m[1]-spec.m[0]))*10)/10;
+    const lifeRaw=spec.life[0]+rr()*(spec.life[1]-spec.life[0]);
+    const life=lifeRaw<10?Math.round(lifeRaw*10)/10:Math.round(lifeRaw);
+    const subtype=Math.max(0,Math.min(9,Math.floor(rr()*10)));
+    st.astro={spectralClass:spec.cls+subtype, family:spec.cls, tempK:temp, massSolar:mass, lifetime:life+" "+spec.lifeUnit, desc:spec.desc};
+  });
+}
+
 const SYL1=["Al","Be","Cas","Dra","El","Fen","Gal","Hy","Ix","Jun","Kel","Lyr","Mi","No","Or","Pra","Qi","Ri","Sol","Tau","Um","Vel","Wy","Xan","Yl","Zel","Tha","Nova"];
 const SYL2=["da","ne","ri","los","mar","tis","va","dor","eth","ion","ara","um","is","os","ea","une","ax","ophe","ilia","or"];
 const SUFFIX=["","",""," Prime"," Minor"," Reach"," Haven"];
@@ -478,6 +601,7 @@ function genGalaxy(seedStr){
 
   const puzzleIds=shuffle(KEY_PUZZLES.map((_,i)=>i)).slice(0,3);
   const world={seed:seedStr, cells, stars, ruins, keyRuins, anomalies, gate, start, bgStars, puzzleIds};
+  attachStarAstronomy(world);
   world.clues=genClues(world);
   return world;
 }
@@ -536,6 +660,8 @@ function newGame(seedStr, diffKey){
     foundClues:[[],[],[]],           // indices into W.clues[i]
     ruinsDone:new Set(),             // hk of explored ruins
     anomsDone:new Set(),
+    atlasSeen:new Set(initialAtlasForContext(W.context)),
+    surveysDone:new Set(),
     ruinMarks:{},                  // manual chart notes: suspect / exclude
     gateRevealed:false,
     mission:null, freePlay:false, over:false, won:false,
@@ -546,7 +672,9 @@ function newGame(seedStr, diffKey){
   };
   scanAround(S.pos, S.scanRange);
   visit(S.pos);
+  discoverScienceAt(W.start,true);
   log(`Charter granted. The <b>${W.start.name}</b> station wishes you fair skies.`);
+  log(`Scientific setting: <b>${W.context.place}</b>, about <b>${W.context.distanceLy.toLocaleString()} light-years</b> from the Solar System (fictional survey chart in a real Galactic context).`);
   log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> — all before day ${S.dayLimit}.`);
   cam.x=0; cam.y=0; cam.zoom=1;
   centerOnShip(false);
@@ -912,7 +1040,7 @@ function updateHoverPreview(mx,my){
   if(!hoverCell||!isScanned(hoverCell)){ tipHide(); if(!selected) previewPath=null; return; }
   const c=hoverCell;
   let html="";
-  if(c.type==="star") html=`<b>${c.name}</b> — ${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
+  if(c.type==="star") html=`<b>${c.name}</b> — ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
   else if(c.type==="nebula") html=`<b>Nebula</b> — costs 2 fuel to cross`;
   else if(c.type==="asteroid") html=`<b>Asteroid field</b>${S.upgrades.mining?" — mineable":""}`;
   else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" — explored":""}`;
@@ -1023,6 +1151,7 @@ function advanceDays(n){
 
 function onArrive(){
   const c=curCell();
+  discoverScienceAt(c);
   if(S.eventCooldown>0) S.eventCooldown--;
   if(c.type==="anomaly" && !S.anomsDone.has(hk(c.q,c.r))){
     S.anomsDone.add(hk(c.q,c.r));
@@ -1073,6 +1202,7 @@ function calcScore(){
     ["Days to spare", daysLeft+" × 12", daysLeft*12],
     ["Systems visited", sysV+" × 25", sysV*25],
     ["Space charted", S.scanned.size+" × 2", S.scanned.size*2],
+    ["Atlas discoveries", (S.atlasSeen?S.atlasSeen.size:0)+" × 12", (S.atlasSeen?S.atlasSeen.size:0)*12],
     ["Credits", "◈"+S.credits+" ÷ 2", Math.floor(S.credits/2)],
   ];
   if(S.won) parts.unshift(["Gate reached","",1500]);
@@ -1133,12 +1263,12 @@ document.querySelectorAll(".tab").forEach(t=>{
     document.querySelectorAll(".panel").forEach(x=>x.classList.remove("on"));
     t.classList.add("on");
     $("p-"+t.dataset.p).classList.add("on");
-    if(t.dataset.p==="clues") t.classList.remove("alert");
+    if(t.dataset.p==="clues"||t.dataset.p==="atlas") t.classList.remove("alert");
   });
 });
 
 function refreshAll(){
-  renderStatus(); renderHere(); renderCargo(); renderClues(); renderLog();
+  renderStatus(); renderHere(); renderCargo(); renderClues(); renderAtlas(); renderLog();
   updateSeedTag();
   checkStranded();
   autoSave();
@@ -1158,6 +1288,7 @@ function renderStatus(){
   $("hullLbl").textContent=`HULL ${S.hull}/${S.hullMax}`;
   $("credLbl").textContent="◈ "+S.credits;
   $("cargoLbl").textContent=`Cargo ${cargoCount()}/${S.cargoMax}`;
+  if($("sectorLbl")&&W&&W.context) $("sectorLbl").textContent=`📍 ${W.context.place} · ~${W.context.distanceLy.toLocaleString()} ly from Sun`;
 }
 
 function renderHere(){
@@ -1167,7 +1298,7 @@ function renderHere(){
   const missionH=S.mission?`<div class="missionBox">📦 Deliver <b>${S.mission.qty} ${GOOD[S.mission.good].name}</b> to <b>${S.mission.star}</b> by day ${S.mission.due} · reward <b>◈${S.mission.reward}</b><br><span class="small">${S.mission.hint}</span></div>`:"";
   if(c.type==="star"){
     h+=`<div id="hereName" style="color:${c.color.col}">${c.name}</div>
-        <div id="hereSub">A ${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.${c.hasStation?" A trade station glitters in orbit.":" No station here — just quiet worlds."}</div>`;
+        <div id="hereSub">A ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.${c.hasStation?" A trade station glitters in orbit.":" No station here — just quiet worlds."}</div>`;
     h+=missionH;
     for(const pl of c.planets){
       h+=`<div class="planet"><span class="pdot" style="background:${planetCol(pl.kind)}"></span>${pl.name} <span class="pd">· ${pl.kind}</span></div>`;
@@ -1200,6 +1331,7 @@ function renderHere(){
   }else{
     h+=`<div id="hereName">Open Space</div><div id="hereSub">Silence, starlight, and the hum of your ship.</div>`+missionH;
   }
+  h+=fieldNotesHtml(c);
   h+=`<h3>Captain's tools</h3>`;
   const scanCost=3;
   h+=`<button class="abtn" onclick="deepScan()" ${S.fuel>=1?"":"disabled"}>📡 Deep scan<span class="sub">1 fuel, 1 day · reveals a wide ring (range ${S.scanRange+2}) around you</span></button>`;
@@ -1220,7 +1352,7 @@ function renderCargo(){
     h+=`<div class="cargoRow"><span>${GOOD[k].icon} ${GOOD[k].name}</span><span class="q">× ${S.cargo[k]}</span></div>`;
   }
   h+=`</div><h3>Ship</h3><div class="small">
-    Scanner range ${S.scanRange} · Speed ${S.speed} jump${S.speed>1?"s":""}/day · Tank ${S.fuelMax} · Hold ${S.cargoMax}${S.upgrades.mining?" · Mining rig ⛏":""}
+    Scanner range ${S.scanRange} · Speed ${S.speed} jump${S.speed>1?"s":""}/day · Tank ${S.fuelMax} · Hold ${S.cargoMax}${S.upgrades.mining?" · Mining rig ⛏":""}<br>Captain's Atlas ${S&&W?atlasEntriesForWorld().filter(e=>S.atlasSeen&&S.atlasSeen.has(e.id)).length:0}/${W?atlasEntriesForWorld().length:ASTRO_ATLAS.length} · Survey observations ${(S.surveysDone?S.surveysDone.size:0)}
   </div>`;
   p.innerHTML=h;
 }
@@ -1260,6 +1392,116 @@ function cycleRuinMark(k){
   renderClues(); autoSave(); sfx("click");
 }
 
+function scienceSourceLink(key){
+  const src=SCIENCE_SOURCES[key];
+  return src?`<a class="sourceLink" href="${src.url}" target="_blank" rel="noopener">Reference: ${src.name} ↗</a>`:"";
+}
+function unlockAtlas(ids,quiet){
+  if(!S) return;
+  if(!(S.atlasSeen instanceof Set)) S.atlasSeen=new Set(S.atlasSeen||[]);
+  let added=0;
+  for(const id of ids){ if(ATLAS_BY_ID[id]&&!S.atlasSeen.has(id)){S.atlasSeen.add(id);added++;} }
+  if(added&&!quiet){
+    const tab=document.querySelector('.tab[data-p="atlas"]'); if(tab) tab.classList.add("alert");
+    toast(`Captain's Atlas updated: ${added} new entr${added===1?"y":"ies"}.`);
+  }
+}
+function discoverScienceAt(c,quiet){
+  if(!c||!S) return;
+  const ids=[];
+  if(c.type==="star"){
+    ids.push("star_colour","spectral_types","spectroscopy","exoplanets");
+    if(c.astro&&(c.astro.family==="O"||c.astro.family==="B"||c.astro.family==="M")) ids.push("stellar_lifetimes");
+    if(c.planets.some(p=>p.kind==="gas giant")) ids.push("gas_giants");
+    if(c.planets.some(p=>p.kind!=="gas giant")) ids.push("rocky_planets");
+  }else if(c.type==="nebula") ids.push("nebulae","molecular_clouds","infrared");
+  else if(c.type==="asteroid") ids.push("asteroid_belts");
+  else if(c.type==="space") ids.push("galactic_scale");
+  unlockAtlas(ids,!!quiet);
+}
+function fieldNotesHtml(c){
+  if(!W||!S) return "";
+  const surveyed=S.surveysDone instanceof Set&&S.surveysDone.has(hk(c.q,c.r));
+  let h=`<h3>Field notes</h3>`;
+  if(c.type==="star"&&c.astro){
+    const a=c.astro;
+    h+=`<div class="scienceCard"><div class="stitle">🔭 ${a.spectralClass}-type stellar reading</div>
+      <div class="scienceMeta"><span class="sciencePill">~${a.tempK.toLocaleString()} K</span><span class="sciencePill">~${a.massSolar} M☉</span><span class="sciencePill">main-sequence life ~${a.lifetime}</span></div>
+      <p><span class="truthTag">Real astronomy</span> This is an approximate main-sequence interpretation of the map colour: ${a.desc}. Blue stars are hotter; red stars are cooler.</p>
+      <p><span class="simTag">Survey model</span> The exact subtype, temperature and mass are generated as plausible values for this fictional system, not observations of a real named star.</p>
+      ${c.gasGiant?`<p><span class="truthTag">Real astronomy</span> One charted world is a gas giant. Jupiter and Saturn are mostly hydrogen and helium; the game’s fuel-scooping is fictional.</p>`:""}
+      ${scienceSourceLink("stars")}
+      ${observationButton(c,surveyed)}</div>`;
+  }else if(c.type==="nebula"){
+    h+=`<div class="scienceCard"><div class="stitle">☁ Nebula</div><p><span class="truthTag">Real astronomy</span> Nebulae are clouds of gas and dust. Some are stellar nurseries; others are material produced by dying stars.</p><p><span class="fictionTag">Game abstraction</span> A real nebula is extremely diffuse. It would not behave like a dense cloud that simply costs twice the fuel to cross.</p>${scienceSourceLink("nebula")}${observationButton(c,surveyed)}</div>`;
+  }else if(c.type==="asteroid"){
+    h+=`<div class="scienceCard"><div class="stitle">☄ Asteroid field</div><p><span class="truthTag">Real astronomy</span> Real asteroid belts are mostly empty space; collisions are not inevitable. StarWeaver compresses a vast population into one visible hex so it functions as terrain.</p>${scienceSourceLink("asteroids")}${observationButton(c,surveyed)}</div>`;
+  }else if(c.type==="ruin"){
+    h+=`<div class="scienceCard"><div class="stitle">🏛 Ancient ruin</div><p><span class="fictionTag">StarWeaver fiction</span> The ruins, Star Keys and their civilisation are entirely fictional. Their astronomical surroundings use the same Field Notes system as the rest of the chart.</p></div>`;
+  }else if(c.type==="gate"){
+    h+=`<div class="scienceCard"><div class="stitle">◎ Celestial Gate</div><p><span class="fictionTag">StarWeaver fiction</span> The Gate is a narrative device, not a known astronomical phenomenon.</p></div>`;
+  }else{
+    h+=`<div class="scienceCard"><div class="stitle">✦ Interstellar scale</div><p><span class="truthTag">Real astronomy</span> Stars are normally separated by light-years. The hex chart radically compresses distance so that a voyage can be played in minutes rather than millennia.</p>${scienceSourceLink("milky")}</div>`;
+  }
+  return h;
+}
+function observationButton(c,surveyed){
+  if(!["star","nebula","asteroid"].includes(c.type)) return "";
+  return surveyed?`<p class="small" style="margin-top:7px">✓ Survey observation logged in the Captain's Atlas.</p>`:`<button class="abtn" style="margin-top:8px" onclick="surveyObservation()">🔬 Interpret an observation<span class="sub">Optional · use the science here to earn a small research grant and extra chart data</span></button>`;
+}
+function observationFor(c){
+  if(c.type==="nebula") return {q:"Dust obscures part of this nebula in visible light. Which band is generally better at seeing through dusty regions?",a:["Infrared","Blue visible light","Ultraviolet"],correct:0,why:"Infrared wavelengths can penetrate dust more effectively than visible light, revealing embedded stars and structures.",unlock:["infrared","nebulae"]};
+  if(c.type==="asteroid") return {q:"Your navigation computer projects a real asteroid belt at Solar-System scale. What should you expect between most large objects?",a:["Huge stretches of empty space","Continuous walls of rock","A dense atmosphere"],correct:0,why:"Asteroid belts are overwhelmingly empty space; StarWeaver’s dense-looking field is a gameplay compression.",unlock:["asteroid_belts","galactic_scale"]};
+  if(c.type==="star"&&c.astro){
+    const f=c.astro.family;
+    if(f==="O"||f==="B") return {q:`${c.name} is a hot ${c.astro.spectralClass}-type star. Compared with a Sun-like star, its main-sequence lifetime is generally…`,a:["Much shorter","Much longer","About identical"],correct:0,why:"High-mass stars burn fuel vastly faster, so despite having more fuel they live much shorter lives.",unlock:["stellar_lifetimes","spectral_types"]};
+    if(f==="K"||f==="M") return {q:`${c.name} is orange/red and comparatively cool. Which statement best follows?`,a:["Its surface is cooler than a blue star’s","It must be physically colder than space","Colour tells us nothing about stellar temperature"],correct:0,why:"For ordinary stars, colour is strongly related to surface temperature: redder stars are cooler, bluer stars hotter.",unlock:["star_colour","spectral_types"]};
+    return {q:"The survey computer wants more than a photograph. Which technique can reveal a star’s chemical fingerprints and temperature?",a:["Spectroscopy","A louder radio transmitter","Counting its planets by eye"],correct:0,why:"Spectroscopy separates light by wavelength; spectral lines encode composition and physical conditions.",unlock:["spectroscopy","spectral_types"]};
+  }
+  return null;
+}
+let currentObservation=null;
+function surveyObservation(){
+  const c=curCell();
+  if(S.surveysDone instanceof Set&&S.surveysDone.has(hk(c.q,c.r))) return;
+  const ob=observationFor(c); if(!ob) return;
+  const rr=mulberry32(hashStr(S.seed+"|ob-order|"+hk(c.q,c.r)));
+  const order=ob.a.map((_,i)=>i); for(let j=order.length-1;j>0;j--){const k=Math.floor(rr()*(j+1));[order[j],order[k]]=[order[k],order[j]];}
+  const shuffled={...ob,a:order.map(i=>ob.a[i]),correct:order.indexOf(ob.correct)};
+  currentObservation={...shuffled,key:hk(c.q,c.r)};
+  modalHtml(`<h2>🔬 Survey Observation</h2><div class="msub">${c.type==="star"?c.name:c.type==="nebula"?"Nebula":"Asteroid field"}</div><p>${shuffled.q}</p><div class="mrow">${shuffled.a.map((x,i)=>`<button class="mbtn2" onclick="answerObservation(${i})">${x}</button>`).join("")}</div><p class="small">Optional fieldwork: a correct interpretation earns ◈25 and lets the survey computer prioritise nearby chart data. A wrong answer has no penalty.</p>`);
+}
+function answerObservation(i){
+  const ob=currentObservation; if(!ob) return;
+  if(!(S.surveysDone instanceof Set)) S.surveysDone=new Set(S.surveysDone||[]);
+  S.surveysDone.add(ob.key); unlockAtlas(ob.unlock||[],true);
+  const ok=i===ob.correct;
+  if(ok){S.credits+=25;scanAround(S.pos,S.scanRange+1);log(`<b>Survey interpretation accepted.</b> Research stipend +◈25; nearby chart priorities updated.`);sfx("good");}
+  else{sfx("bad");log(`<b>Survey interpretation reviewed.</b> No penalty; the Atlas records the explanation.`);}
+  currentObservation=null;
+  autoSave(); refreshAll();
+  modalHtml(`<h2>${ok?"✓ Observation logged":"Observation reviewed"}</h2><div class="obsAnswer">${ob.why}</div><p>${ok?"The Research Guild transfers <b>◈25</b>, and your survey computer reveals a little more nearby chart data.":"No resources were lost. The point of fieldwork is to improve the model, not punish a wrong inference."}</p><div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Back to chart</button><button class="mbtn2" onclick="closeModal();document.querySelector('.tab[data-p=\"atlas\"]').click();">Open Captain's Atlas</button></div>`);
+}
+function renderAtlas(){
+  const p=$("p-atlas"); if(!p||!S||!W) return;
+  if(!(S.atlasSeen instanceof Set)) S.atlasSeen=new Set(S.atlasSeen||[]);
+  const ctx=W.context, entriesForVoyage=atlasEntriesForWorld(), seen=entriesForVoyage.filter(e=>S.atlasSeen.has(e.id)).length, total=entriesForVoyage.length;
+  let h=`<div class="contextCard"><div class="stitle" style="color:var(--gold);font-weight:700">${clusterDisplayName(S.seed)}</div><div class="small"><b style="color:var(--cyan)">${ctx.place}</b> · about ${ctx.distanceLy.toLocaleString()} light-years from the Solar System</div><p class="small" style="margin-top:5px">${ctx.summary}</p><p class="small"><span class="fictionTag">Fictional chart</span> The destination and systems are generated. <span class="truthTag">Real context</span> The Milky Way setting and astronomy notes describe real concepts.</p></div>`;
+  h+=`<h3>Captain's Atlas</h3><div class="small">Unlocked by visiting astronomical features and interpreting optional observations.</div><div class="atlasProgress"><i style="width:${100*seen/total}%"></i></div><div class="small" style="margin-bottom:8px">${seen}/${total} entries · ${S.surveysDone instanceof Set?S.surveysDone.size:0} survey observations logged</div>`;
+  const cats=[...new Set(entriesForVoyage.map(x=>x.cat))];
+  for(const cat of cats){
+    const entries=entriesForVoyage.filter(x=>x.cat===cat), got=entries.filter(x=>S.atlasSeen.has(x.id)).length;
+    h+=`<div class="atlasCat">${cat}<span>${got}/${entries.length}</span></div><div class="atlasGrid">`;
+    for(const e of entries){
+      if(S.atlasSeen.has(e.id)) h+=`<div class="atlasCard"><div class="stitle">${e.title}</div><p>${e.body}</p>${scienceSourceLink(e.src)}</div>`;
+      else h+=`<div class="atlasCard atlasLocked"><div class="stitle">◌ Undiscovered field note</div><p>Encounter the relevant feature or make a survey observation to unlock this entry.</p></div>`;
+    }
+    h+=`</div>`;
+  }
+  h+=`<h3>About the science</h3><div class="scienceCard"><p>StarWeaver is not a scale model or an astronomy simulator. It uses scientifically grounded explanations around a deliberately compressed strategy map. Whenever a mechanic is fictional or simplified, the Field Notes say so.</p><p class="small">Primary background references are linked from entries to NASA Science. External references require an internet connection; the Atlas text itself remains available offline.</p></div>`;
+  p.innerHTML=h;
+}
+
 function renderLog(){
   const l=$("logList");
   if(!S){l.innerHTML=""; return;}
@@ -1290,6 +1532,7 @@ function deepScan(){
   if(S.fuel<1) return;
   S.fuel-=1;
   scanAround(S.pos,S.scanRange+2);
+  unlockAtlas(["galactic_scale","parallax"],false);
   advanceDays(1);
   log("Deep scan complete — the charts grow.");
   sfx("scan");
@@ -1300,6 +1543,7 @@ function scoopFuel(){
   const c=curCell();
   if(!c.gasGiant||S.fuel>=S.fuelMax) return;
   S.fuel=Math.min(S.fuelMax,S.fuel+5);
+  unlockAtlas(["gas_giants"],false);
   advanceDays(1);
   log(`Skimmed the clouds of ${c.name}'s gas giant. +5 fuel.`);
   sfx("good");
@@ -1757,7 +2001,7 @@ $("btnMute").addEventListener("click",()=>{
 /* ---------- save / load + automatic local resume ---------- */
 const AUTO_KEY="starweaver.autosave.v2";
 function saveCode(){
-  const state={...S, dramaCalls:rdCalls, visited:[...S.visited], scanned:[...S.scanned], ruinsDone:[...S.ruinsDone], anomsDone:[...S.anomsDone]};
+  const state={...S, dramaCalls:rdCalls, visited:[...S.visited], scanned:[...S.scanned], ruinsDone:[...S.ruinsDone], anomsDone:[...S.anomsDone], atlasSeen:[...(S.atlasSeen||[])], surveysDone:[...(S.surveysDone||[])]};
   return "SW2."+btoa(unescape(encodeURIComponent(JSON.stringify(state))));
 }
 function autoSave(){
@@ -1785,6 +2029,7 @@ function loadCode(code){
     S=state;
     S.visited=new Set(state.visited||[]); S.scanned=new Set(state.scanned||[]);
     S.ruinsDone=new Set(state.ruinsDone||[]); S.anomsDone=new Set(state.anomsDone||[]);
+    S.atlasSeen=new Set(state.atlasSeen||initialAtlasForContext(W.context)); S.surveysDone=new Set(state.surveysDone||[]);
     if(!S.ruinMarks) S.ruinMarks={};
     if(S.pendingEvent===undefined) S.pendingEvent=null;
     centerOnShip(false);
@@ -1807,7 +2052,7 @@ $("btnSave").addEventListener("click",()=>{
       <button class="mbtn2" onclick="loadCode(document.getElementById('saveTa').value.trim())">Load pasted code</button>
       <button class="mbtn2" onclick="closeModal()">Close</button>
     </div>
-    <p class="small">SW2 saves preserve the future random-event sequence as well as your map, cargo, upgrades, clues and log.</p>`);
+    <p class="small">SW2 saves preserve the future random-event sequence as well as your map, cargo, upgrades, clues, Atlas discoveries, survey observations and log.</p>`);
 });
 
 /* ============================================================
@@ -1823,6 +2068,13 @@ function clusterDisplayName(seed){
   const rr=mulberry32(hashStr("cluster-name|"+seed));
   return "The "+first[Math.floor(rr()*first.length)]+" "+last[Math.floor(rr()*last.length)];
 }
+function updateContextPreview(seed){
+  const ctx=galacticContext(seed);
+  const a=$("sectorPreview"),b=$("distancePreview"),c=$("sectorSummaryPreview");
+  if(a) a.textContent=ctx.place;
+  if(b) b.textContent=`About ${ctx.distanceLy.toLocaleString()} light-years from the Solar System · ${ctx.focus}`;
+  if(c) c.textContent=ctx.summary;
+}
 function rerollCluster(){
   const seed=randomSeed();
   const input=$("seedInput");
@@ -1831,6 +2083,7 @@ function rerollCluster(){
   if(n) n.textContent=clusterDisplayName(seed);
   const c=$("clusterCodePreview");
   if(c) c.textContent="Cluster code: "+seed;
+  updateContextPreview(seed);
 }
 function useSharedCluster(){
   const shared=$("sharedCodeInput");
@@ -1839,6 +2092,7 @@ function useSharedCluster(){
   $("seedInput").value=code;
   $("clusterNamePreview").textContent=clusterDisplayName(code);
   $("clusterCodePreview").textContent="Cluster code: "+code;
+  updateContextPreview(code);
   toast("Shared cluster selected. Choose a difficulty to begin.");
 }
 function showNewGame(first){
@@ -1854,6 +2108,13 @@ function showNewGame(first){
       <div class="clusterName" id="clusterNamePreview">${clusterDisplayName(seed)}</div>
       <div class="clusterSub">Every voyage is a newly generated cluster. You do not need to know or choose from a list.</div>
       <div class="clusterSub" id="clusterCodePreview" style="margin-top:4px">Cluster code: ${seed}</div>
+      <div class="scienceContext">
+        <div class="eyebrow">Scientific setting</div>
+        <b id="sectorPreview">${galacticContext(seed).place}</b>
+        <div class="clusterSub" id="distancePreview">About ${galacticContext(seed).distanceLy.toLocaleString()} light-years from the Solar System · ${galacticContext(seed).focus}</div>
+        <div class="clusterSub" id="sectorSummaryPreview" style="margin-top:5px">${galacticContext(seed).summary}</div>
+        <div class="clusterSub" style="margin-top:6px"><span class="fictionTag">Fictional chart</span> The generated systems are not real catalogued stars. <span class="truthTag">Real astronomy</span> Field Notes explain the actual Galactic context and phenomena.</div>
+      </div>
       <input id="seedInput" type="hidden" value="${seed}">
       <div class="clusterTools">
         <button class="mbtn2" onclick="rerollCluster()">🎲 Another cluster<span class="sub">Ask the Guild for a different chart</span></button>
@@ -1888,7 +2149,7 @@ function showHelp(first){
 
     <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
 
-    <div class="tipbox"><b>About clusters:</b> there is no fixed list. StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Orion Spur or Galactic halo. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
 
     <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
     <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Click the same hex <b>again</b> to fly there. Nebula hexes cost 2 fuel instead of 1.</div></div>
@@ -1896,10 +2157,11 @@ function showHelp(first){
     <div class="howstep"><span class="n">4</span><div><b>Use clues instead of guessing.</b><br>Open the <b>Clues</b> tab. Combine clues such as direction, distance from the centre, nearby star colour and terrain. Use ★ <b>Suspect</b> and × <b>Ruled out</b> notes on charted ruins.</div></div>
     <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or scoop it free at systems with gas giants. If you run dry in deep space, a rescue tug will tow you—but it costs credits and days.</div></div>
     <div class="howstep"><span class="n">6</span><div><b>Stations make the voyage easier.</b><br><b>Market:</b> buy ▼ goods cheaply and sell them where they show ▲. <b>Shipyard:</b> improve tank, hold, scanner, hull and engine. <b>Lounge:</b> buy true rumours or take delivery contracts.</div></div>
-    <div class="howstep"><span class="n">7</span><div><b>Open the Gate.</b><br>Recover all 3 Keys and the Celestial Gate is revealed automatically. Fly to it to finish the charter and receive your score.</div></div>
+    <div class="howstep"><span class="n">7</span><div><b>Learn from what you find — optionally.</b><br>Each location has short <b>Field Notes</b> distinguishing real astronomy from game fiction. The <b>Atlas</b> fills as you explore. Some locations offer an optional observation: interpret it correctly for a small research grant and extra chart data.</div></div>
+    <div class="howstep"><span class="n">8</span><div><b>Open the Gate.</b><br>Recover all 3 Keys and the Celestial Gate is revealed automatically. Fly to it to finish the charter and receive your score.</div></div>
 
     <h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:14px 0 6px">FIRST-VOYAGE TIPS</h3>
-    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.</div>
+    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.<br>• The astronomy is <b>not compulsory coursework</b>: you can ignore observations and still complete the Charter.</div>
 
     <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">${first?"Cast off!":"Back to the stars"}</button></div>
   `);
@@ -1921,7 +2183,7 @@ requestAnimationFrame(draw);
 showNewGame(true);
 
 /* test hooks (harmless in play) */
-window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPath, travelTo, saveCode, loadCode, loadAutoSave, cellAt, openStation, exploreRuin};
+window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPath, travelTo, saveCode, loadCode, loadAutoSave, cellAt, openStation, exploreRuin, renderAtlas, surveyObservation, galacticContext};
 
 </script>
 
