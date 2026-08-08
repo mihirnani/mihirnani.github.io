@@ -63,7 +63,7 @@ button{font-family:inherit;}
 /* ---------- layout ---------- */
 #main{flex:1; display:flex; min-height:0;}
 #mapWrap{flex:1; position:relative; min-width:0; background:#04060d;}
-#cv{position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab;}
+#cv{position:absolute; inset:0; width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
 #cv.drag{cursor:grabbing;}
 #mapBtns{position:absolute; right:12px; bottom:12px; display:flex; flex-direction:column; gap:6px; z-index:5;}
 .mbtn{
@@ -1085,10 +1085,21 @@ function resize(){
   DPR=Math.min(2,window.devicePixelRatio||1);
   const rct=cv.getBoundingClientRect();
   cw=rct.width; ch=rct.height;
-  cv.width=Math.round(cw*DPR); cv.height=Math.round(ch*DPR);
+  const bw=Math.round(cw*DPR), bh=Math.round(ch*DPR);
+  // Avoid clearing/reallocating the canvas when only a ResizeObserver callback repeats
+  // the same dimensions during a responsive layout transition.
+  if(cv.width!==bw) cv.width=bw;
+  if(cv.height!==bh) cv.height=bh;
 }
 window.addEventListener("resize",()=>{resize();if(!isSheetUI())setSheetExpanded(false);});
 if(window.visualViewport) window.visualViewport.addEventListener("resize",resize);
+// The portrait information sheet animates its flex-basis. Window resize does not fire
+// for each intermediate size, so keep the canvas backing store and hit-test metrics in
+// lockstep with its actual rendered dimensions throughout that animation.
+if(window.ResizeObserver){
+  const mapResizeObserver=new ResizeObserver(()=>resize());
+  mapResizeObserver.observe(document.getElementById("mapWrap"));
+}
 
 function worldToScreen(wx,wy){
   return {x:(wx-cam.x)*cam.zoom + cw/2, y:(wy-cam.y)*cam.zoom + ch/2};
@@ -1356,7 +1367,12 @@ cv.addEventListener("wheel",e=>{
 },{passive:false});
 
 cv.addEventListener("click",e=>{
+  // A handled touch already performs selection/travel in touchend. Ignore the
+  // compatibility mouse click Safari may emit afterwards, otherwise one physical
+  // tap can become "select" + "fly".
+  if(performance.now()<suppressCanvasClickUntil) return;
   if(dragMoved||!W||S.over&&!S.freePlay) return;
+  resize();
   const rct=cv.getBoundingClientRect();
   const wpt=screenToWorld(e.clientX-rct.left, e.clientY-rct.top);
   const h=pxToHex(wpt.x,wpt.y);
@@ -1377,6 +1393,7 @@ cv.addEventListener("click",e=>{
 
 /* touch: single-finger pan + tap, pinch zoom */
 let touchState=null;
+let suppressCanvasClickUntil=0; // iOS/Safari may synthesize a click after touchend
 cv.addEventListener("touchstart",e=>{
   if(e.touches.length===1){
     const t=e.touches[0];
@@ -1404,6 +1421,9 @@ cv.addEventListener("touchmove",e=>{
 },{passive:false});
 cv.addEventListener("touchend",e=>{
   if(touchState&&touchState.mode==="pan"&&!touchState.moved&&e.changedTouches.length===1){
+    // The portrait sheet may have changed the canvas height since touchstart. Sync
+    // against the *current* rendered rectangle before converting this tap to a hex.
+    resize();
     const t=e.changedTouches[0];
     const rct=cv.getBoundingClientRect();
     const wpt=screenToWorld(t.clientX-rct.left,t.clientY-rct.top);
@@ -1413,12 +1433,17 @@ cv.addEventListener("touchend",e=>{
       const path=findPath(S.pos,c);
       if(path){
         if(selected&&selected.q===c.q&&selected.r===c.r) travelTo(c,path);
-        else{ selected={q:c.q,r:c.r}; previewPath=path; renderHere(); }
+        else{ selected={q:c.q,r:c.r}; previewPath=path; sfx("click"); renderHere(); }
       }
+    }else if(!c||!isScanned(c)){
+      selected=null; previewPath=null; renderHere();
     }
+    // Prevent a synthetic click from immediately executing the newly selected route.
+    suppressCanvasClickUntil=performance.now()+800;
+    e.preventDefault();
   }
   touchState=null;
-});
+},{passive:false});
 
 const tip=document.getElementById("hoverTip");
 function tipHide(){ tip.style.display="none"; }
@@ -1679,6 +1704,8 @@ function setSheetExpanded(expanded){
   handle.setAttribute("aria-label",expanded?"Collapse information panel":"Expand information panel");
   if(txt)txt.textContent=expanded?"Collapse panel":"Expand panel";
   requestAnimationFrame(resize);
+  // ResizeObserver handles the animation continuously; this is a final sync/fallback.
+  setTimeout(resize,260);
 }
 $("sheetHandle").addEventListener("click",()=>setSheetExpanded(!$("side").classList.contains("expanded")));
 function closeHeaderMenu(){const m=$("headerMenu"),b=$("btnMenu");if(m)m.classList.remove("on");if(b)b.setAttribute("aria-expanded","false");}
