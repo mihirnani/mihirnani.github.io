@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curiosities — a personal collection of open study projects in maps, natural history, mathematics, astronomy, languages, and computer science.">
+  <meta name="description" content="Curiosities — collections, games, and self-study projects in maps, natural history, mathematics, astronomy, and languages.">
   <meta name="color-scheme" content="light dark">
   <title>Curiosities</title>
 
@@ -124,6 +124,19 @@
       letter-spacing: 0.025em;
     }
 
+    .project-group { margin-top: clamp(2.2rem, 5vw, 3.4rem); }
+
+    .project-group:first-of-type { margin-top: 0; }
+
+    .group-title {
+      margin: 0 0 0.7rem;
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
     .projects { border-top: 1px solid var(--line); }
 
     .project {
@@ -136,7 +149,7 @@
       text-decoration: none;
     }
 
-    .project h2 {
+    .project h3 {
       margin: 0 0 0.35rem;
       font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
       font-size: clamp(1.7rem, 4vw, 2.35rem);
@@ -156,24 +169,24 @@
       white-space: nowrap;
     }
 
-    .project--maps:hover h2,
-    .project--maps:focus-visible h2 { color: var(--map); }
-    .project--birds:hover h2,
-    .project--birds:focus-visible h2 { color: var(--birds); }
-    .project--math:hover h2,
-    .project--math:focus-visible h2 { color: var(--math); }
-    .project--astronomy:hover h2,
-    .project--astronomy:focus-visible h2 { color: var(--astronomy); }
-    .project--starweaver:hover h2,
-    .project--starweaver:focus-visible h2 { color: var(--starweaver); }
-    .project--italian:hover h2,
-    .project--italian:focus-visible h2 { color: var(--italian); }
-    .project--french:hover h2,
-    .project--french:focus-visible h2 { color: var(--french); }
-    .project--latin:hover h2,
-    .project--latin:focus-visible h2 { color: var(--latin); }
-    .project--software:hover h2,
-    .project--software:focus-visible h2 { color: var(--software); }
+    .project--maps:hover h3,
+    .project--maps:focus-visible h3 { color: var(--map); }
+    .project--birds:hover h3,
+    .project--birds:focus-visible h3 { color: var(--birds); }
+    .project--math:hover h3,
+    .project--math:focus-visible h3 { color: var(--math); }
+    .project--astronomy:hover h3,
+    .project--astronomy:focus-visible h3 { color: var(--astronomy); }
+    .project--starweaver:hover h3,
+    .project--starweaver:focus-visible h3 { color: var(--starweaver); }
+    .project--italian:hover h3,
+    .project--italian:focus-visible h3 { color: var(--italian); }
+    .project--french:hover h3,
+    .project--french:focus-visible h3 { color: var(--french); }
+    .project--latin:hover h3,
+    .project--latin:focus-visible h3 { color: var(--latin); }
+    .project--software:hover h3,
+    .project--software:focus-visible h3 { color: var(--software); }
 
     .project:hover span,
     .project:focus-visible span { color: var(--text); }
@@ -241,7 +254,7 @@
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
   <meta property="og:title" content="Curiosities">
-  <meta property="og:description" content="A personal collection of open study projects in maps, natural history, mathematics, astronomy, languages, and computer science.">
+  <meta property="og:description" content="Collections, games, and self-study projects in maps, natural history, mathematics, astronomy, and languages.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://naniwadekar.com/">
   <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
@@ -255,92 +268,103 @@
     <main>
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">Curiosities</h1>
-        <p>A personal collection of open study projects, made for curiosity and revised over time.</p>
+        <p>Collections, games, and self-study projects, made for curiosity and revised over time.</p>
       </section>
 
-      <section aria-label="Projects" class="projects">
-        <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
-          <div>
-            <h2>The European Gaze on India</h2>
-            <p>Four centuries of European maps of India, from 1519 to 1946, arranged as a thematic and chronological exploration of cartography, commerce, survey, empire, and knowledge.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+      <section aria-labelledby="collections-title" class="project-group">
+        <h2 class="group-title" id="collections-title">Collections</h2>
+        <div class="projects">
+          <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
+            <div>
+              <h3>The European Gaze on India</h3>
+              <p>Four centuries of European maps of India, from 1519 to 1946, arranged as a thematic and chronological exploration of cartography, commerce, survey, empire, and knowledge.</p>
+            </div>
+            <span aria-hidden="true">Visit &rarr;</span>
+          </a>
 
-        <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
-          <div>
-            <h2>Birds of the Sahyadris</h2>
-            <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Verification and expansion remain ongoing.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+          <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
+            <div>
+              <h3>Birds of the Sahyadris</h3>
+              <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Verification and expansion remain ongoing.</p>
+            </div>
+            <span aria-hidden="true">Visit &rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
-          <div>
-            <h2>MathQuest</h2>
-            <p>An interactive mathematics learning app for children aged 7–10, with lessons, generated practice, quizzes, rewards, and a structured learning path.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+      <section aria-labelledby="games-title" class="project-group">
+        <h2 class="group-title" id="games-title">Games</h2>
+        <div class="projects">
+          <a class="project project--starweaver" href="https://naniwadekar.com/starweaver.html">
+            <div>
+              <h3>StarWeaver</h3>
+              <p>A gentle procedural exploration-strategy game. Chart a newly generated star cluster, piece together clues, trade and upgrade your ship, recover three Star Keys, and find the Celestial Gate.</p>
+            </div>
+            <span aria-hidden="true">Play &rarr;</span>
+          </a>
 
-        <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
-          <div>
-            <h2>Astronomy</h2>
-            <p>An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete text and figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+          <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
+            <div>
+              <h3>MathQuest</h3>
+              <p>A mathematics learning game for children aged 7–10, with lessons, generated practice, quizzes, rewards, and a structured path through core topics.</p>
+            </div>
+            <span aria-hidden="true">Play &rarr;</span>
+          </a>
+        </div>
+      </section>
 
-        <a class="project project--starweaver" href="https://naniwadekar.com/starweaver.html">
-          <div>
-            <h2>STARWEAVER</h2>
-            <p>A procedurally generated exploration-strategy game: chart an unknown star cluster, follow true clues, trade and upgrade your ship, recover three Star Keys, and reach the Celestial Gate.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+      <section aria-labelledby="subjects-title" class="project-group">
+        <h2 class="group-title" id="subjects-title">Subjects</h2>
+        <div class="projects">
+          <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
+            <div>
+              <h3>Astronomy</h3>
+              <p>An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete text and figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
 
-        <!--
+          <!--
 
-        <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
-          <div>
-            <h2>Foundations of Software Systems</h2>
-            <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+          <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
+            <div>
+              <h3>Foundations of Software Systems</h3>
+              <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
 
+          <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
+            <div>
+              <h3>Impara l&rsquo;Italiano</h3>
+              <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
 
+          -->
 
-        <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
-          <div>
-            <h2>Impara l&rsquo;Italiano</h2>
-            <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+          <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
+            <div>
+              <h3>Apprendre le fran&ccedil;ais</h3>
+              <p>A structured French self-study course from beginner foundations to advanced grammar and usage, with vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
 
-        -->
-
-        <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
-          <div>
-            <h2>Apprendre le fran&ccedil;ais</h2>
-            <p>A structured French self-study course from beginner foundations to advanced grammar and usage, with vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
-
-        <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
-          <div>
-            <h2>Lingua Latina</h2>
-            <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, spaced repetition, and a graded library of prose and poetry.</p>
-          </div>
-          <span aria-hidden="true">Visit &rarr;</span>
-        </a>
+          <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
+            <div>
+              <h3>Lingua Latina</h3>
+              <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, spaced repetition, and a graded library of prose and poetry.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+        </div>
       </section>
 
       <section aria-labelledby="about-title" class="about">
         <h2 id="about-title">About the collection</h2>
-        <p>These projects began as ways of studying subjects that interested me. Some are works of selection and curation; others are interactive courses and tools. They will continue to change as I learn, verify, and revise.</p>
+        <p>These projects began as ways of exploring things that interested me. Some are collections and works of curation; others are courses, games, and interactive tools. They will continue to change as I learn, verify, and revise.</p>
       </section>
 
       <section aria-labelledby="install-title" class="install">

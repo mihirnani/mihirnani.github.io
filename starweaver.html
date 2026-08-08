@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>STARWEAVER — The Cluster Charter</title>
+<title>StarWeaver — The Cluster Charter</title>
 <meta name="description" content="A gentle procedurally generated space exploration and strategy game: chart a star cluster, follow clues, recover three Star Keys, and reach the Celestial Gate.">
 <meta name="theme-color" content="#070a14">
-<meta name="application-name" content="STARWEAVER">
+<meta name="application-name" content="StarWeaver">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="STARWEAVER">
+<meta name="apple-mobile-web-app-title" content="StarWeaver">
 <link rel="manifest" href="/starweaver-manifest.json">
 <link rel="apple-touch-icon" href="/starweaver-icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/starweaver-icon-192.png">
 <link rel="canonical" href="https://naniwadekar.com/starweaver.html">
-<meta property="og:title" content="STARWEAVER — The Cluster Charter">
+<meta property="og:title" content="StarWeaver — The Cluster Charter">
 <meta property="og:description" content="Chart an unknown star cluster, follow true clues, recover three Star Keys, and reach the Celestial Gate.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://naniwadekar.com/starweaver.html">
@@ -220,7 +220,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 </head>
 <body>
 <div id="hdr">
-  <h1>STARWEAVER <span>· The Cluster Charter</span></h1>
+  <h1>StarWeaver <span>· The Cluster Charter</span></h1>
   <div id="seedTag" title="Click to copy this cluster code"></div>
   <div class="spacer"></div>
   <button class="hbtn" id="btnHelp">How to Play</button>
@@ -271,7 +271,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 <script>
 "use strict";
 /* ============================================================
-   STARWEAVER — a procedurally generated exploration strategy game
+   StarWeaver — a procedurally generated exploration strategy game
    Single-file HTML5. Every seed weaves a brand-new star cluster.
    ============================================================ */
 
@@ -1079,7 +1079,7 @@ function calcScore(){
   return {parts, total:parts.reduce((a,p)=>a+p[2],0)};
 }
 function rankFor(sc){
-  if(sc>=4200) return "Legendary Starweaver";
+  if(sc>=4200) return "Legendary StarWeaver";
   if(sc>=3300) return "Master Cartographer";
   if(sc>=2500) return "Renowned Navigator";
   if(sc>=1700) return "Seasoned Captain";
@@ -1888,7 +1888,7 @@ function showHelp(first){
 
     <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
 
-    <div class="tipbox"><b>About clusters:</b> there is no fixed list. STARWEAVER generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+    <div class="tipbox"><b>About clusters:</b> there is no fixed list. StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
 
     <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
     <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Click the same hex <b>again</b> to fly there. Nebula hexes cost 2 fuel instead of 1.</div></div>
@@ -1926,11 +1926,11 @@ window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPat
 </script>
 
 <script>
-/* PWA registration: deliberately scoped to STARWEAVER only. */
+/* PWA registration: deliberately scoped to StarWeaver only. */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/starweaver-sw.js', { scope: '/starweaver.html' })
-      .catch(err => console.warn('STARWEAVER offline mode unavailable:', err));
+      .catch(err => console.warn('StarWeaver offline mode unavailable:', err));
   });
 }
 </script>
