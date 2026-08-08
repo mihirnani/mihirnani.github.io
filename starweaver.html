@@ -2512,8 +2512,8 @@ function fallbackCopy(txt){
   ta.remove();
 }
 
-/* ---------- sound: tiny WebAudio synth ---------- */
-let AC=null, muted=false, ambientNodes=null;
+/* ---------- sound: short WebAudio effects only ---------- */
+let AC=null, muted=false;
 function ac(){ if(!AC){ try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){} } return AC; }
 function tone(freq,dur,type,vol,when){
   const a=ac(); if(!a||muted) return;
@@ -2525,14 +2525,9 @@ function tone(freq,dur,type,vol,when){
   o.connect(g); g.connect(a.destination);
   o.start(a.currentTime+(when||0)); o.stop(a.currentTime+(when||0)+dur+.05);
 }
-function stopAmbient(){if(!ambientNodes)return;try{ambientNodes.oscs.forEach(o=>o.stop());ambientNodes.g.disconnect();}catch(e){}ambientNodes=null;}
-function startAmbient(){
-  if(muted||!S||ambientNodes)return;const a=ac();if(!a)return;
-  const bases={orion:55,perseus:62,sagittarius:49,scutum:46,outer:52,halo:41};const base=bases[W.context.id]||55;
-  const g=a.createGain();g.gain.value=.012;g.connect(a.destination);const oscs=[];
-  [1,1.5,2.005].forEach((m,i)=>{const o=a.createOscillator(),og=a.createGain();o.type=i===0?"sine":"triangle";o.frequency.value=base*m;og.gain.value=i===0?.75:.18;o.connect(og);og.connect(g);o.start();oscs.push(o);});
-  const l=a.createOscillator(),lg=a.createGain();l.frequency.value=.07;lg.gain.value=.004;l.connect(lg);lg.connect(g.gain);l.start();oscs.push(l);ambientNodes={oscs,g};
-}
+// Deliberately no continuous ambient drone: audio is event/SFX-only.
+function stopAmbient(){}
+function startAmbient(){}
 function sfx(kind){
   if(muted) return;
   switch(kind){
