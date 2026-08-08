@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curiosities — collections, games, and self-study projects in maps, natural history, mathematics, astronomy, and languages.">
+  <meta name="description" content="Curiosities — a collection of things I’ve made, collected, or used to learn about subjects that interest me.">
   <meta name="color-scheme" content="light dark">
   <title>Curiosities</title>
 
@@ -34,6 +34,9 @@
       --astronomy: #4f3196;
       --starweaver: #8a5a18;
       --toybox: #4e6b50;
+      --music: #6d28d9;
+      --physics: #0d47a1;
+      --german: #b3261e;
       --italian: #21845b;
       --french: #1f5f9f;
       --latin: #7b1f2d;
@@ -51,6 +54,9 @@
       --astronomy: #b7a0ef;
       --starweaver: #e2ba68;
       --toybox: #83bc99;
+      --music: #b9a5f4;
+      --physics: #8ab9ff;
+      --german: #ff938d;
       --italian: #82c7a4;
       --french: #85b9e7;
       --latin: #e48b97;
@@ -183,6 +189,12 @@
     .project--starweaver:focus-visible h3 { color: var(--starweaver); }
     .project--toybox:hover h3,
     .project--toybox:focus-visible h3 { color: var(--toybox); }
+    .project--music:hover h3,
+    .project--music:focus-visible h3 { color: var(--music); }
+    .project--physics:hover h3,
+    .project--physics:focus-visible h3 { color: var(--physics); }
+    .project--german:hover h3,
+    .project--german:focus-visible h3 { color: var(--german); }
     .project--italian:hover h3,
     .project--italian:focus-visible h3 { color: var(--italian); }
     .project--french:hover h3,
@@ -258,7 +270,7 @@
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
   <meta property="og:title" content="Curiosities">
-  <meta property="og:description" content="Collections, games, and self-study projects in maps, natural history, mathematics, astronomy, and languages.">
+  <meta property="og:description" content="A collection of things I’ve made, collected, or used to learn about subjects that interest me.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://naniwadekar.com/">
   <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
@@ -272,7 +284,7 @@
     <main>
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">Curiosities</h1>
-        <p>Collections, games, and self-study projects, made for curiosity and revised over time.</p>
+        <p>A collection of things I’ve made, collected, or used to learn about subjects that interest me.</p>
       </section>
 
       <section aria-labelledby="collections-title" class="project-group">
@@ -336,26 +348,6 @@
             <span aria-hidden="true">Study &rarr;</span>
           </a>
 
-          <!--
-
-          <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
-            <div>
-              <h3>Foundations of Software Systems</h3>
-              <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
-            <div>
-              <h3>Impara l&rsquo;Italiano</h3>
-              <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          -->
-
           <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
             <div>
               <h3>Apprendre le fran&ccedil;ais</h3>
@@ -371,12 +363,51 @@
             </div>
             <span aria-hidden="true">Study &rarr;</span>
           </a>
-        </div>
-      </section>
 
-      <section aria-labelledby="about-title" class="about">
-        <h2 id="about-title">About the collection</h2>
-        <p>These projects began as ways of exploring things that interested me. Some are collections and works of curation; others are courses, games, and interactive tools. They will continue to change as I learn, verify, and revise.</p>
+          <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
+            <div>
+              <h3>Foundations of Software Systems</h3>
+              <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
+          <!--
+          NOT CURRENTLY DISPLAYED. Retained here for easy restoration.
+
+          <a class="project project--music" href="https://naniwadekar.com/music-theory.html">
+            <div>
+              <h3>Harmonia</h3>
+              <p>An interactive music theory course with adaptive ear training, rhythm practice, notation, harmony labs, public-domain musical examples, quizzes, and spaced repetition.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
+          <a class="project project--physics" href="https://naniwadekar.com/university-physics-mechanics.html">
+            <div>
+              <h3>University Physics</h3>
+              <p>An interactive self-study edition of OpenStax <i>University Physics</i>, Volumes 1–3, covering mechanics, waves, thermodynamics, electromagnetism, optics, and modern physics, with the full text, quizzes, generated practice problems, and spaced-repetition flashcards.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
+          <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
+            <div>
+              <h3>Impara l&rsquo;Italiano</h3>
+              <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
+          <a class="project project--german" href="https://naniwadekar.com/deutsch-lernen.html">
+            <div>
+              <h3>Deutsch lernen</h3>
+              <p>A structured German self-study course from A1 foundations to advanced C1 topics, with grammar, cases, vocabulary, exercises, pronunciation, quizzes, and spaced repetition.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+          -->
+        </div>
       </section>
 
       <section aria-labelledby="install-title" class="install">
