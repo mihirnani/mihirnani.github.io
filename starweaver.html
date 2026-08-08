@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>StarWeaver — The Cluster Charter</title>
-<meta name="description" content="A gentle procedural space exploration and strategy game with contextual astronomy: chart a fictional survey cluster in the real Milky Way, follow clues, build a Captain's Atlas, recover three Star Keys, and reach the Celestial Gate.">
+<meta name="description" content="A procedural space exploration and strategy game with contextual astronomy, distinct Galactic environments, evolving encounters and a Captain's Atlas.">
 <meta name="theme-color" content="#070a14">
 <meta name="application-name" content="StarWeaver">
 <meta name="mobile-web-app-capable" content="yes">
@@ -69,6 +69,24 @@ button{font-family:inherit;}
 #hoverTip b{color:var(--gold);}
 #hoverTip .cost{color:var(--cyan);}
 #hoverTip .warn{color:var(--red);}
+#mapWrap::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;box-shadow:inset 0 0 100px rgba(0,0,0,.48);}
+#discoveryBanner{position:absolute;left:16px;top:16px;z-index:8;max-width:min(410px,72%);padding:10px 13px;border:1px solid rgba(95,214,232,.34);border-left:3px solid var(--cyan);border-radius:10px;background:rgba(8,14,30,.91);box-shadow:0 10px 32px rgba(0,0,0,.35);backdrop-filter:blur(6px);opacity:0;transform:translateY(-8px);transition:opacity .28s,transform .28s;pointer-events:none;}
+#discoveryBanner.on{opacity:1;transform:translateY(0);}
+#discoveryBanner .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--cyan);}
+#discoveryBanner b{display:block;margin-top:1px;color:var(--gold);font-size:15px;}
+#discoveryBanner span{display:block;margin-top:2px;color:var(--dim);font-size:11.8px;line-height:1.35;}
+.routeCard{margin:0 0 10px;padding:9px 10px;border:1px solid rgba(95,214,232,.32);border-radius:9px;background:rgba(95,214,232,.055);}
+.routeCard .routeTitle{font-size:12px;text-transform:uppercase;letter-spacing:1.1px;color:var(--cyan);margin-bottom:4px;}
+.routeCard b{color:var(--gold);}
+.destList{margin-top:8px;border-top:1px solid var(--edge);padding-top:7px;}
+.destList summary{cursor:pointer;color:var(--dim);font-size:12px;user-select:none;}
+.destRow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(38,49,79,.55);}
+.destRow:last-child{border-bottom:0;}
+.destRow .dn{font-size:12.5px;color:var(--ink);}.destRow .dd{font-size:10.8px;color:var(--dim);}
+.profilePill{display:inline-block;padding:2px 7px;border-radius:999px;border:1px solid rgba(255,207,107,.28);background:rgba(255,207,107,.06);color:var(--gold);font-size:10.5px;margin-top:4px;}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
+canvas:focus-visible{outline:2px solid var(--cyan);outline-offset:-3px;}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.tab,.abtn,.mbtn2,#toast,#discoveryBanner{transition:none!important;}}
 /* ---------- sidebar ---------- */
 #side{
   flex:0 0 330px; background:var(--panel); border-left:1px solid var(--edge);
@@ -235,14 +253,14 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 @media (max-width:760px){
   #side{flex-basis:270px;}
   body{font-size:14px;}
-}
-@media (max-width:600px){
-  #main{flex-direction:column;}
-  #side{flex:0 0 48%; border-left:none; border-top:1px solid var(--edge);}
   #hdr{gap:5px;padding:6px 8px;}
   #hdr h1{font-size:13px;letter-spacing:1.5px;}
   #hdr h1 span,#seedTag{display:none;}
   .hbtn{padding:4px 7px;font-size:11.5px;border-radius:7px;}
+}
+@media (max-width:600px){
+  #main{flex-direction:column;}
+  #side{flex:0 0 48%; border-left:none; border-top:1px solid var(--edge);}
 }
 </style>
 </head>
@@ -259,7 +277,8 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 
 <div id="main">
   <div id="mapWrap">
-    <canvas id="cv"></canvas>
+    <canvas id="cv" tabindex="0" role="application" aria-label="StarWeaver cluster chart. Use mouse or touch to pan and select destinations; use the nearby destinations list in the Here panel for keyboard navigation."></canvas>
+    <div id="discoveryBanner" aria-hidden="true"><div class="eyebrow">New discovery</div><b id="discoveryTitle"></b><span id="discoverySub"></span></div>
     <div id="mapBtns">
       <button class="mbtn" id="btnZin" title="Zoom in">+</button>
       <button class="mbtn" id="btnZout" title="Zoom out">−</button>
@@ -297,7 +316,8 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 </div>
 
 <div id="shade"><div id="modal"></div></div>
-<div id="toast"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="a11yLive" class="sr-only" aria-live="polite"></div>
 
 <script>
 "use strict";
@@ -356,15 +376,46 @@ const GOOD=Object.fromEntries(GOODS.map(g=>[g.id,g]));
 const STAR_COLORS=[
   {id:"red",    name:"red",    col:"#ff7b6b", glow:"#ff4830"},
   {id:"orange", name:"orange", col:"#ffb35c", glow:"#ff9020"},
-  {id:"yellow", name:"golden", col:"#ffe08a", glow:"#ffcc40"},
+  {id:"yellow", name:"yellow-white", col:"#ffe08a", glow:"#ffcc40"},
   {id:"white",  name:"white",  col:"#eef2ff", glow:"#c8d6ff"},
-  {id:"blue",   name:"blue",   col:"#9cc4ff", glow:"#5f9dff"},
+  {id:"blue",   name:"blue-white", col:"#9cc4ff", glow:"#5f9dff"},
 ];
+
+/* Procedural identity: the Galactic setting now changes the generated cluster as well as its explanatory text.
+   These are game-generation biases, not claims about a real named cluster. */
+const SECTOR_RULES={
+  orion:{nebula:[3,4],asteroids:12,stationRate:.61,minStations:9,eventRate:.15,weights:{red:24,orange:23,yellow:21,white:19,blue:13},tone:"mixed stellar neighbourhood"},
+  perseus:{nebula:[4,6],asteroids:12,stationRate:.62,minStations:9,eventRate:.18,weights:{red:18,orange:18,yellow:18,white:24,blue:22},tone:"bright, gas-rich frontier"},
+  sagittarius:{nebula:[5,7],asteroids:13,stationRate:.63,minStations:9,eventRate:.19,weights:{red:18,orange:18,yellow:17,white:24,blue:23},tone:"dust-rich star-forming lane"},
+  scutum:{nebula:[4,6],asteroids:15,stationRate:.67,minStations:10,eventRate:.19,weights:{red:19,orange:18,yellow:18,white:24,blue:21},tone:"crowded inner-disk crossing"},
+  outer:{nebula:[2,3],asteroids:11,stationRate:.53,minStations:8,eventRate:.14,weights:{red:34,orange:28,yellow:20,white:12,blue:6},tone:"sparse outer-disk frontier"},
+  halo:{nebula:[0,1],asteroids:8,stationRate:.46,minStations:7,eventRate:.13,weights:{red:39,orange:31,yellow:20,white:8,blue:2},tone:"quiet old-star halo survey"}
+};
+const PROFILE_VARIANTS={
+  orion:[["Lantern Roads","A balanced chart of mixed stars, active ports and short survey lanes."],["Local Meridian","A well-trafficked fictional survey pocket with varied stellar colours and reliable stations."]],
+  perseus:[["Blue Frontier","Young-looking luminous systems and bright dust complexes are unusually common on this chart."],["Nursery Reach","A lively spiral-arm survey with more hot stars and nebular terrain than average."]],
+  sagittarius:[["Dustglass Passage","Dense dust lanes make scanning valuable and nebular routes expensive."],["Ember Veil","A luminous, gas-rich fictional sector where clear routes are worth planning."]],
+  scutum:[["Crowded Meridian","Stations are common, but the chart is busy with dust, rock and overlapping routes."],["Inner Lanterns","A dense trade-and-survey crossing toward the inner Galactic disk."]],
+  outer:[["Long Quiet","Ports are farther apart and cool stars dominate the fictional survey catalogue."],["Far Lanterns","A sparse, cool-star frontier where fuel planning matters more than bustle."]],
+  halo:[["Old Light","A quiet fictional halo charter with few dust clouds, fewer ports and mostly cool stars."],["High Silence","Sparse traffic and old-looking stellar populations give this voyage a remote character."]]
+};
+function weightedStarColor(weights){
+  let total=0; for(const c of STAR_COLORS) total+=(weights[c.id]||0);
+  let x=R()*total; for(const c of STAR_COLORS){x-=weights[c.id]||0;if(x<=0)return c;}
+  return STAR_COLORS[2];
+}
+function clusterProfile(seed,ctx){
+  const rr=mulberry32(hashStr("cluster-profile|"+seed));
+  const v=(PROFILE_VARIANTS[ctx.id]||PROFILE_VARIANTS.orion);
+  const chosen=v[Math.floor(rr()*v.length)];
+  const rules=SECTOR_RULES[ctx.id]||SECTOR_RULES.orion;
+  return {name:chosen[0],blurb:chosen[1],tone:rules.tone,eventRate:rules.eventRate};
+}
 
 /* Astronomy layer. The game map remains fictional; these contexts and notes are grounded in real astronomy. */
 const GALACTIC_SECTORS=[
   {id:"orion",name:"Orion Spur survey",place:"Orion Spur (Local Arm)",distance:[700,2400],atlas:"spiral_arms",
-   focus:"our local Galactic neighbourhood",summary:"The Sun sits in the Orion Spur, a smaller structure between the Sagittarius and Perseus arms. Your charter is fictional, but this placement is in the same broad Milky Way neighbourhood."},
+   focus:"our local Galactic neighbourhood",summary:"The Sun lies in the Local Arm (also called the Orion Arm or Orion Spur), between the Sagittarius and Perseus arms. Your charter is fictional, but this placement is in the same broad Milky Way neighbourhood."},
   {id:"perseus",name:"Perseus Arm frontier",place:"Perseus Arm",distance:[5600,9800],atlas:"spiral_arms",
    focus:"spiral-arm structure and young stars",summary:"The Perseus Arm is one of the Milky Way’s major spiral arms. Spiral arms contain concentrations of gas, dust and star-forming regions as well as older stars."},
   {id:"sagittarius",name:"Sagittarius Arm lane",place:"Sagittarius Arm",distance:[4200,8200],atlas:"spiral_arms",
@@ -378,17 +429,27 @@ const GALACTIC_SECTORS=[
 ];
 const SPECTRAL_BY_COLOR={
   blue:[
-    {cls:"O",t:[30000,45000],m:[16,40],life:[3,10],lifeUnit:"million years",desc:"extremely hot, massive and short-lived"},
-    {cls:"B",t:[10000,30000],m:[2.1,16],life:[10,500],lifeUnit:"million years",desc:"hot, blue-white and generally much more massive than the Sun"}
+    {cls:"O",temps:[45000,42000,40000,38000,36000,34500,33250,32000,31000,30000],mass:[40,16],lifeGyr:[0.003,0.010],desc:"extremely hot, massive and short-lived"},
+    {cls:"B",temps:[30000,25000,22000,19000,17000,15000,14000,13000,11500,10500],mass:[16,2.1],lifeGyr:[0.010,1.1],desc:"hot, blue-white and generally much more massive than the Sun"}
   ],
   white:[
-    {cls:"A",t:[7500,10000],m:[1.4,2.1],life:[1,3],lifeUnit:"billion years",desc:"hotter and more massive than the Sun"},
-    {cls:"F",t:[6000,7500],m:[1.04,1.4],life:[3,7],lifeUnit:"billion years",desc:"somewhat hotter and more massive than the Sun"}
+    {cls:"A",temps:[10000,9500,9000,8600,8300,8100,7900,7700,7600,7500],mass:[2.1,1.4],lifeGyr:[0.7,3],desc:"hotter and more massive than the Sun"},
+    {cls:"F",temps:[7400,7200,7000,6800,6600,6450,6300,6200,6100,6000],mass:[1.4,1.04],lifeGyr:[3,8],desc:"somewhat hotter and more massive than the Sun"}
   ],
-  yellow:[{cls:"G",t:[5200,6000],m:[0.8,1.04],life:[8,15],lifeUnit:"billion years",desc:"Sun-like in temperature and mass"}],
-  orange:[{cls:"K",t:[3700,5200],m:[0.45,0.8],life:[15,40],lifeUnit:"billion years",desc:"cooler, smaller and longer-lived than the Sun"}],
-  red:[{cls:"M",t:[2400,3700],m:[0.1,0.45],life:[50,500],lifeUnit:"billion years",desc:"cool, low-mass and exceptionally long-lived"}]
+  yellow:[{cls:"G",temps:[5950,5860,5770,5680,5590,5500,5420,5350,5280,5200],mass:[1.04,0.8],lifeGyr:[8,20],desc:"Sun-like in temperature and mass"}],
+  orange:[{cls:"K",temps:[5100,4950,4800,4600,4400,4200,4050,3900,3800,3700],mass:[0.8,0.45],lifeGyr:[15,45],desc:"cooler, smaller and longer-lived than the Sun"}],
+  red:[{cls:"M",temps:[3700,3550,3400,3250,3100,2950,2800,2650,2500,2400],mass:[0.45,0.08],lifeGyr:[50,14000],desc:"cool, low-mass and exceptionally long-lived"}]
 };
+function interpSubtype(range,subtype){return range[0]+(range[1]-range[0])*(subtype/9);}
+function interpLogSubtype(range,subtype){
+  const a=Math.log10(range[0]),b=Math.log10(range[1]);
+  return Math.pow(10,a+(b-a)*(subtype/9));
+}
+function formatLifetimeGyr(gyr){
+  if(gyr<1){const myr=gyr*1000;return `${myr<10?Math.round(myr*10)/10:Math.round(myr)} million years`;}
+  const rounded=gyr<10?Math.round(gyr*10)/10:gyr<100?Math.round(gyr):Math.round(gyr/10)*10;
+  return `${rounded.toLocaleString()} billion years`;
+}
 const SCIENCE_SOURCES={
   milky:{name:"NASA Science · The Milky Way Galaxy",url:"https://science.nasa.gov/resource/the-milky-way-galaxy/"},
   stars:{name:"NASA Science · Stars",url:"https://science.nasa.gov/universe/stars/"},
@@ -398,17 +459,17 @@ const SCIENCE_SOURCES={
 };
 const ASTRO_ATLAS=[
   {id:"milky_way",cat:"Galaxy",title:"The Milky Way",src:"milky",body:"The Milky Way is our barred spiral galaxy, containing well over 100 billion stars. The Solar System lies in the disk, not at the centre."},
-  {id:"spiral_arms",cat:"Galaxy",title:"Spiral arms",src:"milky",body:"Spiral arms are regions of enhanced stellar density, gas and dust. They often contain active star formation. The Sun lies in the Orion Spur between larger arms."},
+  {id:"spiral_arms",cat:"Galaxy",title:"Spiral arms",src:"milky",body:"Spiral arms are regions of enhanced stellar density, gas and dust. They often contain active star formation. The Sun lies in the Local Arm (Orion Arm/Orion Spur), between the Sagittarius and Perseus arms."},
   {id:"galactic_disk",cat:"Galaxy",title:"The Galactic disk",src:"milky",body:"Most visible stars, gas and dust in the Milky Way occupy a flattened disk. The disk extends tens of thousands of light-years from the Galactic centre."},
   {id:"galactic_halo",cat:"Galaxy",title:"The Galactic halo",src:"milky",body:"A diffuse halo surrounds the Milky Way’s disk. It contains old stars and globular clusters and is embedded in a much larger dark-matter halo."},
   {id:"galactic_scale",cat:"Galaxy",title:"Distances between stars",src:"milky",body:"Interstellar space is enormous. Nearby stars are typically separated by light-years. StarWeaver compresses those distances into adjacent hexes so a voyage can work as a game."},
-  {id:"star_colour",cat:"Stars",title:"Star colour and temperature",src:"stars",body:"A star’s colour is related to its surface temperature: blue stars are hotter, red stars cooler. The map exaggerates colour so the distinction is easy to see."},
+  {id:"star_colour",cat:"Stars",title:"Star colour and temperature",src:"stars",body:"A star’s colour is related to its surface temperature: blue-white stars are hotter, red stars cooler. The map exaggerates colour for readability; the Sun’s combined visible light appears white."},
   {id:"spectral_types",cat:"Stars",title:"OBAFGKM spectral classes",src:"stars",body:"Astronomers classify ordinary stars by spectra and temperature. From hottest to coolest, the familiar sequence is O, B, A, F, G, K, M. The Sun is a G-type star."},
   {id:"stellar_lifetimes",cat:"Stars",title:"Mass and stellar lifetime",src:"stars",body:"Massive stars burn nuclear fuel at far higher rates and can live only millions of years. Low-mass red dwarfs use fuel slowly and can outlive the present age of the Universe by enormous factors."},
   {id:"spectroscopy",cat:"Methods",title:"Spectroscopy",src:"stars",body:"A spectrum spreads light by wavelength. Absorption and emission lines reveal chemical composition, temperature, motion and other physical conditions that a simple image cannot."},
   {id:"parallax",cat:"Methods",title:"Stellar parallax",src:"stars",body:"As Earth orbits the Sun, a nearby star appears to shift slightly against more distant stars. Measuring this tiny angle gives a geometric distance."},
   {id:"infrared",cat:"Methods",title:"Infrared astronomy",src:"nebula",body:"Infrared light passes through some dusty regions more readily than visible light. Infrared telescopes can therefore reveal stars and structures hidden inside obscuring clouds."},
-  {id:"exoplanets",cat:"Worlds",title:"Exoplanets",src:"worlds",body:"Planets orbiting stars beyond the Solar System are exoplanets. Thousands are confirmed, and astronomers infer their properties from effects such as transits, stellar motion and spectra."},
+  {id:"exoplanets",cat:"Worlds",title:"Exoplanets",src:"worlds",body:"Planets orbiting stars beyond the Solar System are exoplanets. More than 6,000 have been confirmed, and astronomers infer their properties from effects such as transits, stellar motion and spectra."},
   {id:"rocky_planets",cat:"Worlds",title:"Rocky worlds",src:"worlds",body:"Terrestrial planets are dominated by rock and metal. Their atmospheres and surfaces can vary enormously. StarWeaver’s ‘desert’, ‘frozen’ and ‘oceanic’ labels are fictional survey shorthand."},
   {id:"gas_giants",cat:"Worlds",title:"Gas giants",src:"worlds",body:"Jupiter and Saturn are gas giants, composed mostly of hydrogen and helium. They do not have a solid surface like Earth. StarWeaver’s fuel-scooping mechanic is science fiction."},
   {id:"nebulae",cat:"Interstellar",title:"Nebulae",src:"nebula",body:"Nebulae are clouds of gas and dust. Some are places where stars form; others are material shed or expelled by evolved stars. They are vastly more diffuse than game artwork suggests."},
@@ -434,21 +495,76 @@ function atlasEntriesForWorld(){
   const relevantGalaxy=new Set(["milky_way","galactic_scale"]);
   if(W.context.atlas==="spiral_arms"){relevantGalaxy.add("galactic_disk");relevantGalaxy.add("spiral_arms");}
   else relevantGalaxy.add(W.context.atlas);
-  return ASTRO_ATLAS.filter(e=>e.cat!=="Galaxy"||relevantGalaxy.has(e.id));
+  const hasNebula=[...W.cells.values()].some(c=>c.type==="nebula");
+  const hasAsteroids=[...W.cells.values()].some(c=>c.type==="asteroid");
+  const hasGasGiant=W.stars.some(st=>st.planets.some(p=>p.kind==="gas giant"));
+  const hasRocky=W.stars.some(st=>st.planets.some(p=>p.kind!=="gas giant"));
+  return ASTRO_ATLAS.filter(e=>{
+    if(e.cat==="Galaxy") return relevantGalaxy.has(e.id);
+    if(["nebulae","molecular_clouds","infrared"].includes(e.id)) return hasNebula;
+    if(e.id==="asteroid_belts") return hasAsteroids;
+    if(e.id==="gas_giants") return hasGasGiant;
+    if(e.id==="rocky_planets") return hasRocky;
+    return true;
+  });
 }
 function attachStarAstronomy(world){
-  world.context=galacticContext(world.seed);
+  if(!world.context) world.context=galacticContext(world.seed);
   world.stars.forEach((st,i)=>{
     const rr=mulberry32(hashStr(world.seed+"|star-astro|"+i+"|"+st.name));
     const options=SPECTRAL_BY_COLOR[st.color.id]||SPECTRAL_BY_COLOR.yellow;
     const spec=options[Math.floor(rr()*options.length)];
-    const temp=Math.round((spec.t[0]+rr()*(spec.t[1]-spec.t[0]))/50)*50;
-    const mass=Math.round((spec.m[0]+rr()*(spec.m[1]-spec.m[0]))*10)/10;
-    const lifeRaw=spec.life[0]+rr()*(spec.life[1]-spec.life[0]);
-    const life=lifeRaw<10?Math.round(lifeRaw*10)/10:Math.round(lifeRaw);
     const subtype=Math.max(0,Math.min(9,Math.floor(rr()*10)));
-    st.astro={spectralClass:spec.cls+subtype, family:spec.cls, tempK:temp, massSolar:mass, lifetime:life+" "+spec.lifeUnit, desc:spec.desc};
+    const temp=spec.temps[subtype];
+    const massRaw=interpSubtype(spec.mass,subtype);
+    const mass=massRaw<1?Math.round(massRaw*100)/100:Math.round(massRaw*10)/10;
+    const lifeGyr=interpLogSubtype(spec.lifeGyr,subtype);
+    st.astro={spectralClass:spec.cls+subtype, family:spec.cls, tempK:temp, massSolar:mass, lifetime:formatLifetimeGyr(lifeGyr), desc:spec.desc};
   });
+}
+
+const STATION_HEAD=["Lantern","Peregrine","Aster","Wayfarer","Quiet","Meridian","Cinder","Silver","Vesper","Juniper","Compass","Faraday"];
+const STATION_TAIL=["Exchange","Quay","Guildhouse","Relay","Haven","Depot","Crossing","Observatory","Freeport","Yard","Co-operative","Anchorage"];
+const STATION_ROLES=["survey depot","merchant freeport","research co-operative","repair yard","long-haul relay","cartographers' guildhouse","mining exchange","pilgrims' anchorage"];
+const PLANET_TRAITS={
+  rocky:["iron-rich highlands","broad impact basins","a thin dust veil","dark volcanic plains"],
+  oceanic:["deep global seas","bright cloud bands","scattered island chains","storm-bright equatorial waters"],
+  "gas giant":["a pale ring system","several bright storm bands","a retinue of icy moons","a deep amber atmosphere"],
+  frozen:["fractured ice plains","a blue-white nitrogen haze","long glacier fields","dark cryovolcanic scars"],
+  verdant:["dense green reflectance","broad cloud forests","seasonal colour bands","an oxygen-rich survey reading"],
+  desert:["wind-cut dune belts","bright salt flats","a copper-coloured atmosphere","vast dry canyon systems"]
+};
+function attachLocalIdentity(world){
+  const usedStations=new Set();
+  world.stars.forEach((st,i)=>{
+    const rr=mulberry32(hashStr(world.seed+"|local-id|"+i+"|"+st.name));
+    if(st.hasStation){
+      let name="";
+      for(let tries=0;tries<20&&!name;tries++){
+        const n=STATION_HEAD[Math.floor(rr()*STATION_HEAD.length)]+" "+STATION_TAIL[Math.floor(rr()*STATION_TAIL.length)];
+        if(!usedStations.has(n)){usedStations.add(n);name=n;}
+      }
+      st.stationName=name||st.name+" Station";
+      st.stationRole=STATION_ROLES[Math.floor(rr()*STATION_ROLES.length)];
+    }
+    const moods=[
+      `A compact system around a ${st.astro.spectralClass}-type star; the planets keep close company.`,
+      `The system opens slowly on the scope, its worlds strung like small beads around ${st.name}.`,
+      `${st.name} throws ${st.color.name} light across a quiet family of worlds.`,
+      `A clean navigation solution and a distinct ${st.astro.spectralClass} spectrum make this an easy system to remember.`
+    ];
+    st.systemFlavor=moods[Math.floor(rr()*moods.length)];
+    st.planets.forEach((pl,j)=>{
+      const arr=PLANET_TRAITS[pl.kind]||["unusual survey readings"];
+      pl.trait=arr[Math.floor(rr()*arr.length)];
+    });
+  });
+}
+function regionName(seed,key,noun){
+  const rr=mulberry32(hashStr(seed+"|region|"+key));
+  const a=["Violet","Morrow","Kestrel","Glass","Sable","Pilgrim","Cinder","Indigo","Quiet","Aurora","Mercury","Whisper"];
+  const b=noun==="nebula"?["Veil","Cloud","Bloom","Mist","Shroud","Arc"]:["Drift","Belt","Shoals","Gravel","Scatter","Reach"];
+  return a[Math.floor(rr()*a.length)]+" "+b[Math.floor(rr()*b.length)];
 }
 
 const SYL1=["Al","Be","Cas","Dra","El","Fen","Gal","Hy","Ix","Jun","Kel","Lyr","Mi","No","Or","Pra","Qi","Ri","Sol","Tau","Um","Vel","Wy","Xan","Yl","Zel","Tha","Nova"];
@@ -481,7 +597,9 @@ const DIRNAMES=["east","northeast","northwest","west","southwest","southeast"];
 let W=null;   // world (immutable per seed)
 let S=null;   // mutable game state
 
-function genGalaxy(seedStr){
+/* Legacy generator retained so automatic/portable SW2 saves created before the richer
+   procedural-environment update still restore against the exact chart they were playing. */
+function genGalaxyLegacy(seedStr){
   R=mulberry32(hashStr(seedStr));
   const cells=new Map();
   for(let q=-MAP_R;q<=MAP_R;q++){
@@ -606,6 +724,154 @@ function genGalaxy(seedStr){
   return world;
 }
 
+function decorateLegacyWorld(world){
+  if(!world.context) world.context=galacticContext(world.seed);
+  world.profile=clusterProfile(world.seed,world.context);
+  attachLocalIdentity(world);
+  world.ruins.forEach((c,i)=>{
+    const rr=mulberry32(hashStr(world.seed+"|legacy-ruin|"+i));
+    const motifs=["a ceiling mapped with extinct constellations","doorways cut in repeating prime-number intervals","walls patterned with handprints from several unknown species","a silent orrery whose planets still turn","black-glass corridors that reflect stars not on your chart","carvings of ships crossing a many-armed spiral"];
+    const moods=["solemn","luminous","windless","strangely welcoming","mathematically precise","half-buried in silver dust"];
+    c.ruinMotif=motifs[Math.floor(rr()*motifs.length)];c.ruinMood=moods[Math.floor(rr()*moods.length)];
+  });
+  world.anomalies.forEach((c,i)=>{const names=["Glass Meridian","Whisper Lens","Blue Knot","Stillwater Fold","Mercury Echo","Pale Aperture","Compass Error","Violet Interval","Silent Current","Faraday Bloom"];c.anomalyName=names[i%names.length];});
+  for(const c of world.cells.values()){if((c.type==="nebula"||c.type==="asteroid")&&!c.regionName)c.regionName=regionName(world.seed,hk(c.q,c.r),c.type==="nebula"?"nebula":"asteroid");}
+  return world;
+}
+
+function genGalaxy(seedStr){
+  R=mulberry32(hashStr(seedStr));
+  const context=galacticContext(seedStr);
+  const rules=SECTOR_RULES[context.id]||SECTOR_RULES.orion;
+  const profile=clusterProfile(seedStr,context);
+  const cells=new Map();
+  for(let q=-MAP_R;q<=MAP_R;q++){
+    for(let r=Math.max(-MAP_R,-q-MAP_R); r<=Math.min(MAP_R,-q+MAP_R); r++){
+      cells.set(hk(q,r),{q,r,type:"space"});
+    }
+  }
+  const all=[...cells.values()];
+  const at=(q,r)=>cells.get(hk(q,r));
+  const center={q:0,r:0};
+
+  /* nebula blobs — drifting random walks */
+  const nebCount=ri(rules.nebula[0],rules.nebula[1]);
+  for(let n=0;n<nebCount;n++){
+    let c=pick(all.filter(c=>hexDist(c,center)>=3));
+    const len=ri(5,9);
+    const nebName=regionName(seedStr,"nebula-"+n,"nebula");
+    for(let i=0;i<len;i++){
+      if(c && c.type==="space"){ c.type="nebula"; c.regionName=nebName; }
+      const d=pick(DIRS);
+      const nx=at(c.q+d[0], c.r+d[1]);
+      if(nx) c=nx;
+    }
+  }
+  /* asteroid fields */
+  let empt=shuffle(all.filter(c=>c.type==="space" && hexDist(c,center)>=2));
+  for(let i=0;i<rules.asteroids && empt.length;i++){ const a=empt.pop(); a.type="asteroid"; a.regionName=regionName(seedStr,"asteroid-"+i,"asteroid"); }
+
+  /* star systems — spaced out */
+  const stars=[];
+  const usedNames=new Set();
+  const mkName=()=>{
+    for(let t=0;t<40;t++){
+      const n=pick(SYL1)+pick(SYL2)+(R()<.22?pick(SUFFIX):"");
+      if(!usedNames.has(n)){usedNames.add(n); return n;}
+    }
+    return "Star-"+ri(100,999);
+  };
+  let cand=shuffle(all.filter(c=>c.type==="space"));
+  for(const c of cand){
+    if(stars.length>=26) break;
+    if(stars.some(s=>hexDist(s,c)<2)) continue;
+    c.type="star";
+    c.name=mkName();
+    c.color=weightedStarColor(rules.weights);
+    c.planets=[];
+    const np=ri(1,3);
+    const goodPool=shuffle(GOODS.map(g=>g.id));
+    for(let p=0;p<np;p++){
+      c.planets.push({
+        name:c.name+" "+["I","II","III"][p],
+        kind:pick(["rocky","oceanic","gas giant","frozen","verdant","desert"]),
+      });
+    }
+    /* economy: produces are cheap here, wants are pricey */
+    c.produces=goodPool.slice(0,ri(1,2));
+    c.wants=goodPool.slice(3,3+ri(1,2)).filter(g=>!c.produces.includes(g));
+    c.hasStation=R()<rules.stationRate;
+    c.fuelPrice=ri(7,13);          // per unit
+    c.gasGiant=c.planets.some(p=>p.kind==="gas giant");
+    stars.push(c);
+  }
+  /* guarantee a healthy station count */
+  const stationStars=stars.filter(s=>s.hasStation);
+  if(stationStars.length<rules.minStations){
+    for(const s of shuffle(stars.filter(s=>!s.hasStation)).slice(0,rules.minStations-stationStars.length)) s.hasStation=true;
+  }
+
+  /* start: station system nearest center */
+  const start=stars.filter(s=>s.hasStation).sort((a,b)=>hexDist(a,center)-hexDist(b,center))[0];
+
+  /* ruins — 9, spread out, 3 hide the Star Keys */
+  const ruins=[];
+  cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=3));
+  for(const c of cand){
+    if(ruins.length>=9) break;
+    if(ruins.some(rr=>hexDist(rr,c)<3)) continue;
+    c.type="ruin";
+    c.ruinName=pick(["Halls","Spire","Vault","Archive","Sanctum","Beacon","Temple","Orrery","Bastion"])+" of "+pick(["Ael","Vor","Ish","Ka","Ther","Om","Ryn","Zha"])+pick(["dun","reth","mai","sol","vek","ora","ith"]);
+    c.ruinMotif=pick(["a ceiling mapped with extinct constellations","doorways cut in repeating prime-number intervals","walls patterned with handprints from several unknown species","a silent orrery whose planets still turn","black-glass corridors that reflect stars not on your chart","carvings of ships crossing a many-armed spiral"]);
+    c.ruinMood=pick(["solemn","luminous","windless","strangely welcoming","mathematically precise","half-buried in silver dust"]);
+    ruins.push(c);
+  }
+  /* key ruins: far from start & in different thirds of the compass */
+  const scored=ruins.slice().sort((a,b)=>hexDist(b,start)-hexDist(a,start));
+  const keyRuins=[];
+  for(const rn of scored){
+    if(keyRuins.length>=3) break;
+    const ang=Math.atan2(axialPx(rn.q,rn.r,1).y, axialPx(rn.q,rn.r,1).x);
+    if(keyRuins.every(k=>{
+      const ka=Math.atan2(axialPx(k.q,k.r,1).y, axialPx(k.q,k.r,1).x);
+      let d=Math.abs(ang-ka); if(d>Math.PI) d=2*Math.PI-d;
+      return d>1.1;
+    })) keyRuins.push(rn);
+  }
+  while(keyRuins.length<3){ const rn=scored.find(r=>!keyRuins.includes(r)); keyRuins.push(rn); }
+  keyRuins.forEach((rn,i)=>{ rn.keyIndex=i; });
+
+  /* anomalies */
+  cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=2));
+  const anomalies=[];
+  for(const c of cand){
+    if(anomalies.length>=10) break;
+    if(anomalies.some(a=>hexDist(a,c)<2)) continue;
+    c.type="anomaly";
+    c.anomalyName=pick(["Glass Meridian","Whisper Lens","Blue Knot","Stillwater Fold","Mercury Echo","Pale Aperture","Compass Error","Violet Interval","Silent Current","Faraday Bloom"]);
+    anomalies.push(c);
+  }
+
+  /* the Celestial Gate — a far rim hex, hidden until 3 keys are found */
+  const rim=all.filter(c=>hexDist(c,center)>=MAP_R-1 && c.type==="space")
+               .sort((a,b)=>hexDist(b,start)-hexDist(a,start));
+  const gate=rim[ri(0,Math.min(4,rim.length-1))];
+  gate.type="gate";
+
+  /* starfield backdrop (deterministic pretty dots) */
+  const bgStars=[];
+  for(let i=0;i<420;i++){
+    bgStars.push({x:R()*2-1, y:R()*2-1, s:R()*1.6+.4, a:R()*.5+.15, tw:R()*6.28});
+  }
+
+  const puzzleIds=shuffle(KEY_PUZZLES.map((_,i)=>i)).slice(0,3);
+  const world={seed:seedStr, cells, stars, ruins, keyRuins, anomalies, gate, start, bgStars, puzzleIds, context, profile};
+  attachStarAstronomy(world);
+  attachLocalIdentity(world);
+  world.clues=genClues(world);
+  return world;
+}
+
 /* ---------- clue engine: true statements about each key ruin ---------- */
 function genClues(world){
   const {cells, stars}=world;
@@ -646,7 +912,7 @@ function newGame(seedStr, diffKey){
   rdCalls=0;
   const D=DIFF[diffKey];
   S={
-    seed:seedStr, diff:diffKey,
+    seed:seedStr, diff:diffKey, worldVersion:3,
     day:1, dayLimit:D.days,
     fuel:D.fuel, fuelMax:D.fuelMax,
     hull:10, hullMax:10,
@@ -660,26 +926,31 @@ function newGame(seedStr, diffKey){
     foundClues:[[],[],[]],           // indices into W.clues[i]
     ruinsDone:new Set(),             // hk of explored ruins
     anomsDone:new Set(),
-    atlasSeen:new Set(initialAtlasForContext(W.context)),
+    gasScooped:new Set(),
+    atlasSeen:new Set(),
     surveysDone:new Set(),
+    discoveries:new Set([hk(W.start.q,W.start.r)]),
+    seenEvents:[],
     ruinMarks:{},                  // manual chart notes: suspect / exclude
     gateRevealed:false,
     mission:null, freePlay:false, over:false, won:false,
     log:[],
     eventCooldown:0,
     pendingEvent:null,              // lets autosave restore an unresolved encounter
+    pendingArrival:false,            // processes Fold-in-Space landing after its event modal
     marketMemory:{},                 // per-star daily wiggles are derived, not stored
   };
   scanAround(S.pos, S.scanRange);
   visit(S.pos);
-  discoverScienceAt(W.start,true);
   log(`Charter granted. The <b>${W.start.name}</b> station wishes you fair skies.`);
   log(`Scientific setting: <b>${W.context.place}</b>, about <b>${W.context.distanceLy.toLocaleString()} light-years</b> from the Solar System (fictional survey chart in a real Galactic context).`);
+  log(`Survey character: <b>${W.profile.name}</b> — ${W.profile.blurb}`);
   log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> — all before day ${S.dayLimit}.`);
   cam.x=0; cam.y=0; cam.zoom=1;
   centerOnShip(false);
   selected=null;
   refreshAll();
+  stopAmbient(); startAmbient();
 }
 
 function cellAt(q,r){ return W.cells.get(hk(q,r)); }
@@ -709,6 +980,8 @@ function priceOf(star, goodId){
   const w=0.9+0.2*wiggle(star.name+goodId+Math.floor(S.day/3),3);
   return Math.max(4, Math.round(g.base*m*w));
 }
+function buyPriceOf(star,goodId){return Math.max(4,Math.ceil(priceOf(star,goodId)*1.06));}
+function sellPriceOf(star,goodId){return Math.max(3,Math.floor(priceOf(star,goodId)*0.94));}
 function wiggle(str,salt){ return mulberry32(hashStr(str+"|"+salt))(); }
 
 /* ============================================================
@@ -722,6 +995,8 @@ let DPR=1, cw=0, ch=0;
 let selected=null;                  // {q,r} selected target cell
 let hoverCell=null;
 let animT=0;
+let recentRoute=null, routeTrailUntil=0, scanPulse=null;
+const REDUCED_MOTION=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function resize(){
   DPR=window.devicePixelRatio||1;
@@ -799,6 +1074,11 @@ function draw(ts){
 function drawCluster(){
   const hs=HEX*cam.zoom;
   const pathSet=previewPath? new Set(previewPath.map(c=>hk(c.q,c.r))) : null;
+  if(previewPath&&previewPath.length){
+    const allPts=[S.pos,...previewPath]; cx.save();cx.beginPath();
+    allPts.forEach((pt,i)=>{const p=axialPx(pt.q,pt.r,HEX),sp=worldToScreen(p.x,p.y);if(i===0)cx.moveTo(sp.x,sp.y);else cx.lineTo(sp.x,sp.y);});
+    cx.strokeStyle="rgba(95,214,232,.38)";cx.lineWidth=1.5;cx.setLineDash([4,5]);cx.stroke();cx.setLineDash([]);cx.restore();
+  }
   for(const c of W.cells.values()){
     const p=axialPx(c.q,c.r,HEX);
     const s=worldToScreen(p.x,p.y);
@@ -830,6 +1110,8 @@ function drawCluster(){
     }
     drawFeature(c,s,hs,visited);
   }
+  drawRouteTrail();
+  drawScanPulse();
   /* the ship */
   const sp=axialPx(S.pos.q,S.pos.r,HEX);
   const ss=worldToScreen(sp.x,sp.y);
@@ -848,6 +1130,22 @@ function drawCluster(){
   cx.restore();
 }
 
+function drawRouteTrail(){
+  if(!recentRoute||recentRoute.length<2||performance.now()>routeTrailUntil){recentRoute=null;return;}
+  const remain=Math.max(0,(routeTrailUntil-performance.now())/1800);
+  cx.save(); cx.lineCap="round"; cx.lineJoin="round";
+  cx.beginPath();
+  recentRoute.forEach((pt,i)=>{const p=axialPx(pt.q,pt.r,HEX),s=worldToScreen(p.x,p.y); if(i===0)cx.moveTo(s.x,s.y); else cx.lineTo(s.x,s.y);});
+  cx.strokeStyle=`rgba(95,214,232,${.18+.45*remain})`; cx.lineWidth=3; cx.shadowColor="#5fd6e8";cx.shadowBlur=9;cx.stroke();
+  cx.shadowBlur=0; cx.restore();
+}
+function drawScanPulse(){
+  if(!scanPulse||REDUCED_MOTION)return;
+  const age=performance.now()-scanPulse.t; if(age>900){scanPulse=null;return;}
+  const p=axialPx(scanPulse.q,scanPulse.r,HEX),s=worldToScreen(p.x,p.y);
+  const k=age/900,rad=(18+120*k)*cam.zoom;
+  cx.save();cx.globalAlpha=(1-k)*.55;cx.strokeStyle="#5fd6e8";cx.lineWidth=1.5;cx.beginPath();cx.arc(s.x,s.y,rad,0,Math.PI*2);cx.stroke();cx.restore();
+}
 function drawFeature(c,s,hs,visited){
   const dim=visited?1:.62;
   cx.save();
@@ -1041,10 +1339,10 @@ function updateHoverPreview(mx,my){
   const c=hoverCell;
   let html="";
   if(c.type==="star") html=`<b>${c.name}</b> — ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
-  else if(c.type==="nebula") html=`<b>Nebula</b> — costs 2 fuel to cross`;
-  else if(c.type==="asteroid") html=`<b>Asteroid field</b>${S.upgrades.mining?" — mineable":""}`;
+  else if(c.type==="nebula") html=`<b>${c.regionName||"Nebula"}</b> — nebula terrain, costs 2 fuel to cross`;
+  else if(c.type==="asteroid") html=`<b>${c.regionName||"Asteroid field"}</b>${S.upgrades.mining?" — mineable":""}`;
   else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" — explored":""}`;
-  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>Quiet space</b>`:`<b>Anomaly</b> — something shimmers here`;
+  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>${c.anomalyName||"Anomaly"}</b> — resolved`:`<b>${c.anomalyName||"Anomaly"}</b> — something shimmers here`;
   else if(c.type==="gate"&&S.gateRevealed) html=`<b>The Celestial Gate</b>`;
   else html=`<b>Open space</b>`;
   if(!(c.q===S.pos.q&&c.r===S.pos.r)){
@@ -1068,7 +1366,8 @@ function updateHoverPreview(mx,my){
 }
 
 /* ---------- A* over scanned cells ---------- */
-function moveCost(c){ return c.type==="nebula"?2:1; }
+function hullCritical(){return !!S&&S.hull<=2;}
+function moveCost(c){ return (c.type==="nebula"?2:1)+(hullCritical()?1:0); }
 function findPath(from,to){
   const toC=cellAt(to.q,to.r);
   if(!toC||!isScanned(toC)) return null;
@@ -1118,6 +1417,7 @@ function travelTo(dest,path){
   }
   const fc=pathFuel(route);
   if(fc>S.fuel){ toast("Not enough fuel for that route."); sfx("bad"); return; }
+  const origin={q:S.pos.q,r:S.pos.r};
   selected=null; previewPath=null; tipHide();
   S.fuel-=fc;
   const days=pathDays(route);
@@ -1127,6 +1427,8 @@ function travelTo(dest,path){
     visit(S.pos);
   }
   advanceDays(days);
+  recentRoute=[origin,...route.map(x=>({q:x.q,r:x.r}))]; routeTrailUntil=performance.now()+(REDUCED_MOTION?250:1800);
+  scanPulse={q:S.pos.q,r:S.pos.r,t:performance.now()};
   centerOnShip(true);
   sfx("engine");
   if(S.over&&!S.freePlay) return;
@@ -1138,8 +1440,7 @@ function travelTo(dest,path){
 
 function advanceDays(n){
   S.day+=n;
-  if(S.mission && S.day>S.mission.due && !S.mission.failedNoted){
-    S.mission.failedNoted=true;
+  if(S.mission && S.day>S.mission.due){
     log(`The delivery window for <b>${S.mission.star}</b> has closed. The contract lapsed.`);
     S.mission=null;
     toast("Mission expired.");
@@ -1151,7 +1452,12 @@ function advanceDays(n){
 
 function onArrive(){
   const c=curCell();
-  discoverScienceAt(c);
+  const ck=hk(c.q,c.r);
+  if(!S.discoveries) S.discoveries=new Set();
+  const firstDiscovery=!S.discoveries.has(ck);
+  S.discoveries.add(ck);
+  if(firstDiscovery) announceDiscovery(c);
+  discoverScienceAt(c,!firstDiscovery,firstDiscovery);
   if(S.eventCooldown>0) S.eventCooldown--;
   if(c.type==="anomaly" && !S.anomsDone.has(hk(c.q,c.r))){
     S.anomsDone.add(hk(c.q,c.r));
@@ -1167,20 +1473,36 @@ function onArrive(){
     log(`You've reached the <b>${c.ruinName}</b> — an ancient ruin drifts silently here.`);
   }
   /* random travel encounter in open space */
-  if((c.type==="space"||c.type==="asteroid"||c.type==="nebula") && S.eventCooldown===0 && dchance(0.16)){
+  if((c.type==="space"||c.type==="asteroid"||c.type==="nebula") && S.eventCooldown===0 && dchance((W.profile&&W.profile.eventRate)||0.16)){
     S.eventCooldown=3;
     fireEvent(false);
   }
 }
 
 /* ---------- fuel emergency: stranded ---------- */
+let discoveryTimer=null;
+function announceDiscovery(c){
+  let title="",sub="";
+  if(c.type==="star"){title=c.name;sub=c.systemFlavor+(c.hasStation?` ${c.stationName} · ${c.stationRole}.`:"");}
+  else if(c.type==="ruin"){title=c.ruinName;sub=`An ancient ${c.ruinMood||"silent"} structure: ${c.ruinMotif||"unknown architecture"}.`;}
+  else if(c.type==="anomaly"){title=c.anomalyName||"Uncatalogued anomaly";sub="The survey computer cannot reconcile this region with ordinary navigation data.";}
+  else if(c.type==="nebula"){title=c.regionName||"Nebula";sub="A named dust-and-gas region enters your working chart.";}
+  else if(c.type==="asteroid"){title=c.regionName||"Asteroid field";sub="A compact game-map shorthand for a much more diffuse population of small bodies.";}
+  else return;
+  const box=$("discoveryBanner"); if(!box)return;
+  $("discoveryTitle").textContent=title; $("discoverySub").textContent=sub; box.classList.add("on");
+  $("a11yLive").textContent=`New discovery: ${title}. ${sub}`;
+  clearTimeout(discoveryTimer);discoveryTimer=setTimeout(()=>box.classList.remove("on"),REDUCED_MOTION?1800:3300);
+  sfx("discover");
+}
 function checkStranded(){
-  if(S.fuel>0) return;
   const c=curCell();
   if(c.type==="star"&&c.hasStation) return;      // can buy fuel here
-  const reach=[...W.cells.values()].some(n=>isScanned(n)&&hexDist(n,S.pos)===1&&moveCost(n)<=S.fuel);
-  if(reach) return;
-  /* tow to nearest visited station */
+  const neighbours=DIRS.map(d=>cellAt(S.pos.q+d[0],S.pos.r+d[1])).filter(Boolean);
+  if(neighbours.some(n=>isScanned(n)&&moveCost(n)<=S.fuel)) return;
+  /* If an adjacent hex is still unknown and we have fuel, a deep scan remains a meaningful option. */
+  if(S.fuel>0&&neighbours.some(n=>!isScanned(n))) return;
+  /* No currently possible move: tow to nearest visited station. */
   const st=W.stars.filter(s=>s.hasStation&&isVisited(s)).sort((a,b)=>hexDist(a,S.pos)-hexDist(b,S.pos))[0]||W.start;
   const fee=Math.min(S.credits,90);
   S.credits-=fee;
@@ -1188,9 +1510,10 @@ function checkStranded(){
   S.fuel=4;
   advanceDays(4);
   visit(S.pos);
-  log(`<b>Out of fuel!</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard.`);
-  modalInfo("Stranded!", `Your tanks ran dry in deep space. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel. Watch that fuel gauge, captain!`);
+  log(`<b>Unable to continue under your own power.</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard.`);
   centerOnShip(true);
+  if(S.over&&!S.freePlay){ refreshAll(); return; }
+  modalInfo("Stranded!", `No charted neighbouring jump was within your remaining fuel. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel. Watch that fuel gauge, captain!`);
 }
 
 /* ---------- endings ---------- */
@@ -1203,6 +1526,7 @@ function calcScore(){
     ["Systems visited", sysV+" × 25", sysV*25],
     ["Space charted", S.scanned.size+" × 2", S.scanned.size*2],
     ["Atlas discoveries", (S.atlasSeen?S.atlasSeen.size:0)+" × 12", (S.atlasSeen?S.atlasSeen.size:0)*12],
+    ["Named discoveries", (S.discoveries?S.discoveries.size:0)+" × 2", (S.discoveries?S.discoveries.size:0)*2],
     ["Credits", "◈"+S.credits+" ÷ 2", Math.floor(S.credits/2)],
   ];
   if(S.won) parts.unshift(["Gate reached","",1500]);
@@ -1230,7 +1554,7 @@ function winGame(){
     <div class="mrow">
       <button class="mbtn2 primary" onclick="closeModal(); showNewGame();">New voyage</button>
       <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll();">Keep exploring this cluster</button>
-    </div>`);
+    </div>`,true);
 }
 function charterExpires(){
   S.over=true;
@@ -1246,7 +1570,7 @@ function charterExpires(){
     <div class="mrow">
       <button class="mbtn2 primary" onclick="closeModal(); showNewGame();">New voyage</button>
       <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll(); toast('Free play — no clock, just stars.');">Keep exploring anyway</button>
-    </div>`);
+    </div>`,true);
 }
 function scoreTable(sc){
   return `<table class="mkt"><tbody>${
@@ -1285,39 +1609,40 @@ function renderStatus(){
   $("fuelFill").style.width=(100*S.fuel/S.fuelMax)+"%";
   $("fuelLbl").textContent=`FUEL ${S.fuel}/${S.fuelMax}`;
   $("hullFill").style.width=(100*S.hull/S.hullMax)+"%";
-  $("hullLbl").textContent=`HULL ${S.hull}/${S.hullMax}`;
+  $("hullLbl").textContent=`HULL ${S.hull}/${S.hullMax}${hullCritical()?" · CRITICAL":""}`;
   $("credLbl").textContent="◈ "+S.credits;
   $("cargoLbl").textContent=`Cargo ${cargoCount()}/${S.cargoMax}`;
-  if($("sectorLbl")&&W&&W.context) $("sectorLbl").textContent=`📍 ${W.context.place} · ~${W.context.distanceLy.toLocaleString()} ly from Sun`;
+  if($("sectorLbl")&&W&&W.context){$("sectorLbl").textContent=`📍 ${W.context.place} · ${W.profile?W.profile.name+" · ":""}~${W.context.distanceLy.toLocaleString()} ly from Sun`;$("sectorLbl").title=W.profile?W.profile.blurb:"Scientific setting";}
 }
 
 function renderHere(){
   const c=curCell();
   const p=$("p-here");
-  let h="";
+  let h=routeCardHtml();
   const missionH=S.mission?`<div class="missionBox">📦 Deliver <b>${S.mission.qty} ${GOOD[S.mission.good].name}</b> to <b>${S.mission.star}</b> by day ${S.mission.due} · reward <b>◈${S.mission.reward}</b><br><span class="small">${S.mission.hint}</span></div>`:"";
   if(c.type==="star"){
     h+=`<div id="hereName" style="color:${c.color.col}">${c.name}</div>
-        <div id="hereSub">A ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.${c.hasStation?" A trade station glitters in orbit.":" No station here — just quiet worlds."}</div>`;
+        <div id="hereSub">${c.systemFlavor||`A ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.`}${c.hasStation?` <b>${c.stationName}</b> (${c.stationRole}) glitters in orbit.`:" No station here — just quiet worlds."}</div>`;
     h+=missionH;
     for(const pl of c.planets){
-      h+=`<div class="planet"><span class="pdot" style="background:${planetCol(pl.kind)}"></span>${pl.name} <span class="pd">· ${pl.kind}</span></div>`;
+      h+=`<div class="planet"><span class="pdot" style="background:${planetCol(pl.kind)}"></span>${pl.name} <span class="pd">· ${pl.kind}${pl.trait?" · "+pl.trait:""}</span></div>`;
     }
     if(c.hasStation){
-      h+=`<button class="abtn gold" onclick="openStation()">🛰 Dock at station<span class="sub">Market · Shipyard · Lounge</span></button>`;
+      h+=`<button class="abtn gold" onclick="openStation()">🛰 Dock at ${c.stationName||"station"}<span class="sub">${c.stationRole||"trade station"} · Market · Shipyard · Lounge</span></button>`;
     }
     if(c.gasGiant){
-      const can=S.fuel<S.fuelMax;
-      h+=`<button class="abtn" onclick="scoopFuel()" ${can?"":"disabled"}>⛽ Scoop fuel at the gas giant<span class="sub">+5 fuel, takes 1 day — free!</span></button>`;
+      const scoopKey=hk(c.q,c.r),spent=S.gasScooped instanceof Set&&S.gasScooped.has(scoopKey);
+      const can=S.fuel<S.fuelMax&&!spent;
+      h+=`<button class="abtn" onclick="scoopFuel()" ${can?"":"disabled"}>⛽ Scoop fuel at the gas giant<span class="sub">${spent?"Collectors already used here this voyage":"+5 fuel, takes 1 day · one scoop per system"}</span></button>`;
     }
   }else if(c.type==="ruin"){
     const done=S.ruinsDone.has(hk(c.q,c.r));
     h+=`<div id="hereName" style="color:var(--violet)">${c.ruinName}</div>
-        <div id="hereSub">${done?"You have already explored this ruin. Its halls are quiet now.":"Ancient walls drift in the dark, older than any charted star. Carvings glow faintly as you approach."}</div>`;
+        <div id="hereSub">${done?`You have already explored this ${c.ruinMood||"silent"} ruin. ${c.ruinMotif||"Its halls are quiet now."}`:`A ${c.ruinMood||"silent"} structure drifts in the dark: ${c.ruinMotif||"carvings glow faintly as you approach"}.`}</div>`;
     h+=missionH;
     if(!done) h+=`<button class="abtn gold" onclick="exploreRuin()">🏛 Explore the ruin<span class="sub">Takes 1 day. Who knows what waits inside…</span></button>`;
   }else if(c.type==="asteroid"){
-    h+=`<div id="hereName">Asteroid Field</div><div id="hereSub">Tumbling rock and glittering dust.</div>`;
+    h+=`<div id="hereName">${c.regionName||"Asteroid Field"}</div><div id="hereSub">Tumbling rock and glittering dust — compressed into visible terrain for the chart.</div>`;
     h+=missionH;
     if(S.upgrades.mining){
       h+=`<button class="abtn" onclick="mineHere()" ${cargoCount()<S.cargoMax?"":"disabled"}>⛏ Mine the field<span class="sub">1 day · yields ore, sometimes crystals</span></button>`;
@@ -1325,22 +1650,46 @@ function renderHere(){
       h+=`<div class="small">A mining rig (sold at stations) would let you harvest ore here.</div>`;
     }
   }else if(c.type==="nebula"){
-    h+=`<div id="hereName" style="color:var(--violet)">Nebula</div><div id="hereSub">Rose and violet dust folds around the ship. Beautiful — and thirsty work for the engines (2 fuel per jump).</div>`+missionH;
+    h+=`<div id="hereName" style="color:var(--violet)">${c.regionName||"Nebula"}</div><div id="hereSub">Dust and gas fold across the chart. Beautiful — and thirsty work for the engines (2 fuel per jump in the game abstraction).</div>`+missionH;
   }else if(c.type==="gate"&&S.gateRevealed){
     h+=`<div id="hereName" style="color:var(--gold)">The Celestial Gate</div><div id="hereSub">It is waiting.</div>`;
   }else{
     h+=`<div id="hereName">Open Space</div><div id="hereSub">Silence, starlight, and the hum of your ship.</div>`+missionH;
   }
   h+=fieldNotesHtml(c);
+  if(hullCritical()) h+=`<div class="missionBox" style="border-color:var(--red)">⚠ <b>Critical hull integrity.</b> Shielding and containment draw extra power: every jump costs <b>+1 fuel</b> until the hull is repaired above 2.</div>`;
   h+=`<h3>Captain's tools</h3>`;
-  const scanCost=3;
   h+=`<button class="abtn" onclick="deepScan()" ${S.fuel>=1?"":"disabled"}>📡 Deep scan<span class="sub">1 fuel, 1 day · reveals a wide ring (range ${S.scanRange+2}) around you</span></button>`;
   h+=`<button class="abtn" onclick="waitDay()">🌙 Hold position<span class="sub">Pass 1 day (markets drift, engines cool)</span></button>`;
+  h+=chartedDestinationsHtml();
   p.innerHTML=h;
   renderStatus();
 }
 function planetCol(kind){
   return {rocky:"#b8a98f",oceanic:"#5fa8e8",["gas giant"]:"#e8b45f",frozen:"#bcd8ef",verdant:"#7fe0a0",desert:"#e0c080"}[kind]||"#999";
+}
+function cellLabel(c){
+  if(c.type==="star")return c.name; if(c.type==="ruin")return c.ruinName||"Ancient ruin";
+  if(c.type==="anomaly")return c.anomalyName||"Anomaly"; if(c.type==="nebula")return c.regionName||"Nebula";
+  if(c.type==="asteroid")return c.regionName||"Asteroid field"; if(c.type==="gate")return "Celestial Gate";return "Open space";
+}
+function routeCardHtml(){
+  if(!selected)return ""; const c=cellAt(selected.q,selected.r); if(!c)return ""; const path=findPath(S.pos,c); if(!path)return "";
+  const fuel=pathFuel(path),days=pathDays(path),bad=fuel>S.fuel;
+  return `<div class="routeCard"><div class="routeTitle">Plotted course</div><b>${cellLabel(c)}</b><div class="small">${path.length} jump${path.length===1?"":"s"} · ${fuel} fuel · ${days} day${days===1?"":"s"}${bad?` · <span style="color:var(--red)">insufficient fuel</span>`:""}</div><div class="mrow" style="margin-top:7px"><button class="tbtn" ${bad?"disabled":""} onclick="flySelected()">Fly course</button><button class="tbtn" onclick="cancelRoute()">Cancel</button></div></div>`;
+}
+function flySelected(){if(!selected)return;const c=cellAt(selected.q,selected.r),p=findPath(S.pos,c);if(p)travelTo(c,p);}
+function cancelRoute(){selected=null;previewPath=null;tipHide();renderHere();}
+function plotFromList(q,r){
+  const c=cellAt(q,r),path=c&&findPath(S.pos,c);if(!path){toast("No charted route to that destination.");return;}
+  selected={q,r};previewPath=path;renderHere();centerOnTarget(c);sfx("click");
+}
+function centerOnTarget(c){const p=axialPx(c.q,c.r,HEX);camTarget={x:p.x,y:p.y};}
+function chartedDestinationsHtml(){
+  const opts=[...W.cells.values()].filter(c=>isScanned(c)&&!(c.q===S.pos.q&&c.r===S.pos.r)&&["star","ruin","anomaly","gate"].includes(c.type)&&!(c.type==="gate"&&!S.gateRevealed))
+    .map(c=>({c,d:hexDist(c,S.pos),p:findPath(S.pos,c)})).filter(x=>x.p).sort((a,b)=>a.d-b.d).slice(0,9);
+  if(!opts.length)return "";
+  return `<details class="destList"><summary>Charted destinations nearby · keyboard-friendly</summary>${opts.map(x=>`<div class="destRow"><div><div class="dn">${cellLabel(x.c)}</div><div class="dd">${x.p.length} jumps · ${pathFuel(x.p)} fuel${x.c.type==="star"&&x.c.hasStation?` · ${x.c.stationName}`:""}</div></div><button class="tbtn" onclick="plotFromList(${x.c.q},${x.c.r})">Plot</button></div>`).join("")}</details>`;
 }
 
 function renderCargo(){
@@ -1352,7 +1701,7 @@ function renderCargo(){
     h+=`<div class="cargoRow"><span>${GOOD[k].icon} ${GOOD[k].name}</span><span class="q">× ${S.cargo[k]}</span></div>`;
   }
   h+=`</div><h3>Ship</h3><div class="small">
-    Scanner range ${S.scanRange} · Speed ${S.speed} jump${S.speed>1?"s":""}/day · Tank ${S.fuelMax} · Hold ${S.cargoMax}${S.upgrades.mining?" · Mining rig ⛏":""}<br>Captain's Atlas ${S&&W?atlasEntriesForWorld().filter(e=>S.atlasSeen&&S.atlasSeen.has(e.id)).length:0}/${W?atlasEntriesForWorld().length:ASTRO_ATLAS.length} · Survey observations ${(S.surveysDone?S.surveysDone.size:0)}
+    Scanner range ${S.scanRange} · Speed ${S.speed} jump${S.speed>1?"s":""}/day · Tank ${S.fuelMax} · Hold ${S.cargoMax}${S.upgrades.mining?" · Mining rig ⛏":""}${hullCritical()?" · ⚠ critical hull: +1 fuel/jump":""}<br>Captain's Atlas ${S&&W?atlasEntriesForWorld().filter(e=>S.atlasSeen&&S.atlasSeen.has(e.id)).length:0}/${W?atlasEntriesForWorld().length:ASTRO_ATLAS.length} · Survey observations ${(S.surveysDone?S.surveysDone.size:0)}
   </div>`;
   p.innerHTML=h;
 }
@@ -1360,7 +1709,7 @@ function renderCargo(){
 function renderClues(){
   const p=$("p-clues");
   const kn=["First Key","Second Key","Third Key"];
-  let h=`<div class="small" style="margin-bottom:10px">Every clue is true. Combine several clues, then use the chart notes below to mark ruins you suspect or rule out.</div>`;
+  let h=`<div class="small" style="margin-bottom:10px">Combine several clues, then use the chart notes below to mark ruins you suspect or rule out.</div>`;
   for(let i=0;i<3;i++){
     h+=`<div class="clueGroup"><h4>🗝️ ${kn[i]} ${S.keys[i]?'<span style="color:var(--green)">— FOUND</span>':""}</h4>`;
     if(!S.foundClues[i].length&&!S.keys[i]) h+=`<div class="small">No clues yet. Explore ruins or buy a rumor in a station lounge.</div>`;
@@ -1406,12 +1755,12 @@ function unlockAtlas(ids,quiet){
     toast(`Captain's Atlas updated: ${added} new entr${added===1?"y":"ies"}.`);
   }
 }
-function discoverScienceAt(c,quiet){
+function discoverScienceAt(c,quiet,includeContext=false){
   if(!c||!S) return;
-  const ids=[];
+  const ids=includeContext?initialAtlasForContext(W.context).slice():[];
   if(c.type==="star"){
     ids.push("star_colour","spectral_types","spectroscopy","exoplanets");
-    if(c.astro&&(c.astro.family==="O"||c.astro.family==="B"||c.astro.family==="M")) ids.push("stellar_lifetimes");
+    ids.push("stellar_lifetimes");
     if(c.planets.some(p=>p.kind==="gas giant")) ids.push("gas_giants");
     if(c.planets.some(p=>p.kind!=="gas giant")) ids.push("rocky_planets");
   }else if(c.type==="nebula") ids.push("nebulae","molecular_clouds","infrared");
@@ -1438,7 +1787,9 @@ function fieldNotesHtml(c){
     h+=`<div class="scienceCard"><div class="stitle">☄ Asteroid field</div><p><span class="truthTag">Real astronomy</span> Real asteroid belts are mostly empty space; collisions are not inevitable. StarWeaver compresses a vast population into one visible hex so it functions as terrain.</p>${scienceSourceLink("asteroids")}${observationButton(c,surveyed)}</div>`;
   }else if(c.type==="ruin"){
     h+=`<div class="scienceCard"><div class="stitle">🏛 Ancient ruin</div><p><span class="fictionTag">StarWeaver fiction</span> The ruins, Star Keys and their civilisation are entirely fictional. Their astronomical surroundings use the same Field Notes system as the rest of the chart.</p></div>`;
-  }else if(c.type==="gate"){
+  }else if(c.type==="anomaly"){
+    h+=`<div class="scienceCard"><div class="stitle">◇ ${c.anomalyName||"Anomaly"}</div><p><span class="fictionTag">StarWeaver fiction</span> This anomaly has no claim to represent a known physical phenomenon. It exists to make the fictional survey strange; real astronomy notes are kept separate.</p></div>`;
+  }else if(c.type==="gate"&&S.gateRevealed){
     h+=`<div class="scienceCard"><div class="stitle">◎ Celestial Gate</div><p><span class="fictionTag">StarWeaver fiction</span> The Gate is a narrative device, not a known astronomical phenomenon.</p></div>`;
   }else{
     h+=`<div class="scienceCard"><div class="stitle">✦ Interstellar scale</div><p><span class="truthTag">Real astronomy</span> Stars are normally separated by light-years. The hex chart radically compresses distance so that a voyage can be played in minutes rather than millennia.</p>${scienceSourceLink("milky")}</div>`;
@@ -1474,7 +1825,7 @@ function surveyObservation(){
 function answerObservation(i){
   const ob=currentObservation; if(!ob) return;
   if(!(S.surveysDone instanceof Set)) S.surveysDone=new Set(S.surveysDone||[]);
-  S.surveysDone.add(ob.key); unlockAtlas(ob.unlock||[],true);
+  S.surveysDone.add(ob.key); unlockAtlas([...initialAtlasForContext(W.context),...(ob.unlock||[])],true);
   const ok=i===ob.correct;
   if(ok){S.credits+=25;scanAround(S.pos,S.scanRange+1);log(`<b>Survey interpretation accepted.</b> Research stipend +◈25; nearby chart priorities updated.`);sfx("good");}
   else{sfx("bad");log(`<b>Survey interpretation reviewed.</b> No penalty; the Atlas records the explanation.`);}
@@ -1486,7 +1837,7 @@ function renderAtlas(){
   const p=$("p-atlas"); if(!p||!S||!W) return;
   if(!(S.atlasSeen instanceof Set)) S.atlasSeen=new Set(S.atlasSeen||[]);
   const ctx=W.context, entriesForVoyage=atlasEntriesForWorld(), seen=entriesForVoyage.filter(e=>S.atlasSeen.has(e.id)).length, total=entriesForVoyage.length;
-  let h=`<div class="contextCard"><div class="stitle" style="color:var(--gold);font-weight:700">${clusterDisplayName(S.seed)}</div><div class="small"><b style="color:var(--cyan)">${ctx.place}</b> · about ${ctx.distanceLy.toLocaleString()} light-years from the Solar System</div><p class="small" style="margin-top:5px">${ctx.summary}</p><p class="small"><span class="fictionTag">Fictional chart</span> The destination and systems are generated. <span class="truthTag">Real context</span> The Milky Way setting and astronomy notes describe real concepts.</p></div>`;
+  let h=`<div class="contextCard"><div class="stitle" style="color:var(--gold);font-weight:700">${clusterDisplayName(S.seed)}</div><div class="small"><b style="color:var(--cyan)">${ctx.place}</b> · about ${ctx.distanceLy.toLocaleString()} light-years from the Solar System</div><div class="profilePill">${W.profile.name}</div><p class="small" style="margin-top:5px">${W.profile.blurb}</p><p class="small">${ctx.summary}</p><p class="small"><span class="fictionTag">Fictional chart</span> The destination, profile and systems are generated. <span class="truthTag">Real context</span> The Milky Way setting and astronomy notes describe real concepts.</p></div>`;
   h+=`<h3>Captain's Atlas</h3><div class="small">Unlocked by visiting astronomical features and interpreting optional observations.</div><div class="atlasProgress"><i style="width:${100*seen/total}%"></i></div><div class="small" style="margin-bottom:8px">${seen}/${total} entries · ${S.surveysDone instanceof Set?S.surveysDone.size:0} survey observations logged</div>`;
   const cats=[...new Set(entriesForVoyage.map(x=>x.cat))];
   for(const cat of cats){
@@ -1532,7 +1883,7 @@ function deepScan(){
   if(S.fuel<1) return;
   S.fuel-=1;
   scanAround(S.pos,S.scanRange+2);
-  unlockAtlas(["galactic_scale","parallax"],false);
+  unlockAtlas([...initialAtlasForContext(W.context),"galactic_scale","parallax"],false);
   advanceDays(1);
   log("Deep scan complete — the charts grow.");
   sfx("scan");
@@ -1540,12 +1891,14 @@ function deepScan(){
 }
 function waitDay(){ advanceDays(1); log("You hold position and watch the stars turn."); refreshAll(); }
 function scoopFuel(){
-  const c=curCell();
-  if(!c.gasGiant||S.fuel>=S.fuelMax) return;
+  const c=curCell(),k=hk(c.q,c.r);
+  if(!(S.gasScooped instanceof Set)) S.gasScooped=new Set(S.gasScooped||[]);
+  if(!c.gasGiant||S.fuel>=S.fuelMax||S.gasScooped.has(k)) return;
+  S.gasScooped.add(k);
   S.fuel=Math.min(S.fuelMax,S.fuel+5);
-  unlockAtlas(["gas_giants"],false);
+  unlockAtlas([...initialAtlasForContext(W.context),"gas_giants"],false);
   advanceDays(1);
-  log(`Skimmed the clouds of ${c.name}'s gas giant. +5 fuel.`);
+  log(`Skimmed the clouds of ${c.name}'s gas giant. +5 fuel; the collectors are spent here for this voyage.`);
   sfx("good");
   refreshAll();
 }
@@ -1574,10 +1927,11 @@ function exploreRuin(){
   if(c.type!=="ruin"||S.ruinsDone.has(hk(c.q,c.r))) return;
   advanceDays(1);
   if(S.over&&!S.freePlay){ refreshAll(); return; }
-  S.ruinsDone.add(hk(c.q,c.r));
   if(c.keyIndex!==undefined && !S.keys[c.keyIndex]){
     keyPuzzle(c);
+    return;
   }else{
+    S.ruinsDone.add(hk(c.q,c.r));
     /* a clue, and sometimes a small treasure */
     const clue=giveClue("ruin");
     let extra="";
@@ -1591,10 +1945,11 @@ function exploreRuin(){
     log(`Explored the ${c.ruinName}.${clue?" A carving speaks: <i>"+clue.text+"</i>":""}`);
     modalHtml(`
       <h2>🏛 ${c.ruinName}</h2>
-      <p class="flavor">${dpick([
-        "Your bootsteps echo down halls that remember older light. Star-charts cover every wall, etched by hands with too many fingers.",
-        "Murals of comets and long-tailed ships wind along the corridor. At its end, a single carving still glows.",
-        "The ruin hums very softly, like a song remembered halfway. Dust rises and settles as if breathing.",
+      <p class="flavor">The ${c.ruinMood||"silent"} complex opens around you: ${c.ruinMotif||"old star-charts cover its walls"}. ${dpick([
+        "Your bootsteps return from passages too long to fit the exterior.",
+        "A patient mechanism wakes somewhere below and then decides you are not a threat.",
+        "Dust rises in your lamp-beam and settles in precise concentric rings.",
+        "One corridor still carries a line of cold blue guide-lights, each one dimmer than the last."
       ])}</p>
       ${clue?`<div class="clue" style="margin:10px 0">${clue.text}</div>`:"<p>The carvings here have faded beyond reading — but the ruin feels peaceful.</p>"}
       ${extra}
@@ -1613,7 +1968,7 @@ function keyPuzzle(c){
     <p class="flavor">Deep in the ruin, a vault door of black glass. Behind it, unmistakable: the glow of a <b>Star Key</b>.</p>
     <p>${pz.q}</p>
     <div class="mrow">${pz.a.map((a,ix)=>`<button class="mbtn2" onclick="keyAnswer(${i},${ix},${pz.correct},${pid})">${a}</button>`).join("")}</div>
-    <p class="small" style="margin-top:10px">A wrong answer costs one day while the patient old vault resets. It will not take the Key away.</p>`);
+    <p class="small" style="margin-top:10px">A wrong answer costs one day while the patient old vault resets. It will not take the Key away.</p>`,true);
 }
 function keyAnswer(i,ix,correct,pid){
   const right=ix===correct;
@@ -1621,10 +1976,13 @@ function keyAnswer(i,ix,correct,pid){
     advanceDays(1);
     if(S.over&&!S.freePlay){ refreshAll(); return; }
   }
+  const keyRuin=W.keyRuins[i]; if(keyRuin) S.ruinsDone.add(hk(keyRuin.q,keyRuin.r));
   S.keys[i]=true;
   const bonus=right?dri(60,120):0;
   if(bonus) S.credits+=bonus;
   const got=S.keys.filter(Boolean).length;
+  const unseenPort=W.stars.filter(st=>st.hasStation&&!isScanned(st)).sort((a,b)=>hexDist(a,S.pos)-hexDist(b,S.pos))[0];
+  if(unseenPort){scanAround(unseenPort,1);log(`The Key resonates with a Guild relay; a distant port at <b>${unseenPort.name}</b> resolves on your chart.`);}
   if(got>=3&&!S.gateRevealed){
     S.gateRevealed=true;
     S.scanned.add(hk(W.gate.q,W.gate.r));
@@ -1684,7 +2042,7 @@ function openStation(tab){
   if(c.type!=="star"||!c.hasStation) return;
   stationTab=tab||stationTab||"market";
   const tabs=[["market","🛒 Market"],["yard","🔧 Shipyard"],["lounge","🍹 Lounge"]];
-  let h=`<h2>🛰 ${c.name} Station</h2><div class="msub">Fuel ◈${c.fuelPrice}/unit · Day ${S.day}</div>
+  let h=`<h2>🛰 ${c.stationName||c.name+" Station"}</h2><div class="msub">${c.stationRole||"trade station"} at ${c.name} · Fuel ◈${c.fuelPrice}/unit · Day ${S.day}</div>
   <div class="mrow" style="margin:0 0 12px">${tabs.map(t=>`<button class="mbtn2 ${stationTab===t[0]?"primary":""}" style="min-width:90px;flex:1" onclick="openStation('${t[0]}')">${t[1]}</button>`).join("")}</div>`;
   if(stationTab==="market") h+=marketHtml(c);
   else if(stationTab==="yard") h+=yardHtml(c);
@@ -1693,21 +2051,21 @@ function openStation(tab){
   modalHtml(h);
 }
 function marketHtml(c){
-  let h=`<table class="mkt"><tr><th>Good</th><th>Price</th><th>Held</th><th style="text-align:right">Trade</th></tr>`;
+  let h=`<table class="mkt"><tr><th>Good</th><th>Buy / sell</th><th>Held</th><th style="text-align:right">Trade</th></tr>`;
   for(const g of GOODS){
-    const pr=priceOf(c,g.id);
+    const buyPr=buyPriceOf(c,g.id),sellPr=sellPriceOf(c,g.id);
     const cls=c.produces.includes(g.id)?"lo":c.wants.includes(g.id)?"hi":"";
     const held=S.cargo[g.id]||0;
-    const canBuy=S.credits>=pr&&cargoCount()<S.cargoMax;
+    const canBuy=S.credits>=buyPr&&cargoCount()<S.cargoMax;
     h+=`<tr><td>${g.icon} ${g.name}</td>
-      <td class="pr ${cls}">◈${pr}${cls==="lo"?" ▼":cls==="hi"?" ▲":""}</td>
+      <td class="pr ${cls}">◈${buyPr} / ◈${sellPr}${cls==="lo"?" ▼":cls==="hi"?" ▲":""}</td>
       <td>${held||"—"}</td>
       <td style="text-align:right">
         <button class="tbtn" ${canBuy?"":"disabled"} onclick="trade('${g.id}',1)">Buy</button>
         <button class="tbtn" ${held?"":"disabled"} onclick="trade('${g.id}',-1)">Sell</button>
       </td></tr>`;
   }
-  h+=`</table><div class="small">▼ produced here (cheap) · ▲ wanted here (pays well). Prices drift every few days.</div>`;
+  h+=`</table><div class="small">Prices show buy / sell. ▼ produced here (cheap) · ▲ wanted here (pays well). A small station spread prevents costless round trips; prices drift every few days.</div>`;
   /* refuel */
   const need=S.fuelMax-S.fuel;
   const cost1=c.fuelPrice, costAll=need*c.fuelPrice;
@@ -1721,10 +2079,11 @@ function marketHtml(c){
 }
 function trade(gid,dir){
   const c=curCell();
-  const pr=priceOf(c,gid);
+  const pr=dir>0?buyPriceOf(c,gid):sellPriceOf(c,gid);
   if(dir>0){
     if(S.credits<pr||cargoCount()>=S.cargoMax) return;
     S.credits-=pr; S.cargo[gid]=(S.cargo[gid]||0)+1;
+    if(S.mission&&S.mission.star===c.name&&(S.cargo[S.mission.good]||0)>=S.mission.qty) checkMissionDelivery(c);
   }else{
     if(!(S.cargo[gid]>0)) return;
     S.credits+=pr; S.cargo[gid]--;
@@ -1763,7 +2122,7 @@ function yardHtml(c){
     f(){U.engine=1; S.speed=2;}});
   if(!U.mining) items.push({k:"mining",n:"Mining rig",d:"Harvest ore & crystals in asteroid fields",p:240,
     f(){U.mining=true;}});
-  if(!U.hull) items.push({k:"hull",n:"Reinforced hull",d:`Max hull 10 → 16, fully patched up`,p:200,
+  if(!U.hull) items.push({k:"hull",n:"Reinforced hull",d:`Max hull 10 → 16, fully patched up · more buffer before critical-hull fuel penalties`,p:200,
     f(){U.hull=1; S.hullMax=16; S.hull=16;}});
   let h="";
   if(!items.length) h+=`<p>Your ship carries every upgrade this yard can fit. She's a beauty, captain.</p>`;
@@ -1785,7 +2144,7 @@ function buyUpgrade(k){
   openStation("yard"); refreshAll();
 }
 function loungeHtml(c){
-  let h=`<p class="flavor">${dpick([
+  let h=`<div class="small" style="margin-bottom:7px"><span class="profilePill">${c.stationRole||"station"}</span></div><p class="flavor">${dpick([
     "The lounge smells of coffee and engine oil. Travellers from six systems swap tall tales under a slowly turning mobile of the cluster.",
     "A band of moth-like aliens plays something between jazz and weather. Everyone hums along wrong, happily.",
     "Star-charts paper the walls, annotated in a dozen alphabets and at least one kind of glitter.",
@@ -1825,7 +2184,13 @@ function takeMission(){
    ============================================================ */
 function fireEvent(isAnomaly,forcedIndex=null){
   const list=isAnomaly?ANOMALY_EVENTS:SPACE_EVENTS;
-  const idx=forcedIndex===null?Math.floor(drand()*list.length):forcedIndex;
+  let idx=forcedIndex;
+  if(idx===null){
+    const recent=new Set((S.seenEvents||[]).slice(-5));
+    let eligible=list.map((ev,i)=>({ev,i})).filter(x=>(!x.ev.contexts||x.ev.contexts.includes(W.context.id))&&(!x.ev.terrain||x.ev.terrain.includes(curCell().type)));
+    let fresh=eligible.filter(x=>!recent.has(x.ev.id||x.ev.title)); if(fresh.length)eligible=fresh;
+    idx=eligible.length?dpick(eligible).i:Math.floor(drand()*list.length);
+  }
   const ev=list[idx];
   currentEvent=ev;
   S.pendingEvent={isAnomaly:!!isAnomaly,index:idx};
@@ -1850,13 +2215,18 @@ function eventChoice(i){
   const title=currentEvent.title;
   const ch=currentEvent.choices[i];
   const out=ch.effect();
-  log(out.replace(/<[^>]+>/g,m=>m));
+  if(!S.seenEvents)S.seenEvents=[]; const eid=currentEvent.id||currentEvent.title;S.seenEvents.push(eid);if(S.seenEvents.length>18)S.seenEvents.shift();
+  log(out);
   currentEvent=null;
   S.pendingEvent=null;
   if(S.over&&!S.freePlay){ refreshAll(); return; }
   modalHtml(`<h2>${title}</h2><p class="flavor">${out}</p>
-    <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Continue</button></div>`);
+    <div class="mrow"><button class="mbtn2 primary" onclick="continueAfterEvent()">Continue</button></div>`,!!S.pendingArrival);
   refreshAll();
+}
+function continueAfterEvent(){
+  closeModal();
+  if(S&&S.pendingArrival){S.pendingArrival=false;onArrive();refreshAll();}
 }
 const gainCargo=(gid,n)=>{ const room=S.cargoMax-cargoCount(); const g=Math.min(n,room); if(g>0) S.cargo[gid]=(S.cargo[gid]||0)+g; return g; };
 const SPACE_EVENTS=[
@@ -1909,11 +2279,31 @@ const SPACE_EVENTS=[
      {label:()=>"Sync your charts to it", effect(){ scanAround(S.pos,S.scanRange+2); return "The beacon shares everything it has watched over the centuries. Your chart drinks it in."; }},
      {label:()=>"Wind it up (small repair)", effect(){ if(dchance(.65)){const c=dri(30,70);S.credits+=c; return `You oil its bearings and true its mirror. The Beacon-Keepers' Trust transmits an honorarium: <b>+◈${c}</b>.`;} return "You tighten what you can. It shines a little straighter — payment enough, somehow."; }},
    ]},
+  {id:"dust-shadow",contexts:["sagittarius","scutum","perseus"],terrain:["nebula"],title:"🌫 Dust Shadow",text:()=>"The visible sky thins to almost nothing inside the dust. Your ordinary camera sees darkness; the infrared channel shows a crowded field behind it.",
+   choices:[
+    {label:()=>"Map in infrared",effect(){scanAround(S.pos,S.scanRange+3);unlockAtlas(["infrared"],true);return "The infrared pass reaches through the fictional dust lane and gives your chart a wider, cleaner solution.";}},
+    {label:()=>"Follow the clearest visible lane",effect(){const f=Math.min(S.fuelMax-S.fuel,1);S.fuel+=f;return `You take the conservative route and save a little reaction mass (<b>+${f} fuel</b>).`;}}]},
+  {id:"halo-parallax",contexts:["halo","outer"],title:"📐 Long Baseline",text:()=>"A Guild astrometry buoy asks you to hold a precise line against a field of very distant reference stars. The work is slow, quiet and exact.",
+   choices:[
+    {label:()=>"Take the measurement (1 day)",effect(){advanceDays(1);const c=dri(45,90);S.credits+=c;unlockAtlas(["parallax"],true);return `Your parallax solution passes inspection. The Guild pays <b>◈${c}</b> and adds your baseline to its catalogue.`;}},
+    {label:()=>"Decline and keep moving",effect(){return "You leave the buoy blinking patiently into the high dark.";}}]},
+  {id:"inner-traffic",contexts:["scutum"],title:"🚦 Crowded Crossing",text:()=>"Three survey ships, a freight tug and an overconfident courier all request the same navigation lane at once.",
+   choices:[
+    {label:()=>"Coordinate the traffic",effect(){const c=dri(25,65);S.credits+=c;return `You spend ten careful minutes untangling everyone's vectors. The grateful traffic office transfers <b>◈${c}</b>.`; }},
+    {label:()=>"Take the long arc (−1 fuel)",cond:()=>S.fuel>=1,effect(){S.fuel-=1;return "You swing wide, trading a little fuel for a beautifully empty sky.";}}]},
+  {id:"local-calibration",contexts:["orion"],title:"🔭 Calibration Night",text:()=>"A small university survey asks passing captains to compare spectra from the same reference stars. Their students are watching the submissions arrive live.",
+   choices:[
+    {label:()=>"Send a spectrum",effect(){const c=dri(25,55);S.credits+=c;unlockAtlas(["spectroscopy"],true);return `Your spectrum joins the class dataset. The university pays a modest <b>◈${c}</b> observing stipend.`;}},
+    {label:()=>"Wave at the classroom feed",effect(){return "Thirty tiny faces wave back from the comms panel. No strategic advantage whatsoever. Worth it.";}}]},
+  {id:"asteroid-whisper",terrain:["asteroid"],title:"☄ Micrometeoroid Weather",text:()=>"Your forward radar fills with tiny returns: a loose stream of pebble-sized debris crossing the route.",
+   choices:[
+    {label:()=>"Thread it slowly",effect(){if(dchance(.72))return "You ease through without a scratch, watching pinprick flashes skate across the shields.";S.hull=Math.max(1,S.hull-1);return "One grain arrives faster than expected (<b>−1 hull</b>), a useful reminder that small things can carry large kinetic energies.";}},
+    {label:()=>"Detour (−1 fuel)",cond:()=>S.fuel>=1,effect(){S.fuel-=1;return "A small burn carries you around the stream. The route is uneventful, exactly as intended.";}}]},
 ];
 const ANOMALY_EVENTS=[
   {title:"🌀 A Fold in Space", text:()=>"Here the stars bend, like the sky seen through a glass of water. Your instruments giggle. This is the anomaly your scanners flagged.",
    choices:[
-     {label:()=>"Ride the fold", effect(){ const opts=[...W.cells.values()].filter(c=>hexDist(c,S.pos)>=3&&hexDist(c,S.pos)<=5&&c.type!=="gate"); const d=dpick(opts); S.pos={q:d.q,r:d.r}; scanAround(S.pos,S.scanRange); visit(S.pos); centerOnShip(true); return "Space folds — a hiccup, a flash — and you are somewhere <b>else</b>, instantly. The chart scrambles to keep up."; }},
+     {label:()=>"Ride the fold", effect(){ const opts=[...W.cells.values()].filter(c=>hexDist(c,S.pos)>=3&&hexDist(c,S.pos)<=5&&c.type!=="gate"); if(!opts.length)return "The fold shivers but finds nowhere safe to put you. You remain exactly where you are."; const d=dpick(opts); S.pos={q:d.q,r:d.r}; scanAround(S.pos,S.scanRange); visit(S.pos); centerOnShip(true); S.pendingArrival=true; return "Space folds — a hiccup, a flash — and you are somewhere <b>else</b>, instantly. The chart scrambles to keep up."; }},
      {label:()=>"Study it from the edge", effect(){ scanAround(S.pos,S.scanRange+3); const c=dri(20,60); S.credits+=c; return `Your careful measurements will make three astronomers very happy. <b>+◈${c}</b> in data bounties, and wide new charts.`; }},
    ]},
   {title:"💠 Crystal Garden", text:()=>"An unfinished world: shards of crystal the size of cathedrals, growing slowly in the light of distant suns.",
@@ -1937,6 +2327,26 @@ const ANOMALY_EVENTS=[
      {label:()=>"Dip through the fast side", effect(){ if(S.day>2){S.day=Math.max(1,S.day-2); return "You surf the eddy's edge and slip out <b>two days younger</b> than you went in. Your log refuses to discuss it.";} return "The eddy burps politely. Nothing happens. Perhaps you were early."; }},
      {label:()=>"Anchor and study it", effect(){ const c=dri(50,120); S.credits+=c; return `Your readings on the eddy are the finest ever taken. The Temporal Society pays <b>◈${c}</b> and asks you, please, never to do that again.`; }},
    ]},
+  {id:"radio-choir",title:"📻 The Radio Choir",text:()=>"Every receiver aboard fills with a chord made of narrow radio tones. It repeats exactly every forty-three seconds, too neat to be natural and too beautiful to ignore.",
+   choices:[
+    {label:()=>"Record the whole cycle",effect(){const c=dri(35,85);S.credits+=c;return `You send the recording to the Guild's xenolinguists with a large <i>UNKNOWN ORIGIN</i> label. Data bounty: <b>◈${c}</b>.`; }},
+    {label:()=>"Answer with your engine harmonics",effect(){const clue=giveClue("choir");return clue?`Your reply returns altered into a pattern that your computer renders as a sentence: <i>${clue.text}</i>`:"The choir answers with one impossible major chord and then goes silent. You are fairly sure that counted as a conversation.";}}]},
+  {id:"gravity-orchard",title:"🍎 Gravity Orchard",text:()=>"Hundreds of black seeds hang motionless in a loose sphere. Small objects dropped near them curve away as though the geometry has opinions.",
+   choices:[
+    {label:()=>"Map the curves",effect(){scanAround(S.pos,S.scanRange+2);const c=dri(30,70);S.credits+=c;return `You map the fictional distortion rather than trying to explain it. The Guild pays <b>◈${c}</b> for the navigation warning and expands your chart.`;}},
+    {label:()=>"Take one seed",effect(){if(dchance(.55)){const got=gainCargo("cry",1);return got?"The seed becomes an inert blue crystal in the hold: <b>+1 Crystal</b>.":"The seed becomes an inert blue crystal, but your hold is full; you put it back.";}S.hull=Math.max(1,S.hull-1);return "The seed refuses the cargo clamp and dents the outer plate on departure (<b>−1 hull</b>). Curiosity files a small expense claim.";}}]},
+  {id:"lost-observatory",title:"🔭 The Lost Observatory",text:()=>"A tiny unmanned telescope rotates here on cold bearings. Its dish is pointed not at a star, but at a patch of apparently empty sky.",
+   choices:[
+    {label:()=>"Download its archive",effect(){unlockAtlas(["spectroscopy","infrared"],true);scanAround(S.pos,S.scanRange+2);return "The archive is mostly calibration data, but its patient observations sharpen both your Atlas and your local chart.";}},
+    {label:()=>"Repair its attitude control",effect(){advanceDays(1);const c=dri(60,110);S.credits+=c;return `A day of careful work puts the telescope back on programme. Its owners, delighted that anyone found it, send <b>◈${c}</b>.`;}}]},
+  {id:"mirror-comet",title:"☄ The Mirror Comet",text:()=>"A small comet approaches with a surface so reflective that it seems cut from a moving piece of the starfield. Your ranging laser comes back in a dozen ghost echoes.",
+   choices:[
+    {label:()=>"Shadow it for a while",effect(){const f=Math.min(S.fuelMax-S.fuel,3);S.fuel+=f;return `The comet's path leads through a calm pocket where your collectors work efficiently (<b>+${f} fuel</b>). The mirror surface remains unexplained.`;}},
+    {label:()=>"Take high-resolution images",effect(){const c=dri(35,75);S.credits+=c;return `The Guild image desk pays <b>◈${c}</b>. Someone immediately uses the best frame as a poster.`;}}]},
+  {id:"ink-sea",title:"⬛ The Ink Sea",text:()=>"A perfectly dark sheet crosses the stars ahead. It has no thickness your instruments can measure; reflected light simply stops at its edge.",
+   choices:[
+    {label:()=>"Skim the boundary",effect(){const clue=giveClue("ink-sea");return clue?`Along the boundary, the navigation computer extracts a repeating coordinate rhyme: <i>${clue.text}</i>`:"You trace the edge for an hour. It remains black, flat and completely unwilling to explain itself.";}},
+    {label:()=>"Back away carefully",effect(){return "You mark the region with the professional survey term <i>absolutely not</i> and continue your charter.";}}]},
 ];
 
 /* ============================================================
@@ -1968,7 +2378,7 @@ function fallbackCopy(txt){
 }
 
 /* ---------- sound: tiny WebAudio synth ---------- */
-let AC=null, muted=false;
+let AC=null, muted=false, ambientNodes=null;
 function ac(){ if(!AC){ try{AC=new (window.AudioContext||window.webkitAudioContext)();}catch(e){} } return AC; }
 function tone(freq,dur,type,vol,when){
   const a=ac(); if(!a||muted) return;
@@ -1979,6 +2389,14 @@ function tone(freq,dur,type,vol,when){
   g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+(when||0)+dur);
   o.connect(g); g.connect(a.destination);
   o.start(a.currentTime+(when||0)); o.stop(a.currentTime+(when||0)+dur+.05);
+}
+function stopAmbient(){if(!ambientNodes)return;try{ambientNodes.oscs.forEach(o=>o.stop());ambientNodes.g.disconnect();}catch(e){}ambientNodes=null;}
+function startAmbient(){
+  if(muted||!S||ambientNodes)return;const a=ac();if(!a)return;
+  const bases={orion:55,perseus:62,sagittarius:49,scutum:46,outer:52,halo:41};const base=bases[W.context.id]||55;
+  const g=a.createGain();g.gain.value=.012;g.connect(a.destination);const oscs=[];
+  [1,1.5,2.005].forEach((m,i)=>{const o=a.createOscillator(),og=a.createGain();o.type=i===0?"sine":"triangle";o.frequency.value=base*m;og.gain.value=i===0?.75:.18;o.connect(og);og.connect(g);o.start();oscs.push(o);});
+  const l=a.createOscillator(),lg=a.createGain();l.frequency.value=.07;lg.gain.value=.004;l.connect(lg);lg.connect(g.gain);l.start();oscs.push(l);ambientNodes={oscs,g};
 }
 function sfx(kind){
   if(muted) return;
@@ -1991,17 +2409,19 @@ function sfx(kind){
     case "bad": tone(220,.18,"square",.06); tone(165,.22,"square",.05,.12); break;
     case "event": tone(392,.12,"sine",.08); tone(494,.12,"sine",.07,.1); tone(587,.16,"sine",.07,.2); break;
     case "fanfare": [523,659,784,1047].forEach((f,i)=>tone(f,.22,"triangle",.09,i*.11)); break;
+    case "discover": tone(330,.10,"sine",.045);tone(495,.16,"triangle",.04,.08);tone(660,.22,"sine",.035,.15);break;
   }
 }
 $("btnMute").addEventListener("click",()=>{
   muted=!muted;
   $("btnMute").textContent=muted?"🔇":"🔊";
+  if(muted)stopAmbient();else startAmbient();
 });
 
 /* ---------- save / load + automatic local resume ---------- */
 const AUTO_KEY="starweaver.autosave.v2";
 function saveCode(){
-  const state={...S, dramaCalls:rdCalls, visited:[...S.visited], scanned:[...S.scanned], ruinsDone:[...S.ruinsDone], anomsDone:[...S.anomsDone], atlasSeen:[...(S.atlasSeen||[])], surveysDone:[...(S.surveysDone||[])]};
+  const state={...S, dramaCalls:rdCalls, visited:[...S.visited], scanned:[...S.scanned], ruinsDone:[...S.ruinsDone], anomsDone:[...S.anomsDone], gasScooped:[...(S.gasScooped||[])], atlasSeen:[...(S.atlasSeen||[])], surveysDone:[...(S.surveysDone||[])], discoveries:[...(S.discoveries||[])]};
   return "SW2."+btoa(unescape(encodeURIComponent(JSON.stringify(state))));
 }
 function autoSave(){
@@ -2020,7 +2440,8 @@ function loadCode(code){
     const prefix=code.startsWith("SW2.")?"SW2.":code.startsWith("SW1.")?"SW1.":null;
     if(!prefix) throw 0;
     const state=JSON.parse(decodeURIComponent(escape(atob(code.slice(prefix.length)))));
-    W=genGalaxy(state.seed);
+    const worldVersion=Number(state.worldVersion)||2;
+    W=worldVersion>=3?genGalaxy(state.seed):decorateLegacyWorld(genGalaxyLegacy(state.seed));
     RD=mulberry32(hashStr(state.seed+"::drama")^0x9e3779b9);
     rdCalls=0;
     const targetCalls=Number.isFinite(state.dramaCalls)?state.dramaCalls:0;
@@ -2028,14 +2449,18 @@ function loadCode(code){
     rdCalls=targetCalls;
     S=state;
     S.visited=new Set(state.visited||[]); S.scanned=new Set(state.scanned||[]);
-    S.ruinsDone=new Set(state.ruinsDone||[]); S.anomsDone=new Set(state.anomsDone||[]);
-    S.atlasSeen=new Set(state.atlasSeen||initialAtlasForContext(W.context)); S.surveysDone=new Set(state.surveysDone||[]);
+    S.ruinsDone=new Set(state.ruinsDone||[]); S.anomsDone=new Set(state.anomsDone||[]); S.gasScooped=new Set(state.gasScooped||[]);
+    S.atlasSeen=new Set(state.atlasSeen||[]); S.surveysDone=new Set(state.surveysDone||[]);
+    S.discoveries=new Set(state.discoveries||state.visited||[]); if(!Array.isArray(S.seenEvents))S.seenEvents=[];
     if(!S.ruinMarks) S.ruinMarks={};
     if(S.pendingEvent===undefined) S.pendingEvent=null;
+    if(S.pendingArrival===undefined) S.pendingArrival=false;
     centerOnShip(false);
     refreshAll();
     closeModal();
+    stopAmbient();startAmbient();
     if(S.pendingEvent) restorePendingEvent();
+    else if(S.pendingArrival){S.pendingArrival=false;onArrive();refreshAll();}
     toast(prefix==="SW2."?"Voyage restored. Welcome back, captain.":"Older voyage restored. Future chance events may differ from the original run.");
     return true;
   }catch(e){ toast("That save code didn't parse — check it and try again."); return false; }
@@ -2069,11 +2494,12 @@ function clusterDisplayName(seed){
   return "The "+first[Math.floor(rr()*first.length)]+" "+last[Math.floor(rr()*last.length)];
 }
 function updateContextPreview(seed){
-  const ctx=galacticContext(seed);
-  const a=$("sectorPreview"),b=$("distancePreview"),c=$("sectorSummaryPreview");
+  const ctx=galacticContext(seed),profile=clusterProfile(seed,ctx);
+  const a=$("sectorPreview"),b=$("distancePreview"),c=$("sectorSummaryPreview"),d=$("profilePreview");
   if(a) a.textContent=ctx.place;
   if(b) b.textContent=`About ${ctx.distanceLy.toLocaleString()} light-years from the Solar System · ${ctx.focus}`;
   if(c) c.textContent=ctx.summary;
+  if(d) d.textContent=profile.name+" — "+profile.blurb;
 }
 function rerollCluster(){
   const seed=randomSeed();
@@ -2113,6 +2539,7 @@ function showNewGame(first){
         <b id="sectorPreview">${galacticContext(seed).place}</b>
         <div class="clusterSub" id="distancePreview">About ${galacticContext(seed).distanceLy.toLocaleString()} light-years from the Solar System · ${galacticContext(seed).focus}</div>
         <div class="clusterSub" id="sectorSummaryPreview" style="margin-top:5px">${galacticContext(seed).summary}</div>
+        <div class="clusterSub" id="profilePreview" style="margin-top:7px;color:var(--gold)">${clusterProfile(seed,galacticContext(seed)).name} — ${clusterProfile(seed,galacticContext(seed)).blurb}</div>
         <div class="clusterSub" style="margin-top:6px"><span class="fictionTag">Fictional chart</span> The generated systems are not real catalogued stars. <span class="truthTag">Real astronomy</span> Field Notes explain the actual Galactic context and phenomena.</div>
       </div>
       <input id="seedInput" type="hidden" value="${seed}">
@@ -2149,19 +2576,19 @@ function showHelp(first){
 
     <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
 
-    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Orion Spur or Galactic halo. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Orion Spur or Galactic halo. Those contexts now also bias the generated chart: halo voyages tend to be quieter and cool-star heavy; gas-rich arm voyages tend to contain more nebular terrain and luminous stars. These are procedural game biases, not a catalogue of real systems. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
 
     <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
     <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Click the same hex <b>again</b> to fly there. Nebula hexes cost 2 fuel instead of 1.</div></div>
-    <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or—most importantly—<b>true clues</b> about the Key ruins.</div></div>
+    <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or—most importantly—<b>clues</b> about the Key ruins.</div></div>
     <div class="howstep"><span class="n">4</span><div><b>Use clues instead of guessing.</b><br>Open the <b>Clues</b> tab. Combine clues such as direction, distance from the centre, nearby star colour and terrain. Use ★ <b>Suspect</b> and × <b>Ruled out</b> notes on charted ruins.</div></div>
-    <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or scoop it free at systems with gas giants. If you run dry in deep space, a rescue tug will tow you—but it costs credits and days.</div></div>
-    <div class="howstep"><span class="n">6</span><div><b>Stations make the voyage easier.</b><br><b>Market:</b> buy ▼ goods cheaply and sell them where they show ▲. <b>Shipyard:</b> improve tank, hold, scanner, hull and engine. <b>Lounge:</b> buy true rumours or take delivery contracts.</div></div>
+    <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or take one 5-fuel scoop from each gas-giant system you discover. If you cannot make any charted neighbouring jump, a rescue tug will tow you—but it costs credits and days. Hull 2 or below is critical and adds 1 fuel to every jump until repaired.</div></div>
+    <div class="howstep"><span class="n">6</span><div><b>Stations make the voyage easier.</b><br><b>Market:</b> buy ▼ goods cheaply and sell them where they show ▲. <b>Shipyard:</b> improve tank, hold, scanner, hull and engine. <b>Lounge:</b> buy rumours about Key locations or take delivery contracts.</div></div>
     <div class="howstep"><span class="n">7</span><div><b>Learn from what you find — optionally.</b><br>Each location has short <b>Field Notes</b> distinguishing real astronomy from game fiction. The <b>Atlas</b> fills as you explore. Some locations offer an optional observation: interpret it correctly for a small research grant and extra chart data.</div></div>
     <div class="howstep"><span class="n">8</span><div><b>Open the Gate.</b><br>Recover all 3 Keys and the Celestial Gate is revealed automatically. Fly to it to finish the charter and receive your score.</div></div>
 
     <h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:14px 0 6px">FIRST-VOYAGE TIPS</h3>
-    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.<br>• The astronomy is <b>not compulsory coursework</b>: you can ignore observations and still complete the Charter.</div>
+    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.<br>• The astronomy is <b>not compulsory coursework</b>: you can ignore observations and still complete the Charter.<br>• Keyboard: <b>1–5</b> change sidebar tabs, <b>S</b> deep-scans, <b>H</b> centres the ship, <b>M</b> toggles sound, arrow keys pan, and +/− zoom. The Here tab also has a text list of charted destinations.</div>
 
     <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">${first?"Cast off!":"Back to the stars"}</button></div>
   `);
@@ -2172,7 +2599,16 @@ $("btnZin").addEventListener("click",()=>{cam.zoom=Math.min(2.6,cam.zoom*1.2);})
 $("btnZout").addEventListener("click",()=>{cam.zoom=Math.max(.45,cam.zoom/1.2);});
 $("btnHome").addEventListener("click",()=>centerOnShip(true));
 window.addEventListener("keydown",e=>{
-  if(e.key==="Escape"&&!modalLocked) closeModal();
+  const tag=(e.target&&e.target.tagName||"").toLowerCase(); if(tag==="input"||tag==="textarea")return;
+  if(e.key==="Escape"&&!modalLocked){closeModal();cancelRoute();return;}
+  if(shade.classList.contains("on"))return;
+  if(e.key==="+"||e.key==="="){cam.zoom=Math.min(2.6,cam.zoom*1.15);e.preventDefault();}
+  else if(e.key==="-"){cam.zoom=Math.max(.45,cam.zoom/1.15);e.preventDefault();}
+  else if(e.key.toLowerCase()==="h")centerOnShip(true);
+  else if(e.key.toLowerCase()==="m")$("btnMute").click();
+  else if(e.key.toLowerCase()==="s"&&S&&S.fuel>=1)deepScan();
+  else if(e.key>="1"&&e.key<="5"){const tabs=[...document.querySelectorAll("#tabs .tab")];const t=tabs[Number(e.key)-1];if(t)t.click();}
+  else if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)){const d=60/cam.zoom;if(e.key==="ArrowLeft")cam.x-=d;if(e.key==="ArrowRight")cam.x+=d;if(e.key==="ArrowUp")cam.y-=d;if(e.key==="ArrowDown")cam.y+=d;camTarget=null;e.preventDefault();}
 });
 document.body.addEventListener("pointerdown",()=>{ const a=ac(); if(a&&a.state==="suspended") a.resume(); },{once:true});
 window.addEventListener("beforeunload",autoSave);
@@ -2183,7 +2619,7 @@ requestAnimationFrame(draw);
 showNewGame(true);
 
 /* test hooks (harmless in play) */
-window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPath, travelTo, saveCode, loadCode, loadAutoSave, cellAt, openStation, exploreRuin, renderAtlas, surveyObservation, galacticContext};
+window.__sw={get W(){return W;}, get S(){return S;}, newGame, startFrom, findPath, travelTo, saveCode, loadCode, loadAutoSave, cellAt, openStation, exploreRuin, renderAtlas, surveyObservation, galacticContext, clusterProfile, chartedDestinationsHtml, genGalaxyLegacy};
 
 </script>
 
