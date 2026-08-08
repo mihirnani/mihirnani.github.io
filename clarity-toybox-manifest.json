@@ -1,0 +1,31 @@
+{
+  "id": "/clarity-toybox.html",
+  "name": "Toybox",
+  "short_name": "Toybox",
+  "description": "Eight calm, local-first mini-games for memory, pattern recognition, geometry, number sense, colour and recursive forms.",
+  "lang": "en",
+  "start_url": "/clarity-toybox.html",
+  "scope": "/clarity-toybox.html",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f5f1e8",
+  "theme_color": "#4e6b50",
+  "categories": [
+    "games",
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/clarity-toybox-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/clarity-toybox-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
