@@ -40,6 +40,8 @@
       --italian: #21845b;
       --french: #1f5f9f;
       --latin: #7b1f2d;
+      --greek: #0f5e7f;
+      --sanskrit: #a3430a;
       --software: #4f46e5;
     }
 
@@ -60,6 +62,8 @@
       --italian: #82c7a4;
       --french: #85b9e7;
       --latin: #e48b97;
+      --greek: #79c0dd;
+      --sanskrit: #f09d61;
       --software: #a5a0f7;
     }
 
@@ -201,6 +205,10 @@
     .project--french:focus-visible h3 { color: var(--french); }
     .project--latin:hover h3,
     .project--latin:focus-visible h3 { color: var(--latin); }
+    .project--greek:hover h3,
+    .project--greek:focus-visible h3 { color: var(--greek); }
+    .project--sanskrit:hover h3,
+    .project--sanskrit:focus-visible h3 { color: var(--sanskrit); }
     .project--software:hover h3,
     .project--software:focus-visible h3 { color: var(--software); }
 
@@ -338,9 +346,10 @@
       </section>
 
       <section aria-labelledby="subjects-title" class="project-group">
-        <h2 class="group-title" id="subjects-title">Subjects</h2>
+        <h2 class="group-title" id="subjects-title">Classical Languages</h2>
         <div class="projects">
-          <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
+       <!--
+            <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
             <div>
               <h3>Astronomy</h3>
               <p>An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete text and figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.</p>
@@ -356,13 +365,32 @@
             <span aria-hidden="true">Study &rarr;</span>
           </a>
 
+          -->
+
           <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
             <div>
               <h3>Lingua Latina</h3>
-              <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, spaced repetition, and a graded library of prose and poetry.</p>
+              <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, and a graded library of prose and poetry.</p>
             </div>
             <span aria-hidden="true">Study &rarr;</span>
           </a>
+
+          <a class="project project--greek" href="https://naniwadekar.com/ancient-greek.html">
+            <div>
+              <h3>Hellenike &mdash; Ancient Greek</h3>
+              <p>An Attic-first Ancient Greek course from the alphabet to Homer and Plato, with an accent trainer, structured grammar, principal-parts drills, a short history of Greece, and a graded reading room.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
+          <a class="project project--sanskrit" href="https://naniwadekar.com/sanskrit.html">
+            <div>
+              <h3>Sa&#7745;sk&#7771;tam &mdash; Sanskrit</h3>
+              <p>A complete Sanskrit course from the first letter of Devanagari to reading the Bhagavad G&#299;t&#257;, with IAST throughout, a sandhi trainer, a dh&#257;tu lab, P&#257;&#7751;inian grammar, and a graded reading room of fables and scripture.</p>
+            </div>
+            <span aria-hidden="true">Study &rarr;</span>
+          </a>
+
 
           <!--
           NOT CURRENTLY DISPLAYED. Retained here for easy restoration.
