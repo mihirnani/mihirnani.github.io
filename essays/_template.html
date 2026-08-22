@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One-sentence summary of the essay, shown in the list and in the feed.">
+  <meta name="date" content="YYYY-MM-DD">
+  <meta name="author" content="Mihir Naniwadekar">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>ESSAY TITLE – Essays – Curiosities</title>
+  <link rel="canonical" href="https://naniwadekar.com/essays/YYYY-MM-DD-slug.html">
+  <link rel="alternate" type="application/rss+xml" title="Essays – Curiosities" href="https://naniwadekar.com/essays/feed.xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../curiosities-icon-180.png">
+  <meta property="og:title" content="ESSAY TITLE – Essays – Curiosities">
+  <meta property="og:description" content="One-sentence summary of the essay, shown in the list and in the feed.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://naniwadekar.com/essays/YYYY-MM-DD-slug.html">
+  <meta property="og:site_name" content="Curiosities">
+  <meta name="twitter:card" content="summary">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (e) { document.documentElement.dataset.theme = "light"; }
+    })();
+  </script>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <nav><a href="https://naniwadekar.com/">Curiosities</a><a href="index.html">Essays</a><a href="feed.xml">RSS</a></nav>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
+    <main>
+<!--
+  HOW TO WRITE AN ESSAY
+  1. Copy this file to  YYYY-MM-DD-slug.html  (the date is the publication date; it also sets the order).
+  2. Fill in <title>, the description meta, the date meta, the canonical/og:url, and the <article> below.
+     Keep the " – Essays – Curiosities" suffix in <title>; the list and feed strip it.
+  3. Write in plain HTML: <p>, <h2>, <h3>, <blockquote>, <figure><img><figcaption>, <ol class="notes"> for notes.
+  4. Run  python3 essays/build.py  from the repository root. It rewrites index.html, feed.xml and sitemap.xml
+     and fills in the earlier/later links at the foot of every essay. Commit everything.
+-->
+<article>
+  <header>
+    <p class="eyebrow">Essay · DD Month YYYY</p>
+    <h1>Essay title</h1>
+    <p class="byline">One line under the title, if wanted.</p>
+  </header>
+
+  <p>First paragraph.</p>
+
+  <h2>A section</h2>
+  <p>More paragraphs.</p>
+
+  <blockquote>A quotation, if any.</blockquote>
+
+  <div class="notes">
+    <ol>
+      <li>A note or reference.</li>
+    </ol>
+  </div>
+</article>
+    </main>
+    <footer class="bottom">Part of <a href="https://naniwadekar.com/">Curiosities</a>.</footer>
+  </div>
+  <script>
+    (function () {
+      var b = document.getElementById("theme-toggle");
+      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-pressed", String(d)); }
+      b.addEventListener("click", function () {
+        var n = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = n; try { localStorage.setItem("root-theme", n); } catch (e) {} u();
+      });
+      u();
+    })();
+  </script>
+</body>
+</html>

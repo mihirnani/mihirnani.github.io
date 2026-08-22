@@ -1,24 +1,24 @@
 {
-  "id": "/mathquest.html",
+  "id": "/more/mathquest.html",
   "name": "Math Quest",
   "short_name": "Math Quest",
   "description": "A colourful offline mathematics learning adventure for children.",
   "lang": "en",
-  "start_url": "/mathquest.html",
-  "scope": "/mathquest.html",
+  "start_url": "/more/mathquest.html",
+  "scope": "/more/mathquest.html",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#c7e9ff",
   "theme_color": "#7c4dff",
   "icons": [
     {
-      "src": "/mathquest-icon-192.png",
+      "src": "/more/mathquest-icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/mathquest-icon-512.png",
+      "src": "/more/mathquest-icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

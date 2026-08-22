@@ -1,11 +1,11 @@
 "use strict";
 const CACHE = "clarity-toybox-shell-v6";
 const SHELL = [
-  "/clarity-toybox.html",
-  "/clarity-toybox-manifest.json",
-  "/clarity-toybox-icon-180.png",
-  "/clarity-toybox-icon-192.png",
-  "/clarity-toybox-icon-512.png"
+  "/more/clarity-toybox.html",
+  "/more/clarity-toybox-manifest.json",
+  "/more/clarity-toybox-icon-180.png",
+  "/more/clarity-toybox-icon-192.png",
+  "/more/clarity-toybox-icon-512.png"
 ];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -21,9 +21,9 @@ self.addEventListener("fetch", event => {
   if (req.mode === "navigate") {
     event.respondWith(fetch(req).then(res => {
       const copy = res.clone();
-      caches.open(CACHE).then(cache => cache.put("/clarity-toybox.html", copy));
+      caches.open(CACHE).then(cache => cache.put("/more/clarity-toybox.html", copy));
       return res;
-    }).catch(() => caches.match("/clarity-toybox.html")));
+    }).catch(() => caches.match("/more/clarity-toybox.html")));
     return;
   }
   event.respondWith(caches.match(req).then(hit => hit || fetch(req).then(res => {

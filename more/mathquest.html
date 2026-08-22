@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Math Quest</title>
-<link rel="manifest" href="/mathquest-manifest.json">
-<link rel="apple-touch-icon" href="/mathquest-icon-180.png">
+<link rel="manifest" href="/more/mathquest-manifest.json">
+<link rel="apple-touch-icon" href="/more/mathquest-icon-180.png">
 <meta name="theme-color" content="#7c4dff">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -303,7 +303,7 @@ input,select{font-family:inherit;font-size:1em;}
 }
 </style>
 
-<meta name="description" content="An interactive mathematics learning app for children aged 7–10, with lessons, practice, quizzes, and a structured learning path."><link rel="canonical" href="https://naniwadekar.com/mathquest.html"><meta property="og:title" content="Math Quest"><meta name="twitter:card" content="summary_large_image"><meta property="og:site_name" content="Curiosities"><meta property="og:description" content="An interactive mathematics learning app for children aged 7–10, with lessons, practice, quizzes, and a structured learning path."><meta property="og:type" content="website"><meta property="og:url" content="https://naniwadekar.com/mathquest.html"><meta property="og:image" content="https://naniwadekar.com/mathquest-icon-512.png"><link rel="icon" href="mathquest-icon-192.png" sizes="192x192" type="image/png">
+<meta name="description" content="An interactive mathematics learning app for children aged 7–10, with lessons, practice, quizzes, and a structured learning path."><link rel="canonical" href="https://naniwadekar.com/more/mathquest.html"><meta property="og:title" content="Math Quest"><meta name="twitter:card" content="summary_large_image"><meta property="og:site_name" content="Curiosities"><meta property="og:description" content="An interactive mathematics learning app for children aged 7–10, with lessons, practice, quizzes, and a structured learning path."><meta property="og:type" content="website"><meta property="og:url" content="https://naniwadekar.com/more/mathquest.html"><meta property="og:image" content="https://naniwadekar.com/more/mathquest-icon-512.png"><link rel="icon" href="mathquest-icon-192.png" sizes="192x192" type="image/png">
 </head>
 <body>
 <canvas id="confetti"></canvas>
@@ -4453,7 +4453,7 @@ window.addEventListener('DOMContentLoaded', () => {
 /* PWA registration: deliberately scoped to this page only. */
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/mathquest-sw.js', { scope: '/mathquest.html' })
+    navigator.serviceWorker.register('/more/mathquest-sw.js', { scope: '/more/mathquest.html' })
       .catch(err => console.warn('Math Quest offline mode unavailable:', err));
   });
 }

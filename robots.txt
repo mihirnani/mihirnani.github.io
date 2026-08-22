@@ -9,3 +9,4 @@ Sitemap: https://naniwadekar.com/sitemap.xml
 Sitemap: https://naniwadekar.com/european-gaze/sitemap.xml
 Sitemap: https://naniwadekar.com/sahyadri-birds/sitemap.xml
 Sitemap: https://naniwadekar.com/deccan/sitemap.xml
+Sitemap: https://naniwadekar.com/essays/sitemap.xml

@@ -1,12 +1,12 @@
 "use strict";
 const CACHE = "starweaver-shell-v7";
-const APP = "/starweaver.html";
+const APP = "/more/starweaver.html";
 const ASSETS = [
   APP,
-  "/starweaver-manifest.json",
-  "/starweaver-icon-180.png",
-  "/starweaver-icon-192.png",
-  "/starweaver-icon-512.png"
+  "/more/starweaver-manifest.json",
+  "/more/starweaver-icon-180.png",
+  "/more/starweaver-icon-192.png",
+  "/more/starweaver-icon-512.png"
 ];
 
 self.addEventListener("install", event => {

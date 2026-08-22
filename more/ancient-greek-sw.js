@@ -9,14 +9,14 @@ const CACHE_PREFIX = "ancient-greek-";
 const CACHE_VERSION = "v3";
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 
-const APP_PAGE = "/ancient-greek.html";
+const APP_PAGE = "/more/ancient-greek.html";
 
 const APP_ASSETS = [
   APP_PAGE,
-  "/ancient-greek-manifest.json",
-  "/ancient-greek-icon-180.png",
-  "/ancient-greek-icon-192.png",
-  "/ancient-greek-icon-512.png"
+  "/more/ancient-greek-manifest.json",
+  "/more/ancient-greek-icon-180.png",
+  "/more/ancient-greek-icon-192.png",
+  "/more/ancient-greek-icon-512.png"
 ];
 
 const APP_PATHS = new Set(APP_ASSETS);

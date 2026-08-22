@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Essays from Curiosities.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>Essays – Curiosities</title>
+  <link rel="canonical" href="https://naniwadekar.com/essays/">
+  <link rel="alternate" type="application/rss+xml" title="Essays – Curiosities" href="https://naniwadekar.com/essays/feed.xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../curiosities-icon-180.png">
+  <meta property="og:title" content="Essays – Curiosities">
+  <meta property="og:description" content="Essays from Curiosities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naniwadekar.com/essays/">
+  <meta property="og:site_name" content="Curiosities">
+  <meta name="twitter:card" content="summary">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (e) { document.documentElement.dataset.theme = "light"; }
+    })();
+  </script>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <nav><a href="https://naniwadekar.com/">Curiosities</a><a href="index.html">Essays</a><a href="feed.xml">RSS</a></nav>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
+    <main>
+<p class="eyebrow">Curiosities</p><h1>Essays</h1><p class="intro">Essays from Curiosities. <a href="feed.xml">Subscribe by RSS</a>.</p><ul class="essays"><li><span class="d">22 August 2026</span><h2><a href="2026-08-22-welcome-to-curiosities.html">Welcome to Curiosities</a></h2><p>What this site is, what is on it, and what the essays will be.</p></li></ul>
+    </main>
+    <footer class="bottom">Part of <a href="https://naniwadekar.com/">Curiosities</a>.</footer>
+  </div>
+  <script>
+    (function () {
+      var b = document.getElementById("theme-toggle");
+      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-pressed", String(d)); }
+      b.addEventListener("click", function () {
+        var n = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = n; try { localStorage.setItem("root-theme", n); } catch (e) {} u();
+      });
+      u();
+    })();
+  </script>
+</body>
+</html>

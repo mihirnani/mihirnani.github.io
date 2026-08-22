@@ -2,13 +2,13 @@
 
 const CACHE_PREFIX = "mathquest-pwa-";
 const CACHE_NAME = CACHE_PREFIX + "v6";
-const APP_PAGE = "/mathquest.html";
+const APP_PAGE = "/more/mathquest.html";
 const APP_SHELL = [
   APP_PAGE,
-  "/mathquest-manifest.json",
-  "/mathquest-icon-180.png",
-  "/mathquest-icon-192.png",
-  "/mathquest-icon-512.png"
+  "/more/mathquest-manifest.json",
+  "/more/mathquest-icon-180.png",
+  "/more/mathquest-icon-192.png",
+  "/more/mathquest-icon-512.png"
 ];
 
 self.addEventListener("install", event => {
