@@ -161,7 +161,7 @@
   function readingsView() {
     setTitle("Readings – The Deccan, 1500–1830s", "An annotated bibliography of the standard scholarship on the Deccan, 1500–1830s, arranged by period.");
     var R = window.DECCAN_READINGS || {};
-    var KINDL = {primary: "Primary source", book: "Book", article: "Article", reference: "Reference"};
+    var KINDL = {primary: "Primary source", "source-edition": "Source in translation", early: "Early historiography", book: "Book", article: "Article", reference: "Reference"};
     function item(w) {
       var t = w.url ? '<a href="' + E(w.url) + '" rel="noopener noreferrer" target="_blank">' + E(w.title) + '</a>' : '<em>' + E(w.title) + '</em>';
       var cite = E(w.author) + ', ' + t + (w.publisher ? ' (' + E(w.publisher) + (w.year ? ', ' + E(w.year) : '') + ')' : (w.year ? ' (' + E(w.year) + ')' : '')) + '.';
@@ -174,8 +174,8 @@
     var toc = '<p class="measure muted">' + ['<a href="#readings-general">General</a>'].concat(periods.map(function (p) { return '<a href="#readings-' + p.n + '">' + E(p.title) + '</a>'; })).join(' · ') + '</p>';
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#">← Timeline</a></p>' +
       '<div class="chapter-head measure"><p class="eyebrow">Readings</p><h1>The standard scholarship</h1>' +
-      '<p class="intro">What to read on the Deccan between Vijayanagara and the Company: primary sources in translation first, then the books and articles the entries rest on, period by period.</p></div>' +
-      '<div class="prose"><p>Each list begins with the primary sources available in English, then the modern works in alphabetical order. The notes say what a work is and what it is good for; they are not reviews. Open-access copies are linked where they exist – the older Company-era histories and several Indian reprints are on the Internet Archive and HathiTrust – and the rest are in print or in any university library. Entries on the timeline cite the specific works they draw on; this page is the longer shelf.</p></div>' + toc +
+      '<p class="intro">What to read on the Deccan between Vijayanagara and the Company: primary sources and their translations first, then the early Company-era histories, then the modern scholarship the entries rest on, period by period.</p></div>' +
+      '<div class="prose"><p>Each list begins with primary sources and editions in translation, then the early histories written under the Company – Sewell, Grant Duff, Wilks – which are valuable and often themselves evidence for how the British understood the Deccan, but are not primary sources for the events they narrate; then the modern works in alphabetical order. The notes say what a work is and what it is good for; they are not reviews. Open-access copies are linked where they exist – the older Company-era histories and several Indian reprints are on the Internet Archive and HathiTrust – and the rest are in print or in any university library. Entries on the timeline cite the specific works they draw on; this page is the longer shelf.</p></div>' + toc +
       section("General", "the whole span", R.general, "readings-general") +
       periods.map(function (p) { return section(p.title, p.years, R[String(p.n)], "readings-" + p.n); }).join('') + '</div>';
     var want = location.hash.replace(/^#/, '');

@@ -427,3 +427,4 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
 .rd.primary .k{color:var(--paper-dim)}
 .rd .c{margin:.25rem 0 .3rem; color:var(--paper)}
 .rd .n{margin:0; font-size:.92rem; color:var(--paper-dim)}
+.rd.source-edition .k,.rd.early .k{color:var(--paper-dim)}

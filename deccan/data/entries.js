@@ -16,16 +16,20 @@ window.DECCAN_ENTRIES = [
   "lat": 19.095,
   "lon": 74.748,
   "strap": "Founded by Malik Ahmad in 1494 as the capital of the Nizam Shahi sultanate, Ahmadnagar was the most Marathi of the successor states and the school of the families who later built the Maratha state.",
-  "body": "<p>Malik Ahmad, son of the Bahmani minister Nizam-ul-Mulk Bahri, made himself independent in the western Deccan in 1490 after defeating the army sent against him, and in 1494 laid out a new capital on the Sina river, which he named Ahmadnagar after himself. He died in about 1510 and was buried there in the garden tomb known as the Bagh Rauza. His son Burhan Nizam Shah I (r. 1510–1553) succeeded as a child and ruled for over forty years; Burhan’s son Hussain (r. 1553–1565) was the sultan who led the coalition at Talikota and died a few months afterwards.</p>\n<p>The dynasty’s origins were local. Nizam-ul-Mulk Bahri had been born a Brahmin, Timappa, from Pathri in the Godavari valley, captured and converted in Bahmani service. Ahmadnagar never had the Persian immigrant establishment that Bijapur and Golconda did, and its armies and revenue offices were filled from the Marathi-speaking country around it. Deshmukhs, the hereditary district headmen, served as captains and collectors; families such as the Jadhavs of Sindkhed and the Bhonsles rose in this service, and Shivaji’s grandfather Maloji held a Nizam Shahi command. Marathi was used in the administration alongside Persian.</p>\n<p>The capital’s stone fort, rebuilt in the 1560s, became one of the strongest in the Deccan. Burhan fought Bijapur and Berar, allied with Vijayanagara against Bijapur in the 1540s, and adopted Shia Islam under the influence of the scholar Shah Tahir. Hussain cast the great bronze gun Malik-i-Maidan in 1549 and, after being humbled by Rama Raya in 1558, set about the alliance that ended Vijayanagara’s power.</p>\n<p>Ahmadnagar was the first of the sultanates to face the Mughals, in 1595, and the first to fall, in 1636. Before that it was the sultanate that taught the Marathas how a state was run.</p>",
+  "body": "<p>Malik Ahmad, son of the Bahmani minister Nizam-ul-Mulk Bahri, made himself independent in the western Deccan in 1490 after defeating the army sent against him, and in 1494 laid out a new capital on the Sina river, which he named Ahmadnagar after himself. He died in about 1510 and was buried there in the garden tomb known as the Bagh Rauza. His son Burhan Nizam Shah I (r. 1510–1553) succeeded as a child and ruled for over forty years; Burhan’s son Hussain (r. 1553–1565) was the sultan who led the coalition at Talikota and died a few months afterwards.</p>\n<p>The dynasty’s origins were local. Nizam-ul-Mulk Bahri had been born a Brahmin, Timappa, from Pathri in the Godavari valley, captured and converted in Bahmani service. Ahmadnagar never had the Persian immigrant establishment that Bijapur and Golconda did, and its armies and revenue offices were filled from the Marathi-speaking country around it. Deshmukhs, the hereditary district headmen, served as captains and collectors; families such as the Jadhavs of Sindkhed and the Bhonsles rose in this service, and Shivaji’s grandfather Maloji held a Nizam Shahi command. Marathi was used in the administration alongside Persian.</p>\n<p>The capital’s stone fort, rebuilt in the 1560s, became one of the strongest in the Deccan. Burhan fought Bijapur and Berar, allied with Vijayanagara against Bijapur in the 1540s, and adopted Shia Islam under the influence of the scholar Shah Tahir. The great bronze gun Malik-i-Maidan had been cast at Ahmadnagar in 1549, under Burhan, by Muhammad bin Hasan Rumi; Hussain, after being humbled by Rama Raya in 1558, set about the alliance that ended Vijayanagara’s power.</p>\n<p>Ahmadnagar was the first of the sultanates to face the Mughals, in 1595, and the first to fall, in 1636. Before that it was the sultanate that taught the Marathas how a state was run.</p>",
   "story": "Ahmadnagar is where two polities in this collection overlap. The Nizam Shahi state was a sultanate in form, but its officers were Maratha deshmukhs, and the Bhonsles, Jadhavs and their peers learned revenue, command and court politics in its service before Shivaji turned those skills against the sultanates themselves. The entry makes the point that the Maratha state-building project grew out of the sultanate system rather than in opposition to it.",
   "sources": [
    {
-    "title": "Britannica, ‘Nizām Shāhī dynasty’",
-    "url": "https://www.britannica.com/topic/Nizam-Shahi-dynasty"
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
    },
    {
-    "title": "Deccan Heritage Foundation, ‘Ahmadnagar and the Rise of the Marathas’",
-    "url": "https://www.deccan-heritage-foundation.org/travel-notes/ahmadnagar-and-the-rise-of-the-marathas/"
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+   },
+   {
+    "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
+    "url": "https://archive.org/details/dli.ministry.25421"
    },
    {
     "title": "Wikipedia, ‘Ahmad Nizam Shah’",
@@ -55,12 +59,16 @@ window.DECCAN_ENTRIES = [
   "story": "The collection begins with a sovereignty already divided. The Bahmani break-up produced a Deccan of five sultanates whose borders were negotiable and whose armies recruited across the religious line, and it set the pattern of shifting alliance that runs through the whole timeline. The later collapse of plurality under Mughal and then Company paramountcy is only legible if the starting point is this fragmented, competitive, mutually intelligible world of successor states.",
   "sources": [
    {
-    "title": "Britannica, ‘Bahmanī sultanate’",
-    "url": "https://www.britannica.com/place/Bahmani-sultanate"
+    "title": "Haroon Khan Sherwani, The Bahmanis of the Deccan: An Objective Study (Saood Manzil, Hyderabad, 1953)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.68551"
    },
    {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge, 2005)",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+   },
+   {
+    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
+    "url": "https://archive.org/details/dli.csl.7467"
    },
    {
     "title": "Wikipedia, ‘Deccan sultanates’",
@@ -86,16 +94,20 @@ window.DECCAN_ENTRIES = [
   "lat": 16.83,
   "lon": 75.71,
   "strap": "From Yusuf Adil Khan’s independence in 1490 to the death of Ibrahim I in 1558, Bijapur built the strongest of the successor sultanates while its court swung between Persian and Deccani factions.",
-  "body": "<p>Yusuf Adil Khan, a Bahmani governor of disputed origin, said by some to be an Ottoman prince and by others a Georgian or Persian slave bought by Mahmud Gawan, made Bijapur an independent sultanate in about 1490. He adopted Shia Islam as the state religion in 1503, following the new Safavid regime in Iran, lost Goa to the Portuguese in 1510 and died the same year. His son Ismail (r. 1510–1534) recovered the court from a regent’s coup, fought Vijayanagara for the Raichur doab and was beaten there in 1520. After a brief and unpopular reign by Mallu, Ibrahim Adil Shah I (r. 1534–1558) took the throne.</p>\n<p>Ibrahim reversed his father’s policies. He restored Sunni worship, dismissed many of the Afaqi, or ‘Western’, Persian-speaking officers who had dominated the army, and promoted Dakhnis and Habshis in their place; he is also credited with admitting Marathi and the local script into the revenue accounts alongside Persian. The swing between Afaqi and Dakhni ascendancy, which ran through all the sultanates, was at Bijapur unusually sharp, and it produced the alternation of Shia and Sunni state religion that marks the dynasty down to its end.</p>\n<p>The city grew with the state. Yusuf’s citadel, the Arkilla, was enclosed in the sixteenth century by an outer wall with bastions and great guns, among them the Malik-i-Maidan cast at Ahmadnagar in 1549 and brought to Bijapur later. Under Ali Adil Shah I (r. 1558–1580), Ibrahim’s son, the Jami Masjid was begun and the alliance made with Vijayanagara’s Rama Raya that would be reversed in 1565.</p>\n<p>By 1558 Bijapur controlled the Konkan hinterland, faced Goa and held the line of the Krishna against Vijayanagara. It was the sultanate the Raya had most to fear and most reason to cultivate.</p>",
+  "body": "<p>Yusuf Adil Khan, a Bahmani governor of disputed origin, said by some to be an Ottoman prince and by others a Georgian or Persian slave bought by Mahmud Gawan, made Bijapur an independent sultanate in about 1490. He adopted Shia Islam as the state religion in 1503, following the new Safavid regime in Iran, lost Goa to the Portuguese in 1510 and died the same year. His son Ismail (r. 1510–1534) recovered the court from a regent’s coup, fought Vijayanagara for the Raichur doab and was beaten there in 1520. After a brief and unpopular reign by Mallu, Ibrahim Adil Shah I (r. 1534–1558) took the throne.</p>\n<p>Ibrahim reversed his father’s policies. He restored Sunni worship, dismissed many of the Afaqi, or ‘Western’, Persian-speaking officers who had dominated the army, and promoted Dakhnis and Habshis in their place; he is also credited with admitting Marathi and the local script into the revenue accounts alongside Persian. The swing between Afaqi and Dakhni ascendancy, which ran through all the sultanates, was at Bijapur unusually sharp, and it produced the alternation of Shia and Sunni state religion that marks the dynasty down to its end.</p>\n<p>The city grew with the state. Yusuf’s citadel, the Arkilla, was enclosed in the sixteenth century by an outer wall with bastions and great guns, among them the Malik-i-Maidan, cast at Ahmadnagar in 1549 by Muhammad bin Hasan Rumi for Burhan Nizam Shah I and brought to Bijapur later. Under Ali Adil Shah I (r. 1558–1580), Ibrahim’s son, the Jami Masjid was begun and the alliance made with Vijayanagara’s Rama Raya that would be reversed in 1565.</p>\n<p>By 1558 Bijapur controlled the Konkan hinterland, faced Goa and held the line of the Krishna against Vijayanagara. It was the sultanate the Raya had most to fear and most reason to cultivate.</p>",
   "story": "Bijapur is the collection’s clearest case of a sultanate whose internal politics were about who belonged to the Deccan. The contest between Afaqis and Dakhnis was a contest over whether the state should be an outpost of Persianate culture or a local polity recruiting from Marathi and Kannada country. Ibrahim I chose the latter, and the Marathi-speaking gentry he brought in are the ancestors of the Maratha houses that dominate later periods. Sovereignty was layered inside the court as well as across the frontier.",
   "sources": [
    {
-    "title": "Britannica, ‘ʿĀdil Shāhī dynasty’",
-    "url": "https://www.britannica.com/topic/Adil-Shahi-dynasty"
+    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
+    "url": "https://search.worldcat.org/search?q=Sufis%20of%20Bijapur%201300%E2%80%931700%3A%20Social%20Roles%20of%20Sufis%20in%20Medieval%20India%20Richard%20M.%20Eaton"
    },
    {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge, 2005)",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
+    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+   },
+   {
+    "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
+    "url": "https://archive.org/details/dli.ministry.25421"
    },
    {
     "title": "Wikipedia, ‘Adil Shahi dynasty’",
@@ -128,15 +140,19 @@ window.DECCAN_ENTRIES = [
   "story": "The horse trade is the collection’s reminder that sovereignty on the plateau was financed and armed from the sea. Neither Deccan could fight without imports, so each had to deal with merchants and with the Portuguese who taxed them. It is an early and concrete instance of the pattern in which a maritime power with little land gained influence over landed states, a pattern that the Company would complete.",
   "sources": [
    {
-    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar), 1900, chronicle of Nunes",
-    "url": "https://archive.org/details/forgottenempire00robe"
+    "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
+    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
    },
    {
-    "title": "Richard M. Eaton, ‘“Kiss My Foot,” Said the King’, Modern Asian Studies 43 (2009)",
+    "title": "Richard M. Eaton, ‘“Kiss My Foot,” Said the King: Firearms, Diplomacy, and the Battle for Raichur, 1520’, Modern Asian Studies 43 (1) (Cambridge University Press, 2009)",
     "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/kiss-my-foot-said-the-king-firearms-diplomacy-and-the-battle-for-raichur-1520/C1119D2078354BEEC93D5F35517A700F"
    },
    {
-    "title": "Wikipedia, ‘Portuguese conquest of Goa’ (horse monopoly decree)",
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
+    "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Wikipedia, ‘Portuguese conquest of Goa’",
     "url": "https://en.wikipedia.org/wiki/Portuguese_conquest_of_Goa"
    }
   ],
@@ -164,12 +180,16 @@ window.DECCAN_ENTRIES = [
   "story": "A capital is where sovereignty is displayed, and Vijayanagara displayed it on a scale no other Deccan power matched before Aurangzeb’s camp cities. Its architecture is the point for this collection: the sacred centre is Dravidian, the royal centre uses domes, arches and plaster drawn from the sultanate courts. Wagoner’s work on the Lotus Mahal and on court dress shows a kingdom that expressed its authority in the shared idiom of the Deccan, across the supposed line between the two Deccans.",
   "sources": [
    {
-    "title": "UNESCO World Heritage Centre, ‘Group of Monuments at Hampi’",
-    "url": "https://whc.unesco.org/en/list/241/"
+    "title": "John M. Fritz and George Michell, with photographs by John Gollings, City of Victory: Vijayanagara, the Medieval Hindu Capital of Southern India (Aperture, New York, 1991)",
+    "url": "https://search.worldcat.org/search?q=City%20of%20Victory%3A%20Vijayanagara%2C%20the%20Medieval%20Hindu%20Capital%20of%20Southern%20India%20John%20M.%20Fritz%20and%20George%20Michell%2C%20with%20photographs%20by%20John%20Gollings"
    },
    {
-    "title": "Britannica, ‘Vijayanagar’",
-    "url": "https://www.britannica.com/place/Vijayanagar"
+    "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
+    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+   },
+   {
+    "title": "UNESCO World Heritage Centre, ‘Group of Monuments at Hampi’",
+    "url": "https://whc.unesco.org/en/list/241/"
    },
    {
     "title": "Wikipedia, ‘Hampi’",
@@ -200,12 +220,16 @@ window.DECCAN_ENTRIES = [
   "story": "Krishnadevaraya is the collection’s model of a Deccan ruler who worked the layered system rather than abolishing it. He fought the sultanates, hired their gunners, traded with the Portuguese and governed through subordinate nayakas. Phillip Wagoner’s phrase ‘sultan among Hindu kings’, drawn from a Vijayanagara royal title, fits him: his court borrowed dress, titles and military practice across the frontier. The entry anchors the Vijayanagara side of ‘two Deccans’ and shows how porous the line between them already was.",
   "sources": [
    {
-    "title": "EBSCO Research Starters, ‘Krishnadevaraya’",
-    "url": "https://www.ebsco.com/research-starters/history/krishnadevaraya"
+    "title": "Srinivas Reddy, Raya: Krishnadevaraya of Vijayanagara (Juggernaut Books, New Delhi, 2020)",
+    "url": "https://search.worldcat.org/search?q=Raya%3A%20Krishnadevaraya%20of%20Vijayanagara%20Srinivas%20Reddy"
    },
    {
-    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar), 1900, with Paes and Nunes",
-    "url": "https://archive.org/details/forgottenempire00robe"
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
+    "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Phillip B. Wagoner, 'Sultan among Hindu Kings': Dress, Titles, and the Islamicization of Hindu Culture at Vijayanagara, Journal of Asian Studies 55 (4), pp. 851–880 (Association for Asian Studies, 1996)",
+    "url": "https://search.worldcat.org/search?q=%27Sultan%20among%20Hindu%20Kings%27%3A%20Dress%2C%20Titles%2C%20and%20the%20Islamicization%20of%20Hindu%20Culture%20at%20Vijayanagara%2C%20Journal%20of%20Asian%20Studies%2055%20%284%29%2C%20pp.%20851%E2%80%93880%20Phillip%20B.%20Wagoner"
    },
    {
     "title": "Wikipedia, ‘Krishnadevaraya’",
@@ -236,12 +260,16 @@ window.DECCAN_ENTRIES = [
   "story": "Goa introduces the first European sovereignty into the collection, and it is a small and maritime one. The Portuguese held a port, not a province; their power lay in customs, passes and horses rather than land revenue. Set beside the sultanates and Vijayanagara, Goa shows that layered sovereignty in the Deccan included a coastal layer from the start, and it foreshadows the Company, which would also begin as a presence on the shore before it became a paramount power inland.",
   "sources": [
    {
-    "title": "Britannica, ‘Afonso de Albuquerque’",
-    "url": "https://www.britannica.com/biography/Afonso-de-Albuquerque"
+    "title": "Sanjay Subrahmanyam, The Portuguese Empire in Asia, 1500–1700: A Political and Economic History (Longman, London, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Portuguese%20Empire%20in%20Asia%2C%201500%E2%80%931700%3A%20A%20Political%20and%20Economic%20History%20Sanjay%20Subrahmanyam"
    },
    {
-    "title": "Britannica, ‘Portuguese conquest of Goa’",
-    "url": "https://www.britannica.com/topic/Portuguese-conquest-of-Goa"
+    "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
+    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
+   },
+   {
+    "title": "Britannica, ‘Afonso de Albuquerque’",
+    "url": "https://www.britannica.com/biography/Afonso-de-Albuquerque"
    },
    {
     "title": "Wikipedia, ‘Portuguese conquest of Goa’",
@@ -272,12 +300,16 @@ window.DECCAN_ENTRIES = [
   "story": "The collection uses documents to show how rulers described their own sovereignty. Amuktamalyada is Vijayanagara’s contribution, and what it says is strikingly unsectarian: keep the ports open, manage the chiefs, garrison the forts with people who will not rebel. It reads as the advice of a ruler who knew his authority was layered over nayakas and merchants and could be lost to them. Placed beside the later Ajnapatra of the Marathas, it shows a continuous Deccan idiom of statecraft across three centuries.",
   "sources": [
    {
-    "title": "Srinivas Reddy (tr.), Giver of the Worn Garland: Krishnadevaraya’s Amuktamalyada (Penguin, 2010)",
-    "url": "https://search.worldcat.org/title/Giver-of-the-worn-garland-:-Krishnadevaraya's-Amuktamalyada/oclc/953088344"
+    "title": "Srinivas Reddy (tr.), Giver of the Worn Garland: Krishnadevaraya's Amuktamalyada (Penguin Books, New Delhi, 2010)",
+    "url": "https://search.worldcat.org/search?q=Giver%20of%20the%20Worn%20Garland%3A%20Krishnadevaraya%27s%20Amuktamalyada%20Srinivas%20Reddy%20%28tr.%29"
    },
    {
-    "title": "‘Political Maxims of Sri Krishna Deva Raya’, Triveni Journal",
-    "url": "https://www.wisdomlib.org/history/compilation/triveni-journal/d/doc69568.html"
+    "title": "Srinivas Reddy, Raya: Krishnadevaraya of Vijayanagara (Juggernaut Books, New Delhi, 2020)",
+    "url": "https://search.worldcat.org/search?q=Raya%3A%20Krishnadevaraya%20of%20Vijayanagara%20Srinivas%20Reddy"
+   },
+   {
+    "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, New York, 2001)",
+    "url": "https://search.worldcat.org/search?q=Precolonial%20India%20in%20Practice%3A%20Society%2C%20Region%2C%20and%20Identity%20in%20Medieval%20Andhra%20Cynthia%20Talbot"
    },
    {
     "title": "Wikipedia, ‘Amuktamalyada’",
@@ -305,11 +337,15 @@ window.DECCAN_ENTRIES = [
   "story": "Golconda represents the eastern Deccan in the collection and complicates the simple picture of sultanate against Raya. Its rulers were Persian in origin, Shia in confession and Telugu in their administration and their poetry. Its wealth came from a mineral trade that drew Europeans inland long before the Company had any territory. When the collection reaches Hyderabad and the Nizam in later periods, the state they inherit is this one.",
   "sources": [
    {
-    "title": "Britannica, ‘Golconda’",
-    "url": "https://www.britannica.com/place/Golconda-historical-city-India"
+    "title": "Haroon Khan Sherwani, History of the Qutb Shahi Dynasty (Munshiram Manoharlal, 1974)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20the%20Qutb%20Shahi%20Dynasty%20Haroon%20Khan%20Sherwani"
    },
    {
-    "title": "UNESCO Tentative List, ‘The Qutb Shahi Monuments of Hyderabad: Golconda Fort, Qutb Shahi Tombs, Charminar’",
+    "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
+    "url": "https://search.worldcat.org/search?q=Mughal%20Administration%20in%20Golconda%20John%20F.%20Richards"
+   },
+   {
+    "title": "UNESCO Tentative List, ‘The Qutb Shahi Monuments of Hyderabad’",
     "url": "https://whc.unesco.org/en/tentativelists/5573/"
    },
    {
@@ -341,16 +377,16 @@ window.DECCAN_ENTRIES = [
   "story": "The European Gaze on India is the companion collection, and Paes and Nunes are its earliest prose equivalent: foreigners describing a Deccan state in the terms they had. What they record is telling for the throughline. Nunes sees a king whose captains hold land at his pleasure and parade their contingents each autumn, a sovereignty that is visibly assembled from the loyalties of subordinates. The Mahanavami review was the annual staging of that layered order.",
   "sources": [
    {
-    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar), 1900 (Internet Archive)",
-    "url": "https://archive.org/details/forgottenempire00robe"
-   },
-   {
-    "title": "The Vijayanagar Empire: chronicles of Paes and Nuniz (WorldCat record with dating)",
-    "url": "https://www.worldcat.org/title/29285428"
-   },
-   {
-    "title": "Project Gutenberg text of A Forgotten Empire",
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
     "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
+    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+   },
+   {
+    "title": "Phillip B. Wagoner, 'Sultan among Hindu Kings': Dress, Titles, and the Islamicization of Hindu Culture at Vijayanagara, Journal of Asian Studies 55 (4), pp. 851–880 (Association for Asian Studies, 1996)",
+    "url": "https://search.worldcat.org/search?q=%27Sultan%20among%20Hindu%20Kings%27%3A%20Dress%2C%20Titles%2C%20and%20the%20Islamicization%20of%20Hindu%20Culture%20at%20Vijayanagara%2C%20Journal%20of%20Asian%20Studies%2055%20%284%29%2C%20pp.%20851%E2%80%93880%20Phillip%20B.%20Wagoner"
    }
   ],
   "related_maps": [
@@ -378,12 +414,16 @@ window.DECCAN_ENTRIES = [
   "story": "Raichur is the collection’s first battle and its first demonstration that the two Deccans were not sealed from one another. Portuguese gunners served the Raya; Turkish gunners served the sultan; the same horse dealers supplied both. Sovereignty was contested with borrowed tools across a frontier that the men fighting crossed freely. The battle also begins the long arc from cavalry to gunpowder that ends, in this timeline, with the Company’s artillery at Seringapatam and Assaye.",
   "sources": [
    {
-    "title": "Richard M. Eaton, ‘“Kiss My Foot,” Said the King: Firearms, Diplomacy, and the Battle for Raichur, 1520’, Modern Asian Studies 43 (2009)",
+    "title": "Richard M. Eaton, ‘“Kiss My Foot,” Said the King: Firearms, Diplomacy, and the Battle for Raichur, 1520’, Modern Asian Studies 43 (1) (Cambridge University Press, 2009)",
     "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/kiss-my-foot-said-the-king-firearms-diplomacy-and-the-battle-for-raichur-1520/C1119D2078354BEEC93D5F35517A700F"
    },
    {
-    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar), 1900, chronicle of Nunes",
-    "url": "https://archive.org/details/forgottenempire00robe"
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
+    "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, Delhi, 2014)",
+    "url": "https://search.worldcat.org/search?q=Power%2C%20Memory%2C%20Architecture%3A%20Contested%20Sites%20on%20India%27s%20Deccan%20Plateau%2C%201300%E2%80%931600%20Richard%20M.%20Eaton%20and%20Phillip%20B.%20Wagoner"
    },
    {
     "title": "Wikipedia, ‘Battle of Raichur’",
@@ -412,20 +452,20 @@ window.DECCAN_ENTRIES = [
   "story": "The nayakas are the collection’s demonstration that sovereignty in the Deccan was delegated before it was divided. They were governors who became kings without a revolution, by continuing to do what they had done while the centre faded. That mode of succession, in which a subordinate layer inherits the functions of the layer above it, recurs with the Mughal governors who became Nizams and the Peshwas who eclipsed the Chhatrapati. The southern Deccan after 1565 is the first and clearest example.",
   "sources": [
    {
-    "title": "Velcheru Narayana Rao, David Shulman and Sanjay Subrahmanyam, Symbols of Substance: Court and State in Nāyaka Period Tamilnadu (OUP, 1992)",
-    "url": "https://archive.org/details/bwb_P8-AVL-802"
+    "title": "Velcheru Narayana Rao, David Shulman and Sanjay Subrahmanyam, Symbols of Substance: Court and State in Nāyaka Period Tamilnadu (Oxford University Press, Delhi, 1992)",
+    "url": "https://search.worldcat.org/search?q=Symbols%20of%20Substance%3A%20Court%20and%20State%20in%20N%C4%81yaka%20Period%20Tamilnadu%20Velcheru%20Narayana%20Rao%2C%20David%20Shulman%20and%20Sanjay%20Subrahmanyam"
    },
    {
-    "title": "Burton Stein, Vijayanagara (New Cambridge History of India, 1989)",
-    "url": "https://books.google.com/books/about/The_New_Cambridge_History_of_India.html?id=OpxeaYQbGDMC"
+    "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
+    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+   },
+   {
+    "title": "George Michell, Architecture and Art of Southern India: Vijayanagara and the Successor States 1350–1750 (The New Cambridge History of India, I.6) (Cambridge University Press, 1995)",
+    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20Southern%20India%3A%20Vijayanagara%20and%20the%20Successor%20States%201350%E2%80%931750%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.6%29%20George%20Michell"
    },
    {
     "title": "Wikipedia, ‘Thanjavur Nayak kingdom’",
     "url": "https://en.wikipedia.org/wiki/Thanjavur_Nayak_kingdom"
-   },
-   {
-    "title": "Wikipedia, ‘Nayakas of Keladi’",
-    "url": "https://en.wikipedia.org/wiki/Nayakas_of_Keladi"
    }
   ],
   "related_maps": [
@@ -452,12 +492,16 @@ window.DECCAN_ENTRIES = [
   "story": "Rama Raya is the figure who shows that the two Deccans were one political system. For twenty years the regent of Vijayanagara was a regular participant in sultanate wars, an ally by turns of each court and an employer of Muslim officers. His fall came when the system he had worked so well turned on him. The collection treats 1565 as the end of one balance of power among several, and his career explains why the balance existed.",
   "sources": [
    {
-    "title": "Britannica, ‘Aravidu dynasty’",
-    "url": "https://www.britannica.com/topic/Aravidu-dynasty"
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
    },
    {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge, 2005), chapter on Rama Raya",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, Delhi, 2014)",
+    "url": "https://search.worldcat.org/search?q=Power%2C%20Memory%2C%20Architecture%3A%20Contested%20Sites%20on%20India%27s%20Deccan%20Plateau%2C%201300%E2%80%931600%20Richard%20M.%20Eaton%20and%20Phillip%20B.%20Wagoner"
+   },
+   {
+    "title": "Britannica, ‘Aravidu dynasty’",
+    "url": "https://www.britannica.com/topic/Aravidu-dynasty"
    },
    {
     "title": "Wikipedia, ‘Rama Raya’",
@@ -486,12 +530,16 @@ window.DECCAN_ENTRIES = [
   "story": "Talikota closes the first period and the collection treats it with some care, because it has been made to carry more than the evidence allows. It was a battle between states that had fought alongside each other the decade before, won by an alliance formed against one man’s diplomacy, and followed by the victors going home. What changed was the distribution of sovereignty: the great southern layer lost its centre, and the nayakas, Mysore and the sultanates each took a portion. That redistribution, rather than any civilisational rupture, is what the later periods inherit.",
   "sources": [
    {
-    "title": "Britannica, ‘Vijayanagar’",
-    "url": "https://www.britannica.com/place/Vijayanagar"
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
    },
    {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge, 2005)",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
+    "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
+    "url": "https://archive.org/details/dli.csl.7467"
    },
    {
     "title": "Wikipedia, ‘Battle of Talikota’",
@@ -521,15 +569,19 @@ window.DECCAN_ENTRIES = [
   "story": "Every other entry in this period is about power changing hands; this one is about what did not change. The sultanates were conquered but the culture they had made, in a vernacular that Sufi shrines had shaped before any sultan patronised it, passed intact to the Nizam’s Hyderabad and to the Marathi and Kannada districts around it. The collection needs the entry to show that layered sovereignty left a layered society behind it, which the Company would later describe, map and largely misunderstand.",
   "sources": [
    {
-    "title": "Dakhni – Dakhni.org",
-    "url": "https://dakhni.org/language/dakhni/"
+    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
+    "url": "https://search.worldcat.org/search?q=Sufis%20of%20Bijapur%201300%E2%80%931700%3A%20Social%20Roles%20of%20Sufis%20in%20Medieval%20India%20Richard%20M.%20Eaton"
    },
    {
-    "title": "Richard Eaton, Sufis of Bijapur 1300–1700 (Princeton UP) – Google Books",
-    "url": "https://books.google.com/books?id=ezbWCgAAQBAJ"
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
    },
    {
-    "title": "Deccani language – Wikipedia",
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+   },
+   {
+    "title": "Wikipedia, ‘Deccani language’",
     "url": "https://en.wikipedia.org/wiki/Deccani_language"
    }
   ],
@@ -558,16 +610,20 @@ window.DECCAN_ENTRIES = [
   "story": "Malik Ambar is the clearest case in the collection of sovereignty exercised by someone who held no throne. An African regent ruling in the name of a puppet sultan, fighting an empire with Maratha horsemen and paying for it with a Mughal-style land survey, he combined the period’s layers in one career. The Marathas who later built a state out of the same hills learned their trade in his service, and his revenue settlement was still the reference point for Elphinstone’s officers two centuries later.",
   "sources": [
    {
-    "title": "Malik Ambar – Wikipedia",
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+   },
+   {
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+   },
+   {
+    "title": "Wikipedia, ‘Malik Ambar’",
     "url": "https://en.wikipedia.org/wiki/Malik_Ambar"
-   },
-   {
-    "title": "Battle of Bhatvadi – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Bhatvadi"
-   },
-   {
-    "title": "Richard Eaton, A Social History of the Deccan (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=lJ5cAAAAMAAJ"
    }
   ],
   "related_maps": [
@@ -593,16 +649,20 @@ window.DECCAN_ENTRIES = [
   "story": "Ibrahim’s Bijapur shows what a Deccan sultanate looked like at its most secure, a generation before Mughal tribute and two generations before annexation. His songs to Saraswati and to Gesudaraz were a way of being sovereign over a mixed population without conceding the throne to any one of its parts. The collection returns to that question repeatedly, because every later power in the Deccan, Maratha, Nizam and Company alike, had to find its own answer to it.",
   "sources": [
    {
-    "title": "Ibrāhīm ʿĀdil Shāh II – Britannica",
-    "url": "https://www.britannica.com/biography/Ibrahim-Adil-Shah-II"
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
    },
    {
-    "title": "Kitab-i Nauras – Wikipedia",
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
+    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+   },
+   {
+    "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
+    "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700"
+   },
+   {
+    "title": "Wikipedia, ‘Kitab-i Nauras’",
     "url": "https://en.wikipedia.org/wiki/Kitab-i_Nauras"
-   },
-   {
-    "title": "Adil Shahi Sultanate – Dakhni.org",
-    "url": "https://dakhni.org/dynasties/adil-shahi/"
    }
   ],
   "related_maps": [
@@ -626,19 +686,23 @@ window.DECCAN_ENTRIES = [
   "lat": 17.3616,
   "lon": 78.4747,
   "strap": "Muhammad Quli Qutb Shah lays out a new open city on the Musi, with the Charminar at its crossing, a few miles from the fortress of Golconda.",
-  "body": "<p>In 1591 Muhammad Quli Qutb Shah, fifth sultan of Golconda, founded a new city on the east bank of the Musi river, about eight kilometres from the hill fort that had been his dynasty’s seat since the Bahmani break-up. Its first building was the Charminar, a square of four arches and four minarets marking the crossing of the two main streets. The name Hyderabad is a reference to Haidar, an epithet of Ali; the tradition that it was first called Bhagnagar after the sultan’s Hindu consort Bhagmati is old but not securely documented.</p>\n<p>Golconda had become crowded and short of water, and the new site was planned as the opposite of a fortress: a grid of broad streets, caravanserais, gardens, a hospital and a central bazaar, open to trade and without a wall. The plan drew on Persian models and on the Qutb Shahi court’s close ties with Safavid Iran, from which many of its nobles had come. The sultan was also a poet, with a large diwan in Dakhni, Persian and Telugu, and the city was meant as a stage for that court culture as much as a commercial hub.</p>\n<p>The diamond trade did the rest. The Kollur and other Golconda mines were the only significant source of diamonds in the world until the eighteenth century, and Hyderabad became the market where European, Persian and Indian merchants bought them. Fortification was left to Golconda, which remained the citadel and treasury; the two functioned as a pair.</p>\n<p>When Aurangzeb took Golconda in 1687, Hyderabad passed into the Mughal subah and then, from 1724, became the capital of the Asaf Jahi state that bore its name. The city outlived the dynasty that built it by three centuries, and the Charminar is still its centre.</p>",
+  "body": "<p>In 1591 Muhammad Quli Qutb Shah, fifth sultan of Golconda, founded a new city on the east bank of the Musi river, about eight kilometres from the hill fort that had been his dynasty’s seat since the Bahmani break-up. Its first building was the Charminar, a square of four arches and four minarets marking the crossing of the two main streets. The name Hyderabad is a reference to Haidar, an epithet of Ali; the tradition that it was first called Bhagnagar after the sultan’s Hindu consort Bhagmati is old but not securely documented.</p>\n<p>Golconda had become crowded and short of water, and the new site was planned as the opposite of a fortress: a grid of broad streets, caravanserais, gardens, a hospital and a central bazaar, open to trade and without a wall. The plan drew on Persian models and on the Qutb Shahi court’s close ties with Safavid Iran, from which many of its nobles had come. The sultan was also a poet, with a large diwan in Dakhni, Persian and Telugu, and the city was meant as a stage for that court culture as much as a commercial hub.</p>\n<p>The diamond trade did the rest. India was virtually the world’s only source of diamonds until Brazilian production began in the 1720s, and the mines associated with Golconda, Kollur above all, were its richest; and Hyderabad became the market where European, Persian and Indian merchants bought them. Fortification was left to Golconda, which remained the citadel and treasury; the two functioned as a pair.</p>\n<p>When Aurangzeb took Golconda in 1687, Hyderabad passed into the Mughal subah and then, after 1724, became one of the principal cities of the Asaf Jahi state; Nizam Ali Khan moved the court from Aurangabad to Hyderabad in the 1760s, and the state took the city’s name. The city outlived the dynasty that built it by three centuries, and the Charminar is still its centre.</p>",
   "story": "Hyderabad is the one city in this collection that was founded inside the period and is still a capital. It was built by a sultanate, inherited by the Mughals, and became the seat of the Nizam and then of a princely state under Company paramountcy. Each of those regimes kept the same city, the same trade and much of the same administrative class, which is a useful reminder that the collapse of plural sovereignty was a change of overlords more than of places.",
   "sources": [
    {
-    "title": "Muḥammad Qulī Quṭb Shah – Britannica",
-    "url": "https://www.britannica.com/biography/Muhammad-Quli-Qutb-Shah"
+    "title": "Haroon Khan Sherwani, History of the Qutb Shahi Dynasty (Munshiram Manoharlal, 1974)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20the%20Qutb%20Shahi%20Dynasty%20Haroon%20Khan%20Sherwani"
    },
    {
-    "title": "The Qutb Shahi Monuments of Hyderabad – UNESCO Tentative List",
+    "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
+    "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700"
+   },
+   {
+    "title": "UNESCO Tentative List, ‘The Qutb Shahi Monuments of Hyderabad’",
     "url": "https://whc.unesco.org/en/tentativelists/5573/"
    },
    {
-    "title": "Charminar – Wikipedia",
+    "title": "Wikipedia, ‘Charminar’",
     "url": "https://en.wikipedia.org/wiki/Charminar"
    }
   ],
@@ -667,20 +731,20 @@ window.DECCAN_ENTRIES = [
   "story": "Shahji’s career is the ordinary one against which Shivaji’s looks extraordinary. Serving Ahmadnagar, the Mughals and Bijapur in turn, and governing a sultanate through a child, he treated sovereignty as something to be rented from whichever overlord offered the best terms. The collection includes him because the Maratha state did not emerge from nowhere: it grew out of a military class that had already learned to run kingdoms for other people, in Bengaluru and Thanjavur as much as in the Sahyadri hills.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Shahaji – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+   },
+   {
+    "title": "Wikipedia, ‘Shahaji’",
     "url": "https://en.wikipedia.org/wiki/Shahaji"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
-   },
-   {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
    }
   ],
   "related_maps": [],
@@ -705,16 +769,20 @@ window.DECCAN_ENTRIES = [
   "story": "Chand Bibi moved between Bijapur and Ahmadnagar as daughter, wife, regent and guardian, a career only possible in a Deccan where the sultanates were bound by marriage as well as war. Her defence of Ahmadnagar is the moment when that system of peer states first met an empire that did not treat them as peers. The cession of Berar was the first piece of Deccan territory to pass under Mughal rule, and it set the pattern of piecemeal absorption that ended at Golconda in 1687.",
   "sources": [
    {
-    "title": "Chand Bibi – Encyclopedia.com",
-    "url": "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/chand-bibi-1550-1599"
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
    },
    {
-    "title": "Chand Bibi – Wikipedia",
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+   },
+   {
+    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
+    "url": "https://archive.org/details/dli.csl.7467"
+   },
+   {
+    "title": "Wikipedia, ‘Chand Bibi’",
     "url": "https://en.wikipedia.org/wiki/Chand_Bibi"
-   },
-   {
-    "title": "Bahadur Nizam Shah – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Bahadur_Nizam_Shah"
    }
   ],
   "related_maps": [
@@ -741,15 +809,19 @@ window.DECCAN_ENTRIES = [
   "story": "Until 1600 the Deccan’s sultanates answered to no one. After it, one of the five had been partly swallowed by an empire whose scale and resources were of a different order, and the others had to calculate their own survival in relation to it. The layered sovereignty of the period that follows, Mughal provinces, tributary sultanates, Maratha deshmukhs serving several masters at once, all begins with this incomplete conquest.",
   "sources": [
    {
-    "title": "India: Mughal Empire under Akbar – Britannica",
-    "url": "https://www.britannica.com/place/India/The-reign-of-Akbar-the-Great"
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
    },
    {
-    "title": "Akbar’s Deccan campaigns 1591–1601 – Studento",
-    "url": "https://www.studento.co.in/medieval-indian-history/regional-kingdoms/akbar-deccan-campaigns-ahmadnagar-khandesh-1591-1601"
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
    },
    {
-    "title": "Chand Bibi – Wikipedia",
+    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
+    "url": "https://archive.org/details/dli.csl.7467"
+   },
+   {
+    "title": "Wikipedia, ‘Chand Bibi’",
     "url": "https://en.wikipedia.org/wiki/Chand_Bibi"
    }
   ],
@@ -776,19 +848,23 @@ window.DECCAN_ENTRIES = [
   "lat": 13.0827,
   "lon": 80.2707,
   "strap": "The East India Company’s first Deccan footholds: a factory at Masulipatnam under Golconda, a fort at Madras from 1639, and the Portuguese island of Bombay from 1668.",
-  "body": "<p>The English East India Company opened its first trading post on the Indian mainland at Masulipatnam in 1611, on the Coromandel coast in the territory of Golconda, to buy the cottons that it sold for spices in the East Indies. A factory at Surat in Mughal Gujarat followed in 1612–13. In 1639 the Company’s agent Francis Day obtained from the local nayaka, a subordinate of the dying Vijayanagara line, a strip of shore at Madraspatnam, and building began in 1640 on Fort St George, the first fortified English settlement in India; Madras became the seat of a presidency in 1652. Bombay, seven islands held by the Portuguese since 1534, passed to Charles II in 1661 as part of Catherine of Braganza’s dowry and was leased to the Company by the royal charter of 27 March 1668 for ten pounds a year. The western headquarters moved there from Surat in 1687.</p>\n<p>Each place was held on different terms from a different sovereign: a licence from the Qutb Shah at Masulipatnam, a grant from a Vijayanagara nayaka at Madras, Mughal permission at Surat, and at Bombay outright possession by the English crown. The Company was not a territorial power and did not wish to be one; it wanted cloth at a good price and security for its stock. But the Dutch were stronger at sea, the Marathas were plundering Surat, and a walled settlement with its own guns and a harbour was the only safe place to keep money.</p>\n<p>The Portuguese, established at Goa since 1510, watched the newcomers with hostility and lost ground to them throughout the century. Their northern province around Bassein survived until the Marathas took it in 1739.</p>\n<p>By 1687 the Company held three fortified towns on three coasts, answerable in form to three different Indian sovereigns and in practice to none of them. That position was the seed of everything in the later periods.</p>",
+  "body": "<p>The English East India Company opened its first trading post on the Indian mainland at Masulipatnam in 1611, on the Coromandel coast in the territory of Golconda, to buy the cottons that it sold for spices in the East Indies. A factory at Surat in Mughal Gujarat followed in 1612–13. In 1639 the Company’s agent Francis Day obtained from the local nayaka, a subordinate of the dying Vijayanagara line, a strip of shore at Madraspatnam, and building began in 1640 on Fort St George, the first fortified English settlement in India; Madras became the seat of a presidency in 1652. Bombay, seven islands held by the Portuguese since 1534, passed to Charles II in 1661 as part of Catherine of Braganza’s dowry and was leased to the Company by the royal charter of 27 March 1668 for ten pounds a year. The western headquarters moved there from Surat in 1687.</p>\n<p>Each place was held on different terms from a different sovereign: a licence from the Qutb Shah at Masulipatnam, a grant from a Vijayanagara nayaka at Madras, Mughal permission at Surat, and at Bombay outright possession by the English crown. The Company was not a territorial power and did not wish to be one; it wanted cloth at a good price and security for its stock. But the Dutch were stronger at sea, the Marathas were plundering Surat, and a walled settlement with its own guns and a harbour was the only safe place to keep money.</p>\n<p>The Portuguese, established at Goa since 1510, watched the newcomers with hostility and lost ground to them throughout the century. Their northern province around Bassein survived until the Marathas took it in 1739.</p>\n<p>By the late 1680s the Company held two fortified territorial bases, Madras and Bombay, beside factories such as Surat and Masulipatnam, answerable in form to different Indian sovereigns and in practice to none of them. That position was the seed of everything in the later periods.</p>",
   "story": "The factories are the Company’s entry in the Deccan’s register of sovereigns, and the point is how modest and how various the entries were. Three footholds, each held by a different legal fiction from a different overlord, with no pretension to rule. The collection follows the Company from this position to paramountcy in 150 years, and the factories matter because they show that the outcome was not foreseen by anyone, least of all the Company’s directors in London.",
   "sources": [
    {
-    "title": "East India Company Factories – FIBIwiki",
-    "url": "https://wiki.fibis.org/w/East_India_Company_Factories"
+    "title": "K. N. Chaudhuri, The Trading World of Asia and the English East India Company, 1660–1760 (Cambridge University Press, 1978)",
+    "url": "https://search.worldcat.org/search?q=The%20Trading%20World%20of%20Asia%20and%20the%20English%20East%20India%20Company%2C%201660%E2%80%931760%20K.%20N.%20Chaudhuri"
    },
    {
-    "title": "East India Company – Britannica",
+    "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
+    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
+   },
+   {
+    "title": "Britannica, ‘East India Company’",
     "url": "https://www.britannica.com/topic/East-India-Company"
    },
    {
-    "title": "Royal Charter of 27 March 1668 – Wikipedia",
+    "title": "Wikipedia, ‘Royal Charter of 27 March 1668’",
     "url": "https://en.wikipedia.org/wiki/Royal_Charter_of_27_March_1668"
    }
   ],
@@ -817,15 +893,19 @@ window.DECCAN_ENTRIES = [
   "story": "Tribute is the form of layered sovereignty that the Mughals preferred, and 1636 is its charter. Bijapur and Golconda kept their sultans, armies and revenues while acknowledging an emperor whose name was on their coins. The arrangement let them grow south at the expense of the nayakas even as they shrank in status, so that the Deccan was simultaneously becoming more Mughal and more sultanate-ruled. The collection treats the settlement as the moment the Deccan’s powers were ranked rather than merely counted.",
   "sources": [
    {
-    "title": "India: Shah Jahan – Britannica",
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+   },
+   {
+    "title": "Britannica, ‘India: Shah Jahan’",
     "url": "https://www.britannica.com/place/India/Shah-Jahan"
    },
    {
-    "title": "John F. Richards, The Mughal Empire (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=HHyVh29gy4QC"
-   },
-   {
-    "title": "Hyderabad Subah – Wikipedia",
+    "title": "Wikipedia, ‘Hyderabad Subah’",
     "url": "https://en.wikipedia.org/wiki/Hyderabad_Subah"
    }
   ],
@@ -854,20 +934,20 @@ window.DECCAN_ENTRIES = [
   "story": "Torna is the smallest event in this period and the one with the longest consequence. A fort changed hands in a country where forts changed hands constantly, but this time the new holder declined to serve the sultan who nominally owned it. The story of the collection is the narrowing of sovereignty, and Shivaji’s forts are a countercurrent: a new claimant inserting itself between the Mughals and the sultanates, in the hills neither of them could hold.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Torna Fort – Wikipedia",
+    "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
+    "url": "https://archive.org/details/sivachhatrapatib00sensuoft"
+   },
+   {
+    "title": "Wikipedia, ‘Torna Fort’",
     "url": "https://en.wikipedia.org/wiki/Torna_Fort"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
    }
   ],
   "related_maps": [],
@@ -891,16 +971,20 @@ window.DECCAN_ENTRIES = [
   "story": "A tomb is a statement about the future, and the Gol Gumbaz says that in the 1640s Bijapur expected to last. Thirty years later Aurangzeb camped beside it. The building belongs in this collection as the physical measure of what Mughal tribute did and did not take from a sultanate: the money and manpower for something this large remained in Bijapur’s hands even after 1636, and that was precisely why Aurangzeb came to take the rest.",
   "sources": [
    {
-    "title": "Gol Gumbaz – Wikipedia",
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
+    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+   },
+   {
+    "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
+    "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700"
+   },
+   {
+    "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
+    "url": "https://archive.org/details/dli.ministry.25421"
+   },
+   {
+    "title": "Wikipedia, ‘Gol Gumbaz’",
     "url": "https://en.wikipedia.org/wiki/Gol_Gumbaz"
-   },
-   {
-    "title": "Gol Gumbaz, Monuments of Bijapur – D’source, IIT Bombay",
-    "url": "https://www.dsource.in/resource/monuments-bijapur/gol-gumbaz"
-   },
-   {
-    "title": "Mohammed Adil Shah of Bijapur – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Mohammed_Adil_Shah_of_Bijapur"
    }
   ],
   "related_maps": [
@@ -928,20 +1012,20 @@ window.DECCAN_ENTRIES = [
   "story": "Sambhaji is the hinge between a state built by one man and a state that survived without him. His execution was meant to close the Maratha chapter and instead opened the longest war in the collection. The brutality of 1689 has made him a figure of modern contention; the collection’s interest is narrower. His reign shows the Maratha polity fighting the Mughals, the Portuguese and the Siddis at once, a small power among large ones, and surviving because its sovereignty did not reside in a single person.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Sambhaji – Wikipedia",
+    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
+   },
+   {
+    "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
+    "url": "https://archive.org/details/tarikh-i-dilkasha"
+   },
+   {
+    "title": "Wikipedia, ‘Sambhaji’",
     "url": "https://en.wikipedia.org/wiki/Sambhaji"
-   },
-   {
-    "title": "Sambhaji – Britannica",
-    "url": "https://www.britannica.com/biography/Sambhaji"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
    }
   ],
   "related_maps": [],
@@ -966,20 +1050,20 @@ window.DECCAN_ENTRIES = [
   "story": "The killing of Afzal Khan was the point at which a jagirdar’s rebellion became a war between states, and the first time a Deccan sultanate was beaten by a power that had grown up inside it. The collection reads the battle as a shift in what counted as a polity: after Pratapgad, Bijapur negotiated with Shivaji as an equal, and the Mughals began to treat him as a problem rather than a bandit. The tiger claws belong to legend; the change in status is documented.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
+    "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
+    "url": "https://archive.org/details/sivachhatrapatib00sensuoft"
    },
    {
-    "title": "Battle of Pratapgarh – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Pratapgarh’",
     "url": "https://en.wikipedia.org/wiki/Battle_of_Pratapgarh"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
    }
   ],
   "related_maps": [],
@@ -1005,20 +1089,20 @@ window.DECCAN_ENTRIES = [
   "story": "Surat brought three of the collection’s polities into one street: a Maratha raiding force, a Mughal governor who hid in his castle, and an English factory that defended itself. The episode showed that the empire’s writ in the Deccan could be broken by a fast-moving regional power, and it taught the Company the value of walls and ships. Both lessons shaped the next century, in which Maratha raids and Company fortifications between them hollowed out Mughal sovereignty on the western coast.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Sack of Surat – Wikipedia",
+    "title": "Jadunath Sarkar, Shivaji and His Times (M. C. Sarkar and Sons, Calcutta, 1919)",
+    "url": "https://archive.org/details/cu31924024056750"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Sack of Surat’",
     "url": "https://en.wikipedia.org/wiki/Sack_of_Surat"
-   },
-   {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
-   },
-   {
-    "title": "Shaista Khan – Britannica",
-    "url": "https://www.britannica.com/biography/Shaista-Khan"
    }
   ],
   "related_maps": [
@@ -1046,20 +1130,20 @@ window.DECCAN_ENTRIES = [
   "story": "The Konkan coast in the 1660s had more sovereigns per mile than anywhere in India: Portuguese at Goa and Bassein, Siddis at Janjira, the Company at Bombay, Bijapur’s officers in the ports and now a Maratha fleet. Sindhudurg is the collection’s way into that crowded sea. It shows the Maratha state trying to act as a maritime power, succeeding against merchants and failing against an island fort, a limit that the Company would exploit when it destroyed the Angre fleet a century later.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Sindhudurg Fort – Wikipedia",
+    "title": "Surendra Nath Sen, The Military System of the Marathas (The Book Company, Calcutta, 1928)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.102812"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Sindhudurg Fort’",
     "url": "https://en.wikipedia.org/wiki/Sindhudurg_Fort"
-   },
-   {
-    "title": "Sindhudurg – Maharashtra Tourism",
-    "url": "https://maharashtratourism.gov.in/fort/sindhudurg/"
-   },
-   {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
    }
   ],
   "related_maps": [
@@ -1086,20 +1170,20 @@ window.DECCAN_ENTRIES = [
   "story": "Purandar and Agra test the period’s central question: could the Mughal system absorb a Maratha chief the way it had absorbed Rajput kings? Jai Singh, himself a Rajput, thought so, and the treaty was drafted on that model. The ranking at court, and the escape, showed that the model did not transfer. The collection treats 1665–66 as the point where the Marathas moved from a possible layer within the empire to a rival claim against it.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Treaty of Purandar (1665) – Wikipedia",
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+   },
+   {
+    "title": "Jadunath Sarkar, Shivaji and His Times (M. C. Sarkar and Sons, Calcutta, 1919)",
+    "url": "https://archive.org/details/cu31924024056750"
+   },
+   {
+    "title": "Wikipedia, ‘Treaty of Purandar’",
     "url": "https://en.wikipedia.org/wiki/Treaty_of_Purandar_(1665)"
-   },
-   {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
-   },
-   {
-    "title": "John F. Richards, The Mughal Empire (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=HHyVh29gy4QC"
    }
   ],
   "related_maps": [],
@@ -1119,24 +1203,24 @@ window.DECCAN_ENTRIES = [
   "lat": 18.234,
   "lon": 73.44,
   "strap": "Shivaji’s council of eight ministers, and the Sanskrit lexicon that renamed the Persian vocabulary of Deccan government.",
-  "body": "<p>The Ashtapradhan, the council of eight chief ministers, was given its settled form at Shivaji’s coronation in 1674, although most of the offices had existed under other names for a decade or more. The eight were the Peshwa, or Mukhya Pradhan, chief minister and keeper of the seal; the Amatya, or Majumdar, in charge of accounts and revenue; the Sachiv, who checked correspondence and records; the Mantri, who kept the king’s diary and intelligence; the Senapati, commander of the army; the Sumant, or Dabir, for foreign affairs; the Nyayadhish, chief judge; and the Panditrao, in charge of religious affairs and charities. All but the last two were expected to command troops in the field.</p>\n<p>The titles were Sanskrit by deliberate choice. The Deccan sultanates and the Mughals ran their administration in Persian, and Marathi records of the early seventeenth century are thick with Persian terms: peshwa itself is one, as are majumdar and dabir. In 1677 Shivaji commissioned a lexicon, the <em>Rajyavyavaharakosha</em>, compiled by Raghunath Pandit, which listed some 1,400 Persian administrative words with Sanskrit equivalents. Not all of the new words took; peshwa, the most important, never went out of use.</p>\n<p>The council was appointed by the king, held office at his pleasure and was not hereditary. Sambhaji dispensed with much of it, and during the wars after 1689 the offices became posts held by individual families. When Shahu restored the council after 1707 the Peshwa rapidly overshadowed the rest, and from the 1720s the office was hereditary in the Bhat family at Pune and was the effective government of the Maratha state.</p>\n<p>The Ashtapradhan thus began as an attempt to build a cabinet that served the crown and ended as the seed of a ministerial dynasty that supplanted it. The lexicon is its best record: a state deciding what language it would govern in.</p>",
+  "body": "<p>The Ashtapradhan, the council of eight chief ministers, was given its settled form at Shivaji’s coronation in 1674, although most of the offices had existed under other names for a decade or more. The eight were the Peshwa, or Mukhya Pradhan, chief minister and keeper of the seal; the Amatya, or Majumdar, in charge of accounts and revenue; the Sachiv, who checked correspondence and records; the Mantri, who kept the king’s diary and intelligence; the Senapati, commander of the army; the Sumant, or Dabir, for foreign affairs; the Nyayadhish, chief judge; and the Panditrao, in charge of religious affairs and charities. All but the last two were expected to command troops in the field.</p>\n<p>At the coronation the offices were consciously Sanskritised and several received formal Sanskrit titles, though Persian-derived terms stayed in use. The Deccan sultanates and the Mughals ran their administration in Persian, and Marathi records of the early seventeenth century are thick with Persian terms: peshwa itself is one, as are majumdar and dabir. In 1677 Shivaji commissioned a lexicon, the <em>Rajyavyavaharakosha</em>, compiled by Raghunath Pandit, which listed some 1,400 Persian administrative words with Sanskrit equivalents. Not all of the new words took; peshwa, the most important, never went out of use.</p>\n<p>The council was appointed by the king, held office at his pleasure and was not hereditary. Sambhaji dispensed with much of it, and during the wars after 1689 the offices became posts held by individual families. When Shahu restored the council after 1707 the Peshwa rapidly overshadowed the rest, and from the 1720s the office was hereditary in the Bhat family at Pune and was the effective government of the Maratha state.</p>\n<p>The Ashtapradhan thus began as an attempt to build a cabinet that served the crown and ended as the seed of a ministerial dynasty that supplanted it. The lexicon is its best record: a state deciding what language it would govern in.</p>",
   "story": "The Ashtapradhan and its lexicon show a Deccan power doing consciously what the sultanates had done by accident, assembling a government out of Persian practice and local custom and then choosing how to name it. The collection includes it because the institution’s later history is the history of the Maratha polity itself: a council meant to serve a Chhatrapati became a Peshwa who ruled in his name, the same slide from officer to sovereign that Malik Ambar and Nizam-ul-Mulk performed elsewhere.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Ashta Pradhan – Britannica",
-    "url": "https://www.britannica.com/topic/Ashta-Pradhan"
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
    },
    {
-    "title": "Ashta Pradhan – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Ashta Pradhan’",
     "url": "https://en.wikipedia.org/wiki/Ashta_Pradhan"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
    }
   ],
   "related_maps": [],
@@ -1160,20 +1244,20 @@ window.DECCAN_ENTRIES = [
   "story": "A coronation is a claim addressed to others, and Shivaji’s was addressed at once to the Mughals, to Bijapur, to the Brahmins and to the Company’s agent in the crowd. By taking a Sanskrit title and a Rajput pedigree he placed the new state in a register the sultanates and the empire did not control. The collection marks 1674 as the moment a further layer of sovereignty was formally added to the Deccan, one the Company would still be dealing with at Satara in the 1830s.",
   "sources": [
    {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Pune: Param Mitra, 2011)",
-    "url": "https://books.google.com/books/about/Shivaji_His_Life_and_Times.html?id=3BRCMwEACAAJ"
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
    },
    {
-    "title": "Shivaji – Britannica",
-    "url": "https://www.britannica.com/biography/Shivaji"
+    "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
+    "url": "https://archive.org/details/sivachhatrapatib00sensuoft"
    },
    {
-    "title": "Shivaji – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Shivaji’",
     "url": "https://en.wikipedia.org/wiki/Shivaji"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=8m-D7ZtTDaoC"
    }
   ],
   "related_maps": [],
@@ -1198,20 +1282,20 @@ window.DECCAN_ENTRIES = [
   "story": "1687 is the collection’s first collapse of plurality, and it is instructive that it failed. By removing the sultanates Aurangzeb removed the intermediaries that had absorbed Maratha energy and Mughal demands alike, and he inherited their enemies without their local knowledge. The layers did not disappear; they reformed, as the Maratha state and the Nizam’s. The Company a century later would manage the same consolidation more durably, by keeping the intermediaries and taking their revenues instead.",
   "sources": [
    {
-    "title": "Aurangzeb – Britannica",
-    "url": "https://www.britannica.com/biography/Aurangzeb"
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
    },
    {
-    "title": "Siege of Golconda – Wikipedia",
+    "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
+    "url": "https://search.worldcat.org/search?q=Mughal%20Administration%20in%20Golconda%20John%20F.%20Richards"
+   },
+   {
+    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
+   },
+   {
+    "title": "Wikipedia, ‘Siege of Golconda’",
     "url": "https://en.wikipedia.org/wiki/Siege_of_Golconda"
-   },
-   {
-    "title": "Sikandar Adil Shah – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Sikandar_Adil_Shah"
-   },
-   {
-    "title": "John F. Richards, The Mughal Empire (Cambridge UP) – Google Books",
-    "url": "https://books.google.com/books?id=HHyVh29gy4QC"
    }
   ],
   "related_maps": [
@@ -1241,20 +1325,20 @@ window.DECCAN_ENTRIES = [
   "story": "The Angres show that a layer of sovereignty could be held from the sea. Kanhoji owed nominal allegiance to Satara, taxed the Company’s and the Portuguese’s trade, and treated with all three as an equal. His fleet was the last Indian naval power on the west coast, and its destruction in 1756 was the Company’s first joint operation with the Peshwa, a preview of the partnership that would undo the Marathas themselves.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "Surendra Nath Sen, The Military System of the Marathas (The Book Company, Calcutta, 1928)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.102812"
    },
    {
-    "title": "Kanhoji Angre – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Kanhoji_Angre"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Maratha Confederacy – Britannica",
-    "url": "https://www.britannica.com/place/Maratha-confederacy"
-   },
-   {
-    "title": "Clement Downing, A Compendious History of the Indian Wars (1737) (archive.org)",
+    "title": "Clement Downing, A Compendious History of the Indian Wars (T. Cooper, London, 1737)",
     "url": "https://archive.org/details/bim_eighteenth-century_a-compendious-history-of_downing-clement_1737"
+   },
+   {
+    "title": "Wikipedia, ‘Kanhoji Angre’",
+    "url": "https://en.wikipedia.org/wiki/Kanhoji_Angre"
    }
   ],
   "related_maps": [
@@ -1282,16 +1366,20 @@ window.DECCAN_ENTRIES = [
   "story": "Tarabai marks the point at which the Maratha kingdom stopped depending on a single ruler. Through a widow’s regency the state carried on a war its founders had started, and when the Mughals released a rival heir the result was two Chhatrapatis, at Satara and Kolhapur, both claiming Shivaji’s inheritance. That division, never fully healed, is one reason the real power of the Marathas passed from kings to ministers and generals.",
   "sources": [
    {
-    "title": "Richard M. Eaton, ‘Tarabai (1675–1761): The Rise of Brahmins in Politics’, A Social History of the Deccan",
+    "title": "Richard M. Eaton, ‘Tarabai (1675–1761): The Rise of Brahmins in Politics’, in A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
     "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/tarabai-16751761-the-rise-of-brahmins-in-politics/047C683C223579529A84EC66D9A68F5A"
    },
    {
-    "title": "Tarabai – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Tarabai"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Shalini Patil, Maharani Tarabai of Kolhapur, c. 1675–1761 (Google Books)",
-    "url": "https://books.google.com/books/about/Maharani_Tarabai_of_Kolhapur_C_1675_1761.html?id=p7y1AAAAIAAJ"
+    "title": "Shalini Patil, Maharani Tarabai of Kolhapur, c. 1675–1761 (S. Chand, New Delhi, 1987)",
+    "url": "https://search.worldcat.org/search?q=Maharani%20Tarabai%20of%20Kolhapur%2C%20c.%201675%E2%80%931761%20Shalini%20Patil"
+   },
+   {
+    "title": "Wikipedia, ‘Tarabai’",
+    "url": "https://en.wikipedia.org/wiki/Tarabai"
    }
   ],
   "related_maps": [
@@ -1318,16 +1406,20 @@ window.DECCAN_ENTRIES = [
   "story": "Jinji shows sovereignty as something portable. The Maratha kingdom of the 1690s had no fixed capital, a king in a borrowed fort at the far end of the peninsula, and commanders who raised their own revenue in the field. That the state survived in this form, and that Mughal generals found it convenient not to end it, says a good deal about how thin imperial control of the Deccan remained even at the moment of Aurangzeb’s greatest territorial reach.",
   "sources": [
    {
-    "title": "Siege of Jinji – Wikipedia",
+    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
+    "url": "https://archive.org/details/tarikh-i-dilkasha"
+   },
+   {
+    "title": "Wikipedia, ‘Siege of Jinji’",
     "url": "https://en.wikipedia.org/wiki/Siege_of_Jinji"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (New Cambridge History of India)",
-    "url": "https://www.amazon.com/Marathas-1600-1818-Cambridge-History-India/dp/0521033160"
-   },
-   {
-    "title": "Aurangzeb – Britannica",
-    "url": "https://www.britannica.com/biography/Aurangzeb"
    }
   ],
   "related_maps": [
@@ -1352,19 +1444,23 @@ window.DECCAN_ENTRIES = [
   "lat": 18.52,
   "lon": 73.86,
   "strap": "The second Peshwa, who took Maratha arms north of the Narmada and made the Peshwa’s office the real centre of the state.",
-  "body": "<p>Bajirao Ballal (1700–1740) was appointed Peshwa by Shahu on 17 April 1720, days after his father Balaji Vishwanath died, over the objections of older ministers. He held the office for twenty years and spent most of them on horseback. His argument, recorded in the chronicles, was that the Mughal empire was a withered tree that would fall if its trunk were struck, and that the Marathas should go north for revenue rather than fight the Nizam for the Deccan.</p>\n<p>He did both. After Palkhed (1728) he sent Malhar Rao Holkar, Ranoji Shinde and Udaji Pawar into Malwa, where by 1731 they were collecting chauth and where the Mughal governors could not hold the field; the Gaekwads did the same in Gujarat. In 1729 he relieved Chhatrasal of Bundelkhand from a Mughal siege and was rewarded with a third of the Bundela state and with Chhatrasal’s daughter Mastani, whose place in the Peshwa’s household was resented at Pune and remains poorly documented. In March 1737 he rode to the outskirts of Delhi, skirmished under the walls and withdrew, having shown the court it could not defend itself. Nizam-ul-Mulk came north to restore the position, was surrounded near Bhopal, and in January 1738 at Doraha agreed to the cession of Malwa. Bajirao died of fever at Rawerkhedi on the Narmada on 28 April 1740, on his way north again.</p>\n<p>His legacy was an office and a set of families. By 1740 the Peshwa, not the Chhatrapati, directed Maratha policy; Shahu signed what Pune sent him. The commanders Bajirao sent north – Holkar, Shinde, Pawar, the Bhonsles of Nagpur, the Gaekwads – held their conquests as saranjam, assignments of revenue for the upkeep of troops, and within a generation were hereditary princes. The Maratha empire of the mid-century, and its later fragmentation, were both his work.</p>",
+  "body": "<p>Bajirao Ballal (1700–1740) was appointed Peshwa by Shahu on 17 April 1720, days after his father Balaji Vishwanath died, over the objections of older ministers. He held the office for twenty years and spent most of them on horseback. His argument, recorded in the chronicles, was that the Mughal empire was a withered tree that would fall if its trunk were struck, and that the Marathas should go north for revenue rather than fight the Nizam for the Deccan.</p>\n<p>He did both. After Palkhed (1728) he sent Malhar Rao Holkar, Ranoji Scindia (Shinde) and Udaji Pawar into Malwa, where by 1731 they were collecting chauth and where the Mughal governors could not hold the field; the Gaekwads did the same in Gujarat. In 1729 he relieved Chhatrasal of Bundelkhand from a Mughal siege and was rewarded with a third of the Bundela state and with Mastani, whom tradition identifies as Chhatrasal’s daughter; her place in the Peshwa’s household was resented at Pune and remains poorly documented. In March 1737 he rode to the outskirts of Delhi, skirmished under the walls and withdrew, having shown the court it could not defend itself. Nizam-ul-Mulk came north to restore the position, was surrounded near Bhopal, and in January 1738 at Doraha agreed to the cession of Malwa. Bajirao died of fever at Rawerkhedi on the Narmada on 28 April 1740, on his way north again.</p>\n<p>His legacy was an office and a set of families. By 1740 the Peshwa, not the Chhatrapati, directed Maratha policy; Shahu signed what Pune sent him. The commanders Bajirao sent north – Holkar, Scindia, Pawar, the Bhonsles of Nagpur, the Gaekwads – held their conquests as saranjam, assignments of revenue for the upkeep of troops, and within a generation were hereditary princes. The Maratha empire of the mid-century, and its later fragmentation, were both his work.</p>",
   "story": "Bajirao is the person through whom sovereignty slipped from king to minister. Shahu remained Chhatrapati; every grant and treaty was in his name; but the decisions were taken at Pune. The Peshwa also exported the Deccan’s layered arrangements northward, so that Malwa and Gujarat acquired the same division between Mughal governor and Maratha collector that the Nizam’s provinces already had.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Baji Rao I – Britannica",
-    "url": "https://www.britannica.com/biography/Baji-Rao-I"
+    "title": "V. G. Dighe, Peshwa Bajirao I and Maratha Expansion (Karnatak Publishing House, Bombay, 1944)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.282586"
    },
    {
-    "title": "Bajirao I – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Bajirao I’",
     "url": "https://en.wikipedia.org/wiki/Bajirao_I"
    }
   ],
@@ -1392,16 +1488,20 @@ window.DECCAN_ENTRIES = [
   "story": "Aurangzeb’s death is the hinge of the collection. For a generation the Mughal empire had tried to be the single sovereign of the Deccan and had come closer than anyone before it. What it left instead was a set of overlapping claims – imperial, Maratha, provincial – none of which could exclude the others. The layering the throughline describes became, after 1707, the normal condition of the south rather than a problem awaiting solution.",
   "sources": [
    {
-    "title": "Aurangzeb – Britannica",
-    "url": "https://www.britannica.com/biography/Aurangzeb"
+    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
    },
    {
-    "title": "Tomb of Aurangzeb – Wikipedia",
+    "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
+    "url": "https://archive.org/details/tarikh-i-dilkasha"
+   },
+   {
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+   },
+   {
+    "title": "Wikipedia, ‘Tomb of Aurangzeb’",
     "url": "https://en.wikipedia.org/wiki/Tomb_of_Aurangzeb"
-   },
-   {
-    "title": "Aurangzeb – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Aurangzeb"
    }
   ],
   "related_maps": [
@@ -1424,24 +1524,24 @@ window.DECCAN_ENTRIES = [
   "lat": 18.519,
   "lon": 73.855,
   "strap": "The dual constitution of the Maratha state: a king at Satara who reigned, and a hereditary Brahmin minister at Pune who governed.",
-  "body": "<p>From Shahu’s coronation at Satara in January 1708 until his death there in December 1749 the Maratha state had two capitals. Satara held the Chhatrapati, the court, the royal seal and the right to grant titles and saranjams; Pune, from the 1720s, held the Peshwa, the army, the treasury, and the correspondence. Shahu, an easy-going man who had spent his youth in Aurangzeb’s camp, was content with this. Bajirao made the arrangement visible in stone when he laid the foundation of Shaniwar Wada at Pune on 10 January 1730 and moved in on 22 January 1732. Satara objected that only the king could build in stone, and the upper storeys went up in brick.</p>\n<p>The office of Peshwa was one of Shivaji’s eight ministers, and under him it was revocable. From 1713 it stayed in one family, the Bhat Chitpavans of Shrivardhan: Balaji Vishwanath, Bajirao, Balaji Bajirao (Nanasaheb), Madhavrao, and on to Bajirao II. Appointment remained formally the Chhatrapati’s, and the Peshwa went to Satara to receive the robes of office, but the succession was never seriously contested by the king. Around the Peshwa grew a second administration of Brahmin clerks, bankers and revenue farmers, the world Eaton describes as the Brahmin ascendancy in Maratha politics.</p>\n<p>The system worked while Shahu lived, because the great commanders – Holkar, Shinde, the Bhonsles of Nagpur – held their saranjams from him and could appeal to him against Pune. After 1749 there was no such court of appeal. Shahu’s successor Ramraja was a cipher, Tarabai tried and failed to use him, and from 1750 the Peshwa ruled from Pune with the Chhatrapati in his keeping. The Company, when it arrived as a political power in the 1770s, dealt with Pune and found Satara a puzzle; in 1818 it would solve the puzzle by separating them again.</p>",
+  "body": "<p>From Shahu’s coronation at Satara in January 1708 until his death there in December 1749 the Maratha state had two capitals. Satara held the Chhatrapati, the court, the royal seal and the right to grant titles and saranjams; Pune, from the 1720s, held the Peshwa, the army, the treasury, and the correspondence. Shahu, an easy-going man who had spent his youth in Aurangzeb’s camp, was content with this. Bajirao made the arrangement visible in stone when he laid the foundation of Shaniwar Wada at Pune on 10 January 1730 and moved in on 22 January 1732. Satara objected that only the king could build in stone, and the upper storeys went up in brick.</p>\n<p>The office of Peshwa was one of Shivaji’s eight ministers, and under him it was revocable. From 1713 it stayed in one family, the Bhat Chitpavans of Shrivardhan: Balaji Vishwanath, Bajirao, Balaji Bajirao (Nanasaheb), Madhavrao, and on to Bajirao II. Appointment remained formally the Chhatrapati’s, and the Peshwa went to Satara to receive the robes of office, but the succession was never seriously contested by the king. Around the Peshwa grew a second administration of Brahmin clerks, bankers and revenue farmers, the world Eaton describes as the Brahmin ascendancy in Maratha politics.</p>\n<p>The system worked while Shahu lived, because the great commanders – Holkar, Scindia, the Bhonsles of Nagpur – held their saranjams from him and could appeal to him against Pune. After 1749 there was no such court of appeal. Shahu’s successor Ramraja was a cipher, Tarabai tried and failed to use him, and from 1750 the Peshwa ruled from Pune with the Chhatrapati in his keeping. The Company, when it arrived as a political power in the 1770s, dealt with Pune and found Satara a puzzle; in 1818 it would solve the puzzle by separating them again.</p>",
   "story": "This is the clearest instance in the collection of sovereignty divided within a single polity. Legitimacy sat at Satara, power at Pune, and each needed the other. The arrangement let the Marathas expand while keeping Shivaji’s line as the source of right, but it also meant that the state had no single will, and the Company later found it could capture the one capital and pension the other.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
    },
    {
-    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Pune: Mula Mutha, 2017)",
-    "url": "https://www.exoticindiaart.com/book/details/extraordinary-epoch-of-nanasaheb-peshwa-hbm404/"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Shaniwar Wada – Wikipedia",
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
+   },
+   {
+    "title": "Wikipedia, ‘Shaniwar Wada’",
     "url": "https://en.wikipedia.org/wiki/Shaniwar_Wada"
-   },
-   {
-    "title": "Maratha Confederacy – Britannica",
-    "url": "https://www.britannica.com/place/Maratha-confederacy"
    }
   ],
   "related_maps": [
@@ -1467,16 +1567,20 @@ window.DECCAN_ENTRIES = [
   "story": "The Ajnapatra states how one Maratha faction understood sovereignty: a king secured by forts, served by appointed officers, and wary of hereditary right and of Europeans alike. Within a decade the Satara Peshwas were building something different, a state of revenue shares and saranjam grants that rewarded exactly the hereditary chiefs the Amatya distrusted. The document lets the reader see the road not taken.",
   "sources": [
    {
-    "title": "Adnyapatra – Wikipedia",
+    "title": "Jadunath Sarkar, House of Shivaji: Studies and Documents on Maratha History, Royal Period (S. N. Sarkar, Calcutta, 1940)",
+    "url": "https://search.worldcat.org/search?q=House%20of%20Shivaji%3A%20Studies%20and%20Documents%20on%20Maratha%20History%2C%20Royal%20Period%20Jadunath%20Sarkar"
+   },
+   {
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Adnyapatra’",
     "url": "https://en.wikipedia.org/wiki/Ajnapatra"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818",
-    "url": "https://www.amazon.com/Marathas-1600-1818-Cambridge-History-India/dp/0521033160"
-   },
-   {
-    "title": "Jadunath Sarkar, House of Shivaji (archive.org)",
-    "url": "https://archive.org/details/house-of-shivaji-jadunath-sarkar"
    }
   ],
   "related_maps": []
@@ -1497,20 +1601,24 @@ window.DECCAN_ENTRIES = [
   "lat": 28.65,
   "lon": 77.23,
   "strap": "Imperial grants of chauth and sardeshmukhi over the Deccan, obtained in Delhi by Shahu’s Peshwa, gave Maratha revenue claims a Mughal legal form.",
-  "body": "<p>In 1719 the Mughal court issued a set of sanads, or imperial patents, to Chhatrapati Shahu. They granted the Marathas the chauth, a quarter of the assessed revenue, and the sardeshmukhi, a further tenth, over the six Mughal subahs of the Deccan; recognised Shahu’s swarajya, the home territory Shivaji had held; and released his mother Yesubai and other relatives held in the imperial camp since 1689. In return Shahu acknowledged Mughal overlordship, undertook to keep order in the Deccan and to furnish a contingent of horse, and paid a tribute.</p>\n<p>The grants were the work of Balaji Vishwanath, a Konkani Chitpavan Brahmin whom Shahu had made Peshwa in November 1713 after he negotiated the admiral Kanhoji Angre into the Satara camp. In 1718 the Sayyid brothers, the kingmakers who controlled the emperor Farrukhsiyar, needed Maratha support; Balaji concluded terms with Husain Ali Khan in the Deccan and marched to Delhi with a Maratha force. Farrukhsiyar was deposed and killed, and the sanads were issued under his short-lived successor Rafi-ud-Darajat in the spring of 1719. Balaji died in April 1720; his son Bajirao succeeded him.</p>\n<p>The arrangement looked like the Mughal settlement Shivaji had refused at Agra in 1666, and in a sense it was. Shahu, who had grown up a prisoner of the imperial household, was content to rule as a Mughal feudatory. But chauth and sardeshmukhi, once written into imperial grants, were claims that could be enforced against any Mughal governor, and they made the Maratha state a revenue-collecting partner in provinces it did not govern. Richard Temple later called the sanads the Marathas’ Magna Carta. That overstates their dignity; what they did was legalise a protection racket and turn it into a constitution, and the Peshwas spent the next forty years extending it northwards.</p>",
+  "body": "<p>In 1719 the Mughal court issued a set of sanads, or imperial patents, to Chhatrapati Shahu. They granted the Marathas the chauth, a quarter of the assessed revenue, and the sardeshmukhi, a further tenth, over the six Mughal subahs of the Deccan; recognised Shahu’s swarajya, the home territory Shivaji had held; and released his mother Yesubai and other relatives held in the imperial camp since 1689. In return Shahu acknowledged Mughal overlordship, undertook to keep order in the Deccan and to furnish a contingent of horse, and paid a tribute.</p>\n<p>The grants were the work of Balaji Vishwanath, a Konkani Chitpavan Brahmin whom Shahu had made Peshwa in November 1713 after he negotiated the admiral Kanhoji Angre into the Satara camp. In 1718 the Sayyid brothers, the kingmakers who controlled the emperor Farrukhsiyar, needed Maratha support; Balaji concluded terms with Husain Ali Khan in the Deccan and marched to Delhi with a Maratha force. Farrukhsiyar was deposed and killed, and the sanads were issued under his short-lived successor Rafi-ud-Darajat in the spring of 1719. Balaji died in April 1720; his son Bajirao succeeded him.</p>\n<p>The arrangement looked like the Mughal settlement Shivaji had refused at Agra in 1666, and in a sense it was. Shahu, who had grown up a prisoner of the imperial household, was content to rule as a Mughal feudatory. But chauth and sardeshmukhi, once written into imperial grants, were claims that could be enforced against any Mughal governor, and they made the Maratha state a revenue-collecting partner in provinces it did not govern. Richard Temple later called the sanads the Marathas’ Magna Carta. That overstates their dignity; in this collection’s reading they legalised a protection racket and turned it into a constitution, and the Peshwas spent the next forty years extending it northwards.</p>",
   "story": "The sanads are the clearest document of layered sovereignty in the collection. The emperor remained sovereign; his governors remained in office; and a Maratha king, by imperial grant, took a third of the revenue of their provinces. Two states thus shared the same territory and the same taxpayers, each with a legal title. The Nizam, the Company and the Peshwa would all later inherit pieces of this arrangement rather than replace it.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Balaji Vishwanath – Wikipedia",
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Balaji Vishwanath’",
     "url": "https://en.wikipedia.org/wiki/Balaji_Vishwanath"
-   },
-   {
-    "title": "Maratha Confederacy – Britannica",
-    "url": "https://www.britannica.com/place/Maratha-confederacy"
    }
   ],
   "related_maps": [
@@ -1535,20 +1643,24 @@ window.DECCAN_ENTRIES = [
   "lat": 12.42,
   "lon": 76.69,
   "strap": "A soldier of fortune who by 1761 had displaced the Wodeyar ministers and made Mysore a military state with a sepoy army of its own.",
-  "body": "<p>Haidar Ali was born about 1720 at Budikote near Kolar, the son of a Muslim soldier in the service of the Mysore Wodeyars. The Wodeyar kings of Srirangapatna were a Vijayanagara successor state, by the 1740s governed in fact by the Dalavai (commander) Nanjaraja and his brother Devaraja. Haidar and his brother served under them, and at the eight-month siege of Devanahalli in 1749 Haidar attracted notice. He was made faujdar of Dindigul in 1755, and there, having watched French troops in the Carnatic wars, he hired French officers and raised infantry drilled and armed in the European manner, the first such corps under an Indian commander.</p>\n<p>Mysore in the 1750s paid tribute to both the Marathas and the Nizam and was nearly bankrupt. Haidar paid the troops when the ministers could not, and by 1759 had the army. Nanjaraja was pushed aside; a rival, the minister Khande Rao, drove Haidar from Srirangapatna in 1760 and tried to raise the Marathas against him, but in 1761 Haidar returned, shut Khande Rao in a cage, and took the government as Sarvadhikari, leaving Krishnaraja Wodeyar II a salaried figurehead. He never took a royal title. In 1763 he seized the Keladi (Bednur) kingdom and its treasury and renamed the capital Haidarnagar; by 1766 he held Kanara and the Malabar coast.</p>\n<p>The state he built was the most centralised in the south: revenue collected by salaried officers rather than hereditary chiefs, a standing army paid in cash, and a capital on an island fortress. It was also the Deccan’s fourth power, and for forty years the Marathas, the Nizam and the Company each allied with two of the others against the third. Haidar died on campaign at Chittoor on 7 December 1782, in the middle of a war with the Company; his son Tipu inherited the state and the war.</p>",
+  "body": "<p>Haidar Ali was born about 1720 at Budikote near Kolar, the son of a Muslim soldier in the service of the Mysore Wodeyars. The Wodeyar kings of Srirangapatna were a Vijayanagara successor state, by the 1740s governed in fact by the Dalavai (commander) Nanjaraja and his brother Devaraja. Haidar and his brother served under them, and at the eight-month siege of Devanahalli in 1749 Haidar attracted notice. He was made faujdar of Dindigul in 1755, and there, having watched French troops in the Carnatic wars, he hired French officers and raised infantry drilled and armed in the European manner.</p>\n<p>Mysore in the 1750s paid tribute to both the Marathas and the Nizam and was nearly bankrupt. Haidar paid the troops when the ministers could not, and by 1759 had the army. Nanjaraja was pushed aside; a rival, the minister Khande Rao, drove Haidar from Srirangapatna in 1760 and tried to raise the Marathas against him, but in 1761 Haidar returned, shut Khande Rao in a cage, and took the government as Sarvadhikari, leaving Krishnaraja Wodeyar II a salaried figurehead. He never took a royal title. In 1763 he seized the Keladi (Bednur) kingdom and its treasury and renamed the capital Haidarnagar; by 1766 he held Kanara and the Malabar coast.</p>\n<p>The state he built was the most centralised in the south: revenue collected by salaried officers rather than hereditary chiefs, a standing army paid in cash, and a capital on an island fortress. It was also the Deccan’s fourth power, and for forty years the Marathas, the Nizam and the Company each allied with two of the others against the third. Haidar died on campaign at Chittoor on 7 December 1782, in the middle of a war with the Company; his son Tipu inherited the state and the war.</p>",
   "story": "Haidar Ali is the last new sovereignty to appear in the collection, and the one that least resembled the layered Mughal model. He ruled in the name of a Hindu king he had reduced to a pensioner, paid no one chauth for long, and ran his country with salaried men. Mysore showed that the alternative to layered sovereignty was military absolutism, and the Company, which destroyed it in 1799, absorbed much of its method.",
   "sources": [
    {
-    "title": "Hyder Ali – Britannica",
-    "url": "https://www.britannica.com/biography/Hyder-Ali"
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
    },
    {
-    "title": "Hyder Ali – Wikipedia",
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
+   },
+   {
+    "title": "Wikipedia, ‘Hyder Ali’",
     "url": "https://en.wikipedia.org/wiki/Hyder_Ali"
-   },
-   {
-    "title": "Kate Brittlebank, Tipu Sultan’s Search for Legitimacy (OUP, 1997) – review, Journal of Asian Studies",
-    "url": "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/tipu-sultans-search-for-legitimacy-islam-and-kingship-in-a-hindu-domain-by-kate-brittlebank-delhi-oxford-university-press-1997-xxii-184-pp-rs-450-cloth/C9F2C47A1D3442AC204E616092DA234C"
    }
   ],
   "related_maps": [
@@ -1577,16 +1689,20 @@ window.DECCAN_ENTRIES = [
   "story": "Hyderabad is the layer of Mughal sovereignty that did not disappear. Nizam-ul-Mulk’s state governed by the emperor’s authority without the emperor, and shared its revenue with Marathas under the emperor’s own grants. It is the best example in the collection of a polity that was neither independent nor subordinate, a position that later allowed the Company to treat it as a sovereign ally while it functioned as a client.",
   "sources": [
    {
-    "title": "Nizam al-Mulk I – Britannica",
-    "url": "https://www.britannica.com/biography/Nizam-al-Mulk-I"
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
    },
    {
-    "title": "Battle of Shakar Kheda – Wikipedia",
+    "title": "Jadunath Sarkar, Fall of the Mughal Empire, 4 vols (M. C. Sarkar and Sons, Calcutta, 1932)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.511649"
+   },
+   {
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Shakar Kheda’",
     "url": "https://en.wikipedia.org/wiki/Battle_of_Shakar_Kheda"
-   },
-   {
-    "title": "Asaf Jah I – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Asaf_Jah_I"
    }
   ],
   "related_maps": [
@@ -1608,24 +1724,24 @@ window.DECCAN_ENTRIES = [
   "lat": null,
   "lon": null,
   "strap": "The great commanders’ houses that held the Maratha conquests as saranjam and, by mid-century, ruled them as princes.",
-  "body": "<p>The Maratha state of the mid-eighteenth century was run through a handful of military families. Malhar Rao Holkar (1693–1766), a Dhangar shepherd’s son, and Ranoji Shinde (Scindia, d. 1745), from a family of Satara patils, went north with Bajirao and were assigned the revenues of Malwa in the early 1730s; Holkar settled at Indore, Shinde at Ujjain, and later Gwalior. The Gaekwads under Pilaji (killed 1732) and Damaji II collected in Gujarat from Baroda. Raghuji Bhonsle (d. 1755), a kinsman of the Chhatrapati whom Shahu made Senasahibsubha in 1728, took Nagpur and from 1741 raided Bengal until the Nawab bought him off in 1751 with Orissa and the chauth of Bengal. The Pawars held Dhar; the Patwardhans and others the southern frontier.</p>\n<p>The instrument that bound them was the saranjam, a Mughal-derived assignment of revenue for the maintenance of a stated number of horse. In theory it was held at the Chhatrapati’s pleasure and accounted for at Pune; in practice, in distant Malwa or Berar, the holder collected what he could, kept his own court and passed the grant to his son. Gordon has shown how these grants, together with the mokasa shares of chauth, produced a state that was less a kingdom than a system for sharing the proceeds of expansion among those who did the fighting.</p>\n<p>The British called the result the Maratha confederacy, and the name has stuck, though Barbara Ramusack notes that neither ‘empire’ nor ‘confederacy’ describes it well. While Shahu lived the houses competed for his favour and accepted the Peshwa as his agent; after 1749 they accepted the Peshwa as first among equals, and after Panipat, where Holkar left the field and Shinde’s heir was killed, hardly that. The five houses that the Company later fought, treated with and pensioned one by one – Pune, Indore, Gwalior, Baroda, Nagpur – were already in being by 1761.</p>",
+  "body": "<p>The Maratha state of the mid-eighteenth century was run through a handful of military families. Malhar Rao Holkar (1693–1766), a Dhangar shepherd’s son, and Ranoji Scindia (Shinde, d. 1745), from a family of Satara patils, went north with Bajirao and were assigned the revenues of Malwa in the early 1730s; Holkar settled at Indore, Scindia at Ujjain, and later Gwalior. The Gaekwads under Pilaji (killed 1732) and Damaji II collected in Gujarat from Baroda. Raghuji Bhonsle (d. 1755), a kinsman of the Chhatrapati whom Shahu made Senasahibsubha in 1728, took Nagpur and from 1741 raided Bengal until the Nawab bought him off in 1751 with Orissa and the chauth of Bengal. The Pawars held Dhar; the Patwardhans and others the southern frontier.</p>\n<p>The instrument that bound them was the saranjam, a Mughal-derived assignment of revenue for the maintenance of a stated number of horse. In theory it was held at the Chhatrapati’s pleasure and accounted for at Pune; in practice, in distant Malwa or Berar, the holder collected what he could, kept his own court and passed the grant to his son. Gordon has shown how these grants, together with the mokasa shares of chauth, produced a state that was less a kingdom than a system for sharing the proceeds of expansion among those who did the fighting.</p>\n<p>The British called the result the Maratha confederacy, and the name has stuck, though Barbara Ramusack notes that neither ‘empire’ nor ‘confederacy’ describes it well. While Shahu lived the houses competed for his favour and accepted the Peshwa as his agent; after 1749 they accepted the Peshwa as first among equals, and after Panipat, where Holkar left the field and Scindia’s heir was killed, hardly that. The five houses that the Company later fought, treated with and pensioned one by one – Pune, Indore, Gwalior, Baroda, Nagpur – were already in being by 1761.</p>",
   "story": "The confederacy is layered sovereignty inside the Maratha polity itself. Every Holkar or Scindia collector in Malwa held his share under a Maratha grant that was itself authorised by a Mughal sanad, and in time under a treaty with the Company as well. Because the houses were sovereign in fact and dependent in form, the British could and did deal with each separately, which is how a single Maratha power became five princely states.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Pune: Mula Mutha, 2017)",
-    "url": "https://www.exoticindiaart.com/book/details/extraordinary-epoch-of-nanasaheb-peshwa-hbm404/"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Maratha Confederacy – Britannica",
-    "url": "https://www.britannica.com/place/Maratha-confederacy"
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
    },
    {
-    "title": "Malhar Rao Holkar – Wikipedia",
+    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
+    "url": "https://search.worldcat.org/search?q=The%20Extraordinary%20Epoch%20of%20Nanasaheb%20Peshwa%20Uday%20S.%20Kulkarni"
+   },
+   {
+    "title": "Wikipedia, ‘Malhar Rao Holkar’",
     "url": "https://en.wikipedia.org/wiki/Malhar_Rao_Holkar"
-   },
-   {
-    "title": "Raghoji I Bhonsle – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Raghoji_I_Bhonsle"
    }
   ],
   "related_maps": [
@@ -1653,16 +1769,20 @@ window.DECCAN_ENTRIES = [
   "story": "Palkhed shows how a layered settlement was enforced. The Peshwa did not conquer the Nizam’s provinces; he made it too expensive to withhold their revenue. Sovereignty in the Deccan after 1728 was divided by function rather than by frontier – the Nizam governed, the Marathas collected – and this kind of partition, invisible on a map, is what later European cartographers and Company officials found so hard to draw.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Battle of Palkhed – Wikipedia",
+    "title": "V. G. Dighe, Peshwa Bajirao I and Maratha Expansion (Karnatak Publishing House, Bombay, 1944)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.282586"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Palkhed’",
     "url": "https://en.wikipedia.org/wiki/Battle_of_Palkhed"
-   },
-   {
-    "title": "Baji Rao I – Britannica",
-    "url": "https://www.britannica.com/biography/Baji-Rao-I"
    }
   ],
   "related_maps": [
@@ -1685,20 +1805,24 @@ window.DECCAN_ENTRIES = [
   "lat": 19.33,
   "lon": 72.81,
   "strap": "Chimaji Appa’s capture of the Portuguese fortress of Baçaim ended the Província do Norte and left Bombay surrounded by Maratha territory.",
-  "body": "<p>Baçaim, Bassein to the English and now Vasai, was the capital of the Portuguese Província do Norte, the strip of coast and islands between Daman and Bombay that Portugal had held since 1534. It had a cathedral, convents, a fidalgo society and a stone fortress. In 1737 the Peshwa’s brother Chimaji Appa opened a campaign against the province, taking Thane and most of Salsette island that year and then reducing the outlying forts one by one. The siege of Baçaim itself began on 17 February 1739. Maratha sappers mined the walls, the garrison repulsed several assaults at heavy cost, and on 16 May 1739 the Portuguese commander capitulated on terms. The garrison marched out with colours flying and drums beating and was shipped to Bombay; the Maratha flag went up over the fort on 23 May.</p>\n<p>Portuguese losses in the siege were reckoned at about eight hundred. The Marathas also took Chaul the following year, leaving Portugal only Daman, Diu and Goa on the west coast. Churches in the conquered territory were closed or demolished, and the Christian population of Salsette and Bassein, many of them converts of the previous two centuries, came under Maratha revenue administration. The Company at Bombay, which had watched the campaign with some alarm, stayed neutral, took in Portuguese refugees, and noted that its island was now bounded on every landward side by the Peshwa.</p>\n<p>Bassein was the first time an Indian power had taken a major European fortress by siege, and it closed the Portuguese chapter of the Deccan that had opened at Goa in 1510. It also set up the geography of the next eighty years. Salsette and Bassein were what the Company wanted from the Marathas in the 1770s; Salsette it took in 1774, and at Bassein itself, in December 1802, Bajirao II signed the treaty that made the Peshwa a Company dependant.</p>",
+  "body": "<p>Baçaim, Bassein to the English and now Vasai, was the capital of the Portuguese Província do Norte, the strip of coast and islands between Daman and Bombay that Portugal had held since 1534. It had a cathedral, convents, a fidalgo society and a stone fortress. In 1737 the Peshwa’s brother Chimaji Appa opened a campaign against the province, taking Thane and most of Salsette island that year and then reducing the outlying forts one by one. The siege of Baçaim itself began on 17 February 1739. Maratha sappers mined the walls, the garrison repulsed several assaults at heavy cost, and on 16 May 1739 the Portuguese commander capitulated on terms. The garrison marched out with colours flying and drums beating and was shipped to Bombay; the Maratha flag went up over the fort on 23 May.</p>\n<p>Portuguese losses in the siege were reckoned at about eight hundred. The Marathas also took Chaul the following year, leaving Portugal only Daman, Diu and Goa on the west coast. Churches in the conquered territory were closed or demolished, and the Christian population of Salsette and Bassein, many of them converts of the previous two centuries, came under Maratha revenue administration. The Company at Bombay, which had watched the campaign with some alarm, stayed neutral, took in Portuguese refugees, and noted that its island was now bounded on every landward side by the Peshwa.</p>\n<p>Bassein was one of the most consequential Indian victories over a European fortified possession in the eighteenth century, and it closed the Portuguese chapter of the Deccan that had opened at Goa in 1510. It also set up the geography of the next eighty years. Salsette and Bassein were what the Company wanted from the Marathas in the 1770s; Salsette it took in 1774, and at Bassein itself, in December 1802, Bajirao II signed the treaty that made the Peshwa a Company dependant.</p>",
   "story": "Bassein shows the oldest European layer in the Deccan removed by the newest Indian one. The Portuguese had been a sovereign presence on the coast since before Vijayanagara fell; in 1739 they became a remnant at Goa. But the conquest also brought the Marathas to the edge of Bombay harbour, and the fortress they took became, in 1802, the place where the Company took the Peshwa.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao (Pune: Mula Mutha, 2016)",
-    "url": "https://www.mulamutha.com/"
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Battle of Vasai – Wikipedia",
+    "title": "V. G. Dighe, Peshwa Bajirao I and Maratha Expansion (Karnatak Publishing House, Bombay, 1944)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.282586"
+   },
+   {
+    "title": "Sanjay Subrahmanyam, The Portuguese Empire in Asia, 1500–1700: A Political and Economic History (Longman, London, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Portuguese%20Empire%20in%20Asia%2C%201500%E2%80%931700%3A%20A%20Political%20and%20Economic%20History%20Sanjay%20Subrahmanyam"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Vasai’",
     "url": "https://en.wikipedia.org/wiki/Battle_of_Vasai"
-   },
-   {
-    "title": "Vasai-Virar – Britannica",
-    "url": "https://www.britannica.com/place/Vasai-Virar"
    }
   ],
   "related_maps": [
@@ -1727,19 +1851,19 @@ window.DECCAN_ENTRIES = [
   "story": "The Carnatic wars are where the Company learned to use the Deccan’s layered sovereignty rather than merely survive in it. By backing claimants to Mughal offices it acquired revenue, territory and an army without claiming to rule anything. The nawab of Arcot became the first of the dependent sovereigns, and the technique perfected here was applied to the Nizam in 1798 and the Peshwa in 1802.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Pune: Mula Mutha, 2017)",
-    "url": "https://www.exoticindiaart.com/book/details/extraordinary-epoch-of-nanasaheb-peshwa-hbm404/"
+    "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
+    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
    },
    {
-    "title": "Carnatic Wars – Britannica",
-    "url": "https://www.britannica.com/event/Carnatic-Wars"
+    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
+    "url": "https://search.worldcat.org/search?q=The%20Extraordinary%20Epoch%20of%20Nanasaheb%20Peshwa%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Robert Clive – Britannica",
-    "url": "https://www.britannica.com/biography/Robert-Clive"
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
    },
    {
-    "title": "Carnatic wars – Wikipedia",
+    "title": "Wikipedia, ‘Carnatic wars’",
     "url": "https://en.wikipedia.org/wiki/Carnatic_wars"
    }
   ],
@@ -1770,20 +1894,20 @@ window.DECCAN_ENTRIES = [
   "story": "Panipat closes the Maratha century because it settled who would not be paramount. The Peshwa’s state had come nearer than any Indian power to replacing the Mughals as a single sovereign for the subcontinent, and on one day lost the capacity to try. In the Deccan the result was a return to the four-cornered balance of Pune, Hyderabad, Mysore and the Company, and the Company was the only corner still gaining.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, Solstice at Panipat: 14 January 1761 (Pune: Mula Mutha, 2011)",
-    "url": "https://www.goodreads.com/book/show/11090612"
+    "title": "Uday S. Kulkarni, Solstice at Panipat, 14 January 1761: An Authentic Account of the Campaign of Panipat (Mula Mutha Publishers, Pune, 2011)",
+    "url": "https://search.worldcat.org/search?q=Solstice%20at%20Panipat%2C%2014%20January%201761%3A%20An%20Authentic%20Account%20of%20the%20Campaign%20of%20Panipat%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Battles of Panipat – Britannica",
-    "url": "https://www.britannica.com/event/Battles-of-Panipat"
+    "title": "Jadunath Sarkar, Fall of the Mughal Empire, 4 vols (M. C. Sarkar and Sons, Calcutta, 1932)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.511649"
    },
    {
-    "title": "Third Battle of Panipat – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Third Battle of Panipat’",
     "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Panipat"
-   },
-   {
-    "title": "Battle of Udgir – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Udgir"
    }
   ],
   "related_maps": [
@@ -1812,16 +1936,20 @@ window.DECCAN_ENTRIES = [
   "story": "Srirangapatna holds the argument about sovereignty in one place. A Vijayanagara outpost became a Wodeyar capital; a Muslim soldier-dynasty ruled from it while keeping the Hindu rajas in residence as a source of legitimacy; the temple and the mosque stood a few hundred yards apart; and the Company, having stormed it, chose to restore the old dynasty rather than annex. Each layer was rearranged rather than erased, and that is the pattern of the whole period.",
   "sources": [
    {
-    "title": "Srirangapatna – Wikipedia",
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+   },
+   {
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Francis Buchanan, A Journey from Madras through the Countries of Mysore, Canara, and Malabar, 3 vols (T. Cadell and W. Davies, London, 1807)",
+    "url": "https://archive.org/details/journeyfrommadra01hami"
+   },
+   {
+    "title": "Wikipedia, ‘Srirangapatna’",
     "url": "https://en.wikipedia.org/wiki/Srirangapatna"
-   },
-   {
-    "title": "Karnataka Tourism – Srirangapatna",
-    "url": "https://karnatakatourism.org/en/destinations/srirangapatna"
-   },
-   {
-    "title": "Daria Daulat Bagh – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Daria_Daulat_Bagh"
    }
   ],
   "related_maps": [
@@ -1851,20 +1979,20 @@ window.DECCAN_ENTRIES = [
   "story": "Nana embodies a layer of Deccan sovereignty that is easy to miss: the ministerial government that ruled in the name of a Peshwa who himself ruled in the name of a Chhatrapati. The arrangement was legally fragile and politically effective. His diplomacy, which kept Pune, Hyderabad and Mysore in changing combinations against the Company, was the last sustained attempt to manage the Deccan as a system of Indian states, and his fall marks the point at which that attempt stopped.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Pune: Mula Mutha, 2023)",
-    "url": "https://www.exoticindiaart.com/book/details/raghoba-assassination-of-narayan-rao-peshwa-hbm239/"
+    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Mula Mutha Publishers, Pune, 2024)",
+    "url": "https://search.worldcat.org/search?q=Raghoba%3A%20The%20Assassination%20of%20Narayan%20Rao%20Peshwa%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Nana Fadnavis (1742–1800) – Royal Asiatic Society archives",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Royal Asiatic Society Archives, ‘Nana Fadnavis (1742–1800)’",
     "url": "https://royalasiaticarchives.org/index.php/nana-fadnavis-1742-1800"
    },
    {
-    "title": "Nana Fadnavis – Wikipedia",
+    "title": "Wikipedia, ‘Nana Fadnavis’",
     "url": "https://en.wikipedia.org/wiki/Nana_Fadnavis"
-   },
-   {
-    "title": "Maratha Wars – Britannica",
-    "url": "https://www.britannica.com/event/Maratha-Wars"
    }
   ],
   "related_maps": [
@@ -1892,20 +2020,20 @@ window.DECCAN_ENTRIES = [
   "story": "Madhavrao’s reign shows that Panipat was not the end of Maratha power in the Deccan. The confederacy recovered, beat the Nizam, pressed Mysore and re-entered Delhi within a decade. It also shows how far that recovery rested on one man’s ability to hold the layered structure of Chhatrapati, Peshwa and sardars together. When he died the layers came apart, and the succession dispute that followed gave the Company its first opening into Maratha politics.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Mastery of Hindustan: Triumphs and Travails of Madhavrao Peshwa (Pune: Mula Mutha, 2022)",
-    "url": "https://www.exoticindiaart.com/book/details/mastery-of-hindustan-triumphs-travails-of-madhavrao-peshwa-hbm405/"
+    "title": "Uday S. Kulkarni, The Mastery of Hindustan: Triumphs and Travails of Madhavrao Peshwa (Mula Mutha Publishers, Pune, 2022)",
+    "url": "https://search.worldcat.org/search?q=The%20Mastery%20of%20Hindustan%3A%20Triumphs%20and%20Travails%20of%20Madhavrao%20Peshwa%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Madhavrao I – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
+   },
+   {
+    "title": "Wikipedia, ‘Madhavrao I’",
     "url": "https://en.wikipedia.org/wiki/Madhavrao_I"
-   },
-   {
-    "title": "Maratha Wars – Britannica",
-    "url": "https://www.britannica.com/event/Maratha-Wars"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (Cambridge, 1993) – Google Books",
-    "url": "https://books.google.com/books?id=OBMrAAAAYAAJ"
    }
   ],
   "related_maps": [
@@ -1935,15 +2063,19 @@ window.DECCAN_ENTRIES = [
   "story": "The war is the first direct collision between the Company and a Deccan state, and the Company lost. The shifting alliance of 1766–69, in which the Nizam changed sides twice and the Marathas took a subsidy to stay home, is the layered Deccan in working order: four powers, none dominant, each treating with the others. The treaty’s unkept defence clause is the seed of the next war, and a reminder that for another thirty years the Company was a participant in Deccan politics rather than its arbiter.",
   "sources": [
    {
-    "title": "Mysore Wars – Britannica",
-    "url": "https://www.britannica.com/event/Mysore-Wars"
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
    },
    {
-    "title": "Hyder Ali – Britannica",
-    "url": "https://www.britannica.com/biography/Hyder-Ali"
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
    },
    {
-    "title": "First Anglo-Mysore War – Wikipedia",
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Wikipedia, ‘First Anglo-Mysore War’",
     "url": "https://en.wikipedia.org/wiki/First_Anglo-Mysore_War"
    }
   ],
@@ -1972,19 +2104,19 @@ window.DECCAN_ENTRIES = [
   "story": "Wadgaon is the clearest evidence in the collection that the Company was not yet paramount: its army surrendered, and its treaty was torn up by its own superiors. Salbai records the working arrangement that followed, a peace in which the Company held one island and one port and left the Deccan to Pune. For the throughline, the treaty’s provision excluding other Europeans is the first time a Deccan state accepted a clause written in the Company’s interest.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Pune: Mula Mutha, 2023)",
-    "url": "https://www.exoticindiaart.com/book/details/raghoba-assassination-of-narayan-rao-peshwa-hbm239/"
+    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Mula Mutha Publishers, Pune, 2024)",
+    "url": "https://search.worldcat.org/search?q=Raghoba%3A%20The%20Assassination%20of%20Narayan%20Rao%20Peshwa%20Uday%20S.%20Kulkarni"
    },
    {
-    "title": "Convention of Wadgaon – Britannica",
-    "url": "https://www.britannica.com/event/Convention-of-Wadgaon"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Maratha Wars – Britannica",
-    "url": "https://www.britannica.com/event/Maratha-Wars"
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
    },
    {
-    "title": "Treaty of Salbai – Wikipedia",
+    "title": "Wikipedia, ‘Treaty of Salbai’",
     "url": "https://en.wikipedia.org/wiki/Treaty_of_Salbai"
    }
   ],
@@ -2013,16 +2145,20 @@ window.DECCAN_ENTRIES = [
   "story": "The rocket complicates the usual story of European military superiority in eighteenth-century India. Mysore’s army was not a traditional force overwhelmed by modern technique; it was a modernising state with its own ordnance, a French-drilled infantry and an artillery park the Company coveted. The Company’s eventual paramountcy rested on finance, coalitions and sea power more than on weapons, and the transfer of the rocket to Woolwich is a small but concrete sign that the flow of knowledge was not one-directional.",
   "sources": [
    {
-    "title": "Mysorean rockets – Wikipedia",
+    "title": "Irfan Habib (ed.), Confronting Colonialism: Resistance and Modernization under Haidar Ali and Tipu Sultan (Anthem Press, London, 2002)",
+    "url": "https://search.worldcat.org/search?q=Confronting%20Colonialism%3A%20Resistance%20and%20Modernization%20under%20Haidar%20Ali%20and%20Tipu%20Sultan%20Irfan%20Habib%20%28ed.%29"
+   },
+   {
+    "title": "Kaveh Yazdani, India, Modernity and the Great Divergence: Mysore and Gujarat (17th to 19th C.) (Brill, Leiden, 2017)",
+    "url": "https://search.worldcat.org/search?q=India%2C%20Modernity%20and%20the%20Great%20Divergence%3A%20Mysore%20and%20Gujarat%20%2817th%20to%2019th%20C.%29%20Kaveh%20Yazdani"
+   },
+   {
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
+   },
+   {
+    "title": "Wikipedia, ‘Mysorean rockets’",
     "url": "https://en.wikipedia.org/wiki/Mysorean_rockets"
-   },
-   {
-    "title": "Battle of Pollilur (1780) – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Pollilur_(1780)"
-   },
-   {
-    "title": "Tipu Sultan – Britannica",
-    "url": "https://www.britannica.com/biography/Tipu-Sultan"
    }
   ],
   "related_maps": [
@@ -2045,23 +2181,23 @@ window.DECCAN_ENTRIES = [
   "lat": 12.87,
   "lon": 74.843,
   "strap": "Haidar Ali died in the field in December 1782; his son ended the second Anglo-Mysore war on equal terms at Mangalore in March 1784.",
-  "body": "<p>Haidar Ali died of illness at his camp near Chittoor on 7 December 1782, in the third year of the second Anglo-Mysore war. His officers concealed the death until his son Tipu, then campaigning on the Malabar coast, could reach the army. Tipu, born at Devanahalli on 1 December 1751, took over the state and the war without a contest.</p>\n<p>The war had begun in 1780 when Haidar, in alliance with the Marathas and the Nizam, invaded the Carnatic and destroyed Baillie’s column at Pollilur. Eyre Coote’s victories at Porto Novo and elsewhere in 1781 steadied the Company, and Salbai detached the Marathas in 1782. Tipu, left alone, carried the war to the west coast. The peace of 1783 in Europe withdrew his French auxiliaries, and he concentrated on the Company garrison at Mangalore, which surrendered in January 1784 after a siege of some eight months.</p>\n<p>The Treaty of Mangalore, signed on 11 March 1784, restored all conquests on both sides within thirty days, released prisoners, and renewed the Company’s trading privileges; Tipu gave up any claim to the Carnatic. The Madras government negotiated it over the objections of Warren Hastings in Calcutta, who thought it a humiliation. It was the last treaty an Indian power concluded with the Company as an equal, and Tipu marked the moment by styling himself Sultan and, on his coins, Padshah, rather than ruling as his father had in the raja’s name.</p>\n<p>The settlement lasted six years. It left Tipu in control of a state stretching from the Krishna to the Malabar coast, with an army reorganised on European lines, and it left the Company persuaded that Mysore could not be tolerated as a permanent rival in the south. Cornwallis’s instructions, when he arrived in 1786, included the means to build the coalition that broke Tipu in 1792.</p>",
+  "body": "<p>Haidar Ali died of illness at his camp near Chittoor on 7 December 1782, in the third year of the second Anglo-Mysore war. His officers concealed the death until his son Tipu, then campaigning on the Malabar coast, could reach the army. Tipu, born at Devanahalli on 1 December 1751, took over the state and the war without a contest.</p>\n<p>The war had begun in 1780 when Haidar, in alliance with the Marathas and the Nizam, invaded the Carnatic and destroyed Baillie’s column at Pollilur. Eyre Coote’s victories at Porto Novo and elsewhere in 1781 steadied the Company, and Salbai detached the Marathas in 1782. Tipu, left alone, carried the war to the west coast. The peace of 1783 in Europe withdrew his French auxiliaries, and he concentrated on the Company garrison at Mangalore, which surrendered in January 1784 after a siege of some eight months.</p>\n<p>The Treaty of Mangalore, signed on 11 March 1784, restored all conquests on both sides within thirty days, released prisoners, and renewed the Company’s trading privileges; Tipu gave up any claim to the Carnatic. The Madras government negotiated it over the objections of Warren Hastings in Calcutta, who thought it a humiliation. It was the last treaty an Indian power concluded with the Company as an equal, and Tipu, unlike his father, ruled in his own name as Sultan.</p>\n<p>The settlement lasted six years. It left Tipu in control of a state stretching from the Krishna to the Malabar coast, with an army reorganised on European lines, and it left the Company persuaded that Mysore could not be tolerated as a permanent rival in the south. Cornwallis’s instructions, when he arrived in 1786, included the means to build the coalition that broke Tipu in 1792.</p>",
   "story": "Mangalore is the high-water mark of Mysore as an independent sovereign among the Deccan powers. The treaty’s symmetry, mutual restitution and mutual release, is something the Company did not offer again. Tipu’s assumption of royal titles at the same moment announces a change in the layered order: the fiction that Mysore’s Muslim rulers governed for the Wodeyar raja was dropped, and a new dynasty claimed sovereignty in its own right, a claim the next two wars were fought to extinguish.",
   "sources": [
    {
-    "title": "Treaty of Mangalore – Britannica",
-    "url": "https://www.britannica.com/topic/Treaty-of-Mangalore"
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
    },
    {
-    "title": "Hyder Ali – Britannica",
-    "url": "https://www.britannica.com/biography/Hyder-Ali"
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
    },
    {
-    "title": "Tipu Sultan – Britannica",
-    "url": "https://www.britannica.com/biography/Tipu-Sultan"
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
    },
    {
-    "title": "Treaty of Mangalore – Wikipedia",
+    "title": "Wikipedia, ‘Treaty of Mangalore’",
     "url": "https://en.wikipedia.org/wiki/Treaty_of_Mangalore"
    }
   ],
@@ -2089,19 +2225,19 @@ window.DECCAN_ENTRIES = [
   "story": "Tipu’s regulations are the most ambitious attempt by any Deccan ruler of the period to make a state that was sovereign in substance as well as in name: its own era, its own coin, its own trade, its own officers answerable to the centre. That ambition, more than his wars, is what made Mysore intolerable to the Company, which could accommodate nominal kings but not a rival system. The restored Mysore of 1799 kept the administrative machinery and lost the claim to sovereignty that had animated it.",
   "sources": [
    {
-    "title": "Kate Brittlebank, Tipu Sultan’s Search for Legitimacy (Oxford, 1997) – Google Books",
-    "url": "https://books.google.com/books?id=D4ZuAAAAMAAJ"
+    "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
+    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
    },
    {
-    "title": "Dawn of a new era: Tipu Sultan and his Mauludi calendar – The Seringapatam Times",
-    "url": "https://toshkhana.wordpress.com/2014/09/19/dawn-of-a-new-era-tipu-sultan-and-his-mauludi-calendar/"
+    "title": "Kaveh Yazdani, India, Modernity and the Great Divergence: Mysore and Gujarat (17th to 19th C.) (Brill, Leiden, 2017)",
+    "url": "https://search.worldcat.org/search?q=India%2C%20Modernity%20and%20the%20Great%20Divergence%3A%20Mysore%20and%20Gujarat%20%2817th%20to%2019th%20C.%29%20Kaveh%20Yazdani"
    },
    {
-    "title": "A sultan’s silken dreams – Down to Earth",
-    "url": "https://www.downtoearth.org.in/economy/a-sultan-s-silken-dreams-51808"
+    "title": "Tipu Sultan, translated by William Kirkpatrick, Select Letters of Tippoo Sultan to Various Public Functionaries (Black, Parry, and Kingsbury, London, 1811)",
+    "url": "https://archive.org/details/selectlettersoft00tipu"
    },
    {
-    "title": "Tipu Sultan – Britannica",
+    "title": "Britannica, ‘Tipu Sultan’",
     "url": "https://www.britannica.com/biography/Tipu-Sultan"
    }
   ],
@@ -2130,15 +2266,19 @@ window.DECCAN_ENTRIES = [
   "story": "The embassies show a Deccan ruler treating sovereignty as something exercised in a world of states, reaching past the Mughal emperor and the Company to the Ottoman caliph and the French king for recognition and alliance. That is new for the Deccan. It also shows the danger of the attempt: in a region where the Company was becoming the arbiter of who might deal with whom, correspondence with a European rival could itself be made a casus belli. The Salbai clause excluding other Europeans had become a principle.",
   "sources": [
    {
-    "title": "Rishad Choudhury, ‘Tipu and the Turks’, Itinerario 47 (2023) – Cambridge Core",
+    "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
+    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
+   },
+   {
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Rishad Choudhury, ‘Tipu and the Turks: An Islamicate Embassy in the Age of British Expansion’, Itinerario 47 (Cambridge University Press, 2023)",
     "url": "https://www.cambridge.org/core/journals/itinerario/article/tipu-and-the-turks-an-islamicate-embassy-in-the-age-of-british-expansion/FE6D2072A36822868F1DD5841D95F194"
    },
    {
-    "title": "The Citizen-Sultan? A Jacobin Club in India – Age of Revolutions",
-    "url": "https://ageofrevolutions.com/2016/05/09/the-citizen-sultan-a-jacobin-club-in-india/"
-   },
-   {
-    "title": "Portrait of Muhammad Dervish Khan – Wikipedia",
+    "title": "Wikipedia, ‘Portrait of Muhammad Dervish Khan’",
     "url": "https://en.wikipedia.org/wiki/Portrait_of_Muhammad_Dervish_Khan"
    }
   ],
@@ -2166,16 +2306,20 @@ window.DECCAN_ENTRIES = [
   "story": "Tipu’s Tiger is the point at which a Deccan sovereignty becomes a European exhibit. Its journey from a palace on the Kaveri to a glass case in Leadenhall Street is the period’s transition made visible: the symbol of a state that claimed equality with the Company is displayed by the Company as evidence that the state deserved to fall. The collection ends, in period five, with maps that describe the Deccan as the Company saw it; the tiger is the object that shows how the seeing was done.",
   "sources": [
    {
-    "title": "Tippoo’s Tiger – V&A Explore the Collections",
+    "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
+    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
+   },
+   {
+    "title": "Kate Teltscher, India Inscribed: European and British Writing on India 1600–1800 (Oxford University Press, Delhi, 1995)",
+    "url": "https://search.worldcat.org/search?q=India%20Inscribed%3A%20European%20and%20British%20Writing%20on%20India%201600%E2%80%931800%20Kate%20Teltscher"
+   },
+   {
+    "title": "Victoria and Albert Museum, ‘Tippoo’s Tiger’ (Explore the Collections, O61949)",
     "url": "https://collections.vam.ac.uk/item/O61949/tippoos-tiger-mechanical-organ-unknown/"
    },
    {
-    "title": "Tipu’s Tiger – Wikipedia",
+    "title": "Wikipedia, ‘Tipu’s Tiger’",
     "url": "https://en.wikipedia.org/wiki/Tipu%27s_Tiger"
-   },
-   {
-    "title": "Tipu Sultan – Britannica",
-    "url": "https://www.britannica.com/biography/Tipu-Sultan"
    }
   ],
   "related_maps": [
@@ -2204,15 +2348,19 @@ window.DECCAN_ENTRIES = [
   "story": "Seringapatam in 1792 is a treaty of the old Deccan order made under the new dispensation. Three powers divided a fourth, as the sultanates had divided Vijayanagara after Talikota, but the Company drew the boundaries and held the hostages. Cornwallis’s decision to preserve Mysore as a counterweight was the last occasion on which the Company behaved as one Deccan power balancing others; its successors took the view that balance itself was the problem.",
   "sources": [
    {
-    "title": "Mysore Wars – Britannica",
-    "url": "https://www.britannica.com/event/Mysore-Wars"
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
    },
    {
-    "title": "The Reception of the Mysorean Hostage Princes by Marquis Cornwallis, 26 February 1792 – Art UK",
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
+   },
+   {
+    "title": "Art UK, ‘The Reception of the Mysorean Hostage Princes by Marquis Cornwallis, 26 February 1792’",
     "url": "https://artuk.org/discover/artworks/the-reception-of-the-mysorean-hostage-princes-by-marquis-cornwallis-26-february-1792-182720"
    },
    {
-    "title": "Treaty of Seringapatam – Wikipedia",
+    "title": "Wikipedia, ‘Treaty of Seringapatam’",
     "url": "https://en.wikipedia.org/wiki/Treaty_of_Seringapatam"
    }
   ],
@@ -2239,20 +2387,24 @@ window.DECCAN_ENTRIES = [
   "lat": 18.636,
   "lon": 75.473,
   "strap": "The death of the confederacy’s greatest soldier in 1794 and, a year later, the last united Maratha campaign, which humbled the Nizam at Kharda.",
-  "body": "<p>Mahadji Scindia died at his camp at Wanowrie, outside Pune, in February 1794; sources give 12 or 13 February. He had been the dominant Maratha figure in Hindustan since Salbai. Appointed vakil-i-mutlaq, regent of the empire, by Shah Alam II in 1784, he governed Delhi in the emperor’s name, built with the Savoyard officer Benoît de Boigne a trained infantry of several brigades with its own artillery, was checked by the Rajputs at Lalsot in 1787 and crushed them at Patan and Merta in 1790. He had come south in 1792 to assert himself at Pune against Nana Phadnavis; the two were reconciled before his death, and his grand-nephew Daulatrao, aged fourteen, succeeded him.</p>\n<p>A year later the confederacy fought its last campaign as a single body. The Nizam, Nizam Ali, had refused the chauth arrears claimed by Pune and had raised a trained corps under the French officer Michel Raymond. Nana assembled Scindia, Holkar, the Bhonsle of Nagpur, the Gaekwad and the Patwardhans under Parashuram Bhau, and met the Nizam at Kharda, in what is now Ahmednagar district, on 11 March 1795. The Nizam’s infantry gave way after an initial exchange and his army fell back on the fort of Kharda, where it was besieged and starved. He came to terms in April: he gave up his minister Mashir-ul-Mulk to Maratha custody, ceded territory including Daulatabad and the Aurangabad and Sholapur districts, and promised an indemnity of three crore rupees.</p>\n<p>The Company, bound by treaty to the Nizam, stayed neutral under Sir John Shore. The Nizam drew the lesson that his survival depended on a better protector, and three years later he took the Company’s subsidiary force.</p>\n<p>Kharda was a victory with no sequel. Madhavrao II died in October 1795, the confederacy dissolved into the succession struggle, and Daulatrao’s troops were looting Pune within two years. The Marathas never fought together again.</p>",
+  "body": "<p>Mahadji Scindia died at his camp at Wanowrie, outside Pune, in February 1794; sources give 12 or 13 February. He had been the dominant Maratha figure in Hindustan since Salbai. Appointed vakil-i-mutlaq, regent of the empire, by Shah Alam II in 1784, he governed Delhi in the emperor’s name, built with the Savoyard officer Benoît de Boigne a trained infantry of several brigades with its own artillery, was checked by the Rajputs at Lalsot in 1787 and crushed them at Patan and Merta in 1790. He had come south in 1792 to assert himself at Pune against Nana Phadnavis; the two were reconciled before his death, and his grand-nephew Daulatrao, aged fourteen, succeeded him.</p>\n<p>A year later the confederacy fought its last campaign as a single body. The Nizam, Nizam Ali, had refused the chauth arrears claimed by Pune and had raised a trained corps under the French officer Michel Raymond. Nana assembled Scindia, Holkar, the Bhonsle of Nagpur, the Gaekwad and the Patwardhans under Parashuram Bhau, and met the Nizam at Kharda, in what is now Ahmednagar district, on 11 March 1795. The Nizam’s infantry gave way after an initial exchange and his army fell back on the fort of Kharda, where it was besieged and starved. He came to terms in April: he gave up his minister Mashir-ul-Mulk to Maratha custody, ceded territory including Daulatabad and the Aurangabad and Sholapur districts, and promised an indemnity of three crore rupees.</p>\n<p>The Company, bound by treaty to the Nizam, stayed neutral under Sir John Shore. The Nizam drew the lesson that his survival depended on a better protector, and three years later he took the Company’s subsidiary force.</p>\n<p>Kharda was a victory with no sequel. Madhavrao II died in October 1795, the confederacy dissolved into the succession struggle, and Daulatrao’s troops were looting Pune within two years. Kharda was the last campaign in which the principal houses of the confederacy assembled as a single force.</p>",
   "story": "Mahadji’s career shows one Deccan house acting as sovereign in Hindustan in the emperor’s name, and Kharda shows the confederacy still able to impose itself on the Nizam in 1795. Both are at the edge of the period. The Nizam’s response, to exchange Maratha overlordship for Company protection, is the mechanism by which the layered order was replaced: each power, pressed by its neighbour, sought the Company as guarantor, and the Company accepted on its own terms.",
   "sources": [
    {
-    "title": "Battle of Kharda – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
+   },
+   {
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Kharda’",
     "url": "https://en.wikipedia.org/wiki/Battle_of_Kharda"
-   },
-   {
-    "title": "Mahadaji Shinde – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Mahadaji_Shinde"
-   },
-   {
-    "title": "Maratha Wars – Britannica",
-    "url": "https://www.britannica.com/event/Maratha-Wars"
    }
   ],
   "related_maps": [
@@ -2280,15 +2432,19 @@ window.DECCAN_ENTRIES = [
   "story": "The subsidiary alliance is the instrument by which plural sovereignty in the Deccan was converted into paramountcy without formal conquest. Each state kept its outward form and surrendered the substance, and the Company acquired armies it did not have to pay for. The Nizam’s treaty of 1798 is the template; within four years Mysore and Pune had followed, and the three powers that had shared the Deccan with the Company in 1792 were all its dependants.",
   "sources": [
    {
-    "title": "Princely state – Britannica",
-    "url": "https://www.britannica.com/topic/princely-state-colonial-India"
+    "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
+    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
    },
    {
-    "title": "Marshman, History of India, vol. 2, ch. 19: Lord Wellesley’s administration – ibiblio",
-    "url": "https://www.ibiblio.org/britishraj/Marshman2/chapter19.html"
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
    },
    {
-    "title": "Subsidiary alliance – Wikipedia",
+    "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper"
+   },
+   {
+    "title": "Wikipedia, ‘Subsidiary alliance’",
     "url": "https://en.wikipedia.org/wiki/Subsidiary_alliance"
    }
   ],
@@ -2318,15 +2474,19 @@ window.DECCAN_ENTRIES = [
   "story": "The fall of Srirangapatna removed the last Deccan state that had claimed full sovereignty against the Company. Its conduct is as telling as its outcome: the Nizam’s army fought under Company command as a subsidiary force, the Marathas took no part and got nothing, and the settlement was written in Calcutta. The plural Deccan of 1792, in which three powers had divided Mysore as allies, had become one in which a single power decided what Mysore would be.",
   "sources": [
    {
-    "title": "Mysore Wars – Britannica",
-    "url": "https://www.britannica.com/event/Mysore-Wars"
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
    },
    {
-    "title": "Tipu Sultan – Britannica",
-    "url": "https://www.britannica.com/biography/Tipu-Sultan"
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
    },
    {
-    "title": "Siege of Seringapatam (1799) – Wikipedia",
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Wikipedia, ‘Siege of Seringapatam’",
     "url": "https://en.wikipedia.org/wiki/Siege_of_Seringapatam_(1799)"
    }
   ],
@@ -2357,16 +2517,20 @@ window.DECCAN_ENTRIES = [
   "story": "The Mackenzie collection belongs in this story as the moment the Company began to know the Deccan’s layered past as an archive. His assistants recorded the sanads and inscriptions by which sultans, rayas, nayakas, Mughal governors and Maratha chiefs had granted and confirmed rights, and in doing so they documented the plurality of authority this collection traces. The Company used that record to adjudicate claims in the districts it now ruled. The old grants survived, but their meaning was settled by the paramount power.",
   "sources": [
    {
-    "title": "Colin Mackenzie – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Colin_Mackenzie"
+    "title": "Nicholas B. Dirks, Castes of Mind: Colonialism and the Making of Modern India (Princeton University Press, 2001)",
+    "url": "https://search.worldcat.org/search?q=Castes%20of%20Mind%3A%20Colonialism%20and%20the%20Making%20of%20Modern%20India%20Nicholas%20B.%20Dirks"
    },
    {
-    "title": "Mackenzie Collection – British Library Archives and Manuscripts",
+    "title": "Phillip B. Wagoner, Precolonial Intellectuals and the Production of Colonial Knowledge, Comparative Studies in Society and History 45 (4), pp. 783–814 (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=Precolonial%20Intellectuals%20and%20the%20Production%20of%20Colonial%20Knowledge%2C%20Comparative%20Studies%20in%20Society%20and%20History%2045%20%284%29%2C%20pp.%20783%E2%80%93814%20Phillip%20B.%20Wagoner"
+   },
+   {
+    "title": "British Library, Archives and Manuscripts, ‘Mackenzie Collection’",
     "url": "https://searcharchives.bl.uk/catalog/032-003288785"
    },
    {
-    "title": "J. Howes, ‘Colin Mackenzie’s Survey of Mysore, 1799–1810’, Journal of the Royal Asiatic Society",
-    "url": "https://www.cambridge.org/core/journals/journal-of-the-royal-asiatic-society/article/completing-our-stock-of-geography-or-an-object-still-more-sublime-colin-mackenzies-survey-of-mysore-17991810/C46D6693BAB81087B285CE10667180D7"
+    "title": "Wikipedia, ‘Colin Mackenzie’",
+    "url": "https://en.wikipedia.org/wiki/Colin_Mackenzie"
    }
   ],
   "related_maps": [
@@ -2395,16 +2559,20 @@ window.DECCAN_ENTRIES = [
   "story": "The restoration of 1799 shows how paramountcy was built by preserving rather than abolishing older sovereignties. The Wodeyars, a Vijayanagara-era lineage sidelined by Haidar and Tipu, were brought back as a convenient ruling house; their state kept its own revenue officers, its dewan and its ceremonial, yet its army, its borders and its foreign relations were now in the Company’s hands. The layered sovereignty of the Deccan did not vanish in 1799. It was reorganised, with one layer now plainly on top.",
   "sources": [
    {
-    "title": "Kingdom of Mysore – Wikipedia",
+    "title": "Francis Buchanan, A Journey from Madras through the Countries of Mysore, Canara, and Malabar, 3 vols (T. Cadell and W. Davies, London, 1807)",
+    "url": "https://archive.org/details/journeyfrommadra01hami"
+   },
+   {
+    "title": "Burton Stein, Thomas Munro: The Origins of the Colonial State and His Vision of Empire (Oxford University Press, Delhi, 1989)",
+    "url": "https://search.worldcat.org/search?q=Thomas%20Munro%3A%20The%20Origins%20of%20the%20Colonial%20State%20and%20His%20Vision%20of%20Empire%20Burton%20Stein"
+   },
+   {
+    "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
+    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+   },
+   {
+    "title": "Wikipedia, ‘Kingdom of Mysore’",
     "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore"
-   },
-   {
-    "title": "Krishnaraja Wadiyar III – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Krishnaraja_Wodeyar_III"
-   },
-   {
-    "title": "Purnaiah – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Purnaiah"
    }
   ],
   "related_maps": [
@@ -2431,16 +2599,20 @@ window.DECCAN_ENTRIES = [
   "story": "The survey is the collection’s hinge to its companion, the maps. Sovereignty in the Deccan had been expressed in grants, titles and the reach of armies; Lambton’s triangles expressed it as measurement. A state that could fix every hill and fort to a coordinate, and tax every field against a surveyed area, was claiming a kind of authority none of its predecessors had possessed. The Great Trigonometrical Survey began in the conquered territory of Mysore, and that is no accident.",
   "sources": [
    {
-    "title": "William Lambton – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/William_Lambton"
+    "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
+    "url": "https://search.worldcat.org/search?q=Mapping%20an%20Empire%3A%20The%20Geographical%20Construction%20of%20British%20India%2C%201765%E2%80%931843%20Matthew%20H.%20Edney"
    },
    {
-    "title": "Great Trigonometrical Survey – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Great_Trigonometrical_Survey"
+    "title": "C. A. Bayly, Empire and Information: Intelligence Gathering and Social Communication in India, 1780–1870 (Cambridge University Press, 1996)",
+    "url": "https://search.worldcat.org/search?q=Empire%20and%20Information%3A%20Intelligence%20Gathering%20and%20Social%20Communication%20in%20India%2C%201780%E2%80%931870%20C.%20A.%20Bayly"
    },
    {
-    "title": "Great Trigonometrical Survey – Britannica",
+    "title": "Britannica, ‘Great Trigonometrical Survey’",
     "url": "https://www.britannica.com/topic/Great-Trigonometrical-Survey"
+   },
+   {
+    "title": "Wikipedia, ‘William Lambton’",
+    "url": "https://en.wikipedia.org/wiki/William_Lambton"
    }
   ],
   "related_maps": [
@@ -2469,16 +2641,20 @@ window.DECCAN_ENTRIES = [
   "story": "Bassein is the moment the Company’s subsidiary system reached the centre of Maratha sovereignty. Since 1719 the Peshwa had held his authority as minister of the Chhatrapati at Satara, exercised through a confederacy of houses who owed him a loyalty they interpreted freely. By taking a subsidiary force he mortgaged that authority to a third party. Scindia and Bhonsle grasped that a Peshwa protected by Company battalions was no longer their Peshwa. The layered Maratha order, in which sovereignty was shared and contested, could not absorb a partner that insisted on being paramount.",
   "sources": [
    {
-    "title": "Treaty of Bassein – Britannica",
-    "url": "https://www.britannica.com/event/Treaty-of-Bassein"
+    "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper"
    },
    {
-    "title": "Treaty of Bassein (1802) – Wikipedia",
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
+    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+   },
+   {
+    "title": "Wikipedia, ‘Treaty of Bassein’",
     "url": "https://en.wikipedia.org/wiki/Treaty_of_Bassein_(1802)"
-   },
-   {
-    "title": "Battle of Poona – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Poona"
    }
   ],
   "related_maps": [
@@ -2507,16 +2683,20 @@ window.DECCAN_ENTRIES = [
   "story": "Assaye tested the idea that a Maratha house could match the Company on its own terms, with drilled battalions, European officers and a train of artillery. Scindia’s army had been built for exactly this, and it fought well. Its defeat meant that the military balance on which the confederacy’s independence rested was gone. After 1803 the Maratha houses survived as subsidiary or treaty states within a Company order, and the Nizam, whose contingent marched with Wellesley, had chosen the winning side. One more layer of Deccan sovereignty had been subordinated.",
   "sources": [
    {
-    "title": "Battle of Assaye – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Assaye"
+    "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper"
    },
    {
-    "title": "Battle of Assaye – British Battles",
-    "url": "https://www.britishbattles.com/second-mahratta-war/battle-of-assaye/"
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
    },
    {
-    "title": "Maratha Wars – Britannica",
+    "title": "Britannica, ‘Maratha Wars’",
     "url": "https://www.britannica.com/event/Maratha-Wars"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Assaye’",
+    "url": "https://en.wikipedia.org/wiki/Battle_of_Assaye"
    }
   ],
   "related_maps": [
@@ -2544,20 +2724,20 @@ window.DECCAN_ENTRIES = [
   "story": "Hyderabad is the collection’s clearest case of a sovereignty preserved and hollowed at once. The Nizam’s dynasty, founded in 1724 as a Mughal governorship turned hereditary, outlasted every other Deccan polity, and the Residency is why. It allowed the Company to govern through the Nizam rather than instead of him, by controlling his army, his debts and his minister. The building’s classical front, facing the old city across the river, states the relationship exactly.",
   "sources": [
    {
-    "title": "British Residency, Hyderabad – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/British_Residency,_Hyderabad"
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
    },
    {
-    "title": "James Achilles Kirkpatrick – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/James_Achilles_Kirkpatrick"
+    "title": "C. A. Bayly, Empire and Information: Intelligence Gathering and Social Communication in India, 1780–1870 (Cambridge University Press, 1996)",
+    "url": "https://search.worldcat.org/search?q=Empire%20and%20Information%3A%20Intelligence%20Gathering%20and%20Social%20Communication%20in%20India%2C%201780%E2%80%931870%20C.%20A.%20Bayly"
    },
    {
-    "title": "Palmer and Company: An Indian Banking Firm in Hyderabad State (eScholarship)",
-    "url": "https://escholarship.org/uc/item/6kh143zj"
-   },
-   {
-    "title": "Restoration of the former British Residency – Deccan Heritage Foundation",
+    "title": "Deccan Heritage Foundation, ‘Restoration of the former British Residency, Hyderabad’",
     "url": "https://www.deccan-heritage-foundation.org/restoration-projects/restoration-of-the-garden-model-of-the-former-british-residency-hyderabad-telangana/"
+   },
+   {
+    "title": "Wikipedia, ‘British Residency, Hyderabad’",
+    "url": "https://en.wikipedia.org/wiki/British_Residency,_Hyderabad"
    }
   ],
   "related_maps": [
@@ -2585,20 +2765,20 @@ window.DECCAN_ENTRIES = [
   "story": "The third war brought the last independent Maratha field armies into contact with the Company and dispersed them. It also dealt with the Pindaris, who represented an older Deccan pattern in which armed horsemen attached themselves to whichever power would license their raiding. Hastings’s settlement left no such space. Every chief was tied by treaty, every band suppressed or pensioned. The plural military market of the Deccan, in which Bahmani sultans, Vijayanagara, Mughals and Marathas had all recruited, closed.",
   "sources": [
    {
-    "title": "Third Anglo-Maratha War – Wikipedia",
+    "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper"
+   },
+   {
+    "title": "Stewart Gordon, Marathas, Marauders, and State Formation in Eighteenth-Century India (Oxford University Press, Delhi, 1994)",
+    "url": "https://search.worldcat.org/search?q=Marathas%2C%20Marauders%2C%20and%20State%20Formation%20in%20Eighteenth-Century%20India%20Stewart%20Gordon"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Third Anglo-Maratha War’",
     "url": "https://en.wikipedia.org/wiki/Third_Anglo-Maratha_War"
-   },
-   {
-    "title": "Battle of Khadki – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Khadki"
-   },
-   {
-    "title": "Battle of Koregaon – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Koregaon"
-   },
-   {
-    "title": "Pindari – Britannica",
-    "url": "https://www.britannica.com/topic/Pindari"
    }
   ],
   "related_maps": [
@@ -2625,15 +2805,19 @@ window.DECCAN_ENTRIES = [
   "story": "The Commission is where paramountcy became routine. In eight years the districts that had been governed through a web of hereditary rights, farmed revenues and personal loyalties were brought under a single chain of command from the village accountant to the Governor-General. The Company kept the vocabulary of the old order, patil and kulkarni and deshmukh, and emptied it of independent power. The story of layered sovereignty in the Deccan ends in this kind of office, with files rather than battles.",
   "sources": [
    {
-    "title": "Observations of William Chaplin, Commissioner in the Deccan, on the revenue assessment – The National Archives (UK) catalogue",
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+   },
+   {
+    "title": "Mountstuart Elphinstone, Report on the Territories Conquered from the Paishwa (Government Gazette Press, Calcutta, 1821)",
+    "url": "https://catalog.hathitrust.org/Record/008641926"
+   },
+   {
+    "title": "The National Archives (UK), ‘Observations of William Chaplin, Commissioner in the Deccan, on the revenue assessment’",
     "url": "https://discovery.nationalarchives.gov.uk/details/r/7e564cc5-a7dd-4d06-8c42-215b78373a53"
    },
    {
-    "title": "Sumit Guha, ‘Society and economy in the Deccan, 1818–50’, Indian Economic and Social History Review 20 (1983)",
-    "url": "https://journals.sagepub.com/doi/10.1177/001946468302000402"
-   },
-   {
-    "title": "Mountstuart Elphinstone – Wikipedia",
+    "title": "Wikipedia, ‘Mountstuart Elphinstone’",
     "url": "https://en.wikipedia.org/wiki/Mountstuart_Elphinstone"
    }
   ],
@@ -2662,16 +2846,20 @@ window.DECCAN_ENTRIES = [
   "story": "The surrender marks the removal of the last layer that had organised Maratha sovereignty. Since 1719 the Peshwa had stood between the Chhatrapati and the confederacy, holding Mughal sanads for chauth and sardeshmukhi, granting saranjams, arbitrating between houses. The Company inherited that position without the title. Sovereignty in western India had been a set of nested claims, Mughal, Chhatrapati, Peshwa, sardar. After June 1818 they were pensions, treaties and files.",
   "sources": [
    {
-    "title": "Baji Rao II – Wikipedia",
+    "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
+    "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper"
+   },
+   {
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+   },
+   {
+    "title": "Wikipedia, ‘Baji Rao II’",
     "url": "https://en.wikipedia.org/wiki/Baji_Rao_II"
-   },
-   {
-    "title": "Baji Rao II – Britannica",
-    "url": "https://www.britannica.com/biography/Baji-Rao-II"
-   },
-   {
-    "title": "Third Anglo-Maratha War – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Third_Anglo-Maratha_War"
    }
   ],
   "related_maps": [
@@ -2698,20 +2886,20 @@ window.DECCAN_ENTRIES = [
   "story": "Pune is the Deccan’s most concentrated example of a sovereign city demoted to a provincial one. For a century it had been where Maratha power was negotiated and where the houses of the confederacy came to be confirmed. After 1818 the decisions were made in Bombay and Calcutta and Pune became a garrison and a collectorate. The layered authority of the city, Chhatrapati’s minister, Brahmin establishment, sardars, was reduced to a memory that the city kept and the cantonment ignored.",
   "sources": [
    {
-    "title": "Poona – FIBIS wiki",
-    "url": "https://wiki.fibis.org/w/Poona"
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century: A Study in the Social History of Maharashtra (Routledge and Kegan Paul, London, 1968)",
+    "url": "https://archive.org/details/westernindiainni00kuma"
    },
    {
-    "title": "Shaniwar Wada – Wikipedia",
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+   },
+   {
+    "title": "Prachi Deshpande, Creative Pasts: Historical Memory and Identity in Western India, 1700–1960 (Columbia University Press, 2007)",
+    "url": "https://search.worldcat.org/search?q=Creative%20Pasts%3A%20Historical%20Memory%20and%20Identity%20in%20Western%20India%2C%201700%E2%80%931960%20Prachi%20Deshpande"
+   },
+   {
+    "title": "Wikipedia, ‘Shaniwar Wada’",
     "url": "https://en.wikipedia.org/wiki/Shaniwar_Wada"
-   },
-   {
-    "title": "Deccan College, Pune – history",
-    "url": "https://www.dcpune.ac.in/History.html"
-   },
-   {
-    "title": "Pune – Britannica",
-    "url": "https://www.britannica.com/place/Pune"
    }
   ],
   "related_maps": [
@@ -2739,16 +2927,20 @@ window.DECCAN_ENTRIES = [
   "story": "Satara makes visible the way the Company handled the oldest layer of Maratha sovereignty. The Chhatrapati’s authority, from which the Peshwas derived theirs, was revived in 1818 precisely because it was useful for unseating the Peshwa. Once the Company was secure, the same authority became an inconvenience and was dismantled by deposition and lapse. Paramountcy could recognise, restore and extinguish sovereignties as policy required, which is the clearest sign that it stood above them all.",
   "sources": [
    {
-    "title": "Pratap Singh of Satara – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Pratap_Singh_of_Satara"
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
    },
    {
-    "title": "Satara State – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Satara_State"
+    "title": "Prachi Deshpande, Creative Pasts: Historical Memory and Identity in Western India, 1700–1960 (Columbia University Press, 2007)",
+    "url": "https://search.worldcat.org/search?q=Creative%20Pasts%3A%20Historical%20Memory%20and%20Identity%20in%20Western%20India%2C%201700%E2%80%931960%20Prachi%20Deshpande"
    },
    {
-    "title": "The Rajah of Sattara – House of Commons debate, 6 July 1847 (Hansard)",
+    "title": "Hansard, ‘The Rajah of Sattara’, House of Commons debate, 6 July 1847",
     "url": "https://hansard.parliament.uk/Commons/1847-07-06/debates/32b795e2-d1ff-4967-879c-31c9b47b430d/TheRajahOfSattara%E2%80%94AdjournedDebate"
+   },
+   {
+    "title": "Wikipedia, ‘Pratap Singh of Satara’",
+    "url": "https://en.wikipedia.org/wiki/Pratap_Singh_of_Satara"
    }
   ],
   "related_maps": [
@@ -2776,15 +2968,19 @@ window.DECCAN_ENTRIES = [
   "story": "The Report is a conqueror’s inventory of the sovereignties it had displaced. Elphinstone recorded, with care, the layers that had accumulated under sultanate, Mughal and Maratha rule: hereditary district officers with rights older than any state, village bodies, jagirdars, sardars. His instinct was to leave them standing under a Company roof. That the roof was now the Company’s was never in question. The document shows paramountcy at its most conservative, and shows why even conservative paramountcy ends the plurality it describes.",
   "sources": [
    {
-    "title": "Report on the Territories Conquered from the Paishwa (1821 printing) – Internet Archive",
-    "url": "https://archive.org/details/reportonterrito00elphgoog"
+    "title": "Mountstuart Elphinstone, Report on the Territories Conquered from the Paishwa (Government Gazette Press, Calcutta, 1821)",
+    "url": "https://catalog.hathitrust.org/Record/008641926"
    },
    {
-    "title": "Mountstuart Elphinstone – Britannica",
-    "url": "https://www.britannica.com/biography/Mountstuart-Elphinstone"
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
    },
    {
-    "title": "Mountstuart Elphinstone – Wikipedia",
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century: A Study in the Social History of Maharashtra (Routledge and Kegan Paul, London, 1968)",
+    "url": "https://archive.org/details/westernindiainni00kuma"
+   },
+   {
+    "title": "Wikipedia, ‘Mountstuart Elphinstone’",
     "url": "https://en.wikipedia.org/wiki/Mountstuart_Elphinstone"
    }
   ],
@@ -2814,16 +3010,20 @@ window.DECCAN_ENTRIES = [
   "story": "The coda is the collection’s argument stated by its companion. Maps do not merely record sovereignty; they decide what counts as a border and whose name goes on the land. In 1500 a map of the Deccan would have needed a dozen colours and still misled. By the end of the Company’s century the surveyors and engravers could draw it in two. The plurality this collection follows for three hundred years was not only defeated in the field; it was drawn out of existence.",
   "sources": [
    {
-    "title": "Vandermaelen Atlas (1827) – Princeton University Library, Notabilia",
+    "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
+    "url": "https://search.worldcat.org/search?q=Mapping%20an%20Empire%3A%20The%20Geographical%20Construction%20of%20British%20India%2C%201765%E2%80%931843%20Matthew%20H.%20Edney"
+   },
+   {
+    "title": "Bernard S. Cohn, Colonialism and Its Forms of Knowledge: The British in India (Princeton University Press, 1996)",
+    "url": "https://search.worldcat.org/search?q=Colonialism%20and%20Its%20Forms%20of%20Knowledge%3A%20The%20British%20in%20India%20Bernard%20S.%20Cohn"
+   },
+   {
+    "title": "Princeton University Library, Notabilia, ‘Vandermaelen Atlas (1827)’",
     "url": "https://notabilia.blogs.princeton.edu/2012/12/31/vandermaelen-atlas-1827-%E2%80%A2-first-atlas-of-the-world-with-all-maps-on-the-same-scale/"
    },
    {
-    "title": "Society for the Diffusion of Useful Knowledge – Wikipedia",
+    "title": "Wikipedia, ‘Society for the Diffusion of Useful Knowledge’",
     "url": "https://en.wikipedia.org/wiki/Society_for_the_Diffusion_of_Useful_Knowledge"
-   },
-   {
-    "title": "John George Bartholomew – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/John_George_Bartholomew"
    }
   ],
   "related_maps": [
@@ -2852,16 +3052,20 @@ window.DECCAN_ENTRIES = [
   "story": "The Nagar revolt shows the reserved clause of the subsidiary system being used. In 1799 the Company had restored a raja and kept the right to remove his government; in 1831 it did so, without war, on the evidence of a tax rising. The sovereignty the Wodeyars had regained proved to be held on terms, and the terms were the Company’s to interpret. After Mysore, no Deccan ruler could regard his state as his own.",
   "sources": [
    {
-    "title": "Nagar revolt – Wikipedia",
+    "title": "K. N. Venkatasubba Sastri, The Administration of Mysore under Sir Mark Cubbon, 1834 to 1861 (George Allen and Unwin, London, 1932)",
+    "url": "https://search.worldcat.org/search?q=The%20Administration%20of%20Mysore%20under%20Sir%20Mark%20Cubbon%2C%201834%20to%201861%20K.%20N.%20Venkatasubba%20Sastri"
+   },
+   {
+    "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
+    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+   },
+   {
+    "title": "Burton Stein, Thomas Munro: The Origins of the Colonial State and His Vision of Empire (Oxford University Press, Delhi, 1989)",
+    "url": "https://search.worldcat.org/search?q=Thomas%20Munro%3A%20The%20Origins%20of%20the%20Colonial%20State%20and%20His%20Vision%20of%20Empire%20Burton%20Stein"
+   },
+   {
+    "title": "Wikipedia, ‘Nagar revolt’",
     "url": "https://en.wikipedia.org/wiki/Nagar_revolt"
-   },
-   {
-    "title": "Kingdom of Mysore – Wikipedia",
-    "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore"
-   },
-   {
-    "title": "Mysore – Britannica",
-    "url": "https://www.britannica.com/place/Mysore-historical-state-India"
    }
   ],
   "related_maps": [
