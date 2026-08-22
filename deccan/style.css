@@ -428,3 +428,8 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
 .rd .c{margin:.25rem 0 .3rem; color:var(--paper)}
 .rd .n{margin:0; font-size:.92rem; color:var(--paper-dim)}
 .rd.source-edition .k,.rd.early .k{color:var(--paper-dim)}
+
+.search{margin-top:1.6rem; max-width:var(--measure)}
+.search input{width:100%; font:inherit; font-size:1rem; padding:.6rem .9rem; color:var(--paper); background:var(--panel); border:1px solid var(--line); border-radius:4px}
+.search input:focus{outline:none; border-color:var(--accent)}
+.search input::placeholder{color:var(--muted); font-style:italic}

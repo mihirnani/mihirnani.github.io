@@ -2,18 +2,29 @@
 window.DECCAN_PERIODS = [
  {
   "n": 1,
-  "slug": "01_Two-Deccans",
+  "slug": "01_Two-Foundations",
+  "title": "Two Foundations",
+  "short": "Two Foundations",
+  "years": "c. 1330–1500",
+  "start": 1327,
+  "end": 1500,
+  "desc": "Delhi’s retreat from the Deccan and the rise of two durable powers – Vijayanagara and the Bahmani sultanate – amid Reddi, Velama and other regional states.",
+  "intro": "The collection opens with a prologue. In 1327 Muhammad bin Tughluq made Daulatabad a second capital of the Delhi sultanate and, within a decade, lost the south to the officers he had sent there. As Tughluq authority in the peninsula unravelled, two durable powers emerged in a landscape that was already plural: Vijayanagara, founded on the Tungabhadra in the late 1330s by brothers who had served Kampili and perhaps Delhi, amid the disintegration of Hoysala authority; and the Bahmani sultanate, proclaimed at Gulbarga in 1347 by a rebel commander, which descends directly from the revolt of Delhi’s Deccan amirs. Around and between them stood the Reddis of Kondavidu, the Velamas of Rachakonda and the chiefs of the coast. For a century and a half the two great powers fought over the Raichur doab, hired each other’s soldiers, and built capitals – Hampi, Gulbarga, Bidar – that still stand. Their evidence is thinner than the later periods’: chronicles written for courts, inscriptions, and the accounts of travellers. By 1500 the Bahmani state had broken into its provinces and Vijayanagara had changed dynasties twice; the two Deccans of the next period were already in place."
+ },
+ {
+  "n": 2,
+  "slug": "02_Two-Deccans",
   "title": "Two Deccans",
   "years": "1500–1565",
   "start": 1500,
   "end": 1565,
   "desc": "Vijayanagara and the five sultanates share a plateau, a frontier on the Krishna and a market in horses.",
-  "intro": "At the start of the sixteenth century the plateau south of the Narmada was divided between two kinds of state. North of the Krishna the Bahmani sultanate had broken into five successors – Bijapur, Ahmadnagar, Golconda, Berar and Bidar – each a Persianate court with a Dakhni army and a frontier to guard. South of the river the kings of Vijayanagara ruled through chiefs, temples and garrison commanders over a country that reached to the Tamil coast. The two Deccans fought, traded and hired each other’s soldiers, and the Portuguese at Goa sold horses to both. The balance held for two generations. Talikota destroyed the capital and broke Vijayanagara’s hold on the Deccan in a single afternoon; a reduced Aravidu kingdom survived at Penukonda and then farther south.",
+  "intro": "By 1500 the plateau south of the Narmada was divided between two kinds of state, both inherited from the previous century. North of the Krishna the Bahmani sultanate had broken into five successors – Bijapur, Ahmadnagar, Golconda, Berar and Bidar – each a Persianate court with a Dakhni army and a frontier to guard. South of the river the kings of Vijayanagara ruled through chiefs, temples and garrison commanders over a country that reached to the Tamil coast. The two Deccans fought, traded and hired each other’s soldiers, and the Portuguese at Goa sold horses to both. The balance held for two generations. Talikota destroyed the capital and broke Vijayanagara’s hold on the Deccan in a single afternoon; a reduced Aravidu kingdom survived at Penukonda and then farther south.",
   "short": "Two Deccans"
  },
  {
-  "n": 2,
-  "slug": "02_The-Mughal-South",
+  "n": 3,
+  "slug": "03_The-Mughal-South",
   "title": "The Mughal South",
   "years": "1565–1687",
   "start": 1565,
@@ -23,8 +34,8 @@ window.DECCAN_PERIODS = [
   "short": "The Mughal South"
  },
  {
-  "n": 3,
-  "slug": "03_The-Maratha-Century",
+  "n": 4,
+  "slug": "04_The-Maratha-Century",
   "title": "The Maratha Century",
   "years": "1687–1761",
   "start": 1687,
@@ -34,8 +45,8 @@ window.DECCAN_PERIODS = [
   "short": "The Maratha Century"
  },
  {
-  "n": 4,
-  "slug": "04_Mysore-and-the-Company-Wars",
+  "n": 5,
+  "slug": "05_Mysore-and-the-Company-Wars",
   "title": "Mysore and the Company Wars",
   "years": "1761–1799",
   "start": 1761,
@@ -45,8 +56,8 @@ window.DECCAN_PERIODS = [
   "short": "Mysore"
  },
  {
-  "n": 5,
-  "slug": "05_Paramountcy",
+  "n": 6,
+  "slug": "06_Paramountcy",
   "title": "Paramountcy",
   "years": "1799–1830s",
   "start": 1799,

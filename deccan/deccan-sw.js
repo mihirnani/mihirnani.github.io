@@ -1,5 +1,5 @@
-/* The Deccan, 1500–1830s — offline service worker. Pages network-first, shell cached. */
-const VERSION = "v10";
+/* The Deccan, 1336–1830s – offline service worker. Pages network-first, shell cached. */
+const VERSION = "v13";
 const PREFIX = "deccan-";
 const APP_CACHE = `${PREFIX}app-${VERSION}`;
 const PAGE_CACHE = `${PREFIX}pages-${VERSION}`;

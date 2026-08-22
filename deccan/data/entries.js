@@ -1,12 +1,964 @@
 /* entries.js – edit the JSON between the brackets; keep this first line and the closing semicolon. */
 window.DECCAN_ENTRIES = [
  {
+  "id": "reddi-velama-kingdoms",
+  "title": "The Reddis and Velamas",
+  "date_label": "c. 1325–1475",
+  "year": 1325,
+  "year_end": 1475,
+  "period": 1,
+  "polities": [
+   "other",
+   "bahmani",
+   "vijayanagara"
+  ],
+  "kind": "institution",
+  "place": "Kondavidu, Andhra Pradesh",
+  "lat": 16.262,
+  "lon": 80.258,
+  "strap": "After the Kakatiya fall in 1323, Telugu warrior lineages at Kondavidu, Rajahmundry and Rachakonda ruled coastal Andhra between the two great powers.",
+  "body": "<p>When Delhi destroyed the Kakatiya kingdom of Warangal in 1323, its Telugu country did not pass whole to any successor. In the coastal plain Prolaya Vema Reddi set up a kingdom at Addanki around 1325 that his successors moved to the hill fort of Kondavidu, with a second branch at Rajahmundry on the Godavari from 1395. In the interior of Telangana the Recherla Velama chiefs held the forts of Rachakonda and Devarakonda from about 1360. Kondavidu fell to Vijayanagara in 1424 and Rajahmundry to the Gajapatis of Orissa about 1448; the Recherlas were absorbed by the Bahmanis in the 1430s and survived as local chiefs into the 1470s.</p>\n<p>These were warrior states rather than dynasties of long standing. Cynthia Talbot’s study of Andhra inscriptions shows that the Reddi, Velama and Kamma lineages had risen as Kakatiya officers in the thirteenth century and that their fourteenth-century kingdoms used the same tools of temple endowment, fort-building and inscription to establish themselves. They fought one another as much as the larger powers: the Recherlas allied with the Bahmanis against the Kondavidu Reddis, then turned and fought beside Vijayanagara at Pangal in 1419, which brought a Bahmani response that cost them Warangal and Rachakonda. The Reddi court at Kondavidu and Rajahmundry was also the centre of Telugu letters in the period; the poet Srinatha served the Reddis before moving south to Vijayanagara.</p>\n<p>The Andhra kingdoms show that for a century the Deccan had more than two sovereignties. The Telugu coast was a third zone, claimed by the Bahmanis from the north-west, by Vijayanagara from the south-west and by Orissa from the north, and governed in between by lineages that were both independent and, at any given moment, somebody’s allies. Their disappearance by the 1470s left the coast to be divided between Vijayanagara, Orissa and the new Qutb Shahi state at Golconda.</p>",
+  "story": "The collection’s story would be simpler if there had been only two Deccan powers, and this entry is a reminder that there were not. The Reddi and Velama states were sovereign in their own inscriptions and clients in everyone else’s, and the difference depended on the year. They are the first instance of a recurring type in the timeline, the intermediate polity, later represented by the nayakas, the Maratha sardars and the Nizam’s tributaries.",
+  "sources": [
+   {
+    "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, 2001)",
+    "url": "https://global.oup.com/academic/product/precolonial-india-in-practice-9780195136616"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Wikipedia, ‘Reddi Kingdom’",
+    "url": "https://en.wikipedia.org/wiki/Reddi_Kingdom"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "tughluq-daulatabad-1327",
+  "title": "Tughluq moves the capital to Daulatabad",
+  "date_label": "1327 · Prologue",
+  "year": 1327,
+  "year_end": 1335,
+  "period": 1,
+  "polities": [
+   "delhi"
+  ],
+  "kind": "event",
+  "place": "Daulatabad, Maharashtra",
+  "lat": 19.943,
+  "lon": 75.214,
+  "strap": "In 1327 Muhammad bin Tughluq ordered the Delhi court to Devagiri, renamed Daulatabad, to rule the Deccan from inside it; within a decade the experiment had failed.",
+  "body": "<p>In 1327 Muhammad bin Tughluq, sultan of Delhi from 1325 to 1351, ordered his court, his nobility and a large part of Delhi’s Muslim population to move some 1,100 kilometres south to Devagiri, the old Yadava capital in the western Deccan, which he renamed Daulatabad, ‘abode of fortune’. The city was a rock fortress with a cut scarp some fifty metres high, taken by Alauddin Khalji in 1296 and 1307 and held by Delhi since the 1310s. The chronicles, and the traveller Ibn Battuta who reached India in 1333, describe forced marches and deaths on the road. By 1334 or 1335 the sultan had given up; the court returned to Delhi, though a garrison and a Muslim population stayed in the south.</p>\n<p>The move is usually told as a madness. Modern readings are cooler. Peter Jackson treats it as a considered attempt to govern a newly conquered peninsula from a central point, after the Khalji and Tughluq campaigns had brought down the Yadavas of Devagiri, the Kakatiyas of Warangal in 1323 and the Hoysalas’ northern holdings. Daulatabad sat roughly midway between Delhi and the southern tip. Richard Eaton adds that the transplanted population of officials, soldiers, scholars and Sufis became the first substantial Muslim society in the Deccan, and that what was moved was an elite rather than a whole city. The Jami Masjid at Daulatabad, dated 1318, and the later Chand Minar of 1446 mark the place’s continued standing under the sultanate and its successors.</p>\n<p>The failure mattered more than the plan. Delhi could not hold the Deccan at that distance, and in the 1330s and 1340s its southern provinces slipped away one by one: Madurai in 1334, the Hoysala and Kampili country to the founders of Vijayanagara, and finally Daulatabad itself to the rebel amirs of 1347. The population Tughluq had moved became the base of the Bahmani state. Both of the Deccan’s new powers were, in this sense, children of a Delhi experiment that did not work.</p>",
+  "story": "The collection opens with an outside power trying to rule the Deccan directly and finding it could not. Tughluq’s failure is the origin of the plural sovereignty that the timeline traces: the same decade produced a Muslim state and a Hindu state in the south, each filling space Delhi had vacated. The question the later Mughals and the Company would both face, whether the peninsula can be governed from a single centre and at what cost, is posed here first.",
+  "sources": [
+   {
+    "title": "Peter Jackson, The Delhi Sultanate: A Political and Military History (Cambridge University Press, 1999)",
+    "url": "https://books.google.com/books?id=lt2tqOpVRKgC"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Britannica, ‘Daulatabad’",
+    "url": "https://www.britannica.com/place/Daulatabad"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
+  ]
+ },
+ {
+  "id": "founding-of-vijayanagara-1336",
+  "title": "The founding of Vijayanagara",
+  "date_label": "c. 1336–1346",
+  "year": 1336,
+  "year_end": 1346,
+  "period": 1,
+  "polities": [
+   "vijayanagara"
+  ],
+  "kind": "event",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.462,
+  "strap": "Between about 1336 and 1346 the brothers Harihara and Bukka built a kingdom on the Tungabhadra that became Vijayanagara; how they did so is largely tradition.",
+  "body": "<p>The traditional date for the founding of Vijayanagara is 1336, when Harihara I, the eldest of the five Sangama brothers, is said to have been crowned at the new city on the south bank of the Tungabhadra. The earliest secure inscriptions of the brothers belong to the following decade; by 1346 Harihara and his brother Bukka controlled the old Hoysala country as far as the western coast, and Bukka ruled as sole king from about 1356 to 1377. The city, built beside the ancient shrine of Virupaksha at Hampi, took the name ‘City of Victory’.</p>\n<p>Almost everything about the origin rests on later tradition and is contested. One account, preserved in sixteenth-century texts, makes the brothers officers of the Kakatiya king of Warangal, carried off to Delhi after 1323, converted to Islam, sent back to govern Kampili for Tughluq, and then restored to Hinduism by the sage Vidyaranya, who guided the new state. Another makes them Kannada-speaking officers of the last Hoysala king, Ballala III, whose kingdom passed to them after his death in 1342. Burton Stein treated the Vidyaranya story as a foundation legend, and Hermann Kulke showed that the sage became head of the Sringeri monastery only around 1380, decades after the events; Eaton notes that the transfer from Hoysala to Sangama power appears gradual and largely without bloodshed. The debate between Telugu and Kannada origins has been partly a modern regional one.</p>\n<p>What is not in doubt is the result. A fortified capital in the granite hills above the river, a claim to rule the whole southern peninsula, and a set of borrowed forms: Phillip Wagoner has shown that the kings called themselves ‘sultan among Hindu kings’ and adopted the dress and court usage of the sultanate world they opposed. Vijayanagara would be the Bahmanis’ permanent rival, and the two states defined each other across the Krishna–Tungabhadra frontier for two centuries.</p>",
+  "story": "Vijayanagara enters the collection as a state whose own origins were already layered: founded, by some tellings, by men who had served Delhi, and shaped from the start by the sultanate it fought. That doubleness is the point. The timeline’s southern pole was never simply the Hindu counterweight to Muslim rule that later nationalist accounts made it; it was one of two peninsular powers that rose together out of the wreck of Tughluq’s Deccan and shared a political vocabulary.",
+  "sources": [
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Phillip B. Wagoner, ‘Sultan among Hindu Kings’, Journal of Asian Studies 55:4 (1996)",
+    "url": "https://www.jstor.org/stable/2646491"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Wikipedia, ‘Origin of the Vijayanagara Empire’",
+    "url": "https://en.wikipedia.org/wiki/Origin_of_Vijayanagara_Empire"
+   }
+  ],
+  "related_maps": [
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+  ]
+ },
+ {
+  "id": "hampi-virupaksha",
+  "title": "Virupaksha and the sacred centre",
+  "date_label": "before 1500",
+  "year": 1336,
+  "year_end": 1500,
+  "period": 1,
+  "polities": [
+   "vijayanagara"
+  ],
+  "kind": "place",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.459,
+  "strap": "The Virupaksha temple and the older Pampa cult on the Tungabhadra, the sacred ground the Sangamas built their capital beside.",
+  "body": "<p>The Virupaksha temple stands at the west end of the Hampi bazaar, on the south bank of the Tungabhadra, among the granite boulders that give the site its character. It is dedicated to Shiva as Virupaksha, the consort of the river goddess Pampa, whose name survives in ‘Hampi’. Inscriptions show a shrine here from at least the ninth or tenth century, and small Chalukya- and Hoysala-period structures survive inside the enclosure. The cult of Pampa and Virupaksha, local and goddess-centred, predates the empire by centuries.</p>\n<p>The Sangama brothers built their city beside it deliberately. From the first, Vijayanagara kings described themselves as ruling on behalf of Virupaksha, and their charters were signed with his name, ‘Sri Virupaksha’, in Kannada characters; the practice continued under every dynasty down to the end. The temple thus functioned as the state's divine proprietor, and royal gifts to it recorded in stone are among the earliest Vijayanagara documents. The city's other identity, as the Kishkindha of the <em>Ramayana</em> where Rama met Hanuman, was cultivated alongside and became more prominent later.</p>\n<p>Almost everything a visitor now sees is sixteenth-century. The great eastern gopura, the pillared halls and the long bazaar street were built or rebuilt under Krishnadevaraya, whose coronation in 1510 is commemorated in an inscription at the temple, and the Vitthala temple and the other great complexes of the ‘sacred centre’ along the river belong to the same boom. Before 1500 the temple was smaller and the ritual landscape around it more open: the river ghats, the Hemakuta hill with its clusters of pre-Vijayanagara shrines, and the boulder-strewn path that pilgrims still walk.</p>\n<p>Virupaksha is also the one temple at Hampi that never closed. After 1565 the city was abandoned, but worship here went on, and does.</p>",
+  "story": "Sovereignty in the Deccan was always shared with the gods, and Virupaksha shows how: the kings signed his name on their orders, and the temple outlasted all of them. The collection's Hampi entries in the next period, the Vitthala complex and Krishnadevaraya's gopura, should be read against this older and smaller sacred ground, in which a river goddess and a local Shiva were the landlords and the Sangamas tenants. The continuity of worship after 1565 is the longest thread in the whole collection.",
+  "sources": [
+   {
+    "title": "Anila Verghese, Religious Traditions at Vijayanagara as Revealed through its Monuments (Manohar / American Institute of Indian Studies, 1995)",
+    "url": "https://www.worldcat.org/search?q=Verghese+Religious+Traditions+at+Vijayanagara"
+   },
+   {
+    "title": "John M. Fritz and George Michell, Hampi Vijayanagara (Jaico, 2014)",
+    "url": "https://www.worldcat.org/search?q=Fritz+Michell+Hampi+Vijayanagara"
+   },
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "UNESCO, ‘Group of Monuments at Hampi’",
+    "url": "https://whc.unesco.org/en/list/241/"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "horse-trade-origins",
+  "title": "Horses before the Portuguese",
+  "date_label": "14th–15th century",
+  "year": 1340,
+  "year_end": 1500,
+  "period": 1,
+  "polities": [
+   "vijayanagara",
+   "bahmani",
+   "other"
+  ],
+  "kind": "institution",
+  "place": "Honavar, Karnataka",
+  "lat": 14.28,
+  "lon": 74.445,
+  "strap": "Arab and Persian horses landed at Honavar, Bhatkal and the Konkan ports were the one import both Deccan states could not do without.",
+  "body": "<p>Good cavalry horses do not breed well in peninsular India, and every Deccan army of the period depended on imports from Arabia, Persia and the Gulf. Marco Polo, writing of the Pandya coast around 1290, already reported thousands of horses a year arriving by sea from Hormuz, Aden and Kish, most of which died within a year and had to be replaced. The trade ran through the Kanara and Konkan ports: Honavar, where Ibn Battuta stayed in 1342 as the guest of its Muslim ruler Jamal al-Din, Bhatkal, Goa, Chaul and Dabhol. Ibn Battuta records the size of the trade and the profit on it; Abdur Razzaq a century later saw the horses in the Vijayanagara bazaars.</p>\n<p>Both powers organised themselves around the supply. The Bahmanis, lying inland, had to reach the coast, which is why Mahmud Gawan's campaigns took Goa in 1472 and why the Konkan mattered more than its revenue. Vijayanagara held the Kanara coast, lost some of it in the fifteenth century and recovered Bhatkal and Honavar under Saluva Narasimha; the Rayas paid for horses in pepper, textiles and coin, and the chronicles say that Deva Raya II recruited Muslim horsemen and archers to learn the enemy's methods. Horse merchants, many of them Arabs and Persians, were important men at both courts, and the word raya that Wagoner has drawn attention to, ‘sultan among Hindu kings’, belongs to a court that dressed, rode and fought in ways learned through this trade.</p>\n<p>The Portuguese understood the position at once. After they took Goa in 1510 they sought to channel and control the horse trade through Goa and sold to whichever Deccan power paid more, which is the subject of the collection's later entry on the Arab horse trade.</p>\n<p>What changed in the fifteenth century was not the trade but its stakes: by 1500 control of a single port could decide a war on the plateau.</p>",
+  "story": "Layered sovereignty has a logistic base, and in the Deccan it was the horse. Neither Vijayanagara nor the Bahmanis could be sovereign without animals that arrived by sea through ports held by merchants who operated across several jurisdictions. The Portuguese inserted themselves into a gap that was already there. The collection's maps of the Indian Ocean from 1519 onward are, among other things, charts of the horse route, and the Company's cavalry of the 1790s still rode animals bought through the same Gulf trade.",
+  "sources": [
+   {
+    "title": "Simon Digby, War-Horse and Elephant in the Delhi Sultanate: A Study of Military Supplies (Orient Monographs, 1971)",
+    "url": "https://www.worldcat.org/search?q=Digby+War-Horse+and+Elephant+in+the+Delhi+Sultanate"
+   },
+   {
+    "title": "Phillip B. Wagoner, ‘“Sultan among Hindu Kings”: Dress, Titles, and the Islamicization of Hindu Culture at Vijayanagara’, Journal of Asian Studies 55 (1996)",
+    "url": "https://doi.org/10.2307/2646526"
+   },
+   {
+    "title": "H. A. R. Gibb (trans.), Ibn Battuta: Travels in Asia and Africa 1325–1354 (Routledge, 1929)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.32776"
+   },
+   {
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, 2014)",
+    "url": "https://global.oup.com/academic/product/power-memory-architecture-9780198092216"
+   }
+  ],
+  "related_maps": [
+   "1519__IndianOcean__Hollanda-Reinel__Folio-3-recto-North-Indian-ocean.html",
+   "1597__IndianOcean__Ortelius__Erythraei-Maris-Periplus.html"
+  ]
+ },
+ {
+  "id": "gulbarga",
+  "title": "Gulbarga",
+  "date_label": "1347–c. 1430",
+  "year": 1347,
+  "year_end": 1430,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "place",
+  "place": "Kalaburagi (Gulbarga), Karnataka",
+  "lat": 17.336,
+  "lon": 76.826,
+  "strap": "Gulbarga, renamed Ahsanabad, was the first Bahmani capital from 1347 until the court moved to Bidar around 1430; its fort and Jami Masjid survive.",
+  "body": "<p>Gulbarga, now officially Kalaburagi, lies on the dry plateau south of the Bhima, fifteen miles from the river. It had been a Kakatiya outpost and then a Delhi district before Alauddin Hasan Bahman Shah chose it as his capital in 1347 and renamed it Ahsanabad. The court remained there for some eighty years, under eight sultans, until Ahmad Shah I moved it to Bidar; Britannica dates the move to about 1425, Sherwani to 1429, and other accounts to 1432.</p>\n<p>The fort is an irregular circuit of stone walls and some two dozen bastions with a double moat, much rebuilt in the sixteenth and seventeenth centuries after Bijapur took the town. Inside stands the Jami Masjid, dated by inscription to 1367 in the reign of Muhammad Shah I and attributed to a Persian architect named Rafi. It is unusual in India in having no open courtyard: the whole prayer area, some 216 by 176 feet, is roofed, the central space carried on sixty-three small domes with larger domes at the corners and over the mihrab, and the sides opened to light by wide arches. Nineteenth-century writers compared it to the mosque of Córdoba; the likeness is in plan rather than descent. Outside the walls lie the tombs of the Gulbarga sultans, including the Haft Gumbaz group to the east where Firuz Shah is buried, and beyond them the dargah of Gesudaraz, which made the town a place of pilgrimage after 1422.</p>\n<p>After the capital moved, Gulbarga became a provincial seat and, from 1504, part of the Adil Shahi kingdom of Bijapur, passing to the Mughals in the 1680s and to Hyderabad after 1724. Its standing now rests on the fort, the mosque and the shrine. It was the place where the Bahmani state first took architectural form, drawing on Persian design while building in Deccani stone, and where the connection between sultan and Sufi that marked the dynasty was first made visible.</p>",
+  "story": "Gulbarga is the collection’s first capital and its first demonstration that a Deccan state announced itself in buildings. The mosque of 1367 imported a Persian architect; the shrine beside it rooted the dynasty in local devotion. The town then passed through Bijapur, Mughal and Hyderabad hands without ceasing to be a Bahmani place in memory, an early instance of the layered ownership of sites that Eaton and Wagoner describe across the plateau.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, 2014)",
+    "url": "https://global.oup.com/academic/product/power-memory-architecture-9780198092216"
+   },
+   {
+    "title": "Britannica, ‘Kalaburagi’",
+    "url": "https://www.britannica.com/place/Gulbarga"
+   },
+   {
+    "title": "Wikipedia, ‘Jama Mosque, Kalaburagi’",
+    "url": "https://en.wikipedia.org/wiki/Jama_Mosque,_Kalaburagi"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
+  "id": "hasan-gangu-bahmani-1347",
+  "title": "The Bahmani revolt",
+  "date_label": "3 August 1347",
+  "year": 1347,
+  "year_end": null,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "delhi"
+  ],
+  "kind": "event",
+  "place": "Kalaburagi (Gulbarga), Karnataka",
+  "lat": 17.329,
+  "lon": 76.834,
+  "strap": "In 1347 the rebel amirs of the Deccan made Zafar Khan their sultan as Alauddin Hasan Bahman Shah, ending Delhi’s rule south of the Vindhyas.",
+  "body": "<p>On 3 August 1347 Zafar Khan, a commander in the revolt of the Deccan amirs against Muhammad bin Tughluq, was proclaimed sultan at Daulatabad under the title Abu’l-Muzaffar Alauddin Bahman Shah. He moved the seat of the new state south to Gulbarga, which he renamed Ahsanabad, and ruled until his death on 10 February 1358. The dynasty he founded took its name from his title; its effective power had fragmented by 1518, though nominal Bahmani sultans survived at Bidar until 1528.</p>\n<p>The revolt had begun among the amiran-i-sadah, the ‘centurions’ who held the districts of the Deccan for Delhi as hereditary commanders. Tughluq’s attempts to discipline them, culminating in a massacre of amirs at Mandu in 1345, drove the rest into rebellion; they seized Daulatabad in 1345 and first chose one of their number, Ismail Mukh, as sultan before replacing him with the more capable Zafar Khan. Of Zafar Khan’s origins the sources disagree: Isami, writing in 1350, makes him a Turk or Afghan soldier of fortune; the later tradition, preserved by Firishta, gives him the name Hasan Gangu and a story of service to a Delhi Brahmin called Gangu, which Sherwani and Eaton treat as legend. The claim of descent from the Persian hero Bahram Gur was courtly flattery and is not believed.</p>\n<p>By 1358 the sultanate ran from the Wainganga to the Krishna and from Daulatabad east to Bhongir, organised into four provinces, or atraf, that would later become the seeds of its breakup. Delhi never recovered the Deccan. The same decade that saw Harihara and Bukka established on the Tungabhadra now had a second new power north of the Krishna, founded not by conquest from outside but by a garrison that had stayed and gone native. The Bahmani state was in that sense a Deccani creation, and the tension between its Deccani and its Persianate sides would run through its whole history.</p>",
+  "story": "The Bahmani foundation is the other half of the collection’s starting condition. Delhi’s own officers, settled in the south by Tughluq, became the south’s rulers against Delhi; the provincial structure set up in 1347 became in 1490 the map of the five sultanates. The entry shows sovereignty in the Deccan being made from the inside by people who had arrived as agents of someone else, a pattern the Marathas and the Nizam would repeat.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Encyclopaedia Iranica, ‘Bahmanid dynasty’",
+    "url": "https://iranicaonline.org/articles/bahmanid-dynasty"
+   },
+   {
+    "title": "Britannica, ‘Bahmanī sultanate’",
+    "url": "https://www.britannica.com/place/Bahmani-sultanate"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "raichur-doab-frontier",
+  "title": "The Raichur doab",
+  "date_label": "c. 1350–1565",
+  "year": 1350,
+  "year_end": 1565,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "vijayanagara",
+   "sultanates"
+  ],
+  "kind": "place",
+  "place": "Raichur, Karnataka",
+  "lat": 16.205,
+  "lon": 77.355,
+  "strap": "The wedge of land between the Krishna and the Tungabhadra, with its forts at Raichur and Mudgal, was the standing frontier of the Deccan for two centuries.",
+  "body": "<p>The Raichur doab is the triangle of black-soil country between the Krishna on the north and its tributary the Tungabhadra on the south, narrowing eastward to where the two rivers meet. Two forts command it: Raichur, built according to its inscriptions in 1294 under the Kakatiya queen Rudrama’s officers, and Mudgal to the west. From the founding of the Bahmani state in 1347 until the fall of Vijayanagara in 1565 the doab changed hands repeatedly and was the object of most of the wars between the northern and southern powers.</p>\n<p>Its value was partly agricultural, partly strategic. The rivers were the natural lines of defence for each side, so whoever held the doab held a bridgehead across the other’s river. In the war of the 1360s Vijayanagara briefly seized Mudgal and Bahmani forces recovered it; Harihara II contested the doab in 1398; the sultans held it for most of the fifteenth century; Krishnadevaraya took Raichur from Bijapur in 1520; Bijapur recovered it after 1565 and kept it until the Mughals came. Eaton and Wagoner have shown that the forts were rebuilt by every occupant, so that Raichur’s walls carry Kannada, Telugu, Persian and Arabic inscriptions in layers, and that its gateways and temples were reworked rather than razed. The contest over the doab was conducted by rulers who shared a military culture: both sides used the same kinds of fortification, both recruited cavalry from the same horse trade, and by the 1430s both employed soldiers of the other’s religion.</p>\n<p>The doab is therefore less a line between two civilisations than the place where two states met and copied one another. It fixed the shape of Deccan politics for two centuries: a northern power with its capital on the plateau, a southern power with its capital on the Tungabhadra, and a zone between them that neither could hold for long. After 1565 the frontier dissolved, and the doab became an interior district of Bijapur.</p>",
+  "story": "The doab is the collection’s first frontier, and it sets a pattern: a border that is fought over constantly without either side being able to abolish it. That equilibrium, two sovereignties facing each other across a contested zone, is the opposite of paramountcy. Its disappearance after 1565, when the border simply ceased to exist, is one of the moments at which the timeline’s plurality begins to thin, long before the Mughals arrived.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, 2014)",
+    "url": "https://global.oup.com/academic/product/power-memory-architecture-9780198092216"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Wikipedia, ‘Raichur Fort’",
+    "url": "https://en.wikipedia.org/wiki/Raichur_Fort"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
+  "id": "vijayanagara-temple-state",
+  "title": "Temples and the nayankara",
+  "date_label": "14th–15th century",
+  "year": 1350,
+  "year_end": 1500,
+  "period": 1,
+  "polities": [
+   "vijayanagara"
+  ],
+  "kind": "institution",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.46,
+  "strap": "How Vijayanagara governed: temple endowment as political economy, military tenure for its chiefs, and a long scholarly argument about what kind of state it was.",
+  "body": "<p>Vijayanagara ruled through two institutions that were older than itself and that it reshaped. The first was the temple. Kings, queens, generals and merchants gave land, villages and cash to temples, which in turn employed priests, built tanks and irrigation works, fed pilgrims and kept the inscriptions that are the main record of the period. The great fifteenth-century endowments at Tirupati, Srisailam, Kanchipuram and at Hampi itself put the king's name at the centre of each region's ritual economy, and a gift to a temple was also a statement of who ruled the land it stood on.</p>\n<p>The second was nayankara. A nayaka was a military chief who held an amaram, a territory, in return for keeping a fixed body of troops and paying a share of its revenue to the king. The system is documented most fully in sixteenth-century sources, but the word and the practice appear in the fifteenth, and the rajas' ability to field tens of thousands of men against the Bahmanis depended on it. Nayakas were not hereditary in theory; in practice they became so, and in the next period the nayakas of Madurai, Tanjavur and Ikkeri outlived the empire that made them.</p>\n<p>What this adds up to is disputed. Burton Stein, in <em>Peasant State and Society in Medieval South India</em> (1980) and his <em>Vijayanagara</em> (1989), described a ‘segmentary state’, in which the king's ritual sovereignty extended far beyond his actual administrative control and local chiefs ran their own affairs. Critics, among them Noboru Karashima on the evidence of the inscriptions and Sanjay Subrahmanyam on the economic side, have argued that the Rayas commanded more revenue, more soldiers and more coercion than the model allows, and that nayankara looks like a deliberate instrument of central power rather than its absence. The debate is unresolved, and the inscriptions can be read either way.</p>\n<p>What changed over the fifteenth century was the scale: by 1500 the Raya's name was being recorded from the Krishna to the Kaveri, on a scale not seen in the peninsula for several centuries.</p>",
+  "story": "Whether Vijayanagara was a layered state by design or by weakness is the fifteenth-century form of the question the whole collection asks. Stein's model puts plural sovereignty at the core of the empire from the beginning; his critics make it a later failure. Either way the nayakas, temple trustees and local chiefs who appear in this entry are the people to whom sovereignty would devolve after 1565, and the Company's revenue officers of the 1790s would still be arguing with their descendants about who owned what.",
+  "sources": [
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Sanjay Subrahmanyam, ‘Agreeing to Disagree: Burton Stein on Vijayanagara’, South Asia Research 17 (1997)",
+    "url": "https://doi.org/10.1177/026272809701700204"
+   },
+   {
+    "title": "Noboru Karashima, Towards a New Formation: South Indian Society under Vijayanagar Rule (Oxford University Press, 1992)",
+    "url": "https://www.worldcat.org/search?q=Karashima+Towards+a+New+Formation"
+   },
+   {
+    "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, 2001)",
+    "url": "https://doi.org/10.1093/oso/9780195136616.001.0001"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "bahmani-vijayanagara-wars",
+  "title": "The Bahmani–Vijayanagara wars",
+  "date_label": "1362–1420",
+  "year": 1362,
+  "year_end": 1420,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "vijayanagara"
+  ],
+  "kind": "event",
+  "place": "Mudgal, Karnataka",
+  "lat": 16.012,
+  "lon": 76.441,
+  "strap": "Between 1362 and 1420 the Bahmanis and Vijayanagara fought a series of wars over the doab and the coast; the chroniclers’ accounts of them need care.",
+  "body": "<p>The first war between the two states broke out in 1362 between Muhammad Shah I and Bukka and ended in 1367 with Bukka’s seizure and loss of Mudgal, a Bahmani march on the Tungabhadra and a peace. Mujahid Shah fought Bukka again in 1375 to 1378; Firuz Shah fought Harihara II in 1398 and Deva Raya I in 1406, the latter ending in the marriage of a Vijayanagara princess to the sultan; and Firuz’s two-year siege of Pangal, a Recherla fort south of the Krishna, ended in 1420 with his army broken by disease and by Deva Raya’s relief force. The pattern was set: the wars were fought over the doab, the Konkan ports and the Telugu country to the east, and none was decisive.</p>\n<p>The main narrative source is Firishta, writing at Bijapur around 1610, two and a half centuries later, who drew on earlier Persian chronicles now lost. He reports that Muhammad Shah I killed some 500,000 Hindus in the war of the 1360s, and that the two sides then agreed to spare non-combatants in future. The number is not credible and is best read as a conventional expression of scale; the agreement, if it was made, was not kept. Modern historians, Sherwani and Eaton among them, use Firishta for the sequence of events while discounting his figures and his framing of the wars as holy war. Inscriptions and the Vijayanagara court poems give the other side, with similar exaggeration. Firishta also claims the 1360s campaign saw the first use of artillery in India; the claim is disputed.</p>\n<p>Taken as a system, the wars did two things. They fixed the Krishna–Tungabhadra frontier as the line neither state could move, and they pushed both to recruit across it: Firuz Shah brought in Persians and Turks by sea, Deva Raya II brought Muslim archers into his own army, and each adopted the other’s weapons and court forms. The century of war produced not conquest but a shared Deccani military culture.</p>",
+  "story": "This entry asks the reader to treat the wars as a structure rather than as a chronicle of atrocity. The fighting between Bahmani and Vijayanagara was continual, but it was also inconclusive and mutually formative, and the inflated casualty claims belong to a later age’s polemic. The collection’s argument about layered sovereignty rests on seeing that two states could fight for a century and still share soldiers, horses, techniques and titles.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan, 1295–1724 (Government of Andhra Pradesh, 1973–74)",
+    "url": "https://search.worldcat.org/search?q=History+of+Medieval+Deccan+Sherwani+Joshi"
+   },
+   {
+    "title": "Wikipedia, ‘Bahmani–Vijayanagar War’",
+    "url": "https://en.wikipedia.org/wiki/Bahmani%E2%80%93Vijayanagar_War"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "firuz-shah-bahmani",
+  "title": "Firuz Shah Bahmani",
+  "date_label": "r. 1397–1422",
+  "year": 1397,
+  "year_end": 1422,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "vijayanagara"
+  ],
+  "kind": "person",
+  "place": "Kalaburagi (Gulbarga), Karnataka",
+  "lat": 17.329,
+  "lon": 76.834,
+  "strap": "Taj-ud-din Firuz Shah, sultan from 1397 to 1422, opened the Bahmani court to Persian talent, built Firuzabad on the Bhima and, by Firishta’s account, married a Vijayanagara princess.",
+  "body": "<p>Taj-ud-din Firuz Shah took the Bahmani throne at Gulbarga on 16 November 1397, after a year in which two boy sultans had been deposed and blinded, and ruled until 22 September 1422, when his brother Ahmad forced him to abdicate; he died on 1 October and was buried in the Haft Gumbaz outside Gulbarga. He fought Vijayanagara three times, in 1398, 1406 and 1417 to 1420, winning the first two and losing the third at Pangal, where disease and Deva Raya I’s relief army destroyed his force.</p>\n<p>The chronicles make him the most cultivated of the Gulbarga sultans. Firishta records that he sent ships each year from Goa and Dabhol to the Persian Gulf to bring back scholars, soldiers and craftsmen, and that he spoke several languages, Kannada and Telugu among them, and kept wives from many countries. He is credited with beginning an observatory near Daulatabad, left unfinished at his death, and he built a new walled city, Firuzabad, on the Bhima south of Gulbarga, whose ruins survive. After the war of 1406 the tradition says Deva Raya I gave him a daughter in marriage and the ceded town of Bankapur as her dowry; the story appears in Firishta and has no inscriptional confirmation, though such alliances were not unusual. In 1400 he welcomed the Chishti saint Gesudaraz, a refugee from Timur’s sack of Delhi, to Gulbarga; their relations later soured, and the saint backed Ahmad for the succession.</p>\n<p>Firuz’s reign fixed the Bahmani state’s outward orientation. The Persian Gulf recruitment that he regularised created the class of ‘Westerners’, the afaqis, whose quarrel with the Deccan-born nobility would dominate Bahmani politics for the rest of the century. His defeat at Pangal and his brother’s succession also ended the Gulbarga period; Ahmad Shah moved the court to Bidar within a decade.</p>",
+  "story": "Firuz Shah embodies the collection’s claim that Deccan sovereignty was made of imported and local parts at once. He ruled a Deccani state through Persians recruited by sea, fought Vijayanagara and married into it, and patronised a Sufi who then unseated him in favour of his brother. His reign is where the Bahmani court acquired the cosmopolitan character, and the internal fault line, that the five successor sultanates inherited and that later Mughal and Maratha newcomers would exploit.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Encyclopaedia Iranica, ‘Bahmanid dynasty’",
+    "url": "https://iranicaonline.org/articles/bahmanid-dynasty"
+   },
+   {
+    "title": "Wikipedia, ‘Taj ud-Din Firuz Shah’",
+    "url": "https://en.wikipedia.org/wiki/Taj_ud-Din_Firuz_Shah"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "gesudaraz-gulbarga",
+  "title": "Gesudaraz at Gulbarga",
+  "date_label": "1400–1422",
+  "year": 1400,
+  "year_end": 1422,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "person",
+  "place": "Kalaburagi (Gulbarga), Karnataka",
+  "lat": 17.338,
+  "lon": 76.842,
+  "strap": "The Chishti saint Sayyid Muhammad Gesudaraz, who settled at Gulbarga in 1400 and died there in 1422, made the Bahmani capital a centre of shrine devotion.",
+  "body": "<p>Sayyid Muhammad Husaini, called Gesudaraz, ‘he of the long locks’, and Banda Nawaz, was born in Delhi in 1321 into a family of Herati descent and became a disciple of Nasiruddin Chiragh-i Dihli, the last of the great Delhi Chishtis. After Timur sacked Delhi in 1398 he travelled south and in 1400, at the invitation of Firuz Shah, settled at Gulbarga, where he died on 1 November 1422. He was then over a hundred years old by the lunar reckoning. His tomb, built by Ahmad Shah I in the years after his death, stands east of the town and is still one of the Deccan’s major pilgrimage shrines.</p>\n<p>Gesudaraz was a scholar as much as a mystic. He wrote commentaries and treatises in Arabic and Persian, and some short works attributed to him are in the early Deccani vernacular, the Dakhni that the sultanate’s Delhi-born settlers had carried south; the attribution of the best known, the <em>Miraj al-ashiqin</em>, is doubted by modern scholars, but the tradition that he taught in the spoken language is old. His relations with Firuz Shah cooled over doctrine and over politics: the saint favoured the sultan’s brother Ahmad as heir, and Ahmad’s coup in 1422, a month before the saint’s death, was justified by his blessing. Ahmad took the title Wali, friend of God, and made the cult of the saint an institution of the state.</p>\n<p>Eaton has traced how the Chishti shrine changed the Bahmani capital. The dargah became a place where sultans sought legitimacy, where Hindus as well as Muslims came to petition, and where the Deccan’s Muslims had a saint of their own rather than one in distant Delhi. The pattern, a shrine beside the throne and a vernacular piety beneath the Persian court, was repeated at Bidar, Bijapur and Golconda, and survived every change of regime. The urs at Gulbarga still draws large crowds of both faiths.</p>",
+  "story": "Gesudaraz introduces a form of authority the collection will meet repeatedly: the saint whose blessing can make a sultan and whose shrine outlasts the dynasty. Spiritual sovereignty at Gulbarga sat beside political sovereignty and was not identical with it; the Bahmanis needed the dargah as much as the army. The entry also marks the beginning of the Dakhni vernacular culture that gave the plateau a shared idiom across later political divisions.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Encyclopaedia Iranica, ‘Gīsūdarāz’",
+    "url": "https://iranicaonline.org/articles/gisudaraz"
+   },
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Wikipedia, ‘Bande Nawaz’",
+    "url": "https://en.wikipedia.org/wiki/Bande_Nawaz"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "kannada-telugu-court",
+  "title": "Kannada and Telugu at court",
+  "date_label": "15th century",
+  "year": 1400,
+  "year_end": 1500,
+  "period": 1,
+  "polities": [
+   "vijayanagara",
+   "other"
+  ],
+  "kind": "document",
+  "place": "Gadag, Karnataka",
+  "lat": 15.43,
+  "lon": 75.63,
+  "strap": "Kumara Vyasa's Kannada Bharata and Srinatha's Telugu prabandhas: the two languages of the southern Deccan made literary under royal and Reddi patronage.",
+  "body": "<p>Two poets define the fifteenth century in the Deccan's vernaculars. Kumara Vyasa, whose real name was Naranappa, composed the <em>Karnata Bharata Kathamanjari</em>, a Kannada version of the first ten books of the <em>Mahabharata</em>, in the six-line shatpadi metre. Tradition places him at the Viranarayana temple at Gadag, where a pillar is shown as the one he wrote beside, and dates the work to about 1430 in the reign of Deva Raya II; the poem itself names no patron, and the date rests on tradition and internal evidence rather than an inscription. It remains central to the gamaka tradition of sung recitation.</p>\n<p>Srinatha (c. 1365–c. 1441) was a Telugu poet who served the Reddi kings of Kondavidu as a minister and held the title Kavisarvabhauma, emperor of poets. His works include the <em>Sringara Naishadhamu</em>, a reworking of the Sanskrit <em>Naishadhiyacharita</em>, the <em>Kasikhandamu</em> and the <em>Bhimakhandamu</em>, and the chronicle-like <em>Palanati Viracharitra</em>. The tradition has him visiting Vijayanagara in Deva Raya II's reign and being showered with gold after defeating a rival Bengali scholar in debate; the story is late but the visit is plausible. He died poor, and the verse attributed to his last days is a standard of Telugu literature.</p>\n<p>Both languages were languages of state. Kannada was the script of the Sangama signature and of most inscriptions around the capital; Telugu was the tongue of the eastern provinces and the Reddi and Velama courts, and of an increasing share of the nobility as the empire expanded into Andhra. By the Tuluva period Telugu was, in effect, the court's second language, and Krishnadevaraya would write his own <em>Amuktamalyada</em> in it.</p>\n<p>The effect was to give the southern Deccan two literary standards that were not Sanskrit and not Persian, and that would survive every change of dynasty.</p>",
+  "story": "Language is a layer of sovereignty that maps poorly onto states. Kannada and Telugu, both fostered at Vijayanagara, crossed the frontier freely: the Bahmani and later the Bijapur and Golconda courts patronised Telugu and Kannada poets, and Dakhni, the sultanates' own vernacular, grew up among them. The collection's later entries on Dakhni and on the Telugu court of Golconda depend on the bilingual literary culture established here, and on the fact that poets, unlike kings, could be in two kingdoms at once.",
+  "sources": [
+   {
+    "title": "Velcheru Narayana Rao and David Shulman, Classical Telugu Poetry: An Anthology (University of California Press, 2002)",
+    "url": "https://www.worldcat.org/search?q=Narayana+Rao+Shulman+Classical+Telugu+Poetry"
+   },
+   {
+    "title": "Sheldon Pollock (ed.), Literary Cultures in History: Reconstructions from South Asia (University of California Press, 2003)",
+    "url": "https://www.worldcat.org/search?q=Pollock+Literary+Cultures+in+History"
+   },
+   {
+    "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, 2001)",
+    "url": "https://doi.org/10.1093/oso/9780195136616.001.0001"
+   },
+   {
+    "title": "Wikipedia, ‘Kumara Vyasa’",
+    "url": "https://en.wikipedia.org/wiki/Kumara_Vyasa"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "deva-raya-ii",
+  "title": "Deva Raya II",
+  "date_label": "r. 1424–1446",
+  "year": 1424,
+  "year_end": 1446,
+  "period": 1,
+  "polities": [
+   "vijayanagara",
+   "bahmani"
+  ],
+  "kind": "person",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.462,
+  "strap": "Deva Raya II, who ruled Vijayanagara from 1424 to 1446, took the state to its first height and recruited Muslim archers and horsemen into its army.",
+  "body": "<p>Deva Raya II, styled Gajabetekara, ‘hunter of elephants’, ruled Vijayanagara from 1424 until his death on 24 May 1446; some lists begin his reign in 1423, when he was crowned in his father’s lifetime. After the Kondavidu Reddi line collapsed in the 1420s he extended Vijayanagara authority over much of its former territory, bringing the Telugu coast under his officers by the early 1430s, and his general Lakkanna Dandesa levied tribute by sea on Ceylon and the ports of the Bay of Bengal, a claim recorded by the Italian Nicolo Conti, who visited around 1420, and by the Timurid envoy Abdur Razzaq in 1443. Against the Bahmanis the record was mixed: the war of 1436 ended with a large payment to Ahmad Shah, and an attack in 1443 was contained.</p>\n<p>Firishta tells a story that historians have taken seriously. Deva Raya, asking his council why the sultans always won, was told that the Bahmani archers and horses were better; he therefore enlisted Muslim soldiers, granted them land and a mosque, and placed a Quran before his throne so that they could make obeisance to the king without offending their faith. The details cannot be checked, but inscriptions confirm Muslim officers in Vijayanagara service in the fifteenth century, and the recruitment of foreign cavalry became permanent; Abdur Razzaq found a great army and a disciplined court. Deva Raya also patronised Kannada and Telugu letters, the Virashaiva poet Chamarasa, the Brahmin Kumara Vyasa and the Telugu poet Srinatha among them, and the Hampi inscriptions record extensive temple-building.</p>\n<p>His reign was the peak of the Sangama line. After 1446 the dynasty declined under his brother and nephews, lost the Telugu coast to Orissa and the north-west to the Bahmanis, and was replaced by the Saluvas in 1485. The armies and institutions he built outlasted the family and were the base on which Krishnadevaraya rebuilt the state after 1509.</p>",
+  "story": "Deva Raya II matters to the collection because a Hindu king chose, on the evidence of the chronicles, to make his army partly Muslim and to accommodate its faith at court. The choice shows that Vijayanagara’s sovereignty was built from the same materials as its rival’s: horses, archers and men from beyond the Deccan. The state at its first height was already a composite, and the later image of a purely Hindu bulwark belongs to a different century.",
+  "sources": [
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Phillip B. Wagoner, ‘Sultan among Hindu Kings’, Journal of Asian Studies 55:4 (1996)",
+    "url": "https://www.jstor.org/stable/2646491"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Wikipedia, ‘Deva Raya II’",
+    "url": "https://en.wikipedia.org/wiki/Deva_Raya_II"
+   }
+  ],
+  "related_maps": [
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+  ]
+ },
+ {
+  "id": "afaqi-dakhni-factions",
+  "title": "Afaqis and Dakhnis",
+  "date_label": "c. 1430–1500",
+  "year": 1430,
+  "year_end": 1500,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "institution",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "The split between immigrant ‘Westerners’ and Deccan-born nobles at the Bahmani court, which turned to massacre in 1446 and 1481 and outlived the dynasty.",
+  "body": "<p>Afaqi, ‘from the horizons’, was the Bahmani term for nobles who had come from Iran, Iraq, Central Asia and the Arab lands; Dakhni meant those born in the Deccan, the descendants of the amiran-i sadah who had founded the state, together with the Habshi (African) slave-officers who usually sided with them. The distinction hardened under Ahmad Shah I, who moved the capital to Bidar around 1430 and recruited heavily from Iran, and became formal under Ahmad II (r. 1436–1458), who, according to Firishta, seated the Westerners on his right and the Deccanis and Africans on his left.</p>\n<p>The first great bloodletting came in 1446. An Afaqi force sent into the Konkan against the Shirke chief of Sangameshwar was ambushed and cut to pieces; the Dakhni commanders who had failed to support it then persuaded the sultan that the Westerners were traitors, and at the fort of Chakan, near Pune, the surviving Afaqi officers and their households were killed. Firishta's figures, in the thousands, should be treated as a chronicler's numbers. The sultan later discovered the deception and restored the Afaqis, but the pattern was set: each faction could destroy the other if it caught the sultan's ear.</p>\n<p>Mahmud Gawan, the most powerful Afaqi of all, tried to balance appointments between the two groups, and was killed by a Dakhni conspiracy in 1481. After his death the Westerners abandoned the court, Dakhni ministers led by Malik Naib and then Qasim Barid held the young sultans, and the governors in the provinces, both Afaqi (Yusuf Adil at Bijapur, Quli Qutb at Golconda) and Dakhni (Malik Ahmad at Ahmadnagar), stopped obeying them.</p>\n<p>The fault line did not close with the dynasty. It ran through Bijapur, Ahmadnagar and Golconda for another two centuries, and remained a recurring source of factional conflict in the successor courts.</p>",
+  "story": "The collection's throughline is that Deccan sovereignty was layered; this entry shows that the Bahmani state was layered internally too, with a Persianate court elite and a Deccani military elite competing for a single crown. Each faction looked to a different world, the one across the sea and the one in the countryside, and neither could rule alone. Later entries on the successor states, on Dakhni as a language and on the Habshi commanders of Ahmadnagar should be read as continuations of this quarrel rather than new stories.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CBO9780511781391"
+   },
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://www.worldcat.org/search?q=Sherwani+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan, 1295–1724, 2 vols (Government of Andhra Pradesh, 1973–74)",
+    "url": "https://www.worldcat.org/search?q=Sherwani+Joshi+History+of+Medieval+Deccan"
+   },
+   {
+    "title": "Wikipedia, ‘Bahmani Sultanate’",
+    "url": "https://en.wikipedia.org/wiki/Bahmani_Sultanate"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "bidar",
+  "title": "Bidar",
+  "date_label": "c. 1430–1619",
+  "year": 1430,
+  "year_end": 1619,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "sultanates"
+  ],
+  "kind": "place",
+  "place": "Bidar, Karnataka",
+  "lat": 17.922,
+  "lon": 77.52,
+  "strap": "The second Bahmani capital on its basalt plateau: fort, palaces, the tombs at Ashtur, and the Baridi ministers who inherited it.",
+  "body": "<p>Bidar stands on the north-eastern edge of the Karnataka plateau, about 110 kilometres north-east of Gulbarga, on a laterite spur with a steep fall to the plain on three sides. Ahmad Shah I moved the Bahmani capital here around 1430 (the chronicles disagree on the exact year), and the fort he built, with a triple moat cut into the rock and walls of more than five kilometres, is the largest surviving fortress of the Deccan sultanates. Inside it the Bahmanis laid out the Takht Mahal and the Sola Khamba mosque of 1423–24, among the earliest buildings, and a series of palaces whose tile and stucco work was continued and refined after the dynasty fell.</p>\n<p>The Rangin Mahal, the ‘coloured palace’ close to the gate, belongs to that later phase: its wooden columns, its mother-of-pearl inlay in black basalt and its tile panels are work of the Baridi period in the sixteenth century. Outside the walls to the east, at Ashtur, the Bahmani sultans from Ahmad Shah I onward lie in a line of domed tombs; Ahmad Shah's own is painted inside with calligraphy and colour, and is still venerated as the tomb of a wali, a saint. The Baridis built their own tombs in a separate group to the west of the town. Bidar also gave its name to bidri, the inlaid blackened-alloy metalwork that became the region's signature craft.</p>\n<p>From about 1492 real power in Bidar belonged to the minister Qasim Barid, a Turk in Dakhni service, and after him to his son Amir Barid, who kept the last Bahmani sultans as prisoners in the fort until Kalimullah fled in 1527. Ali Barid assumed the royal title in 1542. The Baridi state was the smallest of the five successors and was absorbed by Bijapur in 1619; the Mughals took the fort in 1657.</p>\n<p>Bidar, more than any other site, shows the Bahmani order turning into its successors in one place: the same fort, the same palaces, a different name on the coins.</p>",
+  "story": "A capital is where layered sovereignty becomes visible as a single building site. At Bidar a sultan's fort was taken over by his minister, the minister's descendants became kings, and then the kings became a province of Bijapur, all without the walls changing. The collection treats Bidar as the hinge between its first period and the sultanate period that follows; the reader who stands in the Rangin Mahal is looking at Bahmani architecture finished by the dynasty that ended the Bahmanis.",
+  "sources": [
+   {
+    "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+   },
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, 2014)",
+    "url": "https://global.oup.com/academic/product/power-memory-architecture-9780198092216"
+   },
+   {
+    "title": "Britannica, ‘Barid Shahi dynasty’",
+    "url": "https://www.britannica.com/topic/Barid-Shahi-dynasty"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "move-to-bidar-1430",
+  "title": "The move to Bidar",
+  "date_label": "c. 1430",
+  "year": 1430,
+  "year_end": null,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "event",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "Around 1430 Ahmad Shah I moved the Bahmani capital from Gulbarga to Bidar, renamed Muhammadabad, and rebuilt its fort on a new scale.",
+  "body": "<p>Ahmad Shah I, who took the throne from his brother Firuz in 1422 and ruled until 17 April 1436, moved the Bahmani court from Gulbarga to Bidar, some 110 kilometres to the north-east, and renamed the town Muhammadabad. The date is given variously: Britannica says about 1425, Sherwani 1429, other accounts 1427 or 1432. The fort was rebuilt between 1429 and 1432, and the move can be said to have been complete by the latter year. The reasons offered by the chronicles are the healthier air and water of Bidar’s plateau, its position nearer the Telangana frontier that Ahmad had just extended by taking Warangal in 1425, and a wish to leave a capital associated with his brother’s party.</p>\n<p>Bidar stands on the edge of a laterite escarpment above the plain, and the new fort used the drop. Its walls of red laterite run about ten kilometres with thirty-seven bastions and, on the landward side, a triple moat cut into the rock. Inside, Ahmad and his successors built the audience hall known as the Takht Mahal, the Solah Khamba mosque with its arcade of sixteen columns, and later the Rangin Mahal with its coloured tiles. Ahmad himself was buried outside the walls at Ashtur, in a domed tomb painted inside with inscriptions and floral work, which is still visited as a saint’s shrine: he had taken the title Wali, friend of God, and had brought the family of the Persian Sufi Shah Nimatullah to his court.</p>\n<p>The move marks the point at which the Bahmani state turned from a provincial sultanate into a Persianate court. Bidar’s buildings of the next fifty years, the madrasa of Mahmud Gawan above all, were designed in Timurid forms by immigrants, and the court that filled them was divided between those immigrants and the Deccan-born. The new capital was also, in the end, the state’s last: the Baridi ministers who controlled it after 1490 kept the Bahmani sultans as figureheads until 1527 and ruled Bidar themselves until 1619.</p>",
+  "story": "The shift of capital is the collection’s first example of a state choosing a new centre to change what it was. Bidar was meant to be a Persian city on the Deccan plateau, and for half a century it was; it then became the stage for the factional quarrel that broke the Bahmani state apart. The entry carries the reader from the Gulbarga foundations to the Bidar court of Mahmud Gawan and the afaqi–Dakhni split that the rest of the period turns on.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://search.worldcat.org/search?q=Sherwani+The+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Britannica, ‘Bidar’",
+    "url": "https://www.britannica.com/place/Bidar"
+   },
+   {
+    "title": "Wikipedia, ‘Bidar Fort’",
+    "url": "https://en.wikipedia.org/wiki/Bidar_Fort"
+   }
+  ],
+  "related_maps": [
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+  ]
+ },
+ {
+  "id": "abdur-razzaq-1443",
+  "title": "Abdur Razzaq at Vijayanagara",
+  "date_label": "1442–1444",
+  "year": 1442,
+  "year_end": 1444,
+  "period": 1,
+  "polities": [
+   "vijayanagara",
+   "other"
+  ],
+  "kind": "document",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.462,
+  "strap": "The Timurid envoy Abdur Razzaq Samarqandi visited Calicut and Vijayanagara in 1442–44 and described both in his <em>Matla-us-Sadain</em>.",
+  "body": "<p>Kamal-ud-din Abdur Razzaq, born at Herat in 1413, was a qazi at the court of the Timurid ruler Shahrukh when he was sent as envoy to the Zamorin of Calicut. He left Herat in January 1442, sailed from Hormuz, reached Calicut late that year and, summoned by Deva Raya II, travelled inland by way of Mangalore to Vijayanagara, where he stayed for some months in 1443 before returning to Herat in December 1444. He set the journey down as a chapter of his chronicle <em>Matla-us-Sadain wa Majma-ul-Bahrain</em>, ‘The Rising of the Two Auspicious Stars and the Meeting of the Two Seas’, completed in 1470.</p>\n<p>The account is the fullest outsider’s description of the Deccan before the Portuguese. Calicut he found a port where merchants of every nation traded under a ruler who was not a Muslim but whose port was safe and whose customs were low. Vijayanagara he describes as a city of seven concentric walls, with bazaars of jewellers and flower-sellers, a royal palace reached through a succession of courts, a king’s audience at which he was himself received and given robes, and the great Mahanavami festival with its elephants and dancing women. He says, with an ambassador’s licence, that the eye had never seen a place like it and that the king’s dominion had three hundred ports each the equal of Calicut. He also records the plot that nearly killed Deva Raya in 1443 and the resulting suspicion that fell on him as a foreigner.</p>\n<p>Abdur Razzaq is the reason Vijayanagara’s first height is visible at all in a contemporary voice; the Portuguese accounts of Paes and Nuniz came eighty years later. His visit also shows the southern kingdom treated as a regular state by the Persianate world, worth an embassy from Herat, on the same footing as the sultans. The text was later used by the Mughal historians and was the first Persian description of the Deccan that Europeans translated, in the eighteenth century.</p>",
+  "story": "The envoy’s narrative is the collection’s earliest extended eyewitness account of Vijayanagara and its first demonstration that the Deccan was seen from the Persianate world as a set of courts rather than a religious frontier. Herat sent an ambassador to a Hindu raja as it would to a sultan; the raja received him in Persianate forms. The document records layered sovereignty as observed from outside, which is how the later European mapmakers in the companion collection would also see it.",
+  "sources": [
+   {
+    "title": "Encyclopaedia Iranica, ‘ʿAbd-al-Razzāq Samarqandī’",
+    "url": "https://iranicaonline.org/articles/abd-al-razzaq-samarqandi"
+   },
+   {
+    "title": "R. H. Major (ed.), India in the Fifteenth Century (Hakluyt Society, 1857)",
+    "url": "https://archive.org/details/indiainfifteenth00majorich"
+   },
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Wikipedia, ‘Abd al-Razzaq Samarqandi’",
+    "url": "https://en.wikipedia.org/wiki/Abd_al-Razzaq_Samarqandi"
+   }
+  ],
+  "related_maps": [
+   "1519__IndianOcean__Hollanda-Reinel__Folio-3-recto-North-Indian-ocean.html",
+   "1599__SouthIndia__Ruscelli-Rosaccio__Calecut-Nuova-Tavola.html"
+  ]
+ },
+ {
+  "id": "mahmud-gawan",
+  "title": "Mahmud Gawan",
+  "date_label": "1453–1481",
+  "year": 1453,
+  "year_end": 1481,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "person",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "The Iranian merchant who became the Bahmani sultanate's chief minister, reorganised its provinces, took Goa, and was executed on a forged letter in 1481.",
+  "body": "<p>Mahmud Gawan (1411–1481) was born into a landed family in Gilan, on the Caspian coast of Iran, and arrived at the Konkan port of Dabhol in 1453 as a merchant carrying horses, textiles and slaves for the Deccan market. Within a few years he had entered Bahmani service; he was made Malik al-Tujjar, chief of merchants, and under Humayun Shah (r. 1458–1461) received the title Khwaja-i Jahan. From the accession of the boy sultan Muhammad III in 1463 until his death he was, in effect, the government of the sultanate.</p>\n<p>His administration is known from his own letters, collected as the <em>Riyaz al-Insha</em>, and from Firishta. He divided the four old provinces (tarafs) into eight, so that no governor commanded a whole quarter of the kingdom; he took most forts out of provincial hands and put them under officers answerable to the centre; he fixed the number of troops each governor had to maintain and paid part of them directly; and he ordered a measurement of cultivated land to regulate revenue. Militarily he pushed the sultanate to its widest extent: the Konkan campaigns of 1469–72 ended with the capture of Goa from Vijayanagara in 1472, giving the Bahmanis a west-coast port for the horse trade, and in the east Kondapalli and Rajahmundry were taken from the Orissan Gajapatis.</p>\n<p>The reforms cut into the power of the Deccani (Dakhni) nobility, and Gawan was himself an Afaqi, a ‘Westerner’ from Iran. The chronicles say his enemies obtained a blank sheet bearing his seal and wrote over it a letter inviting the Gajapati king to invade. Muhammad III, drunk according to Firishta, had him beheaded at Kondapalli on 5 April 1481. He was about seventy. The sultan died the following year, and the Afaqi nobles withdrew their support from the crown.</p>\n<p>What changed was that the Bahmani state lost the one man who had tried to hold its two nobilities together, and within a decade its governors were sultans in their own right.</p>",
+  "story": "Gawan's career is the strongest case in this period for a Deccan that looked outward across the Arabian Sea. He came as a trader, governed as a Persian vizier, corresponded with Timurid Herat and Ottoman Istanbul, and fought for a port. His eight provinces also set the map of the later Deccan: several of the territorial commands Gawan reorganised became the nuclei of the successor states. The layered sovereignty the collection traces begins here as an administrative fact before it becomes a political one.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CBO9780511781391"
+   },
+   {
+    "title": "H. K. Sherwani, Mahmud Gawan, the Great Bahmani Wazir (Kitabistan, 1942)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.69314"
+   },
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://www.worldcat.org/search?q=Sherwani+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Britannica, ‘India: Vizierate of Mahmud Gawan’",
+    "url": "https://www.britannica.com/place/India/Vizierate-of-Mahmud-Gawan"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "athanasius-nikitin",
+  "title": "Afanasy Nikitin in the Deccan",
+  "date_label": "c. 1469–1472",
+  "year": 1469,
+  "year_end": 1472,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "other"
+  ],
+  "kind": "document",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "A merchant from Tver who spent about three years in the Bahmani Deccan and left the first Russian account of India, the Journey Beyond Three Seas.",
+  "body": "<p>Afanasy Nikitin was a trader from Tver, on the upper Volga, who set out down the river on a commercial voyage in 1466 or 1468 (the year is disputed; the traditional dating follows Karamzin, and L. S. Semyonov's 1978 redating, increasingly accepted, moves the whole journey two years later). Robbed near Astrakhan, he went on through Derbent, Baku and Persia to Hormuz and crossed to the Konkan port of Chaul, intending to sell a horse. He stayed in India for about three years, most of them in the Bahmani sultanate, before returning by way of Hormuz, Trebizond and Crimea; he died near Smolensk before reaching home, and his notes were copied into Russian chronicles, where Karamzin found them and printed extracts in 1817.</p>\n<p>His <em>Khozhenie za tri morya</em> (<em>Journey Beyond Three Seas</em>) is not a chronicle or a geography but the jottings of a man with no patron, written in a mixture of Russian, Turkic, Persian and Arabic. He spent the rains at Junnar, in the territory of the Dakhni governor there, and then settled in Bidar in the reign of Muhammad III, at the height of Mahmud Gawan's power. He describes the sultan riding out on campaign with an escort of elephants and horsemen, the bazaar, the Muharram processions, the price of slaves and horses, and the divide between the ruling Muslims and the Hindu population. He went with Hindu companions to the pilgrimage centre of Parvata, which is usually identified with Srisailam on the Krishna, and describes its temple and festival. He also records his own anxiety about keeping the Christian calendar and his faith among strangers.</p>\n<p>Nikitin saw what Abdur Razzaq, an ambassador, and the Bahmani chroniclers did not: prices, ordinary devotion, the inside of a provincial town in the monsoon. His text is the only independent witness to Bidar in the 1470s.</p>\n<p>It changed nothing in the Deccan. It changed what can be known about it.</p>",
+  "story": "The collection rests on the European gaze, and Nikitin is a reminder that one of the earliest European eyewitnesses of the Deccan, and the first Russian, was an Orthodox trader with no empire behind him, a generation before Vasco da Gama. He saw the Bahmani state as a layered thing, a Muslim court and army over a Hindu countryside, and said so plainly. His route from the Volga to Bidar also shows the Deccan already tied to the overland Persian world that the later maritime powers would try to cut out.",
+  "sources": [
+   {
+    "title": "R. H. Major (ed.), India in the Fifteenth Century, containing ‘The Travels of Athanasius Nikitin’ (Hakluyt Society, 1857)",
+    "url": "https://archive.org/details/indiainfifteenth00majo"
+   },
+   {
+    "title": "L. S. Semyonov, Puteshestvie Afanasiya Nikitina (Nauka, 1980)",
+    "url": "https://www.worldcat.org/search?q=Semenov+Puteshestvie+Afanasiia+Nikitina"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CBO9780511781391"
+   },
+   {
+    "title": "Wikipedia, ‘Afanasy Nikitin’",
+    "url": "https://en.wikipedia.org/wiki/Afanasy_Nikitin"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "mahmud-gawan-madrasa",
+  "title": "The Madrasa of Mahmud Gawan",
+  "date_label": "1472",
+  "year": 1472,
+  "year_end": null,
+  "period": 1,
+  "polities": [
+   "bahmani"
+  ],
+  "kind": "place",
+  "place": "Bidar, Karnataka",
+  "lat": 17.9125,
+  "lon": 77.5265,
+  "strap": "A three-storeyed college built in Bidar by the Bahmani vizier on the model of Timurid Central Asia, tiled in blue and green and now half ruined.",
+  "body": "<p>The madrasa that Mahmud Gawan built in the heart of Bidar bears an inscription dating it to about 1472 (the Hijri year is read as 876 or 877). It is a rectangular building about 62 by 55 metres on the exterior, three storeys high, arranged around a central courtyard with a lecture hall and a mosque on the axes and cells for students in the ranges between. Two minarets of about 30 metres flanked the entrance on the east; one survives. Contemporaries said the library held three thousand volumes.</p>\n<p>Nothing else in India looked like it. Its plan, its tall entrance arch and the minarets with their octagonal bases and projecting balconies follow the madrasas of Samarqand and Khurasan, and Gawan, who had come from Iran and corresponded with scholars in Herat, almost certainly imported the design and perhaps the craftsmen. The outer walls were faced with glazed tiles in blue, green, yellow and white, set in chevron patterns on the minarets and arranged into a Quranic frieze across the facade in coloured lettering on a green and gold ground. Enough survives on the north-east corner to show how it must have looked complete.</p>\n<p>After the Mughal conquest the building was used for military purposes. In 1695–96 much of its south-eastern side – roughly a quarter of the structure, including the south-east minaret and the entrance – was destroyed, an event variously attributed to lightning and to an explosion of stored gunpowder. The Archaeological Survey of India has held the site as a protected monument since 1914.</p>\n<p>The madrasa marks the moment when the Bahmani court stopped adapting the Delhi sultanate's manner and started importing Persianate forms directly from the Timurid world; the tiles, the proportions and the colour of the later Deccan sultanates' buildings all have their first showing here.</p>",
+  "story": "Buildings are evidence of where a court thought it belonged. The madrasa says that in the 1470s Bidar placed itself in a Persian-speaking world running from Herat to the Deccan, and that a vizier could put that claim in brick and glaze at the centre of the capital. The Afaqi and Dakhni quarrel that killed its builder was in part a quarrel about exactly this. The collection's later sultanate entries, from Bijapur's domes to Golconda's tiles, inherit the vocabulary tried out here.",
+  "sources": [
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CBO9780511781391"
+   },
+   {
+    "title": "Wikipedia, ‘Mahmud Gawan Madrasa’",
+    "url": "https://en.wikipedia.org/wiki/Mahmud_Gawan_Madrasa"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "bahmani-collapse-1490s",
+  "title": "The Bahmani collapse",
+  "date_label": "1482–1518",
+  "year": 1482,
+  "year_end": 1518,
+  "period": 1,
+  "polities": [
+   "bahmani",
+   "sultanates"
+  ],
+  "kind": "event",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "Between the death of Muhammad III and the last nominal sultan, the Bahmani governors became kings and the minister Qasim Barid kept the crown as a prisoner.",
+  "body": "<p>Muhammad III died in 1482, a year after executing Mahmud Gawan, leaving a twelve-year-old son, Mahmud Shah, and a court split between Dakhnis and Afaqis. The regent Malik Naib, a Dakhni, was killed in a palace struggle within a few years, and by about 1492 the dominant figure at Bidar was Qasim Barid, a Turkish officer who had risen through the Dakhni party. He took the office of chief minister and kept it until his death in 1504, when his son Amir Barid succeeded him. Mahmud Shah reigned in name until 1518; he was allowed to hunt, drink and issue coins.</p>\n<p>Meanwhile the provinces went their own way. Gawan's eight governors had been chosen for loyalty to the centre; without him they were simply the strongest men in their regions. Malik Ahmad, son of Malik Naib, defeated a royal army in 1490 and founded Ahmadnagar. In the same year Yusuf Adil Khan at Bijapur and Fathullah Imad-ul-Mulk at Berar stopped sending revenue and began to act as sovereigns, though Yusuf went on acknowledging the sultan on his coins for some time. Sultan Quli Qutb-ul-Mulk at Golconda held out longest as a loyal governor and did not style himself independent until 1518 or later. The conventional date of 1490 for the ‘break-up’ is therefore a shorthand; the process ran from 1482 to 1518 and was never formally announced.</p>\n<p>After Mahmud Shah four more Bahmanis were crowned by the Barids between 1518 and 1527, each reigning briefly in the fort. The last, Kalimullah, escaped to Bijapur and then to Ahmadnagar, where he died; no successor was named. Amir Barid ruled Bidar as a fact, and his son Ali took the royal title in 1542.</p>\n<p>The Deccan now had five sultanates where it had had one, and they would spend the next century fighting each other and Vijayanagara.</p>",
+  "story": "This is the entry in which the collection's layered Deccan comes into being. For thirty-six years the region had a sultan who ruled increasingly little beyond Bidar, ministers who ruled the sultan, and governors who ruled everything else while still minting in his name. Sovereignty was not transferred; it was divided and left unresolved. The five successor states, treated in the existing entry on the successor sultanates, inherited both Gawan's provincial map and the habit of acknowledging an overlord one did not obey, a habit the Mughals would later exploit.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CBO9780511781391"
+   },
+   {
+    "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
+    "url": "https://www.worldcat.org/search?q=Sherwani+Bahmanis+of+the+Deccan"
+   },
+   {
+    "title": "Britannica, ‘Bahmani sultanate’",
+    "url": "https://www.britannica.com/place/Bahmani-sultanate"
+   },
+   {
+    "title": "Wikipedia, ‘Qasim Barid I’",
+    "url": "https://en.wikipedia.org/wiki/Qasim_Barid_I"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "saluva-usurpation-1485",
+  "title": "The Saluva usurpation",
+  "date_label": "1485",
+  "year": 1485,
+  "year_end": 1505,
+  "period": 1,
+  "polities": [
+   "vijayanagara"
+  ],
+  "kind": "event",
+  "place": "Hampi, Karnataka",
+  "lat": 15.335,
+  "lon": 76.46,
+  "strap": "Saluva Narasimha, a general from Chandragiri, removed the last Sangama king in 1485; within twenty years his own line had been set aside by the Tuluvas.",
+  "body": "<p>In 1485 Saluva Narasimha, the chief who governed Chandragiri in the south-east of the empire, deposed the Sangama king at Vijayanagara and took the throne himself. The dynasty that had founded the city in 1336 had been decaying since the death of Deva Raya II in 1446; its last rulers, Virupaksha II and Praudha Deva Raya, are remembered by the chronicles and by a Portuguese report a generation later mainly for losing the Konkan ports to the Bahmanis and the Gajapatis' gains on the east coast. Narasimha had already been acting as the empire's effective defender, and the coup, carried out for him at the capital by his general Narasa Nayaka, was the first change of dynasty in the kingdom's history.</p>\n<p>His reign was short and hard. He recovered Mangalore, Bhatkal and Honavar on the west coast, which mattered for the horse trade, and spent much of his time campaigning against rebellious chiefs. In 1489 he was captured by the Gajapati king Purushottama and had to give up Udayagiri to be released. He died in 1491, leaving two young sons in the guardianship of Narasa Nayaka (Britannica gives his reign as 1485–90; most Indian scholarship follows the inscriptions to 1491).</p>\n<p>Narasa Nayaka ruled as regent until his own death in 1503, put down the elder boy, and kept the younger, Immadi Narasimha, as a figurehead. In 1505 Narasa's son Vira Narasimha had Immadi Narasimha killed and took the crown, founding the Tuluva dynasty. Vira Narasimha's half-brother Krishnadevaraya succeeded him in 1509, which is where the collection's next period begins.</p>\n<p>The usurpations established that the empire belonged to whoever could hold the army and the capital; the Sangama claim to found the kingdom counted for nothing against it.</p>",
+  "story": "A dynasty is one layer of sovereignty, and the Saluva and Tuluva coups show the Vijayanagara throne passing from founders to generals to the generals' sons within twenty years while the state itself went on. The nayakas of the previous entry supplied both usurpers. The collection's sixteenth-century Vijayanagara is a Tuluva creation, and the Aravidu regents who presided over the collapse of 1565 came to power by exactly the same route. The pattern of military men supplanting kings runs forward into the Marathas and the Nizam.",
+  "sources": [
+   {
+    "title": "Burton Stein, Vijayanagara, New Cambridge History of India I.2 (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar) (Swan Sonnenschein, 1900)",
+    "url": "https://archive.org/details/forgottenempirev00sewe"
+   },
+   {
+    "title": "Britannica, ‘Saluva dynasty’",
+    "url": "https://www.britannica.com/topic/Saluva-dynasty"
+   },
+   {
+    "title": "Wikipedia, ‘Saluva Narasimha Deva Raya’",
+    "url": "https://en.wikipedia.org/wiki/Saluva_Narasimha_Deva_Raya"
+   }
+  ],
+  "related_maps": []
+ },
+ {
+  "id": "calicut-1498",
+  "title": "The Portuguese at Calicut",
+  "date_label": "20 May 1498",
+  "year": 1498,
+  "year_end": null,
+  "period": 1,
+  "polities": [
+   "portuguese",
+   "other"
+  ],
+  "kind": "event",
+  "place": "Kozhikode (Calicut), Kerala",
+  "lat": 11.258,
+  "lon": 75.78,
+  "strap": "Vasco da Gama anchored off Calicut in May 1498 and met the Zamorin; twelve years later the Portuguese held Goa and a place in the Deccan.",
+  "body": "<p>Vasco da Gama's three ships reached the Malabar coast on 20 May 1498, anchoring off Kappad, a few miles north of Calicut, after ten months out from Lisbon and a crossing of the Arabian Sea from Malindi with a pilot taken on there. Calicut was the chief spice port of the coast, ruled by the Samudri Raja, the Zamorin, whose prosperity depended on the Arab and Gujarati merchants who carried pepper to the Red Sea. Gama was received by the Zamorin on 28 May. His gifts, a few hats, basins and strings of coral, were laughed at; his request for a trading factory was delayed; the Muslim merchants lobbied against him; and he left in August after a quarrel over hostages, with a small cargo and a letter.</p>\n<p>The voyage was a reconnaissance, and the Portuguese followed it up with force. Pedro Alvares Cabral bombarded Calicut in 1500 after a riot killed the men of his factory; Gama returned in 1502 with a fleet, burned a pilgrim ship and shelled the town; and the crown settled on a policy of fortified bases and a licensing system, the cartaz, to control shipping. Cochin, whose raja was the Zamorin's rival, became the first base. Afonso de Albuquerque then looked north for a port that could be held against all comers and had a hinterland. In 1510 he took Goa from the Bijapur sultanate, lost it, and retook it on 25 November.</p>\n<p>The Zamorin never submitted, and Calicut fought the Portuguese on and off for a century with Mamluk and Ottoman help. But the arrival of an armed European trading power on the coast altered the calculation of every Deccan state, which is why this entry closes the first period of the collection.</p>\n<p>Goa, the sultanates and the horse trade are taken up in the period that follows.</p>",
+  "story": "An armed maritime actor entered the western Indian Ocean in 1498, with no territory, no claim on the land revenue, and guns at sea; within a decade it held fortified jurisdictions, and in 1510 at Goa it entered the Deccan’s political order directly. The Portuguese did not want to be kings of the Deccan; they wanted its ports and a toll on its shipping, and within a generation both Bijapur and Vijayanagara were treating with them for horses. The European gaze that the companion map collection documents begins here, and the collection's next five periods are in part the story of what the Portuguese started.",
+  "sources": [
+   {
+    "title": "Sanjay Subrahmanyam, The Career and Legend of Vasco da Gama (Cambridge University Press, 1997)",
+    "url": "https://doi.org/10.1017/CBO9780511583407"
+   },
+   {
+    "title": "E. G. Ravenstein (ed.), A Journal of the First Voyage of Vasco da Gama, 1497–1499 (Hakluyt Society, 1898)",
+    "url": "https://archive.org/details/journaloffirstvo00velh"
+   },
+   {
+    "title": "M. N. Pearson, The Portuguese in India, New Cambridge History of India I.1 (Cambridge University Press, 1987)",
+    "url": "https://doi.org/10.1017/CHOL9780521257138"
+   },
+   {
+    "title": "Britannica, ‘Vasco da Gama’",
+    "url": "https://www.britannica.com/biography/Vasco-da-Gama"
+   }
+  ],
+  "related_maps": [
+   "1599__SouthIndia__Ruscelli-Rosaccio__Calecut-Nuova-Tavola.html",
+   "1519__IndianOcean__Hollanda-Reinel__Folio-3-recto-North-Indian-ocean.html"
+  ]
+ },
+ {
+  "id": "bahmani-successor-sultanates",
+  "title": "The Bahmani break-up",
+  "date_label": "c. 1490–1518",
+  "year": 1490,
+  "year_end": 1518,
+  "period": 2,
+  "polities": [
+   "sultanates"
+  ],
+  "kind": "institution",
+  "place": "Bidar, Karnataka",
+  "lat": 17.913,
+  "lon": 77.53,
+  "strap": "Between about 1490 and 1518 the Bahmani sultanate at Bidar dissolved into five successor states: Bijapur, Ahmadnagar, Berar, Golconda and Bidar itself.",
+  "body": "<p>The Bahmani sultanate, founded in 1347 and ruled from Gulbarga and then Bidar, came apart in the generation after the execution of its great minister Mahmud Gawan in 1481. Provincial governors stopped sending revenue and began to act as rulers. Malik Ahmad in the west, Fathullah Imad-ul-Mulk in Berar and Yusuf Adil Khan at Bijapur were all effectively independent by 1490; Qasim Barid, the minister at Bidar, controlled what was left of the court; and Sultan Quli Qutb-ul-Mulk, governor of Telangana, took the title of sultan at Golconda in 1518. Britannica dates the dissolution to 1490–1518. A shadow Bahmani line lingered at Bidar until the last sultan, Kalimullah, fled in the late 1520s.</p>\n<p>The break-up was not a religious or ethnic revolt. It followed the fault line that had run through Bahmani politics for a century, between the Dakhnis, Muslims born in the Deccan together with the Habshi (African) soldiers attached to them, and the Afaqis or ‘Westerners’, Persians, Turks and Arabs who had arrived by sea and dominated the court and the Persian-language administration. Gawan, himself an Afaqi, had tried to balance the factions by dividing the provinces; his fall ended the balance. The five new states inherited the quarrel, and each would settle it differently.</p>\n<p>Each successor state carried the Bahmani apparatus with it: Persian as the language of the chancery, a revenue system resting on local Hindu deshmukhs and accountants, garrison forts on the plateau, and a court culture that looked to Iran. Ahmadnagar and Bijapur quickly absorbed local Marathi-speaking gentry into their armies; Golconda relied on Telugu nayaks.</p>\n<p>What changed was the map. From about 1500 the Deccan had, in place of one sultanate facing Vijayanagara across the Krishna, five sultanates of uneven strength that fought each other as readily as they fought the Raya. That arrangement gave Vijayanagara its opening under Krishnadevaraya, and the alliances it made possible shaped everything down to the coalition of 1565.</p>",
+  "story": "The collection begins with a sovereignty already divided. The Bahmani break-up produced a Deccan of five sultanates whose borders were negotiable and whose armies recruited across the religious line, and it set the pattern of shifting alliance that runs through the whole timeline. The later collapse of plurality under Mughal and then Company paramountcy is only legible if the starting point is this fragmented, competitive, mutually intelligible world of successor states.",
+  "sources": [
+   {
+    "title": "Haroon Khan Sherwani, The Bahmanis of the Deccan: An Objective Study (Saood Manzil, Hyderabad, 1953)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.68551"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
+   },
+   {
+    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
+    "url": "https://archive.org/details/dli.csl.7467"
+   },
+   {
+    "title": "Wikipedia, ‘Deccan sultanates’",
+    "url": "https://en.wikipedia.org/wiki/Deccan_sultanates"
+   }
+  ],
+  "related_maps": [
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+  ]
+ },
+ {
   "id": "ahmadnagar-nizam-shahis",
   "title": "Ahmadnagar",
   "date_label": "1490–1565",
   "year": 1494,
   "year_end": 1565,
-  "period": 1,
+  "period": 2,
   "polities": [
    "sultanates",
    "maratha"
@@ -41,90 +993,12 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "bahmani-successor-sultanates",
-  "title": "The Bahmani break-up",
-  "date_label": "c. 1490–1518",
-  "year": 1490,
-  "year_end": 1518,
-  "period": 1,
-  "polities": [
-   "sultanates"
-  ],
-  "kind": "institution",
-  "place": "Bidar, Karnataka",
-  "lat": 17.913,
-  "lon": 77.53,
-  "strap": "Between about 1490 and 1518 the Bahmani sultanate at Bidar dissolved into five successor states: Bijapur, Ahmadnagar, Berar, Golconda and Bidar itself.",
-  "body": "<p>The Bahmani sultanate, founded in 1347 and ruled from Gulbarga and then Bidar, came apart in the generation after the execution of its great minister Mahmud Gawan in 1481. Provincial governors stopped sending revenue and began to act as rulers. Malik Ahmad in the west, Fathullah Imad-ul-Mulk in Berar and Yusuf Adil Khan at Bijapur were all effectively independent by 1490; Qasim Barid, the minister at Bidar, controlled what was left of the court; and Sultan Quli Qutb-ul-Mulk, governor of Telangana, took the title of sultan at Golconda in 1518. Britannica dates the dissolution to 1490–1518. A shadow Bahmani line lingered at Bidar until the last sultan, Kalimullah, fled in the late 1520s.</p>\n<p>The break-up was not a religious or ethnic revolt. It followed the fault line that had run through Bahmani politics for a century, between the Dakhnis, Muslims born in the Deccan together with the Habshi (African) soldiers attached to them, and the Afaqis or ‘Westerners’, Persians, Turks and Arabs who had arrived by sea and dominated the court and the Persian-language administration. Gawan, himself an Afaqi, had tried to balance the factions by dividing the provinces; his fall ended the balance. The five new states inherited the quarrel, and each would settle it differently.</p>\n<p>Each successor state carried the Bahmani apparatus with it: Persian as the language of the chancery, a revenue system resting on local Hindu deshmukhs and accountants, garrison forts on the plateau, and a court culture that looked to Iran. Ahmadnagar and Bijapur quickly absorbed local Marathi-speaking gentry into their armies; Golconda relied on Telugu nayaks.</p>\n<p>What changed was the map. From about 1500 the Deccan had, in place of one sultanate facing Vijayanagara across the Krishna, five sultanates of uneven strength that fought each other as readily as they fought the Raya. That arrangement gave Vijayanagara its opening under Krishnadevaraya, and the alliances it made possible shaped everything down to the coalition of 1565.</p>",
-  "story": "The collection begins with a sovereignty already divided. The Bahmani break-up produced a Deccan of five sultanates whose borders were negotiable and whose armies recruited across the religious line, and it set the pattern of shifting alliance that runs through the whole timeline. The later collapse of plurality under Mughal and then Company paramountcy is only legible if the starting point is this fragmented, competitive, mutually intelligible world of successor states.",
-  "sources": [
-   {
-    "title": "Haroon Khan Sherwani, The Bahmanis of the Deccan: An Objective Study (Saood Manzil, Hyderabad, 1953)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.68551"
-   },
-   {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CHOL9780521254847"
-   },
-   {
-    "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
-    "url": "https://archive.org/details/dli.csl.7467"
-   },
-   {
-    "title": "Wikipedia, ‘Deccan sultanates’",
-    "url": "https://en.wikipedia.org/wiki/Deccan_sultanates"
-   }
-  ],
-  "related_maps": [
-   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
-  ]
- },
- {
-  "id": "bijapur-adil-shahis",
-  "title": "Bijapur under the Adil Shahis",
-  "date_label": "1490–1558",
-  "year": 1535,
-  "year_end": 1558,
-  "period": 1,
-  "polities": [
-   "sultanates"
-  ],
-  "kind": "place",
-  "place": "Vijayapura (Bijapur), Karnataka",
-  "lat": 16.83,
-  "lon": 75.71,
-  "strap": "From Yusuf Adil Khan’s independence in 1490 to the death of Ibrahim I in 1558, Bijapur built the strongest of the successor sultanates while its court swung between Persian and Deccani factions.",
-  "body": "<p>Yusuf Adil Khan, a Bahmani governor of disputed origin, said by some to be an Ottoman prince and by others a Georgian or Persian slave bought by Mahmud Gawan, made Bijapur an independent sultanate in about 1490. He adopted Shia Islam as the state religion in 1503, following the new Safavid regime in Iran, lost Goa to the Portuguese in 1510 and died the same year. His son Ismail (r. 1510–1534) recovered the court from a regent’s coup, fought Vijayanagara for the Raichur doab and was beaten there in 1520. After a brief and unpopular reign by Mallu, Ibrahim Adil Shah I (r. 1534–1558) took the throne.</p>\n<p>Ibrahim reversed his father’s policies. He restored Sunni worship, dismissed many of the Afaqi, or ‘Western’, Persian-speaking officers who had dominated the army, and promoted Dakhnis and Habshis in their place; he is also credited with admitting Marathi and the local script into the revenue accounts alongside Persian. The swing between Afaqi and Dakhni ascendancy, which ran through all the sultanates, was at Bijapur unusually sharp, and it produced the alternation of Shia and Sunni state religion that marks the dynasty down to its end.</p>\n<p>The city grew with the state. Yusuf’s citadel, the Arkilla, was enclosed in the sixteenth century by an outer wall with bastions and great guns, among them the Malik-i-Maidan, cast at Ahmadnagar in 1549 by Muhammad bin Hasan Rumi for Burhan Nizam Shah I and brought to Bijapur later. Under Ali Adil Shah I (r. 1558–1580), Ibrahim’s son, the Jami Masjid was begun and the alliance made with Vijayanagara’s Rama Raya that would be reversed in 1565.</p>\n<p>By 1558 Bijapur controlled the Konkan hinterland, faced Goa and held the line of the Krishna against Vijayanagara. It was the sultanate the Raya had most to fear and most reason to cultivate.</p>",
-  "story": "Bijapur is the collection’s clearest case of a sultanate whose internal politics were about who belonged to the Deccan. The contest between Afaqis and Dakhnis was a contest over whether the state should be an outpost of Persianate culture or a local polity recruiting from Marathi and Kannada country. Ibrahim I chose the latter, and the Marathi-speaking gentry he brought in are the ancestors of the Maratha houses that dominate later periods. Sovereignty was layered inside the court as well as across the frontier.",
-  "sources": [
-   {
-    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
-    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
-   },
-   {
-    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
-    "url": "https://doi.org/10.1017/CHOL9780521563215"
-   },
-   {
-    "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
-    "url": "https://archive.org/details/dli.ministry.25421"
-   },
-   {
-    "title": "Wikipedia, ‘Adil Shahi dynasty’",
-    "url": "https://en.wikipedia.org/wiki/Adil_Shahi_dynasty"
-   }
-  ],
-  "related_maps": [
-   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
-  ]
- },
- {
   "id": "arab-horse-trade",
   "title": "The horse trade",
   "date_label": "16th century",
   "year": 1500,
   "year_end": 1565,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "sultanates",
@@ -167,7 +1041,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "c. 1500",
   "year": 1500,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara"
   ],
@@ -207,7 +1081,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "r. 1509–1529",
   "year": 1509,
   "year_end": 1529,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara"
   ],
@@ -246,7 +1120,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "25 November 1510",
   "year": 1510,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "portuguese",
    "sultanates"
@@ -287,7 +1161,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "c. 1510s–1520s",
   "year": 1515,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara"
   ],
@@ -324,7 +1198,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1518–1590",
   "year": 1518,
   "year_end": 1590,
-  "period": 1,
+  "period": 2,
   "polities": [
    "sultanates"
   ],
@@ -363,7 +1237,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "c. 1520–1522",
   "year": 1520,
   "year_end": 1522,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "portuguese"
@@ -399,7 +1273,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "19 May 1520",
   "year": 1520,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "sultanates",
@@ -438,7 +1312,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "c. 1529–1565 and after",
   "year": 1529,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "other"
@@ -473,12 +1347,51 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "bijapur-adil-shahis",
+  "title": "Bijapur under the Adil Shahis",
+  "date_label": "1490–1558",
+  "year": 1535,
+  "year_end": 1558,
+  "period": 2,
+  "polities": [
+   "sultanates"
+  ],
+  "kind": "place",
+  "place": "Vijayapura (Bijapur), Karnataka",
+  "lat": 16.83,
+  "lon": 75.71,
+  "strap": "From Yusuf Adil Khan’s independence in 1490 to the death of Ibrahim I in 1558, Bijapur built the strongest of the successor sultanates while its court swung between Persian and Deccani factions.",
+  "body": "<p>Yusuf Adil Khan, a Bahmani governor of disputed origin, said by some to be an Ottoman prince and by others a Georgian or Persian slave bought by Mahmud Gawan, made Bijapur an independent sultanate in about 1490. He adopted Shia Islam as the state religion in 1503, following the new Safavid regime in Iran, lost Goa to the Portuguese in 1510 and died the same year. His son Ismail (r. 1510–1534) recovered the court from a regent’s coup, fought Vijayanagara for the Raichur doab and was beaten there in 1520. After a brief and unpopular reign by Mallu, Ibrahim Adil Shah I (r. 1534–1558) took the throne.</p>\n<p>Ibrahim reversed his father’s policies. He restored Sunni worship, dismissed many of the Afaqi, or ‘Western’, Persian-speaking officers who had dominated the army, and promoted Dakhnis and Habshis in their place; he is also credited with admitting Marathi and the local script into the revenue accounts alongside Persian. The swing between Afaqi and Dakhni ascendancy, which ran through all the sultanates, was at Bijapur unusually sharp, and it produced the alternation of Shia and Sunni state religion that marks the dynasty down to its end.</p>\n<p>The city grew with the state. Yusuf’s citadel, the Arkilla, was enclosed in the sixteenth century by an outer wall with bastions and great guns, among them the Malik-i-Maidan, cast at Ahmadnagar in 1549 by Muhammad bin Hasan Rumi for Burhan Nizam Shah I and brought to Bijapur later. Under Ali Adil Shah I (r. 1558–1580), Ibrahim’s son, the Jami Masjid was begun and the alliance made with Vijayanagara’s Rama Raya that would be reversed in 1565.</p>\n<p>By 1558 Bijapur controlled the Konkan hinterland, faced Goa and held the line of the Krishna against Vijayanagara. It was the sultanate the Raya had most to fear and most reason to cultivate.</p>",
+  "story": "Bijapur is the collection’s clearest case of a sultanate whose internal politics were about who belonged to the Deccan. The contest between Afaqis and Dakhnis was a contest over whether the state should be an outpost of Persianate culture or a local polity recruiting from Marathi and Kannada country. Ibrahim I chose the latter, and the Marathi-speaking gentry he brought in are the ancestors of the Maratha houses that dominate later periods. Sovereignty was layered inside the court as well as across the frontier.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
+    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
+   },
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
+    "url": "https://archive.org/details/dli.ministry.25421"
+   },
+   {
+    "title": "Wikipedia, ‘Adil Shahi dynasty’",
+    "url": "https://en.wikipedia.org/wiki/Adil_Shahi_dynasty"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
   "id": "rama-raya",
   "title": "Rama Raya",
   "date_label": "1542–1565",
   "year": 1542,
   "year_end": 1565,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "sultanates"
@@ -516,7 +1429,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "23 January 1565",
   "year": 1565,
   "year_end": null,
-  "period": 1,
+  "period": 2,
   "polities": [
    "vijayanagara",
    "sultanates"
@@ -549,127 +1462,6 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1570__India__Ortelius__Indiae-Orientalis.html"
   ]
- },
- {
-  "id": "dakhni-sufi-shrines",
-  "title": "Dakhni",
-  "date_label": "c. 1400–1700",
-  "year": 1600,
-  "year_end": 1700,
-  "polities": [
-   "sultanates",
-   "other"
-  ],
-  "kind": "institution",
-  "place": "Gulbarga (Kalaburagi), Karnataka",
-  "lat": 17.3297,
-  "lon": 76.8343,
-  "strap": "The vernacular of the Deccan sultanates, carried by Sufi shrines like Gesudaraz’s at Gulbarga, and the shared court culture it sustained from Bijapur to Golconda.",
-  "body": "<p>Dakhni, the southern form of the Hindavi that migrants brought from Delhi when Muhammad bin Tughluq moved his capital to Daulatabad in 1327, became the everyday language of the Bahmani sultanate and its successors. Its earliest literature is religious. The Chishti saint Sayyid Muhammad Husaini, called Gesudaraz or Banda Nawaz, settled at Gulbarga in about 1400 under Bahmani patronage and died there in 1422; the prose tracts attributed to him and to his circle, written in the local speech so that ordinary disciples could follow, are among the oldest dated prose in any north-Indian-derived language. His dargah at Gulbarga remains the largest shrine in the Deccan, visited by Hindus and Muslims alike.</p>\n<p>The sultanates turned the language of the shrines into a language of courts. Muhammad Quli Qutb Shah of Golconda wrote a large diwan in Dakhni; Ibrahim Adil Shah II’s <em>Kitab-i-Nauras</em> is in it; Mulla Wajhi’s <em>Sab Ras</em> of 1635, written at Golconda, is the first sustained literary prose in the language; Nusrati at Bijapur composed epics on Ali Adil Shah II’s campaigns. Persian remained the language of chancery and of the Afaqi nobles from Iran, and the competition between the two was also the competition between the immigrant and Dakhni factions that divided every sultanate court.</p>\n<p>The shrines were not only literary centres. Sufi lineages at Gulbarga, Bidar, Bijapur and Golconda received land grants, mediated between rulers and villages, and gave the sultanates a religious legitimacy that did not depend on the caliphate or on Iran. Their festivals drew Hindu as well as Muslim devotees, which is the usual meaning of the phrase Deccani syncretism.</p>\n<p>After 1687 the courts were gone and the poets moved north. Wali Dakhni’s arrival in Delhi around 1700 is conventionally the start of Urdu literature there. Dakhni itself survived as a spoken language of Hyderabad and the Karnataka towns, which it still is.</p>",
-  "story": "Every other entry in this period is about power changing hands; this one is about what did not change. The sultanates were conquered but the culture they had made, in a vernacular that Sufi shrines had shaped before any sultan patronised it, passed intact to the Nizam’s Hyderabad and to the Marathi and Kannada districts around it. The collection needs the entry to show that layered sovereignty left a layered society behind it, which the Company would later describe, map and largely misunderstand.",
-  "sources": [
-   {
-    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
-    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
-   },
-   {
-    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://doi.org/10.1515/9781474436090"
-   },
-   {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CHOL9780521254847"
-   },
-   {
-    "title": "Wikipedia, ‘Deccani language’",
-    "url": "https://en.wikipedia.org/wiki/Deccani_language"
-   }
-  ],
-  "related_maps": [
-   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
-  ],
-  "period": 2
- },
- {
-  "id": "malik-ambar",
-  "title": "Malik Ambar",
-  "date_label": "c. 1548–1626",
-  "year": 1610,
-  "year_end": 1626,
-  "polities": [
-   "sultanates",
-   "mughal",
-   "maratha"
-  ],
-  "kind": "person",
-  "place": "Aurangabad, Maharashtra",
-  "lat": 19.8762,
-  "lon": 75.3433,
-  "strap": "An Ethiopian-born slave who became regent of Ahmadnagar, held off the Mughals for a quarter-century and trained the Maratha cavalry that later served Shivaji.",
-  "body": "<p>Malik Ambar was born around 1548 in Harar, in what is now Ethiopia, sold into slavery and brought through the Red Sea trade to the Deccan, where his owner was Chingiz Khan, himself a former slave and chief minister of Ahmadnagar. Freed on his master’s death, Ambar served as a captain for Bijapur and then for the Nizam Shahi nobles who refused to accept the Mughal capture of Ahmadnagar in 1600. Within a few years he had installed a prince of the dynasty as Murtaza Nizam Shah II, married him to his daughter and become regent, a position he held until his death on 14 May 1626.</p>\n<p>His method of war was the mobile raid, bargi-giri, by light cavalry who avoided pitched battle and cut the Mughal supply lines; the horsemen were largely Maratha, and their leaders included Maloji and Shahji Bhonsle, Shivaji’s grandfather and father. His method of government was a revenue survey on the model of Akbar’s minister Todar Mal, assessing land by measurement and fixing the state’s share, which gave the rump sultanate an income out of proportion to its size. In 1610 he founded a new capital at Khirki, later renamed Aurangabad, and supplied it with water by an underground channel system.</p>\n<p>He defeated a combined Mughal and Bijapuri army at Bhatvadi in 1624 and at one point recovered the city of Ahmadnagar itself. Jahangir, who could not catch him, had a painting made in which he shoots at Ambar’s severed head.</p>\n<p>His son Fath Khan lacked his skill, and the sultanate he had saved was extinguished ten years after his death. What survived was the cavalry tradition and the revenue practice, both inherited by the Marathas, and a capital that the Mughals made their own.</p>",
-  "story": "Malik Ambar is the clearest case in the collection of sovereignty exercised by someone who held no throne. An African regent ruling in the name of a puppet sultan, fighting an empire with Maratha horsemen and paying for it with a Mughal-style land survey, he combined the period’s layers in one career. The Marathas who later built a state out of the same hills learned their trade in his service, and his revenue settlement was still the reference point for Elphinstone’s officers two centuries later.",
-  "sources": [
-   {
-    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CHOL9780521254847"
-   },
-   {
-    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://doi.org/10.1515/9781474436090"
-   },
-   {
-    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CBO9780511584060"
-   },
-   {
-    "title": "Wikipedia, ‘Malik Ambar’",
-    "url": "https://en.wikipedia.org/wiki/Malik_Ambar"
-   }
-  ],
-  "related_maps": [
-   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
-  ],
-  "period": 2
- },
- {
-  "id": "ibrahim-adil-shah-ii",
-  "title": "Ibrahim Adil Shah II and the Kitab-i-Nauras",
-  "date_label": "r. 1580–1627",
-  "year": 1600,
-  "year_end": 1627,
-  "polities": [
-   "sultanates"
-  ],
-  "kind": "person",
-  "place": "Bijapur, Karnataka",
-  "lat": 16.8302,
-  "lon": 75.71,
-  "strap": "The sixth Adil Shahi sultan of Bijapur, musician, patron of painting and author of a Dakhni songbook that invokes Saraswati alongside the Prophet.",
-  "body": "<p>Ibrahim Adil Shah II ruled Bijapur from 1580 to 1627 (Britannica gives 1579–1626; the discrepancy comes from the Hijri calendar). He came to the throne as a child after the murder of his uncle Ali Adil Shah I and spent his first decade under regents, the last of them the dowager Chand Bibi. He emerged as ruler in his own right around 1590 and presided over the sultanate’s longest stretch of stability, extending its reach south towards Mysore and joining the 1595–1600 wars over Ahmadnagar against the Mughals.</p>\n<p>His reputation rests on his court. The historian Firishta entered his service in 1589 and wrote the <em>Gulshan-i Ibrahimi</em> there; Bijapur painters produced portraits of the sultan with a tambur in his hands that are among the finest of the Deccani schools. Ibrahim himself composed the <em>Kitab-i-Nauras</em>, the Book of Nine Sentiments, a collection of fifty-nine songs in Dakhni, each set to a named raga. The songs praise Saraswati, goddess of learning, and Ganesha, as well as the Prophet and the Chishti saint Gesudaraz of Gulbarga. Ibrahim took the title Jagadguru Badshah, world-teacher emperor, and in 1599 began a new suburb, Nauraspur, around the cult of music. Nazir Ahmad’s 1956 edition collated ten manuscripts; no single copy contains all the songs.</p>\n<p>Historians read this eclecticism less as private devotion than as a language of rule. Ibrahim was a Sunni governing a Shia-founded state with a largely Hindu population, a Marathi-speaking military class and rival Dakhni and Afaqi factions at court. A ruler who could be sung to by all of them in the vernacular had a wider claim on loyalty than one who spoke only Persian.</p>\n<p>After his death he was buried in the Ibrahim Rauza, a tomb and mosque complex that his successors never matched. The Bijapur he left was rich, culturally confident and, in 1636, about to become a Mughal tributary.</p>",
-  "story": "Ibrahim’s Bijapur shows what a Deccan sultanate looked like at its most secure, a generation before Mughal tribute and two generations before annexation. His songs to Saraswati and to Gesudaraz were a way of being sovereign over a mixed population without conceding the throne to any one of its parts. The collection returns to that question repeatedly, because every later power in the Deccan, Maratha, Nizam and Company alike, had to find its own answer to it.",
-  "sources": [
-   {
-    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://doi.org/10.1515/9781474436090"
-   },
-   {
-    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
-    "url": "https://doi.org/10.1017/CHOL9780521563215"
-   },
-   {
-    "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
-    "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700"
-   },
-   {
-    "title": "Wikipedia, ‘Kitab-i Nauras’",
-    "url": "https://en.wikipedia.org/wiki/Kitab-i_Nauras"
-   }
-  ],
-  "related_maps": [
-   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html"
-  ],
-  "period": 2
  },
  {
   "id": "hyderabad-founded-1591",
@@ -709,46 +1501,7 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1623__India__Mercator-Hondius__India-Orientalis.html"
   ],
-  "period": 2
- },
- {
-  "id": "shahji-bhonsle",
-  "title": "Shahji Bhonsle",
-  "date_label": "1594–1664",
-  "year": 1636,
-  "year_end": 1664,
-  "polities": [
-   "sultanates",
-   "mughal",
-   "maratha"
-  ],
-  "kind": "person",
-  "place": "Bengaluru, Karnataka",
-  "lat": 12.9716,
-  "lon": 77.5946,
-  "strap": "Shivaji’s father, a Maratha commander who served Ahmadnagar, the Mughals and Bijapur in turn and held Bengaluru as a Bijapuri jagir.",
-  "body": "<p>Shahji Bhonsle was born in 1594, the son of Maloji, a Maratha officer in the service of Ahmadnagar. He rose in Malik Ambar’s cavalry, quarrelled with Ambar’s son Fath Khan, went over to the Mughals in 1630 and came back two years later. In 1633–36, with the sultanate collapsing, he installed a ten-year-old prince as Murtaza Nizam Shah III and governed in his name from the hill forts of the western Deccan, with Bijapuri support, until Shah Jahan’s 1636 campaign ended the experiment. He then took service with Bijapur, the condition of the peace being that he leave the Mughal frontier.</p>\n<p>Bijapur sent him south. Its armies took Bengaluru from the Gowda chiefs in December 1638, and the town and its district were granted to Shahji as a jagir; he spent most of the rest of his life there and in the Karnataka campaigns that extended Bijapuri rule over the former Vijayanagara territories. His first wife Jijabai and their son Shivaji remained at Pune, which was another of his jagirs, under the management of his agent Dadoji Kondadev. In 1648 Bijapur imprisoned him for a year, partly because of Shivaji’s seizure of forts in the Pune country; he was released on conditions. He died on 23 January 1664 in a hunting accident at Hodigere in Karnataka.</p>\n<p>His younger son Ekoji, or Vyankoji, inherited the Bengaluru jagir and in the 1670s made himself ruler of Thanjavur, founding the Maratha dynasty that held that city until 1855.</p>\n<p>Shahji never held a throne of his own, and he served three states in forty years without apparent contradiction. That mobility was normal for a Maratha deshmukh of his generation; what was new was that his son declined to follow it.</p>",
-  "story": "Shahji’s career is the ordinary one against which Shivaji’s looks extraordinary. Serving Ahmadnagar, the Mughals and Bijapur in turn, and governing a sultanate through a child, he treated sovereignty as something to be rented from whichever overlord offered the best terms. The collection includes him because the Maratha state did not emerge from nowhere: it grew out of a military class that had already learned to run kingdoms for other people, in Bengaluru and Thanjavur as much as in the Sahyadri hills.",
-  "sources": [
-   {
-    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CHOL9780521268837"
-   },
-   {
-    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://doi.org/10.1515/9781474436090"
-   },
-   {
-    "title": "Wikipedia, ‘Shahaji’",
-    "url": "https://en.wikipedia.org/wiki/Shahaji"
-   }
-  ],
-  "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "chand-bibi-1595",
@@ -788,7 +1541,7 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
   ],
-  "period": 2
+  "period": 3
  },
  {
   "id": "akbar-ahmadnagar-1600",
@@ -829,7 +1582,128 @@ window.DECCAN_ENTRIES = [
    "1600__India__Quad__India-Orientalis.html",
    "1682__India__DuVal__Empire-du-Mogol.html"
   ],
-  "period": 2
+  "period": 3
+ },
+ {
+  "id": "dakhni-sufi-shrines",
+  "title": "Dakhni",
+  "date_label": "c. 1400–1700",
+  "year": 1600,
+  "year_end": 1700,
+  "polities": [
+   "sultanates",
+   "other"
+  ],
+  "kind": "institution",
+  "place": "Gulbarga (Kalaburagi), Karnataka",
+  "lat": 17.3297,
+  "lon": 76.8343,
+  "strap": "The vernacular of the Deccan sultanates, carried by Sufi shrines like Gesudaraz’s at Gulbarga, and the shared court culture it sustained from Bijapur to Golconda.",
+  "body": "<p>Dakhni, the southern form of the Hindavi that migrants brought from Delhi when Muhammad bin Tughluq moved his capital to Daulatabad in 1327, became the everyday language of the Bahmani sultanate and its successors. Its earliest literature is religious. The Chishti saint Sayyid Muhammad Husaini, called Gesudaraz or Banda Nawaz, settled at Gulbarga in about 1400 under Bahmani patronage and died there in 1422; the prose tracts attributed to him and to his circle, written in the local speech so that ordinary disciples could follow, are among the oldest dated prose in any north-Indian-derived language. His dargah at Gulbarga remains one of the Deccan’s major pilgrimage shrines, visited by Hindus and Muslims alike.</p>\n<p>The sultanates turned the language of the shrines into a language of courts. Muhammad Quli Qutb Shah of Golconda wrote a large diwan in Dakhni; Ibrahim Adil Shah II’s <em>Kitab-i-Nauras</em> is in it; Mulla Wajhi’s <em>Sab Ras</em> of 1635, written at Golconda, is the first sustained literary prose in the language; Nusrati at Bijapur composed epics on Ali Adil Shah II’s campaigns. Persian remained the language of chancery and of the Afaqi nobles from Iran, and the competition between the two was also the competition between the immigrant and Dakhni factions that divided every sultanate court.</p>\n<p>The shrines were not only literary centres. Sufi lineages at Gulbarga, Bidar, Bijapur and Golconda received land grants, mediated between rulers and villages, and gave the sultanates a religious legitimacy that did not depend on the caliphate or on Iran. Their festivals drew Hindu as well as Muslim devotees, which is the usual meaning of the phrase Deccani syncretism.</p>\n<p>After 1687 the courts were gone and the poets moved north. Wali Dakhni’s arrival in Delhi around 1700 is conventionally the start of Urdu literature there. Dakhni itself survived as a spoken language of Hyderabad and the Karnataka towns, which it still is.</p>",
+  "story": "Every other entry in this period is about power changing hands; this one is about what did not change. The sultanates were conquered but the culture they had made, in a vernacular that Sufi shrines had shaped before any sultan patronised it, passed intact to the Nizam’s Hyderabad and to the Marathi and Kannada districts around it. The collection needs the entry to show that layered sovereignty left a layered society behind it, which the Company would later describe, map and largely misunderstand.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
+    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://doi.org/10.1515/9781474436090"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
+   },
+   {
+    "title": "Wikipedia, ‘Deccani language’",
+    "url": "https://en.wikipedia.org/wiki/Deccani_language"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ],
+  "period": 3
+ },
+ {
+  "id": "ibrahim-adil-shah-ii",
+  "title": "Ibrahim Adil Shah II and the Kitab-i-Nauras",
+  "date_label": "r. 1580–1627",
+  "year": 1600,
+  "year_end": 1627,
+  "polities": [
+   "sultanates"
+  ],
+  "kind": "person",
+  "place": "Bijapur, Karnataka",
+  "lat": 16.8302,
+  "lon": 75.71,
+  "strap": "The sixth Adil Shahi sultan of Bijapur, musician, patron of painting and author of a Dakhni songbook that invokes Saraswati alongside the Prophet.",
+  "body": "<p>Ibrahim Adil Shah II ruled Bijapur from 1580 to 1627 (Britannica gives 1579–1626; the discrepancy comes from the Hijri calendar). He came to the throne as a child after the murder of his uncle Ali Adil Shah I and spent his first decade under regents, the last of them the dowager Chand Bibi. He emerged as ruler in his own right around 1590 and presided over the sultanate’s longest stretch of stability, extending its reach south towards Mysore and joining the 1595–1600 wars over Ahmadnagar against the Mughals.</p>\n<p>His reputation rests on his court. The historian Firishta entered his service in 1589 and wrote the <em>Gulshan-i Ibrahimi</em> there; Bijapur painters produced portraits of the sultan with a tambur in his hands that are among the finest of the Deccani schools. Ibrahim himself composed the <em>Kitab-i-Nauras</em>, the Book of Nine Sentiments, a collection of fifty-nine songs in Dakhni, each set to a named raga. The songs praise Saraswati, goddess of learning, and Ganesha, as well as the Prophet and the Chishti saint Gesudaraz of Gulbarga. Ibrahim took the title Jagadguru Badshah, world-teacher emperor, and in 1599 began a new suburb, Nauraspur, around the cult of music. Nazir Ahmad’s 1956 edition collated ten manuscripts; no single copy contains all the songs.</p>\n<p>Historians read this eclecticism less as private devotion than as a language of rule. Ibrahim was a Sunni governing a Shia-founded state with a largely Hindu population, a Marathi-speaking military class and rival Dakhni and Afaqi factions at court. A ruler who could be sung to by all of them in the vernacular had a wider claim on loyalty than one who spoke only Persian.</p>\n<p>After his death he was buried in the Ibrahim Rauza, a tomb and mosque complex that his successors never matched. The Bijapur he left was rich, culturally confident and, in 1636, about to become a Mughal tributary.</p>",
+  "story": "Ibrahim’s Bijapur shows what a Deccan sultanate looked like at its most secure, a generation before Mughal tribute and two generations before annexation. His songs to Saraswati and to Gesudaraz were a way of being sovereign over a mixed population without conceding the throne to any one of its parts. The collection returns to that question repeatedly, because every later power in the Deccan, Maratha, Nizam and Company alike, had to find its own answer to it.",
+  "sources": [
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://doi.org/10.1515/9781474436090"
+   },
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
+    "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700"
+   },
+   {
+    "title": "Wikipedia, ‘Kitab-i Nauras’",
+    "url": "https://en.wikipedia.org/wiki/Kitab-i_Nauras"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
+   "1595__India-Arabia__Linschoten__Southwest-Asia.html"
+  ],
+  "period": 3
+ },
+ {
+  "id": "malik-ambar",
+  "title": "Malik Ambar",
+  "date_label": "c. 1548–1626",
+  "year": 1610,
+  "year_end": 1626,
+  "polities": [
+   "sultanates",
+   "mughal",
+   "maratha"
+  ],
+  "kind": "person",
+  "place": "Aurangabad, Maharashtra",
+  "lat": 19.8762,
+  "lon": 75.3433,
+  "strap": "An Ethiopian-born slave who became regent of Ahmadnagar, held off the Mughals for a quarter-century and trained the Maratha cavalry that later served Shivaji.",
+  "body": "<p>Malik Ambar was born around 1548 in Harar, in what is now Ethiopia, sold into slavery and brought through the Red Sea trade to the Deccan, where his owner was Chingiz Khan, himself a former slave and chief minister of Ahmadnagar. Freed on his master’s death, Ambar served as a captain for Bijapur and then for the Nizam Shahi nobles who refused to accept the Mughal capture of Ahmadnagar in 1600. Within a few years he had installed a prince of the dynasty as Murtaza Nizam Shah II, married him to his daughter and become regent, a position he held until his death on 14 May 1626.</p>\n<p>His method of war was the mobile raid, bargi-giri, by light cavalry who avoided pitched battle and cut the Mughal supply lines; the horsemen were largely Maratha, and their leaders included Maloji and Shahji Bhonsle, Shivaji’s grandfather and father. His method of government was a revenue survey on the model of Akbar’s minister Todar Mal, assessing land by measurement and fixing the state’s share, which gave the rump sultanate an income out of proportion to its size. In 1610 he founded a new capital at Khirki, later renamed Aurangabad, and supplied it with water by an underground channel system.</p>\n<p>He defeated a combined Mughal and Bijapuri army at Bhatvadi in 1624 and at one point recovered the city of Ahmadnagar itself. Jahangir, who could not catch him, had a painting made in which he shoots at Ambar’s severed head.</p>\n<p>His son Fath Khan lacked his skill, and the sultanate he had saved was extinguished ten years after his death. What survived was the cavalry tradition and the revenue practice, both inherited by the Marathas, and a capital that the Mughals made their own.</p>",
+  "story": "Malik Ambar is the clearest case in the collection of sovereignty exercised by someone who held no throne. An African regent ruling in the name of a puppet sultan, fighting an empire with Maratha horsemen and paying for it with a Mughal-style land survey, he combined the period’s layers in one career. The Marathas who later built a state out of the same hills learned their trade in his service, and his revenue settlement was still the reference point for Elphinstone’s officers two centuries later.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://doi.org/10.1515/9781474436090"
+   },
+   {
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CBO9780511584060"
+   },
+   {
+    "title": "Wikipedia, ‘Malik Ambar’",
+    "url": "https://en.wikipedia.org/wiki/Malik_Ambar"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
+  ],
+  "period": 3
  },
  {
   "id": "company-factories",
@@ -872,7 +1746,7 @@ window.DECCAN_ENTRIES = [
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
    "1654__India__Sanson__India-Below-and-Beyond-the-Ganges.html"
   ],
-  "period": 2
+  "period": 3
  },
  {
   "id": "fall-of-ahmadnagar-1636",
@@ -913,7 +1787,46 @@ window.DECCAN_ENTRIES = [
    "1654__India__Sanson__India-Below-and-Beyond-the-Ganges.html",
    "1682__India__DuVal__Empire-du-Mogol.html"
   ],
-  "period": 2
+  "period": 3
+ },
+ {
+  "id": "shahji-bhonsle",
+  "title": "Shahji Bhonsle",
+  "date_label": "1594–1664",
+  "year": 1636,
+  "year_end": 1664,
+  "polities": [
+   "sultanates",
+   "mughal",
+   "maratha"
+  ],
+  "kind": "person",
+  "place": "Bengaluru, Karnataka",
+  "lat": 12.9716,
+  "lon": 77.5946,
+  "strap": "Shivaji’s father, a Maratha commander who served Ahmadnagar, the Mughals and Bijapur in turn and held Bengaluru as a Bijapuri jagir.",
+  "body": "<p>Shahji Bhonsle was born in 1594, the son of Maloji, a Maratha officer in the service of Ahmadnagar. He rose in Malik Ambar’s cavalry, quarrelled with Ambar’s son Fath Khan, went over to the Mughals in 1630 and came back two years later. In 1633–36, with the sultanate collapsing, he installed a ten-year-old prince as Murtaza Nizam Shah III and governed in his name from the hill forts of the western Deccan, with Bijapuri support, until Shah Jahan’s 1636 campaign ended the experiment. He then took service with Bijapur, the condition of the peace being that he leave the Mughal frontier.</p>\n<p>Bijapur sent him south. Its armies took Bengaluru from the Gowda chiefs in December 1638, and the town and its district were granted to Shahji as a jagir; he spent most of the rest of his life there and in the Karnataka campaigns that extended Bijapuri rule over the former Vijayanagara territories. His first wife Jijabai and their son Shivaji remained at Pune, which was another of his jagirs, under the management of his agent Dadoji Kondadev. In 1648 Bijapur imprisoned him for a year, partly because of Shivaji’s seizure of forts in the Pune country; he was released on conditions. He died on 23 January 1664 in a hunting accident at Hodigere in Karnataka.</p>\n<p>His younger son Ekoji, or Vyankoji, inherited the Bengaluru jagir and in the 1670s made himself ruler of Thanjavur, founding the Maratha dynasty that held that city until 1855.</p>\n<p>Shahji never held a throne of his own, and he served three states in forty years without apparent contradiction. That mobility was normal for a Maratha deshmukh of his generation; what was new was that his son declined to follow it.</p>",
+  "story": "Shahji’s career is the ordinary one against which Shivaji’s looks extraordinary. Serving Ahmadnagar, the Mughals and Bijapur in turn, and governing a sultanate through a child, he treated sovereignty as something to be rented from whichever overlord offered the best terms. The collection includes him because the Maratha state did not emerge from nowhere: it grew out of a military class that had already learned to run kingdoms for other people, in Bengaluru and Thanjavur as much as in the Sahyadri hills.",
+  "sources": [
+   {
+    "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
+    "url": "https://doi.org/10.1515/9781474436090"
+   },
+   {
+    "title": "Wikipedia, ‘Shahaji’",
+    "url": "https://en.wikipedia.org/wiki/Shahaji"
+   }
+  ],
+  "related_maps": [],
+  "period": 3
  },
  {
   "id": "shivaji-torna-1646",
@@ -951,7 +1864,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "gol-gumbaz",
@@ -990,46 +1903,7 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
   ],
-  "period": 2
- },
- {
-  "id": "sambhaji-1689",
-  "title": "Sambhaji",
-  "date_label": "1657–1689",
-  "year": 1689,
-  "year_end": 1689,
-  "polities": [
-   "maratha",
-   "mughal",
-   "portuguese"
-  ],
-  "kind": "person",
-  "place": "Tulapur, Pune district, Maharashtra",
-  "lat": 18.674,
-  "lon": 73.97,
-  "strap": "Shivaji’s elder son and successor, who fought the Mughals, the Siddis and the Portuguese for nine years, was captured at Sangameshwar and executed in March 1689.",
-  "body": "<p>Sambhaji was born on 14 May 1657 at Purandar and spent part of his childhood as a hostage for his father’s good conduct, first at the Mughal court in 1666 and again as a Mughal mansabdar. His relations with Shivaji were difficult; in 1678 he deserted briefly to the Mughal commander Diler Khan and returned the following year. When Shivaji died in April 1680 a faction at Raigad crowned his younger half-brother Rajaram; Sambhaji took the fort in June, had his stepmother Soyarabai and several ministers put to death, and was crowned in his turn on 20 July 1680, with a formal enthronement in January 1681.</p>\n<p>His reign was a war on every front. He raided Burhanpur in 1681, sheltered Aurangzeb’s rebel son Akbar for five years, failed twice before Janjira, and in 1683 invaded the Portuguese territories of Goa, withdrawing only when the Mughal army approached. From 1682 Aurangzeb himself was in the Deccan with the imperial army, and after the fall of Bijapur and Golconda Sambhaji faced it alone. His Brahmin confidant Kavi Kalash, a poet from Kanauj, was resented by the Maratha ministers, and conspiracies against the king were answered with executions.</p>\n<p>On 1 February 1689 a Mughal detachment under Muqarrab Khan surprised him at Sangameshwar in the Konkan, guided by Maratha informers. He and Kavi Kalash were taken to Aurangzeb’s camp at Bahadurgad, paraded, tortured and, on 11 March 1689, executed at Tulapur near the confluence of the Bhima and Indrayani. Raigad fell in November; his wife Yesubai and his son Shahu became Mughal prisoners for eighteen years.</p>\n<p>His death did not end the state. Rajaram was crowned at Raigad before it fell and escaped to Jinji, and the Maratha war went on without a court, which is the subject of the next period.</p>",
-  "story": "Sambhaji is the hinge between a state built by one man and a state that survived without him. His execution was meant to close the Maratha chapter and instead opened the longest war in the collection. The brutality of 1689 has made him a figure of modern contention; the collection’s interest is narrower. His reign shows the Maratha polity fighting the Mughals, the Portuguese and the Siddis at once, a small power among large ones, and surviving because its sovereignty did not reside in a single person.",
-  "sources": [
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CHOL9780521268837"
-   },
-   {
-    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
-   },
-   {
-    "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
-    "url": "https://archive.org/details/tarikh-i-dilkasha"
-   },
-   {
-    "title": "Wikipedia, ‘Sambhaji’",
-    "url": "https://en.wikipedia.org/wiki/Sambhaji"
-   }
-  ],
-  "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "afzal-khan-pratapgad-1659",
@@ -1067,7 +1941,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "shaista-khan-surat",
@@ -1108,7 +1982,7 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1682__India__DuVal__Empire-du-Mogol.html"
   ],
-  "period": 2
+  "period": 3
  },
  {
   "id": "maratha-navy-sindhudurg",
@@ -1149,7 +2023,7 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1595__India-Arabia__Linschoten__Southwest-Asia.html"
   ],
-  "period": 2
+  "period": 3
  },
  {
   "id": "purandar-1665",
@@ -1187,7 +2061,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "ashtapradhan",
@@ -1224,7 +2098,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "raigad-coronation-1674",
@@ -1261,7 +2135,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [],
-  "period": 2
+  "period": 3
  },
  {
   "id": "bijapur-golconda-fall-1687",
@@ -1302,89 +2176,46 @@ window.DECCAN_ENTRIES = [
    "1682__India__DuVal__Empire-du-Mogol.html",
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
   ],
-  "period": 2
+  "period": 3
  },
  {
-  "id": "kanhoji-angre",
-  "title": "Kanhoji Angre",
-  "date_label": "c. 1669–1729",
-  "year": 1713,
-  "year_end": 1729,
-  "period": 3,
+  "id": "sambhaji-1689",
+  "title": "Sambhaji",
+  "date_label": "1657–1689",
+  "year": 1689,
+  "year_end": 1689,
   "polities": [
    "maratha",
-   "company",
+   "mughal",
    "portuguese"
   ],
   "kind": "person",
-  "place": "Vijaydurg, Maharashtra",
-  "lat": 16.56,
-  "lon": 73.33,
-  "strap": "The Maratha admiral whose fleet controlled the Konkan coast for thirty years and defied the Company, the Portuguese and the Siddis alike.",
-  "body": "<p>Kanhoji Angre (c. 1669–1729) was the son of a Maratha officer in Shivaji’s service and made his name as a young man holding Suvarnadurg against the Siddi of Janjira. Around 1698 Rajaram’s government appointed him Sarkhel, commander of the fleet, and from his bases at Vijaydurg and later Kolaba he came to control the coast from Bombay harbour south to Vengurla, excepting the Siddi’s enclave. He built or strengthened a chain of harbour forts, ran shipyards building the shallow-draught grabs and gallivats suited to the coast, and encouraged teak planting for timber.</p>\n<p>His fleet took a toll on all shipping that passed without his pass, and the Europeans called him a pirate. In 1707 the Company ship <em>Bombay</em> blew up fighting him; in 1712 he took the Bombay governor’s yacht and held it to ransom; in 1720 he captured the <em>Charlotte</em>, and her supercargo Curgenven spent ten years in his custody. Company expeditions against Vijaydurg in 1717 and 1718, and an Anglo-Portuguese fleet under Commodore Mathews in 1722, all failed. In Maratha politics he was equally independent: he fought Shahu’s commanders in the succession war, captured the Peshwa Bahiropant Pingle, and in 1713 was brought over to Satara by Balaji Vishwanath, who confirmed him in ten forts and sixteen posts and in the titles Sarkhel and Vazarat Ma’ab. He died at Kolaba on 4 July 1729.</p>\n<p>The Angre fleet outlived him, but the family quarrelled, and Tulaji Angre’s refusal of Peshwa authority ended in February 1756 when a Company squadron under Watson and Clive, acting with the Peshwa’s army, took Vijaydurg (Gheriah) and destroyed the fleet. Maratha power at sea did not recover. The coast, which Kanhoji had made a Maratha possession by naval force, became after 1756 a place the Company policed by agreement with Pune.</p>",
-  "story": "The Angres show that a layer of sovereignty could be held from the sea. Kanhoji owed nominal allegiance to Satara, taxed the Company’s and the Portuguese’s trade, and treated with all three as an equal. His fleet was the last Indian naval power on the west coast, and its destruction in 1756 was the Company’s first joint operation with the Peshwa, a preview of the partnership that would undo the Marathas themselves.",
+  "place": "Tulapur, Pune district, Maharashtra",
+  "lat": 18.674,
+  "lon": 73.97,
+  "strap": "Shivaji’s elder son and successor, who fought the Mughals, the Siddis and the Portuguese for nine years, was captured at Sangameshwar and executed in March 1689.",
+  "body": "<p>Sambhaji was born on 14 May 1657 at Purandar and spent part of his childhood as a hostage for his father’s good conduct, first at the Mughal court in 1666 and again as a Mughal mansabdar. His relations with Shivaji were difficult; in 1678 he deserted briefly to the Mughal commander Diler Khan and returned the following year. When Shivaji died in April 1680 a faction at Raigad crowned his younger half-brother Rajaram; Sambhaji took the fort in June, had his stepmother Soyarabai and several ministers put to death, and was crowned in his turn on 20 July 1680, with a formal enthronement in January 1681.</p>\n<p>His reign was a war on every front. He raided Burhanpur in 1681, sheltered Aurangzeb’s rebel son Akbar for five years, failed twice before Janjira, and in 1683 invaded the Portuguese territories of Goa, withdrawing only when the Mughal army approached. From 1682 Aurangzeb himself was in the Deccan with the imperial army, and after the fall of Bijapur and Golconda Sambhaji faced it alone. His Brahmin confidant Kavi Kalash, a poet from Kanauj, was resented by the Maratha ministers, and conspiracies against the king were answered with executions.</p>\n<p>On 1 February 1689 a Mughal detachment under Muqarrab Khan surprised him at Sangameshwar in the Konkan, guided by Maratha informers. He and Kavi Kalash were taken to Aurangzeb’s camp at Bahadurgad, paraded, tortured and, on 11 March 1689, executed at Tulapur near the confluence of the Bhima and Indrayani. Raigad fell in November; his wife Yesubai and his son Shahu became Mughal prisoners for eighteen years.</p>\n<p>His death did not end the state. Rajaram was crowned at Raigad before it fell and escaped to Jinji, and the Maratha war went on without a court, which is the subject of the next period.</p>",
+  "story": "Sambhaji is the hinge between a state built by one man and a state that survived without him. His execution was meant to close the Maratha chapter and instead opened the longest war in the collection. The brutality of 1689 has made him a figure of modern contention; the collection’s interest is narrower. His reign shows the Maratha polity fighting the Mughals, the Portuguese and the Siddis at once, a small power among large ones, and surviving because its sovereignty did not reside in a single person.",
   "sources": [
-   {
-    "title": "Surendra Nath Sen, The Military System of the Marathas (The Book Company, Calcutta, 1928)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.102812"
-   },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
     "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
-    "title": "Clement Downing, A Compendious History of the Indian Wars (T. Cooper, London, 1737)",
-    "url": "https://archive.org/details/bim_eighteenth-century_a-compendious-history-of_downing-clement_1737"
+    "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.506436"
    },
    {
-    "title": "Wikipedia, ‘Kanhoji Angre’",
-    "url": "https://en.wikipedia.org/wiki/Kanhoji_Angre"
+    "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
+    "url": "https://archive.org/details/tarikh-i-dilkasha"
+   },
+   {
+    "title": "Wikipedia, ‘Sambhaji’",
+    "url": "https://en.wikipedia.org/wiki/Sambhaji"
    }
   ],
-  "related_maps": [
-   "1764__Bombay__Bellin__Plan-de-Bombay.html",
-   "1728__IndianOcean__Halley-Senex__Chart-of-the-East-Indian-Ocean.html"
-  ]
- },
- {
-  "id": "tarabai",
-  "title": "Tarabai",
-  "date_label": "1675–1761",
-  "year": 1700,
-  "year_end": 1761,
-  "period": 3,
-  "polities": [
-   "maratha",
-   "mughal"
-  ],
-  "kind": "person",
-  "place": "Kolhapur, Maharashtra",
-  "lat": 16.7,
-  "lon": 74.24,
-  "strap": "Rajaram’s widow, regent from 1700, who held the Maratha war together through Aurangzeb’s last years and founded the rival court at Kolhapur.",
-  "body": "<p>Tarabai (1675–1761), daughter of the Maratha general Hambirrao Mohite, married Rajaram in 1682. When he died at Sinhagad in March 1700 she proclaimed their infant son Shivaji II king and took the regency herself. For the next seven years she directed the war against Aurangzeb from the hill forts of the western Deccan, the final phase of what Marathi tradition calls the war of twenty-seven years (1680–1707).</p>\n<p>Her method was her husband’s, pursued with more energy. Rather than defend forts, which the Mughals could always buy or batter, Maratha horse raided deep into imperial territory – Khandesh, Berar, Gujarat and, by 1705, across the Narmada into Malwa – collecting chauth and leaving Aurangzeb’s army to retake, at great cost, forts that would be lost again. The Mughal chronicler Khafi Khan remarked on her personal direction of affairs. The emperor died at Ahmadnagar in March 1707 with nothing settled, and his son Azam Shah, needing to divide the Marathas, released Sambhaji’s son Shahu from the imperial camp. Shahu defeated Tarabai’s forces at Khed in October 1707 and was crowned at Satara in January 1708. She withdrew to Kolhapur and set up a rival Chhatrapati there in 1710; in 1714 a palace coup by Rajaram’s other widow, Rajasabai, deposed her son and confined her.</p>\n<p>Tarabai outlived nearly everyone. Reconciled with Shahu in 1730, she lived at Satara, and in the 1740s produced a grandson, Ramraja, whom the childless Shahu named heir. After Shahu died in 1749 she tried to rule through the boy, fell out with him, imprisoned him and denounced him as an impostor, and then came to terms with the Peshwa Balaji Bajirao in September 1752. She died on 9 December 1761, a few months after Panipat. Her career spans the whole of the Maratha century: she began it fighting an emperor and ended it as a relic at a court run by Brahmin ministers.</p>",
-  "story": "Tarabai marks the point at which the Maratha kingdom stopped depending on a single ruler. Through a widow’s regency the state carried on a war its founders had started, and when the Mughals released a rival heir the result was two Chhatrapatis, at Satara and Kolhapur, both claiming Shivaji’s inheritance. That division, never fully healed, is one reason the real power of the Marathas passed from kings to ministers and generals.",
-  "sources": [
-   {
-    "title": "Richard M. Eaton, ‘Tarabai (1675–1761): The Rise of Brahmins in Politics’, in A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/tarabai-16751761-the-rise-of-brahmins-in-politics/047C683C223579529A84EC66D9A68F5A"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CHOL9780521268837"
-   },
-   {
-    "title": "Shalini Patil, Maharani Tarabai of Kolhapur, c. 1675–1761 (S. Chand, New Delhi, 1987)",
-    "url": "https://catalog.hathitrust.org/Record/001816023"
-   },
-   {
-    "title": "Wikipedia, ‘Tarabai’",
-    "url": "https://en.wikipedia.org/wiki/Tarabai"
-   }
-  ],
-  "related_maps": [
-   "1719__SouthIndia__Chatelain__Carte-Nouvelle-des-Terres.html"
-  ]
+  "related_maps": [],
+  "period": 3
  },
  {
   "id": "jinji-1690-1698",
@@ -1392,7 +2223,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1690–1698",
   "year": 1690,
   "year_end": 1698,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha",
    "mughal"
@@ -1428,44 +2259,43 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "bajirao-i",
-  "title": "Bajirao I",
-  "date_label": "1700–1740",
-  "year": 1733,
-  "year_end": 1740,
-  "period": 3,
+  "id": "tarabai",
+  "title": "Tarabai",
+  "date_label": "1675–1761",
+  "year": 1700,
+  "year_end": 1761,
+  "period": 4,
   "polities": [
    "maratha",
-   "mughal",
-   "hyderabad"
+   "mughal"
   ],
   "kind": "person",
-  "place": "Pune, Maharashtra",
-  "lat": 18.52,
-  "lon": 73.86,
-  "strap": "The second Peshwa, who took Maratha arms north of the Narmada and made the Peshwa’s office the real centre of the state.",
-  "body": "<p>Bajirao Ballal (1700–1740) was appointed Peshwa by Shahu on 17 April 1720, days after his father Balaji Vishwanath died, over the objections of older ministers. He held the office for twenty years and spent most of them on horseback. His argument, recorded in the chronicles, was that the Mughal empire was a withered tree that would fall if its trunk were struck, and that the Marathas should go north for revenue rather than fight the Nizam for the Deccan.</p>\n<p>He did both. After Palkhed (1728) he sent Malhar Rao Holkar, Ranoji Scindia (Shinde) and Udaji Pawar into Malwa, where by 1731 they were collecting chauth and where the Mughal governors could not hold the field; the Gaekwads did the same in Gujarat. In 1729 he relieved Chhatrasal of Bundelkhand from a Mughal siege and was rewarded with a third of the Bundela state and with Mastani, whom tradition identifies as Chhatrasal’s daughter; her place in the Peshwa’s household was resented at Pune and remains poorly documented. In March 1737 he rode to the outskirts of Delhi, skirmished under the walls and withdrew, having shown the court it could not defend itself. Nizam-ul-Mulk came north to restore the position, was surrounded near Bhopal, and in January 1738 at Doraha agreed to the cession of Malwa. Bajirao died of fever at Rawerkhedi on the Narmada on 28 April 1740, on his way north again.</p>\n<p>His legacy was an office and a set of families. By 1740 the Peshwa, not the Chhatrapati, directed Maratha policy; Shahu signed what Pune sent him. The commanders Bajirao sent north – Holkar, Scindia, Pawar, the Bhonsles of Nagpur, the Gaekwads – held their conquests as saranjam, assignments of revenue for the upkeep of troops, and within a generation were hereditary princes. The Maratha empire of the mid-century, and its later fragmentation, were both his work.</p>",
-  "story": "Bajirao is the person through whom sovereignty slipped from king to minister. Shahu remained Chhatrapati; every grant and treaty was in his name; but the decisions were taken at Pune. The Peshwa also exported the Deccan’s layered arrangements northward, so that Malwa and Gujarat acquired the same division between Mughal governor and Maratha collector that the Nizam’s provinces already had.",
+  "place": "Kolhapur, Maharashtra",
+  "lat": 16.7,
+  "lon": 74.24,
+  "strap": "Rajaram’s widow, regent from 1700, who held the Maratha war together through Aurangzeb’s last years and founded the rival court at Kolhapur.",
+  "body": "<p>Tarabai (1675–1761), daughter of the Maratha general Hambirrao Mohite, married Rajaram in 1682. When he died at Sinhagad in March 1700 she proclaimed their infant son Shivaji II king and took the regency herself. For the next seven years she directed the war against Aurangzeb from the hill forts of the western Deccan, the final phase of what Marathi tradition calls the war of twenty-seven years (1680–1707).</p>\n<p>Her method was her husband’s, pursued with more energy. Rather than defend forts, which the Mughals could always buy or batter, Maratha horse raided deep into imperial territory – Khandesh, Berar, Gujarat and, by 1705, across the Narmada into Malwa – collecting chauth and leaving Aurangzeb’s army to retake, at great cost, forts that would be lost again. The Mughal chronicler Khafi Khan remarked on her personal direction of affairs. The emperor died at Ahmadnagar in March 1707 with nothing settled, and his son Azam Shah, needing to divide the Marathas, released Sambhaji’s son Shahu from the imperial camp. Shahu defeated Tarabai’s forces at Khed in October 1707 and was crowned at Satara in January 1708. She withdrew to Kolhapur and set up a rival Chhatrapati there in 1710; in 1714 a palace coup by Rajaram’s other widow, Rajasabai, deposed her son and confined her.</p>\n<p>Tarabai outlived nearly everyone. Reconciled with Shahu in 1730, she lived at Satara, and in the 1740s produced a grandson, Ramraja, whom the childless Shahu named heir. After Shahu died in 1749 she tried to rule through the boy, fell out with him, imprisoned him and denounced him as an impostor, and then came to terms with the Peshwa Balaji Bajirao in September 1752. She died on 9 December 1761, a few months after Panipat. Her career spans the whole of the Maratha century: she began it fighting an emperor and ended it as a relic at a court run by Brahmin ministers.</p>",
+  "story": "Tarabai marks the point at which the Maratha kingdom stopped depending on a single ruler. Through a widow’s regency the state carried on a war its founders had started, and when the Mughals released a rival heir the result was two Chhatrapatis, at Satara and Kolhapur, both claiming Shivaji’s inheritance. That division, never fully healed, is one reason the real power of the Marathas passed from kings to ministers and generals.",
   "sources": [
    {
-    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
-    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
-   },
-   {
-    "title": "V. G. Dighe, Peshwa Bajirao I and Maratha Expansion (Karnatak Publishing House, Bombay, 1944)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.282586"
+    "title": "Richard M. Eaton, ‘Tarabai (1675–1761): The Rise of Brahmins in Politics’, in A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/tarabai-16751761-the-rise-of-brahmins-in-politics/047C683C223579529A84EC66D9A68F5A"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
     "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
-    "title": "Wikipedia, ‘Bajirao I’",
-    "url": "https://en.wikipedia.org/wiki/Bajirao_I"
+    "title": "Shalini Patil, Maharani Tarabai of Kolhapur, c. 1675–1761 (S. Chand, New Delhi, 1987)",
+    "url": "https://catalog.hathitrust.org/Record/001816023"
+   },
+   {
+    "title": "Wikipedia, ‘Tarabai’",
+    "url": "https://en.wikipedia.org/wiki/Tarabai"
    }
   ],
   "related_maps": [
-   "1752__India__dAnville__lInde-Composite.html"
+   "1719__SouthIndia__Chatelain__Carte-Nouvelle-des-Terres.html"
   ]
  },
  {
@@ -1474,7 +2304,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "3 March 1707",
   "year": 1707,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "mughal",
    "maratha"
@@ -1515,7 +2345,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1708–1749",
   "year": 1708,
   "year_end": 1749,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha"
   ],
@@ -1549,12 +2379,54 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "kanhoji-angre",
+  "title": "Kanhoji Angre",
+  "date_label": "c. 1669–1729",
+  "year": 1713,
+  "year_end": 1729,
+  "period": 4,
+  "polities": [
+   "maratha",
+   "company",
+   "portuguese"
+  ],
+  "kind": "person",
+  "place": "Vijaydurg, Maharashtra",
+  "lat": 16.56,
+  "lon": 73.33,
+  "strap": "The Maratha admiral whose fleet controlled the Konkan coast for thirty years and defied the Company, the Portuguese and the Siddis alike.",
+  "body": "<p>Kanhoji Angre (c. 1669–1729) was the son of a Maratha officer in Shivaji’s service and made his name as a young man holding Suvarnadurg against the Siddi of Janjira. Around 1698 Rajaram’s government appointed him Sarkhel, commander of the fleet, and from his bases at Vijaydurg and later Kolaba he came to control the coast from Bombay harbour south to Vengurla, excepting the Siddi’s enclave. He built or strengthened a chain of harbour forts, ran shipyards building the shallow-draught grabs and gallivats suited to the coast, and encouraged teak planting for timber.</p>\n<p>His fleet took a toll on all shipping that passed without his pass, and the Europeans called him a pirate. In 1707 the Company ship <em>Bombay</em> blew up fighting him; in 1712 he took the Bombay governor’s yacht and held it to ransom; in 1720 he captured the <em>Charlotte</em>, and her supercargo Curgenven spent ten years in his custody. Company expeditions against Vijaydurg in 1717 and 1718, and an Anglo-Portuguese fleet under Commodore Mathews in 1722, all failed. In Maratha politics he was equally independent: he fought Shahu’s commanders in the succession war, captured the Peshwa Bahiropant Pingle, and in 1713 was brought over to Satara by Balaji Vishwanath, who confirmed him in ten forts and sixteen posts and in the titles Sarkhel and Vazarat Ma’ab. He died at Kolaba on 4 July 1729.</p>\n<p>The Angre fleet outlived him, but the family quarrelled, and Tulaji Angre’s refusal of Peshwa authority ended in February 1756 when a Company squadron under Watson and Clive, acting with the Peshwa’s army, took Vijaydurg (Gheriah) and destroyed the fleet. Maratha power at sea did not recover. The coast, which Kanhoji had made a Maratha possession by naval force, became after 1756 a place the Company policed by agreement with Pune.</p>",
+  "story": "The Angres show that a layer of sovereignty could be held from the sea. Kanhoji owed nominal allegiance to Satara, taxed the Company’s and the Portuguese’s trade, and treated with all three as an equal. His fleet was the last Indian naval power on the west coast, and its destruction in 1756 was the Company’s first joint operation with the Peshwa, a preview of the partnership that would undo the Marathas themselves.",
+  "sources": [
+   {
+    "title": "Surendra Nath Sen, The Military System of the Marathas (The Book Company, Calcutta, 1928)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.102812"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Clement Downing, A Compendious History of the Indian Wars (T. Cooper, London, 1737)",
+    "url": "https://archive.org/details/bim_eighteenth-century_a-compendious-history-of_downing-clement_1737"
+   },
+   {
+    "title": "Wikipedia, ‘Kanhoji Angre’",
+    "url": "https://en.wikipedia.org/wiki/Kanhoji_Angre"
+   }
+  ],
+  "related_maps": [
+   "1764__Bombay__Bellin__Plan-de-Bombay.html",
+   "1728__IndianOcean__Halley-Senex__Chart-of-the-East-Indian-Ocean.html"
+  ]
+ },
+ {
   "id": "ajnapatra",
   "title": "The Ajnapatra",
   "date_label": "1715",
   "year": 1715,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha"
   ],
@@ -1591,7 +2463,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1719",
   "year": 1719,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha",
    "mughal"
@@ -1626,55 +2498,12 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "haidar-ali-rises",
-  "title": "Haidar Ali",
-  "date_label": "c. 1720–1782",
-  "year": 1761,
-  "year_end": 1782,
-  "period": 3,
-  "polities": [
-   "mysore",
-   "maratha",
-   "hyderabad",
-   "company"
-  ],
-  "kind": "person",
-  "place": "Srirangapatna, Karnataka",
-  "lat": 12.42,
-  "lon": 76.69,
-  "strap": "A soldier of fortune who by 1761 had displaced the Wodeyar ministers and made Mysore a military state with a sepoy army of its own.",
-  "body": "<p>Haidar Ali was born about 1720 at Budikote near Kolar, the son of a Muslim soldier in the service of the Mysore Wodeyars. The Wodeyar kings of Srirangapatna were a Vijayanagara successor state, by the 1740s governed in fact by the Dalavai (commander) Nanjaraja and his brother Devaraja. Haidar and his brother served under them, and at the eight-month siege of Devanahalli in 1749 Haidar attracted notice. He was made faujdar of Dindigul in 1755, and there, having watched French troops in the Carnatic wars, he hired French officers and raised infantry drilled and armed in the European manner.</p>\n<p>Mysore in the 1750s paid tribute to both the Marathas and the Nizam and was nearly bankrupt. Haidar paid the troops when the ministers could not, and by 1759 had the army. Nanjaraja was pushed aside; a rival, the minister Khande Rao, drove Haidar from Srirangapatna in 1760 and tried to raise the Marathas against him, but in 1761 Haidar returned, shut Khande Rao in a cage, and took the government as Sarvadhikari, leaving Krishnaraja Wodeyar II a salaried figurehead. He never took a royal title. In 1763 he seized the Keladi (Bednur) kingdom and its treasury and renamed the capital Haidarnagar; by 1766 he held Kanara and the Malabar coast.</p>\n<p>The state he built was the most centralised in the south: revenue collected by salaried officers rather than hereditary chiefs, a standing army paid in cash, and a capital on an island fortress. It was also the Deccan’s fourth power, and for forty years the Marathas, the Nizam and the Company each allied with two of the others against the third. Haidar died on campaign at Chittoor on 7 December 1782, in the middle of a war with the Company; his son Tipu inherited the state and the war.</p>",
-  "story": "Haidar Ali is the last new sovereignty to appear in the collection, and the one that least resembled the layered Mughal model. He ruled in the name of a Hindu king he had reduced to a pensioner, paid no one chauth for long, and ran his country with salaried men. Mysore showed that the alternative to layered sovereignty was military absolutism, and the Company, which destroyed it in 1799, absorbed much of its method.",
-  "sources": [
-   {
-    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
-   },
-   {
-    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
-    "url": "https://archive.org/details/dli.csl.6359"
-   },
-   {
-    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
-    "url": "https://catalog.hathitrust.org/Record/007704944"
-   },
-   {
-    "title": "Wikipedia, ‘Hyder Ali’",
-    "url": "https://en.wikipedia.org/wiki/Hyder_Ali"
-   }
-  ],
-  "related_maps": [
-   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
-   "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html"
-  ]
- },
- {
   "id": "nizam-ul-mulk-1724",
   "title": "Nizam-ul-Mulk founds Hyderabad",
   "date_label": "11 October 1724",
   "year": 1724,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "hyderabad",
    "mughal",
@@ -1710,52 +2539,12 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "maratha-confederacy",
-  "title": "Holkar, Scindia, Gaekwad, Bhonsle",
-  "date_label": "1728–1761",
-  "year": 1740,
-  "year_end": 1761,
-  "period": 3,
-  "polities": [
-   "maratha"
-  ],
-  "kind": "institution",
-  "place": null,
-  "lat": null,
-  "lon": null,
-  "strap": "The great commanders’ houses that held the Maratha conquests as saranjam and, by mid-century, ruled them as princes.",
-  "body": "<p>The Maratha state of the mid-eighteenth century was run through a handful of military families. Malhar Rao Holkar (1693–1766), a Dhangar shepherd’s son, and Ranoji Scindia (Shinde, d. 1745), from a family of Satara patils, went north with Bajirao and were assigned the revenues of Malwa in the early 1730s; Holkar settled at Indore, Scindia at Ujjain, and later Gwalior. The Gaekwads under Pilaji (killed 1732) and Damaji II collected in Gujarat from Baroda. Raghuji Bhonsle (d. 1755), a kinsman of the Chhatrapati whom Shahu made Senasahibsubha in 1728, took Nagpur and from 1741 raided Bengal until the Nawab bought him off in 1751 with Orissa and the chauth of Bengal. The Pawars held Dhar; the Patwardhans and others the southern frontier.</p>\n<p>The instrument that bound them was the saranjam, a Mughal-derived assignment of revenue for the maintenance of a stated number of horse. In theory it was held at the Chhatrapati’s pleasure and accounted for at Pune; in practice, in distant Malwa or Berar, the holder collected what he could, kept his own court and passed the grant to his son. Gordon has shown how these grants, together with the mokasa shares of chauth, produced a state that was less a kingdom than a system for sharing the proceeds of expansion among those who did the fighting.</p>\n<p>The British called the result the Maratha confederacy, and the name has stuck, though Barbara Ramusack notes that neither ‘empire’ nor ‘confederacy’ describes it well. While Shahu lived the houses competed for his favour and accepted the Peshwa as his agent; after 1749 they accepted the Peshwa as first among equals, and after Panipat, where Holkar left the field and Scindia’s heir was killed, hardly that. The five houses that the Company later fought, treated with and pensioned one by one – Pune, Indore, Gwalior, Baroda, Nagpur – were already in being by 1761.</p>",
-  "story": "The confederacy is layered sovereignty inside the Maratha polity itself. Every Holkar or Scindia collector in Malwa held his share under a Maratha grant that was itself authorised by a Mughal sanad, and in time under a treaty with the Company as well. Because the houses were sovereign in fact and dependent in form, the British could and did deal with each separately, which is how a single Maratha power became five princely states.",
-  "sources": [
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CHOL9780521268837"
-   },
-   {
-    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://archive.org/details/landsovereigntyi0000wink"
-   },
-   {
-    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
-    "url": "https://search.worldcat.org/search?q=The%20Extraordinary%20Epoch%20of%20Nanasaheb%20Peshwa%20Uday%20S.%20Kulkarni"
-   },
-   {
-    "title": "Wikipedia, ‘Malhar Rao Holkar’",
-    "url": "https://en.wikipedia.org/wiki/Malhar_Rao_Holkar"
-   }
-  ],
-  "related_maps": [
-   "1782__India__Rennell__Hindoostan-2-Sheet.html",
-   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
-  ]
- },
- {
   "id": "palkhed-1728",
   "title": "Palkhed, 1728",
   "date_label": "28 February 1728",
   "year": 1728,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha",
    "hyderabad"
@@ -1790,12 +2579,53 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "bajirao-i",
+  "title": "Bajirao I",
+  "date_label": "1700–1740",
+  "year": 1733,
+  "year_end": 1740,
+  "period": 4,
+  "polities": [
+   "maratha",
+   "mughal",
+   "hyderabad"
+  ],
+  "kind": "person",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.86,
+  "strap": "The second Peshwa, who took Maratha arms north of the Narmada and made the Peshwa’s office the real centre of the state.",
+  "body": "<p>Bajirao Ballal (1700–1740) was appointed Peshwa by Shahu on 17 April 1720, days after his father Balaji Vishwanath died, over the objections of older ministers. He held the office for twenty years and spent most of them on horseback. His argument, recorded in the chronicles, was that the Mughal empire was a withered tree that would fall if its trunk were struck, and that the Marathas should go north for revenue rather than fight the Nizam for the Deccan.</p>\n<p>He did both. After Palkhed (1728) he sent Malhar Rao Holkar, Ranoji Scindia (Shinde) and Udaji Pawar into Malwa, where by 1731 they were collecting chauth and where the Mughal governors could not hold the field; the Gaekwads did the same in Gujarat. In 1729 he relieved Chhatrasal of Bundelkhand from a Mughal siege and was rewarded with a third of the Bundela state and with Mastani, whom tradition identifies as Chhatrasal’s daughter; her place in the Peshwa’s household was resented at Pune and remains poorly documented. In March 1737 he rode to the outskirts of Delhi, skirmished under the walls and withdrew, having shown the court it could not defend itself. Nizam-ul-Mulk came north to restore the position, was surrounded near Bhopal, and in January 1738 at Doraha agreed to the cession of Malwa. Bajirao died of fever at Rawerkhedi on the Narmada on 28 April 1740, on his way north again.</p>\n<p>His legacy was an office and a set of families. By 1740 the Peshwa, not the Chhatrapati, directed Maratha policy; Shahu signed what Pune sent him. The commanders Bajirao sent north – Holkar, Scindia, Pawar, the Bhonsles of Nagpur, the Gaekwads – held their conquests as saranjam, assignments of revenue for the upkeep of troops, and within a generation were hereditary princes. The Maratha empire of the mid-century, and its later fragmentation, were both his work.</p>",
+  "story": "Bajirao is the person through whom sovereignty slipped from king to minister. Shahu remained Chhatrapati; every grant and treaty was in his name; but the decisions were taken at Pune. The Peshwa also exported the Deccan’s layered arrangements northward, so that Malwa and Gujarat acquired the same division between Mughal governor and Maratha collector that the Nizam’s provinces already had.",
+  "sources": [
+   {
+    "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
+    "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni"
+   },
+   {
+    "title": "V. G. Dighe, Peshwa Bajirao I and Maratha Expansion (Karnatak Publishing House, Bombay, 1944)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.282586"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Wikipedia, ‘Bajirao I’",
+    "url": "https://en.wikipedia.org/wiki/Bajirao_I"
+   }
+  ],
+  "related_maps": [
+   "1752__India__dAnville__lInde-Composite.html"
+  ]
+ },
+ {
   "id": "bassein-1739",
   "title": "Bassein, 1739",
   "date_label": "February–May 1739",
   "year": 1739,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha",
    "portuguese"
@@ -1831,12 +2661,52 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "maratha-confederacy",
+  "title": "Holkar, Scindia, Gaekwad, Bhonsle",
+  "date_label": "1728–1761",
+  "year": 1740,
+  "year_end": 1761,
+  "period": 4,
+  "polities": [
+   "maratha"
+  ],
+  "kind": "institution",
+  "place": null,
+  "lat": null,
+  "lon": null,
+  "strap": "The great commanders’ houses that held the Maratha conquests as saranjam and, by mid-century, ruled them as princes.",
+  "body": "<p>The Maratha state of the mid-eighteenth century was run through a handful of military families. Malhar Rao Holkar (1693–1766), a Dhangar shepherd’s son, and Ranoji Scindia (Shinde, d. 1745), from a family of Satara patils, went north with Bajirao and were assigned the revenues of Malwa in the early 1730s; Holkar settled at Indore, Scindia at Ujjain, and later Gwalior. The Gaekwads under Pilaji (killed 1732) and Damaji II collected in Gujarat from Baroda. Raghuji Bhonsle (d. 1755), a kinsman of the Chhatrapati whom Shahu made Senasahibsubha in 1728, took Nagpur and from 1741 raided Bengal until the Nawab bought him off in 1751 with Orissa and the chauth of Bengal. The Pawars held Dhar; the Patwardhans and others the southern frontier.</p>\n<p>The instrument that bound them was the saranjam, a Mughal-derived assignment of revenue for the maintenance of a stated number of horse. In theory it was held at the Chhatrapati’s pleasure and accounted for at Pune; in practice, in distant Malwa or Berar, the holder collected what he could, kept his own court and passed the grant to his son. Gordon has shown how these grants, together with the mokasa shares of chauth, produced a state that was less a kingdom than a system for sharing the proceeds of expansion among those who did the fighting.</p>\n<p>The British called the result the Maratha confederacy, and the name has stuck, though Barbara Ramusack notes that neither ‘empire’ nor ‘confederacy’ describes it well. While Shahu lived the houses competed for his favour and accepted the Peshwa as his agent; after 1749 they accepted the Peshwa as first among equals, and after Panipat, where Holkar left the field and Scindia’s heir was killed, hardly that. The five houses that the Company later fought, treated with and pensioned one by one – Pune, Indore, Gwalior, Baroda, Nagpur – were already in being by 1761.</p>",
+  "story": "The confederacy is layered sovereignty inside the Maratha polity itself. Every Holkar or Scindia collector in Malwa held his share under a Maratha grant that was itself authorised by a Mughal sanad, and in time under a treaty with the Company as well. Because the houses were sovereign in fact and dependent in form, the British could and did deal with each separately, which is how a single Maratha power became five princely states.",
+  "sources": [
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
+   },
+   {
+    "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
+    "url": "https://search.worldcat.org/search?q=The%20Extraordinary%20Epoch%20of%20Nanasaheb%20Peshwa%20Uday%20S.%20Kulkarni"
+   },
+   {
+    "title": "Wikipedia, ‘Malhar Rao Holkar’",
+    "url": "https://en.wikipedia.org/wiki/Malhar_Rao_Holkar"
+   }
+  ],
+  "related_maps": [
+   "1782__India__Rennell__Hindoostan-2-Sheet.html",
+   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
+  ]
+ },
+ {
   "id": "carnatic-wars-arcot-1751",
   "title": "The Carnatic wars",
   "date_label": "1746–1763",
   "year": 1746,
   "year_end": 1763,
-  "period": 3,
+  "period": 4,
   "polities": [
    "company",
    "hyderabad",
@@ -1874,12 +2744,55 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "haidar-ali-rises",
+  "title": "Haidar Ali",
+  "date_label": "c. 1720–1782",
+  "year": 1761,
+  "year_end": 1782,
+  "period": 4,
+  "polities": [
+   "mysore",
+   "maratha",
+   "hyderabad",
+   "company"
+  ],
+  "kind": "person",
+  "place": "Srirangapatna, Karnataka",
+  "lat": 12.42,
+  "lon": 76.69,
+  "strap": "A soldier of fortune who by 1761 had displaced the Wodeyar ministers and made Mysore a military state with a sepoy army of its own.",
+  "body": "<p>Haidar Ali was born about 1720 at Budikote near Kolar, the son of a Muslim soldier in the service of the Mysore Wodeyars. The Wodeyar kings of Srirangapatna were a Vijayanagara successor state, by the 1740s governed in fact by the Dalavai (commander) Nanjaraja and his brother Devaraja. Haidar and his brother served under them, and at the eight-month siege of Devanahalli in 1749 Haidar attracted notice. He was made faujdar of Dindigul in 1755, and there, having watched French troops in the Carnatic wars, he hired French officers and raised infantry drilled and armed in the European manner.</p>\n<p>Mysore in the 1750s paid tribute to both the Marathas and the Nizam and was nearly bankrupt. Haidar paid the troops when the ministers could not, and by 1759 had the army. Nanjaraja was pushed aside; a rival, the minister Khande Rao, drove Haidar from Srirangapatna in 1760 and tried to raise the Marathas against him, but in 1761 Haidar returned, shut Khande Rao in a cage, and took the government as Sarvadhikari, leaving Krishnaraja Wodeyar II a salaried figurehead. He never took a royal title. In 1763 he seized the Keladi (Bednur) kingdom and its treasury and renamed the capital Haidarnagar; by 1766 he held Kanara and the Malabar coast.</p>\n<p>The state he built was the most centralised in the south: revenue collected by salaried officers rather than hereditary chiefs, a standing army paid in cash, and a capital on an island fortress. It was also the Deccan’s fourth power, and for forty years the Marathas, the Nizam and the Company each allied with two of the others against the third. Haidar died on campaign at Chittoor on 7 December 1782, in the middle of a war with the Company; his son Tipu inherited the state and the war.</p>",
+  "story": "Haidar Ali is the last new sovereignty to appear in the collection, and the one that least resembled the layered Mughal model. He ruled in the name of a Hindu king he had reduced to a pensioner, paid no one chauth for long, and ran his country with salaried men. Mysore showed that the alternative to layered sovereignty was military absolutism, and the Company, which destroyed it in 1799, absorbed much of its method.",
+  "sources": [
+   {
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
+   },
+   {
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
+    "url": "https://catalog.hathitrust.org/Record/007704944"
+   },
+   {
+    "title": "Wikipedia, ‘Hyder Ali’",
+    "url": "https://en.wikipedia.org/wiki/Hyder_Ali"
+   }
+  ],
+  "related_maps": [
+   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
+   "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html"
+  ]
+ },
+ {
   "id": "panipat-1761",
   "title": "Panipat, 1761",
   "date_label": "14 January 1761",
   "year": 1761,
   "year_end": null,
-  "period": 3,
+  "period": 4,
   "polities": [
    "maratha",
    "mughal",
@@ -1916,96 +2829,12 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "srirangapatna",
-  "title": "Srirangapatna",
-  "date_label": "1610–1799",
-  "year": 1770,
-  "year_end": 1799,
-  "period": 4,
-  "polities": [
-   "mysore",
-   "vijayanagara",
-   "company"
-  ],
-  "kind": "place",
-  "place": "Srirangapatna, Karnataka",
-  "lat": 12.414,
-  "lon": 76.704,
-  "strap": "The island fortress in the Kaveri that was the seat of the Wodeyars, Haidar Ali and Tipu Sultan, and the prize of 1792 and 1799.",
-  "body": "<p>Srirangapatna, written Seringapatam in Company records, is an island about three miles long in the Kaveri river, a few miles north of Mysore city. Its name comes from the temple of Ranganatha, a reclining Vishnu, whose shrine is attributed to the Ganga rulers of the ninth century and was enlarged under the Hoysalas and Vijayanagara. The fort at the island’s western end was a Vijayanagara provincial seat; Raja Wodeyar took it from the last viceroy in 1610 and made it the capital of Mysore.</p>\n<p>Under Haidar Ali, who controlled the state from 1761, and his son Tipu, the island was fortified more heavily than any other place in the south. The river on both sides served as a moat, and the fort was rebuilt in the 1780s and 1790s with French engineering advice. Tipu added the Jama Masjid (the foundation inscription gives 1782, though some accounts say 1787), the summer palace of Daria Daulat Bagh in 1784 with its painted murals of Pollilur, and the Gumbaz at the island’s eastern end, where Haidar was buried and where Tipu was laid beside him. The Wodeyar rajas remained in the fort throughout, kept in seclusion but not deposed.</p>\n<p>Cornwallis besieged the island in February 1792 and forced Tipu to terms; Harris stormed the fort on 4 May 1799. After the second siege the Company moved the restored Wodeyar court to Mysore city and Srirangapatna was never again a capital. Its population fell sharply within a generation.</p>\n<p>The island is now a small town among the ruins of the fort, with the temple, mosque, palace and tomb intact and the place where Tipu’s body was found marked by a plaque set up by the Company. It is the one site in this collection where the Wodeyar, Mysore sultanate and Company layers can all be seen within a single walk.</p>",
-  "story": "Srirangapatna holds the argument about sovereignty in one place. A Vijayanagara outpost became a Wodeyar capital; a Muslim soldier-dynasty ruled from it while keeping the Hindu rajas in residence as a source of legitimacy; the temple and the mosque stood a few hundred yards apart; and the Company, having stormed it, chose to restore the old dynasty rather than annex. Each layer was rearranged rather than erased, and that is the pattern of the whole period.",
-  "sources": [
-   {
-    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
-   },
-   {
-    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
-    "url": "https://archive.org/details/dli.csl.6359"
-   },
-   {
-    "title": "Francis Buchanan, A Journey from Madras through the Countries of Mysore, Canara, and Malabar, 3 vols (T. Cadell and W. Davies, London, 1807)",
-    "url": "https://archive.org/details/journeyfrommadra01hami"
-   },
-   {
-    "title": "Wikipedia, ‘Srirangapatna’",
-    "url": "https://en.wikipedia.org/wiki/Srirangapatna"
-   }
-  ],
-  "related_maps": [
-   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
-   "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html"
-  ]
- },
- {
-  "id": "nana-phadnavis",
-  "title": "Nana Phadnavis",
-  "date_label": "1742–1800",
-  "year": 1775,
-  "year_end": 1800,
-  "period": 4,
-  "polities": [
-   "maratha",
-   "company",
-   "hyderabad",
-   "mysore"
-  ],
-  "kind": "person",
-  "place": "Pune, Maharashtra",
-  "lat": 18.52,
-  "lon": 73.856,
-  "strap": "The minister who ran the Pune government for a quarter of a century in the name of a child Peshwa and kept the Company at arm’s length.",
-  "body": "<p>Balaji Janardan Bhanu, known by his hereditary office as Nana Phadnavis, was born at Satara on 12 February 1742 and died at Pune on 13 March 1800. He was never Peshwa and held no military command of note. From 1774 until 1795 he was nonetheless the effective head of the Maratha state.</p>\n<p>His rise followed the murder of the Peshwa Narayanrao in August 1773, in a plot laid by Raghunathrao. Nana organised a council of ministers, the Barbhai or twelve brothers, which recognised Narayanrao’s posthumous son Madhavrao II, born in April 1774, as Peshwa and ruled as his regency. Raghunathrao turned to Bombay for help, and the result was the first Anglo-Maratha war. Nana directed the Maratha side, rejected the Company’s 1776 Treaty of Purandar, built the coalition with Haidar Ali and the Nizam in 1780 that stretched the Company on two fronts, and accepted peace at Salbai in 1782 on terms that preserved the regency.</p>\n<p>Thereafter he governed from Pune through a network of agents and newswriters, balancing Mahadji Scindia’s power in the north against Holkar and the Patwardhans in the south, joining Cornwallis against Tipu in 1790–92, and leading the confederacy to its last united campaign at Kharda in 1795. Madhavrao II’s death in October 1795 undid him. The succession brought Raghunathrao’s son Bajirao II to office, Daulatrao Scindia imprisoned Nana at the turn of 1797 and 1798, and although he was released he never recovered authority.</p>\n<p>The Company Resident at Pune wrote on his death that the wisdom and moderation of the Maratha government had gone with him. Within three years Bajirao II had signed the Treaty of Bassein and placed the Peshwa under Company protection, the outcome Nana had spent his career preventing.</p>",
-  "story": "Nana embodies a layer of Deccan sovereignty that is easy to miss: the ministerial government that ruled in the name of a Peshwa who himself ruled in the name of a Chhatrapati. The arrangement was legally fragile and politically effective. His diplomacy, which kept Pune, Hyderabad and Mysore in changing combinations against the Company, was the last sustained attempt to manage the Deccan as a system of Indian states, and his fall marks the point at which that attempt stopped.",
-  "sources": [
-   {
-    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Mula Mutha Publishers, Pune, 2024)",
-    "url": "https://search.worldcat.org/search?q=Raghoba%3A%20The%20Assassination%20of%20Narayan%20Rao%20Peshwa%20Uday%20S.%20Kulkarni"
-   },
-   {
-    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://doi.org/10.1017/CHOL9780521268837"
-   },
-   {
-    "title": "Royal Asiatic Society Archives, ‘Nana Fadnavis (1742–1800)’",
-    "url": "https://royalasiaticarchives.org/index.php/nana-fadnavis-1742-1800"
-   },
-   {
-    "title": "Wikipedia, ‘Nana Fadnavis’",
-    "url": "https://en.wikipedia.org/wiki/Nana_Fadnavis"
-   }
-  ],
-  "related_maps": [
-   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
-  ]
- },
- {
   "id": "madhavrao-i",
   "title": "Madhavrao I",
   "date_label": "1761–1772",
   "year": 1761,
   "year_end": 1772,
-  "period": 4,
+  "period": 5,
   "polities": [
    "maratha",
    "hyderabad",
@@ -2047,7 +2876,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1767–1769",
   "year": 1767,
   "year_end": 1769,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company",
@@ -2085,12 +2914,96 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "srirangapatna",
+  "title": "Srirangapatna",
+  "date_label": "1610–1799",
+  "year": 1770,
+  "year_end": 1799,
+  "period": 5,
+  "polities": [
+   "mysore",
+   "vijayanagara",
+   "company"
+  ],
+  "kind": "place",
+  "place": "Srirangapatna, Karnataka",
+  "lat": 12.414,
+  "lon": 76.704,
+  "strap": "The island fortress in the Kaveri that was the seat of the Wodeyars, Haidar Ali and Tipu Sultan, and the prize of 1792 and 1799.",
+  "body": "<p>Srirangapatna, written Seringapatam in Company records, is an island about three miles long in the Kaveri river, a few miles north of Mysore city. Its name comes from the temple of Ranganatha, a reclining Vishnu, whose shrine is attributed to the Ganga rulers of the ninth century and was enlarged under the Hoysalas and Vijayanagara. The fort at the island’s western end was a Vijayanagara provincial seat; Raja Wodeyar took it from the last viceroy in 1610 and made it the capital of Mysore.</p>\n<p>Under Haidar Ali, who controlled the state from 1761, and his son Tipu, the island was fortified more heavily than any other place in the south. The river on both sides served as a moat, and the fort was rebuilt in the 1780s and 1790s with French engineering advice. Tipu added the Jama Masjid (the foundation inscription gives 1782, though some accounts say 1787), the summer palace of Daria Daulat Bagh in 1784 with its painted murals of Pollilur, and the Gumbaz at the island’s eastern end, where Haidar was buried and where Tipu was laid beside him. The Wodeyar rajas remained in the fort throughout, kept in seclusion but not deposed.</p>\n<p>Cornwallis besieged the island in February 1792 and forced Tipu to terms; Harris stormed the fort on 4 May 1799. After the second siege the Company moved the restored Wodeyar court to Mysore city and Srirangapatna was never again a capital. Its population fell sharply within a generation.</p>\n<p>The island is now a small town among the ruins of the fort, with the temple, mosque, palace and tomb intact and the place where Tipu’s body was found marked by a plaque set up by the Company. It is the one site in this collection where the Wodeyar, Mysore sultanate and Company layers can all be seen within a single walk.</p>",
+  "story": "Srirangapatna holds the argument about sovereignty in one place. A Vijayanagara outpost became a Wodeyar capital; a Muslim soldier-dynasty ruled from it while keeping the Hindu rajas in residence as a source of legitimacy; the temple and the mosque stood a few hundred yards apart; and the Company, having stormed it, chose to restore the old dynasty rather than annex. Each layer was rearranged rather than erased, and that is the pattern of the whole period.",
+  "sources": [
+   {
+    "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
+   },
+   {
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Francis Buchanan, A Journey from Madras through the Countries of Mysore, Canara, and Malabar, 3 vols (T. Cadell and W. Davies, London, 1807)",
+    "url": "https://archive.org/details/journeyfrommadra01hami"
+   },
+   {
+    "title": "Wikipedia, ‘Srirangapatna’",
+    "url": "https://en.wikipedia.org/wiki/Srirangapatna"
+   }
+  ],
+  "related_maps": [
+   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
+   "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html"
+  ]
+ },
+ {
+  "id": "nana-phadnavis",
+  "title": "Nana Phadnavis",
+  "date_label": "1742–1800",
+  "year": 1775,
+  "year_end": 1800,
+  "period": 5,
+  "polities": [
+   "maratha",
+   "company",
+   "hyderabad",
+   "mysore"
+  ],
+  "kind": "person",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.856,
+  "strap": "The minister who ran the Pune government for a quarter of a century in the name of a child Peshwa and kept the Company at arm’s length.",
+  "body": "<p>Balaji Janardan Bhanu, known by his hereditary office as Nana Phadnavis, was born at Satara on 12 February 1742 and died at Pune on 13 March 1800. He was never Peshwa and held no military command of note. From 1774 until 1795 he was nonetheless the effective head of the Maratha state.</p>\n<p>His rise followed the murder of the Peshwa Narayanrao in August 1773, in a plot laid by Raghunathrao. Nana organised a council of ministers, the Barbhai or twelve brothers, which recognised Narayanrao’s posthumous son Madhavrao II, born in April 1774, as Peshwa and ruled as his regency. Raghunathrao turned to Bombay for help, and the result was the first Anglo-Maratha war. Nana directed the Maratha side, rejected the Company’s 1776 Treaty of Purandar, built the coalition with Haidar Ali and the Nizam in 1780 that stretched the Company on two fronts, and accepted peace at Salbai in 1782 on terms that preserved the regency.</p>\n<p>Thereafter he governed from Pune through a network of agents and newswriters, balancing Mahadji Scindia’s power in the north against Holkar and the Patwardhans in the south, joining Cornwallis against Tipu in 1790–92, and leading the confederacy to its last united campaign at Kharda in 1795. Madhavrao II’s death in October 1795 undid him. The succession brought Raghunathrao’s son Bajirao II to office, Daulatrao Scindia imprisoned Nana at the turn of 1797 and 1798, and although he was released he never recovered authority.</p>\n<p>The Company Resident at Pune wrote on his death that the wisdom and moderation of the Maratha government had gone with him. Within three years Bajirao II had signed the Treaty of Bassein and placed the Peshwa under Company protection, the outcome Nana had spent his career preventing.</p>",
+  "story": "Nana embodies a layer of Deccan sovereignty that is easy to miss: the ministerial government that ruled in the name of a Peshwa who himself ruled in the name of a Chhatrapati. The arrangement was legally fragile and politically effective. His diplomacy, which kept Pune, Hyderabad and Mysore in changing combinations against the Company, was the last sustained attempt to manage the Deccan as a system of Indian states, and his fall marks the point at which that attempt stopped.",
+  "sources": [
+   {
+    "title": "Uday S. Kulkarni, Raghoba: The Assassination of Narayan Rao Peshwa (Mula Mutha Publishers, Pune, 2024)",
+    "url": "https://search.worldcat.org/search?q=Raghoba%3A%20The%20Assassination%20of%20Narayan%20Rao%20Peshwa%20Uday%20S.%20Kulkarni"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Royal Asiatic Society Archives, ‘Nana Fadnavis (1742–1800)’",
+    "url": "https://royalasiaticarchives.org/index.php/nana-fadnavis-1742-1800"
+   },
+   {
+    "title": "Wikipedia, ‘Nana Fadnavis’",
+    "url": "https://en.wikipedia.org/wiki/Nana_Fadnavis"
+   }
+  ],
+  "related_maps": [
+   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
+  ]
+ },
+ {
   "id": "wadgaon-salbai",
   "title": "Wadgaon and Salbai",
   "date_label": "1779–1782",
   "year": 1779,
   "year_end": 1782,
-  "period": 4,
+  "period": 5,
   "polities": [
    "maratha",
    "company"
@@ -2131,7 +3044,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1780–1799",
   "year": 1780,
   "year_end": 1799,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company"
@@ -2171,7 +3084,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1782–1784",
   "year": 1782,
   "year_end": 1784,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company"
@@ -2212,7 +3125,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1784–1799",
   "year": 1784,
   "year_end": 1799,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore"
   ],
@@ -2251,7 +3164,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1786–1798",
   "year": 1786,
   "year_end": 1798,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "other",
@@ -2292,7 +3205,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "c. 1790",
   "year": 1790,
   "year_end": null,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company"
@@ -2332,7 +3245,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "18 March 1792",
   "year": 1792,
   "year_end": null,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company",
@@ -2375,7 +3288,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1794–1795",
   "year": 1794,
   "year_end": 1795,
-  "period": 4,
+  "period": 5,
   "polities": [
    "maratha",
    "hyderabad",
@@ -2418,7 +3331,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1 September 1798",
   "year": 1798,
   "year_end": null,
-  "period": 4,
+  "period": 5,
   "polities": [
    "hyderabad",
    "company"
@@ -2459,7 +3372,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "4 May 1799",
   "year": 1799,
   "year_end": null,
-  "period": 4,
+  "period": 5,
   "polities": [
    "mysore",
    "company",
@@ -2502,7 +3415,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1799–1821",
   "year": 1799,
   "year_end": 1821,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company",
    "mysore",
@@ -2544,7 +3457,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "30 June 1799",
   "year": 1799,
   "year_end": null,
-  "period": 5,
+  "period": 6,
   "polities": [
    "mysore",
    "company",
@@ -2586,7 +3499,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "10 April 1802",
   "year": 1802,
   "year_end": 1823,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company"
   ],
@@ -2627,7 +3540,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "31 December 1802",
   "year": 1802,
   "year_end": null,
-  "period": 5,
+  "period": 6,
   "polities": [
    "maratha",
    "company"
@@ -2668,7 +3581,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "23 September 1803",
   "year": 1803,
   "year_end": null,
-  "period": 5,
+  "period": 6,
   "polities": [
    "maratha",
    "company",
@@ -2710,7 +3623,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1803–1820s",
   "year": 1803,
   "year_end": 1830,
-  "period": 5,
+  "period": 6,
   "polities": [
    "hyderabad",
    "company"
@@ -2751,7 +3664,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1817–1818",
   "year": 1817,
   "year_end": 1818,
-  "period": 5,
+  "period": 6,
   "polities": [
    "maratha",
    "company"
@@ -2792,7 +3705,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1818–1826",
   "year": 1818,
   "year_end": 1826,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company"
   ],
@@ -2832,7 +3745,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "3 June 1818",
   "year": 1818,
   "year_end": null,
-  "period": 5,
+  "period": 6,
   "polities": [
    "maratha",
    "company"
@@ -2872,7 +3785,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1818–1830s",
   "year": 1818,
   "year_end": 1838,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company",
    "maratha"
@@ -2913,7 +3826,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1818–1848",
   "year": 1818,
   "year_end": 1848,
-  "period": 5,
+  "period": 6,
   "polities": [
    "maratha",
    "company"
@@ -2954,7 +3867,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "25 October 1819",
   "year": 1819,
   "year_end": null,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company",
    "maratha"
@@ -2994,7 +3907,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1827–1893",
   "year": 1827,
   "year_end": 1893,
-  "period": 5,
+  "period": 6,
   "polities": [
    "company",
    "hyderabad",
@@ -3038,7 +3951,7 @@ window.DECCAN_ENTRIES = [
   "date_label": "1830–1831",
   "year": 1830,
   "year_end": 1831,
-  "period": 5,
+  "period": 6,
   "polities": [
    "mysore",
    "company"

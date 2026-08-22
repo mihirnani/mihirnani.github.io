@@ -1,21 +1,21 @@
-/* The Deccan, 1500–1830s — single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
+/* The Deccan, 1336–1830s — single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
    Routes: #          home (timeline + periods)
            #p3        period page
            #<entry>   entry page                                                   */
 (function () {
   "use strict";
   var EG = "https://naniwadekar.com/european-gaze/";
-  var POL = {vijayanagara: "Vijayanagara", sultanates: "Deccan sultanates", mughal: "Mughal empire", maratha: "Marathas",
+  var POL = {delhi: "Delhi sultanate", vijayanagara: "Vijayanagara", bahmani: "Bahmani sultanate", sultanates: "Deccan sultanates", mughal: "Mughal empire", maratha: "Marathas",
     mysore: "Mysore", hyderabad: "Hyderabad", company: "East India Company", portuguese: "Portuguese", other: "Other"};
   var KIND = {battle: "Battle", treaty: "Treaty", person: "Person", place: "Place", document: "Document",
     object: "Object", institution: "Institution", event: "Event"};
-  var ROWS = [["vijayanagara", "Vijayanagara", 1500, 1646], ["sultanates", "Deccan sultanates", 1500, 1687],
+  var ROWS = [["delhi", "Delhi sultanate", 1327, 1347], ["vijayanagara", "Vijayanagara", 1336, 1646], ["bahmani", "Bahmani sultanate", 1347, 1518], ["sultanates", "Deccan sultanates", 1490, 1687],
     ["mughal", "Mughal empire", 1596, 1761], ["maratha", "Marathas", 1646, 1818], ["mysore", "Mysore", 1761, 1831],
     ["hyderabad", "Hyderabad", 1724, 1840], ["portuguese", "Portuguese", 1510, 1739], ["company", "East India Company", 1611, 1840]];
   var E = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]; }); };
   var app = document.getElementById("app");
   var entries = [], periods = [], byId = {}, PER = {};
-  var pol = new Set(), kind = new Set();
+  var pol = new Set(), kind = new Set(), query = "";
 
   function mapTitle(fn) {
     var p = fn.replace(".html", "").split("__");
@@ -29,15 +29,15 @@
 
   /* ---------- timeline ---------- */
   function timelineSvg() {
-    var X0 = 150, X1 = 1380, W = 1400, Y0 = 52, RH = 40, y0 = 1492, y1 = 1840;
+    var X0 = 150, X1 = 1380, W = 1400, Y0 = 52, RH = 38, y0 = 1322, y1 = 1840;
     var H = Y0 + RH * ROWS.length + 30;
     var x = function (yr) { return X0 + (yr - y0) / (y1 - y0) * (X1 - X0); };
-    var s = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Timeline of the Deccan, 1500 to 1840, by polity">'];
+    var s = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Timeline of the Deccan, 1327 to 1840, by polity">'];
     periods.forEach(function (p, i) {
       s.push('<rect class="pband' + (i % 2 ? " alt" : "") + '" x="' + x(p.start).toFixed(1) + '" y="' + (Y0 - 30) + '" width="' + (x(p.end) - x(p.start)).toFixed(1) + '" height="' + (H - Y0 + 30) + '"/>');
       s.push('<text class="ptitle" x="' + (x(p.start) + 6).toFixed(1) + '" y="' + (Y0 - 16) + '">' + E((p.short || p.title).toUpperCase()) + '</text>');
     });
-    for (var yr = 1500; yr <= 1840; yr += 50) {
+    for (var yr = 1350; yr <= 1840; yr += 50) {
       s.push('<line class="grid" x1="' + x(yr).toFixed(1) + '" y1="' + (Y0 - 4) + '" x2="' + x(yr).toFixed(1) + '" y2="' + (H - 24) + '"/>');
       s.push('<text class="yr" x="' + x(yr).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle">' + yr + '</text>');
     }
@@ -70,7 +70,7 @@
 
   /* ---------- views ---------- */
   function home() {
-    setTitle("The Deccan, 1500–1830s · a timeline from Vijayanagara to the Company");
+    setTitle("The Deccan, 1336–1830s · a timeline from Vijayanagara to the Company");
     var chipsPol = Object.keys(POL).filter(function (k) { return k !== "other"; }).map(function (k) { return '<button class="chip' + (pol.has(k) ? " on" : "") + '" data-f="pol" data-v="' + k + '" type="button">' + E(POL[k]) + '</button>'; }).join("");
     var chipsKind = Object.keys(KIND).map(function (k) { return '<button class="chip' + (kind.has(k) ? " on" : "") + '" data-f="kind" data-v="' + k + '" type="button">' + E(KIND[k]) + '</button>'; }).join("");
     var sections = periods.map(function (p) {
@@ -81,21 +81,24 @@
     }).join("");
     app.innerHTML = '<div class="wrap">' +
       '<p class="eyebrow">A Timeline Collection</p>' +
-      '<h1 class="hero-h1">The Deccan,<br/>1500–1830s</h1>' +
+      '<h1 class="hero-h1">The Deccan,<br/>1336–1830s</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">Seventy-six entries, from the kings of Vijayanagara to the Company’s commissioners, on a plateau where sovereignty was always shared – until it was not.</p>' +
-      '<p class="measure muted">Five periods, eight polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
+      '<p class="lede measure">A hundred entries across five centuries, from the founding of Vijayanagara and the Bahmani sultanate to the Company’s commissioners, on a plateau where sovereignty was always shared – until it was not.</p>' +
+      '<p class="measure muted">Six periods, ten polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
+      '<div class="search"><input id="q" type="search" placeholder="Search the hundred entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap" id="tl">' + timelineSvg() + '</div>' +
       '<div class="tl-panel" id="tlpanel"><span class="hint">Click a marker for a summary. Markers sit on the row of the entry’s principal polity; the bands show roughly when each power was present in the Deccan.</span></div>' +
-      '<div class="entries" id="entries">' + sections + '<p class="empty" id="empty" hidden>No entries match these filters.</p></div></div>';
+      '<div class="entries" id="entries">' + sections + '<p class="empty" id="empty" hidden>No entries match.</p></div></div>';
     app.querySelectorAll("#filters .chip").forEach(function (c) {
       c.addEventListener("click", function () {
         var f = c.dataset.f, v = c.dataset.v;
-        if (f === "clear") { pol.clear(); kind.clear(); app.querySelectorAll("#filters .chip").forEach(function (x) { x.classList.remove("on"); }); applyFilters(); return; }
+        if (f === "clear") { pol.clear(); kind.clear(); query = ""; var qb = document.getElementById("q"); if (qb) qb.value = ""; app.querySelectorAll("#filters .chip").forEach(function (x) { x.classList.remove("on"); }); applyFilters(); return; }
         var set = f === "pol" ? pol : kind; if (set.has(v)) set.delete(v); else set.add(v); c.classList.toggle("on"); applyFilters();
       });
     });
+    var qbox = document.getElementById("q");
+    qbox.addEventListener("input", function () { query = qbox.value.trim().toLowerCase(); applyFilters(); });
     var cur = null, panel = document.getElementById("tlpanel");
     function show(id) {
       var e = byId[id]; if (!e) return;
@@ -108,17 +111,24 @@
     });
     applyFilters();
   }
+  var hay = {};
+  function matches(e) {
+    if (!query) return true;
+    if (!hay[e.id]) hay[e.id] = (e.title + " " + e.strap + " " + (e.place || "") + " " + e.date_label + " " + e.body.replace(/<[^>]+>/g, " ") + " " + e.story).toLowerCase();
+    return query.split(/\s+/).every(function (w) { return hay[e.id].indexOf(w) >= 0; });
+  }
   function applyFilters() {
     var any = false;
     app.querySelectorAll(".elist li").forEach(function (li) {
-      var ok = (!pol.size || Array.from(pol).some(function (p) { return li.dataset.polities.split(" ").indexOf(p) >= 0; })) && (!kind.size || kind.has(li.dataset.kind));
+      var id = li.querySelector("a.t").getAttribute("href").slice(1);
+      var ok = (!pol.size || Array.from(pol).some(function (p) { return li.dataset.polities.split(" ").indexOf(p) >= 0; })) && (!kind.size || kind.has(li.dataset.kind)) && matches(byId[id]);
       li.classList.toggle("hide", !ok); if (ok) any = true;
     });
     app.querySelectorAll(".period").forEach(function (s) { s.hidden = !s.querySelector(".elist li:not(.hide)"); });
     var em = document.getElementById("empty"); if (em) em.hidden = any;
     app.querySelectorAll(".mk").forEach(function (m) {
       var e = byId[m.dataset.id];
-      var ok = (!pol.size || e.polities.some(function (p) { return pol.has(p); })) && (!kind.size || kind.has(e.kind));
+      var ok = (!pol.size || e.polities.some(function (p) { return pol.has(p); })) && (!kind.size || kind.has(e.kind)) && matches(e);
       m.classList.toggle("dim", !ok);
     });
   }
@@ -126,7 +136,7 @@
   function periodView(n) {
     var p = PER[n]; if (!p) return home();
     var i = periods.indexOf(p), prev = periods[i - 1], nxt = periods[i + 1];
-    setTitle(p.title + ", " + p.years + " – The Deccan, 1500–1830s", p.desc);
+    setTitle(p.title + ", " + p.years + " – The Deccan, 1336–1830s", p.desc);
     var es = entries.filter(function (e) { return e.period === p.n; });
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#p' + prev.n + '"><span class="dir">← Previous period</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#p' + nxt.n + '"><span class="dir">Next period →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
@@ -139,7 +149,7 @@
   function entryView(id) {
     var e = byId[id]; if (!e) return home();
     var p = PER[e.period], i = entries.indexOf(e), prev = entries[i - 1], nxt = entries[i + 1];
-    setTitle(e.title + " (" + e.date_label + ") – The Deccan, 1500–1830s", e.strap);
+    setTitle(e.title + " (" + e.date_label + ") – The Deccan, 1336–1830s", e.strap);
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#' + prev.id + '"><span class="dir">← Previous · ' + E(prev.date_label) + '</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#' + nxt.id + '"><span class="dir">Next · ' + E(nxt.date_label) + ' →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
     var maps = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '">' + E(mapTitle(fn)) + '</a>'; }).join(" · ") + '</p>' : "";
@@ -159,7 +169,7 @@
   }
 
   function readingsView() {
-    setTitle("Readings – The Deccan, 1500–1830s", "An annotated bibliography of the standard scholarship on the Deccan, 1500–1830s, arranged by period.");
+    setTitle("Readings – The Deccan, 1336–1830s", "An annotated bibliography of the standard scholarship on the Deccan, 1336–1830s, arranged by period.");
     var R = window.DECCAN_READINGS || {};
     var KINDL = {primary: "Primary source", "source-edition": "Source in translation", early: "Early historiography", book: "Book", article: "Article", reference: "Reference"};
     function item(w) {
@@ -187,7 +197,7 @@
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
     if (!h) { home(); window.scrollTo(0, 0); if (pendingShow) { var m = app.querySelector('.mk[data-id="' + pendingShow + '"]'); if (m) { m.dispatchEvent(new Event("click")); m.scrollIntoView({block: "center"}); } pendingShow = null; } return; }
     if (h === "readings" || h.indexOf("readings-") === 0) { readingsView(); if (h === "readings") window.scrollTo(0, 0); return; }
-    var pm = /^p([1-5])$/.exec(h);
+    var pm = /^p([1-6])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
     home();
