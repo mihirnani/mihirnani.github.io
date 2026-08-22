@@ -1,9 +1,9 @@
 /* The Deccan, 1500–1830s — offline service worker. Pages network-first, shell cached. */
-const VERSION = "v3";
+const VERSION = "v6";
 const PREFIX = "deccan-";
 const APP_CACHE = `${PREFIX}app-${VERSION}`;
 const PAGE_CACHE = `${PREFIX}pages-${VERSION}`;
-const APP_SHELL = ["./", "./index.html", "./about.html", "./style.css", "./offline.html", "./app.js", "./data/entries.js", "./data/periods.js", "./deccan.webmanifest", "./deccan-icon-192.png", "./deccan-icon-180.png"];
+const APP_SHELL = ["./", "./index.html", "./about.html", "./style.css", "./offline.html", "./app.js", "./data/entries.js", "./data/periods.js", "./data/readings.js", "./deccan.webmanifest", "./deccan-icon-192.png", "./deccan-icon-180.png"];
 self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(APP_CACHE);

@@ -157,11 +157,36 @@
     var sh = app.querySelector("[data-show]");
     if (sh) sh.addEventListener("click", function (ev) { ev.preventDefault(); pendingShow = e.id; location.hash = ""; });
   }
+
+  function readingsView() {
+    setTitle("Readings – The Deccan, 1500–1830s", "An annotated bibliography of the standard scholarship on the Deccan, 1500–1830s, arranged by period.");
+    var R = window.DECCAN_READINGS || {};
+    var KINDL = {primary: "Primary source", book: "Book", article: "Article", reference: "Reference"};
+    function item(w) {
+      var t = w.url ? '<a href="' + E(w.url) + '" rel="noopener noreferrer" target="_blank">' + E(w.title) + '</a>' : '<em>' + E(w.title) + '</em>';
+      var cite = E(w.author) + ', ' + t + (w.publisher ? ' (' + E(w.publisher) + (w.year ? ', ' + E(w.year) : '') + ')' : (w.year ? ' (' + E(w.year) + ')' : '')) + '.';
+      return '<li class="rd ' + E(w.kind) + '"><span class="k">' + (KINDL[w.kind] || '') + '</span><p class="c">' + cite + '</p><p class="n">' + E(w.note) + '</p></li>';
+    }
+    function section(title, sub, list, id) {
+      if (!list || !list.length) return '';
+      return '<section class="rdsec" id="' + id + '"><div class="period-head"><span class="ttl">' + E(title) + '</span>' + (sub ? '<span class="yrs">' + E(sub) + '</span>' : '') + '</div><ul class="rdlist">' + list.map(item).join('') + '</ul></section>';
+    }
+    var toc = '<p class="measure muted">' + ['<a href="#readings-general">General</a>'].concat(periods.map(function (p) { return '<a href="#readings-' + p.n + '">' + E(p.title) + '</a>'; })).join(' · ') + '</p>';
+    app.innerHTML = '<div class="wrap"><p><a class="back" href="#">← Timeline</a></p>' +
+      '<div class="chapter-head measure"><p class="eyebrow">Readings</p><h1>The standard scholarship</h1>' +
+      '<p class="intro">What to read on the Deccan between Vijayanagara and the Company: primary sources in translation first, then the books and articles the entries rest on, period by period.</p></div>' +
+      '<div class="prose"><p>Each list begins with the primary sources available in English, then the modern works in alphabetical order. The notes say what a work is and what it is good for; they are not reviews. Open-access copies are linked where they exist – the older Company-era histories and several Indian reprints are on the Internet Archive and HathiTrust – and the rest are in print or in any university library. Entries on the timeline cite the specific works they draw on; this page is the longer shelf.</p></div>' + toc +
+      section("General", "the whole span", R.general, "readings-general") +
+      periods.map(function (p) { return section(p.title, p.years, R[String(p.n)], "readings-" + p.n); }).join('') + '</div>';
+    var want = location.hash.replace(/^#/, '');
+    if (want.indexOf('readings-') === 0) { var el = document.getElementById(want); if (el) el.scrollIntoView(); }
+  }
   var pendingShow = null;
 
   function route() {
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
     if (!h) { home(); window.scrollTo(0, 0); if (pendingShow) { var m = app.querySelector('.mk[data-id="' + pendingShow + '"]'); if (m) { m.dispatchEvent(new Event("click")); m.scrollIntoView({block: "center"}); } pendingShow = null; } return; }
+    if (h === "readings" || h.indexOf("readings-") === 0) { readingsView(); if (h === "readings") window.scrollTo(0, 0); return; }
     var pm = /^p([1-5])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
