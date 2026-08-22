@@ -2,7 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /european-gaze/offline.html
 Disallow: /european-gaze/404.html
+Disallow: /deccan/offline.html
+Disallow: /deccan/404.html
 
 Sitemap: https://naniwadekar.com/sitemap.xml
 Sitemap: https://naniwadekar.com/european-gaze/sitemap.xml
 Sitemap: https://naniwadekar.com/sahyadri-birds/sitemap.xml
+Sitemap: https://naniwadekar.com/deccan/sitemap.xml

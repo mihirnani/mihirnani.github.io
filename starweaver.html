@@ -1744,11 +1744,14 @@ function calcScore(){
   return {parts, total:parts.reduce((a,p)=>a+p[2],0), survey};
 }
 function rankFor(sc){
-  /* thresholds follow the Charter Score only: Gate 1500 + Keys 1800 + 12 per day to spare */
-  if(sc>=3960) return "Legendary StarWeaver";   // won with 55+ days to spare
-  if(sc>=3660) return "Master Cartographer";     // won with 30+ days to spare
-  if(sc>=3300) return "Renowned Navigator";      // reached the Gate
-  if(sc>=1800) return "Seasoned Captain";        // all three Keys
+  /* Rank depends on the Charter Score and, for a won charter, on the fraction of the allotted days still in hand,
+     so Relaxed, Standard and Challenge voyages are judged on the same footing. */
+  const won=!!S.won, keys=S.keys.filter(Boolean).length;
+  const frac=S.dayLimit?Math.max(0,S.dayLimit-S.day)/S.dayLimit:0;
+  if(won&&frac>=0.5)  return "Legendary StarWeaver";   // Gate reached with half the charter to spare
+  if(won&&frac>=0.27) return "Master Cartographer";     // Gate reached with about a quarter to spare
+  if(won)             return "Renowned Navigator";      // reached the Gate
+  if(keys>=3||sc>=1800) return "Seasoned Captain";      // all three Keys
   if(sc>=600)  return "Promising Pilot";
   return "Bold Apprentice";
 }

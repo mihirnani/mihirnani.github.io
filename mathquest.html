@@ -610,7 +610,7 @@ function go(screen, params){
   view = Object.assign({screen}, params||{});
   if(screen==='topic'){
     lessonPage=0; practice=null; quiz=null;
-    touchTopic(view.w, view.t, (view.tab||'learn')==='learn');
+    touchTopic(view.w, view.t, false);
     if(view.tab==='practice') startPractice(false);
     else if(view.tab==='deep') startPractice(true);
   }
@@ -816,7 +816,7 @@ function switchTab(tab){
   if(tab==='practice' && (view.tab!=='practice' || !practice || practice.isDeep)) startPractice(false);
   if(tab==='deep' && (view.tab!=='deep' || !practice || !practice.isDeep)) startPractice(true);
   if(tab==='quiz' && view.tab!=='quiz') quiz=null;
-  if(tab==='learn'){ lessonPage = Math.min(lessonPage, 999); touchTopic(view.w, view.t, true); }
+  if(tab==='learn'){ lessonPage = Math.min(lessonPage, 999); touchTopic(view.w, view.t, false); }
   view.tab = tab; render();
 }
 
@@ -826,6 +826,7 @@ function lessonHTML(t){
   lessonPage = Math.max(0, Math.min(lessonPage, n-1));
   const slide = t.lesson[lessonPage];
   const last = lessonPage===n-1;
+  if(last) touchTopic(view.w, view.t, true);
   return `<div class="card lesson">
     <h2>${slide.title}</h2>
     ${slide.html}
@@ -833,7 +834,7 @@ function lessonHTML(t){
       <button class="btn ghost small" ${lessonPage===0?'disabled':''} onclick="lessonPage--;render()">← Back</button>
       <div class="dots">${t.lesson.map((_,i)=>`<span class="${i===lessonPage?'on':''}"></span>`).join('')}</div>
       ${last
-        ? `<button class="btn green small" onclick="switchTab('practice')">Try Practice ✏️</button>`
+        ? `<button class="btn green small" onclick="touchTopic(view.w, view.t, true); switchTab('practice')">Try Practice ✏️</button>`
         : `<button class="btn small" onclick="lessonPage++;render()">Next →</button>`}
     </div>
   </div>`;

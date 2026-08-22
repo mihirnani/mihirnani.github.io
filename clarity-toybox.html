@@ -1179,10 +1179,10 @@ const games = {
       vals.textContent = "Adjust by eye – values are revealed after you lock.";
       btnNext.style.display = "none";
       btnSnap.disabled = false;
+      r.disabled = g.disabled = b.disabled = false;
 
       paintTarget();
       paintYou();
-      btnSnap.disabled = false;
       save(stateG);
     }
 
@@ -1190,6 +1190,7 @@ const games = {
       if (isLocked) return;
       isLocked = true;
       btnSnap.disabled = true;
+      r.disabled = g.disabled = b.disabled = true;
 
       const c = [+r.value, +g.value, +b.value];
       const d = dist(target, c);
@@ -3071,7 +3072,7 @@ const games = {
               : phase === "guessing"
               ? `Guesses: ${userGuesses.size}/${maxPossible}`
               : phase === "finished"
-              ? ""
+              ? (score === maxPossible ? `Perfect. Score: ${score}/${maxPossible}.` : `Score: ${score}/${maxPossible} correct.`)
               : "Click Start to begin."
           }
         </p>

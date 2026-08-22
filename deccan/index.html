@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<meta content="A timeline of the Deccan from Vijayanagara to the Company: seventy-six entries on the sultanates, the Mughals, the Marathas, Mysore, Hyderabad and the colonial takeover, 1500 to the 1830s." name="description"/>
+<meta content="light dark" name="color-scheme"/>
+<title>The Deccan, 1500–1830s · a timeline from Vijayanagara to the Company</title>
+<script>(function(){
+  var theme='dark';
+  try { var saved=localStorage.getItem('theme'); if(saved==='light'||saved==='dark') theme=saved; } catch(e) {}
+  document.documentElement.setAttribute('data-theme',theme);
+})();</script><link href="style.css" rel="stylesheet"/>
+<link href="https://naniwadekar.com/deccan/" rel="canonical"/><meta content="The Deccan, 1500–1830s · a timeline from Vijayanagara to the Company" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities"><meta content="A timeline of the Deccan from Vijayanagara to the Company: seventy-six entries on the sultanates, the Mughals, the Marathas, Mysore, Hyderabad and the colonial takeover, 1500 to the 1830s." property="og:description"/><meta content="website" property="og:type"/><meta content="https://naniwadekar.com/deccan/" property="og:url"/><meta content="https://naniwadekar.com/deccan/deccan-icon-512.png" property="og:image"/>
+<link href="deccan.webmanifest" rel="manifest"/><link href="deccan-icon-180.png" rel="apple-touch-icon"/><meta content="#ece3d1" media="(prefers-color-scheme: light)" name="theme-color"/><meta content="#0d0d0f" media="(prefers-color-scheme: dark)" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="Deccan" name="apple-mobile-web-app-title"/><link href="deccan-icon-192.png" rel="icon" sizes="192x192" type="image/png"/></head><body>
+<div class="masthead"><a class="site" href="index.html">The Deccan, 1500–1830s</a>
+<span class="yrs">Vijayanagara to the Company</span>
+<a class="navlink home" href="https://naniwadekar.com/">Curiosities</a>
+<a class="navlink" href="https://naniwadekar.com/european-gaze/">Maps</a>
+<a class="navlink" href="about.html">About</a>
+<button aria-label="Toggle light or dark theme" aria-pressed="true" class="theme-toggle" id="themeBtn" type="button">Theme</button></div>
+<div id="app"><div class="wrap"><p class="empty">Loading the collection…</p></div></div>
+<script src="data/periods.js"></script>
+<script src="data/entries.js"></script>
+<script src="app.js"></script>
+<footer>A study collection of seventy-six entries on the Deccan from Vijayanagara to the Company, written for this site and checked against the standard scholarship; sources are given on each page. Companion to <a href="https://naniwadekar.com/european-gaze/">The European Gaze on India</a>. Part of <a href="https://naniwadekar.com/">Curiosities</a>.</footer>
+<script>(function(){
+  var b=document.getElementById('themeBtn');
+  if(!b) return;
+  function sync(){
+    var dark=document.documentElement.getAttribute('data-theme')==='dark';
+    b.textContent=dark?'Light':'Dark';
+    b.setAttribute('aria-pressed',String(dark));
+  }
+  b.addEventListener('click',function(){
+    var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',next);
+    try { localStorage.setItem('theme',next); } catch(e) {}
+    sync();
+  });
+  sync();
+})();</script><script>if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('deccan-sw.js', {scope:'./'}).catch(function(error){
+      console.error('Service worker registration failed:', error);
+    });
+  });
+}</script></body></html>

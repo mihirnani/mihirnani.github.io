@@ -1,5 +1,5 @@
 "use strict";
-const CACHE = "clarity-toybox-shell-v5";
+const CACHE = "clarity-toybox-shell-v6";
 const SHELL = [
   "/clarity-toybox.html",
   "/clarity-toybox-manifest.json",
