@@ -83,7 +83,7 @@
       '<p class="eyebrow">A Timeline Collection</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">A hundred and twelve entries across five centuries, from the founding of Vijayanagara and the Bahmani sultanate to the Act of 1874 that entered the last hereditary office in a government register, on a plateau where sovereignty was always shared – and then audited.</p>' +
+      '<p class="lede measure">Five centuries of the Deccan in a collection of entries, from the founding of Vijayanagara and the Bahmani sultanate to the Act of 1874 that entered the last hereditary office in a government register, on a plateau where sovereignty was always shared – and then audited.</p>' +
       '<p class="measure muted">Seven periods, eleven polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
