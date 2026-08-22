@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>StarWeaver — The Cluster Charter</title>
-<meta name="description" content="A procedural space exploration and strategy game with contextual astronomy, distinct Galactic environments, evolving encounters and a Captain's Atlas.">
+<title>StarWeaver – The Cluster Charter</title>
+<meta name="description" content="Explore a fictional survey cluster set in the real Milky Way, learn some astronomy along the way, recover three Star Keys, and reach the Celestial Gate.">
 <meta name="theme-color" content="#070a14">
 <meta name="application-name" content="StarWeaver">
 <meta name="mobile-web-app-capable" content="yes">
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="/starweaver-icon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/starweaver-icon-192.png">
 <link rel="canonical" href="https://naniwadekar.com/starweaver.html">
-<meta property="og:title" content="StarWeaver — The Cluster Charter">
+<meta property="og:title" content="StarWeaver – The Cluster Charter">
 <meta property="og:description" content="Explore a fictional survey cluster set in the real Milky Way, learn astronomy through field notes and observations, recover three Star Keys, and reach the Celestial Gate.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://naniwadekar.com/starweaver.html">
@@ -398,7 +398,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
 <script>
 "use strict";
 /* ============================================================
-   StarWeaver — a procedurally generated exploration strategy game
+   StarWeaver – a procedurally generated exploration strategy game
    with an optional contextual astronomy layer. Every seed weaves a fictional
    survey cluster inside a real Milky Way setting.
    ============================================================ */
@@ -419,7 +419,7 @@ function mulberry32(a){
   };
 }
 let R=mulberry32(1);                     // world-gen rng (re-seeded per game)
-let RD=mulberry32(2);                    // drama rng — separate, tracked stream
+let RD=mulberry32(2);                    // drama rng – separate, tracked stream
 let rdCalls=0;                           // saved so future events resume exactly
 const ri=(a,b)=>a+Math.floor(R()*(b-a+1));
 const pick=arr=>arr[Math.floor(R()*arr.length)];
@@ -661,7 +661,7 @@ const KEY_PUZZLES=[
   {q:"Three lamps burn blue, gold, and red. The riddle says: <i>“Choose the colour of the hottest ordinary star.”</i>",a:["Blue","Gold","Red"],correct:0,why:"Blue stars have the highest surface temperatures of these three colours."},
   {q:"A clockwork moon circles a tiny sun. The inscription reads: <i>“What keeps a moon from flying away?”</i>",a:["Gravity","Starlight","Magnetism"],correct:0,why:"Gravity keeps moons in orbit around their planets."},
   {q:"A map shows a straight route of four adjacent hexes. The wall asks: <i>“How many jumps from the first hex to the last?”</i>",a:["Two","Three","Four"],correct:1,why:"Moving across four adjacent hexes requires three jumps between them."},
-  {q:"Three sealed jars are labelled ICE, STEAM, and VACUUM. The riddle says: <i>“Choose what is still water.”</i>",a:["Ice","Steam","Vacuum"],correct:0,why:"Ice is water in solid form."},
+  {q:"Three sealed jars are labelled ICE, STEAM, and VACUUM. The riddle says: <i>“Choose what is still water.”</i>",a:["Ice","Steam","Vacuum"],correct:0,why:"Ice is water that stands still – frozen in place. Steam is water too, but it never stays still."},
   {q:"A miniature planet turns once beneath a fixed lamp. The inscription asks: <i>“What does one full turn make?”</i>",a:["A day","A year","A season"],correct:0,why:"A planet's rotation defines its day; its orbit defines its year."},
   {q:"A sequence glows on the floor: 2, 4, 8, 16, __. The vault asks for the next mark.",a:["18","24","32"],correct:2,why:"Each number doubles the previous one, so 16 becomes 32."},
   {q:"Three paths are labelled STAR, PLANET, and MOON. The inscription says: <i>“Choose the one that makes its own light.”</i>",a:["Star","Planet","Moon"],correct:0,why:"Stars generate their own light; planets and moons mainly reflect it."}
@@ -688,7 +688,7 @@ function genGalaxyLegacy(seedStr){
   const at=(q,r)=>cells.get(hk(q,r));
   const center={q:0,r:0};
 
-  /* nebula blobs — drifting random walks */
+  /* nebula blobs – drifting random walks */
   const nebCount=ri(3,4);
   for(let n=0;n<nebCount;n++){
     let c=pick(all.filter(c=>hexDist(c,center)>=3));
@@ -704,7 +704,7 @@ function genGalaxyLegacy(seedStr){
   let empt=shuffle(all.filter(c=>c.type==="space" && hexDist(c,center)>=2));
   for(let i=0;i<13 && empt.length;i++){ empt.pop().type="asteroid"; }
 
-  /* star systems — spaced out */
+  /* star systems – spaced out */
   const stars=[];
   const usedNames=new Set();
   const mkName=()=>{
@@ -747,7 +747,7 @@ function genGalaxyLegacy(seedStr){
   /* start: station system nearest center */
   const start=stars.filter(s=>s.hasStation).sort((a,b)=>hexDist(a,center)-hexDist(b,center))[0];
 
-  /* ruins — 9, spread out, 3 hide the Star Keys */
+  /* ruins – 9, spread out, 3 hide the Star Keys */
   const ruins=[];
   cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=3));
   for(const c of cand){
@@ -782,7 +782,7 @@ function genGalaxyLegacy(seedStr){
     anomalies.push(c);
   }
 
-  /* the Celestial Gate — a far rim hex, hidden until 3 keys are found */
+  /* the Celestial Gate – a far rim hex, hidden until 3 keys are found */
   const rim=all.filter(c=>hexDist(c,center)>=MAP_R-1 && c.type==="space")
                .sort((a,b)=>hexDist(b,start)-hexDist(a,start));
   const gate=rim[ri(0,Math.min(4,rim.length-1))];
@@ -831,7 +831,7 @@ function genGalaxy(seedStr){
   const at=(q,r)=>cells.get(hk(q,r));
   const center={q:0,r:0};
 
-  /* nebula blobs — drifting random walks */
+  /* nebula blobs – drifting random walks */
   const nebCount=ri(rules.nebula[0],rules.nebula[1]);
   for(let n=0;n<nebCount;n++){
     let c=pick(all.filter(c=>hexDist(c,center)>=3));
@@ -848,7 +848,7 @@ function genGalaxy(seedStr){
   let empt=shuffle(all.filter(c=>c.type==="space" && hexDist(c,center)>=2));
   for(let i=0;i<rules.asteroids && empt.length;i++){ const a=empt.pop(); a.type="asteroid"; a.regionName=regionName(seedStr,"asteroid-"+i,"asteroid"); }
 
-  /* star systems — spaced out */
+  /* star systems – spaced out */
   const stars=[];
   const usedNames=new Set();
   const mkName=()=>{
@@ -891,7 +891,7 @@ function genGalaxy(seedStr){
   /* start: station system nearest center */
   const start=stars.filter(s=>s.hasStation).sort((a,b)=>hexDist(a,center)-hexDist(b,center))[0];
 
-  /* ruins — 9, spread out, 3 hide the Star Keys */
+  /* ruins – 9, spread out, 3 hide the Star Keys */
   const ruins=[];
   cand=shuffle(all.filter(c=>c.type==="space" && hexDist(c,start)>=3));
   for(const c of cand){
@@ -929,7 +929,7 @@ function genGalaxy(seedStr){
     anomalies.push(c);
   }
 
-  /* the Celestial Gate — a far rim hex, hidden until 3 keys are found */
+  /* the Celestial Gate – a far rim hex, hidden until 3 keys are found */
   const rim=all.filter(c=>hexDist(c,center)>=MAP_R-1 && c.type==="space")
                .sort((a,b)=>hexDist(b,start)-hexDist(a,start));
   const gate=rim[ri(0,Math.min(4,rim.length-1))];
@@ -962,7 +962,7 @@ function genClues(world){
     clues[i].push(`lies in the broad ${oct}ern quarter of the cluster`);
     /* ring clue */
     const d=hexDist(kr,{q:0,r:0});
-    clues[i].push(d>=6?`rests far from the cluster's heart — the outer reaches`:
+    clues[i].push(d>=6?`rests far from the cluster's heart – the outer reaches`:
                   d<=3?`rests near the cluster's bright heart`:
                   `rests in the middle rings, neither heart nor rim`);
     /* nearest star clue */
@@ -972,10 +972,10 @@ function genClues(world){
     /* feature clue */
     const nearNeb=all.some(c=>c.type==="nebula" && hexDist(c,kr)<=2);
     const nearAst=all.some(c=>c.type==="asteroid" && hexDist(c,kr)<=2);
-    if(nearNeb) clues[i].push(`is veiled — a nebula drifts within 2 jumps`);
-    else if(nearAst) clues[i].push(`is guarded — an asteroid field tumbles within 2 jumps`);
-    else clues[i].push(`sits in clear, open space — no nebula or asteroids within 2 jumps`);
-    /* nearest-star character clue — useful in combination, not a direct name reveal */
+    if(nearNeb) clues[i].push(`is veiled – a nebula drifts within 2 jumps`);
+    else if(nearAst) clues[i].push(`is guarded – an asteroid field tumbles within 2 jumps`);
+    else clues[i].push(`sits in clear, open space – no nebula or asteroids within 2 jumps`);
+    /* nearest-star character clue – useful in combination, not a direct name reveal */
     clues[i].push(`has a ${near.color.name} star as its nearest sun, ${near.hasStation?"with a station in that system":"with no station in that system"}`);
   });
   return clues;
@@ -1021,8 +1021,8 @@ function newGame(seedStr, diffKey){
   visit(S.pos);
   log(`Charter granted. The <b>${W.start.name}</b> station wishes you fair skies.`);
   log(`Scientific setting: <b>${W.context.place}</b>, about <b>${W.context.distanceLy.toLocaleString()} light-years</b> from the Solar System (fictional survey chart in a real Galactic context).`);
-  log(`Survey character: <b>${W.profile.name}</b> — ${W.profile.blurb}`);
-  log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> — all before day ${S.dayLimit}.`);
+  log(`Survey character: <b>${W.profile.name}</b>– ${W.profile.blurb}`);
+  log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b>– all before day ${S.dayLimit}.`);
   cam.x=0; cam.y=0; cam.zoom=initialChartZoom();
   centerOnShip(false);
   selected=null;
@@ -1328,7 +1328,7 @@ function drawFeature(c,s,hs,visited){
       cx.shadowBlur=0;
     }
   }
-  /* key glint on visited-but-undone key ruins is intentionally hidden — clues guide you */
+  /* key glint on visited-but-undone key ruins is intentionally hidden – clues guide you */
   cx.restore();
 }
 /* ============================================================
@@ -1380,7 +1380,7 @@ cv.addEventListener("click",e=>{
   if(!c||!isScanned(c)) { selected=null; previewPath=null; renderHere(); return; }
   if(c.q===S.pos.q&&c.r===S.pos.r){ selected=null; previewPath=null; renderHere(); return; }
   const path=findPath(S.pos,c);
-  if(!path){ toast("No charted route — scan closer first."); return; }
+  if(!path){ toast("No charted route – scan closer first."); return; }
   if(selected && selected.q===c.q && selected.r===c.r){
     travelTo(c,path);
   }else{
@@ -1451,11 +1451,11 @@ function updateHoverPreview(mx,my){
   if(!hoverCell||!isScanned(hoverCell)){ tipHide(); if(!selected) previewPath=null; return; }
   const c=hoverCell;
   let html="";
-  if(c.type==="star") html=`<b>${c.name}</b> — ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
-  else if(c.type==="nebula") html=`<b>${c.regionName||"Nebula"}</b> — nebula terrain, costs 2 fuel to cross`;
-  else if(c.type==="asteroid") html=`<b>${c.regionName||"Asteroid field"}</b>${S.upgrades.mining?" — mineable":""}`;
-  else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" — explored":""}`;
-  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>${c.anomalyName||"Anomaly"}</b> — resolved`:`<b>${c.anomalyName||"Anomaly"}</b> — something shimmers here`;
+  if(c.type==="star") html=`<b>${c.name}</b>– ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
+  else if(c.type==="nebula") html=`<b>${c.regionName||"Nebula"}</b>– nebula terrain, costs 2 fuel to cross`;
+  else if(c.type==="asteroid") html=`<b>${c.regionName||"Asteroid field"}</b>${S.upgrades.mining?" – mineable":""}`;
+  else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" – explored":""}`;
+  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>${c.anomalyName||"Anomaly"}</b>– resolved`:`<b>${c.anomalyName||"Anomaly"}</b>– something shimmers here`;
   else if(c.type==="gate"&&S.gateRevealed) html=`<b>The Celestial Gate</b>`;
   else html=`<b>Open space</b>`;
   if(!(c.q===S.pos.q&&c.r===S.pos.r)){
@@ -1548,7 +1548,7 @@ function travelTo(dest,path){
   if(interrupted) log(`<b>Course paused.</b> Your route crossed something worth investigating.`);
   onArrive();
   refreshAll();
-  if(interrupted && !shade.classList.contains("on")) toast("Course paused at a discovery. Plot again when ready.");
+  if(interrupted && !shade.classList.contains("on")) toast("Course paused – you have found something. Plot a new route when ready.");
 }
 
 function advanceDays(n){
@@ -1556,7 +1556,7 @@ function advanceDays(n){
   if(S.mission && S.day>S.mission.due){
     log(`The delivery window for <b>${S.mission.star}</b> has closed. The contract lapsed.`);
     S.mission=null;
-    toast("Mission expired.");
+    toast("Delivery contract expired.");
   }
   if(!S.freePlay && S.day>S.dayLimit && !S.won){
     charterExpires();
@@ -1583,7 +1583,7 @@ function onArrive(){
     if(S.mission && S.mission.star===c.name) checkMissionDelivery(c);
   }
   if(c.type==="ruin" && !S.ruinsDone.has(hk(c.q,c.r))){
-    log(`You've reached the <b>${c.ruinName}</b> — an ancient ruin drifts silently here.`);
+    log(`You've reached the <b>${c.ruinName}</b>– an ancient ruin drifts silently here.`);
   }
   /* random travel encounter in open space */
   if((c.type==="space"||c.type==="asteroid"||c.type==="nebula") && S.eventCooldown===0 && dchance((W.profile&&W.profile.eventRate)||0.16)){
@@ -1624,10 +1624,10 @@ function checkStranded(){
   S.hull=Math.max(S.hull,3);
   advanceDays(4);
   visit(S.pos);
-  log(`<b>Unable to continue under your own power.</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard; hull patched to at least 3.`);
+  log(`<b>You cannot reach any charted hex on your own.</b> A tug from ${st.name} hauled you in. Fee ◈${fee}, 4 days lost, 4 emergency fuel aboard; hull patched to at least 3.`);
   centerOnShip(true);
   if(S.over&&!S.freePlay){ refreshAll(); return; }
-  modalInfo("Stranded!", `No charted neighbouring jump was within your remaining fuel. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station — it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel and patched the hull to a safe minimum. Watch that fuel gauge, captain!`);
+  modalInfo("Stranded!", `No charted neighbouring jump was within your remaining fuel. A friendly tug from <b>${st.name}</b> answered your beacon.<br><br>They towed you to their station – it cost <b>◈${fee}</b> and <b>4 days</b>, but they topped you up with a little emergency fuel and patched the hull to a safe minimum. Watch that fuel gauge, captain!`);
 }
 
 /* ---------- endings ---------- */
@@ -1674,16 +1674,16 @@ function charterExpires(){
   S.over=true;
   sfx("bad");
   const sc=calcScore();
-  log(`<b>Day ${S.dayLimit} has passed.</b> The charter expires — but the stars aren't going anywhere.`);
+  log(`<b>Day ${S.dayLimit} has passed.</b> The charter expires – but the stars aren't going anywhere.`);
   modalHtml(`
     <h2>⏳ The Charter Expires</h2>
     <div class="msub">${clusterDisplayName(S.seed)} · ${DIFF[S.diff].label}</div>
-    <p class="flavor">The Cartographers' Guild recalls its commission. You found ${S.keys.filter(Boolean).length} of 3 Star Keys — the Gate keeps its secret a little longer. Every great captain has a voyage like this one; the next chart is always the finest.</p>
+    <p class="flavor">The Cartographers' Guild recalls its commission. You found ${S.keys.filter(Boolean).length} of 3 Star Keys – the Gate keeps its secret a little longer. Every great captain has a voyage like this one; the next chart is always the finest.</p>
     <p><b>${rankFor(sc.total)}</b></p>
     ${scoreTable(sc)}
     <div class="mrow">
       <button class="mbtn2 primary" onclick="closeModal(); showNewGame();">New voyage</button>
-      <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll(); toast('Free play — no clock, just stars.');">Keep exploring anyway</button>
+      <button class="mbtn2" onclick="closeModal(); S.freePlay=true; S.over=false; refreshAll(); toast('Free play – no clock, just stars.');">Keep exploring anyway</button>
     </div>`,true);
 }
 function scoreTable(sc){
@@ -1733,7 +1733,7 @@ function refreshAll(){
 }
 function updateSeedTag(){ $("seedTag").textContent=clusterDisplayName(S.seed); }
 $("seedTag").addEventListener("click",()=>{
-  copyText(S.seed).then(()=>toast("Cluster code copied — anyone can use it to explore the same cluster."));
+  copyText(S.seed).then(()=>toast("Cluster code copied – anyone can use it to explore the same cluster."));
 });
 
 function renderStatus(){
@@ -1756,7 +1756,7 @@ function renderHere(){
   const missionH=S.mission?`<div class="missionBox">📦 Deliver <b>${S.mission.qty} ${GOOD[S.mission.good].name}</b> to <b>${S.mission.star}</b> by day ${S.mission.due} · reward <b>◈${S.mission.reward}</b><br><span class="small">${S.mission.hint}</span></div>`:"";
   if(c.type==="star"){
     h+=`<div id="hereName" style="color:${c.color.col}">${c.name}</div>
-        <div id="hereSub">${c.systemFlavor||`A ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.`}${c.hasStation?` <b>${c.stationName}</b> (${c.stationRole}) glitters in orbit.`:" No station here — just quiet worlds."}</div>`;
+        <div id="hereSub">${c.systemFlavor||`A ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star with ${c.planets.length} world${c.planets.length>1?"s":""}.`}${c.hasStation?` <b>${c.stationName}</b> (${c.stationRole}) glitters in orbit.`:" No station here – just quiet worlds."}</div>`;
     h+=missionH;
     for(const pl of c.planets){
       h+=`<div class="planet"><span class="pdot" style="background:${planetCol(pl.kind)}"></span>${pl.name} <span class="pd">· ${pl.kind}${pl.trait?" · "+pl.trait:""}</span></div>`;
@@ -1776,7 +1776,7 @@ function renderHere(){
     h+=missionH;
     if(!done) h+=`<button class="abtn gold" onclick="exploreRuin()">🏛 Explore the ruin<span class="sub">Takes 1 day. Who knows what waits inside…</span></button>`;
   }else if(c.type==="asteroid"){
-    h+=`<div id="hereName">${c.regionName||"Asteroid Field"}</div><div id="hereSub">Tumbling rock and glittering dust — compressed into visible terrain for the chart.</div>`;
+    h+=`<div id="hereName">${c.regionName||"Asteroid Field"}</div><div id="hereSub">Tumbling rock and glittering dust – compressed into visible terrain for the chart.</div>`;
     h+=missionH;
     if(S.upgrades.mining){
       h+=`<button class="abtn" onclick="mineHere()" ${cargoCount()<S.cargoMax?"":"disabled"}>⛏ Mine the field<span class="sub">1 day · yields ore, sometimes crystals</span></button>`;
@@ -1784,7 +1784,7 @@ function renderHere(){
       h+=`<div class="small">A mining rig (sold at stations) would let you harvest ore here.</div>`;
     }
   }else if(c.type==="nebula"){
-    h+=`<div id="hereName" style="color:var(--violet)">${c.regionName||"Nebula"}</div><div id="hereSub">Dust and gas fold across the chart. Beautiful — and thirsty work for the engines (2 fuel per jump in the game abstraction).</div>`+missionH;
+    h+=`<div id="hereName" style="color:var(--violet)">${c.regionName||"Nebula"}</div><div id="hereSub">Dust and gas fold across the chart. Beautiful – and thirsty work for the engines: 2 fuel per jump.</div>`+missionH;
   }else if(c.type==="gate"&&S.gateRevealed){
     h+=`<div id="hereName" style="color:var(--gold)">The Celestial Gate</div><div id="hereSub">It is waiting.</div>`;
   }else{
@@ -1828,7 +1828,7 @@ function chartedDestinationsHtml(){
 
 function renderCargo(){
   const p=$("p-cargo");
-  let h=`<h3>Hold — ${cargoCount()}/${S.cargoMax}</h3><div id="cargoList">`;
+  let h=`<h3>Hold – ${cargoCount()}/${S.cargoMax}</h3><div id="cargoList">`;
   const keys=Object.keys(S.cargo).filter(k=>S.cargo[k]>0);
   if(!keys.length) h+=`<div class="small">Empty. Buy low at producing systems, sell high where goods are wanted.</div>`;
   for(const k of keys){
@@ -1845,8 +1845,8 @@ function renderClues(){
   const kn=["First Key","Second Key","Third Key"];
   let h=`<div class="small" style="margin-bottom:10px">Combine several clues, then use the chart notes below to mark ruins you suspect or rule out.</div>`;
   for(let i=0;i<3;i++){
-    h+=`<div class="clueGroup"><h4>🗝️ ${kn[i]} ${S.keys[i]?'<span style="color:var(--green)">— FOUND</span>':""}</h4>`;
-    if(!S.foundClues[i].length&&!S.keys[i]) h+=`<div class="small">No clues yet. Explore ruins or buy a rumor in a station lounge.</div>`;
+    h+=`<div class="clueGroup"><h4>🗝️ ${kn[i]} ${S.keys[i]?'<span style="color:var(--green)">– FOUND</span>':""}</h4>`;
+    if(!S.foundClues[i].length&&!S.keys[i]) h+=`<div class="small">No clues yet. Explore ruins or buy a rumour in a station lounge.</div>`;
     for(const ci of S.foundClues[i]){
       h+=`<div class="clue${S.keys[i]?" done":""}">The ${kn[i]} ${W.clues[i][ci]}.</div>`;
     }
@@ -2020,7 +2020,7 @@ function deepScan(){
   scanAround(S.pos,S.scanRange+2);
   unlockAtlas([...initialAtlasForContext(W.context),"galactic_scale","parallax"],false);
   advanceDays(1);
-  log("Deep scan complete — the charts grow.");
+  log("Deep scan complete – the charts grow.");
   sfx("scan");
   refreshAll();
 }
@@ -2086,7 +2086,7 @@ function exploreRuin(){
         "Dust rises in your lamp-beam and settles in precise concentric rings.",
         "One corridor still carries a line of cold blue guide-lights, each one dimmer than the last."
       ])}</p>
-      ${clue?`<div class="clue" style="margin:10px 0">${clue.text}</div>`:"<p>The carvings here have faded beyond reading — but the ruin feels peaceful.</p>"}
+      ${clue?`<div class="clue" style="margin:10px 0">${clue.text}</div>`:"<p>The carvings here have faded beyond reading – but the ruin feels peaceful.</p>"}
       ${extra}
       <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Back to the ship</button></div>`);
     sfx("event");
@@ -2123,15 +2123,15 @@ function keyAnswer(i,ix,correct,pid){
     S.scanned.add(hk(W.gate.q,W.gate.r));
   }
   const pz=KEY_PUZZLES[pid]||KEY_PUZZLES[0];
-  log(`<b>You hold the ${["First","Second","Third"][i]} Star Key!</b>${right?" The vault opened at your first touch — the keepers left a gift of ◈"+bonus+".":" (The vault took a day to forgive your guess.)"}`);
+  log(`<b>You hold the ${["First","Second","Third"][i]} Star Key!</b>${right?" The vault opened at your first touch – the keepers left a gift of ◈"+bonus+".":" (The vault took a day to forgive your guess.)"}`);
   sfx("fanfare");
   modalHtml(`
     <h2>🗝️ The ${["First","Second","Third"][i]} Star Key!</h2>
     <p class="flavor">${right?
-      "The door drinks your answer and sighs open. On a plinth of frozen light rests the Star Key — warm, humming, glad to be found. The keepers' gift of <b>◈"+bonus+"</b> rests beside it.":
-      "The door dims… then, patient as tide, resets and opens anyway. The ancients built for wonder, not punishment. The Star Key is yours — though the vault kept you a day."}</p>
+      "The door drinks your answer and sighs open. On a plinth of frozen light rests the Star Key – warm, humming, glad to be found. The keepers' gift of <b>◈"+bonus+"</b> rests beside it.":
+      "The door dims… then, patient as tide, resets and opens anyway. The ancients built for wonder, not punishment. The Star Key is yours – though the vault kept you a day."}</p>
     <div class="tipbox"><b>Why:</b> ${pz.why}</div>
-    ${got>=3?`<p><b>All three Keys sing together — and far away, something answers. The CELESTIAL GATE has appeared on your chart!</b> Reach it to complete your charter.</p>`:
+    ${got>=3?`<p><b>All three Keys sing together – and far away, something answers. The CELESTIAL GATE has appeared on your chart!</b> Reach it to complete your charter.</p>`:
       `<p>${3-got} Key${3-got>1?"s":""} remain${3-got>1?"":"s"} hidden among the ruins.</p>`}
     <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">Onward!</button></div>`);
   refreshAll();
@@ -2194,7 +2194,7 @@ function marketHtml(c){
     const canBuy=S.credits>=buyPr&&cargoCount()<S.cargoMax;
     h+=`<tr><td>${g.icon} ${g.name}</td>
       <td class="pr ${cls}">◈${buyPr} / ◈${sellPr}${cls==="lo"?" ▼":cls==="hi"?" ▲":""}</td>
-      <td>${held||"—"}</td>
+      <td>${held||" – "}</td>
       <td style="text-align:right">
         <button class="tbtn" ${canBuy?"":"disabled"} onclick="trade('${g.id}',1)">Buy</button>
         <button class="tbtn" ${held?"":"disabled"} onclick="trade('${g.id}',-1)">Sell</button>
@@ -2207,7 +2207,7 @@ function marketHtml(c){
   h+=`<h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:12px 0 6px">REFUEL & REPAIR</h3>
   <div class="mrow" style="margin-top:0">
     <button class="mbtn2" ${need>0&&S.credits>=cost1?"":"disabled"} onclick="buyFuel(1)">+1 fuel <span class="sub">◈${cost1}</span></button>
-    <button class="mbtn2" ${need>0?"":"disabled"} onclick="buyFuel(${need})">Fill tank <span class="sub">◈${costAll}${S.credits<costAll?" — partial fill for what you have":""}</span></button>
+    <button class="mbtn2" ${need>0?"":"disabled"} onclick="buyFuel(${need})">Fill tank <span class="sub">◈${costAll}${S.credits<costAll?" – partial fill for what you have":""}</span></button>
     <button class="mbtn2" ${S.hull<S.hullMax&&S.credits>=25?"":"disabled"} onclick="repairHull()">Repair hull <span class="sub">◈25 per point</span></button>
   </div>`;
   return h;
@@ -2251,9 +2251,9 @@ function yardHtml(c){
   if(U.cargo<2) items.push({k:"cargo",n:`Cargo hold Mk${U.cargo+2}`,d:`Capacity ${S.cargoMax} → ${holds[U.cargo][0]}`,p:holds[U.cargo][1],
     f(){U.cargo++; S.cargoMax=holds[U.cargo-1][0];}});
   const scans=[[3,220],[4,480]];
-  if(U.scanner<2) items.push({k:"scanner",n:`Scanner array Mk${U.scanner+2}`,d:`Range ${S.scanRange} → ${scans[U.scanner][0]} — see farther as you fly`,p:scans[U.scanner][1],
+  if(U.scanner<2) items.push({k:"scanner",n:`Scanner array Mk${U.scanner+2}`,d:`Range ${S.scanRange} → ${scans[U.scanner][0]} – see farther as you fly`,p:scans[U.scanner][1],
     f(){U.scanner++; S.scanRange=scans[U.scanner-1][0]; scanAround(S.pos,S.scanRange);}});
-  if(!U.engine) items.push({k:"engine",n:"Skip-drive engine",d:"2 jumps per day — halves travel time",p:520,
+  if(!U.engine) items.push({k:"engine",n:"Skip-drive engine",d:"2 jumps per day – halves travel time",p:520,
     f(){U.engine=1; S.speed=2;}});
   if(!U.mining) items.push({k:"mining",n:"Mining rig",d:"Harvest ore & crystals in asteroid fields",p:240,
     f(){U.mining=true;}});
@@ -2286,10 +2286,10 @@ function loungeHtml(c){
   ])}</p>`;
   const cluesLeft=W.clues.some((cl,i)=>!S.keys[i]&&S.foundClues[i].length<cl.length);
   h+=`<div class="mrow" style="margin-top:8px">
-    <button class="mbtn2" ${cluesLeft&&S.credits>=60?"":"disabled"} onclick="buyRumor()">🗝️ Buy a rumor <span class="sub">◈60 — a clue about a Star Key</span></button>
+    <button class="mbtn2" ${cluesLeft&&S.credits>=60?"":"disabled"} onclick="buyRumor()">🗝️ Buy a rumour <span class="sub">◈60 – a clue about a Star Key</span></button>
     <button class="mbtn2" ${S.mission?"disabled":""} onclick="takeMission()">${S.mission?"📦 Contract in progress":"📦 Ask for work"} <span class="sub">${S.mission?`${S.mission.qty} ${GOOD[S.mission.good].name} → ${S.mission.star}`:"a delivery contract, good pay"}</span></button>
   </div>`;
-  if(!cluesLeft) h+=`<p class="small" style="margin-top:8px">No fresh rumors — you already know all there is to whisper.</p>`;
+  if(!cluesLeft) h+=`<p class="small" style="margin-top:8px">No fresh rumours – you already know all there is to whisper.</p>`;
   return h;
 }
 function buyRumor(){
@@ -2315,7 +2315,7 @@ function takeMission(){
 }
 
 /* ============================================================
-   EVENTS — little stories among the stars
+   EVENTS – little stories among the stars
    ============================================================ */
 function fireEvent(isAnomaly,forcedIndex=null){
   const list=isAnomaly?ANOMALY_EVENTS:SPACE_EVENTS;
@@ -2367,11 +2367,11 @@ const gainCargo=(gid,n)=>{ const room=S.cargoMax-cargoCount(); const g=Math.min(
 const SPACE_EVENTS=[
   {title:"🛰 A Drifting Probe", text:()=>"An old survey probe tumbles past, antenna bent, still faithfully beeping its findings to no one.",
    choices:[
-     {label:()=>"Take it aboard and fix it", effect(){ if(dchance(.7)){const c=dri(40,90);S.credits+=c;return `A little solder, a lot of patience — the probe wakes and beams its charts to the Guild. Finder's fee: <b>+◈${c}</b>.`;} advanceDays(1); return "Its memory core is scrambled beyond saving, but you tuck it in the hold anyway. It beeps gratefully. (1 day tinkering.)"; }},
+     {label:()=>"Take it aboard and fix it", effect(){ if(dchance(.7)){const c=dri(40,90);S.credits+=c;return `A little solder, a lot of patience – the probe wakes and beams its charts to the Guild. Finder's fee: <b>+◈${c}</b>.`;} advanceDays(1); return "Its memory core is scrambled beyond saving, but you tuck it in the hold anyway. It beeps gratefully. (1 day tinkering.)"; }},
      {label:()=>"Copy its star-charts remotely", effect(){ scanAround(S.pos,S.scanRange+2); return "You copy what it saw. New space blooms across your chart!"; }},
      {label:()=>"Leave it to its journey", effect(){ return "You dip your wings in salute. Some travellers prefer the long way."; }},
    ]},
-  {title:"🐋 The Star-Whale", text:()=>"Something vast and gentle swims out of the dark — a star-whale, barnacled with tiny satellites, singing in radio.",
+  {title:"🐋 The Star-Whale", text:()=>"Something vast and gentle swims out of the dark – a star-whale, barnacled with tiny satellites, singing in radio.",
    choices:[
      {label:()=>`Offer it botanicals ${S.cargo.bot?`(have ${S.cargo.bot})`:"(none aboard)"}`, cond:()=>S.cargo.bot>0,
       effect(){ S.cargo.bot--; const f=Math.min(S.fuelMax-S.fuel,6); S.fuel+=f; return `It nibbles the greens from your airlock, delighted, then exhales a shimmering cloud your scoops drink up. <b>+${f} fuel</b>, and a friend for life.`; }},
@@ -2381,13 +2381,13 @@ const SPACE_EVENTS=[
   {title:"⚙️ Merchant in a Pickle", text:()=>"A trader's barge hails you, engines coughing glitter. “Swap you cargo for parts, friend? I'm rich in goods and poor in luck.”",
    choices:[
      {label:()=>"Trade spare parts (−1 fuel)", cond:()=>S.fuel>1,
-      effect(){ S.fuel--; const g=dpick(GOODS).id; const got=gainCargo(g,2); return got>0?`She patches her drive with your spares and insists you take <b>${got} ${GOOD[g].name}</b>. “May your tanks stay full!”`:`She offers goods, but your hold is full — so she pays cash instead. <b>+◈80</b>. ${S.credits+=80,""}`; }},
+      effect(){ S.fuel--; const g=dpick(GOODS).id; const got=gainCargo(g,2); return got>0?`She patches her drive with your spares and insists you take <b>${got} ${GOOD[g].name}</b>. “May your tanks stay full!”`:`She offers goods, but your hold is full – so she pays cash instead. <b>+◈80</b>. ${S.credits+=80,""}`; }},
      {label:()=>"Escort her to safety (1 day)", effect(){ advanceDays(1); const c=dri(50,110); S.credits+=c; return `You fly wing-to-wing until her engines steady. The merchant guild wires you <b>◈${c}</b> with a thank-you note in curly handwriting.`; }},
      {label:()=>"Wish her luck and move on", effect(){ return "“Luck!” she laughs. “I'll trade for that too!” Her barge limps on, trailing sparkles."; }},
    ]},
   {title:"🪨 Micro-meteor Shower", text:()=>"The forward screens light up: a stream of pebbles, pretty and fast, right across your path.",
    choices:[
-     {label:()=>"Thread the stream (pilot's chance)", effect(){ if(dchance(.6)) return "You dance the ship through the sparkling hail without a scratch. The autopilot is speechless."; S.hull=Math.max(1,S.hull-2); return "Two sharp pings ring the hull like a bell. <b>−2 hull</b> — but what a ride."; }},
+     {label:()=>"Thread the stream (pilot's chance)", effect(){ if(dchance(.6)) return "You dance the ship through the sparkling hail without a scratch. The autopilot is speechless."; S.hull=Math.max(1,S.hull-2); return "Two sharp pings ring the hull like a bell. <b>−2 hull</b>– but what a ride."; }},
      {label:()=>"Shield up and push through (−1 fuel)", cond:()=>S.fuel>=1, effect(){ S.fuel--; return "Shields shrug off the pebbles in little flashes, like rain on a window."; }},
      {label:()=>"Wait for it to pass (1 day)", effect(){ advanceDays(1); return "You brew something warm and watch the prettiest storm in the sector slide by."; }},
    ]},
@@ -2397,13 +2397,13 @@ const SPACE_EVENTS=[
      {label:()=>"Scan first, then decide", effect(){ const g=dpick(GOODS).id; const got=gainCargo(g,1); return got>0?`Scans read clean. You transfer <b>1 ${GOOD[g].name}</b> neatly aboard.`:"Scans read clean, but your hold is packed tight. You log its position for later."; }},
      {label:()=>"Not your pod, not your problem", effect(){ return "You leave it be. Somewhere, an absent-minded freighter captain will be very relieved."; }},
    ]},
-  {title:"🤖 Scrap-Drones!", text:()=>"Three rattletrap drones swarm close, magnet-arms snapping. They want to nibble your hull plating — it's nothing personal.",
+  {title:"🤖 Scrap-Drones!", text:()=>"Three rattletrap drones swarm close, magnet-arms snapping. They want to nibble your hull plating – it's nothing personal.",
    choices:[
      {label:()=>"Outrun them (−2 fuel)", cond:()=>S.fuel>=2, effect(){ S.fuel-=2; return "You light the engines and leave them squabbling in your wake, disappointed little magpies."; }},
      {label:()=>"Toss them 1 Ore as a snack", cond:()=>S.cargo.ore>0, effect(){ S.cargo.ore--; return "They fall upon the ore chunk with delighted beeps, instantly forgetting you exist. Cheap at the price."; }},
      {label:()=>"Shoo them off by hand", effect(){ if(dchance(.5)) return "You bang the airlock, wave a wrench, and generally make yourself a terrible meal. They sulk off."; S.hull=Math.max(1,S.hull-2); return "They get two good bites in (<b>−2 hull</b>) before deciding you taste like paperwork."; }},
    ]},
-  {title:"🎈 The Festival Flotilla", text:()=>"A convoy of pleasure barges drifts by, strung with lanterns — a travelling festival, celebrating some holiday from a world you've never heard of.",
+  {title:"🎈 The Festival Flotilla", text:()=>"A convoy of pleasure barges drifts by, strung with lanterns – a travelling festival, celebrating some holiday from a world you've never heard of.",
    choices:[
      {label:()=>"Join for a day (1 day)", effect(){ advanceDays(1); if(dchance(.5)){const c=dri(30,80);S.credits+=c;return `You win <b>◈${c}</b> at a guessing game involving jellied comets. The recipe is a secret. Probably wise.`;} const clue=giveClue("festival"); return clue?`Between dances, an old pilot murmurs a secret: <i>${clue.text}</i>`:"You dance until the lanterns dim, and remember why people cross oceans of night to find each other."; }},
      {label:()=>"Trade politely from the airlock", effect(){ const c=dri(15,45); S.credits+=c; return `You sell snacks and small talk. <b>+◈${c}</b> and three new recipes.`; }},
@@ -2412,7 +2412,7 @@ const SPACE_EVENTS=[
   {title:"🧭 Old Beacon", text:()=>"A navigation beacon from some earlier age still turns here, painting the dark with slow spokes of light.",
    choices:[
      {label:()=>"Sync your charts to it", effect(){ scanAround(S.pos,S.scanRange+2); return "The beacon shares everything it has watched over the centuries. Your chart drinks it in."; }},
-     {label:()=>"Wind it up (small repair)", effect(){ if(dchance(.65)){const c=dri(30,70);S.credits+=c; return `You oil its bearings and true its mirror. The Beacon-Keepers' Trust transmits an honorarium: <b>+◈${c}</b>.`;} return "You tighten what you can. It shines a little straighter — payment enough, somehow."; }},
+     {label:()=>"Wind it up (small repair)", effect(){ if(dchance(.65)){const c=dri(30,70);S.credits+=c; return `You oil its bearings and true its mirror. The Beacon-Keepers' Trust transmits an honorarium: <b>+◈${c}</b>.`;} return "You tighten what you can. It shines a little straighter – payment enough, somehow."; }},
    ]},
   {id:"dust-shadow",contexts:["sagittarius","scutum","perseus"],terrain:["nebula"],title:"🌫 Dust Shadow",text:()=>"The visible sky thins to almost nothing inside the dust. Your ordinary camera sees darkness; the infrared channel shows a crowded field behind it.",
    choices:[
@@ -2438,26 +2438,26 @@ const SPACE_EVENTS=[
 const ANOMALY_EVENTS=[
   {title:"🌀 A Fold in Space", text:()=>"Here the stars bend, like the sky seen through a glass of water. Your instruments giggle. This is the anomaly your scanners flagged.",
    choices:[
-     {label:()=>"Ride the fold", effect(){ const opts=[...W.cells.values()].filter(c=>hexDist(c,S.pos)>=3&&hexDist(c,S.pos)<=5&&c.type!=="gate"); if(!opts.length)return "The fold shivers but finds nowhere safe to put you. You remain exactly where you are."; const d=dpick(opts); S.pos={q:d.q,r:d.r}; scanAround(S.pos,S.scanRange); visit(S.pos); centerOnShip(true); S.pendingArrival=true; return "Space folds — a hiccup, a flash — and you are somewhere <b>else</b>, instantly. The chart scrambles to keep up."; }},
+     {label:()=>"Ride the fold", effect(){ const opts=[...W.cells.values()].filter(c=>hexDist(c,S.pos)>=3&&hexDist(c,S.pos)<=5&&c.type!=="gate"); if(!opts.length)return "The fold shivers but finds nowhere safe to put you. You remain exactly where you are."; const d=dpick(opts); S.pos={q:d.q,r:d.r}; scanAround(S.pos,S.scanRange); visit(S.pos); centerOnShip(true); S.pendingArrival=true; return "Space folds – a hiccup, a flash – and you are somewhere <b>else</b>, instantly. The chart scrambles to keep up."; }},
      {label:()=>"Study it from the edge", effect(){ scanAround(S.pos,S.scanRange+3); const c=dri(20,60); S.credits+=c; return `Your careful measurements will make three astronomers very happy. <b>+◈${c}</b> in data bounties, and wide new charts.`; }},
    ]},
   {title:"💠 Crystal Garden", text:()=>"An unfinished world: shards of crystal the size of cathedrals, growing slowly in the light of distant suns.",
    choices:[
      {label:()=>"Harvest carefully", effect(){ const got=gainCargo("cry",2); if(got>0) return `You cut <b>${got} Crystal${got>1?"s":""}</b> free without waking an echo. The garden chimes softly as you go.`; const c=dri(60,100); S.credits+=c; return `Your hold is full, so you photograph everything instead. The image rights fetch <b>◈${c}</b>.`; }},
-     {label:()=>"Just… look, for a while", effect(){ const f=Math.min(S.fuelMax-S.fuel,2); S.fuel+=f; return `You drift among the spires in silence. When you finally leave, you're steadier at the helm${f?` — and the light itself seems to have fed your collectors (<b>+${f} fuel</b>)`:""}. Some places are payment enough.`; }},
+     {label:()=>"Just… look, for a while", effect(){ const f=Math.min(S.fuelMax-S.fuel,2); S.fuel+=f; return `You drift among the spires in silence. When you finally leave, you're steadier at the helm${f?` – and the light itself seems to have fed your collectors (<b>+${f} fuel</b>)`:""}. Some places are payment enough.`; }},
    ]},
   {title:"👻 The Silent Ship", text:()=>"A great liner from a century past, dark and whole, hangs here like a held breath. Her name-plate reads VELVET DAWN.",
    choices:[
-     {label:()=>"Board her", effect(){ const roll=drand(); if(roll<.5){const c=dri(80,160);S.credits+=c;return `Her holds were emptied long ago — but the captain's safe still holds a purse of antique chips. <b>+◈${c}</b>. You log her position so her family's line can bring her home.`;} const clue=giveClue("wreck"); return clue?`In the chart-room you find a navigator's diary, and in it, underlined twice: <i>${clue.text}</i>`:`In the chart-room, a diary: her crew reached port safely in lifeboats, every one. You leave the Velvet Dawn to her rest, lighter of heart.`; }},
+     {label:()=>"Board her", effect(){ const roll=drand(); if(roll<.5){const c=dri(80,160);S.credits+=c;return `Her holds were emptied long ago – but the captain's safe still holds a purse of antique chips. <b>+◈${c}</b>. You log her position so her family's line can bring her home.`;} const clue=giveClue("wreck"); return clue?`In the chart-room you find a navigator's diary, and in it, underlined twice: <i>${clue.text}</i>`:`In the chart-room, a diary: her crew reached port safely in lifeboats, every one. You leave the Velvet Dawn to her rest, lighter of heart.`; }},
      {label:()=>"Salute and pass on", effect(){ return "You dim your running lights as you pass, ship's custom older than any of us. The Velvet Dawn keeps her silence."; }},
    ]},
   {title:"🔮 The Question Stone", text:()=>"A perfectly smooth sphere of black stone, humming. As you near, words form gently inside your mind: <i>“ASK.”</i>",
    choices:[
      {label:()=>"“Where is a Star Key?”", effect(){ const clue=giveClue("stone"); return clue?`The stone considers you for a long moment. Then, kindly: <i>${clue.text}</i>`:"The stone hums: <i>“You already know all that can be told. Trust your chart, captain.”</i>"; }},
-     {label:()=>"“What should I ask?”", effect(){ const c=dri(40,90); S.credits+=c; return `The stone laughs — a sound like bells underwater — and coordinates for a forgotten cargo cache appear on your console. <b>+◈${c}</b>. “Wisdom,” it says, “is knowing what you don't know.”`; }},
-     {label:()=>"Ask nothing; leave a gift", effect(){ const f=Math.min(S.fuelMax-S.fuel,4); S.fuel+=f; S.hull=S.hullMax; return `You leave a ration bar and a paper star folded from an old chart. The stone glows warm; your ship is suddenly humming too — <b>hull patched, +${f} fuel</b>. Kindness, returned with interest.`; }},
+     {label:()=>"“What should I ask?”", effect(){ const c=dri(40,90); S.credits+=c; return `The stone laughs – a sound like bells underwater – and coordinates for a forgotten cargo cache appear on your console. <b>+◈${c}</b>. “Wisdom,” it says, “is knowing what you don't know.”`; }},
+     {label:()=>"Ask nothing; leave a gift", effect(){ const f=Math.min(S.fuelMax-S.fuel,4); S.fuel+=f; S.hull=S.hullMax; return `You leave a ration bar and a paper star folded from an old chart. The stone glows warm; your ship is suddenly humming too – <b>hull patched, +${f} fuel</b>. Kindness, returned with interest.`; }},
    ]},
-  {title:"⏳ Time Eddy", text:()=>"A pocket of slow time, shimmering like heat-haze. Inside it, a minute is a day — or is it the other way round?",
+  {title:"⏳ Time Eddy", text:()=>"A pocket of slow time, shimmering like heat-haze. Inside it, a minute is a day – or is it the other way round?",
    choices:[
      {label:()=>"Dip through the fast side", effect(){ if(S.day>2){S.day=Math.max(1,S.day-2); return "You surf the eddy's edge and slip out <b>two days younger</b> than you went in. Your log refuses to discuss it.";} return "The eddy burps politely. Nothing happens. Perhaps you were early."; }},
      {label:()=>"Anchor and study it", effect(){ const c=dri(50,120); S.credits+=c; return `Your readings on the eddy are the finest ever taken. The Temporal Society pays <b>◈${c}</b> and asks you, please, never to do that again.`; }},
@@ -2594,7 +2594,7 @@ function loadCode(code){
     else if(S.pendingArrival){S.pendingArrival=false;onArrive();refreshAll();}
     toast(prefix==="SW2."?"Voyage restored. Welcome back, captain.":"Older voyage restored. Future chance events may differ from the original run.");
     return true;
-  }catch(e){ toast("That save code didn't parse — check it and try again."); return false; }
+  }catch(e){ toast("That save code didn't parse – check it and try again."); return false; }
 }
 $("btnSave").addEventListener("click",()=>{
   autoSave();
@@ -2608,7 +2608,7 @@ $("btnSave").addEventListener("click",()=>{
       <button class="mbtn2" onclick="loadCode(document.getElementById('saveTa').value.trim())">Load pasted code</button>
       <button class="mbtn2" onclick="closeModal()">Close</button>
     </div>
-    <p class="small">SW2 saves preserve the future random-event sequence as well as your map, cargo, upgrades, clues, Atlas discoveries, survey observations and log.</p>`);
+    <p class="small">Backup codes preserve your map, cargo, upgrades, clues, Atlas discoveries, survey observations and log – and the voyage’s upcoming random events, so a restored game plays out the same way.</p>`);
 });
 
 /* ============================================================
@@ -2630,7 +2630,7 @@ function updateContextPreview(seed){
   if(a) a.textContent=ctx.place;
   if(b) b.textContent=`About ${ctx.distanceLy.toLocaleString()} light-years from the Solar System · ${ctx.focus}`;
   if(c) c.textContent=ctx.summary;
-  if(d) d.textContent=profile.name+" — "+profile.blurb;
+  if(d) d.textContent=profile.name+" – "+profile.blurb;
 }
 function rerollCluster(){
   const seed=randomSeed();
@@ -2663,14 +2663,14 @@ function showNewGame(first){
     <div class="clusterCard">
       <div class="eyebrow">Your assigned destination</div>
       <div class="clusterName" id="clusterNamePreview">${clusterDisplayName(seed)}</div>
-      <div class="clusterSub">Every voyage is a newly generated cluster. You do not need to know or choose from a list.</div>
+      <div class="clusterSub">Each voyage generates a fresh cluster – there is nothing to pick from a list.</div>
       <div class="clusterSub" id="clusterCodePreview" style="margin-top:4px">Cluster code: ${seed}</div>
       <div class="scienceContext">
         <div class="eyebrow">Scientific setting</div>
         <b id="sectorPreview">${galacticContext(seed).place}</b>
         <div class="clusterSub" id="distancePreview">About ${galacticContext(seed).distanceLy.toLocaleString()} light-years from the Solar System · ${galacticContext(seed).focus}</div>
         <div class="clusterSub" id="sectorSummaryPreview" style="margin-top:5px">${galacticContext(seed).summary}</div>
-        <div class="clusterSub" id="profilePreview" style="margin-top:7px;color:var(--gold)">${clusterProfile(seed,galacticContext(seed)).name} — ${clusterProfile(seed,galacticContext(seed)).blurb}</div>
+        <div class="clusterSub" id="profilePreview" style="margin-top:7px;color:var(--gold)">${clusterProfile(seed,galacticContext(seed)).name} – ${clusterProfile(seed,galacticContext(seed)).blurb}</div>
         <div class="clusterSub" style="margin-top:6px"><span class="fictionTag">Fictional chart</span> The generated systems are not real catalogued stars. <span class="truthTag">Real astronomy</span> Field Notes explain the actual Galactic context and phenomena.</div>
       </div>
       <input id="seedInput" type="hidden" value="${seed}">
@@ -2707,20 +2707,21 @@ function showHelp(first){
 
     <div class="tipbox"><b>Your objective:</b> find <b>3 Star Keys</b> hidden in 3 of the 9 ancient ruins. Once you have all three, the <b>Celestial Gate</b> appears. Reach it before the day counter runs out.</div>
 
-    <div class="tipbox"><b>About the setting:</b> there is no fixed list. StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context such as the Perseus Arm, Local Arm (Orion Arm/Spur) or Galactic halo. Those contexts now also bias the generated chart: halo voyages tend to be quieter and cool-star heavy; gas-rich arm voyages tend to contain more nebular terrain and luminous stars. These are procedural game biases, not a catalogue of real systems. The game always labels what is real science and what is fictional.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
+    <div class="tipbox"><b>About the setting:</b> StarWeaver generates a fictional survey cluster for each voyage and places it in a real Milky Way context – the Perseus Arm, the Local (Orion) Arm, the Galactic halo. That context shapes the chart: halo voyages are quieter and heavy with cool stars; gas-rich arm voyages hold more nebulae and luminous stars. These are procedural biases, not a catalogue of real systems, and the Field Notes always say what is real and what is fiction.<br><br><b>About cluster codes:</b> StarWeaver generates a fresh cluster for each voyage. <b>Another cluster</b> generates a different one. A short <b>cluster code</b> recreates the same starting galaxy for a friend; a long <b>save code</b> restores your actual progress.</div>
 
     <div class="howstep"><span class="n">1</span><div><b>Reveal the map.</b><br>Flying automatically scans nearby hexes. Use <b>Deep scan</b> when you want to reveal a wider area; it costs 1 fuel and 1 day.</div></div>
     <div class="howstep"><span class="n">2</span><div><b>Move your ship.</b><br>Tap or click a revealed hex <b>once</b> to plot a route. The map shows the fuel and time cost. Tap the large <b>Fly</b> button (or tap/click the same hex again) to travel. Nebula hexes cost 2 fuel instead of 1.</div></div>
-    <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or—most importantly—<b>clues</b> about the Key ruins.</div></div>
+    <div class="howstep"><span class="n">3</span><div><b>Look for ancient ruins.</b><br>Only 3 ruins hold Keys. The others usually give money, rare cargo or – most importantly – <b>clues</b> about the Key ruins.</div></div>
     <div class="howstep"><span class="n">4</span><div><b>Use clues instead of guessing.</b><br>Open the <b>Clues</b> tab. Combine clues such as direction, distance from the centre, nearby star colour and terrain. Use ★ <b>Suspect</b> and × <b>Ruled out</b> notes on charted ruins.</div></div>
-    <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or take one 5-fuel scoop from each gas-giant system you discover. If you cannot make any charted neighbouring jump, a rescue tug will tow you—but it costs credits and days. Hull 2 or below is critical and adds 1 fuel to every jump until repaired.</div></div>
+    <div class="howstep"><span class="n">5</span><div><b>Keep fuel in reserve.</b><br>Buy fuel at stations or take one 5-fuel scoop from each gas-giant system you discover. If you cannot make any charted neighbouring jump, a rescue tug will tow you – but it costs credits and days. Hull 2 or below is critical and adds 1 fuel to every jump until repaired.</div></div>
     <div class="howstep"><span class="n">6</span><div><b>Stations make the voyage easier.</b><br><b>Market:</b> buy ▼ goods cheaply and sell them where they show ▲. <b>Shipyard:</b> improve tank, hold, scanner, hull and engine. <b>Lounge:</b> buy rumours about Key locations or take delivery contracts.</div></div>
-    <div class="howstep"><span class="n">7</span><div><b>Learn from what you find — optionally.</b><br>Each location has short <b>Field Notes</b> distinguishing real astronomy from game fiction. The <b>Atlas</b> fills as you explore. Some locations offer an optional observation: interpret it correctly for a small research grant and extra chart data.</div></div>
+    <div class="howstep"><span class="n">7</span><div><b>Learn from what you find – optionally.</b><br>Each location has short <b>Field Notes</b> distinguishing real astronomy from game fiction. The <b>Atlas</b> fills as you explore. Some locations offer an optional observation: interpret it correctly for a small research grant and extra chart data.</div></div>
     <div class="howstep"><span class="n">8</span><div><b>Open the Gate.</b><br>Recover all 3 Keys and the Celestial Gate is revealed automatically. Fly to it to finish the charter and receive your score.</div></div>
 
     <h3 style="color:var(--gold);font-size:13px;letter-spacing:1.5px;margin:14px 0 6px">FIRST-VOYAGE TIPS</h3>
-    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route now pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.<br>• The astronomy is <b>not compulsory coursework</b>: you can ignore observations and still complete the Charter.<br>• Keyboard: <b>1–5</b> change sidebar tabs, <b>S</b> deep-scans, <b>H</b> centres the ship, <b>M</b> toggles sound, arrow keys pan, and +/− zoom. The Here tab also has a text list of charted destinations.</div>
+    <div class="tipbox">• You do <b>not</b> need to explore every hex or every ruin.<br>• A few good clues can save many days of wandering.<br>• Gas giants are valuable fuel stops.<br>• Trading is optional, but profits buy upgrades that make exploration much easier.<br>• A long route pauses automatically if it crosses an unexplored ruin or anomaly, so you won't silently fly past something important.<br>• There is no permadeath. Wrong vault answers and bad events cost resources or time, not your entire voyage.<br>• The astronomy is <b>not compulsory coursework</b>: you can ignore observations and still complete the Charter.<br>• Keyboard: <b>1–5</b> change sidebar tabs, <b>S</b> deep-scans, <b>H</b> centres the ship, <b>M</b> toggles sound, arrow keys pan, and +/− zoom. The Here tab also has a text list of charted destinations.</div>
 
+    <p class="small" style="margin-top:10px;opacity:.75">StarWeaver is part of <a href="https://naniwadekar.com/" style="color:var(--gold)">Curiosities</a>.</p>
     <div class="mrow"><button class="mbtn2 primary" onclick="closeModal()">${first?"Cast off!":"Back to the stars"}</button></div>
   `);
 }

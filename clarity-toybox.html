@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Toybox — calm mini-games</title>
+  <title>Toybox – calm mini-games</title>
   <meta name="description" content="Eight calm, local-first mini-games for memory, pattern recognition, geometry, number sense, colour and recursive forms.">
   <meta name="application-name" content="Toybox">
   <meta name="theme-color" content="#f5f1e8">
@@ -272,7 +272,7 @@ label {
   color: var(--ink-dim);
 }
 
-/* —— Game-specific wrappers (reuse prior) —— */
+/* –  – Game-specific wrappers (reuse prior) –  – */
 .mt-wrap {
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -733,16 +733,16 @@ canvas { touch-action: none; }
       <div class="panel section" id="playArea">
         <h2>Toybox</h2>
         <p class="welcome-kicker">Designed for quiet thinking and simple joy.</p>
-        <p><b>Toybox</b> is a collection of eight small logic, memory, number and visual games. There are no accounts, streak obligations or timers unless a game itself needs one. Progress and preferences stay on this device and can be exported whenever you like.</p>
+        <p><b>Toybox</b> is a collection of eight small logic, memory, number and visual games. There are no accounts, streak obligations or timers unless a game itself needs one. Progress and preferences stay on this device and can be exported whenever you like. Toybox is part of <a href="https://naniwadekar.com/">Curiosities</a>.</p>
         <ul class="game-list">
-          <li><b>MemoryTiles</b> — match symbol pairs and sharpen recall.</li>
-          <li><b>PathLines</b> — trace flowing paths around obstacles without crossing yourself.</li>
-          <li><b>SequenceGarden</b> — watch a growing sequence and repeat it from memory.</li>
-          <li><b>Constellation</b> — reconstruct briefly shown spatial patterns.</li>
-          <li><b>SequenceForge</b> — infer the next term in a numerical pattern.</li>
-          <li><b>SumLeaves</b> — find pairs of numbers that meet a target sum.</li>
-          <li><b>ColourBloom</b> — tune RGB values until your colour approaches the target.</li>
-          <li><b>FractalGrow</b> — explore recursive branching and save the forms you grow.</li>
+          <li><b>MemoryTiles</b>– match symbol pairs and sharpen recall.</li>
+          <li><b>PathLines</b>– trace flowing paths around obstacles without crossing yourself.</li>
+          <li><b>SequenceGarden</b>– watch a growing sequence and repeat it from memory.</li>
+          <li><b>Constellation</b>– reconstruct briefly shown spatial patterns.</li>
+          <li><b>SequenceForge</b>– infer the next term in a numerical pattern.</li>
+          <li><b>SumLeaves</b>– find pairs of numbers that meet a target sum.</li>
+          <li><b>ColourBloom</b>– tune RGB values until your colour approaches the target.</li>
+          <li><b>FractalGrow</b>– explore recursive branching and save the forms you grow.</li>
         </ul>
         <p style="margin:1.25rem 0 0;color:var(--ink-dim);font-size:.9rem">Choose a game above. Your state is saved automatically in this browser.</p>
       </div>
@@ -756,7 +756,7 @@ canvas { touch-action: none; }
           <article><h3>Constellation</h3><p>A visual working-memory task: hold a briefly presented spatial pattern, then reconstruct it after the pattern disappears.</p></article>
           <article><h3>SequenceForge</h3><p>Informal rule induction using arithmetic, geometric, square-number and alternating-step sequences. The point is to infer a compact rule from examples.</p></article>
           <article><h3>SumLeaves</h3><p>A two-number target-sum puzzle: choose two leaves whose values add exactly to the displayed target. It is a small, friendly relative of broader subset-sum problems.</p></article>
-          <article><h3>ColourBloom</h3><p>RGB colours can be treated as three-dimensional vectors <code>(R,G,B)</code>. The game measures how close your chosen vector is to a hidden target.</p></article>
+          <article><h3>ColourBloom</h3><p>RGB colours can be treated as three-dimensional vectors <code>(R,G,B)</code>. The game measures how close your chosen vector is to the target, whose RGB values are hidden; Δ is the straight-line (Euclidean) distance between the two points.</p></article>
           <article><h3>FractalGrow</h3><p>Recursive branching repeatedly applies a rule at smaller scales. Changing angle, decay and branching parameters produces different self-similar forms.</p></article>
         </div>
       </details>
@@ -852,7 +852,7 @@ const initialTheme = state.settings && state.settings.theme
 applyTheme(initialTheme, false);
 if (themeBtn) themeBtn.onclick = () => applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark", true);
 
-// backup / restore — entirely local; nothing is uploaded anywhere.
+// backup / restore – entirely local; nothing is uploaded anywhere.
 document.getElementById("backupBtn").onclick = () => {
   const payload = {
     app: "Toybox",
@@ -970,7 +970,7 @@ const games = {
     </div>
     <div class="row">
       <button id="mtNew">New Game</button>
-      <button id="mtReset">Reset Stats</button>
+      <button id="mtReset">Reset stats</button>
     </div>
     <div style="margin-top:.4rem;font-family:ui-monospace,Menlo,Consolas,monospace;">
       <div id="mtMoves">Moves: 0</div>
@@ -1158,7 +1158,7 @@ const games = {
     left.innerHTML = `
       <h2>ColourBloom: Visual Acuity</h2>
       <p style="font-size:0.9rem;opacity:.8;margin-top:-0.5rem">
-        Use the Red, Green, and Blue sliders to match the Target Colour as closely as possible. Press 'Lock & Score' to see your distance (Δ), lower is better.
+        Use the Red, Green, and Blue sliders to match the Target Colour as closely as possible. Press ‘Lock &amp; Score’ to see your distance Δ – lower is better.
       </p>
       <div class="cb-dual">
         <div class="col">
@@ -1177,7 +1177,7 @@ const games = {
         <div class="row" style="margin-top:.8rem">
           <button id="btnNew">New Target</button>
           <button id="btnSnap">Lock & Score</button>
-          <button id="btnResetStats">Reset Stats</button>
+          <button id="btnResetStats">Reset stats</button>
         </div>
         <div class="cb-stat" style="margin-top:.4rem" id="deltaLine">Δ (RGB distance): –</div>
         <div class="cb-stat">Rounds Attempted: <span id="rounds">0</span> · Best Δ: <span id="bestDelta">–</span></div>
@@ -1365,7 +1365,7 @@ const games = {
 
     // NEW: restart from level 1
     const restartAllBtn = document.createElement("button");
-    restartAllBtn.textContent = "Clear stats and Restart From Level 1";
+    restartAllBtn.textContent = "Reset stats and restart from level 1";
     controls.appendChild(restartAllBtn);
 
     const nextLevelBtn = document.createElement("button");
@@ -1789,7 +1789,7 @@ const games = {
       if (gameOver) {
         nextLevelBtn.disabled = true;
         nextLevelBtn.style.display = "none";
-        setTimeout(() => alert("Path blocked by an obstacle. Game Over!"), 100);
+        setTimeout(() => alert("Path blocked by an obstacle – round over."), 100);
       }
     }
 
@@ -1897,7 +1897,7 @@ const games = {
     root.innerHTML = `
       <h2>SequenceGarden</h2>
       <p style="font-size:0.9rem;opacity:.8;margin-top:-0.5rem">
-        Watch the pads light up in a sequence; once the sequence stops, then try to repeat the pattern by tapping them in the same order. The sequence gets longer by one tap each round.
+        Watch the pads light up. When the sequence stops, tap the pads in the same order. Each round adds one step.
       </p>`;
 
     const stats = document.createElement("div");
@@ -2549,7 +2549,7 @@ const games = {
         hue: [150, 200],
       },
       sierpinski: {
-        label: "Sierpinski Curve",
+        label: "Geometric Spread",
         spread: 60,
         decay: 0.5,
         maxDepth: 10,
@@ -2588,14 +2588,14 @@ const games = {
     left.innerHTML = `
       <h2>FractalGrow</h2>
       <p style="font-size:0.9rem;opacity:.8;margin-top:-0.5rem">
-        Click anywhere in the canvas to plant a fractal seed and watch it grow infinitely. Use presets or customize the rules below.
+        Click anywhere in the canvas to plant a fractal seed and watch it branch, level by level. Use the presets or customise the rules below.
       </p>
 
       <div style="font-size:0.85rem; color:var(--ink-dim); margin-bottom: 1rem;">
-          <p style="margin: 0.2rem 0;">**Classic Fern:** A dense, elegant biological leaf shape.</p>
-          <p style="margin: 0.2rem 0;">**Electric Bolt:** Open, wider branching structure with high spread.</p>
-          <p style="margin: 0.2rem 0;">**Tree Branch:** A pattern for tall, solid, tree-like growth.</p>
-          <p style="margin: 0.2rem 0;">**Sierpinski Curve:** Highly geometric and spreading, often filling space quickly.</p>
+          <p style="margin: 0.2rem 0;"><b>Classic Fern:</b> a dense, elegant leaf shape.</p>
+          <p style="margin: 0.2rem 0;"><b>Electric Bolt:</b> open, wide branching with high spread.</p>
+          <p style="margin: 0.2rem 0;"><b>Tree Branch:</b> tall, solid, tree-like growth.</p>
+          <p style="margin: 0.2rem 0;"><b>Geometric Spread:</b> wide, regular branching that covers the canvas quickly.</p>
       </div>
 
       <div class="row">
@@ -2604,14 +2604,14 @@ const games = {
           <option value="fern">Classic Fern</option>
           <option value="lightning">Electric Bolt</option>
           <option value="tree">Tree Branch</option>
-          <option value="sierpinski">Sierpinski Curve</option>
+          <option value="sierpinski">Geometric Spread</option>
           <option value="custom">Custom Rules</option>
         </select>
       </div>
 
       <div class="row" style="margin-top:.5rem;">
         <button id="fgPause">Pause</button>
-        <button id="fgClear">Clear All Seeds</button>
+        <button id="fgClear">Clear all seeds</button>
         <button id="fgDownload">Download Pattern</button>
       </div>
 
@@ -2979,7 +2979,7 @@ const games = {
     controls.appendChild(nextBtn);
 
     const resetBtn = document.createElement("button");
-    resetBtn.textContent = "Reset Stats";
+    resetBtn.textContent = "Reset stats";
     controls.appendChild(resetBtn);
 
     function paintStats() {
@@ -3180,7 +3180,7 @@ const games = {
     controls.appendChild(newBtn);
 
     const resetBtn = document.createElement("button");
-    resetBtn.textContent = "Reset Stats";
+    resetBtn.textContent = "Reset stats";
     controls.appendChild(resetBtn);
 
     const targetLine = document.createElement("div");
@@ -3267,7 +3267,7 @@ const games = {
         ? `Target: ${currentTarget}`
         : "Target: –";
       feedback.textContent =
-        "Tap two blocks whose numbers add exactly to the target.";
+        "Tap two leaves whose numbers add exactly to the target.";
 
       grid.innerHTML = "";
       values.forEach((v, idx) => {
@@ -3477,7 +3477,7 @@ const games = {
       root.innerHTML = `
         <h2>Constellation</h2>
         <p style="font-size:0.9rem;opacity:.8;margin-top:-0.5rem;margin-bottom:.6rem">
-          Click Start, then memorize the highlighted squares. Once the highlighting ceases, click the squares to recreate the pattern.
+          Click Start, then memorise the highlighted squares. When they go dark, click the squares to recreate the pattern.
         </p>
         <div style="font-family:ui-monospace, Menlo, Consolas, monospace; margin-bottom: 0.8rem">
           Best Score: ${stateG.bestScore} · Plays: ${stateG.plays}
@@ -3490,7 +3490,7 @@ const games = {
         <p id="constFeedback" style="margin-top: 1rem; font-weight: bold; text-align: center;">
           ${
             phase === "memorizing"
-              ? "Memorize the highlighted pattern."
+              ? "Memorise the highlighted pattern."
               : phase === "guessing"
               ? `Guesses: ${userGuesses.size}/${maxPossible}`
               : phase === "finished"
@@ -3505,7 +3505,7 @@ const games = {
           }>
             ${phase === "finished" ? "Start New Constellation" : "Start"}
           </button>
-          <button id="constResetHistory">Reset History</button>
+          <button id="constResetHistory">Reset stats</button>
         </div>
       `;
 
@@ -3586,7 +3586,7 @@ tabs.forEach((btn) => {
     } else {
       const box = document.createElement("div");
       box.className = "panel section";
-      box.textContent = "This game is not implemented yet.";
+      box.textContent = "This game isn’t available yet.";
       container.appendChild(box);
     }
   };

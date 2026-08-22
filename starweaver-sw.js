@@ -1,5 +1,5 @@
 "use strict";
-const CACHE = "starweaver-shell-v1";
+const CACHE = "starweaver-shell-v2";
 const APP = "/starweaver.html";
 const ASSETS = [
   APP,

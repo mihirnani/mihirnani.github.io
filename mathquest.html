@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math Quest 🚀</title>
+<title>Math Quest</title>
 <link rel="manifest" href="/mathquest-manifest.json">
 <link rel="apple-touch-icon" href="/mathquest-icon-180.png">
 <meta name="theme-color" content="#7c4dff">
@@ -334,7 +334,7 @@ function loadState(){
   }catch(e){ if(!(e instanceof SyntaxError) && e.name!=='BadSave') storageOK = false; state = freshState(); return; }
   state = freshState();
 }
-/* Rebuild a save field-by-field with type checks — never trust imported JSON. */
+/* Rebuild a save field-by-field with type checks – never trust imported JSON. */
 function sanitizeSave(data){
   const bad = () => { const e=new Error('bad save'); e.name='BadSave'; throw e; };
   if(!data || typeof data!=='object' || typeof data.xp!=='number' || !data.topics || typeof data.topics!=='object') bad();
@@ -393,7 +393,7 @@ function importSave(file){
       const data = JSON.parse(r.result);
       state = sanitizeSave(data);
       saveState(); render();
-      toast('✅ Progress loaded — welcome back, '+(state.profile.name||'friend')+'!');
+      toast('✅ Progress loaded – welcome back, '+(state.profile.name||'friend')+'!');
     }catch(e){ toast('❌ That file does not look like a Math Quest save.'); }
   };
   r.readAsText(file);
@@ -416,7 +416,7 @@ function addXP(n){
   if(!state.log[d]) state.log[d]={xp:0,c:0,t:0};
   state.log[d].xp += n;
   if(after>before){
-    setTimeout(()=>{ bigConfetti(); toast(`🎉 LEVEL UP! You are now Level ${after} — ${levelTitle(after)}!`); playSound('level'); }, 350);
+    setTimeout(()=>{ bigConfetti(); toast(`🎉 LEVEL UP! You are now Level ${after} – ${levelTitle(after)}!`); playSound('level'); }, 350);
   }
   touchDaily();
   saveState();
@@ -578,7 +578,7 @@ function render(){
   else if(view.screen==='topic') html += topicHTML();
   else if(view.screen==='badges') html += badgesHTML();
   else if(view.screen==='parent') html += parentHTML();
-  html += `<div class="footer-note">Math Quest 🚀 — made with ❤️ for curious kids · your progress is saved in this browser</div>`;
+  html += `<div class="footer-note">Math Quest 🚀 – made with ❤️ for curious kids · your progress is saved in this browser · part of <a href="https://naniwadekar.com/">Curiosities</a></div>`;
   app.innerHTML = html;
   afterRender();
 }
@@ -700,7 +700,7 @@ function practiceHTML(t){
   const q = p.q;
   let h = `<div class="card qcard">
     <div class="qmeta">
-      <span class="small" style="color:var(--ink-soft);font-weight:700;">${p.isDeep? '🧠 Go Deep — tricky ones! Think slowly, maybe use rough paper…' : '✏️ Practice — no pressure, hints allowed!'}</span>
+      <span class="small" style="color:var(--ink-soft);font-weight:700;">${p.isDeep? '🧠 Go Deep – tricky ones! Think slowly, maybe use rough paper…' : '✏️ Practice – no pressure, hints allowed!'}</span>
       <span class="streakfire">${p.streak>0? '🔥 '+p.streak+' in a row!':''}</span>
     </div>
     <div class="qtext">${q.text}</div>`;
@@ -750,14 +750,14 @@ function submitPractice(val, chosenIdx){
     spawnConfetti(p.streak%5===0? 60:22, 300);
     playSound('good');
     const cheers = p.isDeep
-      ? ['WOW, deep thinking! 🧠✨','You cracked a tough one! 🎉','Genius move! 🌟','That was NOT easy — amazing! 🙌','Puzzle master! 🧩']
+      ? ['WOW, deep thinking! 🧠✨','You cracked a tough one! 🎉','Genius move! 🌟','That was NOT easy – amazing! 🙌','Puzzle master! 🧩']
       : ['Great job! 🎉','Correct! ⭐','You got it! 🙌','Brilliant! 💫','Super! 🌟','Yes! High five! ✋'];
     fb.innerHTML = `<span style="color:var(--good)">${pick(cheers)} +${xp} XP</span>`
       + (q.explain? `<span class="exp">${q.explain}</span>`:'');
   }else{
     p.streak = 0;
     playSound('bad');
-    fb.innerHTML = `<span style="color:var(--bad)">${p.isDeep? 'Tough one! The answer is':'Not quite — the answer is'} <u>${q.answerText||q.answer}</u>.</span>`
+    fb.innerHTML = `<span style="color:var(--bad)">${p.isDeep? 'Tough one! The answer is':'Not quite – the answer is'} <u>${q.answerText||q.answer}</u>.</span>`
       + (q.explain? `<span class="exp">${q.explain}</span>`:'');
   }
   checkBadges({correct:ok, streak:p.streak});
@@ -779,7 +779,7 @@ function startQuiz(){
     if(seen.has(key)) continue;
     seen.add(key); qs.push(q);
   }
-  while(qs.length<QUIZ_LEN) qs.push(t.gen('quiz')); // topic pool exhausted — allow repeats rather than a short quiz
+  while(qs.length<QUIZ_LEN) qs.push(t.gen('quiz')); // topic pool exhausted – allow repeats rather than a short quiz
   quiz = { qs, i:0, score:0, answered:false, results:[], done:false };
   render();
 }
@@ -827,7 +827,7 @@ function submitQuiz(val, chosenIdx){
     fb.innerHTML = `<span style="color:var(--good)">Correct! +10 XP 🎉</span>`;
   }else{
     playSound('bad');
-    fb.innerHTML = `<span style="color:var(--bad)">The answer is <u>${q.answerText||q.answer}</u>.</span>`
+    fb.innerHTML = `<span style="color:var(--bad)">Not this time – the answer is <u>${q.answerText||q.answer}</u>.</span>`
       + (q.explain? `<span class="exp">${q.explain}</span>`:'');
   }
   const last = qz.i===QUIZ_LEN-1;
@@ -857,7 +857,7 @@ function quizResultsHTML(t){
   const msgs = stars===3? ['INCREDIBLE! A perfect score! 🥳','You are a true Math Star!']
     : stars===2? ['Amazing work! So close to perfect!','One more push for 3 stars!']
     : stars===1? ['Well done, you earned a star!','Keep practising to shine brighter!']
-    : ['Good try! Every mistake teaches us something.','Read the lesson again and try once more — you can do it!'];
+    : ['Good try! Every mistake teaches us something.','Read the lesson again and try once more – you can do it!'];
   const wi = view.w, ti = view.t;
   const w = CURRICULUM[wi];
   const hasNext = ti+1 < w.topics.length;
@@ -916,14 +916,14 @@ function parentHTML(){
       const pacc = s.pt? Math.round(s.pc/s.pt*100) : null;
       h += `<tr><td>${t.emoji} ${t.name}</td>
         <td style="color:var(--gold)">${starStr(s.stars)}</td>
-        <td>${s.attempts? s.best+'/'+QUIZ_LEN : '—'}</td>
-        <td>${s.attempts||'—'}</td>
-        <td>${pacc===null?'—':`<span class="minibar"><div style="width:${pacc}%"></div></span> ${pacc}% <small style="color:var(--ink-soft)">(${s.pc}/${s.pt})</small>`}</td></tr>`;
+        <td>${s.attempts? s.best+'/'+QUIZ_LEN : ' – '}</td>
+        <td>${s.attempts||' – '}</td>
+        <td>${pacc===null?' – ':`<span class="minibar"><div style="width:${pacc}%"></div></span> ${pacc}% <small style="color:var(--ink-soft)">(${s.pc}/${s.pt})</small>`}</td></tr>`;
     });
   });
   h += `</table></div></div>`;
   h += `<div class="card"><h3 style="margin-top:0;">Recent activity</h3>`;
-  if(!days.length) h += `<p style="color:var(--ink-soft)">No activity yet — time for the first adventure!</p>`;
+  if(!days.length) h += `<p style="color:var(--ink-soft)">No activity yet – time for the first adventure!</p>`;
   else{
     h += `<table class="ptable"><tr><th>Date</th><th>Questions</th><th>Correct</th><th>XP earned</th></tr>`;
     days.slice(0,14).forEach(d=>{
@@ -935,7 +935,7 @@ function parentHTML(){
   h += `</div>`;
   h += `<div class="card"><h3 style="margin-top:0;">💾 Save, backup & settings</h3>
   ${storageOK? `<p style="color:var(--ink-soft);font-size:.9rem;line-height:1.6;">Progress saves automatically in this browser. Export a JSON backup to keep it safe or move it to another computer.</p>`
-    : `<p style="color:var(--bad);font-size:.9rem;line-height:1.6;"><b>⚠️ This browser is blocking saved data</b> (this can happen when opening the file directly in some browsers). Progress will be lost when the tab closes — please use <b>Export</b> before closing, and <b>Import</b> when you return. Tip: Chrome and Edge usually allow saving for local files.</p>`}
+    : `<p style="color:var(--bad);font-size:.9rem;line-height:1.6;"><b>⚠️ This browser is blocking saved data</b> (this can happen when opening the file directly in some browsers). Progress will be lost when the tab closes – please use <b>Export</b> before closing, and <b>Import</b> when you return. Tip: Chrome and Edge usually allow saving for local files.</p>`}
   <div style="display:flex;gap:10px;flex-wrap:wrap;">
     <button class="btn" onclick="exportSave()">⬇️ Export progress (JSON)</button>
     <label class="btn ghost" style="cursor:pointer;">⬆️ Import progress<input type="file" accept=".json,application/json" style="display:none" onchange="if(this.files[0])importSave(this.files[0])"></label>
@@ -975,7 +975,7 @@ function openProfile(firstTime){
     </div>
   </div>`;
   document.body.appendChild(ov);
-  $('#pname').value = state.profile.name; // set via DOM, never via HTML — immune to quote injection
+  $('#pname').value = state.profile.name; // set via DOM, never via HTML – immune to quote injection
   setTimeout(()=>{ const i=$('#pname'); if(i&&firstTime) i.focus(); },50);
 }
 let pickedAvatar = null;
@@ -1009,7 +1009,7 @@ function initPlaceValueWidget(el){
   if(el.dataset.ready) return; el.dataset.ready='1';
   el.innerHTML = `
     <div style="text-align:center;background:#f8f6ff;border-radius:16px;padding:14px;border:2px solid #e3daff;">
-      <b>🔬 Place Value Explorer</b> — type any number and watch the magic!<br>
+      <b>🔬 Place Value Explorer</b>– type any number and watch the magic!<br>
       <input style="font-size:1.3rem;padding:8px 14px;border-radius:12px;border:3px solid #ddd2ff;width:190px;text-align:center;font-weight:700;margin:10px 0;"
         maxlength="8" inputmode="numeric" placeholder="e.g. 4705" value="4705">
       <div class="pv-out"></div>
@@ -1054,7 +1054,7 @@ function initFractionWidget(el){
   if(el.dataset.ready) return; el.dataset.ready='1';
   el.innerHTML = `
     <div style="text-align:center;background:#f8f6ff;border-radius:16px;padding:14px;border:2px solid #e3daff;">
-      <b>🧪 Fraction Lab</b> — build your own fraction!<br>
+      <b>🧪 Fraction Lab</b>– build your own fraction!<br>
       <div style="margin:10px 0;">
         Shaded parts: <select class="fw-n" style="font-size:1.05rem;padding:4px 8px;border-radius:8px;"></select>
         &nbsp; Total parts: <select class="fw-d" style="font-size:1.05rem;padding:4px 8px;border-radius:8px;"></select>
@@ -1069,12 +1069,12 @@ function initFractionWidget(el){
     selN.innerHTML='';
     for(let n=0;n<=d;n++) selN.innerHTML += `<option ${n===Math.min(keep,d)?'selected':''}>${n}</option>`;
     const n = Number(selN.value);
-    out.innerHTML = fractionBar(n,d) + `<p style="margin:6px 0 0;">This shows ${frac(n,d)} — <b>${n}</b> shaded out of <b>${d}</b> equal parts.</p>`;
+    out.innerHTML = fractionBar(n,d) + `<p style="margin:6px 0 0;">This shows ${frac(n,d)} – <b>${n}</b> shaded out of <b>${d}</b> equal parts.</p>`;
   };
   selD.addEventListener('change', draw);
   selN.addEventListener('change', ()=>{
     const n=Number(selN.value), d=Number(selD.value);
-    out.innerHTML = fractionBar(n,d) + `<p style="margin:6px 0 0;">This shows ${frac(n,d)} — <b>${n}</b> shaded out of <b>${d}</b> equal parts.</p>`;
+    out.innerHTML = fractionBar(n,d) + `<p style="margin:6px 0 0;">This shows ${frac(n,d)} – <b>${n}</b> shaded out of <b>${d}</b> equal parts.</p>`;
   });
   draw();
 }
@@ -1159,7 +1159,7 @@ function tallyHTML(n){
   let s='';
   while(n>=5){ s += '<s style="text-decoration:line-through;">||||</s> '; n-=5; }
   s += '|'.repeat(n);
-  return `<span class="tallybox">${s.trim()||'—'}</span>`;
+  return `<span class="tallybox">${s.trim()||' – '}</span>`;
 }
 function pictoRow(emoji, count){
   return `<span class="pictorow">${emoji.repeat(count)}</span>`;
@@ -1169,7 +1169,7 @@ const KIDS = ['Meera','Arjun','Zoya','Kabir','Anaya','Dev','Sara','Vivaan','Isha
 const THINGS = ['marbles','stickers','beads','shells','crayons','storybooks','toffees','buttons','coins','blocks'];
 
 /* ============================================================
-   WORLD 1 — WARM-UP ISLAND (quick review of grades 1–3)
+   WORLD 1 – WARM-UP ISLAND (quick review of grades 1–3)
    ============================================================ */
 const W1 = {
   id:'w1', name:'Warm-Up Island', emoji:'🏝️', c1:'#00b4d8', c2:'#0077b6',
@@ -1177,10 +1177,10 @@ const W1 = {
   topics:[
 
   /* ---------- w1t1 Counting & Comparing ---------- */
-  { id:'w1t1', name:'Counting & Comparing', emoji:'🔢', blurb:'Numbers up to 999 — order them like a pro',
+  { id:'w1t1', name:'Counting & Comparing', emoji:'🔢', blurb:'Numbers up to 999 – order them like a pro',
     lesson:[
       {title:'Numbers are everywhere! 🔢', html:`
-        <p>Look around you — numbers are hiding everywhere! Your age, your house number, the runs in a cricket match… 🏏</p>
+        <p>Look around you – numbers are hiding everywhere! Your age, your house number, the runs in a cricket match… 🏏</p>
         <div class="speech">All numbers, even giant ones, are built from just <b>ten digits</b>: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. They are like the alphabet of mathematics!</div>
         <p>With digits we can build small numbers like <b>7</b>, medium ones like <b>84</b>, and big ones like <b>639</b>.</p>`},
       {title:'Who is bigger? 🐊', html:`
@@ -1192,7 +1192,7 @@ const W1 = {
         <p>Numbers stand in a line, like children in a school assembly.</p>
         <div class="exbox">… 97, 98, <b>99</b>, 100, 101 …<br>
         Just <b>before</b> 100 comes 99. Just <b>after</b> 100 comes 101.</div>
-        <div class="speech pink">The number just after is called the <b>successor</b> (add 1). The number just before is the <b>predecessor</b> (subtract 1). Fancy words — simple idea!</div>
+        <div class="speech pink">The number just after is called the <b>successor</b> (add 1). The number just before is the <b>predecessor</b> (subtract 1). Fancy words – simple idea!</div>
         <p>Ready to play with numbers? Head to Practice! 🎉</p>`},
     ],
     gen(mode){
@@ -1233,11 +1233,11 @@ const W1 = {
         <p>When we <b>add</b>, we put groups together and count the total.</p>
         <div class="exbox">🍎🍎🍎 + 🍎🍎 = 🍎🍎🍎🍎🍎 &nbsp;→&nbsp; 3 + 2 = 5</div>
         <div class="speech">A super trick: to add 38 + 25, break it up!<br>38 + 25 = 38 + 20 + 5 = 58 + 5 = <b>63</b>. Add the tens first, then the ones.</div>`},
-      {title:'Carrying — the friendly borrow-a-ten 🎒', html:`
+      {title:'Carrying – when ten ones become one ten 🎒', html:`
         <p>Sometimes the ones add up to more than 9. Then 10 ones pack themselves into 1 ten and <b>carry</b> over!</p>
         <div class="exbox" style="font-family:monospace;font-size:1.2rem;text-align:center;">
         &nbsp;&nbsp;<small style="color:var(--accent)">1</small><br>
-        &nbsp;&nbsp;4 7<br>+ 3 5<br>———<br>&nbsp;&nbsp;8 2</div>
+        &nbsp;&nbsp;4 7<br>+ 3 5<br>–  –  – <br>&nbsp;&nbsp;8 2</div>
         <p>7 + 5 = 12 → write <b>2</b>, carry <b>1</b> ten. Then 1 + 4 + 3 = <b>8</b> tens. Answer: 82!</p>`},
       {title:'Subtraction = taking away ➖', html:`
         <p>When we <b>subtract</b>, we take away and see what is left.</p>
@@ -1279,17 +1279,17 @@ const W1 = {
   { id:'w1t3', name:'Times Tables Power', emoji:'✖️', blurb:'Multiplication tables from 2 to 10',
     lesson:[
       {title:'Multiplication = super-speedy adding ✖️', html:`
-        <p>Multiplying is just adding the same number again and again — but much faster!</p>
+        <p>Multiplying is just adding the same number again and again – but much faster!</p>
         <div class="exbox">4 × 3 means "4 groups of 3":<br>🍪🍪🍪 &nbsp; 🍪🍪🍪 &nbsp; 🍪🍪🍪 &nbsp; 🍪🍪🍪<br>3 + 3 + 3 + 3 = <b>12</b></div>
-        <div class="speech">4 × 3 = 3 × 4. You can flip the numbers — the answer stays the same! That means every table fact you learn gives you TWO facts free. 🎁</div>`},
+        <div class="speech">4 × 3 = 3 × 4. You can flip the numbers – the answer stays the same! That means every table fact you learn gives you TWO facts free. 🎁</div>`},
       {title:'Table tricks 🪄', html:`
         <p>Some tables have magic patterns:</p>
         <div class="speech gold"><b>× 10</b>: just put a 0 at the end! 7 × 10 = 70.</div>
         <div class="speech pink"><b>× 5</b>: answers always end in 5 or 0. (5, 10, 15, 20…)</div>
-        <div class="speech green"><b>× 9</b>: the digits of the answer add up to 9! 9×4=36 → 3+6=9. Try it!</div>
+        <div class="speech green"><b>× 9</b>: from 9×1 to 9×10, the digits of the answer add up to 9! 9×4=36 → 3+6=9. Try it!</div>
         <p>And <b>× 1</b> keeps a number the same, while <b>× 0</b> always gives 0.</p>`},
       {title:'Why tables matter 🚀', html:`
-        <p>Knowing tables by heart is like having rocket boosters for ALL of maths — big multiplication, division, fractions… everything becomes easier!</p>
+        <p>Knowing tables by heart is like having rocket boosters for ALL of maths – big multiplication, division, fractions… everything becomes easier!</p>
         <div class="speech">Practise a little every day. Speed comes from practice, just like cycling or swimming. 🚴</div>`},
     ],
     gen(mode){
@@ -1338,7 +1338,7 @@ const W1 = {
       const a=ri(3,9), b=ri(3,9);
       return {type:'mc', text:`${a} × ${b} = ${a*b}. So what is <b>${a*b} ÷ ${b}</b>?`,
         choices:mkChoices(a,[b,a+1,a-1,a*b]), answer:a,
-        hint:'Multiplication and division are opposites — the fact family!',
+        hint:'Multiplication and division are opposites – the fact family!',
         explain:`They are a fact family: ${a} × ${b} = ${a*b} means ${a*b} ÷ ${b} = ${a}.`};
     }
   },
@@ -1347,14 +1347,14 @@ const W1 = {
   { id:'w1t5', name:'Shapes & Patterns', emoji:'🔷', blurb:'Know your shapes and spot the pattern',
     lesson:[
       {title:'Shapes all around 🔷', html:`
-        <p>Shapes are everywhere — your book 📖 is a <b>rectangle</b>, a samosa 🥟 is a <b>triangle</b>, a roti 🫓 is a <b>circle</b>!</p>
-        <div class="speech"><b>Triangle</b> — 3 sides, 3 corners<br><b>Square</b> — 4 equal sides, 4 corners<br><b>Rectangle</b> — 4 sides (opposite sides equal), 4 corners<br><b>Circle</b> — perfectly round, no corners at all!</div>
+        <p>Shapes are everywhere – your book 📖 is a <b>rectangle</b>, a samosa 🥟 is a <b>triangle</b>, a roti 🫓 is a <b>circle</b>!</p>
+        <div class="speech"><b>Triangle</b>– 3 sides, 3 corners<br><b>Square</b>– 4 equal sides, 4 corners<br><b>Rectangle</b>– 4 sides (opposite sides equal), 4 corners<br><b>Circle</b>– perfectly round, no corners at all!</div>
         <p>Corners are where two sides meet. Mathematicians call them <b>vertices</b>.</p>`},
       {title:'Patterns are rules in disguise 🕵️', html:`
         <p>A pattern repeats or grows by a <b>rule</b>. Find the rule and you can predict the future!</p>
         <div class="exbox">🔴🔵🔴🔵🔴<b>❓</b> → the rule is "red, blue, repeat" → next is 🔵<br><br>
         2, 4, 6, 8, <b>❓</b> → the rule is "+2" → next is 10</div>
-        <div class="speech pink">Numbers, shapes, music, rangoli designs — patterns hide everywhere. Spotting them is real mathematical thinking!</div>`},
+        <div class="speech pink">Numbers, shapes, music, rangoli designs – patterns hide everywhere. Spotting them is real mathematical thinking!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -1386,7 +1386,7 @@ const W1 = {
 ]};
 
 /* ============================================================
-   WORLD 2 — PLACE VALUE KINGDOM
+   WORLD 2 – PLACE VALUE KINGDOM
    ============================================================ */
 const W2 = {
   id:'w2', name:'Place Value Kingdom', emoji:'👑', c1:'#9b5de5', c2:'#6a2fbf',
@@ -1400,7 +1400,7 @@ const W2 = {
         <p>Here is one of the coolest secrets in maths: <b>a digit's value depends on WHERE it stands.</b></p>
         <div class="exbox">In <b>555</b>, the three 5s look identical but they are NOT equal:<br>
         the first 5 is worth <b>500</b>, the middle 5 is worth <b>50</b>, the last 5 is worth just <b>5</b>!</div>
-        <div class="speech">It's like the same actor playing three different roles — the costume (the place) changes everything! 🎬</div>`},
+        <div class="speech">It's like the same actor playing three different roles – the costume (the place) changes everything! 🎬</div>`},
       {title:'Face value & place value 💡', html:`
         <div class="speech gold"><b>Face value</b> = the digit itself, just its "face". The face value of 7 is always 7, wherever it stands.</div>
         <div class="speech"><b>Place value</b> = face value × the value of its place.<br>In 4,<u>7</u>05 the digit 7 stands in the hundreds place, so its place value is 7 × 100 = <b>700</b>.</div>
@@ -1410,7 +1410,7 @@ const W2 = {
       {title:'Try it yourself! 🔬', html:`
         <p>Type any number into the explorer and see each digit's face value and place value:</p>
         <div data-widget="placevalue"></div>
-        <div class="speech green">Notice: <b>0</b> is special. Its face value and place value are always 0 — but it holds the place open so other digits don't slide over. Zero is the placeholder hero! 🦸</div>`},
+        <div class="speech green">Notice: <b>0</b> is special. Its face value and place value are always 0 – but it holds the place open so other digits don't slide over. Zero is the placeholder hero! 🦸</div>`},
     ],
     gen(mode){
       const v = ri(1,4);
@@ -1426,7 +1426,7 @@ const W2 = {
         while(d[idx]===0) idx = ri(0,d.length-1);
         const pv = d[idx]*Math.pow(10,d.length-1-idx);
         return {type:'input', text:`What is the <b>place value</b> of the digit <b style="color:var(--accent)">${d[idx]}</b> in <b>${fmtIN(n)}</b>?<br><span class="small">(If a digit appears twice, take the highlighted position: ${d.map((x,i)=>i===idx?`<b style="color:var(--accent)">${x}</b>`:x).join('')})</span>`,
-          answer:pv, hint:`Which place does that ${d[idx]} stand in — ones, tens, hundreds…? Multiply the digit by its place.`,
+          answer:pv, hint:`Which place does that ${d[idx]} stand in – ones, tens, hundreds…? Multiply the digit by its place.`,
           explain:`That ${d[idx]} stands in the ${IN_PLACES[d.length-1-idx].toLowerCase()} place: ${d[idx]} × ${fmtIN(Math.pow(10,d.length-1-idx))} = ${fmtIN(pv)}.`};
       }
       if(v===2){
@@ -1435,7 +1435,7 @@ const W2 = {
         let idx = ri(0,d.length-1);
         while(d[idx]===0) idx = ri(0,d.length-1);
         return {type:'input', text:`What is the <b>face value</b> of the digit <b style="color:var(--accent)">${d[idx]}</b> in <b>${fmtIN(n)}</b>?`,
-          answer:d[idx], hint:'Face value is easy — it is just the digit itself, no matter where it stands!',
+          answer:d[idx], hint:'Face value is easy – it is just the digit itself, no matter where it stands!',
           explain:`Face value never changes: the face value of ${d[idx]} is simply ${d[idx]}.`};
       }
       if(v===3){
@@ -1466,10 +1466,10 @@ const W2 = {
       {title:'Stretching numbers 🪗', html:`
         <p>Every number can be <b>stretched out</b> to show what each digit is really worth. This is called <b>expanded form</b>.</p>
         <div class="exbox">3,462 = <b>3000 + 400 + 60 + 2</b></div>
-        <div class="speech">It's the number playing the accordion — squeeze it back together and you get 3,462 again! 🎵</div>`},
+        <div class="speech">It's the number playing the accordion – squeeze it back together and you get 3,462 again! 🎵</div>`},
       {title:'Watch out for zero! 🕳️', html:`
-        <p>When a digit is 0, it adds nothing — so we skip it in expanded form.</p>
-        <div class="exbox">5,082 = 5000 + 80 + 2 &nbsp; <span style="color:var(--ink-soft)">(no hundreds — the 0 keeps the seat warm)</span></div>
+        <p>When a digit is 0, it adds nothing – so we skip it in expanded form.</p>
+        <div class="exbox">5,082 = 5000 + 80 + 2 &nbsp; <span style="color:var(--ink-soft)">(no hundreds – the 0 keeps the seat warm)</span></div>
         <div class="speech pink">Going backwards is fun too: what is 7000 + 300 + 9? Careful… there are no tens! It's <b>7,309</b>, not 739. The zero must hold the tens place!</div>`},
       {title:'Building numbers from words 🧱', html:`
         <p>Sometimes a number comes described in words:</p>
@@ -1499,7 +1499,7 @@ const W2 = {
       if(v===2){
         const d = mkN(), n=Number(d.join(''));
         return {type:'input', text:`Squeeze it back together: <div class="bigmath">${expandStr(d)} = ?</div>`,
-          answer:n, hint:'Drop each part into its place — and remember zeros for missing places!',
+          answer:n, hint:'Drop each part into its place – and remember zeros for missing places!',
           explain:`${expandStr(d)} = ${fmtIN(n)}.`};
       }
       const th=ri(1,9), h=ri(0,9), t=ri(0,9), o=ri(0,9);
@@ -1517,7 +1517,7 @@ const W2 = {
         <p>What comes after 9,999? A brand-new place opens up: <b>ten thousand</b> (10,000)!</p>
         <div class="exbox">9,999 + 1 = <b>10,000</b> (ten thousand)<br>99,999 + 1 = <b>1,00,000</b> (one <b>lakh</b>!)</div>
         <div class="speech">In India we count big numbers in <b>thousands</b>, then <b>lakhs</b>, then <b>crores</b>:<br>
-        1 lakh = 1,00,000 = a hundred thousands<br>1 crore = 1,00,00,000 = a hundred lakhs 🤯</div>`},
+        1 lakh = 1,00,000 = a hundred thousand (100 × 1,000)<br>1 crore = 1,00,00,000 = a hundred lakhs 🤯</div>`},
       {title:'The Indian comma dance 💃', html:`
         <p>Commas make big numbers easy to read. In the Indian system, the <b>first comma comes after 3 digits from the right</b>, and then after every <b>2 digits</b>:</p>
         <div class="exbox">4 5 0 3 2 1 → 4,50,321 → "four lakh fifty thousand three hundred twenty-one"</div>
@@ -1533,7 +1533,7 @@ const W2 = {
       const v = ri(1,4);
       if(v===1){
         const qs = [
-          {q:'How many thousands make <b>1 lakh</b>?', a:100, hint:'1,00,000 = how many 1,000s?', ex:'100 × 1,000 = 1,00,000. One lakh is a hundred thousands.'},
+          {q:'How many thousands make <b>1 lakh</b>?', a:100, hint:'1,00,000 = how many 1,000s?', ex:'100 × 1,000 = 1,00,000. One lakh is a hundred thousand.'},
           {q:'How many hundreds make <b>1 thousand</b>?', a:10, hint:'1,000 = how many 100s?', ex:'10 × 100 = 1,000.'},
           {q:'How many lakhs make <b>1 crore</b>?', a:100, hint:'1,00,00,000 = how many 1,00,000s?', ex:'100 × 1,00,000 = 1,00,00,000. A crore is a hundred lakhs.'},
           {q:'How many tens make <b>1 hundred</b>?', a:10, hint:'100 = how many 10s?', ex:'10 × 10 = 100.'},
@@ -1570,7 +1570,7 @@ const W2 = {
     lesson:[
       {title:'Which giant is bigger? ⚖️', html:`
         <p>Comparing big numbers is easy with two rules:</p>
-        <div class="speech gold"><b>Rule 1:</b> More digits wins! 12,345 (5 digits) beats 9,876 (4 digits) — always.</div>
+        <div class="speech gold"><b>Rule 1:</b> More digits wins! 12,345 (5 digits) beats 9,876 (4 digits) – always.</div>
         <div class="speech"><b>Rule 2:</b> Same number of digits? Compare from the <b>LEFT</b>, one place at a time. The first place where they differ decides the winner.<br>
         <span style="font-family:monospace;">4<u>7</u>,832 vs 4<u>5</u>,910</span> → 7 beats 5 → 47,832 wins!</div>`},
       {title:'Building the biggest & smallest 🏗️', html:`
@@ -1606,7 +1606,7 @@ const W2 = {
         return {type:'mc', text:`Which is the <b>${wantBig?'greatest':'smallest'}</b>?`,
           choices:shuffle(distinct.map(fmtIN)), answer:fmtIN(ansN),
           hint:'First count the digits of each number!',
-          explain:`${fmtIN(ansN)} is the ${wantBig?'greatest':'smallest'} — ${wantBig?'most':'fewest'} digits win${wantBig?'':' here'}, then leftmost digits decide.`};
+          explain:`${fmtIN(ansN)} is the ${wantBig?'greatest':'smallest'}: ${wantBig?'more':'fewer'} digits wins, and with the same number of digits the leftmost different digit decides.`};
       }
       let digits = [];
       while(digits.length<4){ const d=ri(0,9); if(!digits.includes(d)) digits.push(d); }
@@ -1622,7 +1622,7 @@ const W2 = {
       }
       return {type:'input', text:`Using each digit exactly once, build the <b>${wantBig?'GREATEST':'SMALLEST'}</b> 4-digit number: <div class="bigmath">${shuffle(digits).join(' , ')}</div>`,
         answer:ans,
-        hint: wantBig? 'Biggest digit first, then next biggest…' : 'Smallest digit first — but a number cannot start with 0!',
+        hint: wantBig? 'Biggest digit first, then next biggest…' : 'Smallest digit first – but a number cannot start with 0!',
         explain:`${wantBig?'Arrange big → small':'Arrange small → big (0 cannot lead)'}: ${fmtIN(ans)}.`};
     }
   },
@@ -1631,9 +1631,9 @@ const W2 = {
   { id:'w2t5', name:'Rounding & Estimating', emoji:'🎈', blurb:'Make friendly numbers for quick thinking',
     lesson:[
       {title:'What is rounding? 🎈', html:`
-        <p><b>Rounding</b> means finding the nearest "friendly" number — like 10, 50, or 200 — that is close enough for quick thinking.</p>
+        <p><b>Rounding</b> means finding the nearest "friendly" number – like 10, 50, or 200 – that is close enough for quick thinking.</p>
         <div class="exbox">A game costs ₹198. You can say "it costs <b>about ₹200</b>". Much easier to think about!</div>
-        <div class="speech">Rounding is honest lazy maths — we trade a tiny bit of exactness for a LOT of speed. Shopkeepers, scientists and pilots all do it! ✈️</div>`},
+        <div class="speech">Rounding trades a tiny bit of exactness for a LOT of speed. Shopkeepers, scientists and pilots all do it! ✈️</div>`},
       {title:'The rounding rule 📏', html:`
         <p>To round to the nearest 10, look at the <b>ones digit</b>:</p>
         <div class="speech green">Ones digit 0–4 → round <b>DOWN</b> (stay). &nbsp; 43 → 40</div>
@@ -1674,7 +1674,7 @@ const W2 = {
       return {type:'mc', text:`Estimate by rounding each number to the nearest 100: <div class="bigmath">${a} + ${b} ≈ ?</div>`,
         choices:mkChoices(est,[est+100,est-100,est+200]).map(fmtIN), answer:fmtIN(est),
         hint:`${a} is close to ${Math.round(a/100)*100} and ${b} is close to ${Math.round(b/100)*100}.`,
-        explain:`${a} ≈ ${Math.round(a/100)*100} and ${b} ≈ ${Math.round(b/100)*100}, so the sum is about ${fmtIN(est)}. (Exact: ${fmtIN(a+b)} — close!)`};
+        explain:`${a} ≈ ${Math.round(a/100)*100} and ${b} ≈ ${Math.round(b/100)*100}, so the sum is about ${fmtIN(est)}. (Exact: ${fmtIN(a+b)} – close!)`};
     }
   },
 ]};
@@ -1700,7 +1700,7 @@ function numToIndianWords(n){
   return out.trim();
 }
 /* ============================================================
-   WORLD 3 — OPERATIONS MOUNTAIN
+   WORLD 3 – OPERATIONS MOUNTAIN
    ============================================================ */
 const W3 = {
   id:'w3', name:'Operations Mountain', emoji:'⛰️', c1:'#f77f00', c2:'#d62828',
@@ -1714,12 +1714,12 @@ const W3 = {
         <p>Adding big numbers uses the exact same trick you already know: <b>line up the places</b> and add column by column, from the right.</p>
         <div class="exbox" style="font-family:monospace;font-size:1.15rem;text-align:center;">
         &nbsp;&nbsp;<small style="color:var(--accent)">1&nbsp;1</small><br>
-        &nbsp;&nbsp;2 4 7 8<br>+ 1 3 6 5<br>—————<br>&nbsp;&nbsp;3 8 4 3</div>
+        &nbsp;&nbsp;2 4 7 8<br>+ 1 3 6 5<br>–  –  –  –  – <br>&nbsp;&nbsp;3 8 4 3</div>
         <p>8+5=13 → write 3 carry 1. &nbsp; 1+7+6=14 → write 4 carry 1. &nbsp; 1+4+3=8. &nbsp; 2+1=3. Done!</p>
-        <div class="speech">Ones under ones, tens under tens — if the columns are straight, the maths takes care of itself! 📐</div>`},
+        <div class="speech">Ones under ones, tens under tens – if the columns are straight, the maths takes care of itself! 📐</div>`},
       {title:'Check yourself like a pro ✅', html:`
         <p>Great mathematicians always <b>check</b> their answers. Two easy ways:</p>
-        <div class="speech green"><b>Estimate first:</b> 2478 + 1365 ≈ 2500 + 1400 = about 3900. Our answer 3843 is close — looks right! ✓</div>
+        <div class="speech green"><b>Estimate first:</b> 2478 + 1365 ≈ 2500 + 1400 = about 3900. Our answer 3843 is close – looks right! ✓</div>
         <div class="speech gold"><b>Add in the other order:</b> 1365 + 2478 must give the same answer. Addition doesn't care about order!</div>`},
     ],
     gen(mode){
@@ -1744,24 +1744,24 @@ const W3 = {
         [`A farmer packed <b>${fmtIN(a)}</b> mangoes on Monday and <b>${fmtIN(b)}</b> on Tuesday. How many mangoes altogether?`, 'mangoes'],
       ]);
       return {type:'input', text:ctx[0], answer:a+b,
-        hint:'"In all", "total", "altogether" — these words whisper: ADD!',
+        hint:'"In all", "total", "altogether" – these words whisper: ADD!',
         explain:`${fmtIN(a)} + ${fmtIN(b)} = ${fmtIN(a+b)} ${ctx[1]}.`};
     }
   },
 
   /* ---------- w3t2 Big subtraction ---------- */
-  { id:'w3t2', name:'Mega Subtraction', emoji:'🧗', blurb:'Subtract big numbers — borrowing included!',
+  { id:'w3t2', name:'Mega Subtraction', emoji:'🧗', blurb:'Subtract big numbers – borrowing included!',
     lesson:[
       {title:'Borrowing from the neighbour 🧗', html:`
-        <p>What if a column doesn't have enough to subtract? <b>Borrow</b> from the next place — 1 ten becomes 10 ones!</p>
+        <p>What if a column doesn't have enough to subtract? <b>Borrow</b> from the next place – 1 ten becomes 10 ones!</p>
         <div class="exbox" style="font-family:monospace;font-size:1.15rem;text-align:center;">
         &nbsp;&nbsp;<small style="color:var(--accent)">3 12</small><br>
-        &nbsp;&nbsp;7 <s>4</s> <s>2</s><br>− 2 1 8<br>—————<br>&nbsp;&nbsp;5 2 4</div>
+        &nbsp;&nbsp;7 <s>4</s> <s>2</s><br>− 2 1 8<br>–  –  –  –  – <br>&nbsp;&nbsp;5 2 4</div>
         <p>2 − 8 can't be done… borrow! 12 − 8 = 4. Then 3 − 1 = 2. Then 7 − 2 = 5. Answer: 524.</p>`},
       {title:'The zero chain ⛓️', html:`
         <p>Borrowing across zeros looks scary but it's just a chain of borrows:</p>
         <div class="exbox">To solve 500 − 237: the ones can't borrow from 0, so the 0 borrows from 5 first. 500 becomes 4 hundreds, 9 tens, 10 ones. Now: 10−7=3, 9−3=6, 4−2=2 → <b>263</b>.</div>
-        <div class="speech green">Always check with addition: 263 + 237 = 500 ✓. Subtraction undone by addition — best friends again!</div>`},
+        <div class="speech green">Always check with addition: 263 + 237 = 500 ✓. Subtraction undone by addition – best friends again!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -1785,7 +1785,7 @@ const W3 = {
         [`A water tank holds <b>${fmtIN(a)}</b> litres. <b>${fmtIN(b)}</b> litres have been used. How many litres remain?`],
       ]);
       return {type:'input', text:ctx[0], answer:a-b,
-        hint:'"Left", "remain", "still empty" — these words whisper: SUBTRACT!',
+        hint:'"Left", "remain", "still empty" – these words whisper: SUBTRACT!',
         explain:`${fmtIN(a)} − ${fmtIN(b)} = ${fmtIN(a-b)}.`};
     }
   },
@@ -1818,12 +1818,12 @@ const W3 = {
         const a=ri(3,96), p=pick([10,100,1000]);
         return {type:'input', text:`<div class="bigmath">${a} × ${fmtIN(p)} = ?</div>`,
           answer:a*p, hint:'Multiplying by tens just attaches zeros!',
-          explain:`${a} × ${fmtIN(p)} = ${fmtIN(a*p)} — attach ${String(p).length-1} zero${String(p).length>2?'s':''}.`};
+          explain:`${a} × ${fmtIN(p)} = ${fmtIN(a*p)} – attach ${String(p).length-1} zero${String(p).length>2?'s':''}.`};
       }
       if(v===3){
         const a=ri(112,489), b=ri(3,7);
         return {type:'input', text:`<div class="bigmath">${a} × ${b} = ?</div>`,
-          answer:a*b, hint:'Multiply the ones, then tens, then hundreds — carry as you go.',
+          answer:a*b, hint:'Multiply the ones, then tens, then hundreds – carry as you go.',
           explain:`${a} × ${b} = ${fmtIN(a*b)}.`};
       }
       const a=ri(12,45), b=ri(11,25);
@@ -1839,9 +1839,9 @@ const W3 = {
       {title:'When sharing isn\'t perfect 🍕', html:`
         <p>Share 13 pizza slices among 4 friends: each gets 3 slices… and <b>1 slice is left over</b>. That leftover is the <b>remainder</b>!</p>
         <div class="exbox">13 ÷ 4 = <b>3 remainder 1</b> &nbsp; (because 4 × 3 = 12, and 13 − 12 = 1)</div>
-        <div class="speech">The remainder is always <b>smaller than the divisor</b> — if 4 or more slices were left, everyone could get another one!</div>`},
+        <div class="speech">The remainder is always <b>smaller than the divisor</b>– if 4 or more slices were left, everyone could get another one!</div>`},
       {title:'Long division, step by step 🪜', html:`
-        <p>For bigger numbers we divide place by place, left to right. Divide, multiply, subtract, bring down — repeat!</p>
+        <p>For bigger numbers we divide place by place, left to right. Divide, multiply, subtract, bring down – repeat!</p>
         <div class="exbox">96 ÷ 4: &nbsp; 9 ÷ 4 → 2 (4×2=8, remainder 1) → bring down 6 → 16 ÷ 4 = 4 → answer <b>24</b>.</div>
         <div class="speech gold">Remember the rhythm: <b>D</b>ivide → <b>M</b>ultiply → <b>S</b>ubtract → <b>B</b>ring down. "<b>D</b>oes <b>M</b>y <b>S</b>ister <b>B</b>ake?" 🍰</div>`},
       {title:'Checking division ✅', html:`
@@ -1883,17 +1883,17 @@ const W3 = {
   },
 
   /* ---------- w3t5 Word problem workshop ---------- */
-  { id:'w3t5', name:'Word Problem Workshop', emoji:'🧩', blurb:'Real-life puzzles — pick the right operation!',
+  { id:'w3t5', name:'Word Problem Workshop', emoji:'🧩', blurb:'Real-life puzzles – pick the right operation!',
     lesson:[
       {title:'Cracking word problems 🧩', html:`
         <p>Word problems are stories with a number mystery inside. Crack them in 4 steps:</p>
-        <div class="speech"><b>1. READ</b> slowly — twice!<br><b>2. FIND</b> what you know and what is asked.<br><b>3. CHOOSE</b> the operation (+, −, ×, ÷).<br><b>4. SOLVE</b> and check: does the answer make sense?</div>`},
+        <div class="speech"><b>1. READ</b> slowly – twice!<br><b>2. FIND</b> what you know and what is asked.<br><b>3. CHOOSE</b> the operation (+, −, ×, ÷).<br><b>4. SOLVE</b> and check: does the answer make sense?</div>`},
       {title:'Clue words 🔍', html:`
         <div class="speech green"><b>ADD</b> when things come together: "in all", "total", "altogether", "sum".</div>
         <div class="speech pink"><b>SUBTRACT</b> for what's left or the difference: "remaining", "how many more", "fewer", "left".</div>
         <div class="speech gold"><b>MULTIPLY</b> for equal groups repeated: "each box has… how many in 12 boxes?"</div>
         <div class="speech"><b>DIVIDE</b> for sharing or grouping: "shared equally", "how many packets?"</div>
-        <p>⚠️ But don't trust clue words blindly — always picture the story in your head. Drawing a quick sketch helps!</p>`},
+        <p>⚠️ But don't trust clue words blindly – always picture the story in your head. Drawing a quick sketch helps!</p>`},
     ],
     gen(mode){
       const v = ri(1,4);
@@ -1901,14 +1901,14 @@ const W3 = {
       if(v===1){
         const each=ri(12,45), n=ri(3,9);
         return {type:'input', text:`One crate holds <b>${each} apples</b> 🍎. How many apples are in <b>${n} crates</b>?`,
-          answer:each*n, hint:'Equal groups, repeated — which operation is that?',
+          answer:each*n, hint:'Equal groups, repeated – which operation is that?',
           explain:`${n} × ${each} = ${fmtIN(each*n)} apples.`};
       }
       if(v===2){
         const total=ri(4,9)*ri(12,30), teams=ri(4,9);
         const per = Math.floor(total/teams), tot=per*teams;
         return {type:'input', text:`<b>${tot} children</b> are divided equally into <b>${teams} teams</b> for sports day 🏃. How many children per team?`,
-          answer:per, hint:'"Divided equally" — share them out!',
+          answer:per, hint:'"Divided equally" – share them out!',
           explain:`${tot} ÷ ${teams} = ${per} children per team.`};
       }
       if(v===3){
@@ -1927,7 +1927,7 @@ const W3 = {
 ]};
 
 /* ============================================================
-   WORLD 4 — FACTORS FOREST
+   WORLD 4 – FACTORS FOREST
    ============================================================ */
 const W4 = {
   id:'w4', name:'Factors Forest', emoji:'🌳', c1:'#2d6a4f', c2:'#1b4332',
@@ -1939,8 +1939,8 @@ const W4 = {
     lesson:[
       {title:'Two teams of numbers 🦋', html:`
         <p>Every number belongs to one of two teams:</p>
-        <div class="speech green"><b>EVEN</b> numbers can be split into two equal halves: 2, 4, 6, 8, 10… (🍪🍪 | 🍪🍪 — fair!)</div>
-        <div class="speech pink"><b>ODD</b> numbers always have one left over: 1, 3, 5, 7, 9… (🍪🍪 | 🍪🍪 + 🍪 — one extra!)</div>`},
+        <div class="speech green"><b>EVEN</b> numbers can be split into two equal halves: 2, 4, 6, 8, 10… (🍪🍪 | 🍪🍪 – fair!)</div>
+        <div class="speech pink"><b>ODD</b> numbers always have one left over: 1, 3, 5, 7, 9… (🍪🍪 | 🍪🍪 + 🍪 – one extra!)</div>`},
       {title:'The ones-digit shortcut 🔎', html:`
         <p>For BIG numbers, you only need to peek at the <b>ones digit</b>:</p>
         <div class="exbox">Ends in 0, 2, 4, 6, 8 → <b>EVEN</b><br>Ends in 1, 3, 5, 7, 9 → <b>ODD</b><br><br>
@@ -1972,7 +1972,7 @@ const W4 = {
       return {type:'mc', text:`What kind of number is <b>${map[kind][0]}</b>? (always!)`,
         choices:['Even','Odd'], answer:map[kind][1],
         hint:'Try small examples: 2+4, 3+5, 2+3…',
-        explain:`Try it: ${kind==='ee'?'2 + 4 = 6 (even)':kind==='oo'?'3 + 5 = 8 (even) — the two extras pair up!':'2 + 3 = 5 (odd) — one extra stays alone.'}`};
+        explain:`Try it: ${kind==='ee'?'2 + 4 = 6 (even)':kind==='oo'?'3 + 5 = 8 (even) – the two extras pair up!':'2 + 3 = 5 (odd) – one extra stays alone.'}`};
     }
   },
 
@@ -1984,8 +1984,8 @@ const W4 = {
         <div class="exbox">Multiples of 4: &nbsp;4, 8, 12, 16, 20, 24, … (they never end!)</div>
         <div class="speech">A multiple of 4 is just "4 × something". 36 is a multiple of 4 because 4 × 9 = 36. The times table IS the multiples list!</div>`},
       {title:'Multiple detective work 🕵️', html:`
-        <p>Is 42 a multiple of 6? Ask: "does 6 × something = 42?" Yes — 6 × 7! ✓</p>
-        <div class="speech gold">Every number is a multiple of itself — in fact, a number is its own SMALLEST multiple (6 × 1 = 6). After that come 6 × 2 = 12, 6 × 3 = 18… and they never stop!</div>
+        <p>Is 42 a multiple of 6? Ask: "does 6 × something = 42?" Yes – 6 × 7! ✓</p>
+        <div class="speech gold">Every number is a multiple of itself – in fact, a number is its own SMALLEST multiple (6 × 1 = 6). After that come 6 × 2 = 12, 6 × 3 = 18… and they never stop!</div>
         <div class="speech pink">Numbers can be multiples of MANY numbers at once: 12 is a multiple of 1, 2, 3, 4, 6 and 12. Popular number! 🌟</div>`},
     ],
     gen(mode){
@@ -2002,14 +2002,14 @@ const W4 = {
         return {type:'mc', text:`Is <b>${n}</b> a multiple of <b>${b}</b>?`,
           choices:['Yes','No'], answer: yes?'Yes':'No',
           hint:`Does ${b} × something give exactly ${n}?`,
-          explain: yes? `${b} × ${n/b} = ${n} ✓` : `${b} × ${Math.floor(n/b)} = ${b*Math.floor(n/b)} and ${b} × ${Math.floor(n/b)+1} = ${b*(Math.floor(n/b)+1)} — ${n} falls between, so no.`};
+          explain: yes? `${b} × ${n/b} = ${n} ✓` : `${b} × ${Math.floor(n/b)} = ${b*Math.floor(n/b)} and ${b} × ${Math.floor(n/b)+1} = ${b*(Math.floor(n/b)+1)} – ${n} falls between, so no.`};
       }
       const a=pick([2,3,4]), b=pick([3,4,5,6].filter(x=>x!==a));
       const lcmSmall = (x,y)=>{let m=x; while(m%y!==0)m+=x; return m;};
       const ans = lcmSmall(a,b);
       return {type:'input', text:`What is the <b>smallest</b> number that is a multiple of BOTH <b>${a}</b> and <b>${b}</b>?`,
         answer:ans, hint:`List multiples of ${a} (${a}, ${a*2}, ${a*3}…) and circle the first one that ${b} also visits.`,
-        explain:`Multiples of ${a}: ${[1,2,3,4,5,6].map(k=>a*k).join(', ')}… — the first one divisible by ${b} is ${ans}.`};
+        explain:`Multiples of ${a}: ${[1,2,3,4,5,6].map(k=>a*k).join(', ')}… – the first one divisible by ${b} is ${ans}.`};
     }
   },
 
@@ -2017,13 +2017,13 @@ const W4 = {
   { id:'w4t3', name:'Factors', emoji:'🧱', blurb:'The building blocks hiding inside numbers',
     lesson:[
       {title:'Building blocks 🧱', html:`
-        <p><b>Factors</b> of a number are the numbers that divide it <b>exactly</b> — no remainder, no fuss.</p>
+        <p><b>Factors</b> of a number are the numbers that divide it <b>exactly</b>– no remainder, no fuss.</p>
         <div class="exbox">12 = 1 × 12 = 2 × 6 = 3 × 4<br>Factors of 12: <b>1, 2, 3, 4, 6, 12</b></div>
         <div class="speech">Think of arranging 12 chairs into equal rows: 1 row of 12, 2 rows of 6, 3 rows of 4… every neat arrangement reveals a factor pair! 🪑</div>`},
       {title:'Factor hunting tips 🎯', html:`
-        <div class="speech gold">Factors come in <b>pairs</b> — find one, get one free! If 3 is a factor of 24, then so is 24 ÷ 3 = 8.</div>
+        <div class="speech gold">Factors come in <b>pairs</b>– find one, get one free! If 3 is a factor of 24, then so is 24 ÷ 3 = 8.</div>
         <div class="speech green">1 is a factor of EVERY number, and every number is a factor of itself. Those are the two freebies!</div>
-        <div class="speech pink">Factors vs multiples — don't mix them up! Factors of 12 are few (they fit INSIDE 12). Multiples of 12 go on forever (12, 24, 36, …).</div>`},
+        <div class="speech pink">Factors vs multiples – don't mix them up! Factors of 12 are few (they fit INSIDE 12). Multiples of 12 go on forever (12, 24, 36, …).</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2041,13 +2041,13 @@ const W4 = {
         const pairs = [[24,3],[36,4],[40,5],[42,6],[48,6],[45,9],[56,7],[63,7],[72,8]];
         const [n,f] = pick(pairs);
         return {type:'input', text:`Complete the factor pair of <b>${n}</b>: <div class="bigmath">${f} × ? = ${n}</div>`,
-          answer:n/f, hint:`Divide: ${n} ÷ ${f}.`, explain:`${f} × ${n/f} = ${n} — a perfect factor pair.`};
+          answer:n/f, hint:`Divide: ${n} ÷ ${f}.`, explain:`${f} × ${n/f} = ${n} – a perfect factor pair.`};
       }
       const n = pick([6,8,10,12,15,16,18,20]);
       const count = (()=>{let c=0; for(let i=1;i<=n;i++) if(n%i===0)c++; return c;})();
       return {type:'input', text:`How many factors does <b>${n}</b> have in total? <span class="small">(count 1 and ${n} too!)</span>`,
         answer:count, hint:`List the pairs: 1×${n}, 2×${n/2}… count every different number you use.`,
-        explain:`Factors of ${n}: ${(()=>{const f=[];for(let i=1;i<=n;i++)if(n%i===0)f.push(i);return f.join(', ');})()} — that's ${count}.`};
+        explain:`Factors of ${n}: ${(()=>{const f=[];for(let i=1;i<=n;i++)if(n%i===0)f.push(i);return f.join(', ');})()} – that's ${count}.`};
     }
   },
 
@@ -2057,11 +2057,11 @@ const W4 = {
       {title:'Unbreakable numbers 💎', html:`
         <p>A <b>prime</b> number has exactly <b>TWO</b> factors: 1 and itself. You cannot break it into smaller equal groups!</p>
         <div class="exbox">7 chairs: 1 row of 7 or 7 rows of 1… that's ALL. No other neat arrangement. 7 is PRIME.</div>
-        <div class="speech">A <b>composite</b> number has MORE than two factors — it can be built in several ways. 12 = 2×6 = 3×4 → composite.</div>
+        <div class="speech">A <b>composite</b> number has MORE than two factors – it can be built in several ways. 12 = 2×6 = 3×4 → composite.</div>
         <div class="speech pink">And the number <b>1</b>? It has only ONE factor (itself), so it is neither prime nor composite. A total rebel! 😎</div>`},
       {title:'The primes up to 50 🌟', html:`
         <div class="exbox" style="text-align:center;font-size:1.15rem;"><b>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47</b></div>
-        <div class="speech gold">2 is the ONLY even prime — every other even number can be split into twos! And primes are the "atoms" of maths: every number is built by multiplying primes. 🔬</div>`},
+        <div class="speech gold">2 is the ONLY even prime – every other even number can be split into twos! And primes are the "atoms" of maths: every number is built by multiplying primes. 🔬</div>`},
     ],
     gen(mode){
       const primes=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47];
@@ -2074,7 +2074,7 @@ const W4 = {
           choices:['Prime','Composite'], answer:isP?'Prime':'Composite',
           hint:'Can you find ANY factor other than 1 and itself?',
           explain: isP? `${n} has only two factors: 1 and ${n}. Prime!`
-            : `${n} = ${(()=>{for(let i=2;i<n;i++) if(n%i===0) return i+' × '+(n/i);})()} — extra factors, so composite.`};
+            : `${n} = ${(()=>{for(let i=2;i<n;i++) if(n%i===0) return i+' × '+(n/i);})()} – extra factors, so composite.`};
       }
       if(v===2){
         const p = pick(primes.filter(p=>p>5&&p<48));
@@ -2082,13 +2082,13 @@ const W4 = {
         return {type:'mc', text:`Which of these is a <b>prime</b> number?`,
           choices:mkChoices(p, shuffle(near)), answer:p,
           hint:'Check each: does anything divide it exactly, besides 1 and itself?',
-          explain:`${p} cannot be split — its only factors are 1 and ${p}.`};
+          explain:`${p} cannot be split – its only factors are 1 and ${p}.`};
       }
       const facts = [
         {q:'Which is the ONLY even prime number?', a:2, hint:'Every other even number splits into 2s…', ex:'2 has just two factors (1 and 2). Every bigger even number also has 2 as a factor.'},
-        {q:'Which is the smallest prime number?', a:2, hint:'It is even!', ex:'2 is the smallest prime. (1 is not prime — it has only one factor.)'},
+        {q:'Which is the smallest prime number?', a:2, hint:'It is even!', ex:'2 is the smallest prime. (1 is not prime – it has only one factor.)'},
         {q:'Which is the smallest composite number?', a:4, hint:'The first number with MORE than two factors.', ex:'4 = 2 × 2, so it has factors 1, 2 and 4.'},
-        {q:'How many prime numbers are there between 1 and 10?', a:4, hint:'List them: 2, 3, …', ex:'They are 2, 3, 5 and 7 — four primes.'},
+        {q:'How many prime numbers are there between 1 and 10?', a:4, hint:'List them: 2, 3, …', ex:'They are 2, 3, 5 and 7 – four primes.'},
       ];
       const f = pick(facts);
       return {type:'input', text:f.q, answer:f.a, hint:f.hint, explain:f.ex};
@@ -2096,14 +2096,14 @@ const W4 = {
   },
 
   /* ---------- w4t5 Divisibility rules ---------- */
-  { id:'w4t5', name:'Divisibility Detective', emoji:'🕵️', blurb:'Spot what divides a number — without dividing!',
+  { id:'w4t5', name:'Divisibility Detective', emoji:'🕵️', blurb:'Spot what divides a number – without dividing!',
     lesson:[
       {title:'X-ray vision for numbers 🕵️', html:`
-        <p>Divisibility rules let you SEE whether a number divides evenly — without doing the division!</p>
+        <p>Divisibility rules let you SEE whether a number divides evenly – without doing the division!</p>
         <div class="speech green"><b>÷ 2</b>: ends in 0, 2, 4, 6, 8 (even).<br><b>÷ 5</b>: ends in 0 or 5.<br><b>÷ 10</b>: ends in 0.</div>
         <div class="exbox">3,470 → ends in 0 → divisible by 2, 5 AND 10. Triple win! 🎰</div>`},
       {title:'The digit-sum magic ✨', html:`
-        <div class="speech gold"><b>÷ 3</b>: add up ALL the digits — if the sum is divisible by 3, so is the number!<br>
+        <div class="speech gold"><b>÷ 3</b>: add up ALL the digits – if the sum is divisible by 3, so is the number!<br>
         852 → 8+5+2 = 15 → 15 is 3×5 → YES, 852 ÷ 3 works! (it's 284)</div>
         <div class="speech pink"><b>÷ 9</b>: same trick, but the digit sum must divide by 9.<br>
         738 → 7+3+8 = 18 → 18 = 9×2 → YES!</div>
@@ -2118,7 +2118,7 @@ const W4 = {
         if(d===2) n = ri(100,999)*2 + (yes?0:1);
         else if(d===5){ n = ri(20,199)*5 + (yes?0:pick([1,2,3,4])); }
         else { n = ri(10,99)*10 + (yes?0:ri(1,9)); }
-        return {type:'mc', text:`Without dividing — is <b>${fmtIN(n)}</b> divisible by <b>${d}</b>?`,
+        return {type:'mc', text:`Without dividing – is <b>${fmtIN(n)}</b> divisible by <b>${d}</b>?`,
           choices:['Yes','No'], answer:yes?'Yes':'No',
           hint:`Look only at the last digit (${n%10}).`,
           explain:`It ends in ${n%10}, so it is ${yes?'':'NOT '}divisible by ${d}.`};
@@ -2144,34 +2144,34 @@ const W4 = {
       return {type:'mc', text:`<b>${n}</b> is divisible by several numbers… but which of these does <b>NOT</b> divide it exactly?`,
         choices:mkChoices(bad, shuffle(all)), answer:bad,
         hint:'Test each with its rule: last digit for 2/5/10, digit sum for 3/9.',
-        explain:`${n} ÷ ${bad} leaves a remainder — the others all divide ${n} exactly.`};
+        explain:`${n} ÷ ${bad} leaves a remainder – the others all divide ${n} exactly.`};
     }
   },
 ]};
 /* ============================================================
-   WORLD 5 — FRACTION FALLS
+   WORLD 5 – FRACTION FALLS
    ============================================================ */
 const W5 = {
   id:'w5', name:'Fraction Falls', emoji:'🌊', c1:'#0096c7', c2:'#023e8a',
-  desc:'Dive into parts of a whole — pieces, pizzas and fair shares!',
+  desc:'Dive into parts of a whole – pieces, pizzas and fair shares!',
   topics:[
 
   /* ---------- w5t1 Meet fractions ---------- */
   { id:'w5t1', name:'Meet the Fractions', emoji:'🍕', blurb:'Parts of a whole, explained with pizza',
     lesson:[
       {title:'Pieces of the whole 🍕', html:`
-        <p>Cut a pizza into <b>4 equal</b> slices and eat 3. You ate <b>three-fourths</b> — written ${frac(3,4)}.</p>
+        <p>Cut a pizza into <b>4 equal</b> slices and eat 3. You ate <b>three-fourths</b>– written ${frac(3,4)}.</p>
         <div style="text-align:center;">${fractionPie(3,4,120)}</div>
         <div class="speech">The <b>bottom number (denominator)</b> tells how many equal parts the whole is cut into.<br>
         The <b>top number (numerator)</b> tells how many parts we are talking about.</div>
-        <div class="speech pink">⚠️ The parts MUST be equal! A pizza cut into one huge and one tiny piece is not in "halves" — that's just unfair pizza. 😤</div>`},
+        <div class="speech pink">⚠️ The parts MUST be equal! A pizza cut into one huge and one tiny piece is not in "halves" – that's just unfair pizza. 😤</div>`},
       {title:'Fractions of a group 🐑', html:`
         <p>Fractions also work on groups of things:</p>
         <div class="exbox">${frac(1,2)} of 8 mangoes = 8 ÷ 2 = <b>4</b> mangoes<br>${frac(1,4)} of 12 balloons = 12 ÷ 4 = <b>3</b> balloons<br>
         And ${frac(3,4)} of 12? First find ${frac(1,4)} (= 3), then take 3 of those: 3 × 3 = <b>9</b>!</div>`},
       {title:'Play in the Fraction Lab 🧪', html:`
         <div data-widget="fraction"></div>
-        <div class="speech gold">Notice: when the top and bottom are EQUAL (like ${frac(4,4)}), the whole thing is shaded — that equals 1 whole!</div>`},
+        <div class="speech gold">Notice: when the top and bottom are EQUAL (like ${frac(4,4)}), the whole thing is shaded – that equals 1 whole!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2200,15 +2200,15 @@ const W5 = {
   { id:'w5t2', name:'Equivalent Fractions', emoji:'👯', blurb:'Different names, same amount!',
     lesson:[
       {title:'Twins in disguise 👯', html:`
-        <p>Look closely — these two bars have the SAME amount shaded:</p>
+        <p>Look closely – these two bars have the SAME amount shaded:</p>
         <p style="text-align:center;">${frac(1,2)}${fractionBar(1,2)}</p>
         <p style="text-align:center;">${frac(2,4)}${fractionBar(2,4)}</p>
-        <div class="speech">${frac(1,2)} and ${frac(2,4)} are <b>equivalent fractions</b> — different names for the same amount, like "Mum" and "Mummy"! 💜</div>`},
+        <div class="speech">${frac(1,2)} and ${frac(2,4)} are <b>equivalent fractions</b>– different names for the same amount, like "Mum" and "Mummy"! 💜</div>`},
       {title:'The multiply-both trick ✖️', html:`
         <p>To make an equivalent fraction, multiply the top AND bottom by the <b>same</b> number:</p>
         <div class="exbox">${frac(2,3)} → multiply both by 4 → ${frac(8,12)} &nbsp; (same amount!)</div>
-        <div class="speech gold">Why does it work? Cutting every piece into 4 smaller pieces gives you more pieces, but each is smaller — the total shaded stays exactly the same. 🍰</div>
-        <div class="speech green">It works in reverse too (dividing both) — that's called <b>simplifying</b>: ${frac(6,8)} → divide both by 2 → ${frac(3,4)}.</div>`},
+        <div class="speech gold">Why does it work? Cutting every piece into 4 smaller pieces gives you more pieces, but each is smaller – the total shaded stays exactly the same. 🍰</div>
+        <div class="speech green">It works in reverse too (dividing both) – that's called <b>simplifying</b>: ${frac(6,8)} → divide both by 2 → ${frac(3,4)}.</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2229,7 +2229,7 @@ const W5 = {
       }
       const base=[[1,2],[1,3],[2,3],[3,4],[2,5]];
       const [n,d]=pick(base); const k=pick([2,3,4]);
-      return {type:'input', text:`Simplify to its smallest form — fill in the top: <div class="bigmath">${frac(n*k,d*k)} = ${frac('?',d)}</div>`,
+      return {type:'input', text:`Simplify to its smallest form – fill in the top: <div class="bigmath">${frac(n*k,d*k)} = ${frac('?',d)}</div>`,
         answer:n, hint:`The bottom was divided by ${k}. Divide the top by ${k} too.`,
         explain:`${n*k} ÷ ${k} = ${n}, so ${n*k}/${d*k} simplifies to ${n}/${d}.`};
     }
@@ -2239,16 +2239,16 @@ const W5 = {
   { id:'w5t3', name:'Comparing Fractions', emoji:'🥊', blurb:'Which piece is bigger? Not always obvious!',
     lesson:[
       {title:'Same bottom? Easy! 🥊', html:`
-        <p>When denominators are the SAME, the pieces are the same size — so more pieces = bigger fraction:</p>
+        <p>When denominators are the SAME, the pieces are the same size – so more pieces = bigger fraction:</p>
         <div class="exbox">${frac(5,8)} &gt; ${frac(3,8)} &nbsp; (5 slices beat 3 slices of the same size)</div>`},
       {title:'Same top? Think upside down! 🙃', html:`
         <p>When the NUMERATORS are the same, the fraction with the <b>smaller</b> denominator is BIGGER!</p>
-        <div class="exbox">${frac(1,3)} &gt; ${frac(1,8)} — cutting a cake into 3 gives big slices; into 8 gives small ones.</div>
+        <div class="exbox">${frac(1,3)} &gt; ${frac(1,8)} – cutting a cake into 3 gives big slices; into 8 gives small ones.</div>
         <p style="text-align:center;">${fractionBar(1,3)}${fractionBar(1,8)}</p>
         <div class="speech pink">This trips up a LOT of people. The bigger the bottom, the smaller each piece. Sharing with more friends = smaller share! 🎂</div>`},
       {title:'The half-benchmark 🎯', html:`
         <div class="speech gold">Quick compare trick: is each fraction more or less than a <b>half</b>?<br>
-        ${frac(3,8)} is less than half (half of 8 is 4). ${frac(5,9)} is more than half (half of 9 is 4.5). So ${frac(5,9)} &gt; ${frac(3,8)} — no hard maths needed!</div>`},
+        ${frac(3,8)} is less than half (half of 8 is 4). ${frac(5,9)} is more than half (half of 9 is 4.5). So ${frac(5,9)} &gt; ${frac(3,8)} – no hard maths needed!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2258,7 +2258,7 @@ const W5 = {
         const ans = a>b? `${a}/${d}` : `${b}/${d}`;
         return {type:'mc', text:`Which is <b>bigger</b>: ${frac(a,d)} or ${frac(b,d)}?`,
           choices:[`${a}/${d}`,`${b}/${d}`], answer:ans,
-          hint:'Same size pieces — who has more pieces?',
+          hint:'Same size pieces – who has more pieces?',
           explain:`Same denominators, so compare tops: ${Math.max(a,b)} > ${Math.min(a,b)}.`};
       }
       if(v===2){
@@ -2267,7 +2267,7 @@ const W5 = {
         const ans = d1<d2? `${n}/${d1}` : `${n}/${d2}`;
         return {type:'mc', text:`Which is <b>bigger</b>: ${frac(n,d1)} or ${frac(n,d2)}?`,
           choices:[`${n}/${d1}`,`${n}/${d2}`], answer:ans,
-          hint:'Same number of pieces — but which pieces are larger? Fewer cuts = bigger pieces!',
+          hint:'Same number of pieces – but which pieces are larger? Fewer cuts = bigger pieces!',
           explain:`Cutting into ${Math.min(d1,d2)} parts makes bigger pieces than ${Math.max(d1,d2)} parts, so ${ans} wins.`};
       }
       const halves=[[1,3,'less'],[2,5,'less'],[3,8,'less'],[4,10,'less'],[2,3,'more'],[3,5,'more'],[5,8,'more'],[7,10,'more'],[5,9,'more'],[4,9,'less']];
@@ -2275,7 +2275,7 @@ const W5 = {
       return {type:'mc', text:`Is ${frac(n,d)} more or less than <b>a half</b>?`,
         choices:['More than half','Less than half'], answer: side==='more'?'More than half':'Less than half',
         hint:`Half of ${d} is ${d/2}. Is ${n} bigger or smaller than that?`,
-        explain:`Half of ${d} is ${d/2}, and ${n} is ${side==='more'?'bigger':'smaller'} — so ${n}/${d} is ${side} than half.`};
+        explain:`Half of ${d} is ${d/2}, and ${n} is ${side==='more'?'bigger':'smaller'} – so ${n}/${d} is ${side} than half.`};
     }
   },
 
@@ -2283,14 +2283,14 @@ const W5 = {
   { id:'w5t4', name:'Adding Fractions', emoji:'🧮', blurb:'Add and subtract fractions with the same bottom',
     lesson:[
       {title:'Adding pieces of the same size ➕', html:`
-        <p>When denominators match, the pieces are the same size — so just add the tops!</p>
+        <p>When denominators match, the pieces are the same size – so just add the tops!</p>
         <div class="exbox">${frac(2,7)} + ${frac(3,7)} = ${frac(5,7)} &nbsp; (2 pieces + 3 pieces = 5 pieces)</div>
-        <div class="speech pink">⚠️ The bottom does NOT change! We're still cutting into 7 parts. ${frac(2,7)}+${frac(3,7)} is NOT ${frac(5,14)} — that's the classic trap! 🪤</div>`},
+        <div class="speech pink">⚠️ The bottom does NOT change! We're still cutting into 7 parts. ${frac(2,7)}+${frac(3,7)} is NOT ${frac(5,14)} – that's the classic trap! 🪤</div>`},
       {title:'Subtracting works the same ➖', html:`
         <div class="exbox">${frac(6,8)} − ${frac(1,8)} = ${frac(5,8)}</div>
         <p>And when a sum fills ALL the parts, you get one whole:</p>
         <div class="exbox">${frac(3,5)} + ${frac(2,5)} = ${frac(5,5)} = <b>1 whole</b> 🎉</div>
-        <div class="speech gold">Type your answers like <b>5/8</b> — top, slash, bottom. If the answer is a whole number, just type the number!</div>`},
+        <div class="speech gold">Type your answers like <b>5/8</b>– top, slash, bottom. If the answer is a whole number, just type the number!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2323,9 +2323,9 @@ const W5 = {
   { id:'w5t5', name:'Mixed Numbers', emoji:'🥤', blurb:'More than a whole: 1½ glasses of mango shake!',
     lesson:[
       {title:'More than one whole 🥤', html:`
-        <p>What if you drink one FULL glass of mango shake and half of another? That's <b>1${'½'}</b> glasses — a <b>mixed number</b>: a whole number and a fraction together.</p>
+        <p>What if you drink one FULL glass of mango shake and half of another? That's <b>1${'½'}</b> glasses – a <b>mixed number</b>: a whole number and a fraction together.</p>
         <div class="exbox">2${'¼'} means 2 wholes + ${frac(1,4)}</div>
-        <div class="speech">Fractions with a top ≥ bottom (like ${frac(7,4)}) are called <b>improper fractions</b> — they are worth one whole or more, so they look "top-heavy"! 🏋️</div>`},
+        <div class="speech">Fractions with a top ≥ bottom (like ${frac(7,4)}) are called <b>improper fractions</b>– they are worth one whole or more, so they look "top-heavy"! 🏋️</div>`},
       {title:'Changing costumes 🎭', html:`
         <p><b>Improper → mixed:</b> divide! ${frac(7,4)}: 7 ÷ 4 = 1 remainder 3 → <b>1 ¾</b> (1 whole and 3 quarters).</p>
         <p><b>Mixed → improper:</b> multiply and add! 2⅓ → (2 × 3) + 1 = 7 → ${frac(7,3)}.</p>
@@ -2338,7 +2338,7 @@ const W5 = {
         const imp=w*d+r;
         return {type:'input', text:`Change to an improper fraction: <div class="bigmath">${w} ${frac(r,d)} = ${frac('?',d)}</div><span class="small">Type just the top number</span>`,
           answer:imp, hint:`(${w} × ${d}) + ${r} = ?`,
-          explain:`${w} wholes = ${w*d} ${d==='2'?'halves':'parts'}, plus ${r} more = ${imp}. So ${w} ${r}/${d} = ${imp}/${d}.`};
+          explain:`${w} wholes = ${w*d} ${({2:'halves',3:'thirds',4:'quarters',5:'fifths'})[d]||'parts'}, plus ${r} more = ${imp}. So ${w} ${r}/${d} = ${imp}/${d}.`};
       }
       if(v===2){
         const d=pick([2,3,4,5]), w=ri(1,3), r=ri(1,d-1);
@@ -2355,24 +2355,24 @@ const W5 = {
       return {type:'mc', text:`Which of these is an <b>improper</b> fraction? <span class="small">(worth 1 whole or more)</span>`,
         choices:mkChoices(imp, wrongs), answer:imp,
         hint:'Improper fractions are "top-heavy": the top number is as big as, or bigger than, the bottom.',
-        explain:`In ${imp} the top is bigger than the bottom — it is worth more than 1 whole.`};
+        explain:`In ${imp} the top is bigger than the bottom – it is worth more than 1 whole.`};
     }
   },
 ]};
 
 /* ============================================================
-   WORLD 6 — DECIMAL DESERT
+   WORLD 6 – DECIMAL DESERT
    ============================================================ */
 const W6 = {
   id:'w6', name:'Decimal Desert', emoji:'🏜️', c1:'#e09f3e', c2:'#9e2a2b',
-  desc:'Cross the dunes of dots — decimals, money and measurements!',
+  desc:'Cross the dunes of dots – decimals, money and measurements!',
   topics:[
 
   /* ---------- w6t1 Tenths & hundredths ---------- */
   { id:'w6t1', name:'Tenths & Hundredths', emoji:'🔟', blurb:'The dot that splits numbers into tiny parts',
     lesson:[
       {title:'Meet the decimal point 🔟', html:`
-        <p>Places don't stop at the ones! After the ones place comes a <b>dot</b> — the decimal point — and then even SMALLER places: tenths, hundredths…</p>
+        <p>Places don't stop at the ones! After the ones place comes a <b>dot</b>– the decimal point – and then even SMALLER places: tenths, hundredths…</p>
         <table class="pvtable"><tr><th>Tens</th><th>Ones</th><th>·</th><th>Tenths</th><th>Hundredths</th></tr>
         <tr><td>1</td><td>4</td><td style="font-size:1.6rem;">.</td><td>7</td><td>5</td></tr></table>
         <p style="text-align:center;">14.75 = 14 + ${frac(7,10)} + ${frac(5,100)}</p>
@@ -2381,7 +2381,7 @@ const W6 = {
         <p>Decimals are just fractions with bottoms of 10 or 100, wearing a different costume:</p>
         <div class="exbox">${frac(3,10)} = 0.3 &nbsp;·&nbsp; ${frac(27,100)} = 0.27 &nbsp;·&nbsp; ${frac(9,100)} = 0.09</div>
         <div class="speech pink">⚠️ ${frac(9,100)} is 0.<b>0</b>9, not 0.9! The zero holds the tenths place. Nine hundredths is much smaller than nine tenths.</div>
-        <p>Here is 0.27 — twenty-seven hundredths of the square shaded:</p>
+        <p>Here is 0.27 – twenty-seven hundredths of the square shaded:</p>
         <p style="text-align:center;">${shadedGrid(10,10,27)}</p>`},
     ],
     gen(mode){
@@ -2390,7 +2390,7 @@ const W6 = {
         const n=ri(1,9);
         return {type:'input', text:`Write as a decimal: <div class="bigmath">${frac(n,10)} = ?</div>`,
           answer:`0.${n}`, inputmode:'decimal', placeholder:'0.?',
-          hint:`${n} tenths — the ${n} goes right after the dot.`,
+          hint:`${n} tenths – the ${n} goes right after the dot.`,
           explain:`${n}/10 = 0.${n} (${n} tenths).`};
       }
       if(v===2){
@@ -2398,7 +2398,7 @@ const W6 = {
         const dec = (n/100).toFixed(2);
         return {type:'input', text:`Write as a decimal: <div class="bigmath">${frac(n,100)} = ?</div>`,
           answer:dec, alt:[String(n/100)], inputmode:'decimal', placeholder:'0.??',
-          hint:`${n} hundredths — hundredths take TWO places after the dot.`,
+          hint:`${n} hundredths – hundredths take TWO places after the dot.`,
           explain:`${n}/100 = ${dec}.${n<10?' The 0 after the point holds the tenths place!':''}`};
       }
       const w=ri(1,9); let t=ri(1,9);
@@ -2418,9 +2418,9 @@ const W6 = {
   { id:'w6t2', name:'Decimals in Real Life', emoji:'💰', blurb:'Rupees-paise and metres-centimetres',
     lesson:[
       {title:'Money already speaks decimal! 💰', html:`
-        <p>You have used decimals your whole life without noticing — in prices!</p>
+        <p>You have used decimals your whole life without noticing – in prices!</p>
         <div class="exbox">₹7.50 = 7 rupees and 50 paise<br>1 rupee = <b>100 paise</b>, so 1 paisa = ₹${frac(1,100)} = ₹0.01</div>
-        <div class="speech">₹12.05 means 12 rupees and just 5 paise. That sneaky 0 in the middle matters — ₹12.05 and ₹12.50 are very different prices! 🛒</div>`},
+        <div class="speech">₹12.05 means 12 rupees and just 5 paise. That sneaky 0 in the middle matters – ₹12.05 and ₹12.50 are very different prices! 🛒</div>`},
       {title:'Measuring with decimals 📏', html:`
         <p>Metres work exactly like rupees:</p>
         <div class="exbox">1 m = 100 cm, so 1 cm = 0.01 m<br>Riya's height: 132 cm = <b>1.32 m</b> (1 whole metre + 32 hundredths)</div>
@@ -2433,7 +2433,7 @@ const W6 = {
         const dec=(r+p/100).toFixed(2);
         return {type:'input', text:`Write as rupees using a decimal: <b>${r} rupees and ${p} paise</b>`,
           prefix:'₹', answer:dec, alt:[String(r+p/100)], inputmode:'decimal', placeholder:'0.00',
-          hint:`Paise are hundredths of a rupee — they take two places after the dot.`,
+          hint:`Paise are hundredths of a rupee – they take two places after the dot.`,
           explain:`${r} rupees ${p} paise = ₹${dec}.`};
       }
       if(v===2){
@@ -2454,7 +2454,7 @@ const W6 = {
   },
 
   /* ---------- w6t3 Comparing decimals ---------- */
-  { id:'w6t3', name:'Comparing Decimals', emoji:'🏁', blurb:'0.5 vs 0.45 — the answer may surprise you!',
+  { id:'w6t3', name:'Comparing Decimals', emoji:'🏁', blurb:'0.5 vs 0.45 – the answer may surprise you!',
     lesson:[
       {title:'The great decimal race 🏁', html:`
         <p>Which is bigger, 0.5 or 0.45? Many people say 0.45 ("45 beats 5!")… but they're wrong!</p>
@@ -2473,7 +2473,7 @@ const W6 = {
         const bigger = Number(a)>Number(b)? a:b;
         return {type:'mc', text:`Which is <b>bigger</b>?<div class="bigmath">${a} or ${b}</div>`,
           choices:[a,b], answer:bigger,
-          hint:`Make them the same length: ${a}0 vs ${b}. Now compare — and remember, longer does not mean bigger!`,
+          hint:`Make them the same length: ${a}0 vs ${b}. Now compare – and remember, longer does not mean bigger!`,
           explain:`Add a zero: ${a} = ${a}0. Comparing ${a}0 with ${b} place by place, ${bigger} is bigger.`};
       }
       if(v===2){
@@ -2492,7 +2492,7 @@ const W6 = {
       return {type:'mc', text:`Which is the <b>smallest</b>?`,
         choices:shuffle(distinct), answer:ans,
         hint:'Give them all two decimal places by adding zeros, then compare.',
-        explain:`Lining them up: ${distinct.map(x=>Number(x).toFixed(2)).sort().join(' < ')} — so ${ans} is smallest.`};
+        explain:`Lining them up: ${distinct.map(x=>Number(x).toFixed(2)).sort().join(' < ')} – so ${ans} is smallest.`};
     }
   },
 
@@ -2500,14 +2500,14 @@ const W6 = {
   { id:'w6t4', name:'Decimal + and −', emoji:'🧾', blurb:'Add and subtract with the dot lined up',
     lesson:[
       {title:'Line up the dots! 🧾', html:`
-        <p>Adding decimals is just like normal adding — with ONE golden rule: <b>line up the decimal points</b>.</p>
+        <p>Adding decimals is just like normal adding – with ONE golden rule: <b>line up the decimal points</b>.</p>
         <div class="exbox" style="font-family:monospace;font-size:1.15rem;text-align:center;">
-        &nbsp;&nbsp;3.75<br>+ 1.50<br>———<br>&nbsp;&nbsp;5.25</div>
-        <div class="speech">Dot under dot means tenths add with tenths and ones with ones — everyone with their own kind! Then the dot drops straight down into the answer.</div>`},
+        &nbsp;&nbsp;3.75<br>+ 1.50<br>–  –  – <br>&nbsp;&nbsp;5.25</div>
+        <div class="speech">Dot under dot means tenths add with tenths and ones with ones – everyone with their own kind! Then the dot drops straight down into the answer.</div>`},
       {title:'Shopping maths 🛒', html:`
         <div class="exbox">A pencil costs ₹4.50 and an eraser ₹3.25.<br>Together: ₹4.50 + ₹3.25 = <b>₹7.75</b><br>
         Pay with ₹10: change = ₹10.00 − ₹7.75 = <b>₹2.25</b></div>
-        <div class="speech gold">Write ₹10 as 10.00 before subtracting — same value, but now the columns line up beautifully. 💫</div>`},
+        <div class="speech gold">Write ₹10 as 10.00 before subtracting – same value, but now the columns line up beautifully. 💫</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2524,7 +2524,7 @@ const W6 = {
         const ans=(a-b).toFixed(1).replace(/\.0$/,'');
         return {type:'input', text:`<div class="bigmath">${a.toFixed(1)} − ${b.toFixed(1)} = ?</div>`,
           answer:ans, alt:[(a-b).toFixed(1)], inputmode:'decimal',
-          hint:'Dots lined up, subtract as usual — borrow across the dot if you must.',
+          hint:'Dots lined up, subtract as usual – borrow across the dot if you must.',
           explain:`${a.toFixed(1)} − ${b.toFixed(1)} = ${(a-b).toFixed(1)}.`};
       }
       const p1=ri(150,650)/100, p2=ri(150,350)/100;
@@ -2538,11 +2538,11 @@ const W6 = {
   },
 ]};
 /* ============================================================
-   WORLD 7 — GEOMETRY GALAXY
+   WORLD 7 – GEOMETRY GALAXY
    ============================================================ */
 const W7 = {
   id:'w7', name:'Geometry Galaxy', emoji:'🌌', c1:'#5e60ce', c2:'#3a0ca3',
-  desc:'Lines, angles, shapes and space — the art side of maths!',
+  desc:'Lines, angles, shapes and space – the art side of maths!',
   topics:[
 
   /* ---------- w7t1 Points, lines, rays ---------- */
@@ -2550,13 +2550,13 @@ const W7 = {
     lesson:[
       {title:'Geometry\'s alphabet 📐', html:`
         <p>All of geometry is built from a few simple ideas:</p>
-        <div class="speech">A <b>point</b> • is just a location — it has no size at all.<br><br>
+        <div class="speech">A <b>point</b> • is just a location – it has no size at all.<br><br>
         A <b>line segment</b> ⎯ has two endpoints. Like a pencil: it starts and stops.<br><br>
         A <b>ray</b> → has ONE endpoint and shoots off forever in one direction. Like a torch beam! 🔦<br><br>
-        A <b>line</b> ↔ has NO endpoints — it goes on forever in BOTH directions.</div>`},
+        A <b>line</b> ↔ has NO endpoints – it goes on forever in BOTH directions.</div>`},
       {title:'Special line friendships 👫', html:`
-        <div class="speech gold"><b>Parallel lines</b> run side by side and NEVER meet — like railway tracks. 🛤️</div>
-        <div class="speech pink"><b>Perpendicular lines</b> cross to make a perfect square corner (a right angle) — like a plus sign ➕ or the corner of your book.</div>
+        <div class="speech gold"><b>Parallel lines</b> run side by side and NEVER meet – like railway tracks. 🛤️</div>
+        <div class="speech pink"><b>Perpendicular lines</b> cross to make a perfect square corner (a right angle) – like a plus sign ➕ or the corner of your book.</div>
         <p>Look around the room: window bars, floor tiles, the walls meeting the floor… line friendships everywhere!</p>`},
     ],
     gen(mode){
@@ -2564,7 +2564,7 @@ const W7 = {
         const s = pick([
           {q:'How many endpoints does a <b>line segment</b> have?', a:2, ex:'A segment starts and stops: 2 endpoints.'},
           {q:'How many endpoints does a <b>ray</b> have?', a:1, ex:'A ray starts at one point and never ends on the other side: 1 endpoint.'},
-          {q:'How many endpoints does a <b>line</b> have?', a:0, ex:'A line goes on forever both ways — 0 endpoints!'},
+          {q:'How many endpoints does a <b>line</b> have?', a:0, ex:'A line goes on forever both ways – 0 endpoints!'},
           {q:'How many line segments make up a <b>triangle</b>?', a:3, ex:'Each side is one segment: 3.'},
           {q:'How many line segments make up a <b>square</b>?', a:4, ex:'Four sides = four segments.'},
           {q:'How many line segments do you need to draw the capital letter <b>L</b>?', a:2, ex:'One standing, one lying down: 2 segments.'},
@@ -2574,13 +2574,13 @@ const W7 = {
           {q:'How many line segments do you need to draw the capital letter <b>V</b>?', a:2, ex:'Two slanting segments meeting at a point: 2.'},
         ]);
         return {type:'input', text:s.q, answer:s.a,
-          hint:'Picture it — or draw it on paper and count!', explain:s.ex};
+          hint:'Picture it – or draw it on paper and count!', explain:s.ex};
       }
       const qs = [
-        {q:'I have TWO endpoints. What am I?', a:'Line segment', w:['Ray','Line','Point'], ex:'A line segment starts and stops — two endpoints.'},
-        {q:'I have exactly ONE endpoint and go on forever in one direction. What am I?', a:'Ray', w:['Line segment','Line','Point'], ex:'A ray starts at a point and shoots off forever — like a torch beam.'},
+        {q:'I have TWO endpoints. What am I?', a:'Line segment', w:['Ray','Line','Point'], ex:'A line segment starts and stops – two endpoints.'},
+        {q:'I have exactly ONE endpoint and go on forever in one direction. What am I?', a:'Ray', w:['Line segment','Line','Point'], ex:'A ray starts at a point and shoots off forever – like a torch beam.'},
         {q:'I go on forever in BOTH directions. What am I?', a:'Line', w:['Ray','Line segment','Point'], ex:'A line never ends on either side.'},
-        {q:'I mark a location but have no length at all. What am I?', a:'Point', w:['Line','Ray','Line segment'], ex:'A point is just a spot — zero size.'},
+        {q:'I mark a location but have no length at all. What am I?', a:'Point', w:['Line','Ray','Line segment'], ex:'A point is just a spot – zero size.'},
         {q:'Railway tracks that never meet are like which kind of lines?', a:'Parallel lines', w:['Perpendicular lines','Curved lines','Rays'], ex:'Parallel lines keep the same distance and never meet.'},
         {q:'Two lines that meet to form a perfect square corner are called…', a:'Perpendicular lines', w:['Parallel lines','Rays','Segments'], ex:'Perpendicular lines make a right angle (90°), like a plus sign.'},
         {q:'The edge of your ruler from one end to the other is best described as a…', a:'Line segment', w:['Ray','Line','Point'], ex:'It has two clear endpoints, so it is a segment.'},
@@ -2593,17 +2593,17 @@ const W7 = {
   },
 
   /* ---------- w7t2 Angles ---------- */
-  { id:'w7t2', name:'All About Angles', emoji:'📏', blurb:'Right, acute, obtuse — sort every corner',
+  { id:'w7t2', name:'All About Angles', emoji:'📏', blurb:'Right, acute, obtuse – sort every corner',
     lesson:[
       {title:'What is an angle? 📏', html:`
         <p>An <b>angle</b> is the amount of TURN between two rays that share a corner point. We measure it in <b>degrees (°)</b>.</p>
         ${angleSVG(60,140)}
-        <div class="speech">A full turn all the way around is 360°. A half turn is 180° (a straight line!). A quarter turn is <b>90°</b> — the famous <b>right angle</b>, the perfect corner of every book and door. 📚</div>`},
+        <div class="speech">A full turn all the way around is 360°. A half turn is 180° (a straight line!). A quarter turn is <b>90°</b>– the famous <b>right angle</b>, the perfect corner of every book and door. 📚</div>`},
       {title:'The angle family 👨‍👩‍👧', html:`
         <div class="speech green"><b>Acute</b> angle: LESS than 90°. Small and cute! 🐭 (like 30°, 45°, 60°)</div>
         <div class="speech gold"><b>Right</b> angle: EXACTLY 90°. The perfect corner. 📐</div>
         <div class="speech pink"><b>Obtuse</b> angle: MORE than 90° but less than 180°. Wide open! 🦛 (like 120°, 150°)</div>
-        <div class="speech"><b>Straight</b> angle: exactly 180° — the rays point opposite ways, making a straight line.</div>
+        <div class="speech"><b>Straight</b> angle: exactly 180° – the rays point opposite ways, making a straight line.</div>
         <p>Trick to remember: <b>a-CUTE</b> = small &amp; cute; <b>ob-TUSE</b> = obviously HUGE. 😄</p>`},
     ],
     gen(mode){
@@ -2627,9 +2627,9 @@ const W7 = {
       }
       const facts=[
         {q:'How many degrees are in a RIGHT angle?', a:90, hint:'The perfect square corner…', ex:'A right angle is exactly 90°.'},
-        {q:'How many degrees are in a STRAIGHT angle (a straight line)?', a:180, hint:'Two right angles side by side.', ex:'A straight angle is 180° — half a full turn.'},
+        {q:'How many degrees are in a STRAIGHT angle (a straight line)?', a:180, hint:'Two right angles side by side.', ex:'A straight angle is 180° – half a full turn.'},
         {q:'How many degrees are in a FULL turn (all the way around)?', a:360, hint:'Spin right round!', ex:'A full turn is 360°.'},
-        {q:'How many right angles fit in a straight line?', a:2, hint:'90° + 90° = ?', ex:'2 × 90° = 180° — a straight angle.'},
+        {q:'How many right angles fit in a straight line?', a:2, hint:'90° + 90° = ?', ex:'2 × 90° = 180° – a straight angle.'},
         {q:'How many right angles are inside a rectangle?', a:4, hint:'Count the corners!', ex:'A rectangle has 4 corners, each exactly 90°.'},
       ];
       const f = pick(facts);
@@ -2642,11 +2642,11 @@ const W7 = {
     lesson:[
       {title:'Polygon parade 🎪', html:`
         <p>A <b>polygon</b> is a closed shape made of straight sides.</p>
-        <div class="speech">Triangle — 3 sides · Quadrilateral — 4 sides · Pentagon — 5 · Hexagon — 6 · Octagon — 8 (like a STOP sign 🛑)</div>
-        <div class="speech gold">Special quadrilaterals: a <b>square</b> has 4 equal sides and 4 right angles. A <b>rectangle</b> has 4 right angles, with opposite sides equal. So every square is also a rectangle — but not the other way round! 🤯</div>`},
+        <div class="speech">Triangle – 3 sides · Quadrilateral – 4 sides · Pentagon – 5 · Hexagon – 6 · Octagon – 8 (like a STOP sign 🛑)</div>
+        <div class="speech gold">Special quadrilaterals: a <b>square</b> has 4 equal sides and 4 right angles. A <b>rectangle</b> has 4 right angles, with opposite sides equal. So every square is also a rectangle – but not the other way round! 🤯</div>`},
       {title:'Circle secrets ⭕', html:`
         <p>Circles have their own vocabulary:</p>
-        <div class="speech"><b>Centre</b> — the middle point.<br><b>Radius</b> — from the centre to the edge.<br><b>Diameter</b> — all the way across, through the centre.</div>
+        <div class="speech"><b>Centre</b>– the middle point.<br><b>Radius</b>– from the centre to the edge.<br><b>Diameter</b>– all the way across, through the centre.</div>
         <div class="exbox">The diameter is always <b>twice</b> the radius:<br>radius 5 cm → diameter <b>10 cm</b>. &nbsp; d = 2 × r</div>
         <svg width="150" height="150" style="display:block;margin:6px auto;"><circle cx="75" cy="75" r="60" fill="#fffbea" stroke="#2d2a4a" stroke-width="3"/><line x1="75" y1="75" x2="135" y2="75" stroke="#7c4dff" stroke-width="3"/><line x1="15" y1="75" x2="135" y2="75" stroke="#ff6d9d" stroke-width="1.5" stroke-dasharray="5"/><circle cx="75" cy="75" r="3.5" fill="#2d2a4a"/><text x="98" y="66" font-size="13" fill="#7c4dff" font-weight="bold">radius</text></svg>`},
     ],
@@ -2657,10 +2657,10 @@ const W7 = {
         const [nm,sides]=pick(shapes);
         if(Math.random()<0.5)
           return {type:'input', text:`How many sides does a <b>${nm.toLowerCase()}</b> have?`,
-            answer:sides, hint:'Think of the shape — or its name!', explain:`A ${nm.toLowerCase()} has ${sides} sides.`};
+            answer:sides, hint:'Think of the shape – or its name!', explain:`A ${nm.toLowerCase()} has ${sides} sides.`};
         return {type:'mc', text:`Which shape has exactly <b>${sides} sides</b>?`,
           choices:mkChoices(nm, shuffle(shapes.map(s=>s[0]).filter(x=>x!==nm))), answer:nm,
-          hint:'Count carefully — pentagon 5, hexagon 6, octagon 8…', explain:`A ${nm.toLowerCase()} has ${sides} sides.`};
+          hint:'Count carefully – pentagon 5, hexagon 6, octagon 8…', explain:`A ${nm.toLowerCase()} has ${sides} sides.`};
       }
       if(v===2){
         const r=ri(2,15);
@@ -2674,12 +2674,12 @@ const W7 = {
         {q:'Which is TRUE about a square?', a:'All 4 sides are equal', w:['Only opposite sides are equal','It has 3 corners','It has no right angles'], ex:'A square has 4 equal sides AND 4 right angles.'},
         {q:'A line from the centre of a circle to its edge is called the…', a:'Radius', w:['Diameter','Perimeter','Chord'], ex:'Centre to edge = radius. All the way across = diameter.'},
         {q:'A line all the way across a circle through its centre is the…', a:'Diameter', w:['Radius','Centre','Angle'], ex:'The diameter passes through the centre and is twice the radius.'},
-        {q:'Which shape is a quadrilateral?', a:'Rectangle', w:['Triangle','Hexagon','Circle'], ex:'Quadrilateral means "4 sides" — a rectangle qualifies!'},
-        {q:'Every square is also a…', a:'Rectangle', w:['Triangle','Circle','Pentagon'], ex:'A square has 4 right angles with opposite sides equal — that makes it a special rectangle.'},
+        {q:'Which shape is a quadrilateral?', a:'Rectangle', w:['Triangle','Hexagon','Circle'], ex:'Quadrilateral means "4 sides" – a rectangle qualifies!'},
+        {q:'Every square is also a…', a:'Rectangle', w:['Triangle','Circle','Pentagon'], ex:'A square has 4 right angles with opposite sides equal – that makes it a special rectangle.'},
       ];
       const s=pick(qs);
       return {type:'mc', text:s.q, choices:mkChoices(s.a, shuffle(s.w)), answer:s.a,
-        hint:'Picture the shape in your head — or sketch it!', explain:s.ex};
+        hint:'Picture the shape in your head – or sketch it!', explain:s.ex};
     }
   },
 
@@ -2687,7 +2687,7 @@ const W7 = {
   { id:'w7t4', name:'Perimeter', emoji:'🚶', blurb:'Walk all the way around a shape',
     lesson:[
       {title:'A walk around the edge 🚶', html:`
-        <p><b>Perimeter</b> = the total distance around a shape. Imagine an ant walking all the way around the edge — how far does it walk?</p>
+        <p><b>Perimeter</b> = the total distance around a shape. Imagine an ant walking all the way around the edge – how far does it walk?</p>
         <div class="exbox">A triangle with sides 3 cm, 4 cm and 5 cm:<br>Perimeter = 3 + 4 + 5 = <b>12 cm</b></div>
         <div class="speech">Peri-meter literally means "measure around". Just ADD every side. Don't miss any! 🐜</div>`},
       {title:'Shortcut formulas ⚡', html:`
@@ -2717,7 +2717,7 @@ const W7 = {
       }
       const s=ri(4,12);
       return {type:'input', text:`The perimeter of a <b>square</b> playground is <b>${4*s} m</b>. How long is each side?`,
-        suffix:'m', answer:s, hint:'4 equal sides share the perimeter — divide by 4.',
+        suffix:'m', answer:s, hint:'4 equal sides share the perimeter – divide by 4.',
         explain:`${4*s} ÷ 4 = ${s} m per side.`};
     }
   },
@@ -2726,12 +2726,12 @@ const W7 = {
   { id:'w7t5', name:'Area', emoji:'🟪', blurb:'How much surface a shape covers',
     lesson:[
       {title:'Covering the floor 🟪', html:`
-        <p><b>Area</b> = how much surface a shape covers. We measure it in <b>square units</b> — like counting how many 1×1 tiles fit inside.</p>
+        <p><b>Area</b> = how much surface a shape covers. We measure it in <b>square units</b>– like counting how many 1×1 tiles fit inside.</p>
         <p style="text-align:center;">${shadedGrid(3,5,15)}</p>
         <div class="exbox">This 5 × 3 rectangle holds 15 tiles → area = <b>15 square units</b>.</div>
         <div class="speech">Instead of counting one by one: 3 rows of 5 tiles = 3 × 5. That's why <b>Area of a rectangle = length × breadth</b>!</div>`},
-      {title:'Area vs perimeter — don\'t mix them! 🥊', html:`
-        <div class="speech gold"><b>Perimeter</b> = distance AROUND (walking the edge) — measured in cm, m…<br><b>Area</b> = space INSIDE (painting the surface) — measured in square cm (cm²), square m (m²)…</div>
+      {title:'Area vs perimeter – don\'t mix them! 🥊', html:`
+        <div class="speech gold"><b>Perimeter</b> = distance AROUND (walking the edge) – measured in cm, m…<br><b>Area</b> = space INSIDE (painting the surface) – measured in square cm (cm²), square m (m²)…</div>
         <div class="exbox">A 6 × 4 rectangle:<br>Perimeter = 2 × (6+4) = <b>20 cm</b> &nbsp;·&nbsp; Area = 6 × 4 = <b>24 cm²</b><br>Different questions, different answers!</div>
         <div class="speech green">Square: area = side × side. A square of side 5 → 5 × 5 = <b>25 cm²</b>.</div>`},
     ],
@@ -2772,9 +2772,9 @@ const W7 = {
         <p>A shape has <b>symmetry</b> if you can fold it along a line and the two halves match EXACTLY. That fold line is the <b>line of symmetry</b>.</p>
         <div class="speech">A butterfly has one line of symmetry down the middle. A square has FOUR (two through the middles of sides, two through the corners). A circle has… infinitely many! 🤯</div>`},
       {title:'Letters have symmetry too 🔤', html:`
-        <div class="exbox" style="text-align:center;font-size:1.6rem;">A H I M O T U V W X Y — vertical mirror line ↕<br>B C D E H I K O X — horizontal mirror line ↔</div>
-        <div class="speech gold">Notice H, I, O and X appear in BOTH lists — they have two lines of symmetry! Letters like F, G, J, P, Q, R have none at all. Poor things. 😅</div>
-        <div class="speech pink">Rangoli patterns, the Taj Mahal, flowers, your own face — symmetry is everywhere in art and nature! 🌸</div>`},
+        <div class="exbox" style="text-align:center;font-size:1.6rem;">A H I M O T U V W X Y – vertical mirror line ↕<br>B C D E H I K O X – horizontal mirror line ↔</div>
+        <div class="speech gold">Notice H, I, O and X appear in BOTH lists – they have two lines of symmetry! Letters like F, G, J, P, Q, R have none at all. Poor things. 😅</div>
+        <div class="speech pink">Rangoli patterns, the Taj Mahal, flowers, your own face – symmetry is everywhere in art and nature! 🌸</div>`},
     ],
     gen(mode){
       const v = ri(1,2);
@@ -2782,7 +2782,7 @@ const W7 = {
         const shapes=[['a square',4],['a rectangle (not square)',2],['an equilateral triangle (all sides equal)',3],['a butterfly 🦋',1],['the letter H',2],['the letter A',1],['the letter X',2],['a heart ❤️',1],['the letter T',1],['the letter M',1],['the letter O',2],['the letter B',1]];
         const [nm,lines]=pick(shapes);
         return {type:'input', text:`How many lines of symmetry does <b>${nm}</b> have?`,
-          answer:lines, hint:'Imagine folding it — how many different folds make the halves match?',
+          answer:lines, hint:'Imagine folding it – how many different folds make the halves match?',
           explain:`${nm.charAt(0).toUpperCase()+nm.slice(1)} has ${lines} line${lines>1?'s':''} of symmetry.`};
       }
       const sym=['A','H','I','M','O','T','U','V','W','X','Y'];
@@ -2795,28 +2795,28 @@ const W7 = {
           : `Which letter has <b>NO</b> vertical line of symmetry?`,
         choices:mkChoices(ans, wrong), answer:ans,
         hint:'Imagine a mirror standing vertically in the middle of each letter.',
-        explain: wantSym? `Fold ${ans} down the middle — the halves match!` : `${ans} looks different in the mirror — no vertical symmetry.`};
+        explain: wantSym? `Fold ${ans} down the middle – the halves match!` : `${ans} looks different in the mirror – no vertical symmetry.`};
     }
   },
 ]};
 
 /* ============================================================
-   WORLD 8 — MEASUREMENT MEADOW
+   WORLD 8 – MEASUREMENT MEADOW
    ============================================================ */
 const W8 = {
   id:'w8', name:'Measurement Meadow', emoji:'🌼', c1:'#38b000', c2:'#007200',
-  desc:'Length, weight, time and money — measure the real world!',
+  desc:'Length, weight, time and money – measure the real world!',
   topics:[
 
   /* ---------- w8t1 Length ---------- */
-  { id:'w8t1', name:'Measuring Length', emoji:'📏', blurb:'mm, cm, m, km — pick and convert',
+  { id:'w8t1', name:'Measuring Length', emoji:'📏', blurb:'mm, cm, m, km – pick and convert',
     lesson:[
       {title:'The length family 📏', html:`
-        <div class="speech"><b>millimetre (mm)</b> — tiny! The thickness of a coin.<br>
-        <b>centimetre (cm)</b> — your fingernail's width. 1 cm = 10 mm.<br>
-        <b>metre (m)</b> — a big step. 1 m = 100 cm.<br>
-        <b>kilometre (km)</b> — for long journeys. 1 km = 1000 m.</div>
-        <div class="speech gold">Memory trick: <b>kilo = 1000</b>, <b>centi = 100 parts</b>, <b>milli = 1000 parts</b>. These prefixes work for grams and litres too — learn once, use everywhere! ♻️</div>`},
+        <div class="speech"><b>millimetre (mm)</b>– tiny! The thickness of a coin.<br>
+        <b>centimetre (cm)</b>– your fingernail's width. 1 cm = 10 mm.<br>
+        <b>metre (m)</b>– a big step. 1 m = 100 cm.<br>
+        <b>kilometre (km)</b>– for long journeys. 1 km = 1000 m.</div>
+        <div class="speech gold">Memory trick: <b>kilo = 1000</b>, <b>centi = 100 parts</b>, <b>milli = 1000 parts</b>. These prefixes work for grams and litres too – learn once, use everywhere! ♻️</div>`},
       {title:'Converting like a wizard 🧙', html:`
         <div class="exbox">Big unit → small unit: MULTIPLY<br>3 m = 3 × 100 = <b>300 cm</b> &nbsp;·&nbsp; 2 km = <b>2000 m</b><br><br>
         Small unit → big unit: DIVIDE<br>500 cm = 500 ÷ 100 = <b>5 m</b></div>
@@ -2859,15 +2859,15 @@ const W8 = {
   { id:'w8t2', name:'Weight & Capacity', emoji:'⚖️', blurb:'Grams, kilograms, millilitres and litres',
     lesson:[
       {title:'How heavy? ⚖️', html:`
-        <div class="speech"><b>gram (g)</b> — light things: a toffee is about 5 g.<br>
-        <b>kilogram (kg)</b> — heavier things: a big packet of atta is 5 kg.<br>
+        <div class="speech"><b>gram (g)</b>– light things: a toffee is about 5 g.<br>
+        <b>kilogram (kg)</b>– heavier things: a big packet of atta is 5 kg.<br>
         <b>1 kg = 1000 g</b> (there's that "kilo = 1000" again!)</div>
         <div class="exbox">2 kg 300 g = 2000 g + 300 g = <b>2300 g</b></div>`},
       {title:'How much liquid? 🥛', html:`
-        <div class="speech"><b>millilitre (mL)</b> — a spoon of medicine is 5 mL.<br>
-        <b>litre (L)</b> — a big water bottle is 1 L.<br>
+        <div class="speech"><b>millilitre (mL)</b>– a spoon of medicine is 5 mL.<br>
+        <b>litre (L)</b>– a big water bottle is 1 L.<br>
         <b>1 L = 1000 mL</b></div>
-        <div class="speech gold">Half a litre = 500 mL, quarter litre = 250 mL. Look at bottles in your kitchen — the labels are full of mL and L! 🔎</div>`},
+        <div class="speech gold">Half a litre = 500 mL, quarter litre = 250 mL. Look at bottles in your kitchen – the labels are full of mL and L! 🔎</div>`},
     ],
     gen(mode){
       const v = ri(1,4);
@@ -2904,7 +2904,7 @@ const W8 = {
       {title:'Reading a clock 🕒', html:`
         <p>The SHORT hand tells the <b>hour</b>; the LONG hand tells the <b>minutes</b>. Each number on the face = 5 minutes for the long hand.</p>
         ${clockSVG(4,30,150)}
-        <div class="speech">This clock shows <b>4:30</b> — "half past four". The minute hand at 6 means 6 × 5 = 30 minutes. The hour hand has moved HALFWAY between 4 and 5.</div>
+        <div class="speech">This clock shows <b>4:30</b>– "half past four". The minute hand at 6 means 6 × 5 = 30 minutes. The hour hand has moved HALFWAY between 4 and 5.</div>
         <div class="speech gold">Key facts: 1 hour = 60 minutes · 1 minute = 60 seconds · 1 day = 24 hours.</div>`},
       {title:'How long did it take? ⏱️', html:`
         <p><b>Elapsed time</b> = how much time passed between a start and an end.</p>
@@ -2913,7 +2913,7 @@ const W8 = {
       {title:'Calendar facts 📅', html:`
         <div class="speech">1 week = 7 days · 1 year = 12 months = 365 days (366 in a leap year!)</div>
         <div class="exbox">Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec.<br>30 days: Apr, Jun, Sep, Nov. February is special: 28 (or 29)!</div>
-        <div class="speech gold">Knuckle trick: count the months on your knuckles — knuckle months have 31 days, the dips have 30 (or fewer)! ✊</div>`},
+        <div class="speech gold">Knuckle trick: count the months on your knuckles – knuckle months have 31 days, the dips have 30 (or fewer)! ✊</div>`},
     ],
     gen(mode){
       const v = ri(1,4);
@@ -2949,7 +2949,7 @@ const W8 = {
           {q:'How many days are in the month of December?', a:31},
         ];
         const f=pick(facts);
-        return {type:'input', text:f.q, answer:f.a, hint:'Time facts — you know this!', explain:`The answer is ${f.a}.`};
+        return {type:'input', text:f.q, answer:f.a, hint:'Time facts – you know this!', explain:`The answer is ${f.a}.`};
       }
       const h=ri(1,11), m=pick([0,15,30,45]);
       const names={0:`${h} o'clock`,15:`quarter past ${h}`,30:`half past ${h}`,45:`quarter to ${h+1}`};
@@ -2968,10 +2968,10 @@ const W8 = {
       {title:'Rupee power 💵', html:`
         <p>Indian money comes in coins (₹1, ₹2, ₹5, ₹10, ₹20) and notes (₹10, ₹20, ₹50, ₹100, ₹200, ₹500).</p>
         <div class="exbox">Three ₹10 coins + one ₹5 coin = 30 + 5 = <b>₹35</b></div>
-        <div class="speech">Shopping maths is just addition (total cost) and subtraction (change). You already have the superpowers — now use them at the shop! 🛒</div>`},
+        <div class="speech">Shopping maths is just addition (total cost) and subtraction (change). You already have the superpowers – now use them at the shop! 🛒</div>`},
       {title:'Getting the right change 🪙', html:`
         <div class="exbox">A toy costs <b>₹68</b>. You pay with a <b>₹100</b> note.<br>Change = ₹100 − ₹68 = <b>₹32</b></div>
-        <div class="speech gold">Shopkeeper's trick — count UP instead of subtracting:<br>₹68 → ₹70 (that's 2) → ₹100 (that's 30 more) → total change ₹32. Fast and no borrowing! ⚡</div>`},
+        <div class="speech gold">Shopkeeper's trick – count UP instead of subtracting:<br>₹68 → ₹70 (that's 2) → ₹100 (that's 30 more) → total change ₹32. Fast and no borrowing! ⚡</div>`},
     ],
     gen(mode){
       const v = ri(1,4);
@@ -2985,7 +2985,7 @@ const W8 = {
       if(v===2){
         const cost=ri(22,88), pay=100;
         return {type:'input', text:`A toy costs <b>₹${cost}</b>. ${name} pays with a <b>₹${pay}</b> note. How much change?`,
-          prefix:'₹', answer:pay-cost, hint:`Count up from ₹${cost} to ₹${pay} — or subtract.`,
+          prefix:'₹', answer:pay-cost, hint:`Count up from ₹${cost} to ₹${pay} – or subtract.`,
           explain:`₹${pay} − ₹${cost} = ₹${pay-cost}.`};
       }
       if(v===3){
@@ -3005,7 +3005,7 @@ const W8 = {
 ]};
 
 /* ============================================================
-   WORLD 9 — DATA DETECTIVE
+   WORLD 9 – DATA DETECTIVE
    ============================================================ */
 const W9 = {
   id:'w9', name:'Data Detective', emoji:'🔍', c1:'#f72585', c2:'#7209b7',
@@ -3020,8 +3020,8 @@ const W9 = {
         <div class="exbox">1 → | &nbsp;&nbsp; 2 → || &nbsp;&nbsp; 3 → ||| &nbsp;&nbsp; 4 → |||| &nbsp;&nbsp; 5 → <s style="text-decoration:line-through;">||||</s> (four standing + one across = a "gate"!)</div>
         <div class="speech">Every complete gate = 5. To read tallies: count the gates by 5s, then add the extras.<br>${tallyHTML(13)} = 5 + 5 + 3 = <b>13</b></div>`},
       {title:'Why detectives love tallies 🕵️', html:`
-        <p>Imagine counting 47 birds one at a time — if you get distracted, you must start over! With tallies, the count is saved on paper as you go.</p>
-        <div class="speech gold">Data starts with careful counting. Once collected, we show it in tables, pictographs and bar graphs — coming up next! 📊</div>`},
+        <p>Imagine counting 47 birds one at a time – if you get distracted, you must start over! With tallies, the count is saved on paper as you go.</p>
+        <div class="speech gold">Data starts with careful counting. Once collected, we show it in tables, pictographs and bar graphs – coming up next! 📊</div>`},
     ],
     gen(mode){
       const v = ri(1,2);
@@ -3048,7 +3048,7 @@ const W9 = {
       {title:'Pictures that count 🖼️', html:`
         <p>A <b>pictograph</b> uses pictures to show numbers. The <b>key</b> tells what ONE picture is worth!</p>
         <div class="exbox">Key: ⚽ = 2 goals<br><br>Ravi: ⚽⚽⚽ → 3 × 2 = <b>6 goals</b><br>Sana: ⚽⚽⚽⚽⚽ → 5 × 2 = <b>10 goals</b></div>
-        <div class="speech pink">⚠️ NEVER skip the key! Three symbols might mean 3, 6, 15 or 30 — only the key knows. Always read it first, detective! 🔑</div>`},
+        <div class="speech pink">⚠️ NEVER skip the key! Three symbols might mean 3, 6, 15 or 30 – only the key knows. Always read it first, detective! 🔑</div>`},
     ],
     gen(mode){
       const key=pick([2,5,10]);
@@ -3069,7 +3069,7 @@ const W9 = {
       return {type:'mc', text:`${table}Who has the <b>most</b> ${emojis[1]}?`,
         choices:shuffle([...new Set(kids)]), answer:kids[maxI],
         hint:'Most symbols = most items (the key is the same for everyone).',
-        explain:`${kids[maxI]} has ${counts[maxI]} symbols = ${counts[maxI]*key} ${emojis[1]} — the most!`};
+        explain:`${kids[maxI]} has ${counts[maxI]} symbols = ${counts[maxI]*key} ${emojis[1]} – the most!`};
     }
   },
 
@@ -3077,13 +3077,13 @@ const W9 = {
   { id:'w9t3', name:'Bar Graphs', emoji:'📊', blurb:'Read the tallest story in the data',
     lesson:[
       {title:'Bars that talk 📊', html:`
-        <p>A <b>bar graph</b> shows counts as bars — the taller the bar, the bigger the number. One glance tells the whole story!</p>
+        <p>A <b>bar graph</b> shows counts as bars – the taller the bar, the bigger the number. One glance tells the whole story!</p>
         ${barGraphHTML([{k:'Mon',v:4},{k:'Tue',v:7},{k:'Wed',v:3},{k:'Thu',v:8}],'storybooks read')}
         <div class="speech">Reading a bar graph:<br>1️⃣ Read the title and labels.<br>2️⃣ Find the bar you need.<br>3️⃣ Read its height from the number.<br>Here, Thursday's bar is tallest → most books were read on Thursday (8)!</div>`},
       {title:'Comparing bars 🥇', html:`
         <div class="speech gold">Bar graphs make comparisons easy: tallest = most, shortest = least, and the DIFFERENCE between two bars = subtract their values.</div>
         <div class="exbox">Tue (7) vs Wed (3): 7 − 3 = <b>4 more</b> books on Tuesday.</div>
-        <div class="speech pink">You'll meet bar graphs in newspapers, weather reports and cricket scores — data is everywhere, detective! 🏏</div>`},
+        <div class="speech pink">You'll meet bar graphs in newspapers, weather reports and cricket scores – data is everywhere, detective! 🏏</div>`},
     ],
     gen(mode){
       const labels=pick([['Mon','Tue','Wed','Thu'],['Red','Blue','Green','Pink'],['Cats','Dogs','Fish','Birds']]);
@@ -3096,7 +3096,7 @@ const W9 = {
         const maxI=vals.indexOf(Math.max(...vals));
         return {type:'mc', text:`${graph}Which bar is the <b>tallest</b> (the most)?`,
           choices:shuffle(labels), answer:labels[maxI],
-          hint:'Just compare heights — then check with the numbers.',
+          hint:'Just compare heights – then check with the numbers.',
           explain:`${labels[maxI]} is tallest with ${vals[maxI]}.`};
       }
       if(v===2){
@@ -3115,7 +3115,7 @@ const W9 = {
   },
 ]};
 /* ============================================================
-   GO DEEP 🧠 — thinking challenges, one generator per topic.
+   GO DEEP 🧠 – thinking challenges, one generator per topic.
    Same question format as gen(), but multi-step / puzzle style.
    ============================================================ */
 function permutations(arr){
@@ -3145,7 +3145,7 @@ w1t1(){
   }
   const a=ri(10,90), b=a+ri(5,15);
   return {type:'input', text:`🧠 How many whole numbers are there <b>strictly between</b> ${a} and ${b}? <span class="small">(not counting ${a} and ${b} themselves)</span>`,
-    answer:b-a-1, hint:`Try a small case first: between 5 and 8 there are 6 and 7 — that's 2. Spot the rule!`,
+    answer:b-a-1, hint:`Try a small case first: between 5 and 8 there are 6 and 7 – that's 2. Spot the rule!`,
     explain:`From ${a+1} to ${b-1} there are ${b}−${a}−1 = ${b-a-1} numbers. (One less than the gap!)`};
 },
 w1t2(){
@@ -3186,7 +3186,7 @@ w1t3(){
   }
   const a=ri(3,9), b=ri(3,9);
   return {type:'input', text:`🧠 You know that ${a} × ${b} = ${a*b}. Use it to find: <div class="bigmath">${a} × ${b*10} = ?</div>`,
-    answer:a*b*10, hint:`${b*10} is just ${b} tens — so the answer is ${a*b} tens!`,
+    answer:a*b*10, hint:`${b*10} is just ${b} tens – so the answer is ${a*b} tens!`,
     explain:`${a} × ${b*10} = ${a*b} × 10 = ${a*b*10}. Ten times bigger!`};
 },
 w1t4(){
@@ -3215,7 +3215,7 @@ w1t5(){
   if(v===1){
     const s=ri(1,5);
     const seq=[s, s+1, s+3, s+6, s+10];
-    return {type:'input', text:`🧠 A GROWING pattern — the jumps get bigger each time! <div class="bigmath">${seq.slice(0,4).join(', ')}, ?</div>`,
+    return {type:'input', text:`🧠 A GROWING pattern – the jumps get bigger each time! <div class="bigmath">${seq.slice(0,4).join(', ')}, ?</div>`,
       answer:seq[4], hint:`Look at the jumps: +1, +2, +3… what jump comes next?`,
       explain:`The jumps grow: +1, +2, +3, +4. So ${seq[3]} + 4 = ${seq[4]}.`};
   }
@@ -3223,15 +3223,15 @@ w1t5(){
     const a=pick([2,3]), b=pick([4,5]);
     const s=ri(1,6);
     const seq=[s, s+a, s+a+b, s+2*a+b, s+2*a+2*b];
-    return {type:'input', text:`🧠 A DOUBLE pattern — two rules taking turns (+${a}, then +${b}, then +${a}…): <div class="bigmath">${seq.slice(0,4).join(', ')}, ?</div>`,
+    return {type:'input', text:`🧠 A DOUBLE pattern – two rules taking turns (+${a}, then +${b}, then +${a}…): <div class="bigmath">${seq.slice(0,4).join(', ')}, ?</div>`,
       answer:seq[4], hint:`The rule alternates: +${a}, +${b}, +${a}, … which rule's turn is it now?`,
       explain:`After +${a} comes +${b}: ${seq[3]} + ${b} = ${seq[4]}.`};
   }
   const rid=pick([
-    ['I have twice as many sides as a triangle. What am I?','Hexagon',['Square','Octagon','Pentagon'],'A triangle has 3 sides; twice 3 is 6 — a hexagon!'],
-    ['I have one side more than a square. What am I?','Pentagon',['Hexagon','Triangle','Octagon'],'A square has 4 sides; 4 + 1 = 5 — a pentagon!'],
-    ['I have twice as many sides as a square. What am I?','Octagon',['Hexagon','Pentagon','Triangle'],'A square has 4 sides; twice 4 is 8 — an octagon!'],
-    ['I have 3 fewer sides than a hexagon. What am I?','Triangle',['Square','Pentagon','Octagon'],'A hexagon has 6 sides; 6 − 3 = 3 — a triangle!'],
+    ['I have twice as many sides as a triangle. What am I?','Hexagon',['Square','Octagon','Pentagon'],'A triangle has 3 sides; twice 3 is 6 – a hexagon!'],
+    ['I have one side more than a square. What am I?','Pentagon',['Hexagon','Triangle','Octagon'],'A square has 4 sides; 4 + 1 = 5 – a pentagon!'],
+    ['I have twice as many sides as a square. What am I?','Octagon',['Hexagon','Pentagon','Triangle'],'A square has 4 sides; twice 4 is 8 – an octagon!'],
+    ['I have 3 fewer sides than a hexagon. What am I?','Triangle',['Square','Pentagon','Octagon'],'A hexagon has 6 sides; 6 − 3 = 3 – a triangle!'],
   ]);
   return {type:'mc', text:`🧠 Shape riddle! ${rid[0]}`, choices:mkChoices(rid[1], rid[2]), answer:rid[1],
     hint:'First count the sides of the shape in the clue, then do the maths.', explain:rid[3]};
@@ -3270,7 +3270,7 @@ w2t2(){
     const n=Number(d.join(''));
     const parts=shuffle([d[0]*1000, d[1]*100, d[2]*10, d[3]]);
     return {type:'input', text:`🧠 The expanded form got JUMBLED! What number is <div class="bigmath">${parts.join(' + ')}</div>`,
-      answer:n, hint:`Sort the parts in your head: thousands, hundreds, tens, ones — then read the number.`,
+      answer:n, hint:`Sort the parts in your head: thousands, hundreds, tens, ones – then read the number.`,
       explain:`${d[0]*1000} + ${d[1]*100} + ${d[2]*10} + ${d[3]} = ${fmtIN(n)}.`};
   }
   if(v===2){
@@ -3288,7 +3288,7 @@ w2t2(){
   const add=ri(1,9-d[idx]);
   const m=n+add*place;
   return {type:'input', text:`🧠 What must be ADDED to <b>${fmtIN(n)}</b> to turn it into <b>${fmtIN(m)}</b>?`,
-    answer:add*place, hint:`Compare digit by digit — which place changed, and by how much?`,
+    answer:add*place, hint:`Compare digit by digit – which place changed, and by how much?`,
     explain:`Only the ${place===100?'hundreds':'tens'} place grew by ${add}: that's ${add} × ${place} = ${add*place}.`};
 },
 w2t3(){
@@ -3313,7 +3313,7 @@ w2t3(){
       hint:'Think: the big number = how many × the small unit?', explain:s[2]};
   }
   const s=pick([
-    ['What is 1 lakh minus 1?',99999,'1,00,000 − 1 = 99,999 — all the places roll back to 9!'],
+    ['What is 1 lakh minus 1?',99999,'1,00,000 − 1 = 99,999 – all the places roll back to 9!'],
     ['What is 10,000 minus 1?',9999,'10,000 − 1 = 9,999.'],
     ['What is 1 crore minus 1?',9999999,'1,00,00,000 − 1 = 99,99,999.'],
     ['What is 1 more than 9,99,999?',1000000,'9,99,999 + 1 = 10,00,000 (ten lakh!).'],
@@ -3335,10 +3335,10 @@ w2t4(){
     if(!valid.length) return DEEP.w2t4();
     const wantBig = Math.random()<0.5;
     const ans = wantBig? Math.max(...valid):Math.min(...valid);
-    return {type:'input', text:`🧠 Super builder! Using each digit exactly once — <div class="bigmath">${shuffle(digits).join(' , ')}</div> build the <b>${wantBig?'GREATEST':'SMALLEST'}</b> possible <b>${wantEven?'EVEN':'ODD'}</b> 4-digit number.`,
+    return {type:'input', text:`🧠 Super builder! Using each digit exactly once – <div class="bigmath">${shuffle(digits).join(' , ')}</div> build the <b>${wantBig?'GREATEST':'SMALLEST'}</b> possible <b>${wantEven?'EVEN':'ODD'}</b> 4-digit number.`,
       answer:ans,
-      hint:`The ones digit must be ${wantEven?'even':'odd'} — choose it wisely, then arrange the rest ${wantBig?'big → small':'small → big (no leading 0!)'}.`,
-      explain:`The answer is ${fmtIN(ans)} — ones digit ${ans%10} makes it ${wantEven?'even':'odd'}, and the rest are arranged to be as ${wantBig?'large':'small'} as possible.`};
+      hint:`The ones digit must be ${wantEven?'even':'odd'} – choose it wisely, then arrange the rest ${wantBig?'big → small':'small → big (no leading 0!)'}.`,
+      explain:`The answer is ${fmtIN(ans)} – ones digit ${ans%10} makes it ${wantEven?'even':'odd'}, and the rest are arranged to be as ${wantBig?'large':'small'} as possible.`};
   }
   const s=pick([
     ['the GREATEST 4-digit number with all DIFFERENT digits',9876],
@@ -3378,7 +3378,7 @@ w2t5(){
   return {type:'mc', text:`🧠 Estimate the DIFFERENCE by rounding each to the nearest 100: <div class="bigmath">${a} − ${b} ≈ ?</div>`,
     choices:mkChoices(est,[est+100,est-100,est+200]).map(fmtIN), answer:fmtIN(est),
     hint:`${a} ≈ ${Math.round(a/100)*100} and ${b} ≈ ${Math.round(b/100)*100}.`,
-    explain:`${Math.round(a/100)*100} − ${Math.round(b/100)*100} = ${fmtIN(est)}. (Exact answer: ${fmtIN(a-b)} — close!)`};
+    explain:`${Math.round(a/100)*100} − ${Math.round(b/100)*100} = ${fmtIN(est)}. (Exact answer: ${fmtIN(a-b)} – close!)`};
 },
 
 /* ---------------- WORLD 3 ---------------- */
@@ -3420,7 +3420,7 @@ w3t2(){
   if(v===2){
     const a=ri(2000,9500), b=ri(500,a-800);
     return {type:'input', text:`🧠 What must be <b>subtracted</b> from ${fmtIN(a)} to leave exactly ${fmtIN(b)}?`,
-      answer:a-b, hint:`Picture it: start at ${fmtIN(a)}, land on ${fmtIN(b)} — how big was the jump?`,
+      answer:a-b, hint:`Picture it: start at ${fmtIN(a)}, land on ${fmtIN(b)} – how big was the jump?`,
       explain:`${fmtIN(a)} − ${fmtIN(b)} = ${fmtIN(a-b)}. Check: ${fmtIN(a)} − ${fmtIN(a-b)} = ${fmtIN(b)} ✓`};
   }
   const start=ri(500,900), out=ri(100,300), inn=ri(100,300);
@@ -3435,7 +3435,7 @@ w3t3(){
     const a=ri(13,45), b=ri(11,19);
     return {type:'input', text:`🧠 Clever shortcut! You are told that ${a} × ${b} = ${a*b}.<br>WITHOUT long multiplication, find: <div class="bigmath">${a} × ${b+1} = ?</div>`,
       answer:a*(b+1), hint:`${b+1} groups of ${a} is just ${b} groups… plus ONE more group of ${a}!`,
-      explain:`${a} × ${b+1} = ${a*b} + ${a} = ${a*(b+1)}. One extra group — no long multiplication needed!`};
+      explain:`${a} × ${b+1} = ${a*b} + ${a} = ${a*(b+1)}. One extra group – no long multiplication needed!`};
   }
   if(v===2){
     const b=ri(3,9), a=ri(12,98);
@@ -3462,8 +3462,8 @@ w3t4(){
   if(v===2){
     const d=ri(3,9);
     return {type:'input', text:`🧠 What is the <b>greatest 2-digit number</b> that divides exactly by <b>${d}</b>?`,
-      answer:Math.floor(99/d)*d, hint:`Start from 99 and walk downwards — or think: how many ${d}s fit below 100?`,
-      explain:`${d} × ${Math.floor(99/d)} = ${Math.floor(99/d)*d} — the biggest multiple of ${d} under 100.`};
+      answer:Math.floor(99/d)*d, hint:`Start from 99 and walk downwards – or think: how many ${d}s fit below 100?`,
+      explain:`${d} × ${Math.floor(99/d)} = ${Math.floor(99/d)*d} – the biggest multiple of ${d} under 100.`};
   }
   const v2=ri(6,9), q=ri(4,9), r=ri(1,v2-1);
   const n=v2*q+r;
@@ -3513,7 +3513,7 @@ w4t1(){
     const numOdd=ri(0,3);
     const desc = numOdd===0? 'three EVEN numbers' : numOdd===3? 'three ODD numbers' : numOdd===1? 'two even numbers and one odd number' : 'one even number and two odd numbers';
     const ans = numOdd%2===0? 'Even':'Odd';
-    return {type:'mc', text:`🧠 Without knowing the numbers — if you ADD <b>${desc}</b>, will the answer always be even or odd?`,
+    return {type:'mc', text:`🧠 Without knowing the numbers – if you ADD <b>${desc}</b>, will the answer always be even or odd?`,
       choices:['Even','Odd'], answer:ans,
       hint:'Odd numbers each have ONE extra. Extras pair up two at a time!',
       explain:`${numOdd} odd number${numOdd===1?'':'s'} means ${numOdd} extra one${numOdd===1?'':'s'}. ${numOdd%2===0? 'They pair up completely → even.':'One extra is left alone → odd.'} Try examples to see!`};
@@ -3544,10 +3544,10 @@ w4t3(){
   if(v===1){
     const sq=pick([4,9,16,25,36]);
     const near=[6,8,10,12,15,18,20,24,30,35].filter(x=>Math.abs(x-sq)<15 && x!==sq);
-    return {type:'mc', text:`🧠 Factors usually come in pairs — so most numbers have an EVEN number of factors. But one of these has an <b>ODD</b> number of factors. Which?`,
+    return {type:'mc', text:`🧠 Factors usually come in pairs – so most numbers have an EVEN number of factors. But one of these has an <b>ODD</b> number of factors. Which?`,
       choices:mkChoices(sq, shuffle(near)), answer:sq,
       hint:`Look for a special number where one factor pairs with ITSELF (like 5 × 5)…`,
-      explain:`${sq} = ${Math.sqrt(sq)} × ${Math.sqrt(sq)} — that factor pairs with itself, so the count is odd! (Factors of ${sq}: ${(()=>{const f=[];for(let i=1;i<=sq;i++)if(sq%i===0)f.push(i);return f.join(', ');})()}.) Square numbers are the special ones.`};
+      explain:`${sq} = ${Math.sqrt(sq)} × ${Math.sqrt(sq)} – that factor pairs with itself, so the count is odd! (Factors of ${sq}: ${(()=>{const f=[];for(let i=1;i<=sq;i++)if(sq%i===0)f.push(i);return f.join(', ');})()}.) Square numbers are the special ones.`};
   }
   if(v===2){
     const rid=pick([
@@ -3564,7 +3564,7 @@ w4t3(){
   const n=pick([6,8,10,12]);
   const fsum=(()=>{let s=0;for(let i=1;i<=n;i++)if(n%i===0)s+=i;return s;})();
   return {type:'input', text:`🧠 Add up ALL the factors of <b>${n}</b> (including 1 and ${n} itself). What do you get?`,
-    answer:fsum, hint:`First list every factor of ${n} — use pairs so you don't miss any — then add.`,
+    answer:fsum, hint:`First list every factor of ${n} – use pairs so you don't miss any – then add.`,
     explain:`Factors of ${n}: ${(()=>{const f=[];for(let i=1;i<=n;i++)if(n%i===0)f.push(i);return f.join(' + ');})()} = ${fsum}.`};
 },
 w4t4(){
@@ -3577,15 +3577,15 @@ w4t4(){
   }
   if(v===2){
     const [E,p,q]=pick([[10,3,7],[12,5,7],[14,3,11],[16,5,11],[18,7,11],[20,7,13],[24,11,13]]);
-    return {type:'input', text:`🧠 The number <b>${E}</b> can be written as a sum of two primes. One of them is <b>${p}</b> — what is the other?`,
+    return {type:'input', text:`🧠 The number <b>${E}</b> can be written as a sum of two primes. One of them is <b>${p}</b>– what is the other?`,
       answer:q, hint:`Simple subtraction… then check your answer is really prime!`,
-      explain:`${E} − ${p} = ${q}, and ${q} is prime ✓. (Mathematicians believe EVERY even number above 2 works like this — it's a famous unsolved mystery!)`};
+      explain:`${E} − ${p} = ${q}, and ${q} is prime ✓. (Mathematicians believe EVERY even number above 2 works like this – it's a famous unsolved mystery!)`};
   }
   const primes=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47];
   const i=ri(0,primes.length-2);
   return {type:'input', text:`🧠 What is the very NEXT prime number after <b>${primes[i]}</b>?`,
-    answer:primes[i+1], hint:`Check each number after ${primes[i]} — can anything split it?`,
-    explain:`After ${primes[i]}, the numbers ${(()=>{const out=[];for(let x=primes[i]+1;x<primes[i+1];x++)out.push(x);return out.join(', ')||'—';})()} are all composite; the next prime is ${primes[i+1]}.`};
+    answer:primes[i+1], hint:`Check each number after ${primes[i]} – can anything split it?`,
+    explain:`After ${primes[i]}, the numbers ${(()=>{const out=[];for(let x=primes[i]+1;x<primes[i+1];x++)out.push(x);return out.join(', ')||' – ';})()} are all composite; the next prime is ${primes[i+1]}.`};
 },
 w4t5(){
   const v=ri(1,3);
@@ -3595,7 +3595,7 @@ w4t5(){
     const need=(9-(s%9))%9;
     return {type:'input', text:`🧠 What is the SMALLEST digit ⬜ that makes <b>${base}⬜</b> divisible by <b>9</b>?`,
       answer:need, hint:`Digit-sum magic: ${String(base).split('').join(' + ')} + ⬜ must add up to a multiple of 9.`,
-      explain:`Digits so far add to ${s}. Adding ${need} gives ${s+need}, a multiple of 9 ✓ — so ${base}${need} ÷ 9 works.`};
+      explain:`Digits so far add to ${s}. Adding ${need} gives ${s+need}, a multiple of 9 ✓ – so ${base}${need} ÷ 9 works.`};
   }
   if(v===2){
     const base=ri(10,98);
@@ -3625,7 +3625,7 @@ w5t1(){
     const d=pick([3,4,5]), n=d-1;
     const total=d*ri(3,10);
     return {type:'input', text:`🧠 In a class of <b>${total}</b> children, ${frac(n,d)} are girls. How many are <b>BOYS</b>? 👦`,
-      answer:total/d, hint:`Careful — the question asks about boys! If ${n}/${d} are girls, what fraction are boys?`,
+      answer:total/d, hint:`Careful – the question asks about boys! If ${n}/${d} are girls, what fraction are boys?`,
       explain:`Boys are 1/${d} of the class: ${total} ÷ ${d} = ${total/d}. (Girls: ${total-total/d}.)`};
   }
   const d=pick([6,8,10,12]);
@@ -3641,7 +3641,7 @@ w5t2(){
     const base=pick([[1,2],[2,3],[1,3],[3,4],[2,5]]);
     const [n,d]=base; const k=pick([2,3,4]);
     return {type:'input', text:`🧠 Find the missing BOTTOM number: <div class="bigmath">${frac(n,d)} = ${frac(n*k,'?')}</div>`,
-      answer:d*k, hint:`The top went from ${n} to ${n*k} — it was multiplied by ${k}. The bottom must match!`,
+      answer:d*k, hint:`The top went from ${n} to ${n*k} – it was multiplied by ${k}. The bottom must match!`,
       explain:`Top: ${n} × ${k} = ${n*k}. Bottom: ${d} × ${k} = ${d*k}. So ${n}/${d} = ${n*k}/${d*k}.`};
   }
   if(v===2){
@@ -3649,10 +3649,10 @@ w5t2(){
     const [n,d]=base;
     const good=[2,3,4].map(k=>`${n*k}/${d*k}`);
     const wrong=`${n+1}/${d+1}`;
-    return {type:'mc', text:`🧠 Spot the impostor! Three of these equal ${frac(n,d)} — which one does <b>NOT</b>?`,
+    return {type:'mc', text:`🧠 Spot the impostor! Three of these equal ${frac(n,d)} – which one does <b>NOT</b>?`,
       choices:shuffle([...good.slice(0,3), wrong]), answer:wrong,
       hint:'Check each: were the top AND bottom multiplied by the SAME number?',
-      explain:`${wrong} came from ADDING 1 to top and bottom — that changes the value! (${good.join(', ')} all equal ${n}/${d}.)`};
+      explain:`${wrong} came from ADDING 1 to top and bottom – that changes the value! (${good.join(', ')} all equal ${n}/${d}.)`};
   }
   const pairs=pick([[2,[2,3]],[3,[1,2]],[2,[3,4]],[4,[1,3]],[3,[2,5]],[2,[2,5]]]);
   const k=pairs[0], [a,b]=pairs[1];
@@ -3671,17 +3671,17 @@ w5t3(){
     const target=three[vals.indexOf(wantBig? Math.max(...vals):Math.min(...vals))];
     return {type:'mc', text:`🧠 Which of these fractions is ${wantBig? 'CLOSEST to 1 whole':'the SMALLEST'}?`,
       choices:shuffle(three.map(([n,d])=>`${n}/${d}`)), answer:`${target[0]}/${target[1]}`,
-      hint:'Compare each to a half first — then think about how close each is to 1.',
+      hint:'Compare each to a half first – then think about how close each is to 1.',
       explain:`In order: ${three.slice().sort((x,y)=>x[0]/x[1]-y[0]/y[1]).map(([n,d])=>n+'/'+d).join(' < ')}. So ${target[0]}/${target[1]} is the ${wantBig?'biggest (closest to 1)':'smallest'}.`};
   }
   if(v===2){
     const less=[[1,3],[2,5],[3,8],[1,4],[4,10]];
     const more=[[2,3],[3,5],[5,8],[3,4],[7,10]];
     const [a,b]=pick(less), [c,e]=pick(more);
-    return {type:'mc', text:`🧠 Unlike denominators — use the HALF trick! Which is bigger: ${frac(a,b)} or ${frac(c,e)}?`,
+    return {type:'mc', text:`🧠 Unlike denominators – use the HALF trick! Which is bigger: ${frac(a,b)} or ${frac(c,e)}?`,
       choices:[`${a}/${b}`,`${c}/${e}`], answer:`${c}/${e}`,
       hint:`Is each more or less than a half? (Half of ${b} is ${b/2}; half of ${e} is ${e/2}.)`,
-      explain:`${a}/${b} is LESS than a half, ${c}/${e} is MORE than a half — so ${c}/${e} wins without any hard maths!`};
+      explain:`${a}/${b} is LESS than a half, ${c}/${e} is MORE than a half – so ${c}/${e} wins without any hard maths!`};
   }
   const [a,b]=pick([[1,2],[5,8],[3,4]]), [c,e]=pick([[1,3],[3,8],[1,4]]);
   const n1=pick(KIDS), n2=pick(KIDS.filter(k=>k!==n1));
@@ -3732,7 +3732,7 @@ w5t5(){
       choices:mkChoices(`${fl} and ${fl+1}`, [`${fl+1} and ${fl+2}`, `${fl-1} and ${fl}`, `${fl+2} and ${fl+3}`].filter(s=>!s.includes('-1')&&s!==`${fl} and ${fl+1}`)),
       answer:`${fl} and ${fl+1}`,
       hint:`Divide: ${imp} ÷ ${d} = ${fl} remainder ${imp%d}. So it's ${fl} wholes and a bit more…`,
-      explain:`${imp}/${d} = ${fl} ${imp%d}/${d} — more than ${fl}, less than ${fl+1}.`};
+      explain:`${imp}/${d} = ${fl} ${imp%d}/${d} – more than ${fl}, less than ${fl+1}.`};
   }
   const d=pick([2,4]);
   const w=ri(1,3), r=ri(1,d-1);
@@ -3747,10 +3747,10 @@ w6t1(){
   const v=ri(1,3);
   if(v===1){
     const w=ri(1,9), h=ri(1,9);
-    return {type:'input', text:`🧠 Trap alert! Write as a decimal: <b>${w} ones and ${h} hundredths</b> — with NO tenths at all!`,
+    return {type:'input', text:`🧠 Trap alert! Write as a decimal: <b>${w} ones and ${h} hundredths</b>– with NO tenths at all!`,
       answer:`${w}.0${h}`, inputmode:'decimal', placeholder:'?.??',
-      hint:`The tenths place is empty — but the place can't just vanish! Who holds empty places open?`,
-      explain:`${w}.0${h} — the 0 holds the tenths place. Without it, ${w}.${h} would mean ${h} TENTHS. Big difference!`};
+      hint:`The tenths place is empty – but the place can't just vanish! Who holds empty places open?`,
+      explain:`${w}.0${h} – the 0 holds the tenths place. Without it, ${w}.${h} would mean ${h} TENTHS. Big difference!`};
   }
   if(v===2){
     const s=ri(2,6), k=pick([2,3]);
@@ -3806,7 +3806,7 @@ w6t3(){
     return {type:'mc', text:`🧠 Which of these is the MIDDLE value (not biggest, not smallest)? <div class="bigmath">${t.map(x=>(x/10).toFixed(1)).join(' , ')}</div>`,
       choices:shuffle(t.map(x=>(x/10).toFixed(1))), answer:(mid/10).toFixed(1),
       hint:`Put them in order first, then pick the middle one.`,
-      explain:`In order: ${sorted.map(x=>(x/10).toFixed(1)).join(' < ')} — the middle is ${(mid/10).toFixed(1)}.`};
+      explain:`In order: ${sorted.map(x=>(x/10).toFixed(1)).join(' < ')} – the middle is ${(mid/10).toFixed(1)}.`};
   }
   const lo=ri(20,60), hi=lo+ri(4,8);
   const midVal=lo+ri(2,hi-lo-2);
@@ -3850,18 +3850,18 @@ w7t1(){
     const n=pick([3,4,5]);
     const ans=n*(n-1)/2;
     return {type:'input', text:`🧠 ${n} houses stand in a field (no three in a line). 🏠 A path is built between EVERY pair of houses. How many paths in total?`,
-      answer:ans, hint:`Draw ${n} dots and connect every pair — count carefully! (Each pair gets ONE path.)`,
+      answer:ans, hint:`Draw ${n} dots and connect every pair – count carefully! (Each pair gets ONE path.)`,
       explain:`Each of the ${n} houses connects to ${n-1} others = ${n*(n-1)}, but that counts every path twice → ${n*(n-1)}÷2 = ${ans} paths.`};
   }
   const s=pick([
     ['How many ENDPOINTS do 3 separate line segments have in total?',6,'Each segment has 2 endpoints: 3 × 2 = 6.'],
     ['How many endpoints does a ray have?',1,'A ray starts at one point and never ends on the other side.'],
-    ['How many endpoints does a line have?',0,'A line goes on forever both ways — no endpoints at all!'],
+    ['How many endpoints does a line have?',0,'A line goes on forever both ways – no endpoints at all!'],
     ['How many endpoints do 2 rays have in total?',2,'Each ray has exactly 1 endpoint: 2 × 1 = 2.'],
     ['A triangle is made of how many line segments?',3,'Each side is one segment: 3 sides = 3 segments.'],
     ['A rectangle is made of how many line segments?',4,'Four sides = four segments.'],
   ]);
-  return {type:'input', text:`🧠 ${s[0]}`, answer:s[1], hint:'Picture it — or sketch it on paper!', explain:s[2]};
+  return {type:'input', text:`🧠 ${s[0]}`, answer:s[1], hint:'Picture it – or sketch it on paper!', explain:s[2]};
 },
 w7t2(){
   const v=ri(1,3);
@@ -3869,7 +3869,7 @@ w7t2(){
     const h=ri(1,6);
     return {type:'input', text:`🧠 Clock geometry! At <b>${h} o'clock</b> exactly, what is the angle between the two hands (in degrees)?${clockSVG(h,0,140)}`,
       suffix:'°', answer:h*30,
-      hint:`A full circle is 360° and the clock has 12 numbers — so each hour-jump is 360 ÷ 12 = 30°.`,
+      hint:`A full circle is 360° and the clock has 12 numbers – so each hour-jump is 360 ÷ 12 = 30°.`,
       explain:`Each hour = 30°. The hands are ${h} hour${h>1?'s':''} apart: ${h} × 30° = ${h*30}°.`};
   }
   if(v===2){
@@ -3954,7 +3954,7 @@ w7t5(){
     return {type:'mc', text:`🧠 Mind-bender! A square's side is <b>DOUBLED</b> (from ${s} cm to ${2*s} cm). Its AREA becomes…`,
       choices:shuffle(['2 times bigger','4 times bigger','8 times bigger','the same']), answer:'4 times bigger',
       hint:`Compute both: ${s}×${s} vs ${2*s}×${2*s}. Surprise incoming…`,
-      explain:`${s}×${s} = ${s*s} cm², but ${2*s}×${2*s} = ${4*s*s} cm² — FOUR times bigger! Doubling a side doubles it in BOTH directions.`};
+      explain:`${s}×${s} = ${s*s} cm², but ${2*s}×${2*s} = ${4*s*s} cm² – FOUR times bigger! Doubling a side doubles it in BOTH directions.`};
   }
   const l1=ri(3,8), b1=ri(2,6), l2=ri(3,8), b2=ri(2,6);
   return {type:'input', text:`🧠 An L-shaped room is made of TWO rectangles joined together: one <b>${l1} m × ${b1} m</b> and one <b>${l2} m × ${b2} m</b>. What is the TOTAL floor area?`,
@@ -3974,16 +3974,16 @@ w7t6(){
   }
   if(v===2){
     return {type:'mc', text:`🧠 How many lines of symmetry does a CIRCLE have?`,
-      choices:shuffle(['1','2','4','Countless — infinite!']), answer:'Countless — infinite!',
+      choices:shuffle(['1','2','4','Countless – infinite!']), answer:'Countless – infinite!',
       hint:`Try folding a circle… does any fold through the centre fail?`,
-      explain:`EVERY line through the centre is a line of symmetry — and there are endless such lines. The circle is the champion of symmetry! 🏆`};
+      explain:`EVERY line through the centre is a line of symmetry – and there are endless such lines. The circle is the champion of symmetry! 🏆`};
   }
   const words=[['MATH',4],['TOY',3],['WIN',2],['STAR',2],['OUT',3],['HAT',3],['MIX',3],['VAN',2]];
   const symLetters='AHIMOTUVWXY';
   const [word,count]=pick(words);
   return {type:'input', text:`🧠 Letter hunt! How many letters of the word <b>${word}</b> have a vertical line of symmetry? <span class="small">(symmetric letters: A H I M O T U V W X Y)</span>`,
     answer:count, hint:`Check each letter of ${word} against the symmetric list.`,
-    explain:`${word.split('').map(L=>`${L}${symLetters.includes(L)?' ✓':' ✗'}`).join(', ')} — that's ${count}.`};
+    explain:`${word.split('').map(L=>`${L}${symLetters.includes(L)?' ✓':' ✗'}`).join(', ')} – that's ${count}.`};
 },
 
 /* ---------------- WORLD 8 ---------------- */
@@ -4008,7 +4008,7 @@ w8t1(){
       explain:`${m} m = ${m*100} cm, and ${cm} ${longer?'>':'<'} ${m*100}. So ${longer? cm+' cm':m+' m'} is longer.`};
   }
   const d=ri(100,400), days=ri(2,5);
-  return {type:'input', text:`🧠 ${pick(KIDS)}'s house is <b>${d} m</b> from the park. 🏞️ Walking there AND back every day for <b>${days} days</b> — total distance in metres?`,
+  return {type:'input', text:`🧠 ${pick(KIDS)}'s house is <b>${d} m</b> from the park. 🏞️ Walking there AND back every day for <b>${days} days</b>– total distance in metres?`,
     suffix:'m', answer:2*d*days,
     hint:`One day = there + back = 2 × ${d}. Then × ${days} days.`,
     explain:`Daily: 2 × ${d} = ${2*d} m. Over ${days} days: ${2*d} × ${days} = ${fmtIN(2*d*days)} m.`};
@@ -4061,7 +4061,7 @@ w8t3(){
   const month=pick(['March','July','August','October','December']);
   return {type:'input', text:`🧠 Careful counting! A painting camp runs from <b>${month} ${d1}</b> to <b>${month} ${d2}</b>, INCLUDING both days. How many days is that? 🎨`,
     suffix:'days', answer:d2-d1+1,
-    hint:`Try a tiny example: from the 3rd to the 5th is the 3rd, 4th, 5th — that's 3 days, not 2!`,
+    hint:`Try a tiny example: from the 3rd to the 5th is the 3rd, 4th, 5th – that's 3 days, not 2!`,
     explain:`${d2} − ${d1} = ${d2-d1}, PLUS 1 to include the starting day = ${d2-d1+1} days. (The famous +1 trick!)`};
 },
 w8t4(){
@@ -4073,7 +4073,7 @@ w8t4(){
     return {type:'input', text:`🧠 A toffee costs <b>₹${p}</b>. ${name} has <b>₹${M}</b>. What is the MAXIMUM number of toffees ${name} can buy? 🍬`,
       answer:Math.floor(M/p),
       hint:`How many ${p}s fit inside ${M}? Ignore the leftover money.`,
-      explain:`${Math.floor(M/p)} × ₹${p} = ₹${Math.floor(M/p)*p}${M%p? ` (with ₹${M%p} left over — not enough for one more)`:''}. So ${Math.floor(M/p)} toffees.`};
+      explain:`${Math.floor(M/p)} × ₹${p} = ₹${Math.floor(M/p)*p}${M%p? ` (with ₹${M%p} left over – not enough for one more)`:''}. So ${Math.floor(M/p)} toffees.`};
   }
   if(v===2){
     const s=pick([10,15,20,25,50]), k=ri(4,12);
@@ -4130,7 +4130,7 @@ w9t2(){
   const hi=counts.indexOf(Math.max(...counts)), lo=counts.indexOf(Math.min(...counts));
   return {type:'input', text:`🧠 ${table}How many MORE ${emojis[1]} does ${kids[hi]} have than ${kids[lo]}? <span class="small">(remember the key!)</span>`,
     answer:(counts[hi]-counts[lo])*key,
-    hint:`${kids[hi]} has ${counts[hi]-counts[lo]} more SYMBOLS — but each symbol = ${key} ${emojis[1]}!`,
+    hint:`${kids[hi]} has ${counts[hi]-counts[lo]} more SYMBOLS – but each symbol = ${key} ${emojis[1]}!`,
     explain:`${counts[hi]-counts[lo]} extra symbols × ${key} = ${(counts[hi]-counts[lo])*key} more ${emojis[1]}.`};
 },
 w9t3(){

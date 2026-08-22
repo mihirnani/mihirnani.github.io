@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curiosities — a collection of things I’ve made, collected, or used to learn about subjects that interest me.">
+  <meta name="description" content="Curiosities – a collection of things I’ve made, collected, or used to learn about subjects that interest me.">
   <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
   <title>Curiosities</title>
 
   <script>
@@ -20,7 +22,7 @@
   </script>
 
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Spectral:wght@400&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap");
 
     :root,
     :root[data-theme="light"] {
@@ -31,18 +33,8 @@
       --map: #9e5b2b;
       --birds: #2c6e49;
       --math: #6f4aa8;
-      --astronomy: #4f3196;
       --starweaver: #8a5a18;
       --toybox: #4e6b50;
-      --music: #6d28d9;
-      --physics: #0d47a1;
-      --german: #b3261e;
-      --italian: #21845b;
-      --french: #1f5f9f;
-      --latin: #7b1f2d;
-      --greek: #0f5e7f;
-      --sanskrit: #a3430a;
-      --software: #4f46e5;
     }
 
     :root[data-theme="dark"] {
@@ -53,18 +45,8 @@
       --map: #d09a68;
       --birds: #83bc99;
       --math: #b69ae0;
-      --astronomy: #b7a0ef;
       --starweaver: #e2ba68;
       --toybox: #83bc99;
-      --music: #b9a5f4;
-      --physics: #8ab9ff;
-      --german: #ff938d;
-      --italian: #82c7a4;
-      --french: #85b9e7;
-      --latin: #e48b97;
-      --greek: #79c0dd;
-      --sanskrit: #f09d61;
-      --software: #a5a0f7;
     }
 
     * { box-sizing: border-box; }
@@ -187,30 +169,10 @@
     .project--birds:focus-visible h3 { color: var(--birds); }
     .project--math:hover h3,
     .project--math:focus-visible h3 { color: var(--math); }
-    .project--astronomy:hover h3,
-    .project--astronomy:focus-visible h3 { color: var(--astronomy); }
     .project--starweaver:hover h3,
     .project--starweaver:focus-visible h3 { color: var(--starweaver); }
     .project--toybox:hover h3,
     .project--toybox:focus-visible h3 { color: var(--toybox); }
-    .project--music:hover h3,
-    .project--music:focus-visible h3 { color: var(--music); }
-    .project--physics:hover h3,
-    .project--physics:focus-visible h3 { color: var(--physics); }
-    .project--german:hover h3,
-    .project--german:focus-visible h3 { color: var(--german); }
-    .project--italian:hover h3,
-    .project--italian:focus-visible h3 { color: var(--italian); }
-    .project--french:hover h3,
-    .project--french:focus-visible h3 { color: var(--french); }
-    .project--latin:hover h3,
-    .project--latin:focus-visible h3 { color: var(--latin); }
-    .project--greek:hover h3,
-    .project--greek:focus-visible h3 { color: var(--greek); }
-    .project--sanskrit:hover h3,
-    .project--sanskrit:focus-visible h3 { color: var(--sanskrit); }
-    .project--software:hover h3,
-    .project--software:focus-visible h3 { color: var(--software); }
 
     .project:hover span,
     .project:focus-visible span { color: var(--text); }
@@ -261,6 +223,16 @@
       line-height: 1.4;
     }
 
+    .site-footer {
+      margin-top: clamp(3rem, 8vw, 5rem);
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer p { margin: 0 0 0.4rem; }
+
     @media (max-width: 620px) {
       .page { width: min(100% - 1.4rem, 920px); }
       main { padding-top: 2.5rem; }
@@ -292,7 +264,8 @@
     <main>
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">Curiosities</h1>
-         </section>
+        <p>Things that interest me.</p>
+      </section>
 
       <section aria-labelledby="collections-title" class="project-group">
         <h2 class="group-title" id="collections-title">Collections</h2>
@@ -300,7 +273,7 @@
           <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
             <div>
               <h3>The European Gaze on India</h3>
-              <p>Four centuries of European maps of India, from 1519 to 1946, arranged as a thematic and chronological exploration of cartography, commerce, survey, empire, and knowledge.</p>
+              <p>Sixty-five European maps of India, 1519 to 1946, with a 1947 epilogue, arranged in seven rooms as an argument about cartography, commerce, survey and empire.</p>
             </div>
             <span aria-hidden="true">Visit &rarr;</span>
           </a>
@@ -308,29 +281,28 @@
           <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
             <div>
               <h3>Birds of the Sahyadris</h3>
-              <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Verification and expansion remain ongoing.</p>
+              <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Still growing, and still being checked.</p>
             </div>
             <span aria-hidden="true">Visit &rarr;</span>
           </a>
         </div>
       </section>
 
-      <!--
       <section aria-labelledby="games-title" class="project-group">
         <h2 class="group-title" id="games-title">Games</h2>
         <div class="projects">
           <a class="project project--starweaver" href="https://naniwadekar.com/starweaver.html">
             <div>
               <h3>StarWeaver</h3>
-              <p>A procedural exploration-strategy game set in a fictional survey cluster within the real Milky Way. Different Galactic settings shape the stars, terrain, ports, and encounters; chart the cluster, build a Captain's Atlas, recover three Star Keys, and find the Celestial Gate.</p>
+              <p>An exploration-strategy game set in a fictional survey cluster within the real Milky Way. Chart the cluster, build a Captain&rsquo;s Atlas, recover three Star Keys, and find the Celestial Gate. Every voyage generates a new chart.</p>
             </div>
             <span aria-hidden="true">Play &rarr;</span>
           </a>
 
           <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
             <div>
-              <h3>MathQuest</h3>
-              <p>A mathematics learning game for children aged 7–10, with lessons, generated practice, quizzes, rewards, and a structured path through core topics.</p>
+              <h3>Math Quest</h3>
+              <p>A maths adventure for children aged 7&ndash;10: short lessons, generated practice, quizzes and rewards along a structured path from place value to fractions, geometry and measurement.</p>
             </div>
             <span aria-hidden="true">Play &rarr;</span>
           </a>
@@ -338,119 +310,27 @@
           <a class="project project--toybox" href="https://naniwadekar.com/clarity-toybox.html">
             <div>
               <h3>Toybox</h3>
-              <p>Eight quiet mini-games for memory, pattern recognition, geometry, number sense, colour, and recursive forms, with local progress and short notes on the ideas behind each game.</p>
+              <p>Eight quiet mini-games for memory, pattern, geometry, number sense, colour and recursive forms, each with a short note on the idea behind it. Progress stays on your device.</p>
             </div>
             <span aria-hidden="true">Play &rarr;</span>
           </a>
         </div>
       </section>
 
-      <section aria-labelledby="subjects-title" class="project-group">
-        <h2 class="group-title" id="subjects-title">Classical Languages</h2>
-        <div class="projects">
-       <!--
-            <a class="project project--astronomy" href="https://naniwadekar.com/astronomy.html">
-            <div>
-              <h3>Astronomy</h3>
-              <p>An interactive self-study edition of OpenStax <i>Astronomy 2e</i>, with the complete text and figures, chapter quizzes, randomised practice problems, a searchable glossary, and spaced-repetition flashcards.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--french" href="https://naniwadekar.com/apprendre-francais.html">
-            <div>
-              <h3>Apprendre le fran&ccedil;ais</h3>
-              <p>A structured French self-study course from beginner foundations to advanced grammar and usage, with vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-
-
-          <a class="project project--latin" href="https://naniwadekar.com/lingua-latina.html">
-            <div>
-              <h3>Lingua Latina</h3>
-              <p>A reading-centred Latin course from first principles to original texts, with structured grammar, exercises, morphology tables, and a graded library of prose and poetry.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--greek" href="https://naniwadekar.com/ancient-greek.html">
-            <div>
-              <h3>Hellenike &mdash; Ancient Greek</h3>
-              <p>An Attic-first Ancient Greek course from the alphabet to Homer and Plato, with an accent trainer, structured grammar, principal-parts drills, a short history of Greece, and a graded reading room.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--sanskrit" href="https://naniwadekar.com/sanskrit.html">
-            <div>
-              <h3>Sa&#7745;sk&#7771;tam &mdash; Sanskrit</h3>
-              <p>A complete Sanskrit course from the first letter of Devanagari to reading the Bhagavad G&#299;t&#257;, with IAST throughout, a sandhi trainer, a dh&#257;tu lab, P&#257;&#7751;inian grammar, and a graded reading room of fables and scripture.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-
-          <!--
-          NOT CURRENTLY DISPLAYED. Retained here for easy restoration.
-
-          <a class="project project--software" href="https://naniwadekar.com/software-systems.html">
-            <div>
-              <h3>Foundations of Software Systems</h3>
-              <p>Algorithms and data structures from first principles, combining proofs, worked traces, quizzes, spaced repetition, interactive experiments, executable challenges, synthesis capstones, and an optional AI-supervision level.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--music" href="https://naniwadekar.com/music-theory.html">
-            <div>
-              <h3>Harmonia</h3>
-              <p>An interactive music theory course with adaptive ear training, rhythm practice, notation, harmony labs, public-domain musical examples, quizzes, and spaced repetition.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--physics" href="https://naniwadekar.com/university-physics-mechanics.html">
-            <div>
-              <h3>University Physics</h3>
-              <p>An interactive self-study edition of OpenStax <i>University Physics</i>, Volumes 1–3, covering mechanics, waves, thermodynamics, electromagnetism, optics, and modern physics, with the full text, quizzes, generated practice problems, and spaced-repetition flashcards.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--italian" href="https://naniwadekar.com/impara-italiano.html">
-            <div>
-              <h3>Impara l&rsquo;Italiano</h3>
-              <p>A structured Italian self-study course covering the A1–B2 syllabus, with grammar, vocabulary, examples, exercises, quizzes, audio, verb tables, a phrasebook, and spaced repetition.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-          <a class="project project--german" href="https://naniwadekar.com/deutsch-lernen.html">
-            <div>
-              <h3>Deutsch lernen</h3>
-              <p>A structured German self-study course from A1 foundations to advanced C1 topics, with grammar, cases, vocabulary, exercises, pronunciation, quizzes, and spaced repetition.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-
-        </div>
-      </section>
-
       <section aria-labelledby="install-title" class="install">
-        <h2 id="install-title">Get this as an app</h2>
-        <p>Any of these projects can live on your iPhone or iPad Home Screen and open full-screen, like an app. Each one also works offline after it has been opened once.</p>
+        <h2 id="install-title">Use these as apps</h2>
+        <p>Each project can sit on a phone or tablet Home Screen and open full-screen, like an app, and each works offline once it has been opened.</p>
         <ol>
-          <li>Open the project you want in <strong>Safari</strong>.</li>
-          <li>Tap the <strong>Share</strong> button <span class="share-glyph" aria-hidden="true">&uarr;</span> — the square with an upward arrow.</li>
-          <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
-          <li>Tap <strong>Add</strong>. Its icon appears with your other apps.</li>
+          <li>Open the project in <strong>Safari</strong> (iPhone or iPad) or <strong>Chrome</strong> (Android).</li>
+          <li>Tap <strong>Share</strong> <span class="share-glyph" aria-hidden="true">&uarr;</span> in Safari, or the &#8942; menu in Chrome.</li>
+          <li>Choose <strong>Add to Home Screen</strong> (or <strong>Install app</strong>).</li>
         </ol>
-        <p class="note">On Android, open the project in Chrome, tap the &#8942; menu, and choose <strong>Install app</strong> or <strong>Add to Home screen</strong>.</p>
       </section>
-      -->
     </main>
+
+    <footer class="site-footer">
+      <p class="colophon">Built by hand, hosted on GitHub Pages. The map and bird collections are open, non-commercial study projects; image credits are given on each page.</p>
+    </footer>
   </div>
 
   <script>
