@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Curiosities – a collection of things I’ve made, collected, or used to learn about subjects that interest me.">
+  <meta name="description" content="Curiosities – history and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and essays.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
@@ -33,6 +33,7 @@
       --map: #9e5b2b;
       --birds: #2c6e49;
       --deccan: #8c2f32;
+      --essays: #7b1f2d;
       --greek: #0f5e7f;
       --math: #6f4aa8;
       --starweaver: #8a5a18;
@@ -47,6 +48,7 @@
       --map: #d09a68;
       --birds: #83bc99;
       --deccan: #d98c6a;
+      --essays: #e48b97;
       --greek: #79c0dd;
       --math: #b69ae0;
       --starweaver: #e2ba68;
@@ -169,10 +171,10 @@
 
     .project--maps:hover h3,
     .project--maps:focus-visible h3 { color: var(--map); }
+    .project--essays:hover h3,
+    .project--essays:focus-visible h3 { color: var(--essays); }
     .project--deccan:hover h3,
     .project--deccan:focus-visible h3 { color: var(--deccan); }
-    .project--greek:hover h3,
-    .project--greek:focus-visible h3 { color: var(--greek); }
     .project--birds:hover h3,
     .project--birds:focus-visible h3 { color: var(--birds); }
     .project--math:hover h3,
@@ -189,6 +191,10 @@
       outline: 2px solid currentColor;
       outline-offset: 6px;
     }
+
+    .project-group--light .project { padding: 1.1rem 0; }
+    .project-group--light .project h3 { font-size: clamp(1.35rem, 3vw, 1.7rem); }
+    .project-group--light .project p { font-size: 0.95rem; }
 
     .about,
     .install {
@@ -231,6 +237,72 @@
       line-height: 1.4;
     }
 
+    .columns {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: clamp(2rem, 6vw, 5rem);
+      align-items: start;
+    }
+
+    .col { margin-top: 0; }
+
+    .col-intro {
+      margin: 0 0 0.8rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .latest {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .latest li {
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .latest .d {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .latest a {
+      display: block;
+      font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+      font-size: clamp(1.35rem, 3vw, 1.7rem);
+      line-height: 1.15;
+      margin: 0.2rem 0 0.3rem;
+      text-decoration: none;
+    }
+
+    .latest a:hover, .latest a:focus-visible { color: var(--essays); }
+
+    .latest p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .also {
+      margin: 1.4rem 0 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .also a { text-decoration: none; }
+    .also a:hover { text-decoration: underline; }
+
+    @media (max-width: 820px) {
+      .columns { grid-template-columns: 1fr; }
+      .col--essays { margin-top: clamp(2.2rem, 5vw, 3.4rem); }
+    }
+
     @media (max-width: 620px) {
       .page { width: min(100% - 1.4rem, 920px); }
       main { padding-top: 2.5rem; }
@@ -247,8 +319,9 @@
   <link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
+  <link rel="alternate" type="application/rss+xml" title="Essays – Curiosities" href="https://naniwadekar.com/essays/feed.xml">
   <meta property="og:title" content="Curiosities"><meta name="twitter:card" content="summary_large_image"><meta property="og:site_name" content="Curiosities">
-  <meta property="og:description" content="A collection of things I’ve made, collected, or used to learn about subjects that interest me.">
+  <meta property="og:description" content="History and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and essays.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://naniwadekar.com/">
   <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
@@ -262,89 +335,51 @@
     <main>
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">Curiosities</h1>
-        <p>Things that interest me.</p>
+        <p>History and natural history, mostly of the Deccan and the Western Ghats.</p>
       </section>
 
-      <section aria-labelledby="collections-title" class="project-group">
-        <h2 class="group-title" id="collections-title">Collections</h2>
-        <div class="projects">
-          <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
-            <div>
-              <h3>The European Gaze on India</h3>
-              <p>Sixty-five European maps of India, 1519 to 1946, with a 1947 epilogue, arranged in seven rooms as an argument about cartography, commerce, survey and empire.</p>
-            </div>
-            <span aria-hidden="true">Visit &rarr;</span>
-          </a>
+      <div class="columns">
+        <section aria-labelledby="collections-title" class="project-group col">
+          <h2 class="group-title" id="collections-title">Collections</h2>
+          <div class="projects">
+            <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
+              <div>
+                <h3>The European Gaze on India</h3>
+                <p>Sixty-five European maps of India, 1519 to 1946, with a 1947 epilogue, arranged in seven rooms as an argument about cartography, commerce, survey and empire.</p>
+              </div>
+              <span aria-hidden="true">Visit &rarr;</span>
+            </a>
 
-          <a class="project project--deccan" href="https://naniwadekar.com/deccan/">
-            <div>
-              <h3>The Deccan, 1500&ndash;1830s</h3>
-              <p>A timeline of the Deccan from Vijayanagara to the Company in seventy-six entries &ndash; battles, treaties, people, places, documents &ndash; arranged in five periods with the polities as a filter, and linked to the maps.</p>
-            </div>
-            <span aria-hidden="true">Visit &rarr;</span>
-          </a>
+            <a class="project project--deccan" href="https://naniwadekar.com/deccan/">
+              <div>
+                <h3>The Deccan, 1500&ndash;1830s</h3>
+                <p>A timeline of the Deccan from Vijayanagara to the Company in seventy-six entries &ndash; battles, treaties, people, places, documents &ndash; arranged in five periods with the polities as a filter, and linked to the maps.</p>
+              </div>
+              <span aria-hidden="true">Visit &rarr;</span>
+            </a>
 
-          <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
-            <div>
-              <h3>Birds of the Sahyadris</h3>
-              <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Still growing, and still being checked.</p>
-            </div>
-            <span aria-hidden="true">Visit &rarr;</span>
-          </a>
-        </div>
-      </section>
+            <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
+              <div>
+                <h3>Birds of the Sahyadris</h3>
+                <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Still growing, and still being checked.</p>
+              </div>
+              <span aria-hidden="true">Visit &rarr;</span>
+            </a>
+          </div>
 
-      <section aria-labelledby="games-title" class="project-group">
-        <h2 class="group-title" id="games-title">Games</h2>
-        <div class="projects">
-          <a class="project project--starweaver" href="https://naniwadekar.com/starweaver.html">
-            <div>
-              <h3>StarWeaver</h3>
-              <p>An exploration-strategy game set in a fictional survey cluster within the real Milky Way. Chart the cluster, build a Captain&rsquo;s Atlas, recover three Star Keys, and find the Celestial Gate. Every voyage generates a new chart.</p>
-            </div>
-            <span aria-hidden="true">Play &rarr;</span>
-          </a>
+          <p class="also"><a href="https://naniwadekar.com/more/">Also: an Ancient Greek course, and three small games &rarr;</a></p>
+        </section>
 
-          <a class="project project--math" href="https://naniwadekar.com/mathquest.html">
-            <div>
-              <h3>Math Quest</h3>
-              <p>A maths adventure for children aged 7&ndash;10: short lessons, generated practice, quizzes and rewards along a structured path from place value to fractions, geometry and measurement.</p>
-            </div>
-            <span aria-hidden="true">Play &rarr;</span>
-          </a>
-
-          <a class="project project--toybox" href="https://naniwadekar.com/clarity-toybox.html">
-            <div>
-              <h3>Toybox</h3>
-              <p>Eight quiet mini-games for memory, pattern, geometry, number sense, colour and recursive forms, each with a short note on the idea behind it. Progress stays on your device.</p>
-            </div>
-            <span aria-hidden="true">Play &rarr;</span>
-          </a>
-        </div>
-      </section>
-
-      <section aria-labelledby="study-title" class="project-group">
-        <h2 class="group-title" id="study-title">Study</h2>
-        <div class="projects">
-          <a class="project project--greek" href="https://naniwadekar.com/ancient-greek.html">
-            <div>
-              <h3>Hellenike &ndash; Ancient Greek</h3>
-              <p>A self-study course from the alphabet to a first reading of Homer: Attic grammar built stage by stage, exercises and spaced repetition, morphology tables and principal parts, a short history of Greece, and a graded reading room.</p>
-            </div>
-            <span aria-hidden="true">Study &rarr;</span>
-          </a>
-        </div>
-      </section>
-
-      <section aria-labelledby="install-title" class="install">
-        <h2 id="install-title">Use these as apps</h2>
-        <p>Each project can sit on a phone or tablet Home Screen and open full-screen, like an app, and each works offline once it has been opened.</p>
-        <ol>
-          <li>Open the project in <strong>Safari</strong> (iPhone or iPad) or <strong>Chrome</strong> (Android).</li>
-          <li>Tap <strong>Share</strong> <span class="share-glyph" aria-hidden="true">&uarr;</span> in Safari, or the &#8942; menu in Chrome.</li>
-          <li>Choose <strong>Add to Home Screen</strong> (or <strong>Install app</strong>).</li>
-        </ol>
-      </section>
+        <section aria-labelledby="essays-title" class="project-group col col--essays">
+          <h2 class="group-title" id="essays-title">Essays</h2>
+          <p class="col-intro"><a href="https://naniwadekar.com/essays/">All essays</a> &middot; <a href="https://naniwadekar.com/essays/feed.xml">RSS</a></p>
+          <ul class="latest">
+<!-- essays:start -->
+            <li><span class="d">22 August 2026</span><a href="https://naniwadekar.com/essays/2026-08-22-welcome-to-curiosities.html">Welcome to Curiosities</a><p>What this site is, what is on it, and what the essays will be.</p></li>
+<!-- essays:end -->
+          </ul>
+        </section>
+      </div>
     </main>
 
   </div>
