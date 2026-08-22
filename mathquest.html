@@ -599,6 +599,7 @@ function topbarHTML(){
     <label class="iconbtn" title="Resume game (load a saved progress file)" style="cursor:pointer;">📂<input type="file" accept=".json,application/json" style="display:none" onchange="if(this.files[0]){importSave(this.files[0]);this.value='';}"></label>
     <button class="iconbtn" onclick="go('badges')" title="Badges">🏅</button>
     <button class="iconbtn" onclick="go('parent')" title="Parent corner & progress">📊</button>
+    <a class="iconbtn" href="https://naniwadekar.com/" title="Leave Math Quest and go back to Curiosities" style="text-decoration:none">⌂</a>
   </div>`;
 }
 
@@ -1009,7 +1010,7 @@ function initPlaceValueWidget(el){
   if(el.dataset.ready) return; el.dataset.ready='1';
   el.innerHTML = `
     <div style="text-align:center;background:#f8f6ff;border-radius:16px;padding:14px;border:2px solid #e3daff;">
-      <b>🔬 Place Value Explorer</b>– type any number and watch the magic!<br>
+      <b>🔬 Place Value Explorer</b> – type any number and watch the magic!<br>
       <input style="font-size:1.3rem;padding:8px 14px;border-radius:12px;border:3px solid #ddd2ff;width:190px;text-align:center;font-weight:700;margin:10px 0;"
         maxlength="8" inputmode="numeric" placeholder="e.g. 4705" value="4705">
       <div class="pv-out"></div>
@@ -1054,7 +1055,7 @@ function initFractionWidget(el){
   if(el.dataset.ready) return; el.dataset.ready='1';
   el.innerHTML = `
     <div style="text-align:center;background:#f8f6ff;border-radius:16px;padding:14px;border:2px solid #e3daff;">
-      <b>🧪 Fraction Lab</b>– build your own fraction!<br>
+      <b>🧪 Fraction Lab</b> – build your own fraction!<br>
       <div style="margin:10px 0;">
         Shaded parts: <select class="fw-n" style="font-size:1.05rem;padding:4px 8px;border-radius:8px;"></select>
         &nbsp; Total parts: <select class="fw-d" style="font-size:1.05rem;padding:4px 8px;border-radius:8px;"></select>
@@ -1348,7 +1349,7 @@ const W1 = {
     lesson:[
       {title:'Shapes all around 🔷', html:`
         <p>Shapes are everywhere – your book 📖 is a <b>rectangle</b>, a samosa 🥟 is a <b>triangle</b>, a roti 🫓 is a <b>circle</b>!</p>
-        <div class="speech"><b>Triangle</b>– 3 sides, 3 corners<br><b>Square</b>– 4 equal sides, 4 corners<br><b>Rectangle</b>– 4 sides (opposite sides equal), 4 corners<br><b>Circle</b>– perfectly round, no corners at all!</div>
+        <div class="speech"><b>Triangle</b> – 3 sides, 3 corners<br><b>Square</b> – 4 equal sides, 4 corners<br><b>Rectangle</b> – 4 sides (opposite sides equal), 4 corners<br><b>Circle</b> – perfectly round, no corners at all!</div>
         <p>Corners are where two sides meet. Mathematicians call them <b>vertices</b>.</p>`},
       {title:'Patterns are rules in disguise 🕵️', html:`
         <p>A pattern repeats or grows by a <b>rule</b>. Find the rule and you can predict the future!</p>
@@ -1839,7 +1840,7 @@ const W3 = {
       {title:'When sharing isn\'t perfect 🍕', html:`
         <p>Share 13 pizza slices among 4 friends: each gets 3 slices… and <b>1 slice is left over</b>. That leftover is the <b>remainder</b>!</p>
         <div class="exbox">13 ÷ 4 = <b>3 remainder 1</b> &nbsp; (because 4 × 3 = 12, and 13 − 12 = 1)</div>
-        <div class="speech">The remainder is always <b>smaller than the divisor</b>– if 4 or more slices were left, everyone could get another one!</div>`},
+        <div class="speech">The remainder is always <b>smaller than the divisor</b> – if 4 or more slices were left, everyone could get another one!</div>`},
       {title:'Long division, step by step 🪜', html:`
         <p>For bigger numbers we divide place by place, left to right. Divide, multiply, subtract, bring down – repeat!</p>
         <div class="exbox">96 ÷ 4: &nbsp; 9 ÷ 4 → 2 (4×2=8, remainder 1) → bring down 6 → 16 ÷ 4 = 4 → answer <b>24</b>.</div>
@@ -2017,11 +2018,11 @@ const W4 = {
   { id:'w4t3', name:'Factors', emoji:'🧱', blurb:'The building blocks hiding inside numbers',
     lesson:[
       {title:'Building blocks 🧱', html:`
-        <p><b>Factors</b> of a number are the numbers that divide it <b>exactly</b>– no remainder, no fuss.</p>
+        <p><b>Factors</b> of a number are the numbers that divide it <b>exactly</b> – no remainder, no fuss.</p>
         <div class="exbox">12 = 1 × 12 = 2 × 6 = 3 × 4<br>Factors of 12: <b>1, 2, 3, 4, 6, 12</b></div>
         <div class="speech">Think of arranging 12 chairs into equal rows: 1 row of 12, 2 rows of 6, 3 rows of 4… every neat arrangement reveals a factor pair! 🪑</div>`},
       {title:'Factor hunting tips 🎯', html:`
-        <div class="speech gold">Factors come in <b>pairs</b>– find one, get one free! If 3 is a factor of 24, then so is 24 ÷ 3 = 8.</div>
+        <div class="speech gold">Factors come in <b>pairs</b> – find one, get one free! If 3 is a factor of 24, then so is 24 ÷ 3 = 8.</div>
         <div class="speech green">1 is a factor of EVERY number, and every number is a factor of itself. Those are the two freebies!</div>
         <div class="speech pink">Factors vs multiples – don't mix them up! Factors of 12 are few (they fit INSIDE 12). Multiples of 12 go on forever (12, 24, 36, …).</div>`},
     ],
@@ -2160,7 +2161,7 @@ const W5 = {
   { id:'w5t1', name:'Meet the Fractions', emoji:'🍕', blurb:'Parts of a whole, explained with pizza',
     lesson:[
       {title:'Pieces of the whole 🍕', html:`
-        <p>Cut a pizza into <b>4 equal</b> slices and eat 3. You ate <b>three-fourths</b>– written ${frac(3,4)}.</p>
+        <p>Cut a pizza into <b>4 equal</b> slices and eat 3. You ate <b>three-fourths</b> – written ${frac(3,4)}.</p>
         <div style="text-align:center;">${fractionPie(3,4,120)}</div>
         <div class="speech">The <b>bottom number (denominator)</b> tells how many equal parts the whole is cut into.<br>
         The <b>top number (numerator)</b> tells how many parts we are talking about.</div>
@@ -2203,7 +2204,7 @@ const W5 = {
         <p>Look closely – these two bars have the SAME amount shaded:</p>
         <p style="text-align:center;">${frac(1,2)}${fractionBar(1,2)}</p>
         <p style="text-align:center;">${frac(2,4)}${fractionBar(2,4)}</p>
-        <div class="speech">${frac(1,2)} and ${frac(2,4)} are <b>equivalent fractions</b>– different names for the same amount, like "Mum" and "Mummy"! 💜</div>`},
+        <div class="speech">${frac(1,2)} and ${frac(2,4)} are <b>equivalent fractions</b> – different names for the same amount, like "Mum" and "Mummy"! 💜</div>`},
       {title:'The multiply-both trick ✖️', html:`
         <p>To make an equivalent fraction, multiply the top AND bottom by the <b>same</b> number:</p>
         <div class="exbox">${frac(2,3)} → multiply both by 4 → ${frac(8,12)} &nbsp; (same amount!)</div>
@@ -2290,7 +2291,7 @@ const W5 = {
         <div class="exbox">${frac(6,8)} − ${frac(1,8)} = ${frac(5,8)}</div>
         <p>And when a sum fills ALL the parts, you get one whole:</p>
         <div class="exbox">${frac(3,5)} + ${frac(2,5)} = ${frac(5,5)} = <b>1 whole</b> 🎉</div>
-        <div class="speech gold">Type your answers like <b>5/8</b>– top, slash, bottom. If the answer is a whole number, just type the number!</div>`},
+        <div class="speech gold">Type your answers like <b>5/8</b> – top, slash, bottom. If the answer is a whole number, just type the number!</div>`},
     ],
     gen(mode){
       const v = ri(1,3);
@@ -2325,7 +2326,7 @@ const W5 = {
       {title:'More than one whole 🥤', html:`
         <p>What if you drink one FULL glass of mango shake and half of another? That's <b>1${'½'}</b> glasses – a <b>mixed number</b>: a whole number and a fraction together.</p>
         <div class="exbox">2${'¼'} means 2 wholes + ${frac(1,4)}</div>
-        <div class="speech">Fractions with a top ≥ bottom (like ${frac(7,4)}) are called <b>improper fractions</b>– they are worth one whole or more, so they look "top-heavy"! 🏋️</div>`},
+        <div class="speech">Fractions with a top ≥ bottom (like ${frac(7,4)}) are called <b>improper fractions</b> – they are worth one whole or more, so they look "top-heavy"! 🏋️</div>`},
       {title:'Changing costumes 🎭', html:`
         <p><b>Improper → mixed:</b> divide! ${frac(7,4)}: 7 ÷ 4 = 1 remainder 3 → <b>1 ¾</b> (1 whole and 3 quarters).</p>
         <p><b>Mixed → improper:</b> multiply and add! 2⅓ → (2 × 3) + 1 = 7 → ${frac(7,3)}.</p>
@@ -2372,7 +2373,7 @@ const W6 = {
   { id:'w6t1', name:'Tenths & Hundredths', emoji:'🔟', blurb:'The dot that splits numbers into tiny parts',
     lesson:[
       {title:'Meet the decimal point 🔟', html:`
-        <p>Places don't stop at the ones! After the ones place comes a <b>dot</b>– the decimal point – and then even SMALLER places: tenths, hundredths…</p>
+        <p>Places don't stop at the ones! After the ones place comes a <b>dot</b> – the decimal point – and then even SMALLER places: tenths, hundredths…</p>
         <table class="pvtable"><tr><th>Tens</th><th>Ones</th><th>·</th><th>Tenths</th><th>Hundredths</th></tr>
         <tr><td>1</td><td>4</td><td style="font-size:1.6rem;">.</td><td>7</td><td>5</td></tr></table>
         <p style="text-align:center;">14.75 = 14 + ${frac(7,10)} + ${frac(5,100)}</p>
@@ -2598,7 +2599,7 @@ const W7 = {
       {title:'What is an angle? 📏', html:`
         <p>An <b>angle</b> is the amount of TURN between two rays that share a corner point. We measure it in <b>degrees (°)</b>.</p>
         ${angleSVG(60,140)}
-        <div class="speech">A full turn all the way around is 360°. A half turn is 180° (a straight line!). A quarter turn is <b>90°</b>– the famous <b>right angle</b>, the perfect corner of every book and door. 📚</div>`},
+        <div class="speech">A full turn all the way around is 360°. A half turn is 180° (a straight line!). A quarter turn is <b>90°</b> – the famous <b>right angle</b>, the perfect corner of every book and door. 📚</div>`},
       {title:'The angle family 👨‍👩‍👧', html:`
         <div class="speech green"><b>Acute</b> angle: LESS than 90°. Small and cute! 🐭 (like 30°, 45°, 60°)</div>
         <div class="speech gold"><b>Right</b> angle: EXACTLY 90°. The perfect corner. 📐</div>
@@ -2646,7 +2647,7 @@ const W7 = {
         <div class="speech gold">Special quadrilaterals: a <b>square</b> has 4 equal sides and 4 right angles. A <b>rectangle</b> has 4 right angles, with opposite sides equal. So every square is also a rectangle – but not the other way round! 🤯</div>`},
       {title:'Circle secrets ⭕', html:`
         <p>Circles have their own vocabulary:</p>
-        <div class="speech"><b>Centre</b>– the middle point.<br><b>Radius</b>– from the centre to the edge.<br><b>Diameter</b>– all the way across, through the centre.</div>
+        <div class="speech"><b>Centre</b> – the middle point.<br><b>Radius</b> – from the centre to the edge.<br><b>Diameter</b> – all the way across, through the centre.</div>
         <div class="exbox">The diameter is always <b>twice</b> the radius:<br>radius 5 cm → diameter <b>10 cm</b>. &nbsp; d = 2 × r</div>
         <svg width="150" height="150" style="display:block;margin:6px auto;"><circle cx="75" cy="75" r="60" fill="#fffbea" stroke="#2d2a4a" stroke-width="3"/><line x1="75" y1="75" x2="135" y2="75" stroke="#7c4dff" stroke-width="3"/><line x1="15" y1="75" x2="135" y2="75" stroke="#ff6d9d" stroke-width="1.5" stroke-dasharray="5"/><circle cx="75" cy="75" r="3.5" fill="#2d2a4a"/><text x="98" y="66" font-size="13" fill="#7c4dff" font-weight="bold">radius</text></svg>`},
     ],
@@ -2726,7 +2727,7 @@ const W7 = {
   { id:'w7t5', name:'Area', emoji:'🟪', blurb:'How much surface a shape covers',
     lesson:[
       {title:'Covering the floor 🟪', html:`
-        <p><b>Area</b> = how much surface a shape covers. We measure it in <b>square units</b>– like counting how many 1×1 tiles fit inside.</p>
+        <p><b>Area</b> = how much surface a shape covers. We measure it in <b>square units</b> – like counting how many 1×1 tiles fit inside.</p>
         <p style="text-align:center;">${shadedGrid(3,5,15)}</p>
         <div class="exbox">This 5 × 3 rectangle holds 15 tiles → area = <b>15 square units</b>.</div>
         <div class="speech">Instead of counting one by one: 3 rows of 5 tiles = 3 × 5. That's why <b>Area of a rectangle = length × breadth</b>!</div>`},
@@ -2812,10 +2813,10 @@ const W8 = {
   { id:'w8t1', name:'Measuring Length', emoji:'📏', blurb:'mm, cm, m, km – pick and convert',
     lesson:[
       {title:'The length family 📏', html:`
-        <div class="speech"><b>millimetre (mm)</b>– tiny! The thickness of a coin.<br>
-        <b>centimetre (cm)</b>– your fingernail's width. 1 cm = 10 mm.<br>
-        <b>metre (m)</b>– a big step. 1 m = 100 cm.<br>
-        <b>kilometre (km)</b>– for long journeys. 1 km = 1000 m.</div>
+        <div class="speech"><b>millimetre (mm)</b> – tiny! The thickness of a coin.<br>
+        <b>centimetre (cm)</b> – your fingernail's width. 1 cm = 10 mm.<br>
+        <b>metre (m)</b> – a big step. 1 m = 100 cm.<br>
+        <b>kilometre (km)</b> – for long journeys. 1 km = 1000 m.</div>
         <div class="speech gold">Memory trick: <b>kilo = 1000</b>, <b>centi = 100 parts</b>, <b>milli = 1000 parts</b>. These prefixes work for grams and litres too – learn once, use everywhere! ♻️</div>`},
       {title:'Converting like a wizard 🧙', html:`
         <div class="exbox">Big unit → small unit: MULTIPLY<br>3 m = 3 × 100 = <b>300 cm</b> &nbsp;·&nbsp; 2 km = <b>2000 m</b><br><br>
@@ -2859,13 +2860,13 @@ const W8 = {
   { id:'w8t2', name:'Weight & Capacity', emoji:'⚖️', blurb:'Grams, kilograms, millilitres and litres',
     lesson:[
       {title:'How heavy? ⚖️', html:`
-        <div class="speech"><b>gram (g)</b>– light things: a toffee is about 5 g.<br>
-        <b>kilogram (kg)</b>– heavier things: a big packet of atta is 5 kg.<br>
+        <div class="speech"><b>gram (g)</b> – light things: a toffee is about 5 g.<br>
+        <b>kilogram (kg)</b> – heavier things: a big packet of atta is 5 kg.<br>
         <b>1 kg = 1000 g</b> (there's that "kilo = 1000" again!)</div>
         <div class="exbox">2 kg 300 g = 2000 g + 300 g = <b>2300 g</b></div>`},
       {title:'How much liquid? 🥛', html:`
-        <div class="speech"><b>millilitre (mL)</b>– a spoon of medicine is 5 mL.<br>
-        <b>litre (L)</b>– a big water bottle is 1 L.<br>
+        <div class="speech"><b>millilitre (mL)</b> – a spoon of medicine is 5 mL.<br>
+        <b>litre (L)</b> – a big water bottle is 1 L.<br>
         <b>1 L = 1000 mL</b></div>
         <div class="speech gold">Half a litre = 500 mL, quarter litre = 250 mL. Look at bottles in your kitchen – the labels are full of mL and L! 🔎</div>`},
     ],
@@ -2904,7 +2905,7 @@ const W8 = {
       {title:'Reading a clock 🕒', html:`
         <p>The SHORT hand tells the <b>hour</b>; the LONG hand tells the <b>minutes</b>. Each number on the face = 5 minutes for the long hand.</p>
         ${clockSVG(4,30,150)}
-        <div class="speech">This clock shows <b>4:30</b>– "half past four". The minute hand at 6 means 6 × 5 = 30 minutes. The hour hand has moved HALFWAY between 4 and 5.</div>
+        <div class="speech">This clock shows <b>4:30</b> – "half past four". The minute hand at 6 means 6 × 5 = 30 minutes. The hour hand has moved HALFWAY between 4 and 5.</div>
         <div class="speech gold">Key facts: 1 hour = 60 minutes · 1 minute = 60 seconds · 1 day = 24 hours.</div>`},
       {title:'How long did it take? ⏱️', html:`
         <p><b>Elapsed time</b> = how much time passed between a start and an end.</p>
@@ -3577,7 +3578,7 @@ w4t4(){
   }
   if(v===2){
     const [E,p,q]=pick([[10,3,7],[12,5,7],[14,3,11],[16,5,11],[18,7,11],[20,7,13],[24,11,13]]);
-    return {type:'input', text:`🧠 The number <b>${E}</b> can be written as a sum of two primes. One of them is <b>${p}</b>– what is the other?`,
+    return {type:'input', text:`🧠 The number <b>${E}</b> can be written as a sum of two primes. One of them is <b>${p}</b> – what is the other?`,
       answer:q, hint:`Simple subtraction… then check your answer is really prime!`,
       explain:`${E} − ${p} = ${q}, and ${q} is prime ✓. (Mathematicians believe EVERY even number above 2 works like this – it's a famous unsolved mystery!)`};
   }
@@ -3747,7 +3748,7 @@ w6t1(){
   const v=ri(1,3);
   if(v===1){
     const w=ri(1,9), h=ri(1,9);
-    return {type:'input', text:`🧠 Trap alert! Write as a decimal: <b>${w} ones and ${h} hundredths</b>– with NO tenths at all!`,
+    return {type:'input', text:`🧠 Trap alert! Write as a decimal: <b>${w} ones and ${h} hundredths</b> – with NO tenths at all!`,
       answer:`${w}.0${h}`, inputmode:'decimal', placeholder:'?.??',
       hint:`The tenths place is empty – but the place can't just vanish! Who holds empty places open?`,
       explain:`${w}.0${h} – the 0 holds the tenths place. Without it, ${w}.${h} would mean ${h} TENTHS. Big difference!`};
@@ -4008,7 +4009,7 @@ w8t1(){
       explain:`${m} m = ${m*100} cm, and ${cm} ${longer?'>':'<'} ${m*100}. So ${longer? cm+' cm':m+' m'} is longer.`};
   }
   const d=ri(100,400), days=ri(2,5);
-  return {type:'input', text:`🧠 ${pick(KIDS)}'s house is <b>${d} m</b> from the park. 🏞️ Walking there AND back every day for <b>${days} days</b>– total distance in metres?`,
+  return {type:'input', text:`🧠 ${pick(KIDS)}'s house is <b>${d} m</b> from the park. 🏞️ Walking there AND back every day for <b>${days} days</b> – total distance in metres?`,
     suffix:'m', answer:2*d*days,
     hint:`One day = there + back = 2 × ${d}. Then × ${days} days.`,
     explain:`Daily: 2 × ${d} = ${2*d} m. Over ${days} days: ${2*d} × ${days} = ${fmtIN(2*d*days)} m.`};

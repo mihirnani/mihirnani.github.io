@@ -543,6 +543,8 @@ button {
   box-shadow: none;
 }
 button:hover { background: var(--muted); border-color: var(--accent); box-shadow: none; }
+a.btnlink { font-family: inherit; font-size: .86rem; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: .48rem .78rem; text-decoration: none; flex-shrink: 0; }
+a.btnlink:hover { background: var(--muted); border-color: var(--accent); color: var(--ink); }
 button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visible, input:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -638,6 +640,7 @@ canvas { touch-action: none; }
       <div class="sub">Local-first · calm mini-games</div>
     </div>
     <div class="row" aria-label="App controls">
+      <a class="btnlink" href="https://naniwadekar.com/" title="Back to Curiosities">← Curiosities</a>
       <button id="themeToggle" type="button" title="Toggle light or dark theme">Dark</button>
       <button id="backupBtn" type="button" title="Export a local backup">Backup</button>
       <button id="restoreBtn" type="button" title="Restore a local backup">Restore</button>
@@ -661,14 +664,14 @@ canvas { touch-action: none; }
         <p class="welcome-kicker">Designed for quiet thinking and simple joy.</p>
         <p><b>Toybox</b> is a collection of eight small logic, memory, number and visual games. There are no accounts, streak obligations or timers unless a game itself needs one. Progress and preferences stay on this device and can be exported whenever you like. Toybox is part of <a href="https://naniwadekar.com/">Curiosities</a>.</p>
         <ul class="game-list">
-          <li><b>MemoryTiles</b>– match symbol pairs and sharpen recall.</li>
-          <li><b>PathLines</b>– trace flowing paths around obstacles without crossing yourself.</li>
-          <li><b>SequenceGarden</b>– watch a growing sequence and repeat it from memory.</li>
-          <li><b>Constellation</b>– reconstruct briefly shown spatial patterns.</li>
-          <li><b>SequenceForge</b>– infer the next term in a numerical pattern.</li>
-          <li><b>SumLeaves</b>– find pairs of numbers that meet a target sum.</li>
-          <li><b>ColourBloom</b>– tune RGB values until your colour approaches the target.</li>
-          <li><b>FractalGrow</b>– explore recursive branching and save the forms you grow.</li>
+          <li><b>MemoryTiles</b> – match symbol pairs and sharpen recall.</li>
+          <li><b>PathLines</b> – trace flowing paths around obstacles without crossing yourself.</li>
+          <li><b>SequenceGarden</b> – watch a growing sequence and repeat it from memory.</li>
+          <li><b>Constellation</b> – reconstruct briefly shown spatial patterns.</li>
+          <li><b>SequenceForge</b> – infer the next term in a numerical pattern.</li>
+          <li><b>SumLeaves</b> – find pairs of numbers that meet a target sum.</li>
+          <li><b>ColourBloom</b> – tune RGB values until your colour approaches the target.</li>
+          <li><b>FractalGrow</b> – explore recursive branching and save the forms you grow.</li>
         </ul>
         <p style="margin:1.25rem 0 0;color:var(--ink-dim);font-size:.9rem">Choose a game above. Your state is saved automatically in this browser.</p>
       </div>

@@ -54,6 +54,7 @@ button{font-family:inherit;}
   border-radius:8px; padding:5px 11px; font-size:13px; cursor:pointer; white-space:nowrap;
 }
 .hbtn:hover{border-color:var(--cyan); color:var(--cyan);}
+a.hbtn{text-decoration:none; display:inline-flex; align-items:center;}
 #btnMenu{display:none;font-size:20px;line-height:1;padding:7px 10px;min-width:44px;min-height:44px;text-align:center;}
 #headerMenu{display:none;position:absolute;right:calc(8px + env(safe-area-inset-right,0px));top:calc(100% + 6px);z-index:35;width:min(240px,calc(100vw - 20px));padding:7px;background:#101831;border:1px solid #34406b;border-radius:11px;box-shadow:0 16px 44px rgba(0,0,0,.5);}
 #headerMenu.on{display:block;}
@@ -289,7 +290,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
   #hdr{gap:5px;padding:calc(6px + env(safe-area-inset-top,0px)) calc(8px + env(safe-area-inset-right,0px)) 6px calc(8px + env(safe-area-inset-left,0px));position:relative;}
   #hdr h1{font-size:14px;letter-spacing:1.5px;}
   #hdr h1 span,#seedTag{display:none;}
-  #btnHelp,#btnSave,#btnNew{display:none;}
+  #btnHelp,#btnSave,#btnNew,a.hbtn{display:none;}
   #btnMenu{display:inline-block;}
   .hbtn{min-height:44px;padding:6px 9px;font-size:12px;border-radius:8px;}
 }
@@ -338,6 +339,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
   <h1>StarWeaver <span>· The Cluster Charter</span></h1>
   <div id="seedTag" title="Click to copy this cluster code"></div>
   <div class="spacer"></div>
+  <a class="hbtn" href="https://naniwadekar.com/" title="Back to Curiosities">← Curiosities</a>
   <button class="hbtn" id="btnHelp">How to Play</button>
   <button class="hbtn" id="btnSave">Save</button>
   <button class="hbtn" id="btnNew">New Voyage</button>
@@ -347,6 +349,7 @@ table.mkt .pr{color:var(--gold);} table.mkt .lo{color:var(--green);} table.mkt .
     <button type="button" id="menuHelp">How to Play</button>
     <button type="button" id="menuSave">Save voyage</button>
     <button type="button" id="menuNew">New Voyage</button>
+    <a href="https://naniwadekar.com/" role="menuitem" style="display:block;min-height:44px;padding:12px 11px;color:var(--ink);text-decoration:none;font-size:14px">← Curiosities</a>
   </div>
 </div>
 
@@ -1021,8 +1024,8 @@ function newGame(seedStr, diffKey){
   visit(S.pos);
   log(`Charter granted. The <b>${W.start.name}</b> station wishes you fair skies.`);
   log(`Scientific setting: <b>${W.context.place}</b>, about <b>${W.context.distanceLy.toLocaleString()} light-years</b> from the Solar System (fictional survey chart in a real Galactic context).`);
-  log(`Survey character: <b>${W.profile.name}</b>– ${W.profile.blurb}`);
-  log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b>– all before day ${S.dayLimit}.`);
+  log(`Survey character: <b>${W.profile.name}</b> – ${W.profile.blurb}`);
+  log(`Find the <b>3 Star Keys</b> hidden in ancient ruins, then reach the <b>Celestial Gate</b> – all before day ${S.dayLimit}.`);
   cam.x=0; cam.y=0; cam.zoom=initialChartZoom();
   centerOnShip(false);
   selected=null;
@@ -1451,11 +1454,11 @@ function updateHoverPreview(mx,my){
   if(!hoverCell||!isScanned(hoverCell)){ tipHide(); if(!selected) previewPath=null; return; }
   const c=hoverCell;
   let html="";
-  if(c.type==="star") html=`<b>${c.name}</b>– ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
-  else if(c.type==="nebula") html=`<b>${c.regionName||"Nebula"}</b>– nebula terrain, costs 2 fuel to cross`;
+  if(c.type==="star") html=`<b>${c.name}</b> – ${c.astro?c.astro.spectralClass+"-type ":""}${c.color.name} star, ${c.planets.length} planet${c.planets.length>1?"s":""}${c.hasStation?", station":""}`;
+  else if(c.type==="nebula") html=`<b>${c.regionName||"Nebula"}</b> – nebula terrain, costs 2 fuel to cross`;
   else if(c.type==="asteroid") html=`<b>${c.regionName||"Asteroid field"}</b>${S.upgrades.mining?" – mineable":""}`;
   else if(c.type==="ruin") html=`<b>${isVisited(c)?c.ruinName:"Ancient ruin"}</b>${S.ruinsDone.has(hk(c.q,c.r))?" – explored":""}`;
-  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>${c.anomalyName||"Anomaly"}</b>– resolved`:`<b>${c.anomalyName||"Anomaly"}</b>– something shimmers here`;
+  else if(c.type==="anomaly") html=S.anomsDone.has(hk(c.q,c.r))?`<b>${c.anomalyName||"Anomaly"}</b> – resolved`:`<b>${c.anomalyName||"Anomaly"}</b> – something shimmers here`;
   else if(c.type==="gate"&&S.gateRevealed) html=`<b>The Celestial Gate</b>`;
   else html=`<b>Open space</b>`;
   if(!(c.q===S.pos.q&&c.r===S.pos.r)){
@@ -1583,7 +1586,7 @@ function onArrive(){
     if(S.mission && S.mission.star===c.name) checkMissionDelivery(c);
   }
   if(c.type==="ruin" && !S.ruinsDone.has(hk(c.q,c.r))){
-    log(`You've reached the <b>${c.ruinName}</b>– an ancient ruin drifts silently here.`);
+    log(`You've reached the <b>${c.ruinName}</b> – an ancient ruin drifts silently here.`);
   }
   /* random travel encounter in open space */
   if((c.type==="space"||c.type==="asteroid"||c.type==="nebula") && S.eventCooldown===0 && dchance((W.profile&&W.profile.eventRate)||0.16)){
@@ -2387,7 +2390,7 @@ const SPACE_EVENTS=[
    ]},
   {title:"🪨 Micro-meteor Shower", text:()=>"The forward screens light up: a stream of pebbles, pretty and fast, right across your path.",
    choices:[
-     {label:()=>"Thread the stream (pilot's chance)", effect(){ if(dchance(.6)) return "You dance the ship through the sparkling hail without a scratch. The autopilot is speechless."; S.hull=Math.max(1,S.hull-2); return "Two sharp pings ring the hull like a bell. <b>−2 hull</b>– but what a ride."; }},
+     {label:()=>"Thread the stream (pilot's chance)", effect(){ if(dchance(.6)) return "You dance the ship through the sparkling hail without a scratch. The autopilot is speechless."; S.hull=Math.max(1,S.hull-2); return "Two sharp pings ring the hull like a bell. <b>−2 hull</b> – but what a ride."; }},
      {label:()=>"Shield up and push through (−1 fuel)", cond:()=>S.fuel>=1, effect(){ S.fuel--; return "Shields shrug off the pebbles in little flashes, like rain on a window."; }},
      {label:()=>"Wait for it to pass (1 day)", effect(){ advanceDays(1); return "You brew something warm and watch the prettiest storm in the sector slide by."; }},
    ]},
