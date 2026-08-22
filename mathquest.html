@@ -60,6 +60,37 @@ input,select{font-family:inherit;font-size:1em;}
   transition:transform .12s;box-shadow:var(--shadow);
 }
 .iconbtn:hover{transform:scale(1.08);}
+.menuwrap{position:relative;margin-left:auto;}
+.menuwrap .iconbtn[aria-expanded="true"]{background:#e3dbff;}
+.menu{
+  position:absolute;right:0;top:calc(100% + 6px);background:var(--card);border-radius:16px;
+  box-shadow:0 10px 30px rgba(60,40,120,.25);padding:6px;min-width:210px;z-index:40;
+  display:flex;flex-direction:column;gap:2px;
+}
+.menu[hidden]{display:none;}
+.menu .mitem{
+  display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;
+  padding:10px 12px;border-radius:12px;font-weight:700;color:var(--ink);font-size:.95rem;
+  text-decoration:none;cursor:pointer;
+}
+.menu .mitem:hover,.menu .mitem:focus-visible{background:#f1eefe;outline:none;}
+.menu .mitem:focus-visible{box-shadow:inset 0 0 0 2px var(--accent);}
+.narrow-only{display:none;}
+
+/* ---------- Continue card & Mixed Challenge ---------- */
+.continue{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+  background:linear-gradient(135deg,#fff7e0,#ffe9f1);border:3px solid #ffd98a;
+}
+.continue .cemoji{font-size:2.6rem;line-height:1;}
+.continue .cinfo{flex:1;min-width:160px;}
+.continue .cinfo small{display:block;color:var(--ink-soft);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:1px;}
+.continue .cinfo b{display:block;font-size:1.2rem;margin:2px 0;}
+.continue .cinfo .stars{color:var(--gold);letter-spacing:2px;}
+.mixedrow{text-align:center;margin:-4px 0 18px;}
+.mixedrow p{color:var(--ink-soft);font-size:.88rem;margin:6px 0 0;}
+.topicpill{display:inline-block;background:#f1eefe;border-radius:999px;padding:5px 12px;margin:3px;font-size:.9rem;font-weight:700;}
+.qtag{display:block;font-size:.82rem;color:var(--ink-soft);font-weight:700;margin-bottom:6px;}
 
 /* ---------- Cards & buttons ---------- */
 .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:16px;}
@@ -267,6 +298,8 @@ input,select{font-family:inherit;font-size:1em;}
   .lesson{overflow-x:auto;}
   .exbox{overflow-x:auto;}
   .qtext{overflow-x:auto;}
+  .wide-only{display:none;}
+  .narrow-only{display:flex;}
 }
 </style>
 
@@ -323,6 +356,9 @@ function freshState(){
     topics:{},   // tid -> {stars,best,attempts,pc,pt}  pc/pt = practice correct/total
     badges:{},   // id -> dateStr
     log:{},      // dateStr -> {xp,c,t}  (correct answers, total answered)
+    last:{ w:-1, t:-1 },   // most recently worked world/topic (indices into CURRICULUM)
+    learned:{},  // tid -> true once the Learn tab has been viewed
+    mixed:{ runs:0, best:0 },
     settings:{ sound:true, unlockAll:false },
     created: new Date().toISOString()
   };
@@ -363,6 +399,12 @@ function sanitizeSave(data){
     const v = (data.log[k] && typeof data.log[k]==='object')? data.log[k] : {};
     s.log[k] = { xp:num(v.xp,9999999), c:num(v.c,9999999), t:num(v.t,9999999) };
   });
+  const l = (data.last && typeof data.last==='object')? data.last : {};
+  s.last = { w: Number.isInteger(l.w)&&l.w>=0? Math.min(99,l.w) : -1, t: Number.isInteger(l.t)&&l.t>=0? Math.min(99,l.t) : -1 };
+  if(data.learned && typeof data.learned==='object')
+    Object.keys(data.learned).forEach(k=>{ if(/^w\d{1,2}t\d{1,2}$/.test(k) && data.learned[k]) s.learned[k]=true; });
+  const mx = (data.mixed && typeof data.mixed==='object')? data.mixed : {};
+  s.mixed = { runs:num(mx.runs,999999), best:num(mx.best,QUIZ_LEN) };
   const st = (data.settings && typeof data.settings==='object')? data.settings : {};
   s.settings.sound = st.sound!==false;
   if(typeof data.created==='string') s.created = data.created.slice(0,40);
@@ -566,8 +608,24 @@ function starStr(n){ return '★'.repeat(n)+'☆'.repeat(3-n); }
 let view = {screen:'home'};
 function go(screen, params){
   view = Object.assign({screen}, params||{});
-  if(screen==='topic'){ lessonPage=0; practice=null; quiz=null; }
+  if(screen==='topic'){
+    lessonPage=0; practice=null; quiz=null;
+    touchTopic(view.w, view.t, (view.tab||'learn')==='learn');
+    if(view.tab==='practice') startPractice(false);
+    else if(view.tab==='deep') startPractice(true);
+  }
+  if(screen!=='mixed') mixed=null;
+  closeMenu();
   window.scrollTo(0,0); render();
+}
+/* Remember the most recently worked topic (used by the Continue card). */
+function touchTopic(wi, ti, viewedLearn){
+  const w = CURRICULUM[wi]; if(!w || !w.topics[ti]) return;
+  if(!state.last) state.last={w:-1,t:-1};
+  if(!state.learned) state.learned={};
+  state.last.w = wi; state.last.t = ti;
+  if(viewedLearn) state.learned[w.topics[ti].id] = true;
+  saveState();
 }
 
 function render(){
@@ -576,6 +634,7 @@ function render(){
   if(view.screen==='home') html += homeHTML();
   else if(view.screen==='world') html += worldHTML();
   else if(view.screen==='topic') html += topicHTML();
+  else if(view.screen==='mixed') html += mixedHTML();
   else if(view.screen==='badges') html += badgesHTML();
   else if(view.screen==='parent') html += parentHTML();
   html += `<div class="footer-note">Math Quest 🚀 – made with ❤️ for curious kids · your progress is saved in this browser · part of <a href="https://naniwadekar.com/">Curiosities</a></div>`;
@@ -594,18 +653,111 @@ function topbarHTML(){
       <div class="xpbar"><div style="width:${li.pct}%"></div></div>
       <small>⭐ ${state.xp} XP · ${li.need-li.into} XP to Level ${li.level+1}</small>
     </div>
-    <span class="chip" title="Days in a row">📅 ${state.daily.days||0}-day streak</span>
-    <button class="iconbtn" onclick="exportSave()" title="Save game (download progress file)">💾</button>
-    <label class="iconbtn" title="Resume game (load a saved progress file)" style="cursor:pointer;">📂<input type="file" accept=".json,application/json" style="display:none" onchange="if(this.files[0]){importSave(this.files[0]);this.value='';}"></label>
-    <button class="iconbtn" onclick="go('badges')" title="Badges">🏅</button>
-    <button class="iconbtn" onclick="go('parent')" title="Parent corner & progress">📊</button>
-    <a class="iconbtn" href="https://naniwadekar.com/" title="Leave Math Quest and go back to Curiosities" style="text-decoration:none">⌂</a>
+    <a class="chip wide-only" href="https://naniwadekar.com/" title="Back to Curiosities" style="text-decoration:none;color:inherit;white-space:nowrap">← Curiosities</a>
+    <div class="menuwrap" id="menuwrap">
+      <button class="iconbtn" id="menubtn" aria-haspopup="true" aria-expanded="false" aria-controls="topmenu" title="More options" aria-label="More options" onclick="toggleMenu(event)">⋯</button>
+      <div class="menu" id="topmenu" role="menu" hidden>
+        <button class="mitem" role="menuitem" onclick="closeMenu();exportSave()">💾 Save progress file</button>
+        <label class="mitem" role="menuitem" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.querySelector('input').click();}">📂 Load progress file<input type="file" accept=".json,application/json" style="display:none" onchange="if(this.files[0]){closeMenu();importSave(this.files[0]);this.value='';}"></label>
+        <button class="mitem" role="menuitem" onclick="go('badges')">🏅 Badges</button>
+        <button class="mitem" role="menuitem" onclick="go('parent')">📊 Parent Corner</button>
+        <a class="mitem narrow-only" role="menuitem" href="https://naniwadekar.com/">← Curiosities</a>
+      </div>
+    </div>
   </div>`;
 }
+/* ---------- "⋯" menu: closes on outside click and Escape; arrow keys move between items ---------- */
+function toggleMenu(ev){
+  if(ev) ev.stopPropagation();
+  const m = $('#topmenu'); if(!m) return;
+  if(m.hidden) openMenu(); else closeMenu();
+}
+function openMenu(){
+  const m = $('#topmenu'), b = $('#menubtn'); if(!m||!b) return;
+  m.hidden = false; b.setAttribute('aria-expanded','true');
+  const first = m.querySelector('[role="menuitem"]'); if(first) first.focus();
+}
+function closeMenu(){
+  const m = $('#topmenu'), b = $('#menubtn'); if(!m||m.hidden) return;
+  m.hidden = true; if(b) b.setAttribute('aria-expanded','false');
+}
+document.addEventListener('click', e => {
+  const wrap = $('#menuwrap');
+  if(wrap && !wrap.contains(e.target)) closeMenu();
+});
+document.addEventListener('keydown', e => {
+  const m = $('#topmenu'); if(!m || m.hidden) return;
+  if(e.key==='Escape'){ closeMenu(); const b=$('#menubtn'); if(b) b.focus(); return; }
+  if(e.key==='ArrowDown' || e.key==='ArrowUp'){
+    const items = Array.from(m.querySelectorAll('[role="menuitem"]')).filter(el=>el.offsetParent!==null);
+    if(!items.length) return;
+    const i = items.indexOf(document.activeElement);
+    const n = e.key==='ArrowDown' ? (i+1)%items.length : (i-1+items.length)%items.length;
+    items[n].focus(); e.preventDefault();
+  }
+});
+document.addEventListener('focusin', e => {
+  const wrap = $('#menuwrap');
+  if(wrap && !wrap.contains(e.target)) closeMenu();
+});
 
 /* ================= HOME (WORLD MAP) ================= */
+/* Which topic should the child do next?  Returns {kind:'topic', wi, ti, reason} or {kind:'mixed'}. */
+function nextRecommendation(){
+  const findIn = (wi, maxStars) => {
+    const w = CURRICULUM[wi]; if(!w) return null;
+    const ti = w.topics.findIndex(t => topicStat(t.id).stars < maxStars);
+    return ti>=0 ? {kind:'topic', wi, ti} : null;
+  };
+  const last = state.last || {w:-1,t:-1};
+  let r = null;
+  if(last.w>=0) r = findIn(last.w, 2);
+  if(!r) for(let wi=0; wi<CURRICULUM.length && !r; wi++) r = findIn(wi, 2);
+  if(r){ r.reason = (last.w>=0 && topicStat(CURRICULUM[r.wi].topics[r.ti].id).stars>0)? 'Keep going' : (last.w>=0? 'Up next' : 'Start here'); return r; }
+  // Everything has at least two stars: point at the weakest quiz score, or the Mixed Challenge if all are perfect.
+  let weakest = null;
+  CURRICULUM.forEach((w,wi)=> w.topics.forEach((t,ti)=>{
+    const s = topicStat(t.id);
+    if(s.stars>=3) return;
+    if(!weakest || s.best < weakest.best) weakest = {kind:'topic', wi, ti, best:s.best, reason:'Polish this one'};
+  }));
+  return weakest || {kind:'mixed'};
+}
+function mixedEligible(){
+  const out = [];
+  CURRICULUM.forEach((w,wi)=> w.topics.forEach((t,ti)=>{ if(topicStat(t.id).stars>=1) out.push({w,wi,t,ti}); }));
+  return out;
+}
+function continueCardHTML(){
+  const r = nextRecommendation();
+  if(r.kind==='mixed'){
+    return `<div class="card continue">
+      <span class="cemoji">🌟</span>
+      <div class="cinfo"><small>Continue your quest</small><b>Every topic has three stars!</b>
+        <span>Amazing. Keep your skills sharp with a Mixed Challenge.</span></div>
+      <button class="btn pink" onclick="startMixed()">Mixed Challenge 🎲</button>
+    </div>`;
+  }
+  const w = CURRICULUM[r.wi], t = w.topics[r.ti];
+  const st = topicStat(t.id);
+  const learned = state.learned && state.learned[t.id];
+  const tab = learned ? 'practice' : 'learn';
+  return `<div class="card continue">
+    <span class="cemoji">${w.emoji}</span>
+    <div class="cinfo"><small>Continue your quest · ${r.reason}</small><b>${t.emoji} ${t.name}</b>
+      <span class="stars">${starStr(st.stars)}</span> <span style="color:var(--ink-soft);font-size:.85rem;">${w.name}</span></div>
+    <button class="btn green" id="continuebtn" onclick="go('topic',{w:${r.wi},t:${r.ti},tab:'${tab}'})">${learned? '✏️ Practise now':'📖 Learn now'}</button>
+  </div>`;
+}
 function homeHTML(){
-  let h = `<div class="hero"><h1>🗺️ Math Quest</h1><p>Pick a world and start your adventure${state.profile.name? ', '+esc(state.profile.name):''}!</p></div><div class="worlds">`;
+  let h = `<div class="hero"><h1>🗺️ Math Quest</h1><p>Pick a world and start your adventure${state.profile.name? ', '+esc(state.profile.name):''}!</p></div>`;
+  h += continueCardHTML();
+  const elig = mixedEligible().length;
+  h += `<div class="mixedrow">
+    <button class="btn ghost" id="mixedbtn" onclick="startMixed()">🎲 Mixed Challenge</button>
+    <p>${elig>=3? 'Ten questions from the topics you have starred – a fun way to keep everything fresh.' : 'Earn a star in three topics to unlock a mix of questions from all of them.'}</p>
+  </div>`;
+  h += `<div class="worlds">`;
   CURRICULUM.forEach((w,wi)=>{
     const p = worldProgress(w);
     h += `<button class="world" style="background:linear-gradient(135deg,${w.c1},${w.c2})"
@@ -664,7 +816,7 @@ function switchTab(tab){
   if(tab==='practice' && (view.tab!=='practice' || !practice || practice.isDeep)) startPractice(false);
   if(tab==='deep' && (view.tab!=='deep' || !practice || !practice.isDeep)) startPractice(true);
   if(tab==='quiz' && view.tab!=='quiz') quiz=null;
-  if(tab==='learn') lessonPage = Math.min(lessonPage, 999);
+  if(tab==='learn'){ lessonPage = Math.min(lessonPage, 999); touchTopic(view.w, view.t, true); }
   view.tab = tab; render();
 }
 
@@ -878,6 +1030,125 @@ function quizResultsHTML(t){
   </div>`;
 }
 
+/* ================= MIXED CHALLENGE ================= */
+let mixed = null; // {qs:[{q, wi, ti}], i, score, answered, results:[], done}
+const MIXED_LEN = QUIZ_LEN;
+function startMixed(){
+  const elig = mixedEligible();
+  if(elig.length<3){
+    toast('Earn a star in three topics first – the Continue card shows where to go next.');
+    return;
+  }
+  // Weight towards weaker topics (fewer stars / lower best quiz score), but never to zero so there is variety.
+  const weighted = elig.map(e => {
+    const s = topicStat(e.t.id);
+    return Object.assign({ weight: 1 + (3-s.stars)*2 + (QUIZ_LEN - Math.min(s.best,QUIZ_LEN))*0.5 }, e);
+  });
+  const perTopicCap = Math.max(2, Math.ceil(MIXED_LEN/elig.length)+1);
+  const used = {}; const seen = new Set(); const qs = [];
+  let guard = 0;
+  while(qs.length<MIXED_LEN && guard<400){
+    guard++;
+    let pool = weighted.filter(e => (used[e.t.id]||0) < perTopicCap);
+    if(!pool.length) pool = weighted;
+    const total = pool.reduce((s,e)=>s+e.weight,0);
+    let r = Math.random()*total, e = pool[pool.length-1];
+    for(const c of pool){ r -= c.weight; if(r<=0){ e=c; break; } }
+    const q = e.t.gen('quiz');
+    const key = e.t.id+'|'+q.text.replace(/<[^>]+>/g,'');
+    if(seen.has(key)) continue;
+    seen.add(key); used[e.t.id]=(used[e.t.id]||0)+1;
+    qs.push({q, wi:e.wi, ti:e.ti});
+  }
+  while(qs.length<MIXED_LEN){ const e = weighted[Math.floor(Math.random()*weighted.length)]; qs.push({q:e.t.gen('quiz'), wi:e.wi, ti:e.ti}); } // pools exhausted – allow repeats rather than a short run
+  mixed = { qs, i:0, score:0, answered:false, results:[], done:false };
+  view = {screen:'mixed'};
+  closeMenu(); window.scrollTo(0,0); render();
+}
+function mixedHTML(){
+  const m = mixed;
+  let h = `<div class="backrow"><button class="btn ghost" onclick="go('home')">← World Map</button></div>`;
+  if(!m) return h + continueCardHTML();
+  if(m.done) return h + mixedResultsHTML();
+  const item = m.qs[m.i], q = item.q, w = CURRICULUM[item.wi], t = w.topics[item.ti];
+  h += `<div class="card qcard">
+    <div class="qmeta">
+      <b>🎲 Mixed Challenge · ${m.i+1} of ${m.qs.length}</b>
+      <div class="progressdots">${m.qs.map((_,i)=>{
+        if(i<m.results.length) return `<span class="${m.results[i]?'ok':'no'}"></span>`;
+        return `<span class="${i===m.i?'cur':''}"></span>`;
+      }).join('')}</div>
+    </div>
+    <span class="qtag">${w.emoji} ${t.emoji} ${t.name}</span>
+    <div class="qtext">${q.text}</div>`;
+  h += answerAreaHTML(q, m.answered, 'submitMixed');
+  h += `<div class="feedback" id="feedback"></div><div id="nextrow"></div></div>`;
+  return h;
+}
+function submitMixed(val, chosenIdx){
+  const m = mixed; if(!m || m.answered || m.done) return;
+  const item = m.qs[m.i], q = item.q;
+  const t = CURRICULUM[item.wi].topics[item.ti];
+  const ok = answersMatch(val, q);
+  m.answered = true; m.results.push(ok);
+  if(q.type==='mc') markMC(q, chosenIdx);
+  else { const inp=$('#ansin'); if(inp){ inp.disabled=true; inp.classList.add(ok?'correct':'wrong'); } }
+  recordAnswer(t.id, ok, true);
+  const fb = $('#feedback');
+  if(ok){
+    m.score++; addXP(10); spawnConfetti(18,260); playSound('good');
+    fb.innerHTML = `<span style="color:var(--good)">Correct! +10 XP 🎉</span>`;
+  }else{
+    playSound('bad');
+    fb.innerHTML = `<span style="color:var(--bad)">Not this time – the answer is <u>${q.answerText||q.answer}</u>.</span>`
+      + (q.explain? `<span class="exp">${q.explain}</span>`:'');
+  }
+  checkBadges({correct:ok, streak:0});
+  const last = m.i===m.qs.length-1;
+  $('#nextrow').innerHTML = `<button class="btn" onclick="nextMixedQ()">${last?'See summary 🏆':'Next →'}</button>`;
+  const nb = $('#nextrow button'); if(nb) nb.focus();
+}
+function nextMixedQ(){
+  const m = mixed; if(!m) return;
+  if(m.i < m.qs.length-1){ m.i++; m.answered=false; render(); return; }
+  m.done = true;
+  if(!state.mixed) state.mixed={runs:0,best:0};
+  state.mixed.runs++;
+  state.mixed.best = Math.max(state.mixed.best, m.score);
+  const bonus = mixedBonus(m.score);
+  if(bonus>0) addXP(bonus);
+  saveState();
+  if(m.score===m.qs.length){ playSound('star'); bigConfetti(); }
+  render();
+}
+/* Same bonus ladder as a quiz (25 XP per "star" level) – no stars or badges are awarded here. */
+function mixedBonus(score){ return score>=QUIZ_LEN?75 : score>=8?50 : score>=6?25 : 0; }
+function mixedResultsHTML(){
+  const m = mixed;
+  const bonus = mixedBonus(m.score);
+  const line = m.score===m.qs.length? 'A perfect mix – you remembered everything!'
+    : m.score>=8? 'Super work across so many topics!'
+    : m.score>=6? 'Nice mixing! A little practice and you will be unstoppable.'
+    : 'Mixing topics is tricky. Every go makes your brain stronger!';
+  const byTopic = {};
+  m.qs.forEach((item,i)=>{
+    const t = CURRICULUM[item.wi].topics[item.ti];
+    if(!byTopic[t.id]) byTopic[t.id] = {t, c:0, n:0};
+    byTopic[t.id].n++; if(m.results[i]) byTopic[t.id].c++;
+  });
+  return `<div class="card results">
+    <div style="font-size:3rem;">${m.score>=6?'🏆':'💪'}</div>
+    <h2 class="fun">Mixed Challenge done!</h2>
+    <div class="scoreline">You scored <b>${m.score} / ${m.qs.length}</b>${bonus>0? ` · +${bonus} bonus XP!`:''}</div>
+    <p style="color:var(--ink-soft)">${line}</p>
+    <div style="margin:8px 0 14px;">${Object.values(byTopic).map(b=>`<span class="topicpill">${b.t.emoji} ${b.t.name} <span style="color:var(--ink-soft);font-weight:400;">${b.c}/${b.n}</span></span>`).join('')}</div>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px;">
+      <button class="btn pink" onclick="startMixed()">Mix again 🔄</button>
+      <button class="btn green" onclick="go('home')">Back to World Map</button>
+    </div>
+  </div>`;
+}
+
 /* ================= BADGES SCREEN ================= */
 function badgesHTML(){
   const got = BADGES.filter(b=>state.badges[b.id]).length;
@@ -904,7 +1175,9 @@ function parentHTML(){
     <div class="stat"><b>${state.xp}</b><span>Total XP</span></div>
     <div class="stat"><b>${totT}</b><span>Questions answered</span></div>
     <div class="stat"><b>${acc}%</b><span>Overall accuracy</span></div>
+    <div class="stat"><b>📅 ${state.daily.days||0}</b><span>Current daily streak</span></div>
     <div class="stat"><b>${state.daily.best||0}</b><span>Best daily streak</span></div>
+    <div class="stat"><b>${state.mixed? state.mixed.runs:0}</b><span>Mixed Challenges${state.mixed&&state.mixed.runs? ' (best '+state.mixed.best+'/'+QUIZ_LEN+')':''}</span></div>
     <div class="stat"><b>${state.bestStreak}</b><span>Best answer streak</span></div>
     <div class="stat"><b>${state.deep? state.deep.c:0}</b><span>Go Deep solved</span></div>
   </div>
@@ -973,6 +1246,7 @@ function openProfile(firstTime){
     <div class="avatarpick" id="avpick">${AVATARS.map(a=>`<button class="${a===state.profile.avatar?'sel':''}" onclick="pickAvatar(this,'${a}')">${a}</button>`).join('')}</div>
     <div style="text-align:center;margin-top:14px;">
       <button class="btn green" onclick="saveProfile(${firstTime?'true':'false'})">${firstTime? "Let's go! 🚀":'Save ✓'}</button>
+      ${firstTime? '<p class="small" style="margin-top:10px;text-align:center;opacity:.75">Math Quest is part of <a href="https://naniwadekar.com/">Curiosities</a>.</p>':''}
     </div>
   </div>`;
   document.body.appendChild(ov);

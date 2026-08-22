@@ -474,6 +474,7 @@ label {
   --muted: #eee8dc;
   --card: #fbf8f1;
   --card-hidden: #eee8dc;
+  --bg-highlight-dim: #ece6d9;
   --ring: rgba(78,107,80,.22);
   --shadow: 0 1px 3px rgba(39,35,30,.06), 0 5px 18px rgba(39,35,30,.05);
   --success: #3f7d55;
@@ -492,6 +493,7 @@ label {
   --muted: #202420;
   --card: #181b18;
   --card-hidden: #202420;
+  --bg-highlight-dim: #232823;
   --ring: rgba(131,188,153,.22);
   --shadow: 0 1px 4px rgba(0,0,0,.28);
   --success: #83bc99;
@@ -685,7 +687,7 @@ canvas { touch-action: none; }
           <article><h3>Constellation</h3><p>A visual working-memory task: hold a briefly presented spatial pattern, then reconstruct it after the pattern disappears.</p></article>
           <article><h3>SequenceForge</h3><p>Informal rule induction using arithmetic, geometric, square-number and alternating-step sequences. The point is to infer a compact rule from examples.</p></article>
           <article><h3>SumLeaves</h3><p>A two-number target-sum puzzle: choose two leaves whose values add exactly to the displayed target. It is a small, friendly relative of broader subset-sum problems.</p></article>
-          <article><h3>ColourBloom</h3><p>RGB colours can be treated as three-dimensional vectors <code>(R,G,B)</code>. The game measures how close your chosen vector is to the target, whose RGB values are hidden; Δ is the straight-line (Euclidean) distance between the two points.</p></article>
+          <article><h3>ColourBloom</h3><p>RGB colours can be treated as three-dimensional vectors <code>(R,G,B)</code>. While you adjust, only the two swatches are shown – the target's RGB values and your distance stay hidden so the match is made by eye. After locking, both vectors are revealed and Δ is the straight-line (Euclidean) distance between them.</p></article>
           <article><h3>FractalGrow</h3><p>Recursive branching repeatedly applies a rule at smaller scales. Changing angle, decay and branching parameters produces different self-similar forms.</p></article>
         </div>
       </details>
@@ -1087,7 +1089,7 @@ const games = {
     left.innerHTML = `
       <h2>ColourBloom: Visual Acuity</h2>
       <p style="font-size:0.9rem;opacity:.8;margin-top:-0.5rem">
-        Use the Red, Green, and Blue sliders to match the Target Colour as closely as possible. Press ‘Lock &amp; Score’ to see your distance Δ – lower is better.
+        Use the Red, Green, and Blue sliders to match the Target Colour by eye. Nothing is measured while you adjust – press ‘Lock &amp; Score’ to reveal both RGB values and your distance Δ (lower is better).
       </p>
       <div class="cb-dual">
         <div class="col">
@@ -1106,9 +1108,10 @@ const games = {
         <div class="row" style="margin-top:.8rem">
           <button id="btnNew">New Target</button>
           <button id="btnSnap">Lock & Score</button>
+          <button id="btnNext" style="display:none">Next colour</button>
           <button id="btnResetStats">Reset stats</button>
         </div>
-        <div class="cb-stat" style="margin-top:.4rem" id="deltaLine">Δ (RGB distance): –</div>
+        <div class="cb-stat" style="margin-top:.4rem; display:none" id="resultBox"></div>
         <div class="cb-stat">Rounds Attempted: <span id="rounds">0</span> · Best Δ: <span id="bestDelta">–</span></div>
       </div>
     `;
@@ -1119,8 +1122,9 @@ const games = {
     const tSw = left.querySelector("#swatchTarget"),
       ySw = left.querySelector("#swatchYou");
     const btnNew = left.querySelector("#btnNew"),
-      btnSnap = left.querySelector("#btnSnap");
-    const deltaLine = left.querySelector("#deltaLine"),
+      btnSnap = left.querySelector("#btnSnap"),
+      btnNext = left.querySelector("#btnNext");
+    const resultBox = left.querySelector("#resultBox"),
       roundsEl = left.querySelector("#rounds"),
       bestDeltaEl = left.querySelector("#bestDelta");
     const btnResetStats = left.querySelector("#btnResetStats");
@@ -1129,8 +1133,15 @@ const games = {
     bestDeltaEl.textContent =
       stateG.bestDelta == null ? "–" : stateG.bestDelta.toFixed(1);
 
-    right.innerHTML = `<h3>Details</h3><div class="cb-stat" id="vals">Current RGB: 128, 128, 128</div>`;
+    right.innerHTML = `<h3>Details</h3><div class="cb-stat" id="vals">Adjust by eye – values are revealed after you lock.</div>`;
     const vals = right.querySelector("#vals");
+
+    function rating(d) {
+      if (d < 15) return "very close";
+      if (d < 40) return "close";
+      if (d < 80) return "in the neighbourhood";
+      return "some way off";
+    }
 
     function rand(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -1153,9 +1164,6 @@ const games = {
     function paintYou() {
       const c = [+r.value, +g.value, +b.value];
       ySw.style.background = rgb(c[0], c[1], c[2]);
-      const d = target ? dist(target, c) : 0;
-      deltaLine.textContent = `Δ (RGB distance): ${d.toFixed(1)}`;
-      vals.textContent = `Current RGB: ${c.join(", ")}`;
     }
 
     function newTarget() {
@@ -1166,6 +1174,11 @@ const games = {
 
       tSw.style.border = "none";
       ySw.style.border = "none";
+      resultBox.style.display = "none";
+      resultBox.textContent = "";
+      vals.textContent = "Adjust by eye – values are revealed after you lock.";
+      btnNext.style.display = "none";
+      btnSnap.disabled = false;
 
       paintTarget();
       paintYou();
@@ -1186,9 +1199,12 @@ const games = {
         stateG.bestDelta = d;
       }
 
-      deltaLine.textContent = `Δ (RGB distance): ${d.toFixed(
-        1
-      )} (Lower is better)`;
+      resultBox.innerHTML =
+        `Your RGB: ${c.join(", ")}<br>` +
+        `Target RGB: ${target.join(", ")}<br>` +
+        `Δ: ${d.toFixed(1)} – ${rating(d)}`;
+      resultBox.style.display = "";
+      vals.textContent = `Your RGB: ${c.join(", ")} · Target RGB: ${target.join(", ")}`;
 
       const color = d === stateG.bestDelta ? "var(--success)" : "var(--line)";
       tSw.style.border = `4px solid ${color}`;
@@ -1196,14 +1212,10 @@ const games = {
 
       roundsEl.textContent = String(stateG.rounds);
       bestDeltaEl.textContent = stateG.bestDelta.toFixed(1);
+      btnNext.style.display = "";
+      btnSnap.disabled = true;
 
       save(stateG);
-
-      setTimeout(() => {
-        tSw.style.border = "none";
-        ySw.style.border = "none";
-        newTarget();
-      }, 1500);
     }
 
     btnResetStats.onclick = () => {
@@ -1217,6 +1229,7 @@ const games = {
 
     r.oninput = g.oninput = b.oninput = paintYou;
     btnNew.onclick = newTarget;
+    btnNext.onclick = newTarget;
     btnSnap.onclick = snap;
 
     if (!stateG.lastTarget) {
@@ -1252,6 +1265,7 @@ const games = {
       {
         bestVisited: 0,
         plays: 0,
+        perfectTrails: 0,
         level: 1,
         _dots: [],
         _visited: [],
@@ -1273,13 +1287,24 @@ const games = {
     desc.style.opacity = ".8";
     desc.style.marginTop = "-0.5rem";
     desc.textContent =
-      "Drag from any dot to trace a continuous line through as many dots as you can. Avoid the obstacles, and do not cross your own path.";
+      "Drag from any dot to trace a continuous line through as many dots as you can. Avoid the obstacles, and do not cross your own path. Reaching 90% of the dots completes the level; every dot is a Perfect Trail.";
     root.appendChild(desc);
 
     const stats = document.createElement("div");
     stats.style.marginBottom = "0.6rem";
     stats.style.fontFamily = "ui-monospace, Menlo, Consolas, monospace";
     root.appendChild(stats);
+
+    const statusLine = document.createElement("div");
+    statusLine.style.marginBottom = "0.6rem";
+    statusLine.style.fontSize = "0.9rem";
+    statusLine.style.minHeight = "1.2em";
+    root.appendChild(statusLine);
+
+    function setStatus(text, tone) {
+      statusLine.textContent = text || "";
+      statusLine.style.color = tone ? `var(--${tone})` : "";
+    }
 
     const controls = document.createElement("div");
     controls.className = "row";
@@ -1336,6 +1361,7 @@ const games = {
       .map((i) => (dots[i] ? { x: dots[i].x, y: dots[i].y } : null))
       .filter(Boolean);
     let gameOver = false;
+    let levelDone = false;
 
     // segments preventing self-crossing
     let segments = [];
@@ -1349,7 +1375,7 @@ const games = {
       const best = stateG.bestVisited || 0;
       stats.textContent = `Level: ${stateG.level} · Dots: ${
         visited.size
-      } / ${totalDots} · Best: ${best} · Boards: ${stateG.plays || 0}`;
+      } / ${totalDots} · Best: ${best} · Boards: ${stateG.plays || 0} · Perfect Trails: ${stateG.perfectTrails || 0}`;
     }
 
     function checkObstacleCollision(x, y) {
@@ -1404,7 +1430,9 @@ const games = {
       last = null;
       pathPoints = [];
       gameOver = false;
+      levelDone = false;
       segments = [];
+      setStatus("");
 
       nextLevelBtn.disabled = true;
       nextLevelBtn.style.display = "none";
@@ -1706,19 +1734,31 @@ const games = {
       draw();
       paintStats();
 
-      if (visited.size === totalDots && totalDots > 0) {
-        nextLevelBtn.disabled = false;
-        nextLevelBtn.style.display = "block";
-        setTimeout(
-          () => alert(`Perfect Trail! Level ${stateG.level} complete.`),
-          100
-        );
-      }
-
       if (gameOver) {
         nextLevelBtn.disabled = true;
         nextLevelBtn.style.display = "none";
-        setTimeout(() => alert("Path blocked by an obstacle – round over."), 100);
+        setStatus("Path blocked by an obstacle – round over. Restart the level or try a new layout.", "warning");
+        return;
+      }
+
+      // Layouts are procedural and may have no complete trail, so 90% of the
+      // dots completes the level; every dot counts as a Perfect Trail.
+      if (totalDots > 0 && !levelDone) {
+        const needed = Math.ceil(totalDots * 0.9);
+        if (visited.size === totalDots) {
+          levelDone = true;
+          stateG.perfectTrails = (stateG.perfectTrails || 0) + 1;
+          save(stateG);
+          paintStats();
+          nextLevelBtn.disabled = false;
+          nextLevelBtn.style.display = "block";
+          setStatus(`Perfect Trail – every dot visited. Level ${stateG.level} complete.`, "success");
+        } else if (visited.size >= needed) {
+          levelDone = true;
+          nextLevelBtn.disabled = false;
+          nextLevelBtn.style.display = "block";
+          setStatus(`Level ${stateG.level} complete – ${visited.size} of ${totalDots} dots.`, "success");
+        }
       }
     }
 
@@ -1752,6 +1792,8 @@ const games = {
 
     restartLevelBtn.onclick = () => {
       gameOver = false;
+      levelDone = false;
+      setStatus("");
       visited.clear();
       stateG._visited = [];
       drawing = false;
@@ -1766,6 +1808,8 @@ const games = {
 
     restartAllBtn.onclick = () => {
       gameOver = false;
+      levelDone = false;
+      setStatus("");
       visited.clear();
       stateG._visited = [];
       drawing = false;
@@ -1785,8 +1829,10 @@ const games = {
     nextLevelBtn.onclick = () => {
       let nextLevel = stateG.level + 1;
       if (nextLevel > MAX_LEVEL) {
-        alert("Congratulations! You completed the highest level!");
         nextLevel = MAX_LEVEL;
+        layoutDots(nextLevel);
+        setStatus("This is the highest level – here is a fresh layout of it.");
+        return;
       }
       layoutDots(nextLevel);
     };
@@ -2409,10 +2455,12 @@ const games = {
         lastSeq: null,
         lastAnswer: null,
         lastOptions: null,
+        lastRule: null,
       },
       prev
     );
 
+    let rule = typeof stateG.lastRule === "string" ? stateG.lastRule : null;
     let seq =
       Array.isArray(stateG.lastSeq) && stateG.lastSeq.length > 0
         ? stateG.lastSeq.slice()
@@ -2491,6 +2539,7 @@ const games = {
     function makePattern() {
       const type = randInt(1, 4);
       let base, diff, ratio;
+      rule = null;
 
       switch (type) {
         case 1: // arithmetic
@@ -2498,12 +2547,14 @@ const games = {
           diff = randInt(1, 9);
           seq = [base, base + diff, base + 2 * diff, base + 3 * diff];
           answer = base + 4 * diff;
+          rule = `Rule: +${diff} each time`;
           break;
         case 2: // geometric
           base = randInt(1, 6);
           ratio = randInt(2, 4);
           seq = [base, base * ratio, base * ratio ** 2, base * ratio ** 3];
           answer = base * ratio ** 4;
+          rule = `Rule: ×${ratio} each time`;
           break;
         case 3: // squares
           base = randInt(1, 5);
@@ -2514,6 +2565,7 @@ const games = {
             (base + 3) * (base + 3),
           ];
           answer = (base + 4) * (base + 4);
+          rule = `Rule: square numbers (${base}², ${base + 1}², ${base + 2}², ${base + 3}²…)`;
           break;
         default: // alternating increments
           base = randInt(0, 20);
@@ -2521,6 +2573,7 @@ const games = {
           const d2 = randInt(2, 8);
           seq = [base, base + d1, base + d1 + d2, base + 2 * d1 + d2];
           answer = base + 2 * d1 + 2 * d2;
+          rule = `Rule: the differences alternate +${d1}, +${d2}`;
           break;
       }
 
@@ -2539,7 +2592,12 @@ const games = {
       stateG.lastSeq = seq.slice();
       stateG.lastAnswer = answer;
       stateG.lastOptions = options.slice();
+      stateG.lastRule = rule;
       save(stateG);
+    }
+
+    function ruleText() {
+      return rule ? ` ${rule}.` : "";
     }
 
     function paintBoard() {
@@ -2572,11 +2630,11 @@ const games = {
         if (stateG.currentStreak > (stateG.bestStreak || 0)) {
           stateG.bestStreak = stateG.currentStreak;
         }
-        feedback.textContent = "Correct. New pattern queued.";
+        feedback.textContent = `Correct.${ruleText()} New pattern queued.`;
         btn.classList.add("sf-correct");
       } else {
         stateG.currentStreak = 0;
-        feedback.textContent = `Not quite. Correct answer was ${answer}.`;
+        feedback.textContent = `Not quite. Correct answer was ${answer}.${ruleText()}`;
         btn.classList.add("sf-wrong");
         all.forEach((b) => {
           if (parseInt(b.textContent, 10) === answer) {
@@ -2853,13 +2911,32 @@ const games = {
 
   // ---- Constellation ----
   constellation(container, prev = {}, save) {
-    const stateG = Object.assign({ bestScore: 0, plays: 0 }, prev);
+    const stateG = Object.assign({ bestScore: 0, plays: 0, step: 0, streak: 0 }, prev);
     const root = document.createElement("div");
     root.className = "panel section";
     container.appendChild(root);
 
     const SIZE = 5;
-    const TIME_LIMIT = 5000;
+    // Quiet difficulty ladder (never shown to the player): 4..8 cells at 5 s,
+    // then 8 cells with a shorter exposure.
+    const STEPS = [
+      { cells: 4, ms: 5000 },
+      { cells: 5, ms: 5000 },
+      { cells: 6, ms: 5000 },
+      { cells: 7, ms: 5000 },
+      { cells: 8, ms: 5000 },
+      { cells: 8, ms: 4000 },
+      { cells: 8, ms: 3000 },
+    ];
+    function clampStep(s) {
+      return Math.max(0, Math.min(STEPS.length - 1, s | 0));
+    }
+    stateG.step = clampStep(stateG.step);
+    stateG.streak = stateG.streak | 0;
+    function currentStep() {
+      return STEPS[clampStep(stateG.step)];
+    }
+
     let activeCells = new Set();
     let userGuesses = new Set();
     let phase = "setup"; // setup, memorizing, guessing, finished
@@ -2868,8 +2945,8 @@ const games = {
     let timeoutId = null;
 
     function generateConstellation() {
-      const baseStars = 6;
-      maxPossible = Math.min(SIZE * SIZE, baseStars);
+      const s = currentStep();
+      maxPossible = Math.min(SIZE * SIZE, s.cells);
       activeCells.clear();
       while (activeCells.size < maxPossible) {
         activeCells.add((Math.random() * SIZE * SIZE) | 0);
@@ -2880,7 +2957,7 @@ const games = {
       stateG.plays = (stateG.plays || 0) + 1;
       save(stateG);
 
-      timeoutId = setTimeout(startGuessing, TIME_LIMIT);
+      timeoutId = setTimeout(startGuessing, s.ms);
       render();
     }
 
@@ -2916,6 +2993,21 @@ const games = {
 
       score = correctGuesses;
       stateG.bestScore = Math.max(stateG.bestScore, score);
+
+      // Quiet adaptation: two consecutive perfect rounds move up a step,
+      // a poor round (under 70% correct) moves down one, otherwise stay.
+      if (correctGuesses === maxPossible) {
+        stateG.streak = (stateG.streak | 0) + 1;
+        if (stateG.streak >= 2) {
+          stateG.step = clampStep(stateG.step + 1);
+          stateG.streak = 0;
+        }
+      } else {
+        stateG.streak = 0;
+        if (correctGuesses / maxPossible < 0.7) {
+          stateG.step = clampStep(stateG.step - 1);
+        }
+      }
       save(stateG);
 
       const fb = root.querySelector("#constFeedback");
@@ -3004,6 +3096,8 @@ const games = {
       resetBtn.onclick = () => {
         stateG.bestScore = 0;
         stateG.plays = 0;
+        stateG.step = 0;
+        stateG.streak = 0;
         save(stateG);
         render();
       };

@@ -1,7 +1,7 @@
 "use strict";
 
 const CACHE_PREFIX = "mathquest-pwa-";
-const CACHE_NAME = CACHE_PREFIX + "v3";
+const CACHE_NAME = CACHE_PREFIX + "v5";
 const APP_PAGE = "/mathquest.html";
 const APP_SHELL = [
   APP_PAGE,
