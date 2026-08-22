@@ -5,8 +5,12 @@
 <meta content="light dark" name="color-scheme"/>
 <title>The Deccan, 1500–1830s · a timeline from Vijayanagara to the Company</title>
 <script>(function(){
-  var theme='dark';
-  try { var saved=localStorage.getItem('theme'); if(saved==='light'||saved==='dark') theme=saved; } catch(e) {}
+  var theme='light';
+  try {
+    var saved=localStorage.getItem('root-theme');
+    if(saved==='light'||saved==='dark') theme=saved;
+    else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches) theme='dark';
+  } catch(e) {}
   document.documentElement.setAttribute('data-theme',theme);
 })();</script><link href="style.css" rel="stylesheet"/>
 <link href="https://naniwadekar.com/deccan/" rel="canonical"/><meta content="The Deccan, 1500–1830s · a timeline from Vijayanagara to the Company" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities"><meta content="A timeline of the Deccan from Vijayanagara to the Company: seventy-six entries on the sultanates, the Mughals, the Marathas, Mysore, Hyderabad and the colonial takeover, 1500 to the 1830s." property="og:description"/><meta content="website" property="og:type"/><meta content="https://naniwadekar.com/deccan/" property="og:url"/><meta content="https://naniwadekar.com/deccan/deccan-icon-512.png" property="og:image"/>
@@ -35,7 +39,7 @@
   b.addEventListener('click',function(){
     var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
     document.documentElement.setAttribute('data-theme',next);
-    try { localStorage.setItem('theme',next); } catch(e) {}
+    try { localStorage.setItem('root-theme',next); } catch(e) {}
     sync();
   });
   sync();
