@@ -4430,13 +4430,14 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1901__India__Cram-Murray-Aaron__Historical-Map-of-British-India.html"
   ],
-  "coda": true
+  "coda": true,
+  "coda_order": 1
  },
  {
   "id": "deccan-as-the-company-saw-it",
   "title": "Coda: the Deccan as the Company saw it",
   "date_label": "1827–1893",
-  "year": 1906,
+  "year": 1827,
   "year_end": 1893,
   "period": 7,
   "polities": [
@@ -4450,8 +4451,8 @@ window.DECCAN_ENTRIES = [
   "lat": null,
   "lon": null,
   "strap": "Three printed maps, from Brussels, London and Edinburgh, show the plural Deccan of this collection settling into the provinces and states of British India.",
-  "body": "<p>The collection ends where its companion begins, with the maps. Three sheets in the map collection show the Deccan after paramountcy, each drawn from the Company’s surveys and each a generation apart. Philippe Vandermaelen’s <em>Atlas universel</em>, published in Brussels in 1827, was the first atlas to print the whole world at a single scale and the first printed by lithography; its sheet headed <em>Bejapoor</em> still names the country by the sultanate that Aurangzeb had extinguished in 1686, and marks the Peshwa’s territories only nine years after they had ceased to exist. European cartography was still working from Rennell and from the reports of the Maratha wars.</p><p>The Society for the Diffusion of Useful Knowledge’s map <em>India III</em>, engraved by J. and C. Walker and in this edition dated 1856, shows the Bombay Presidency and the Nizam’s dominions with the district boundaries of the Company’s administration and the internal borders of Hyderabad, Satara (annexed in 1848) and the southern Maratha jagirs. It is a map of a settled possession. J. G. Bartholomew’s <em>Section X</em> in <em>Constable’s Hand Atlas of India</em> of 1893 belongs to the Crown, not the Company, and shows Bombay and Berar as the railway and the census saw them: the Deccan of Hyderabad as a large pink island in a British sea, its districts measured, its towns ranked by population.</p><p>Read in order the three maps show the throughline of this collection drawn out on paper. The older names, Bijapur, Golconda, the Carnatic, the Peshwa, fade from the sheets as the provinces and princely states harden. By 1893 the layered sovereignties of the Deccan had become two colours on a map, British territory and native states, and the second existed only within the first.</p>",
-  "story": "The coda is the collection’s argument stated by its companion. Maps do not merely record sovereignty; they decide what counts as a border and whose name goes on the land. In 1500 a map of the Deccan would have needed a dozen colours and still misled. By the end of the Company’s century the surveyors and engravers could draw it in two. The plurality this collection follows for three hundred years was not only defeated in the field; it was drawn out of existence.",
+  "body": "<p>The collection ends where its companion begins, with the maps. Three sheets in the map collection show the Deccan after paramountcy, each drawn from the Company’s surveys and each a generation apart. Philippe Vandermaelen’s <em>Atlas universel</em>, published in Brussels in 1827, was the first atlas to print the whole world at a single scale and the first printed by lithography; its sheet headed <em>Bejapoor</em> still names the country by the sultanate that Aurangzeb had extinguished in 1686, and marks the Peshwa’s territories only nine years after they had ceased to exist. European cartography was still working from Rennell and from the reports of the Maratha wars.</p><p>The Society for the Diffusion of Useful Knowledge’s map <em>India III</em>, engraved by J. and C. Walker and in this edition dated 1856, shows the Bombay Presidency and the Nizam’s dominions with the district boundaries of the Company’s administration and the internal borders of Hyderabad, Satara (annexed in 1848) and the southern Maratha jagirs. It is a map of a settled possession. J. G. Bartholomew’s <em>Section X</em> in <em>Constable’s Hand Atlas of India</em> of 1893 belongs to the Crown, not the Company, and shows Bombay and Berar as the railway and the census saw them: the Deccan of Hyderabad as a large pink island in a British sea, its districts measured, its towns ranked by population.</p><p>Read in order the three maps show the throughline of this collection drawn out on paper. The older names, Bijapur, Golconda, the Carnatic, the Peshwa, fade from the sheets as the provinces and princely states harden. By 1893 the layered sovereignties of the Deccan had become two colours on a map: British India and princely states, the latter surviving within an imperial order whose paramount power was British.</p>",
+  "story": "The coda is the collection’s argument stated by its companion. Maps do not merely record sovereignty; they decide what counts as a border and whose name goes on the land. In 1500 a map of the Deccan would have needed a dozen colours and still misled. By the late nineteenth century the surveyors and engravers could draw it in two. The plurality this collection follows for three hundred years was not only defeated in the field; it was drawn out of existence.",
   "sources": [
    {
     "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
@@ -4475,6 +4476,7 @@ window.DECCAN_ENTRIES = [
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
    "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html"
   ],
-  "coda": true
+  "coda": true,
+  "coda_order": 2
  }
 ];

@@ -86,7 +86,7 @@
       '<p class="eyebrow">A Timeline Collection</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">Five centuries of the Deccan in a collection of entries, from the founding of Vijayanagara and the Bahmani sultanate to the Act of 1874 that entered the last hereditary office in a government register, on a plateau where sovereignty was always shared – and then audited.</p>' +
+      '<p class="lede measure">Five centuries of the Deccan, from the founding of Vijayanagara and the Bahmani sultanate to the Watan Act and the Deccan Riots of 1875, on a plateau where sovereignty was repeatedly shared, inherited, measured – and finally audited.</p>' +
       '<p class="measure muted">Seven periods, eleven polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
@@ -168,7 +168,7 @@
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + '</ul></div>' +
       '<dl class="meta"><dt>Date</dt><dd>' + E(e.date_label) + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ', ' + E(p.years) + '</a></dd>' +
       '<dt>Polities</dt><dd>' + e.polities.map(function (x) { return POL[x]; }).join(" · ") + '</dd><dt>Kind</dt><dd>' + KIND[e.kind] + '</dd>' +
-      (e.place ? '<dt>Place</dt><dd>' + E(e.place) + '</dd>' : "") + '<dt>On the timeline</dt><dd><a href="#" data-show="' + e.id + '">Show on the timeline</a></dd></dl>' + nav + '</div>';
+      (e.place ? '<dt>Place</dt><dd>' + E(e.place) + '</dd>' : "") + (e.coda ? '<dt>Status</dt><dd>Coda – outside the numbered chronology</dd>' : '<dt>On the timeline</dt><dd><a href="#" data-show="' + e.id + '">Show on the timeline</a></dd>') + '</dl>' + nav + '</div>';
     var sh = app.querySelector("[data-show]");
     if (sh) sh.addEventListener("click", function (ev) { ev.preventDefault(); pendingShow = e.id; location.hash = ""; });
   }
@@ -217,7 +217,7 @@
 
   function start(res) {
     entries = res[0]; periods = res[1];
-    entries.sort(function (a, b) { return a.period - b.period || a.year - b.year || (a.id < b.id ? -1 : 1); });
+    entries.sort(function (a, b) { return a.period - b.period || (a.coda ? 1 : 0) - (b.coda ? 1 : 0) || (a.coda_order || 0) - (b.coda_order || 0) || a.year - b.year || (a.id < b.id ? -1 : 1); });
     entries.forEach(function (e) { byId[e.id] = e; }); periods.forEach(function (p) { PER[p.n] = p; });
     route();
   }
