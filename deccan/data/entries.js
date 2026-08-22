@@ -21,11 +21,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
-    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
+    "url": "https://archive.org/details/in.ernet.dli.2015.142905"
    },
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
@@ -64,7 +64,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
@@ -99,11 +99,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
-    "url": "https://search.worldcat.org/search?q=Sufis%20of%20Bijapur%201300%E2%80%931700%3A%20Social%20Roles%20of%20Sufis%20in%20Medieval%20India%20Richard%20M.%20Eaton"
+    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
    },
    {
     "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
-    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
    },
    {
     "title": "Henry Cousens, Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India Imperial Series XXXVII; Government Central Press, Bombay, 1916)",
@@ -141,7 +141,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
-    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
+    "url": "https://doi.org/10.1017/CBO9780511563423"
    },
    {
     "title": "Richard M. Eaton, ‘“Kiss My Foot,” Said the King: Firearms, Diplomacy, and the Battle for Raichur, 1520’, Modern Asian Studies 43 (1) (Cambridge University Press, 2009)",
@@ -185,7 +185,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
-    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
    },
    {
     "title": "UNESCO World Heritage Centre, ‘Group of Monuments at Hampi’",
@@ -221,7 +221,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Srinivas Reddy, Raya: Krishnadevaraya of Vijayanagara (Juggernaut Books, New Delhi, 2020)",
-    "url": "https://search.worldcat.org/search?q=Raya%3A%20Krishnadevaraya%20of%20Vijayanagara%20Srinivas%20Reddy"
+    "url": "https://www.juggernaut.in/products/raya-krishnadevaraya-of-vijayanagara"
    },
    {
     "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
@@ -229,7 +229,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Phillip B. Wagoner, 'Sultan among Hindu Kings': Dress, Titles, and the Islamicization of Hindu Culture at Vijayanagara, Journal of Asian Studies 55 (4), pp. 851–880 (Association for Asian Studies, 1996)",
-    "url": "https://search.worldcat.org/search?q=%27Sultan%20among%20Hindu%20Kings%27%3A%20Dress%2C%20Titles%2C%20and%20the%20Islamicization%20of%20Hindu%20Culture%20at%20Vijayanagara%2C%20Journal%20of%20Asian%20Studies%2055%20%284%29%2C%20pp.%20851%E2%80%93880%20Phillip%20B.%20Wagoner"
+    "url": "https://doi.org/10.2307/2646526"
    },
    {
     "title": "Wikipedia, ‘Krishnadevaraya’",
@@ -261,11 +261,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Sanjay Subrahmanyam, The Portuguese Empire in Asia, 1500–1700: A Political and Economic History (Longman, London, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Portuguese%20Empire%20in%20Asia%2C%201500%E2%80%931700%3A%20A%20Political%20and%20Economic%20History%20Sanjay%20Subrahmanyam"
+    "url": "https://archive.org/details/portugueseempire0000subr"
    },
    {
     "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
-    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
+    "url": "https://doi.org/10.1017/CBO9780511563423"
    },
    {
     "title": "Britannica, ‘Afonso de Albuquerque’",
@@ -301,15 +301,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Srinivas Reddy (tr.), Giver of the Worn Garland: Krishnadevaraya's Amuktamalyada (Penguin Books, New Delhi, 2010)",
-    "url": "https://search.worldcat.org/search?q=Giver%20of%20the%20Worn%20Garland%3A%20Krishnadevaraya%27s%20Amuktamalyada%20Srinivas%20Reddy%20%28tr.%29"
+    "url": "https://www.penguin.co.in/book/the-giver-of-the-worn-garland-krishnadevarayas-amuktamalyada/"
    },
    {
     "title": "Srinivas Reddy, Raya: Krishnadevaraya of Vijayanagara (Juggernaut Books, New Delhi, 2020)",
-    "url": "https://search.worldcat.org/search?q=Raya%3A%20Krishnadevaraya%20of%20Vijayanagara%20Srinivas%20Reddy"
+    "url": "https://www.juggernaut.in/products/raya-krishnadevaraya-of-vijayanagara"
    },
    {
     "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, New York, 2001)",
-    "url": "https://search.worldcat.org/search?q=Precolonial%20India%20in%20Practice%3A%20Society%2C%20Region%2C%20and%20Identity%20in%20Medieval%20Andhra%20Cynthia%20Talbot"
+    "url": "https://doi.org/10.1093/0195136616.001.0001"
    },
    {
     "title": "Wikipedia, ‘Amuktamalyada’",
@@ -342,7 +342,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
-    "url": "https://search.worldcat.org/search?q=Mughal%20Administration%20in%20Golconda%20John%20F.%20Richards"
+    "url": "https://archive.org/details/mughaladministra0000rich"
    },
    {
     "title": "UNESCO Tentative List, ‘The Qutb Shahi Monuments of Hyderabad’",
@@ -382,11 +382,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
-    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
    },
    {
     "title": "Phillip B. Wagoner, 'Sultan among Hindu Kings': Dress, Titles, and the Islamicization of Hindu Culture at Vijayanagara, Journal of Asian Studies 55 (4), pp. 851–880 (Association for Asian Studies, 1996)",
-    "url": "https://search.worldcat.org/search?q=%27Sultan%20among%20Hindu%20Kings%27%3A%20Dress%2C%20Titles%2C%20and%20the%20Islamicization%20of%20Hindu%20Culture%20at%20Vijayanagara%2C%20Journal%20of%20Asian%20Studies%2055%20%284%29%2C%20pp.%20851%E2%80%93880%20Phillip%20B.%20Wagoner"
+    "url": "https://doi.org/10.2307/2646526"
    }
   ],
   "related_maps": [
@@ -423,7 +423,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, Delhi, 2014)",
-    "url": "https://search.worldcat.org/search?q=Power%2C%20Memory%2C%20Architecture%3A%20Contested%20Sites%20on%20India%27s%20Deccan%20Plateau%2C%201300%E2%80%931600%20Richard%20M.%20Eaton%20and%20Phillip%20B.%20Wagoner"
+    "url": "https://doi.org/10.1093/acprof:oso/9780198092216.001.0001"
    },
    {
     "title": "Wikipedia, ‘Battle of Raichur’",
@@ -453,15 +453,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Velcheru Narayana Rao, David Shulman and Sanjay Subrahmanyam, Symbols of Substance: Court and State in Nāyaka Period Tamilnadu (Oxford University Press, Delhi, 1992)",
-    "url": "https://search.worldcat.org/search?q=Symbols%20of%20Substance%3A%20Court%20and%20State%20in%20N%C4%81yaka%20Period%20Tamilnadu%20Velcheru%20Narayana%20Rao%2C%20David%20Shulman%20and%20Sanjay%20Subrahmanyam"
+    "url": "https://archive.org/details/bwb_P8-AVL-802"
    },
    {
     "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
-    "url": "https://search.worldcat.org/search?q=Vijayanagara%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.2%29%20Burton%20Stein"
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
    },
    {
     "title": "George Michell, Architecture and Art of Southern India: Vijayanagara and the Successor States 1350–1750 (The New Cambridge History of India, I.6) (Cambridge University Press, 1995)",
-    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20Southern%20India%3A%20Vijayanagara%20and%20the%20Successor%20States%201350%E2%80%931750%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.6%29%20George%20Michell"
+    "url": "https://doi.org/10.1017/CHOL9780521441100"
    },
    {
     "title": "Wikipedia, ‘Thanjavur Nayak kingdom’",
@@ -493,11 +493,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Richard M. Eaton and Phillip B. Wagoner, Power, Memory, Architecture: Contested Sites on India's Deccan Plateau, 1300–1600 (Oxford University Press, Delhi, 2014)",
-    "url": "https://search.worldcat.org/search?q=Power%2C%20Memory%2C%20Architecture%3A%20Contested%20Sites%20on%20India%27s%20Deccan%20Plateau%2C%201300%E2%80%931600%20Richard%20M.%20Eaton%20and%20Phillip%20B.%20Wagoner"
+    "url": "https://doi.org/10.1093/acprof:oso/9780198092216.001.0001"
    },
    {
     "title": "Britannica, ‘Aravidu dynasty’",
@@ -531,7 +531,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
@@ -570,15 +570,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India (Princeton University Press, 1978)",
-    "url": "https://search.worldcat.org/search?q=Sufis%20of%20Bijapur%201300%E2%80%931700%3A%20Social%20Roles%20of%20Sufis%20in%20Medieval%20India%20Richard%20M.%20Eaton"
+    "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700"
    },
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Wikipedia, ‘Deccani language’",
@@ -611,15 +611,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
-    "url": "https://search.worldcat.org/search?q=A%20Social%20History%20of%20the%20Deccan%2C%201300%E2%80%931761%3A%20Eight%20Indian%20Lives%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.8%29%20Richard%20M.%20Eaton"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "Wikipedia, ‘Malik Ambar’",
@@ -650,11 +650,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
-    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
    },
    {
     "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
@@ -686,8 +686,8 @@ window.DECCAN_ENTRIES = [
   "lat": 17.3616,
   "lon": 78.4747,
   "strap": "Muhammad Quli Qutb Shah lays out a new open city on the Musi, with the Charminar at its crossing, a few miles from the fortress of Golconda.",
-  "body": "<p>In 1591 Muhammad Quli Qutb Shah, fifth sultan of Golconda, founded a new city on the east bank of the Musi river, about eight kilometres from the hill fort that had been his dynasty’s seat since the Bahmani break-up. Its first building was the Charminar, a square of four arches and four minarets marking the crossing of the two main streets. The name Hyderabad is a reference to Haidar, an epithet of Ali; the tradition that it was first called Bhagnagar after the sultan’s Hindu consort Bhagmati is old but not securely documented.</p>\n<p>Golconda had become crowded and short of water, and the new site was planned as the opposite of a fortress: a grid of broad streets, caravanserais, gardens, a hospital and a central bazaar, open to trade and without a wall. The plan drew on Persian models and on the Qutb Shahi court’s close ties with Safavid Iran, from which many of its nobles had come. The sultan was also a poet, with a large diwan in Dakhni, Persian and Telugu, and the city was meant as a stage for that court culture as much as a commercial hub.</p>\n<p>The diamond trade did the rest. India was virtually the world’s only source of diamonds until Brazilian production began in the 1720s, and the mines associated with Golconda, Kollur above all, were its richest; and Hyderabad became the market where European, Persian and Indian merchants bought them. Fortification was left to Golconda, which remained the citadel and treasury; the two functioned as a pair.</p>\n<p>When Aurangzeb took Golconda in 1687, Hyderabad passed into the Mughal subah and then, after 1724, became one of the principal cities of the Asaf Jahi state; Nizam Ali Khan moved the court from Aurangabad to Hyderabad in the 1760s, and the state took the city’s name. The city outlived the dynasty that built it by three centuries, and the Charminar is still its centre.</p>",
-  "story": "Hyderabad is the one city in this collection that was founded inside the period and is still a capital. It was built by a sultanate, inherited by the Mughals, and became the seat of the Nizam and then of a princely state under Company paramountcy. Each of those regimes kept the same city, the same trade and much of the same administrative class, which is a useful reminder that the collapse of plural sovereignty was a change of overlords more than of places.",
+  "body": "<p>In 1591 Muhammad Quli Qutb Shah, fifth sultan of Golconda, founded a new city on the east bank of the Musi river, about eight kilometres from the hill fort that had been his dynasty’s seat since the Bahmani break-up. Its first building was the Charminar, a square of four arches and four minarets marking the crossing of the two main streets. The name Hyderabad is a reference to Haidar, an epithet of Ali; the tradition that it was first called Bhagnagar after the sultan’s Hindu consort Bhagmati is old but not securely documented.</p>\n<p>Golconda had become crowded and short of water, and the new site was planned as the opposite of a fortress: a grid of broad streets, caravanserais, gardens, a hospital and a central bazaar, open to trade and without a wall. The plan drew on Persian models and on the Qutb Shahi court’s close ties with Safavid Iran, from which many of its nobles had come. The sultan was also a poet, with a large diwan in Dakhni, Persian and Telugu, and the city was meant as a stage for that court culture as much as a commercial hub.</p>\n<p>The diamond trade did the rest. India was virtually the world’s only source of diamonds until Brazilian production began in the 1720s, and the mines associated with Golconda, Kollur above all, were among its richest, and Hyderabad became the market where European, Persian and Indian merchants bought them. Fortification was left to Golconda, which remained the citadel and treasury; the two functioned as a pair.</p>\n<p>When Aurangzeb took Golconda in 1687, Hyderabad passed into the Mughal subah and then, after 1724, became one of the principal cities of the Asaf Jahi state; Nizam Ali Khan moved the court from Aurangabad to Hyderabad in the 1760s, and the state took the city’s name. The city outlived the dynasty that built it by three centuries, and the Charminar is still its centre.</p>",
+  "story": "Hyderabad is the one city in this collection that was founded inside the period and is still a capital. It was built by a sultanate, inherited by the Mughals, and became the seat of the Nizam and then of a princely state under Company paramountcy. Each of those regimes kept the same city, the same trade and much of the same administrative class, which is a useful reminder that the reordering of plural sovereignty under paramountcy was a change of overlords more than of places: in Hyderabad the layers survived, subordinated rather than abolished.",
   "sources": [
    {
     "title": "Haroon Khan Sherwani, History of the Qutb Shahi Dynasty (Munshiram Manoharlal, 1974)",
@@ -732,15 +732,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "Wikipedia, ‘Shahaji’",
@@ -770,11 +770,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
-    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
+    "url": "https://archive.org/details/in.ernet.dli.2015.142905"
    },
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
@@ -810,11 +810,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
-    "url": "https://search.worldcat.org/search?q=History%20of%20Medieval%20Deccan%20%281295%E2%80%931724%29%2C%202%20vols%20H.%20K.%20Sherwani%20and%20P.%20M.%20Joshi%20%28eds%29"
+    "url": "https://archive.org/details/in.ernet.dli.2015.142905"
    },
    {
     "title": "Muhammad Qasim Firishta, translated by John Briggs, History of the Rise of the Mahomedan Power in India, till the Year A.D. 1612, 4 vols (Longman, Rees, Orme, Brown, and Green, London, 1829)",
@@ -853,11 +853,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "K. N. Chaudhuri, The Trading World of Asia and the English East India Company, 1660–1760 (Cambridge University Press, 1978)",
-    "url": "https://search.worldcat.org/search?q=The%20Trading%20World%20of%20Asia%20and%20the%20English%20East%20India%20Company%2C%201660%E2%80%931760%20K.%20N.%20Chaudhuri"
+    "url": "https://doi.org/10.1017/CBO9780511563263"
    },
    {
     "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
-    "url": "https://search.worldcat.org/search?q=The%20Political%20Economy%20of%20Commerce%3A%20Southern%20India%201500%E2%80%931650%20Sanjay%20Subrahmanyam"
+    "url": "https://doi.org/10.1017/CBO9780511563423"
    },
    {
     "title": "Britannica, ‘East India Company’",
@@ -894,11 +894,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "Roy S. Fischel, Local States in an Imperial World: Identity, Society and Politics in the Early Modern Deccan (Edinburgh University Press, 2020)",
-    "url": "https://search.worldcat.org/search?q=Local%20States%20in%20an%20Imperial%20World%3A%20Identity%2C%20Society%20and%20Politics%20in%20the%20Early%20Modern%20Deccan%20Roy%20S.%20Fischel"
+    "url": "https://doi.org/10.1515/9781474436090"
    },
    {
     "title": "Britannica, ‘India: Shah Jahan’",
@@ -935,11 +935,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
@@ -972,7 +972,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates (The New Cambridge History of India, I.7) (Cambridge University Press, 1999)",
-    "url": "https://search.worldcat.org/search?q=Architecture%20and%20Art%20of%20the%20Deccan%20Sultanates%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.7%29%20George%20Michell%20and%20Mark%20Zebrowski"
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
    },
    {
     "title": "Navina Najat Haidar and Marika Sardar (eds), Sultans of Deccan India, 1500–1700: Opulence and Fantasy (The Metropolitan Museum of Art, New York, 2015)",
@@ -1013,7 +1013,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
@@ -1051,7 +1051,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
@@ -1059,7 +1059,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Battle of Pratapgarh’",
@@ -1090,7 +1090,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Jadunath Sarkar, Shivaji and His Times (M. C. Sarkar and Sons, Calcutta, 1919)",
@@ -1098,7 +1098,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Sack of Surat’",
@@ -1131,7 +1131,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Surendra Nath Sen, The Military System of the Marathas (The Book Company, Calcutta, 1928)",
@@ -1139,7 +1139,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Sindhudurg Fort’",
@@ -1171,11 +1171,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "Jadunath Sarkar, Shivaji and His Times (M. C. Sarkar and Sons, Calcutta, 1919)",
@@ -1208,15 +1208,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Ashta Pradhan’",
@@ -1245,7 +1245,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Gajanan Bhaskar Mehendale, Shivaji: His Life and Times (Param Mitra Publications, Thane, 2011)",
-    "url": "https://search.worldcat.org/search?q=Shivaji%3A%20His%20Life%20and%20Times%20Gajanan%20Bhaskar%20Mehendale"
+    "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress"
    },
    {
     "title": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen, Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes (University of Calcutta, 1920)",
@@ -1253,7 +1253,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Shivaji’",
@@ -1283,11 +1283,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
-    "url": "https://search.worldcat.org/search?q=Mughal%20Administration%20in%20Golconda%20John%20F.%20Richards"
+    "url": "https://archive.org/details/mughaladministra0000rich"
    },
    {
     "title": "Jadunath Sarkar, History of Aurangzib, Mainly Based on Persian Sources, 5 vols (M. C. Sarkar and Sons, Calcutta, 1912)",
@@ -1330,7 +1330,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Clement Downing, A Compendious History of the Indian Wars (T. Cooper, London, 1737)",
@@ -1371,11 +1371,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Shalini Patil, Maharani Tarabai of Kolhapur, c. 1675–1761 (S. Chand, New Delhi, 1987)",
-    "url": "https://search.worldcat.org/search?q=Maharani%20Tarabai%20of%20Kolhapur%2C%20c.%201675%E2%80%931761%20Shalini%20Patil"
+    "url": "https://catalog.hathitrust.org/Record/001816023"
    },
    {
     "title": "Wikipedia, ‘Tarabai’",
@@ -1411,7 +1411,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Bhimsen Saxena, translated by Jadunath Sarkar, edited by V. G. Khobrekar, Tarikh-i-Dilkasha (Memoirs of Bhimsen relating to Aurangzib's Deccan Campaigns) (Department of Archives, Maharashtra, Bombay, 1972)",
@@ -1457,7 +1457,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Bajirao I’",
@@ -1497,7 +1497,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Mughal%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20I.5%29%20John%20F.%20Richards"
+    "url": "https://doi.org/10.1017/CBO9780511584060"
    },
    {
     "title": "Wikipedia, ‘Tomb of Aurangzeb’",
@@ -1529,11 +1529,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Uday S. Kulkarni, The Era of Bajirao: An Account of the Empire of the Deccan (Mula Mutha Publishers, Pune, 2016)",
@@ -1568,15 +1568,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Jadunath Sarkar, House of Shivaji: Studies and Documents on Maratha History, Royal Period (S. N. Sarkar, Calcutta, 1940)",
-    "url": "https://search.worldcat.org/search?q=House%20of%20Shivaji%3A%20Studies%20and%20Documents%20on%20Maratha%20History%2C%20Royal%20Period%20Jadunath%20Sarkar"
+    "url": "https://archive.org/details/in.ernet.dli.2015.505242"
    },
    {
     "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Adnyapatra’",
@@ -1610,11 +1610,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Balaji Vishwanath’",
@@ -1648,7 +1648,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
@@ -1690,7 +1690,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
-    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
+    "url": "https://doi.org/10.1017/S0026749X07003290"
    },
    {
     "title": "Jadunath Sarkar, Fall of the Mughal Empire, 4 vols (M. C. Sarkar and Sons, Calcutta, 1932)",
@@ -1729,11 +1729,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "André Wink, Land and Sovereignty in India: Agrarian Society and Politics under the Eighteenth-Century Maratha Svarājya (Cambridge University Press, 1986)",
-    "url": "https://search.worldcat.org/search?q=Land%20and%20Sovereignty%20in%20India%3A%20Agrarian%20Society%20and%20Politics%20under%20the%20Eighteenth-Century%20Maratha%20Svar%C4%81jya%20Andr%C3%A9%20Wink"
+    "url": "https://archive.org/details/landsovereigntyi0000wink"
    },
    {
     "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
@@ -1778,7 +1778,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Battle of Palkhed’",
@@ -1818,7 +1818,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Sanjay Subrahmanyam, The Portuguese Empire in Asia, 1500–1700: A Political and Economic History (Longman, London, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Portuguese%20Empire%20in%20Asia%2C%201500%E2%80%931700%3A%20A%20Political%20and%20Economic%20History%20Sanjay%20Subrahmanyam"
+    "url": "https://archive.org/details/portugueseempire0000subr"
    },
    {
     "title": "Wikipedia, ‘Battle of Vasai’",
@@ -1852,7 +1852,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
-    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CHOL9780521250924"
    },
    {
     "title": "Uday S. Kulkarni, The Extraordinary Epoch of Nanasaheb Peshwa (Mula Mutha Publishers, Pune, 2020)",
@@ -1903,7 +1903,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Third Battle of Panipat’",
@@ -1937,7 +1937,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
@@ -1984,7 +1984,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Royal Asiatic Society Archives, ‘Nana Fadnavis (1742–1800)’",
@@ -2025,7 +2025,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
@@ -2064,7 +2064,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
@@ -2109,7 +2109,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
@@ -2146,11 +2146,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Irfan Habib (ed.), Confronting Colonialism: Resistance and Modernization under Haidar Ali and Tipu Sultan (Anthem Press, London, 2002)",
-    "url": "https://search.worldcat.org/search?q=Confronting%20Colonialism%3A%20Resistance%20and%20Modernization%20under%20Haidar%20Ali%20and%20Tipu%20Sultan%20Irfan%20Habib%20%28ed.%29"
+    "url": "https://anthempress.com/books/confronting-colonialism-hb"
    },
    {
     "title": "Kaveh Yazdani, India, Modernity and the Great Divergence: Mysore and Gujarat (17th to 19th C.) (Brill, Leiden, 2017)",
-    "url": "https://search.worldcat.org/search?q=India%2C%20Modernity%20and%20the%20Great%20Divergence%3A%20Mysore%20and%20Gujarat%20%2817th%20to%2019th%20C.%29%20Kaveh%20Yazdani"
+    "url": "https://doi.org/10.1163/9789004330795"
    },
    {
     "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
@@ -2186,7 +2186,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
@@ -2226,11 +2226,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
-    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
+    "url": "https://catalog.hathitrust.org/Record/004015625"
    },
    {
     "title": "Kaveh Yazdani, India, Modernity and the Great Divergence: Mysore and Gujarat (17th to 19th C.) (Brill, Leiden, 2017)",
-    "url": "https://search.worldcat.org/search?q=India%2C%20Modernity%20and%20the%20Great%20Divergence%3A%20Mysore%20and%20Gujarat%20%2817th%20to%2019th%20C.%29%20Kaveh%20Yazdani"
+    "url": "https://doi.org/10.1163/9789004330795"
    },
    {
     "title": "Tipu Sultan, translated by William Kirkpatrick, Select Letters of Tippoo Sultan to Various Public Functionaries (Black, Parry, and Kingsbury, London, 1811)",
@@ -2267,7 +2267,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
-    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
+    "url": "https://catalog.hathitrust.org/Record/004015625"
    },
    {
     "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
@@ -2307,11 +2307,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tipu Sultan's Search for Legitimacy: Islam and Kingship in a Hindu Domain (Oxford University Press, Delhi, 1997)",
-    "url": "https://search.worldcat.org/search?q=Tipu%20Sultan%27s%20Search%20for%20Legitimacy%3A%20Islam%20and%20Kingship%20in%20a%20Hindu%20Domain%20Kate%20Brittlebank"
+    "url": "https://catalog.hathitrust.org/Record/004015625"
    },
    {
     "title": "Kate Teltscher, India Inscribed: European and British Writing on India 1600–1800 (Oxford University Press, Delhi, 1995)",
-    "url": "https://search.worldcat.org/search?q=India%20Inscribed%3A%20European%20and%20British%20Writing%20on%20India%201600%E2%80%931800%20Kate%20Teltscher"
+    "url": "https://archive.org/details/indiainscribedeu0000telt"
    },
    {
     "title": "Victoria and Albert Museum, ‘Tippoo’s Tiger’ (Explore the Collections, O61949)",
@@ -2349,7 +2349,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
@@ -2392,7 +2392,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
@@ -2400,7 +2400,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
-    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
+    "url": "https://doi.org/10.1017/S0026749X07003290"
    },
    {
     "title": "Wikipedia, ‘Battle of Kharda’",
@@ -2433,11 +2433,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
-    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CHOL9780521250924"
    },
    {
     "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
-    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
+    "url": "https://doi.org/10.1017/S0026749X07003290"
    },
    {
     "title": "Randolf G. S. Cooper, The Anglo-Maratha Campaigns and the Contest for India: The Struggle for Control of the South Asian Military Economy (Cambridge University Press, 2003)",
@@ -2475,7 +2475,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kate Brittlebank, Tiger: The Life of Tipu Sultan (Juggernaut, New Delhi, 2016)",
-    "url": "https://search.worldcat.org/search?q=Tiger%3A%20The%20Life%20of%20Tipu%20Sultan%20Kate%20Brittlebank"
+    "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan"
    },
    {
     "title": "Mark Wilks, Historical Sketches of the South of India, in an Attempt to Trace the History of Mysoor, 3 vols (Longman, Hurst, Rees, and Orme, London, 1810)",
@@ -2518,11 +2518,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Nicholas B. Dirks, Castes of Mind: Colonialism and the Making of Modern India (Princeton University Press, 2001)",
-    "url": "https://search.worldcat.org/search?q=Castes%20of%20Mind%3A%20Colonialism%20and%20the%20Making%20of%20Modern%20India%20Nicholas%20B.%20Dirks"
+    "url": "https://press.princeton.edu/books/paperback/9780691088952/castes-of-mind"
    },
    {
     "title": "Phillip B. Wagoner, Precolonial Intellectuals and the Production of Colonial Knowledge, Comparative Studies in Society and History 45 (4), pp. 783–814 (Cambridge University Press, 2003)",
-    "url": "https://search.worldcat.org/search?q=Precolonial%20Intellectuals%20and%20the%20Production%20of%20Colonial%20Knowledge%2C%20Comparative%20Studies%20in%20Society%20and%20History%2045%20%284%29%2C%20pp.%20783%E2%80%93814%20Phillip%20B.%20Wagoner"
+    "url": "https://doi.org/10.1017/S0010417503000355"
    },
    {
     "title": "British Library, Archives and Manuscripts, ‘Mackenzie Collection’",
@@ -2564,11 +2564,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Burton Stein, Thomas Munro: The Origins of the Colonial State and His Vision of Empire (Oxford University Press, Delhi, 1989)",
-    "url": "https://search.worldcat.org/search?q=Thomas%20Munro%3A%20The%20Origins%20of%20the%20Colonial%20State%20and%20His%20Vision%20of%20Empire%20Burton%20Stein"
+    "url": "https://archive.org/details/burtonsteinthomasmunrotheoriginsofthecolonialstateandhisvisionsofempireoup1989"
    },
    {
     "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
-    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CHOL9780521250924"
    },
    {
     "title": "Wikipedia, ‘Kingdom of Mysore’",
@@ -2600,11 +2600,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
-    "url": "https://search.worldcat.org/search?q=Mapping%20an%20Empire%3A%20The%20Geographical%20Construction%20of%20British%20India%2C%201765%E2%80%931843%20Matthew%20H.%20Edney"
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html"
    },
    {
     "title": "C. A. Bayly, Empire and Information: Intelligence Gathering and Social Communication in India, 1780–1870 (Cambridge University Press, 1996)",
-    "url": "https://search.worldcat.org/search?q=Empire%20and%20Information%3A%20Intelligence%20Gathering%20and%20Social%20Communication%20in%20India%2C%201780%E2%80%931870%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CBO9780511583285"
    },
    {
     "title": "Britannica, ‘Great Trigonometrical Survey’",
@@ -2646,11 +2646,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
-    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CHOL9780521250924"
    },
    {
     "title": "Wikipedia, ‘Treaty of Bassein’",
@@ -2688,7 +2688,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Britannica, ‘Maratha Wars’",
@@ -2725,11 +2725,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
-    "url": "https://search.worldcat.org/search?q=At%20Empire%27s%20End%3A%20The%20Nizam%2C%20Hyderabad%20and%20Eighteenth-Century%20India%2C%20Modern%20Asian%20Studies%2043%20%281%29%2C%20pp.%205%E2%80%9343%20Munis%20D.%20Faruqui"
+    "url": "https://doi.org/10.1017/S0026749X07003290"
    },
    {
     "title": "C. A. Bayly, Empire and Information: Intelligence Gathering and Social Communication in India, 1780–1870 (Cambridge University Press, 1996)",
-    "url": "https://search.worldcat.org/search?q=Empire%20and%20Information%3A%20Intelligence%20Gathering%20and%20Social%20Communication%20in%20India%2C%201780%E2%80%931870%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CBO9780511583285"
    },
    {
     "title": "Deccan Heritage Foundation, ‘Restoration of the former British Residency, Hyderabad’",
@@ -2774,7 +2774,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Third Anglo-Maratha War’",
@@ -2802,11 +2802,11 @@ window.DECCAN_ENTRIES = [
   "lon": 73.8567,
   "strap": "For eight years the Peshwa’s old dominions were governed by a Commissioner and a handful of collectors before being folded into the Bombay Presidency.",
   "body": "<p>After the conquest of 1818 the Peshwa’s territories were not at once attached to Bombay. They were placed under a Commissioner of the Deccan reporting to the Governor-General, with collectors at Pune, Ahmadnagar, Khandesh and Dharwar and, in the south, the Southern Maratha country under a political agent. Elphinstone held the commission until late 1819; William Chaplin, a Madras civilian who had served under Thomas Munro, succeeded him and remained until the office was wound up in 1826, when the districts became ordinary collectorates of the Bombay Presidency.</p><p>The Commission was an experiment in governing a conquered country with minimal disturbance. Following Elphinstone’s report, it kept the mamlatdars and village officers, worked through panchayats, continued the old assessments with some remission, and paid or confirmed the claims of the hereditary watandars and the pensioned sardars. Chaplin’s own report of 1821 and his later observations on revenue assessment, preserved in the Bombay records, reviewed the results district by district and noted the difficulties: the rights of deshmukhs and deshpandes that absorbed revenue, the large extent of inam land alienated by grants the Company had agreed to honour, and the lack of any field survey on which a fairer assessment could rest. Under Chaplin the collectors began to press for individual settlements in the Madras manner, and Pringle’s survey of the Pune districts, begun in the mid-1820s, was the outcome.</p><p>When the Commission ended the Deccan had a Company administration that looked, on paper, much like the Maratha one. The difference was that its revenue demand was fixed from above, collected in cash, and could not be renegotiated with a local power.</p>",
-  "story": "The Commission is where paramountcy became routine. In eight years the districts that had been governed through a web of hereditary rights, farmed revenues and personal loyalties were brought under a single chain of command from the village accountant to the Governor-General. The Company kept the vocabulary of the old order, patil and kulkarni and deshmukh, and emptied it of independent power. The story of layered sovereignty in the Deccan ends in this kind of office, with files rather than battles.",
+  "story": "The Commission is where paramountcy became routine. In eight years the districts that had been governed through a web of hereditary rights, farmed revenues and personal loyalties were brought under a single chain of command from the village accountant to the Governor-General. The Company kept the vocabulary of the old order, patil and kulkarni and deshmukh, and emptied it of independent power. In the former Peshwa’s territories, the ones the Company administered directly, the story of layered sovereignty ends in this kind of office, with files rather than battles; in Hyderabad and Mysore it continued in subordinated form.",
   "sources": [
    {
     "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
-    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
    },
    {
     "title": "Mountstuart Elphinstone, Report on the Territories Conquered from the Paishwa (Government Gazette Press, Calcutta, 1821)",
@@ -2851,11 +2851,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
-    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
-    "url": "https://search.worldcat.org/search?q=The%20Marathas%201600%E2%80%931818%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.4%29%20Stewart%20Gordon"
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
     "title": "Wikipedia, ‘Baji Rao II’",
@@ -2891,11 +2891,11 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
-    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
    },
    {
     "title": "Prachi Deshpande, Creative Pasts: Historical Memory and Identity in Western India, 1700–1960 (Columbia University Press, 2007)",
-    "url": "https://search.worldcat.org/search?q=Creative%20Pasts%3A%20Historical%20Memory%20and%20Identity%20in%20Western%20India%2C%201700%E2%80%931960%20Prachi%20Deshpande"
+    "url": "https://doi.org/10.7312/desh12486"
    },
    {
     "title": "Wikipedia, ‘Shaniwar Wada’",
@@ -2928,11 +2928,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
-    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
    },
    {
     "title": "Prachi Deshpande, Creative Pasts: Historical Memory and Identity in Western India, 1700–1960 (Columbia University Press, 2007)",
-    "url": "https://search.worldcat.org/search?q=Creative%20Pasts%3A%20Historical%20Memory%20and%20Identity%20in%20Western%20India%2C%201700%E2%80%931960%20Prachi%20Deshpande"
+    "url": "https://doi.org/10.7312/desh12486"
    },
    {
     "title": "Hansard, ‘The Rajah of Sattara’, House of Commons debate, 6 July 1847",
@@ -2973,7 +2973,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
-    "url": "https://search.worldcat.org/search?q=Social%20Policy%20and%20Social%20Change%20in%20Western%20India%2C%201817%E2%80%931830%20Kenneth%20Ballhatchet"
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
    },
    {
     "title": "Ravinder Kumar, Western India in the Nineteenth Century: A Study in the Social History of Maharashtra (Routledge and Kegan Paul, London, 1968)",
@@ -3011,11 +3011,11 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
-    "url": "https://search.worldcat.org/search?q=Mapping%20an%20Empire%3A%20The%20Geographical%20Construction%20of%20British%20India%2C%201765%E2%80%931843%20Matthew%20H.%20Edney"
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html"
    },
    {
     "title": "Bernard S. Cohn, Colonialism and Its Forms of Knowledge: The British in India (Princeton University Press, 1996)",
-    "url": "https://search.worldcat.org/search?q=Colonialism%20and%20Its%20Forms%20of%20Knowledge%3A%20The%20British%20in%20India%20Bernard%20S.%20Cohn"
+    "url": "https://press.princeton.edu/books/paperback/9780691000435/colonialism-and-its-forms-of-knowledge"
    },
    {
     "title": "Princeton University Library, Notabilia, ‘Vandermaelen Atlas (1827)’",
@@ -3053,15 +3053,15 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "K. N. Venkatasubba Sastri, The Administration of Mysore under Sir Mark Cubbon, 1834 to 1861 (George Allen and Unwin, London, 1932)",
-    "url": "https://search.worldcat.org/search?q=The%20Administration%20of%20Mysore%20under%20Sir%20Mark%20Cubbon%2C%201834%20to%201861%20K.%20N.%20Venkatasubba%20Sastri"
+    "url": "https://archive.org/details/dli.csl.3980"
    },
    {
     "title": "C. A. Bayly, Indian Society and the Making of the British Empire (The New Cambridge History of India, II.1) (Cambridge University Press, 1988)",
-    "url": "https://search.worldcat.org/search?q=Indian%20Society%20and%20the%20Making%20of%20the%20British%20Empire%20%28The%20New%20Cambridge%20History%20of%20India%2C%20II.1%29%20C.%20A.%20Bayly"
+    "url": "https://doi.org/10.1017/CHOL9780521250924"
    },
    {
     "title": "Burton Stein, Thomas Munro: The Origins of the Colonial State and His Vision of Empire (Oxford University Press, Delhi, 1989)",
-    "url": "https://search.worldcat.org/search?q=Thomas%20Munro%3A%20The%20Origins%20of%20the%20Colonial%20State%20and%20His%20Vision%20of%20Empire%20Burton%20Stein"
+    "url": "https://archive.org/details/burtonsteinthomasmunrotheoriginsofthecolonialstateandhisvisionsofempireoup1989"
    },
    {
     "title": "Wikipedia, ‘Nagar revolt’",

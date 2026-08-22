@@ -6,7 +6,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1988,
    "note": "A compact survey of how the Company state grew out of the eighteenth-century successor polities and the Indian commercial and military world around them. The best short framing for periods 3 to 5.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521250924",
    "kind": "book"
   },
   {
@@ -15,7 +15,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2005,
    "note": "Eight biographies – among them Rama Raya, Malik Ambar, Tukaram, Papadu and Tarabai – used to carry a social history of the plateau from the Tughluq conquest to Panipat. The single best introduction to the whole span of this site.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521254847",
    "kind": "book"
   },
   {
@@ -24,7 +24,7 @@ window.DECCAN_READINGS = {
    "publisher": "Edinburgh University Press",
    "year": 2020,
    "note": "A study of Bijapur and Golconda as states built on competing immigrant and local elites rather than as pale copies of Mughal or Persian models. The most recent monograph on the sultanates as polities.",
-   "url": null,
+   "url": "https://doi.org/10.1515/9781474436090",
    "kind": "book"
   },
   {
@@ -33,7 +33,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1993,
    "note": "The standard one-volume English history of the Maratha polity from the Deccan sultanate service families to the fall of the Peshwa. Strong on revenue and military organisation; the obvious spine for periods 2 to 5.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521268837",
    "kind": "book"
   },
   {
@@ -42,7 +42,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1993,
    "note": "The standard survey of the empire from Babur to the 1720s. The chapters on Aurangzeb's Deccan wars and the collapse after 1707 are the necessary imperial context for periods 2 and 3.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CBO9780511584060",
    "kind": "book"
   },
   {
@@ -60,7 +60,7 @@ window.DECCAN_READINGS = {
    "publisher": "Munshiram Manoharlal",
    "year": 1974,
    "note": "A large political history of Golconda from Sultan Quli to the Mughal conquest of 1687. Remains the only full-length English treatment of the dynasty.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=History%20of%20the%20Qutb%20Shahi%20Dynasty%20Haroon%20Khan%20Sherwani",
    "kind": "book"
   },
   {
@@ -69,7 +69,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1989,
    "note": "A short interpretative history of the empire, arguing for a segmentary state with a strong military core. Brief, and contested in its model, but the usual starting point.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521266932",
    "kind": "book"
   },
   {
@@ -78,7 +78,7 @@ window.DECCAN_READINGS = {
    "publisher": "University of Michigan Press",
    "year": 2001,
    "note": "Linked essays on the making and unmaking of South Indian states from the sixteenth century to the Carnatic Nawabs and Mysore, read against Portuguese, Dutch and Persian sources. Good on the coastal and Tamil sides of the story.",
-   "url": null,
+   "url": "https://www.press.umich.edu/23022/penumbral_visions",
    "kind": "book"
   },
   {
@@ -87,7 +87,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 2014,
    "note": "Reads the frontier towns of Kalyana, Raichur and Warangal through their buildings and inscriptions to show how Vijayanagara and the sultanates shared a single political culture. Essential for period 1 and for the idea of a Deccan rather than two Deccans.",
-   "url": null,
+   "url": "https://doi.org/10.1093/acprof:oso/9780198092216.001.0001",
    "kind": "book"
   },
   {
@@ -96,7 +96,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1986,
    "note": "A structural account of Maratha sovereignty as a system of shared rights, co-sharing (vatan) and managed sedition (fitna). Difficult, but the most influential modern analysis of how the Maratha state actually worked.",
-   "url": null,
+   "url": "https://archive.org/details/landsovereigntyi0000wink",
    "kind": "book"
   },
   {
@@ -105,7 +105,7 @@ window.DECCAN_READINGS = {
    "publisher": "Government of Andhra Pradesh, Hyderabad",
    "year": 1973,
    "note": "A two-volume collaborative history, the first volume political and the second on administration, society, religion, literature and the arts. The standard reference compilation on the sultanate Deccan; the second volume appeared in 1974.",
-   "url": null,
+   "url": "https://archive.org/details/in.ernet.dli.2015.142905",
    "kind": "reference"
   }
  ],
@@ -125,7 +125,7 @@ window.DECCAN_READINGS = {
    "publisher": "University of Hawaii Press",
    "year": 1993,
    "note": "A translation of a Telugu court text that presents Krishnadevaraya's reign as it was remembered at the Madurai Nayaka court around 1600, with a long analysis of its political ideas. The best way into the indigenous view of Vijayanagara kingship.",
-   "url": null,
+   "url": "https://catalog.hathitrust.org/Record/002753103",
    "kind": "source-edition"
   },
   {
@@ -143,7 +143,7 @@ window.DECCAN_READINGS = {
    "publisher": "Princeton University Press",
    "year": 1978,
    "note": "A study of the Sufi lineages of Bijapur and their shifting relations with the Adil Shahi court, the countryside and Dakhni vernacular culture. Still the standard work on religion in a sultanate capital.",
-   "url": null,
+   "url": "https://press.princeton.edu/books/hardcover/9780691643779/the-sufis-of-bijapur-1300-1700",
    "kind": "book"
   },
   {
@@ -152,7 +152,7 @@ window.DECCAN_READINGS = {
    "publisher": "Aperture, New York",
    "year": 1991,
    "note": "An illustrated account of the capital by the leaders of the Vijayanagara Research Project, organised around the royal and sacred centres. The most accessible summary of the archaeological survey of Hampi.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=City%20of%20Victory%3A%20Vijayanagara%2C%20the%20Medieval%20Hindu%20Capital%20of%20Southern%20India%20John%20M.%20Fritz%20and%20George%20Michell%2C%20with%20photographs%20by%20John%20Gollings",
    "kind": "book"
   },
   {
@@ -161,7 +161,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1995,
    "note": "A survey of temple, palace and fort building under Vijayanagara and the Nayaka courts, with a shorter treatment of sculpture and painting. The companion to Stein's political volume.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521441100",
    "kind": "book"
   },
   {
@@ -170,7 +170,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1992,
    "note": "An account of the Nayaka kingdoms of Madurai, Tanjavur and Senji after 1565, read through Telugu and Tamil court literature. Argues for a distinctive, commercial and theatrical style of kingship in the post-Vijayanagara south.",
-   "url": null,
+   "url": "https://archive.org/details/bwb_P8-AVL-802",
    "kind": "book"
   },
   {
@@ -179,7 +179,7 @@ window.DECCAN_READINGS = {
    "publisher": "Juggernaut Books, New Delhi",
    "year": 2020,
    "note": "A short life of Krishnadevaraya (r. 1509–1529) for general readers by a translator of his Telugu poem the Amuktamalyada, drawing on the inscriptions, the Portuguese visitors and the king's own verse. The only recent biography in English, and a readable way into the reign before turning to Sewell and Wagoner.",
-   "url": null,
+   "url": "https://www.juggernaut.in/products/raya-krishnadevaraya-of-vijayanagara",
    "kind": "book"
   },
   {
@@ -188,7 +188,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1990,
    "note": "A study of trade, ports and state finance on the Coromandel and western coasts in the Vijayanagara and Nayaka period, drawing on Portuguese and Dutch records. The standard economic history for period 1.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CBO9780511563423",
    "kind": "book"
   },
   {
@@ -197,7 +197,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, New York",
    "year": 2001,
    "note": "A social history of Kakatiya and post-Kakatiya Andhra built from thousands of temple inscriptions. Strictly earlier than 1500, but the best account of the Telugu warrior society that Vijayanagara and Golconda inherited.",
-   "url": null,
+   "url": "https://doi.org/10.1093/0195136616.001.0001",
    "kind": "book"
   },
   {
@@ -206,7 +206,7 @@ window.DECCAN_READINGS = {
    "publisher": "Association for Asian Studies",
    "year": 1996,
    "note": "The article that reframed Vijayanagara as a participant in Islamicate court culture, through the kings' title 'sultan among Hindu kings' and the adoption of Persianate dress. Short and much cited.",
-   "url": null,
+   "url": "https://doi.org/10.2307/2646526",
    "kind": "article"
   },
   {
@@ -215,7 +215,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1999,
    "note": "The standard survey of sultanate building at Gulbarga, Bidar, Bijapur, Golconda and Ahmadnagar, with Zebrowski's chapters on Deccani painting and decorative arts.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CHOL9780521563215",
    "kind": "book"
   },
   {
@@ -224,7 +224,7 @@ window.DECCAN_READINGS = {
    "publisher": "The Metropolitan Museum of Art, New York",
    "year": 2015,
    "note": "The catalogue of the Metropolitan Museum exhibition, with essays on each sultanate court and full entries on painting, textiles, metalwork and architecture. The standard visual reference for the sultanates.",
-   "url": null,
+   "url": "https://www.metmuseum.org/met-publications/sultans-of-deccan-india-1500-1700",
    "kind": "reference"
   }
  ],
@@ -253,7 +253,7 @@ window.DECCAN_READINGS = {
    "publisher": "University of Washington Press",
    "year": 2019,
    "note": "A long view of how South Asians kept and argued over the past, with substantial chapters on Maratha chronicles and the memory of Shivaji. Useful for thinking about the bakhars and their later uses.",
-   "url": null,
+   "url": "https://uwapress.uw.edu/book/9780295746210/history-and-collective-memory-in-south-asia-12002000/",
    "kind": "book"
   },
   {
@@ -262,7 +262,7 @@ window.DECCAN_READINGS = {
    "publisher": "Param Mitra Publications, Thane",
    "year": 2011,
    "note": "A large, closely documented biography by a Marathi scholar who works directly from the Persian, Marathi, Portuguese and English records, with detailed discussion of the sources for every episode. The most thorough modern life of Shivaji in English.",
-   "url": null,
+   "url": "https://archive.org/details/shivaji-his-life-and-times-1nbsped-9380875177_compress",
    "kind": "book"
   },
   {
@@ -271,7 +271,7 @@ window.DECCAN_READINGS = {
    "publisher": "Clarendon Press, Oxford",
    "year": 1975,
    "note": "A study of how the Mughals absorbed Golconda after 1687 and of the Telugu zamindars, diamond revenues and frontier officers they had to manage. The key work on what conquest actually meant on the ground.",
-   "url": null,
+   "url": "https://archive.org/details/mughaladministra0000rich",
    "kind": "book"
   },
   {
@@ -280,7 +280,7 @@ window.DECCAN_READINGS = {
    "publisher": "S. N. Sarkar, Calcutta",
    "year": 1940,
    "note": "Sarkar's collected essays and translated documents on Shivaji, Sambhaji, Rajaram and Shahu, including Persian and Portuguese material not used in the biography. A useful companion to Shivaji and His Times.",
-   "url": null,
+   "url": "https://archive.org/details/in.ernet.dli.2015.505242",
    "kind": "book"
   },
   {
@@ -298,7 +298,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 2005,
    "note": "Essays on Portuguese, Mughal and Deccan encounters in the sixteenth and seventeenth centuries, including the sultanates' dealings with Goa and the Persian world. A good corrective to purely inland accounts of the period.",
-   "url": null,
+   "url": "https://global.oup.com/academic/product/from-tagus-to-the-ganges-9780198077169",
    "kind": "book"
   }
  ],
@@ -318,7 +318,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 2003,
    "note": "A reader of the key articles in the debate over whether the eighteenth century was a period of decline or of regional growth, with a long editorial introduction. The quickest way into the historiography of the post-Mughal successor states.",
-   "url": null,
+   "url": "https://global.oup.com/academic/product/the-eighteenth-century-in-indian-history-9780195678147",
    "kind": "book"
   },
   {
@@ -336,7 +336,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2009,
    "note": "An article on Nizam-ul-Mulk's withdrawal to the Deccan and the strategies by which he built a successor state while keeping Mughal forms. The best short account of the foundation of Hyderabad.",
-   "url": null,
+   "url": "https://doi.org/10.1017/S0026749X07003290",
    "kind": "article"
   },
   {
@@ -345,7 +345,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1991,
    "note": "Collected essays on village society, rural servants, land rights and the Maratha revenue system, drawn from Marathi documents. The standard agrarian history of the Maratha country.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=The%20Medieval%20Deccan%3A%20Peasants%2C%20Social%20Systems%20and%20States%2C%20Sixteenth%20to%20Eighteenth%20Centuries%20Hiroshi%20Fukazawa",
    "kind": "book"
   },
   {
@@ -354,7 +354,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1994,
    "note": "Essays on Maratha expansion into Malwa and the north, on forts, tribute and the meaning of 'plunder'. Complements the Cambridge volume with detailed case studies.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=Marathas%2C%20Marauders%2C%20and%20State%20Formation%20in%20Eighteenth-Century%20India%20Stewart%20Gordon",
    "kind": "book"
   },
   {
@@ -363,7 +363,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1999,
    "note": "A study of forest and hill peoples of the western Deccan and their relations with the Maratha and later states, including the Bhils and Kolis. Useful for the margins of the Maratha polity that political histories leave out.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CBO9780511523946",
    "kind": "book"
   },
   {
@@ -372,7 +372,7 @@ window.DECCAN_READINGS = {
    "publisher": "Mula Mutha Publishers, Pune",
    "year": 2016,
    "note": "A narrative of Bajirao I's career from 1720 to 1740, based on the Marathi and Persian correspondence, with maps of each campaign. Detailed and sympathetic; the fullest recent account in English.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=The%20Era%20of%20Bajirao%3A%20An%20Account%20of%20the%20Empire%20of%20the%20Deccan%20Uday%20S.%20Kulkarni",
    "kind": "book"
   },
   {
@@ -381,7 +381,7 @@ window.DECCAN_READINGS = {
    "publisher": "Mula Mutha Publishers, Pune",
    "year": 2020,
    "note": "A long chronicle of the reign of Balaji Bajirao (1740–1761), covering the Carnatic and Bengal campaigns, the conflict with the Nizam and the building of Pune. Useful for its extensive quotation from the Peshwa daftar letters.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=The%20Extraordinary%20Epoch%20of%20Nanasaheb%20Peshwa%20Uday%20S.%20Kulkarni",
    "kind": "book"
   },
   {
@@ -390,7 +390,7 @@ window.DECCAN_READINGS = {
    "publisher": "Mula Mutha Publishers, Pune",
    "year": 2011,
    "note": "A campaign history of the third battle of Panipat, reconstructed from the Marathi letters and the Persian accounts. The most detailed modern narrative of the battle and its aftermath.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=Solstice%20at%20Panipat%2C%2014%20January%201761%3A%20An%20Authentic%20Account%20of%20the%20Campaign%20of%20Panipat%20Uday%20S.%20Kulkarni",
    "kind": "book"
   },
   {
@@ -399,7 +399,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2010,
    "note": "An article on the Brahman scholars who moved between the Deccan and Banaras in the seventeenth and eighteenth centuries and on what their letters show of Maratha patronage. A good entry to O'Hanlon's work on the Brahman ecumene and the Peshwa state.",
-   "url": null,
+   "url": "https://doi.org/10.1017/S0026749X09990229",
    "kind": "article"
   },
   {
@@ -464,7 +464,7 @@ window.DECCAN_READINGS = {
    "publisher": "Anthem Press, London",
    "year": 2002,
    "note": "A collection of papers from the Indian History Congress on the Mysore state's economy, army, diplomacy and technology, with an introduction by Habib. The standard statement of the 'modernising' reading of Tipu; the Anthem edition follows an Indian printing of 1999.",
-   "url": null,
+   "url": "https://anthempress.com/books/confronting-colonialism-hb",
    "kind": "book"
   },
   {
@@ -473,7 +473,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1997,
    "note": "A study of Tipu's coins, titles, tiger emblems, temple grants and dealings with Sufis as instruments of kingship. The book that moved the argument away from the question of whether Tipu was a bigot.",
-   "url": null,
+   "url": "https://catalog.hathitrust.org/Record/004015625",
    "kind": "book"
   },
   {
@@ -482,7 +482,7 @@ window.DECCAN_READINGS = {
    "publisher": "Juggernaut, New Delhi",
    "year": 2016,
    "note": "A short, measured biography for general readers by the author of the scholarly study above. The best brief introduction to Tipu.",
-   "url": null,
+   "url": "https://www.juggernaut.in/products/tiger-the-life-of-tipu-sultan",
    "kind": "book"
   },
   {
@@ -500,7 +500,7 @@ window.DECCAN_READINGS = {
    "publisher": "Mula Mutha Publishers, Pune",
    "year": 2022,
    "note": "A narrative of the Maratha recovery after Panipat under Madhavrao I (1761–1772), including the wars with Haidar Ali and the Nizam and the return to Delhi. Continues the author's series from the Peshwa daftar.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=The%20Mastery%20of%20Hindustan%3A%20Triumphs%20and%20Travails%20of%20Madhavrao%20Peshwa%20Uday%20S.%20Kulkarni",
    "kind": "book"
   },
   {
@@ -509,7 +509,7 @@ window.DECCAN_READINGS = {
    "publisher": "Mula Mutha Publishers, Pune",
    "year": 2024,
    "note": "A short study of the murder of Narayanrao in 1773, the trial evidence against Raghunathrao and the Barabhai regency that followed, which led into the first Anglo-Maratha war. Useful for the politics of the Pune court in the 1770s.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=Raghoba%3A%20The%20Assassination%20of%20Narayan%20Rao%20Peshwa%20Uday%20S.%20Kulkarni",
    "kind": "book"
   },
   {
@@ -518,7 +518,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1995,
    "note": "A literary study of European accounts of India, with a final chapter on the captivity narratives and propaganda that made Tipu a British villain. Good on how the Mysore wars were written up for readers at home.",
-   "url": null,
+   "url": "https://archive.org/details/indiainscribedeu0000telt",
    "kind": "book"
   },
   {
@@ -527,7 +527,7 @@ window.DECCAN_READINGS = {
    "publisher": "Brill, Leiden",
    "year": 2017,
    "note": "A long comparative study of the economy, technology and institutions of Mysore under Haidar and Tipu set against Gujarat and against Europe. Heavy going but the most thorough recent treatment of the Mysore state's economic base.",
-   "url": null,
+   "url": "https://doi.org/10.1163/9789004330795",
    "kind": "book"
   }
  ],
@@ -556,7 +556,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, London",
    "year": 1957,
    "note": "A study of Elphinstone's and Malcolm's Bombay administration, its treatment of Brahmans, inam holders, law and education in the former Peshwa's territories. The standard account of the first years of British rule in the Maratha Deccan.",
-   "url": null,
+   "url": "https://archive.org/details/socialpolicysoci0000ball",
    "kind": "book"
   },
   {
@@ -565,7 +565,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1996,
    "note": "On the Indian information order the Company inherited and the surveyors, spies and newswriters it depended on. Relevant here for the Mysore and Maratha wars and for the surveys that followed them.",
-   "url": null,
+   "url": "https://doi.org/10.1017/CBO9780511583285",
    "kind": "book"
   },
   {
@@ -574,7 +574,7 @@ window.DECCAN_READINGS = {
    "publisher": "Princeton University Press",
    "year": 1996,
    "note": "Essays on the Company's investigative modes – language, law, survey, census, collecting – as instruments of rule. The theoretical frame behind much of the work on surveys and settlements in this period.",
-   "url": null,
+   "url": "https://press.princeton.edu/books/paperback/9780691000435/colonialism-and-its-forms-of-knowledge",
    "kind": "book"
   },
   {
@@ -583,7 +583,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2003,
    "note": "A military history of the 1803 campaigns, including Assaye and Laswari, arguing that the Maratha armies were modern and well led and that the Company won by buying their officers and suppliers. The standard modern study of the second Anglo-Maratha war.",
-   "url": null,
+   "url": "https://search.worldcat.org/search?q=The%20Anglo-Maratha%20Campaigns%20and%20the%20Contest%20for%20India%3A%20The%20Struggle%20for%20Control%20of%20the%20South%20Asian%20Military%20Economy%20Randolf%20G.%20S.%20Cooper",
    "kind": "book"
   },
   {
@@ -592,7 +592,7 @@ window.DECCAN_READINGS = {
    "publisher": "Columbia University Press",
    "year": 2007,
    "note": "A history of Marathi historical writing from the bakhars through colonial scholarship to modern regional identity. The best account of what happened to the Maratha past after 1818.",
-   "url": null,
+   "url": "https://doi.org/10.7312/desh12486",
    "kind": "book"
   },
   {
@@ -601,7 +601,7 @@ window.DECCAN_READINGS = {
    "publisher": "Princeton University Press",
    "year": 2001,
    "note": "Argues that caste as a single all-India system was a colonial construction; its early chapters on Colin Mackenzie's collection and native assistants in the Deccan and the south are the relevant ones here. Contested but unavoidable.",
-   "url": null,
+   "url": "https://press.princeton.edu/books/paperback/9780691088952/castes-of-mind",
    "kind": "book"
   },
   {
@@ -610,7 +610,7 @@ window.DECCAN_READINGS = {
    "publisher": "University of Chicago Press",
    "year": 1997,
    "note": "A history of the Company's surveys, including Mackenzie's Mysore survey and Lambton's Great Trigonometrical Survey, which began at Madras in 1802 and crossed the Deccan. The standard work on the mapping of the peninsula.",
-   "url": null,
+   "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html",
    "kind": "book"
   },
   {
@@ -619,7 +619,7 @@ window.DECCAN_READINGS = {
    "publisher": "Clarendon Press, Oxford",
    "year": 1965,
    "note": "A district study of the Northern Circars showing how local revenue officers and landholders captured the Company's administration. An early and influential demonstration of the limits of colonial control in the Telugu country.",
-   "url": null,
+   "url": "https://archive.org/details/gunturdistrict170000robe",
    "kind": "book"
   },
   {
@@ -637,7 +637,7 @@ window.DECCAN_READINGS = {
    "publisher": "Oxford University Press, Delhi",
    "year": 1989,
    "note": "A biography of Munro as administrator of the Ceded Districts and governor of Madras, and of the ryotwari settlement he imposed on the southern Deccan. The standard modern study.",
-   "url": null,
+   "url": "https://archive.org/details/burtonsteinthomasmunrotheoriginsofthecolonialstateandhisvisionsofempireoup1989",
    "kind": "book"
   },
   {
@@ -646,7 +646,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2003,
    "note": "An article on the Telugu and Marathi scholars who worked for Colin Mackenzie, arguing that they shaped his collection from their own historical traditions rather than serving as passive informants. The best short answer to Dirks on the Mackenzie archive.",
-   "url": null,
+   "url": "https://doi.org/10.1017/S0010417503000355",
    "kind": "article"
   }
  ]
