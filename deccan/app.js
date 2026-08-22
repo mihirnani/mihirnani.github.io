@@ -1,4 +1,4 @@
-/* The Deccan, 1336–1830s — single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
+/* The Deccan, 1336–1875 — single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
    Routes: #          home (timeline + periods)
            #p3        period page
            #<entry>   entry page                                                   */
@@ -6,12 +6,12 @@
   "use strict";
   var EG = "https://naniwadekar.com/european-gaze/";
   var POL = {delhi: "Delhi sultanate", vijayanagara: "Vijayanagara", bahmani: "Bahmani sultanate", sultanates: "Deccan sultanates", mughal: "Mughal empire", maratha: "Marathas",
-    mysore: "Mysore", hyderabad: "Hyderabad", company: "East India Company", portuguese: "Portuguese", other: "Other"};
+    mysore: "Mysore", hyderabad: "Hyderabad", company: "East India Company", crown: "British Crown", portuguese: "Portuguese", other: "Other"};
   var KIND = {battle: "Battle", treaty: "Treaty", person: "Person", place: "Place", document: "Document",
     object: "Object", institution: "Institution", event: "Event"};
   var ROWS = [["delhi", "Delhi sultanate", 1327, 1347], ["vijayanagara", "Vijayanagara", 1336, 1646], ["bahmani", "Bahmani sultanate", 1347, 1518], ["sultanates", "Deccan sultanates", 1490, 1687],
-    ["mughal", "Mughal empire", 1596, 1761], ["maratha", "Marathas", 1646, 1818], ["mysore", "Mysore", 1761, 1831],
-    ["hyderabad", "Hyderabad", 1724, 1840], ["portuguese", "Portuguese", 1510, 1739], ["company", "East India Company", 1611, 1840]];
+    ["mughal", "Mughal empire", 1596, 1761], ["maratha", "Marathas", 1646, 1818], ["mysore", "Mysore", 1761, 1880],
+    ["hyderabad", "Hyderabad", 1724, 1880], ["portuguese", "Portuguese", 1510, 1739], ["company", "East India Company", 1611, 1858], ["crown", "British Crown", 1858, 1876]];
   var E = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]; }); };
   var app = document.getElementById("app");
   var entries = [], periods = [], byId = {}, PER = {};
@@ -29,15 +29,15 @@
 
   /* ---------- timeline ---------- */
   function timelineSvg() {
-    var X0 = 150, X1 = 1380, W = 1400, Y0 = 52, RH = 38, y0 = 1322, y1 = 1840;
+    var X0 = 150, X1 = 1380, W = 1400, Y0 = 52, RH = 38, y0 = 1322, y1 = 1880;
     var H = Y0 + RH * ROWS.length + 30;
     var x = function (yr) { return X0 + (yr - y0) / (y1 - y0) * (X1 - X0); };
-    var s = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Timeline of the Deccan, 1327 to 1840, by polity">'];
+    var s = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Timeline of the Deccan, 1327 to 1876, by polity">'];
     periods.forEach(function (p, i) {
       s.push('<rect class="pband' + (i % 2 ? " alt" : "") + '" x="' + x(p.start).toFixed(1) + '" y="' + (Y0 - 30) + '" width="' + (x(p.end) - x(p.start)).toFixed(1) + '" height="' + (H - Y0 + 30) + '"/>');
       s.push('<text class="ptitle" x="' + (x(p.start) + 6).toFixed(1) + '" y="' + (Y0 - 16) + '">' + E((p.short || p.title).toUpperCase()) + '</text>');
     });
-    for (var yr = 1350; yr <= 1840; yr += 50) {
+    for (var yr = 1350; yr <= 1880; yr += 50) {
       s.push('<line class="grid" x1="' + x(yr).toFixed(1) + '" y1="' + (Y0 - 4) + '" x2="' + x(yr).toFixed(1) + '" y2="' + (H - 24) + '"/>');
       s.push('<text class="yr" x="' + x(yr).toFixed(1) + '" y="' + (H - 8) + '" text-anchor="middle">' + yr + '</text>');
     }
@@ -70,7 +70,7 @@
 
   /* ---------- views ---------- */
   function home() {
-    setTitle("The Deccan, 1336–1830s · a timeline from Vijayanagara to the Company");
+    setTitle("The Deccan, 1336–1875 · a timeline from Vijayanagara to the Company");
     var chipsPol = Object.keys(POL).filter(function (k) { return k !== "other"; }).map(function (k) { return '<button class="chip' + (pol.has(k) ? " on" : "") + '" data-f="pol" data-v="' + k + '" type="button">' + E(POL[k]) + '</button>'; }).join("");
     var chipsKind = Object.keys(KIND).map(function (k) { return '<button class="chip' + (kind.has(k) ? " on" : "") + '" data-f="kind" data-v="' + k + '" type="button">' + E(KIND[k]) + '</button>'; }).join("");
     var sections = periods.map(function (p) {
@@ -81,11 +81,11 @@
     }).join("");
     app.innerHTML = '<div class="wrap">' +
       '<p class="eyebrow">A Timeline Collection</p>' +
-      '<h1 class="hero-h1">The Deccan,<br/>1336–1830s</h1>' +
+      '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">A hundred entries across five centuries, from the founding of Vijayanagara and the Bahmani sultanate to the Company’s commissioners, on a plateau where sovereignty was always shared – until it was not.</p>' +
-      '<p class="measure muted">Six periods, ten polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
-      '<div class="search"><input id="q" type="search" placeholder="Search the hundred entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
+      '<p class="lede measure">A hundred and twelve entries across five centuries, from the founding of Vijayanagara and the Bahmani sultanate to the Act of 1874 that entered the last hereditary office in a government register, on a plateau where sovereignty was always shared – and then audited.</p>' +
+      '<p class="measure muted">Seven periods, eleven polities, and a filter for each. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to the companion <a href="' + EG + '">map collection</a>.</p>' +
+      '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap" id="tl">' + timelineSvg() + '</div>' +
       '<div class="tl-panel" id="tlpanel"><span class="hint">Click a marker for a summary. Markers sit on the row of the entry’s principal polity; the bands show roughly when each power was present in the Deccan.</span></div>' +
@@ -136,7 +136,7 @@
   function periodView(n) {
     var p = PER[n]; if (!p) return home();
     var i = periods.indexOf(p), prev = periods[i - 1], nxt = periods[i + 1];
-    setTitle(p.title + ", " + p.years + " – The Deccan, 1336–1830s", p.desc);
+    setTitle(p.title + ", " + p.years + " – The Deccan, 1336–1875", p.desc);
     var es = entries.filter(function (e) { return e.period === p.n; });
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#p' + prev.n + '"><span class="dir">← Previous period</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#p' + nxt.n + '"><span class="dir">Next period →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
@@ -149,7 +149,7 @@
   function entryView(id) {
     var e = byId[id]; if (!e) return home();
     var p = PER[e.period], i = entries.indexOf(e), prev = entries[i - 1], nxt = entries[i + 1];
-    setTitle(e.title + " (" + e.date_label + ") – The Deccan, 1336–1830s", e.strap);
+    setTitle(e.title + " (" + e.date_label + ") – The Deccan, 1336–1875", e.strap);
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#' + prev.id + '"><span class="dir">← Previous · ' + E(prev.date_label) + '</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#' + nxt.id + '"><span class="dir">Next · ' + E(nxt.date_label) + ' →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
     var maps = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '">' + E(mapTitle(fn)) + '</a>'; }).join(" · ") + '</p>' : "";
@@ -169,7 +169,7 @@
   }
 
   function readingsView() {
-    setTitle("Readings – The Deccan, 1336–1830s", "An annotated bibliography of the standard scholarship on the Deccan, 1336–1830s, arranged by period.");
+    setTitle("Readings – The Deccan, 1336–1875", "An annotated bibliography of the standard scholarship on the Deccan, 1336–1875, arranged by period.");
     var R = window.DECCAN_READINGS || {};
     var KINDL = {primary: "Primary source", "source-edition": "Source in translation", early: "Early historiography", book: "Book", article: "Article", reference: "Reference"};
     function item(w) {
@@ -197,7 +197,7 @@
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
     if (!h) { home(); window.scrollTo(0, 0); if (pendingShow) { var m = app.querySelector('.mk[data-id="' + pendingShow + '"]'); if (m) { m.dispatchEvent(new Event("click")); m.scrollIntoView({block: "center"}); } pendingShow = null; } return; }
     if (h === "readings" || h.indexOf("readings-") === 0) { readingsView(); if (h === "readings") window.scrollTo(0, 0); return; }
-    var pm = /^p([1-6])$/.exec(h);
+    var pm = /^p([1-7])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
     home();

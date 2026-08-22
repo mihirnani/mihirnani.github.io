@@ -777,5 +777,133 @@ window.DECCAN_READINGS = {
    "url": "https://www.degruyterbrill.com/document/doi/10.1515/9780824845346/html",
    "kind": "book"
   }
+ ],
+ "7": [
+  {
+   "author": "Victoria, Queen in Council",
+   "title": "Proclamation by the Queen in Council, to the Princes, Chiefs, and People of India (1 November 1858)",
+   "publisher": "Allahabad",
+   "year": 1858,
+   "note": "The charter of Crown rule after 1857 – it promises to respect the rights, dignity and honour of native princes as our own and disclaims any further extension of territory, formally closing the era of lapse that had swallowed Satara. Read against the Berar assignment and the Mysore question, its guarantees were tested almost at once.",
+   "url": "https://en.wikisource.org/wiki/Proclamation_by_the_Queen_in_Council,_to_the_princes,_chiefs,_and_people_of_India",
+   "kind": "primary"
+  },
+  {
+   "author": "Alfred T. Etheridge",
+   "title": "Narrative of the Bombay Inam Commission and Supplementary Settlements",
+   "publisher": "Deccan Herald Press, Bombay",
+   "year": 1873,
+   "note": "The Commission's own account of its work from 1852 – the scrutiny of sanads and village records by which tens of thousands of inam and saranjam claims were confirmed, reduced or resumed. Indispensable for the scale of the enquiry and the legal reasoning it deployed, and the ground for the grievance that fed into 1857 and beyond.",
+   "url": "https://books.google.com/books/about/Narrative_of_the_Bombay_Inam_Commission.html?id=DULKPAAACAAJ",
+   "kind": "primary"
+  },
+  {
+   "author": "Government of Bombay",
+   "title": "The Bombay Hereditary Offices Act, 1874 (Bombay Act III of 1874) – the Watan Act",
+   "publisher": "Bombay Legislative Council",
+   "year": 1874,
+   "note": "The statute that codified the hereditary district and village offices – patil, kulkarni, deshmukh – and their watan lands as service tenures under the Collector's control, restricting alienation and prescribing commutation. It remained the legal frame for the watandars of the Deccan until the post-Independence abolition acts.",
+   "url": "https://bombayhighcourt.nic.in/libweb/acts/1874.03.pdf",
+   "kind": "primary"
+  },
+  {
+   "author": "Bombay Presidency (Deccan Riots Commission)",
+   "title": "Report of the Committee on the Riots in Poona and Ahmednagar, 1875, with Appendices",
+   "publisher": "Government Central Press, Bombay",
+   "year": 1876,
+   "note": "The official enquiry into the attacks on moneylenders at Supa, Kedgaon and the surrounding villages in May 1875 – its evidence on debt, civil-court decrees and land transfer made the Deccan ryot a fixture of Indian economic debate. Its diagnosis led directly to the Deccan Agriculturists' Relief Act of 1879.",
+   "url": "https://search.worldcat.org/title/report-of-the-committee-on-the-riots-in-poona-and-ahmednagar-1875-with-appendices/oclc/496461176",
+   "kind": "primary"
+  },
+  {
+   "author": "M. G. Ranade",
+   "title": "Rise of the Maráthá Power",
+   "publisher": "Punalekar & Co., Girgaum, Bombay",
+   "year": 1900,
+   "note": "Ranade's reading of Shivaji's state as a national and reforming movement – the Deccan past rewritten by the leading mind of the Sarvajanik Sabha generation, and the text through which the settlement era remembered the kingdom it had replaced.",
+   "url": "https://archive.org/details/risemarathapowe00bahagoog",
+   "kind": "early"
+  },
+  {
+   "author": "Kenneth Ballhatchet",
+   "title": "Social Policy and Social Change in Western India 1817–1830",
+   "publisher": "Oxford University Press, London",
+   "year": 1957,
+   "note": "The classic study of Elphinstone's settlement of the conquered Peshwa territories – the decision to keep Maratha institutions, the panchayat, the watandars and the jagirdars, and the first arguments over survey and assessment that Pringle inherited. Sets the terms on which everything after 1831 was a revision.",
+   "url": "https://www.cambridge.org/core/journals/historical-journal/article/abs/social-policy-and-social-change-in-western-india-18171830-by-kenneth-ballhatchet-school-of-oriental-and-african-studies-university-of-london-london-oriental-series-vol-5-london-oxford-university-press-1957-pp-vii-335-45s/B98853D05C2AAC3DE2155B245FB9EE19",
+   "kind": "book"
+  },
+  {
+   "author": "Neil Charlesworth",
+   "title": "The Myth of the Deccan Riots of 1875",
+   "publisher": "Modern Asian Studies, vol. 6, no. 4, pp. 401–421",
+   "year": 1972,
+   "note": "A sceptical re-reading of the riots – a handful of villages, little bloodshed, and far less transfer of land to moneylenders than the Commission assumed. The starting point for every later argument about what 1875 did and did not show.",
+   "url": "https://doi.org/10.1017/S0026749X00004285",
+   "kind": "article"
+  },
+  {
+   "author": "Neil Charlesworth",
+   "title": "Peasants and Imperial Rule: Agriculture and Agrarian Society in the Bombay Presidency 1850–1935",
+   "publisher": "Cambridge University Press",
+   "year": 1985,
+   "note": "The wider synthesis – the ryotwari survey settlement at work, the village of 1850, revision settlements, credit, famine and the peasant in politics. Particularly useful on how the Wingate–Goldsmid system was administered and revised after 1868.",
+   "url": "https://www.cambridge.org/core/books/peasants-and-imperial-rule/906A1884C52C41939D7A1FC1E6294D3F",
+   "kind": "book"
+  },
+  {
+   "author": "Sumit Guha",
+   "title": "The Agrarian Economy of the Bombay Deccan 1818–1941",
+   "publisher": "Oxford University Press, Delhi",
+   "year": 1985,
+   "note": "A quantitative economic history of the Deccan districts from the conquest – prices, population, cultivation and the burden of Pringle's over-assessment against the relief of the Wingate settlements. The essential corrective to arguments built on administrative rhetoric alone.",
+   "url": "https://archive.org/details/agrarianeconomyo0000sumi",
+   "kind": "book"
+  },
+  {
+   "author": "Björn Hettne",
+   "title": "The Political Economy of Indirect Rule: Mysore 1881–1947",
+   "publisher": "Curzon Press, London and Malmö",
+   "year": 1978,
+   "note": "Begins with the rendition of 1881 – the return of Mysore to its Wodeyar ruler after fifty years of Commission rule – and the instrument of transfer that defined what a model native state owed the paramount power. The natural comparison for Satara's lapse and Berar's assignment.",
+   "url": "https://www.cambridge.org/core/journals/modern-asian-studies/article/abs/political-change-in-an-indian-state-mysore-19171955-by-james-manor-australian-national-university-monographs-on-south-asia-no-2-manohar-new-delhi-1977-pp-xi-261-rs-45-the-political-economy-of-indirect-rule-mysore-18811947-by-bjorn-hettne-scandinavian-institute-of-asian-studies-monograph-series-no-32-curzon-press-london-and-malmo-1978-pp-402/35AB4FD484B1C02A890B3A490C46FCAF",
+   "kind": "book"
+  },
+  {
+   "author": "Ravinder Kumar",
+   "title": "Western India in the Nineteenth Century: A Study in the Social History of Maharashtra",
+   "publisher": "Routledge & Kegan Paul, London",
+   "year": 1968,
+   "note": "The foundational social history of the period – Pringle's failed survey, Wingate's and Goldsmid's joint report of 1847, the village community under the new revenue rules, and the riots of 1875 as the outcome of a changed relation between cultivator and vani. Still the framework most later work argues with.",
+   "url": "https://archive.org/details/westernindiainni00kuma",
+   "kind": "book"
+  },
+  {
+   "author": "Rosalind O'Hanlon",
+   "title": "Caste, Conflict and Ideology: Mahatma Jotirao Phule and Low Caste Protest in Nineteenth-Century Western India",
+   "publisher": "Cambridge University Press",
+   "year": 1985,
+   "note": "Phule and the Satyashodhak Samaj of 1873 set against the Brahman-led public life of Poona – the other face of Ranade's generation. Shows how the inam enquiry, the watan question and the cultivator's grievance were read from below.",
+   "url": "https://books.google.com/books/about/Caste_Conflict_and_Ideology.html?id=5kMrsTj1NeYC",
+   "kind": "book"
+  },
+  {
+   "author": "Eric Stokes",
+   "title": "The English Utilitarians and India",
+   "publisher": "Clarendon Press, Oxford",
+   "year": 1959,
+   "note": "The intellectual history behind the revenue survey – Ricardian rent theory, Mill at India House and the ryotwari settlement as an instrument of policy. Explains why Pringle measured net produce and why Wingate abandoned the attempt.",
+   "url": "https://archive.org/details/englishutilitari0000stok",
+   "kind": "book"
+  },
+  {
+   "author": "Richard P. Tucker",
+   "title": "Ranade and the Roots of Indian Nationalism",
+   "publisher": "University of Chicago Press",
+   "year": 1972,
+   "note": "The standard biography of Ranade as judge, economist and founder of the Poona Sarvajanik Sabha, placing his agrarian and social reform writings in the Deccan of the 1870s – the generation that turned the grievances of settlement into a public politics.",
+   "url": "https://archive.org/details/in.ernet.dli.2015.119614",
+   "kind": "book"
+  }
  ]
 };

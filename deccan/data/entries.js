@@ -3902,50 +3902,6 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
-  "id": "deccan-as-the-company-saw-it",
-  "title": "Coda: the Deccan as the Company saw it",
-  "date_label": "1827–1893",
-  "year": 1827,
-  "year_end": 1893,
-  "period": 6,
-  "polities": [
-   "company",
-   "hyderabad",
-   "mysore",
-   "maratha"
-  ],
-  "kind": "document",
-  "place": null,
-  "lat": null,
-  "lon": null,
-  "strap": "Three printed maps, from Brussels, London and Edinburgh, show the plural Deccan of this collection settling into the provinces and states of British India.",
-  "body": "<p>The collection ends where its companion begins, with the maps. Three sheets in the map collection show the Deccan after paramountcy, each drawn from the Company’s surveys and each a generation apart. Philippe Vandermaelen’s <em>Atlas universel</em>, published in Brussels in 1827, was the first atlas to print the whole world at a single scale and the first printed by lithography; its sheet headed <em>Bejapoor</em> still names the country by the sultanate that Aurangzeb had extinguished in 1686, and marks the Peshwa’s territories only nine years after they had ceased to exist. European cartography was still working from Rennell and from the reports of the Maratha wars.</p><p>The Society for the Diffusion of Useful Knowledge’s map <em>India III</em>, engraved by J. and C. Walker and in this edition dated 1856, shows the Bombay Presidency and the Nizam’s dominions with the district boundaries of the Company’s administration and the internal borders of Hyderabad, Satara (annexed in 1848) and the southern Maratha jagirs. It is a map of a settled possession. J. G. Bartholomew’s <em>Section X</em> in <em>Constable’s Hand Atlas of India</em> of 1893 belongs to the Crown, not the Company, and shows Bombay and Berar as the railway and the census saw them: the Deccan of Hyderabad as a large pink island in a British sea, its districts measured, its towns ranked by population.</p><p>Read in order the three maps show the throughline of this collection drawn out on paper. The older names, Bijapur, Golconda, the Carnatic, the Peshwa, fade from the sheets as the provinces and princely states harden. By 1893 the layered sovereignties of the Deccan had become two colours on a map, British territory and native states, and the second existed only within the first.</p>",
-  "story": "The coda is the collection’s argument stated by its companion. Maps do not merely record sovereignty; they decide what counts as a border and whose name goes on the land. In 1500 a map of the Deccan would have needed a dozen colours and still misled. By the end of the Company’s century the surveyors and engravers could draw it in two. The plurality this collection follows for three hundred years was not only defeated in the field; it was drawn out of existence.",
-  "sources": [
-   {
-    "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
-    "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html"
-   },
-   {
-    "title": "Bernard S. Cohn, Colonialism and Its Forms of Knowledge: The British in India (Princeton University Press, 1996)",
-    "url": "https://press.princeton.edu/books/paperback/9780691000435/colonialism-and-its-forms-of-knowledge"
-   },
-   {
-    "title": "Princeton University Library, Notabilia, ‘Vandermaelen Atlas (1827)’",
-    "url": "https://notabilia.blogs.princeton.edu/2012/12/31/vandermaelen-atlas-1827-%E2%80%A2-first-atlas-of-the-world-with-all-maps-on-the-same-scale/"
-   },
-   {
-    "title": "Wikipedia, ‘Society for the Diffusion of Useful Knowledge’",
-    "url": "https://en.wikipedia.org/wiki/Society_for_the_Diffusion_of_Useful_Knowledge"
-   }
-  ],
-  "related_maps": [
-   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
-   "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
-   "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html"
-  ]
- },
- {
   "id": "nagar-revolt-1831",
   "title": "The Nagar revolt and the Mysore Commission",
   "date_label": "1830–1831",
@@ -3984,6 +3940,539 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1831__India__John-Walker__Newly-Constructed-Map-of-India.html",
    "1848__Deccan__Morse__Southern-India.html"
+  ]
+ },
+ {
+  "id": "elphinstone-to-inam",
+  "title": "The inheritance of grants",
+  "date_label": "1831",
+  "year": 1831,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "company",
+   "maratha"
+  ],
+  "kind": "institution",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.86,
+  "strap": "What the Company took over with the Peshwa’s territories in 1818: watans, inams, saranjams and temple grants, left standing by Elphinstone and still unsettled in 1831.",
+  "body": "<p>When the Peshwa’s territories passed to the Company in 1818, they came with a large body of revenue already given away. Village officers – patils, kulkarnis, deshmukhs, deshpandes – held hereditary watans, paid in land and cash from the village collections. Brahmans, temples, mosques, dargahs and private persons held inams, grants of land or revenue free of assessment. Military families held saranjams, assignments of district revenue for the upkeep of troops. Most of these had been granted or confirmed by the Adil Shahis, the Mughals and the Peshwas in turn, and some were far older. Mountstuart Elphinstone, as Commissioner of the Deccan and then Governor of Bombay, decided in 1819 to leave them standing, and the Company’s early settlements under William Chaplin and Robert Keith Pringle worked around them.</p><p>The scale was considerable. Contemporary returns put the alienated revenue of the Deccan and the southern Maratha country at roughly a quarter of the gross land revenue, with some talukas far above that; the precise proportion depended on what was counted and was itself a subject of argument. Elphinstone’s reasoning, set out in his <em>Report on the Territories Conquered from the Paishwa</em> (1821), was political. The grant-holders were the people through whom the country had been governed, and to resume their holdings would make enemies of the only class whose cooperation the new government needed. Chaplin, who succeeded him, took the same line while tightening the record.</p><p>By 1831 the policy of restraint had produced a problem rather than a settlement. Grants had never been systematically registered, sanads were scattered and sometimes forged, the revenue surveys then beginning found the alienated share of each village fixed by custom rather than by any measurable title, and a growing body of Bombay officials regarded the inheritance as a drain to be examined. The period that follows is the story of how the Company, and after 1858 the Crown, went through that inheritance layer by layer and decided what to keep.</p>",
+  "story": "Paramountcy did not abolish the older grants; it inherited them. In 1831 a single Deccan village might owe its patil a watan confirmed by the Peshwa, its temple an inam under a Bijapur sanad, and a saranjamdar a share of its revenue by Mughal precedent, all now collected under a Company settlement. That stack of claims was layered sovereignty surviving at the smallest scale, and the decision to leave it standing set up the forty years of scrutiny that this period covers.",
+  "sources": [
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century: A Study in the Social History of Maharashtra (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, 1957)",
+    "url": "https://search.worldcat.org/search?q=Ballhatchet+Social+Policy+and+Social+Change+in+Western+India+1817-1830"
+   },
+   {
+    "title": "Sumit Guha, The Agrarian Economy of the Bombay Deccan, 1818–1941 (Oxford University Press, 1985)",
+    "url": "https://search.worldcat.org/search?q=Guha+Agrarian+Economy+of+the+Bombay+Deccan+1818-1941"
+   },
+   {
+    "title": "Mountstuart Elphinstone, Report on the Territories Conquered from the Paishwa (Calcutta, 1821)",
+    "url": "https://archive.org/details/reportonterrito00elphgoog"
+   }
+  ],
+  "related_maps": [
+   "1831__India__John-Walker__Newly-Constructed-Map-of-India.html",
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
+  "id": "jagirdars-and-saranjams",
+  "title": "Jagirs and saranjams under the Company",
+  "date_label": "1830s–1860s",
+  "year": 1833,
+  "year_end": 1865,
+  "period": 7,
+  "polities": [
+   "company",
+   "maratha",
+   "crown"
+  ],
+  "kind": "institution",
+  "place": "Kolhapur, Maharashtra",
+  "lat": 16.7,
+  "lon": 74.24,
+  "strap": "The Maratha military families’ revenue assignments, and the rules by which the Company decided which would descend to heirs and which would lapse.",
+  "body": "<p>Saranjams were assignments of revenue made by the Peshwas and the Satara rajas to military commanders for the upkeep of troops, in theory for service and for life, in practice often hereditary. The Patwardhans of Miraj, Sangli, Jamkhandi and Kurundwad, the Pant Pratinidhi of Aundh, the Pant Sachiv of Bhor, the Nimbalkars of Phaltan and the Ghorpades of Mudhol held territory on these terms when the Company took over in 1818. Elphinstone confirmed the larger southern jagirdars by separate engagements, guaranteed their estates for their lifetimes and left the question of succession open. The question was answered piecemeal over the next forty years.</p><p>The Bombay government’s rules, developed piecemeal through the nineteenth century and formally codified only in the Saranjam Rules of 1898, treated each grant as continued at the pleasure of government, with succession by a natural heir generally allowed and adoption allowed only with prior sanction. Minor saranjams that had been granted for service were resumed as the holders died; many were commuted to cash pensions or to a fixed nazarana on each succession. The Inam Commission handled the smaller political grants, and the larger ones were reviewed by the political department. Kolhapur, a separate state under Shivaji’s junior line and its own treaty, faced the same pressure from within: its feudatories, the Gadkaris who held the hill forts, rose in 1844 when their service lands were cut, and the Company’s troops restored order and imposed a British-controlled administration on the raja.</p><p>By the 1860s the southern Maratha country was a patchwork of British talukas and confirmed jagirs, each jagir a small state with a guaranteed holder, a fixed tribute and a Political Agent at Kolhapur to watch it. The military purpose of the saranjam was gone, since the Company would allow no private troops, and what remained was a revenue right held on British sufferance. The families kept their rank and much of their income; they had ceased to be the armed intermediaries through whom the Marathas had governed.</p>",
+  "story": "The jagirdars were the Maratha state’s own layer of delegated sovereignty, commanders paid in districts rather than cash. Under the Company they were kept on as landholders and stripped of the thing that had justified the grant. The rules on succession and resumption are where the paramount power decided, case by case, that a sovereignty once exercised with troops and courts could continue as a pension. It is the slow version of what lapse did to Satara all at once.",
+  "sources": [
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Ian Copland, The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930 (Orient Longman, 1982)",
+    "url": "https://search.worldcat.org/search?q=Copland+The+British+Raj+and+the+Indian+Princes+Paramountcy+in+Western+India"
+   },
+   {
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, 1957)",
+    "url": "https://search.worldcat.org/search?q=Ballhatchet+Social+Policy+and+Social+Change+in+Western+India+1817-1830"
+   },
+   {
+    "title": "Gazetteer of the Bombay Presidency, vol. XXIV, Kolhapur (Bombay, 1886)",
+    "url": "https://archive.org/details/dli.bengal.10689.20328"
+   }
+  ],
+  "related_maps": [
+   "1859__Deccan__Josenhans-Basel__Sud-Mahratta.html",
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "pringle-wingate-survey-1835",
+  "title": "The Bombay revenue survey",
+  "date_label": "1835–1847",
+  "year": 1835,
+  "year_end": 1847,
+  "period": 7,
+  "polities": [
+   "company"
+  ],
+  "kind": "institution",
+  "place": "Indapur, Maharashtra",
+  "lat": 18.12,
+  "lon": 75.02,
+  "strap": "Pringle’s failed survey of the Deccan, its replacement by Goldsmid and Wingate from 1835, and the Joint Report of 1847 that fixed the ryotwari settlement of Bombay.",
+  "body": "<p>Between 1835 and 1847 the Bombay government worked out the revenue settlement that would govern the Deccan countryside for the rest of the century. The first attempt had already failed. Robert Keith Pringle’s survey of the Poona districts, begun in the late 1820s and applied at Indapur from 1830, tried to measure each field and fix its assessment at a fixed share of the ‘net produce’, a Ricardian rent calculated from crop estimates. The figures were wrong, the rates were too high, cultivators abandoned their land, and the survey was suspended in the mid-1830s. Henry Goldsmid, a young civilian, and Lieutenant George Wingate of the Bombay Engineers were sent to Indapur to begin again.</p><p>Their method abandoned the attempt to calculate rent. Fields were measured and classed by soil into a small number of grades, and the assessment for each class was set by judgement, with the district’s past collections, its access to markets and the condition of its people as the guide, and fixed for thirty years. The settlement was made with the individual cultivator, not with the village or with any intermediary, which is what made it ryotwari. The principles were written up in the Joint Report of 2 August 1847, signed by Goldsmid, Wingate and David Davidson, and adopted by the Bombay government as the code of its survey and settlement department.</p><p>The survey then spread from the Deccan to the southern Maratha country, Gujarat and the Konkan, and was complete in most of the Presidency by the 1860s. Its effects were mixed. Lower and predictable rates brought cultivation back to the eastern Deccan, and the settlement’s records of rights became the basis of land title. At the same time the survey measured and registered alienated holdings, and the fixed cash demand, collected on a date rather than by a share of the crop, tied the cultivator more firmly to the moneylender. The Deccan Riots Commission of 1876 would return to that point.</p>",
+  "story": "The survey is where the new paramount power made the individual cultivator the unit of assessment, even while inherited village offices and alienated rights survived around the settlement. Under the Peshwas revenue had passed up through village officers, mamlatdars and saranjamdars, each taking a share. The ryotwari settlement was direct in fiscal theory if not in village practice, and in being made it produced the register of who held what, including every inam and watan, that the Inam Commission and the Watan Act would later use.",
+  "sources": [
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Neil Charlesworth, Peasants and Imperial Rule: Agriculture and Agrarian Society in the Bombay Presidency, 1850–1935 (Cambridge University Press, 1985)",
+    "url": "https://search.worldcat.org/search?q=Charlesworth+Peasants+and+Imperial+Rule+Bombay+Presidency+1850-1935"
+   },
+   {
+    "title": "Michelle Burge McAlpin, ‘Economic Policy and the True Believer: The Use of Ricardian Rent Theory in the Bombay Survey and Settlement System’, Journal of Economic History 44:2 (1984)",
+    "url": "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/economic-policy-and-the-true-believer-the-use-of-ricardian-rent-theory-in-the-bombay-survey-and-settlement-system/154191712D1B7BACBE48570ED9D2B7C6"
+   },
+   {
+    "title": "Papers relating to the Joint Report of 1847, with the measurement and classification rules of the Deccan, Gujarat, Konkan and Kanara surveys (Bombay, 1917)",
+    "url": "https://discovery.nationalarchives.gov.uk/details/r/57d8939f-865c-42cd-a020-ad54175ca3bc"
+   }
+  ],
+  "related_maps": [
+   "1848__Deccan__Morse__Southern-India.html",
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "satara-lapse-1848",
+  "title": "The annexation of Satara",
+  "date_label": "1848",
+  "year": 1848,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "maratha",
+   "company"
+  ],
+  "kind": "event",
+  "place": "Satara, Maharashtra",
+  "lat": 17.69,
+  "lon": 73.99,
+  "strap": "The raj created for Shivaji’s descendant in 1818 ends thirty years later, when Dalhousie refuses to recognise an adopted heir and takes the state by lapse.",
+  "body": "<p>Raja Shahaji of Satara died on 5 April 1848, leaving no son of his body and an heir, Venkatji, adopted on his deathbed. Within months the Governor-General, Lord Dalhousie, had recorded his view that the adoption gave no claim to the throne, that Satara was a dependent state created by the British, and that on the failure of natural heirs it lapsed to the paramount power. The Court of Directors agreed in 1849, and Satara became a district of the Bombay Presidency. It was the first of Dalhousie’s annexations under what came to be called the doctrine of lapse.</p><p>The state had been Elphinstone’s creation. In 1818 he had installed Pratapsinh, a descendant of Shivaji and a prisoner of the Peshwa, as a raja with a treaty, a Resident and a territory around Satara, a gesture to Maratha sentiment that cost the Company little. Pratapsinh was deposed in 1839 on charges of intrigue that his partisans never accepted, and sent to Benares, where he died in 1847. His agent Rango Bapuji Gupte spent years in London petitioning Parliament on his behalf without result. Shahaji, his brother, was given the throne in his place, and it was Shahaji’s death that opened the question of succession.</p><p>Dalhousie’s argument was that adoption might pass private property but not a principality held by British grant, and that the Company should take every lawful opportunity to consolidate its territory. Satara, Jhansi and Nagpur followed the same reasoning. The annexation had two consequences for the Deccan. The last state that could claim Shivaji’s line as a sovereign house, other than Kolhapur, disappeared into the Bombay revenue system, and the jagirdars and inamdars of Satara found their grants transferred to the Company’s scrutiny at the very moment the Inam Commission was being designed. The grievance was remembered, and Satara was one of the few places in the Deccan where 1857 produced a conspiracy.</p>",
+  "story": "Satara was a layer the Company itself had added in 1818, a Maratha sovereignty kept alive under a treaty because it was useful. Its removal in 1848 showed how the logic of paramountcy had changed in thirty years: the subordinate state was no longer a partner whose continuance had political value but an estate that could be taken when a legal form allowed. Lapse is the first moment in this period when a whole layer, rather than a grant within it, was simply struck out.",
+  "sources": [
+   {
+    "title": "Sumitra Kulkarni, The Satara Raj, 1818–1848: A Study in History, Administration and Culture (Mittal Publications, 1995)",
+    "url": "https://search.worldcat.org/search?q=Sumitra+Kulkarni+The+Satara+Raj+1818-1848"
+   },
+   {
+    "title": "Michael H. Fisher, Indirect Rule in India: Residents and the Residency System, 1764–1858 (Oxford University Press, 1991)",
+    "url": "https://search.worldcat.org/search?q=Michael+Fisher+Indirect+Rule+in+India+Residents+and+the+Residency+System"
+   },
+   {
+    "title": "Britannica, ‘James Andrew Broun Ramsay, marquess of Dalhousie’",
+    "url": "https://www.britannica.com/biography/James-Andrew-Broun-Ramsay-Marquess-and-10th-Earl-of-Dalhousie"
+   },
+   {
+    "title": "Wikipedia, ‘Raja Shahaji of Satara’",
+    "url": "https://en.wikipedia.org/wiki/Raja_Shahaji_of_Satara"
+   }
+  ],
+  "related_maps": [
+   "1848__Deccan__Morse__Southern-India.html",
+   "1859__Deccan__Josenhans-Basel__Sud-Mahratta.html"
+  ]
+ },
+ {
+  "id": "inam-commission-1852",
+  "title": "The Inam Commission",
+  "date_label": "1852–1863",
+  "year": 1852,
+  "year_end": 1863,
+  "period": 7,
+  "polities": [
+   "company",
+   "crown"
+  ],
+  "kind": "institution",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.86,
+  "strap": "Act XI of 1852 set a British tribunal to test the title of every rent-free holding in the Deccan; tens of thousands of grants were examined, many reduced or resumed.",
+  "body": "<p>The Bombay Rent-Free Estates Act, Act XI of 1852, passed on 13 February 1852, empowered the Governor of Bombay to appoint an Inam Commissioner with assistants to investigate and determine the title to lands claimed as wholly or partly exempt from revenue in the Deccan and the southern Maratha country. The Commission sat from 1852 to 1863, under Captain T. A. Cowper and then A. T. Etheridge as Commissioner, with assistants who included W. Hart. Its work was to decide, grant by grant, whether a holding had been made by an authority competent to alienate revenue in perpetuity, whether it was hereditary or for life, and whether it had been continuously held.</p><p>The rules were set out in the Act’s schedule. A personal inam held under a sanad declaring it hereditary was to be continued on the sanad’s terms; one held uninterruptedly for sixty years before the introduction of British government was confirmed; one held for forty years was continued for one further succession; a grant not shown to be hereditary was to be resumed on the death of the incumbent. Claimants had to produce their documents, Marathi and Persian sanads, village accounts and the Peshwa’s daftar, before a British officer who tested them for authenticity. Some tens of thousands of claims were examined; the Commission’s own narrative put the number above thirty thousand, and the proportion confirmed in full was well under half, with the rest reduced, continued for a life, or resumed. The exact totals vary between the Commission’s returns and later summaries.</p><p>The Commission turned grants that had been matters of custom into matters of evidence, and shifted the burden of proof onto the holder. Its decisions were excluded from the ordinary civil courts; appeals lay only within the Commission and the government hierarchy. The resentment it produced among Brahman and Maratha families was recorded by the Deccan Riots Commission in 1876, and the Commission is commonly listed among the grievances that preceded 1857 in the Deccan. Its registers, and the summary settlements that followed under Act VII of 1863, remained the basis of inam tenure in Bombay until the abolition acts of the 1950s.</p>",
+  "story": "The Inam Commission is where earlier layers of sovereignty were called to give evidence. A grant from Bijapur, the Mughal subahdar or the Peshwa had been a mark of the granting power’s authority; after 1852 it was a document to be authenticated, and the authority that had issued it counted only as far as British rules allowed. The Commission did not deny that those regimes had existed, it decided what their acts were worth, which is the paramount power defining its predecessors.",
+  "sources": [
+   {
+    "title": "Dominic Vendell, ‘A True Copy? Documents and the Production of Legality in the Bombay Inam Commission’, Law and History Review 41:3 (2023)",
+    "url": "https://www.cambridge.org/core/journals/law-and-history-review/article/true-copy-documents-and-the-production-of-legality-in-the-bombay-inam-commission/1537A912ED6852161EC6774A8EFB2780"
+   },
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "A. T. Etheridge, Narrative of the Bombay Inam Commission and Supplementary Settlements (Bombay, 1874)",
+    "url": "https://books.google.com/books/about/Narrative_of_the_Bombay_Inam_Commission.html?id=DULKPAAACAAJ"
+   },
+   {
+    "title": "The Bombay Rent-Free Estates Act, Act XI of 1852 (text)",
+    "url": "https://www.indiacode.nic.in/bitstream/123456789/19027/1/a1852-11.pdf"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "berar-assignment-1853",
+  "title": "The Berar assignment",
+  "date_label": "21 May 1853",
+  "year": 1853,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "hyderabad",
+   "company"
+  ],
+  "kind": "treaty",
+  "place": "Amravati, Maharashtra",
+  "lat": 20.93,
+  "lon": 77.75,
+  "strap": "To clear his debts for the Contingent, the Nizam assigns Berar and other districts to the Company; Hyderabad keeps its sovereignty and loses its richest province.",
+  "body": "<p>By the treaty of 21 May 1853 the Nizam, Nasir ud-Daula, assigned to the Company the province of Berar, together with the Raichur Doab and the Dharaseo (Osmanabad) districts, territories to yield about fifty lakhs of rupees a year. In return the Company took over the maintenance of the Hyderabad Contingent, the force it had raised and officered for the Nizam under the treaty of 1800, and released the Nizam from the arrears he owed for it. The districts remained nominally Hyderabad’s, but were administered by British officers under a Commissioner, and their surplus revenue was to be accounted for to the Nizam.</p><p>The debt had been building for two decades. The Contingent cost some forty lakhs a year, the Nizam’s treasury was chronically short, and the Residency pressed him through the 1840s to pay or to cede territory in lieu. Dalhousie, who regarded the Contingent as a British force that Hyderabad should fund, forced the matter. The Nizam’s ministers resisted the cession of Berar in particular, and signed under pressure. In 1860 a further treaty, negotiated by the young minister Salar Jung after the Nizam’s conduct in 1857, restored Raichur and Dharaseo to Hyderabad and cancelled a fifty-lakh debt, but left Berar in British hands, held in trust for the purposes of the 1853 treaty. In 1902 the assignment became a perpetual lease.</p><p>The assignment changed the shape of Hyderabad without formally touching its sovereignty. Berar was the cotton country of the Deccan, and its transfer just before the American Civil War sent the cotton boom of the 1860s to the Company rather than the Nizam. The Nizam remained a sovereign prince with a British-paid army stationed in his dominions, a Resident in his capital and his best revenue collected by someone else. This was what paramountcy looked like for the one Deccan state that was never annexed.</p>",
+  "story": "Hyderabad was the Mughal layer that outlived the Mughals, and the assignment shows how paramountcy could hollow a sovereignty out while leaving its form intact. The Nizam kept his title, his coinage and his treaty, and surrendered the revenues that made them real. Berar was the Mughal province that had changed hands between Ahmadnagar, Delhi and the Bhonsles for two centuries; after 1853 it answered to a Commissioner, and its anomalous status persisted into the twentieth century: the Nizam’s sovereignty was formally reaffirmed in 1902 even as British India exercised exclusive administration.",
+  "sources": [
+   {
+    "title": "V. K. Bawa, The Nizam between Moghuls and British: Hyderabad under Salar Jang I (S. Chand, 1986)",
+    "url": "https://search.worldcat.org/search?q=Bawa+The+Nizam+between+Moghuls+and+British+Hyderabad+under+Salar+Jang"
+   },
+   {
+    "title": "Sarojini Regani, Nizam–British Relations, 1724–1857 (Concept Publishing, 1988)",
+    "url": "https://search.worldcat.org/search?q=Regani+Nizam-British+Relations+1724-1857"
+   },
+   {
+    "title": "Ian Copland, The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930 (Orient Longman, 1982)",
+    "url": "https://search.worldcat.org/search?q=Copland+The+British+Raj+and+the+Indian+Princes+Paramountcy+in+Western+India"
+   },
+   {
+    "title": "Wikipedia, ‘Berar Province’",
+    "url": "https://en.wikipedia.org/wiki/Berar_Province"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html",
+   "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html"
+  ]
+ },
+ {
+  "id": "1857-in-the-deccan",
+  "title": "1857 in the Deccan",
+  "date_label": "1857–1858",
+  "year": 1857,
+  "year_end": 1858,
+  "period": 7,
+  "polities": [
+   "company",
+   "maratha",
+   "hyderabad"
+  ],
+  "kind": "event",
+  "place": "Nargund, Karnataka",
+  "lat": 15.72,
+  "lon": 75.38,
+  "strap": "The rising of 1857 barely touched the Deccan: a conspiracy at Satara, two mutinies at Kolhapur, a revolt at Nargund, and a settlement that held.",
+  "body": "<p>The Deccan did not rise in 1857. The Bombay army remained largely loyal, the Nizam’s government stayed with the Company, and the Bombay Presidency sent troops north rather than needing them. What did happen was small and local. At Satara, Rango Bapuji Gupte, back from his years in London on behalf of the deposed Pratapsinh, organised a plot to seize the town; it was discovered in June 1857, a number of the conspirators were hanged at Satara, and Rango Bapuji escaped and was never caught. At Kolhapur the 27th Bombay Native Infantry mutinied on the night of 31 July 1857 and again in December; Colonel G. Le Grand Jacob suppressed both, and the raja’s brother Chimasaheb, suspected of involvement, was removed to Karachi.</p><p>The most serious outbreak came in the southern Maratha country in 1858. Bhaskar Rao Bhave, the chief of Nargund, whose request to adopt an heir had been refused and who had been ordered under the Disarming Act to surrender his guns, rose in May 1858, and on 29 May his men killed Charles Manson, the Political Agent, near Suriban. The rising was put down within weeks; Bhaskar Rao was taken near Torgal and hanged at Belgaum on 12 June 1858. Smaller disturbances among the Bhils of Khandesh and the Rohillas in the Nizam’s dominions, and an attack on the Residency at Hyderabad in July 1857, were contained.</p><p>The reasons the settlement held are much discussed. The Bombay army was recruited differently from the Bengal army and had fewer grievances of caste and service; the Deccan had no Awadh, no recently annexed kingdom with a dispossessed court and army; the jagirdars had been bound by guarantees and pensions; and the Nizam’s minister Salar Jung judged that Hyderabad’s interest lay with the Company. The grievances that did produce action, at Satara, Kolhapur and Nargund, were the grievances of this period: lapse, refused adoption, disarmament and the scrutiny of grants.</p>",
+  "story": "The near-silence of the Deccan in 1857 is evidence about the settlement. Where the layers had been removed gradually, by commission and pension rather than conquest, and the families who had lost most had already been bound by guarantees. The places that did move were the places where a layer had been struck out abruptly: Satara, and a jagir refused the right to adopt. The limited rebellion suggests that gradual confirmation, pension and accommodation mattered, but the contrast with north India cannot be reduced to the land settlement; the Bombay army’s recruitment and the decisions of Hyderabad and other local powers were at least as important – and the riots of 1875 show the settlement was not without loose ends.",
+  "sources": [
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Ian Copland, The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930 (Orient Longman, 1982)",
+    "url": "https://search.worldcat.org/search?q=Copland+The+British+Raj+and+the+Indian+Princes+Paramountcy+in+Western+India"
+   },
+   {
+    "title": "Maharashtra State Gazetteer, History of the Freedom Movement, vol. I, ch. V, ‘1857 Risings in the Bombay Presidency’",
+    "url": "https://gazetteers.maharashtra.gov.in/cultural.maharashtra.gov.in/english/gazetteer/VOL-I/PAGE_177_194.pdf"
+   },
+   {
+    "title": "Wikipedia, ‘Bhaskar Rao Bhave’",
+    "url": "https://en.wikipedia.org/wiki/Bhaskar_Rao_Bhave"
+   }
+  ],
+  "related_maps": [
+   "1857__India__Mitchell__Hindoostan.html",
+   "1859__Deccan__Josenhans-Basel__Sud-Mahratta.html"
+  ]
+ },
+ {
+  "id": "crown-proclamation-1858",
+  "title": "The Crown takes over",
+  "date_label": "1 November 1858",
+  "year": 1858,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "crown",
+   "company",
+   "hyderabad",
+   "mysore"
+  ],
+  "kind": "document",
+  "place": "Prayagraj (Allahabad), Uttar Pradesh",
+  "lat": 25.44,
+  "lon": 81.85,
+  "strap": "Queen Victoria’s proclamation ends Company rule, confirms every treaty with the princes and promises no further annexation; the paramount power changes its name and fixes its map.",
+  "body": "<p>On 1 November 1858 the Queen’s proclamation was read at Allahabad by Lord Canning, the first Viceroy, and at the principal stations of India. The Government of India Act, passed in August, had transferred the Company’s territories and powers to the Crown, to be exercised by a Secretary of State in London. The proclamation announced the transfer and set out the terms on which the new government would rule: religious neutrality, equal access to office, respect for ancient rights and customs, and amnesty for all but the leaders of the rising who had murdered British subjects.</p><p>For the princes the operative sentences were precise. ‘All treaties and engagements made with them by or under the authority of the Honourable East India Company are by us accepted, and will be scrupulously maintained.’ ‘We desire no extension of our present territorial possessions’, and ‘we shall respect the rights, dignity and honour of native Princes as our own’. In 1859 and 1862 these were followed by sanads to the larger states guaranteeing the right of adoption on failure of heirs. The doctrine of lapse, in the form Dalhousie had applied to Satara, was abandoned.</p><p>In the Deccan the change was felt differently in the two surviving states. Hyderabad, which had held to the Company in 1857, received back Raichur and Dharaseo under the treaty of 1860 and a clear assurance that its existence was not in question, though Berar was not returned. Mysore, which had been under direct British administration since 1831, became the test of whether the promise to the princes ran backwards as well as forwards, and that question occupied the next twenty years. For the Bombay Deccan the proclamation made little immediate difference to revenue administration; the survey, the Inam Commission and the rules on saranjams continued under the Crown as they had under the Company. The proclamation stabilised the princely-state system and repudiated annexation by lapse, though arrangements went on changing, as Berar and Mysore show.</p>",
+  "story": "The proclamation is the point at which the paramount power declared that the remaining layers would be kept. After forty years of absorbing states by treaty, debt and lapse, the Crown undertook to hold the line where it stood in 1858, and the princes became a permanent category rather than a transitional one. What survived in the Deccan, Hyderabad and the southern jagirs and, soon, Mysore, survived because of this document. What had already been absorbed stayed absorbed.",
+  "sources": [
+   {
+    "title": "Thomas R. Metcalf, Ideologies of the Raj (Cambridge University Press, 1994)",
+    "url": "https://search.worldcat.org/search?q=Metcalf+Ideologies+of+the+Raj"
+   },
+   {
+    "title": "Ian Copland, The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930 (Orient Longman, 1982)",
+    "url": "https://search.worldcat.org/search?q=Copland+The+British+Raj+and+the+Indian+Princes+Paramountcy+in+Western+India"
+   },
+   {
+    "title": "Bernard S. Cohn, ‘Representing Authority in Victorian India’, in Hobsbawm and Ranger (eds), The Invention of Tradition (Cambridge University Press, 1983)",
+    "url": "https://www.cambridge.org/core/books/invention-of-tradition/representing-authority-in-victorian-india/42189207BE2F1603C4CACBC558D3866C"
+   },
+   {
+    "title": "Proclamation by the Queen in Council to the Princes, Chiefs and People of India, 1 November 1858 (text)",
+    "url": "https://en.wikisource.org/wiki/Proclamation_by_the_Queen_in_Council,_to_the_princes,_chiefs,_and_people_of_India"
+   }
+  ],
+  "related_maps": [
+   "1858__India__Abington__Panoramic-View-of-India.html",
+   "1857__India__Mitchell__Hindoostan.html"
+  ]
+ },
+ {
+  "id": "mysore-rendition-question",
+  "title": "The Mysore question",
+  "date_label": "1867–1881",
+  "year": 1867,
+  "year_end": 1881,
+  "period": 7,
+  "polities": [
+   "mysore",
+   "crown"
+  ],
+  "kind": "event",
+  "place": "Mysuru, Karnataka",
+  "lat": 12.3,
+  "lon": 76.65,
+  "strap": "Whether a state taken under British administration in 1831 could be handed back: the recognition of an adopted heir in 1867 and the rendition of Mysore in 1881.",
+  "body": "<p>Mysore had been under direct British administration since October 1831, when Lord William Bentinck removed Krishnaraja Wodeyar III from the government of his state after the Nagar revolt and placed it under a Commission, though the raja kept his title, his palace and a pension. For thirty years, under Mark Cubbon and then Lewin Bowring, the Commission governed Mysore as if it were a British province, and the Government of India intended to annex it outright on the raja’s death. The raja had no son. In June 1865 he adopted his grandson Chamarajendra, then two years old, and after long argument the Secretary of State, Sir Stafford Northcote, recognised the adoption on 16 April 1867 and announced that the state would be restored to the boy when he came of age.</p><p>The decision was a direct consequence of the 1858 proclamation and the adoption sanads. The Government of India had argued that Mysore was held by the Crown under the treaty of 1799 and that the raja’s deposition had extinguished his house’s claim; Northcote and a parliamentary lobby argued that the Queen’s promises could not be read to exclude a state that had been administered rather than annexed. Krishnaraja died in March 1868. The interval was used to build the Mysore the British wished to return: a codified revenue system, a model administration under the Commission, and an English education for the prince under a tutor appointed by the Viceroy.</p><p>On 25 March 1881 Lord Ripon’s government handed the state back under an Instrument of Transfer that fixed the subsidy, reserved British control over the army and foreign relations, and required the maharaja to keep the Commission’s laws. C. V. Rangacharlu became Dewan, and in October 1881 the Mysore Representative Assembly met for the first time. The rendition was an unusually striking case of a layer of Indian sovereignty that the British had set aside being deliberately put back, and it was put back on British terms.</p>",
+  "story": "Mysore tests the throughline in reverse. Everywhere else in this period a layer was removed or reduced; here one was restored, and the conditions of restoration show what paramountcy had become. The Wodeyar state returned with its laws written by a British Commission, its army limited by treaty, and its continuation read through the proclamation of 1858 as much as through the 1799 settlement from which it descended. The question was never whether Mysore was sovereign but how much sovereignty the paramount power chose to lend it.",
+  "sources": [
+   {
+    "title": "Björn Hettne, The Political Economy of Indirect Rule: Mysore 1881–1947 (Curzon Press, 1978)",
+    "url": "https://search.worldcat.org/search?q=Hettne+The+Political+Economy+of+Indirect+Rule+Mysore+1881-1947"
+   },
+   {
+    "title": "Janaki Nair, Mysore Modern: Rethinking the Region under Princely Rule (University of Minnesota Press, 2011)",
+    "url": "https://www.upress.umn.edu/9780816670000/mysore-modern/"
+   },
+   {
+    "title": "Ian Copland, The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930 (Orient Longman, 1982)",
+    "url": "https://search.worldcat.org/search?q=Copland+The+British+Raj+and+the+Indian+Princes+Paramountcy+in+Western+India"
+   },
+   {
+    "title": "Wikipedia, ‘Chamarajendra Wadiyar X’",
+    "url": "https://en.wikipedia.org/wiki/Chamarajendra_Wadiyar_X"
+   }
+  ],
+  "related_maps": [
+   "1851__SouthIndia__Tallis-Martin__Southern-India-Bombay-and-Madras.html",
+   "1883__India__Letts__India-11.html"
+  ]
+ },
+ {
+  "id": "bombay-hereditary-offices-act-1874",
+  "title": "The Watan Act",
+  "date_label": "1874, in force 5 February 1875",
+  "year": 1874,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "crown"
+  ],
+  "kind": "document",
+  "place": "Mumbai, Maharashtra",
+  "lat": 18.93,
+  "lon": 72.83,
+  "strap": "Bombay Act III of 1874, the Hereditary Offices Act: the patil and the kulkarni keep their watans but become servants of government, with the Collector deciding who serves.",
+  "body": "<p>The Bombay Hereditary Offices Act, Bombay Act III of 1874, is the statute that settled the position of the village officers of the Deccan. It defined a watan as the hereditary office together with the land and cash remuneration attached to it, and a watandar as the person holding it; it declared watan property inalienable to anyone outside the watan family without the Collector’s sanction; and it gave the Collector power to appoint from the family an officiator to perform the duties, to fix the remuneration of the office, to commute service for a cash payment, and to dismiss an officiator who failed in his duty. Service and remuneration were separated. The Act still defined a representative watandar as one who possessed the right to perform the hereditary office, and the duties were ordinarily performed by representative watandars or their deputies; in watans held in rotation the registered watandars could nominate the officiator, and the Collector selected only where the statutory machinery required it.</p><p>The offices concerned were the patil, the headman, and the kulkarni, the village accountant, with the lesser village servants and, in the southern districts, the surviving district officers, the deshmukhs and deshpandes, whose functions had already been commuted to cash by the Inam Commission. These posts were older than any of the regimes in this collection. The Adil Shahis, the Mughals and the Peshwas had all governed through them, confirmed them by sanad, and left the families to divide and sell their shares as they liked. The result by the 1860s was a tangle of fractional watandars, absentee shareholders and hired deputies that the survey and settlement department found unworkable.</p><p>The Act did not abolish the watan. It made the watan legible to the colonial state: the Collector’s register was to record the heads of families, the representative watandars, the order of service and the proportional share of the watan held by each family, expressed in annas or fractions of a rupee; alienation was regulated and hereditary office placed under the Collector’s supervision. It was published and came into force on 5 February 1875, was amended in 1886 and 1910 and extended to the whole Presidency, and the offices it regulated outlived it: paragana and kulkarni watans were abolished in 1950, the inferior village watans in 1958–59, and the hereditary revenue patils only by the Maharashtra Revenue Patels (Abolition of Office) Act of 1962, in force from 1963. A political entitlement survived, but now as a statutory category.</p>",
+  "story": "This is the statute that ends layered sovereignty at the scale of the village. The watan had been the one right that every regime in the timeline had confirmed rather than created, a local authority that sultans, emperors and Peshwas inherited and left alone. The 1874 Act did not take the office away; it registered it, fixed its shareholders and its order of service, and placed it under the Collector’s supervision, so that what had been a hereditary share of the village’s own sovereignty became a statutory category in a government register. Three centuries of confirmations ended not in abolition but in an audit; the abolition itself waited for independent India.",
+  "sources": [
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Hiroshi Fukazawa, The Medieval Deccan: Peasants, Social Systems and States, Sixteenth to Eighteenth Centuries (Oxford University Press, 1991)",
+    "url": "https://search.worldcat.org/search?q=Fukazawa+The+Medieval+Deccan+Peasants+Social+Systems+and+States"
+   },
+   {
+    "title": "Neil Charlesworth, Peasants and Imperial Rule (Cambridge University Press, 1985)",
+    "url": "https://search.worldcat.org/search?q=Charlesworth+Peasants+and+Imperial+Rule+Bombay+Presidency+1850-1935"
+   },
+   {
+    "title": "The Hereditary Offices Act, being Bombay Act III of 1874, as amended by V of 1886 and III of 1910 (Gokhale Institute digital library)",
+    "url": "https://dspace.gipe.ac.in/xmlui/handle/10973/19664"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "deccan-riots-1875",
+  "title": "The Deccan Riots",
+  "date_label": "May–June 1875",
+  "year": 1875,
+  "year_end": null,
+  "period": 7,
+  "polities": [
+   "crown"
+  ],
+  "kind": "event",
+  "place": "Supa, Pune district, Maharashtra",
+  "lat": 18.33,
+  "lon": 74.39,
+  "strap": "Cultivators in Poona and Ahmednagar districts attack moneylenders and burn their bonds; the Commission of 1876 and the Relief Act of 1879 follow.",
+  "body": "<p>On 12 May 1875 cultivators at Supa, a market village in Bhimthadi taluka of Poona district, attacked the houses and shops of the local moneylenders, seized their account books and bonds and burned them. Over the following weeks the same thing happened in about thirty villages of the eastern talukas of Poona and Ahmednagar districts, Bhimthadi, Sirur, Parner and Shrigonda among them. The targets were the sowkars, many of them Marwari and Gujarati, and the object was the paper: bonds, mortgages and decrees. There were few deaths. The police and a small military force restored order by June, and several hundred people were arrested.</p><p>The Government of Bombay appointed a commission, which reported in 1876. It found that the ryot of the eastern Deccan was in debt to the moneylender beyond any hope of repayment; that the survey settlement’s fixed cash demand, the revision of rates in the 1860s, the collapse of cotton prices after the American Civil War and a run of poor seasons had all pushed him there; and that the civil courts, by enforcing bonds to the letter, had turned the sowkar from a village creditor into a landlord. It also recorded the resentment of the inam and watan settlements among the village elite. Neil Charlesworth argued in 1972 that the riots were a loosely connected series of small affrays rather than a rising, and that land transfer had been exaggerated, but the Commission’s report became the standard account.</p><p>The result was the Deccan Agriculturists’ Relief Act of 1879, which allowed courts in the four Deccan districts to go behind the bond, to examine the history of a debt and to reduce it, and protected the cultivator’s land from sale in execution. It treated the peasant as a class needing protection from the market the revenue system had created, and it was the new order’s acknowledgment that the survey settlement had reached the village and changed it.</p>",
+  "story": "The riots are what the settlement looked like from below. The ryotwari survey had made the cultivator the unit of assessment; the Inam Commission and the Watan Act had registered and subordinated the village’s own officers. What reached the ryot was a fixed cash demand on a fixed date, and the readiest means of meeting it was the moneylender with a court behind him. The riots exposed the costs of the new combination of direct cash assessment, enforceable private debt and colonial civil procedure. The old intermediaries had not vanished, but their relationship to cultivator and state had been transformed.",
+  "sources": [
+   {
+    "title": "Neil Charlesworth, ‘The Myth of the Deccan Riots of 1875’, Modern Asian Studies 6:4 (1972)",
+    "url": "https://doi.org/10.1017/S0026749X00004285"
+   },
+   {
+    "title": "I. J. Catanach, Rural Credit in Western India, 1875–1930 (University of California Press, 1970)",
+    "url": "https://search.worldcat.org/search?q=Catanach+Rural+Credit+in+Western+India+1875-1930"
+   },
+   {
+    "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
+    "url": "https://www.routledge.com/Western-India-in-the-Nineteenth-Century/Kumar/p/book/9781138878730"
+   },
+   {
+    "title": "Report of the Committee on the Riots in Poona and Ahmednagar, 1875 (Bombay, 1876)",
+    "url": "https://search.worldcat.org/title/496461176"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "ranade-and-the-first-histories",
+  "title": "Ranade and the first histories",
+  "date_label": "1870–1900 · Coda",
+  "year": 1900,
+  "year_end": 1900,
+  "period": 7,
+  "polities": [
+   "maratha",
+   "crown"
+  ],
+  "kind": "document",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.86,
+  "strap": "M. G. Ranade’s Rise of the Maratha Power (1900) and the Poona generation that wrote the history of what the settlement had ended, answering Grant Duff.",
+  "body": "<p>Mahadev Govind Ranade’s <em>Rise of the Maráthá Power</em> was published in Bombay in 1900, a few months before his death in January 1901. Ranade was a judge of the Bombay High Court, a founder of the Poona Sarvajanik Sabha in 1870 and a leading member of the Prarthana Samaj, and the leading public intellectual of western India in the generation after 1858. The book was one of the first major Indian reinterpretations of Maratha history in English, and it was written against a specific text: James Grant Duff’s <em>History of the Mahrattas</em> (1826), composed by the Company’s Resident at Satara from the Peshwa’s records and still, seventy years later, the standard history.</p><p>Grant Duff had treated the Maratha rise as an accident of Mughal decline, a conflagration in the hills that spread because nothing stood in its way. Ranade argued that it was the outcome of a long religious and social movement, the bhakti saints, the Marathi language and a common regional consciousness, and that Shivaji had built a state with institutions, not a band of raiders. He used the documents that Grant Duff had used and the new collections that the Poona antiquarians were printing, and he wrote with the settlement of his own lifetime in view: the jagirs resumed, the watans converted, the inams scrutinised, the Satara raj dissolved. The Sarvajanik Sabha, which petitioned government on behalf of the ryot after the 1875 riots, was the same milieu.</p><p>The book founded a tradition. Rajwade, Sardesai and later historians took up the documents and the argument, and Maratha history became a field in which Indians contested the Company’s account of how the Deccan had been governed. Ranade wrote without the nationalist certainty of the next generation, but his subject was a sovereignty that had been taken apart within living memory, and his book was the first attempt to say what it had been.</p>",
+  "story": "The collection ends with the Deccan being described rather than governed, and Ranade is the counterpart to the Company’s surveyors. Grant Duff wrote as the agent of the power that had just removed the Maratha layer; Ranade wrote after the Inam Commission and the Watan Act had finished the work, and asked what the layer had been. The first histories are where layered sovereignty, no longer a fact of administration, became a subject of memory and argument.",
+  "sources": [
+   {
+    "title": "Richard P. Tucker, Ranade and the Roots of Indian Nationalism (University of Chicago Press, 1972)",
+    "url": "https://search.worldcat.org/search?q=Tucker+Ranade+and+the+Roots+of+Indian+Nationalism"
+   },
+   {
+    "title": "Prachi Deshpande, Creative Pasts: Historical Memory and Identity in Western India, 1700–1960 (Columbia University Press, 2007)",
+    "url": "https://cup.columbia.edu/book/creative-pasts/9780231124867"
+   },
+   {
+    "title": "M. G. Ranade, Rise of the Maráthá Power (Punalekar, Bombay, 1900)",
+    "url": "https://archive.org/details/risemarathapowe00bahagoog"
+   },
+   {
+    "title": "James Grant Duff, A History of the Mahrattas (Longman, 1826), vol. 2",
+    "url": "https://archive.org/details/historyofmahratt02duffuoft"
+   }
+  ],
+  "related_maps": [
+   "1901__India__Cram-Murray-Aaron__Historical-Map-of-British-India.html"
+  ]
+ },
+ {
+  "id": "deccan-as-the-company-saw-it",
+  "title": "Coda: the Deccan as the Company saw it",
+  "date_label": "1827–1893",
+  "year": 1906,
+  "year_end": 1893,
+  "period": 7,
+  "polities": [
+   "company",
+   "hyderabad",
+   "mysore",
+   "maratha"
+  ],
+  "kind": "document",
+  "place": null,
+  "lat": null,
+  "lon": null,
+  "strap": "Three printed maps, from Brussels, London and Edinburgh, show the plural Deccan of this collection settling into the provinces and states of British India.",
+  "body": "<p>The collection ends where its companion begins, with the maps. Three sheets in the map collection show the Deccan after paramountcy, each drawn from the Company’s surveys and each a generation apart. Philippe Vandermaelen’s <em>Atlas universel</em>, published in Brussels in 1827, was the first atlas to print the whole world at a single scale and the first printed by lithography; its sheet headed <em>Bejapoor</em> still names the country by the sultanate that Aurangzeb had extinguished in 1686, and marks the Peshwa’s territories only nine years after they had ceased to exist. European cartography was still working from Rennell and from the reports of the Maratha wars.</p><p>The Society for the Diffusion of Useful Knowledge’s map <em>India III</em>, engraved by J. and C. Walker and in this edition dated 1856, shows the Bombay Presidency and the Nizam’s dominions with the district boundaries of the Company’s administration and the internal borders of Hyderabad, Satara (annexed in 1848) and the southern Maratha jagirs. It is a map of a settled possession. J. G. Bartholomew’s <em>Section X</em> in <em>Constable’s Hand Atlas of India</em> of 1893 belongs to the Crown, not the Company, and shows Bombay and Berar as the railway and the census saw them: the Deccan of Hyderabad as a large pink island in a British sea, its districts measured, its towns ranked by population.</p><p>Read in order the three maps show the throughline of this collection drawn out on paper. The older names, Bijapur, Golconda, the Carnatic, the Peshwa, fade from the sheets as the provinces and princely states harden. By 1893 the layered sovereignties of the Deccan had become two colours on a map, British territory and native states, and the second existed only within the first.</p>",
+  "story": "The coda is the collection’s argument stated by its companion. Maps do not merely record sovereignty; they decide what counts as a border and whose name goes on the land. In 1500 a map of the Deccan would have needed a dozen colours and still misled. By the end of the Company’s century the surveyors and engravers could draw it in two. The plurality this collection follows for three hundred years was not only defeated in the field; it was drawn out of existence.",
+  "sources": [
+   {
+    "title": "Matthew H. Edney, Mapping an Empire: The Geographical Construction of British India, 1765–1843 (University of Chicago Press, 1997)",
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/M/bo3683502.html"
+   },
+   {
+    "title": "Bernard S. Cohn, Colonialism and Its Forms of Knowledge: The British in India (Princeton University Press, 1996)",
+    "url": "https://press.princeton.edu/books/paperback/9780691000435/colonialism-and-its-forms-of-knowledge"
+   },
+   {
+    "title": "Princeton University Library, Notabilia, ‘Vandermaelen Atlas (1827)’",
+    "url": "https://notabilia.blogs.princeton.edu/2012/12/31/vandermaelen-atlas-1827-%E2%80%A2-first-atlas-of-the-world-with-all-maps-on-the-same-scale/"
+   },
+   {
+    "title": "Wikipedia, ‘Society for the Diffusion of Useful Knowledge’",
+    "url": "https://en.wikipedia.org/wiki/Society_for_the_Diffusion_of_Useful_Knowledge"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
+   "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html"
   ]
  }
 ];
