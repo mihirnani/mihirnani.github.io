@@ -4275,7 +4275,7 @@ window.DECCAN_ENTRIES = [
  {
   "id": "mysore-rendition-question",
   "title": "The Mysore question",
-  "date_label": "1867–1881",
+  "date_label": "1867, rendition 1881",
   "year": 1867,
   "year_end": 1881,
   "period": 7,
@@ -4327,9 +4327,9 @@ window.DECCAN_ENTRIES = [
   "place": "Mumbai, Maharashtra",
   "lat": 18.93,
   "lon": 72.83,
-  "strap": "Bombay Act III of 1874, the Hereditary Offices Act: the patil and the kulkarni keep their watans but become servants of government, with the Collector deciding who serves.",
+  "strap": "Bombay Act III of 1874 registers the hereditary village offices, fixes their fractional shares and brings their service under the Collector’s supervision.",
   "body": "<p>The Bombay Hereditary Offices Act, Bombay Act III of 1874, is the statute that settled the position of the village officers of the Deccan. It defined a watan as the hereditary office together with the land and cash remuneration attached to it, and a watandar as the person holding it; it declared watan property inalienable to anyone outside the watan family without the Collector’s sanction; and it gave the Collector power to appoint from the family an officiator to perform the duties, to fix the remuneration of the office, to commute service for a cash payment, and to dismiss an officiator who failed in his duty. Service and remuneration were separated. The Act still defined a representative watandar as one who possessed the right to perform the hereditary office, and the duties were ordinarily performed by representative watandars or their deputies; in watans held in rotation the registered watandars could nominate the officiator, and the Collector selected only where the statutory machinery required it.</p><p>The offices concerned were the patil, the headman, and the kulkarni, the village accountant, with the lesser village servants and, in the southern districts, the surviving district officers, the deshmukhs and deshpandes, whose functions had already been commuted to cash by the Inam Commission. These posts were older than any of the regimes in this collection. The Adil Shahis, the Mughals and the Peshwas had all governed through them, confirmed them by sanad, and left the families to divide and sell their shares as they liked. The result by the 1860s was a tangle of fractional watandars, absentee shareholders and hired deputies that the survey and settlement department found unworkable.</p><p>The Act did not abolish the watan. It made the watan legible to the colonial state: the Collector’s register was to record the heads of families, the representative watandars, the order of service and the proportional share of the watan held by each family, expressed in annas or fractions of a rupee; alienation was regulated and hereditary office placed under the Collector’s supervision. It was published and came into force on 5 February 1875, was amended in 1886 and 1910 and extended to the whole Presidency, and the offices it regulated outlived it: paragana and kulkarni watans were abolished in 1950, the inferior village watans in 1958–59, and the hereditary revenue patils only by the Maharashtra Revenue Patels (Abolition of Office) Act of 1962, in force from 1963. A political entitlement survived, but now as a statutory category.</p>",
-  "story": "This is the statute that ends layered sovereignty at the scale of the village. The watan had been the one right that every regime in the timeline had confirmed rather than created, a local authority that sultans, emperors and Peshwas inherited and left alone. The 1874 Act did not take the office away; it registered it, fixed its shareholders and its order of service, and placed it under the Collector’s supervision, so that what had been a hereditary share of the village’s own sovereignty became a statutory category in a government register. Three centuries of confirmations ended not in abolition but in an audit; the abolition itself waited for independent India.",
+  "story": "This is where layered village authority is bureaucratised and subordinated. The watan had been the one right that every regime in the timeline had confirmed rather than created, a local authority that sultans, emperors and Peshwas inherited and left alone. The 1874 Act did not take the office away; it registered it, fixed its shareholders and its order of service, and placed it under the Collector’s supervision, so that what had been a hereditary share of the village’s own sovereignty became a statutory category in a government register. Three centuries of confirmations ended not in abolition but in an audit; the abolition itself waited for independent India.",
   "sources": [
    {
     "title": "Ravinder Kumar, Western India in the Nineteenth Century (Routledge & Kegan Paul, 1968)",
@@ -4394,7 +4394,7 @@ window.DECCAN_ENTRIES = [
  {
   "id": "ranade-and-the-first-histories",
   "title": "Ranade and the first histories",
-  "date_label": "1870–1900 · Coda",
+  "date_label": "1870–1900",
   "year": 1900,
   "year_end": 1900,
   "period": 7,
@@ -4429,7 +4429,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1901__India__Cram-Murray-Aaron__Historical-Map-of-British-India.html"
-  ]
+  ],
+  "coda": true
  },
  {
   "id": "deccan-as-the-company-saw-it",
@@ -4473,6 +4474,7 @@ window.DECCAN_ENTRIES = [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
    "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html"
-  ]
+  ],
+  "coda": true
  }
 ];

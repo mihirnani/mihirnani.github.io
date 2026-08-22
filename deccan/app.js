@@ -49,6 +49,7 @@
     });
     var used = {};
     entries.forEach(function (e) {
+      if (e.coda) return;
       var k = rowy[e.polities[0]] ? e.polities[0] : "company";
       if (e.polities[0] === "other") k = (e.polities[1] && rowy[e.polities[1]]) ? e.polities[1] : "company";
       var cx = x(Math.max(e.year, y0 + 1)), slot = 0;
@@ -64,7 +65,7 @@
 
   function card(e) {
     return '<li data-period="' + e.period + '" data-polities="' + e.polities.join(" ") + '" data-kind="' + e.kind + '">' +
-      '<span class="d">' + E(e.date_label) + '</span><a class="t" href="#' + e.id + '">' + E(e.title) + '</a>' +
+      '<span class="d">' + E(e.date_label) + (e.coda ? ' · Coda' : '') + '</span><a class="t" href="#' + e.id + '">' + E(e.title) + '</a>' +
       '<p class="s">' + E(e.strap) + '</p><div class="k">' + KIND[e.kind] + ' · ' + e.polities.map(function (p) { return POL[p]; }).join(" · ") + '</div></li>';
   }
 
@@ -74,11 +75,13 @@
     var chipsPol = Object.keys(POL).filter(function (k) { return k !== "other"; }).map(function (k) { return '<button class="chip' + (pol.has(k) ? " on" : "") + '" data-f="pol" data-v="' + k + '" type="button">' + E(POL[k]) + '</button>'; }).join("");
     var chipsKind = Object.keys(KIND).map(function (k) { return '<button class="chip' + (kind.has(k) ? " on" : "") + '" data-f="kind" data-v="' + k + '" type="button">' + E(KIND[k]) + '</button>'; }).join("");
     var sections = periods.map(function (p) {
-      var es = entries.filter(function (e) { return e.period === p.n; });
+      var es = entries.filter(function (e) { return e.period === p.n && !e.coda; });
       return '<section class="period" id="sec' + p.n + '" data-period="' + p.n + '">' +
         '<div class="period-head"><span class="no">0' + p.n + '</span><span class="ttl"><a href="#p' + p.n + '">' + E(p.title) + '</a></span><span class="yrs">' + E(p.years) + '</span><p class="desc">' + E(p.desc) + '</p></div>' +
         '<ul class="elist">' + es.map(card).join("") + '</ul></section>';
     }).join("");
+    var codas = entries.filter(function (e) { return e.coda; });
+    if (codas.length) sections += '<section class="period" id="seccoda" data-period="coda"><div class="period-head"><span class="no">·</span><span class="ttl">Codas</span><span class="yrs">after 1875</span><p class="desc">Two entries that sit outside the numbered chronology: the first historians of what had been lost, and the maps on which the Company drew the result.</p></div><ul class="elist">' + codas.map(card).join("") + '</ul></section>';
     app.innerHTML = '<div class="wrap">' +
       '<p class="eyebrow">A Timeline Collection</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
@@ -137,13 +140,15 @@
     var p = PER[n]; if (!p) return home();
     var i = periods.indexOf(p), prev = periods[i - 1], nxt = periods[i + 1];
     setTitle(p.title + ", " + p.years + " – The Deccan, 1336–1875", p.desc);
-    var es = entries.filter(function (e) { return e.period === p.n; });
+    var es = entries.filter(function (e) { return e.period === p.n && !e.coda; });
+    var codas = entries.filter(function (e) { return e.period === p.n && e.coda; });
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#p' + prev.n + '"><span class="dir">← Previous period</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#p' + nxt.n + '"><span class="dir">Next period →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#">← All periods</a></p>' +
       '<div class="chapter-head measure"><p class="eyebrow">Period 0' + p.n + ' · ' + E(p.years) + '</p><h1>' + E(p.title) + '</h1><p class="intro">' + E(p.desc) + '</p></div>' +
       '<div class="prose"><p>' + E(p.intro) + '</p></div>' +
-      '<ul class="elist" style="margin-top:2.2rem">' + es.map(card).join("") + '</ul>' + nav + '</div>';
+      '<ul class="elist" style="margin-top:2.2rem">' + es.map(card).join("") + '</ul>' +
+      (codas.length ? '<p class="subhead" style="margin-top:2rem">Codas</p><ul class="elist">' + codas.map(card).join("") + '</ul>' : '') + nav + '</div>';
   }
 
   function entryView(id) {
