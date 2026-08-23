@@ -1,4 +1,4 @@
-/* The Deccan, 1336–1875 — single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
+/* The Deccan, 1336–1875 – single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
    Routes: #          home (timeline + periods)
            #p3        period page
            #<entry>   entry page                                                   */
@@ -158,14 +158,18 @@
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#' + prev.id + '"><span class="dir">← Previous · ' + E(prev.date_label) + '</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#' + nxt.id + '"><span class="dir">Next · ' + E(nxt.date_label) + ' →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
     var maps = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '" target="_blank" rel="noopener">' + E(mapTitle(fn)) + '</a>'; }).join(" · ") + '</p>' : "";
-    var srcs = e.sources.map(function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + '</a></li>'; }).join("");
+    var srcLi = function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + '</a></li>'; };
+    var isRef = function (s) { return /^(Wikipedia|Britannica)/.test(s.title); };
+    var srcMain = e.sources.filter(function (s) { return !isRef(s); }), srcRef = e.sources.filter(isRef);
+    if (!srcMain.length) { srcMain = e.sources; srcRef = []; }
+    var srcs = srcMain.map(srcLi).join(""), refs = srcRef.map(srcLi).join("");
     var byline = [e.date_label, KIND[e.kind], e.place || ""].filter(Boolean).join(" · ");
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#p' + p.n + '">← ' + E(p.title) + ', ' + E(p.years) + '</a></p>' +
       '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + '</div></div>' +
       '<div class="prose">' + e.body + '</div>' +
       '<div class="story"><p class="subhead">In the story</p><p>' + E(e.story) + '</p></div>' +
       '<div class="prose">' + maps + '</div>' +
-      '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + '</ul></div>' +
+      '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + '</ul>' + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + '</ul>' : '') + '</div>' +
       '<dl class="meta"><dt>Date</dt><dd>' + E(e.date_label) + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ', ' + E(p.years) + '</a></dd>' +
       '<dt>Polities</dt><dd>' + e.polities.map(function (x) { return POL[x]; }).join(" · ") + '</dd><dt>Kind</dt><dd>' + KIND[e.kind] + '</dd>' +
       (e.place ? '<dt>Place</dt><dd>' + E(e.place) + '</dd>' : "") + (e.coda ? '<dt>Status</dt><dd>Coda – outside the numbered chronology</dd>' : '<dt>On the timeline</dt><dd><a href="#" data-show="' + e.id + '">Show on the timeline</a></dd>') + '</dl>' + nav + '</div>';
