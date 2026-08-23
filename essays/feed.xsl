@@ -24,7 +24,7 @@
       <p class="eyebrow">RSS feed</p>
       <h1><xsl:value-of select="/rss/channel/title"/></h1>
       <div class="feednote">
-        <p>This is an RSS feed. To follow the essays, copy this page’s address into a feed reader (NetNewsWire, Feedly, Inoreader, Miniflux, and most email clients will take it):</p>
+        <p>This is an RSS feed. To follow the essays, copy this page’s address into a feed reader – NetNewsWire, Feedly, Inoreader, Miniflux, Newsboat, or an email client with feed support such as Thunderbird:</p>
         <p><code><xsl:value-of select="/rss/channel/atom:link/@href"/></code></p>
         <p>The feed carries the full text of each essay.</p>
       </div>
