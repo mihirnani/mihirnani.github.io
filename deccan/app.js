@@ -92,7 +92,12 @@
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap" id="tl">' + timelineSvg() + '</div>' +
       '<div class="tl-panel" id="tlpanel"><span class="hint">Click a marker for a summary. Markers sit on the row of the entry’s principal polity; the bands show roughly when each power was present in the Deccan.</span></div>' +
-      '<div class="entries" id="entries">' + sections + '<p class="empty" id="empty" hidden>No entries match.</p></div></div>';
+      '<div class="entries" id="entries">' + sections + '<p class="empty" id="empty" hidden>No entries match.</p></div>' +
+      (function () { var gd = geoData(); var nP = Object.keys(gd.groups).length;
+        var farNames = gd.far.map(function (e) { return E((e.place || '').split(',')[0]); }).filter(Boolean).filter(function (v, i, a) { return a.indexOf(v) === i; });
+        return '<div class="geo-head period-head" style="margin-top:3.5rem"><span class="no">·</span><span class="ttl">The Deccan on the ground</span><span class="yrs">' + nP + ' places</span><p class="desc">Every entry is anchored to a place; the sketch shows where the collection happens. Marker size follows the number of entries.</p></div>' +
+          '<div class="tl-wrap" id="geo">' + geoSvg(gd) + '<p class="geonote">This sketch is for illustrative purposes only, and does not claim to accurately reflect any official boundaries.</p></div>' +
+          '<div class="tl-panel" id="geopanel"><span class="hint">Click a marker for the entries at that place.' + (farNames.length ? ' Beyond the frame: ' + farNames.join(', ') + '.' : '') + '</span></div>'; })() + '</div>';
     app.querySelectorAll("#filters .chip").forEach(function (c) {
       c.addEventListener("click", function () {
         var f = c.dataset.f, v = c.dataset.v;
@@ -112,7 +117,66 @@
       m.addEventListener("click", function () { show(m.dataset.id); });
       m.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); show(m.dataset.id); } });
     });
+    var gpanel = document.getElementById("geopanel"), gcur = null;
+    function gshow(k) {
+      var gd = geoData(), g = gd.groups[k]; if (!g) return;
+      if (gcur) gcur.classList.remove("on"); gcur = app.querySelector('.gmk[data-k="' + k + '"]'); if (gcur) gcur.classList.add("on");
+      var links = g.list.slice().sort(function (a, b) { return a.year - b.year; }).map(function (e) { return '<a href="#' + e.id + '">' + E(e.title) + "</a>"; }).join(" · ");
+      gpanel.innerHTML = '<div class="t">' + E(g.place || "") + '</div><div class="d">' + g.list.length + (g.list.length > 1 ? " entries" : " entry") + "</div><div>" + links + "</div>";
+    }
+    app.querySelectorAll(".gmk").forEach(function (m) {
+      m.addEventListener("click", function () { gshow(m.dataset.k); });
+      m.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); gshow(m.dataset.k); } });
+    });
     applyFilters();
+  }
+
+  /* ---------- sketch map ---------- */
+  function geoData() {
+    var groups = {}, far = [];
+    entries.forEach(function (e) {
+      if (e.lat == null || e.lon == null) return;
+      if (e.lat < 7.5 || e.lat > 24.5 || e.lon < 68 || e.lon > 88) { far.push(e); return; }
+      var k = e.lat.toFixed(2) + "," + e.lon.toFixed(2);
+      (groups[k] = groups[k] || {lat: e.lat, lon: e.lon, place: e.place, list: []}).list.push(e);
+    });
+    return {groups: groups, far: far};
+  }
+  function geoSvg(gd) {
+    var SX = 50.0, SY = 52.0, H = Math.round((24.5 - 7.5) * SY);
+    var gx = function (lon) { return ((lon - 68) * SX).toFixed(1); }, gy = function (lat) { return ((24.5 - lat) * SY).toFixed(1); };
+    var pts = function (a) { return a.map(function (p) { return gx(p[0]) + "," + gy(p[1]); }).join(" "); };
+    var COAST = [[69.8,24.5],[68.9,23.0],[69.0,22.2],[69.6,21.6],[70.5,20.9],[71.0,20.75],[71.6,21.0],[72.1,21.4],[72.6,21.7],[72.8,21.1],[72.85,20.4],[72.9,19.3],[72.8,18.9],[73.0,17.9],[73.3,17.0],[73.5,16.1],[73.8,15.4],[74.1,14.8],[74.5,13.9],[74.85,12.87],[75.35,11.87],[75.78,11.25],[76.24,9.97],[76.6,8.9],[77.1,8.25],[77.54,8.08],[78.13,8.76],[78.4,9.1],[79.3,9.28],[79.4,9.9],[79.85,10.29],[79.85,10.92],[79.83,11.93],[80.28,13.08],[80.3,13.55],[80.18,14.4],[80.1,15.5],[80.65,15.9],[81.14,16.17],[82.3,16.95],[83.3,17.69],[84.1,18.3],[84.9,19.3],[85.83,19.8],[86.6,20.3],[87.5,21.5],[88.0,21.9],[88.0,24.5]];
+    var LANKA = [[79.9,9.75],[80.35,9.5],[80.9,8.6],[81.4,7.5],[79.95,7.5]];
+    var RIVERS = [
+      ["Narmada", [[72.8,21.7],[74.0,22.0],[75.5,22.25],[77.0,22.4],[78.5,22.55],[80.0,22.65],[81.7,22.67]], 75.2, 21.95],
+      ["Tapti", [[72.7,21.15],[73.7,21.15],[74.8,21.3],[76.2,21.3],[77.5,21.35],[78.3,21.6]], 74.6, 20.95],
+      ["Godavari", [[73.55,19.95],[74.6,19.6],[75.8,19.3],[77.0,19.1],[78.2,18.85],[79.3,18.8],[80.3,18.3],[80.9,17.4],[81.75,16.75]], 76.1, 18.95],
+      ["Krishna", [[73.65,17.95],[74.4,17.35],[75.3,16.9],[76.3,16.65],[77.3,16.35],[78.2,16.1],[78.9,16.65],[79.8,16.4],[80.9,15.85]], 75.5, 16.55],
+      ["Tungabhadra", [[75.4,13.95],[75.9,14.5],[76.5,15.3],[77.3,15.7],[78.2,16.05]], 75.6, 14.55],
+      ["Kaveri", [[75.5,12.4],[76.3,12.3],[76.9,12.35],[77.6,12.1],[78.2,11.4],[78.7,10.9],[79.3,10.95],[79.85,11.1]], 76.85, 11.95]
+    ];
+    var s = ['<svg viewBox="0 0 1000 ' + H + '" role="img" aria-label="Sketch map of the Deccan with the places of the entries marked">'];
+    s.push('<polygon class="land" points="' + pts(COAST) + '"/>');
+    s.push('<polygon class="land lanka" points="' + pts(LANKA) + '"/>');
+    RIVERS.forEach(function (r) {
+      s.push('<polyline class="river" points="' + pts(r[1]) + '"/>');
+      s.push('<text class="rlbl" x="' + gx(r[2]) + '" y="' + gy(r[3]) + '">' + r[0] + '</text>');
+    });
+    Object.keys(gd.groups).forEach(function (k) {
+      var g = gd.groups[k], n = g.list.length;
+      var r = Math.min(10, 4 + 1.7 * Math.sqrt(n - 1));
+      var name = E((g.place || "").split(",")[0]);
+      s.push('<circle class="gmk" cx="' + gx(g.lon) + '" cy="' + gy(g.lat) + '" r="' + r.toFixed(1) + '" data-k="' + k + '" tabindex="0" role="button" aria-label="' + name + ", " + n + (n > 1 ? " entries" : " entry") + '"><title>' + name + " · " + n + (n > 1 ? " entries" : " entry") + "</title></circle>");
+      var SPECIAL = {"Mumbai": ["Mumbai", "w"], "Sindhudurg": ["Sindhudurg", "w"], "Old Goa": ["Goa", "w"], "Kozhikode (Calicut)": ["Calicut", "w"], "Raichur": ["Raichur", "e"]};
+      var first = (g.place || "").split(",")[0], sp = SPECIAL[first];
+      if (n >= 4 || sp) {
+        var ltxt = sp ? E(sp[0]) : name, west = sp && sp[1] === "w";
+        s.push('<text class="plbl"' + (west ? ' text-anchor="end"' : '') + ' x="' + (parseFloat(gx(g.lon)) + (west ? -(r + 4) : r + 4)).toFixed(1) + '" y="' + (parseFloat(gy(g.lat)) + 4).toFixed(1) + '">' + ltxt + "</text>");
+      }
+    });
+    s.push("</svg>");
+    return s.join("\n");
   }
   var hay = {};
   function matches(e) {
