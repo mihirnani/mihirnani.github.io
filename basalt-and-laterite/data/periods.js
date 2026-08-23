@@ -65,7 +65,7 @@ window.BL_PERIODS = [
   "n": 7,
   "title": "The Plateau Read and Used",
   "short": "Read and Used",
-  "years": "3000 BC–AD 1900",
+  "years": "3000 BC–present",
   "a0": 5000,
   "a1": 50,
   "desc": "The rock enters history: ashmounds and megaliths, wootz steel, cave temples cut into basalt, forts of granite, trap and laterite, diamonds sieved from river gravel – and at last the geologists, reading the whole story back.",

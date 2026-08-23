@@ -609,7 +609,7 @@ window.DECCAN_READINGS = {
    "title": "The Political Economy of Commerce: Southern India 1500–1650",
    "publisher": "Cambridge University Press",
    "year": 1990,
-   "note": "A study of trade, ports and state finance on the Coromandel and western coasts in the Vijayanagara and Nayaka period, drawing on Portuguese and Dutch records. The standard economic history for period 1.",
+   "note": "A study of trade, ports and state finance on the Coromandel and western coasts in the Vijayanagara and Nayaka period, drawing on Portuguese and Dutch records. The standard economic history for period 2.",
    "url": "https://doi.org/10.1017/CBO9780511563423",
    "kind": "book"
   },
@@ -791,8 +791,8 @@ window.DECCAN_READINGS = {
   {
    "author": "Alfred T. Etheridge",
    "title": "Narrative of the Bombay Inam Commission and Supplementary Settlements",
-   "publisher": "Deccan Herald Press, Bombay",
-   "year": 1873,
+   "publisher": "Selections from the Records of the Bombay Government, n.s. CXXXII, Bombay",
+   "year": 1874,
    "note": "The Commission's own account of its work from 1852 – the scrutiny of sanads and village records by which tens of thousands of inam and saranjam claims were confirmed, reduced or resumed. Indispensable for the scale of the enquiry and the legal reasoning it deployed, and the ground for the grievance that fed into 1857 and beyond.",
    "url": "https://books.google.com/books/about/Narrative_of_the_Bombay_Inam_Commission.html?id=DULKPAAACAAJ",
    "kind": "primary"

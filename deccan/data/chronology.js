@@ -56,7 +56,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1529–1542", "t": "Achyutadevaraya’s reign, ending in the succession crisis of 1542."},
    {"d": "1542–1565", "t": "Sadashiva crowned as puppet; Rama Raya rules, playing the sultanates against each other.", "e": "rama-raya"},
    {"d": "1558", "t": "Vijayanagara and Bijapur sack Ahmadnagar’s country – the provocation remembered before 1565."},
-   {"d": "23 January 1565", "t": "Talikota: the army broken in a day, the capital sacked in the months that followed.", "e": "talikota-1565"},
+   {"d": "January 1565", "t": "Talikota: the army broken in a day, the capital sacked in the months that followed.", "e": "talikota-1565"},
    {"d": "1565–mid-17th c.", "t": "Aravidu Vijayanagara: Tirumala establishes the court at Penukonda and is crowned in 1570; the capital moves to Chandragiri c. 1592 and later Vellore; the line fades in the 1640s."}
   ]
  },
