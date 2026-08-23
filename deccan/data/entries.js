@@ -3546,8 +3546,8 @@ window.DECCAN_ENTRIES = [
  },
  {
   "id": "treaty-of-bassein-1802",
-  "title": "The Treaty of Bassein",
-  "date_label": "31 December 1802",
+  "title": "Poona and the Treaty of Bassein",
+  "date_label": "25 October – 31 December 1802",
   "year": 1802,
   "year_end": null,
   "period": 6,
@@ -3559,8 +3559,8 @@ window.DECCAN_ENTRIES = [
   "place": "Vasai (Bassein), Maharashtra",
   "lat": 19.4709,
   "lon": 72.8054,
-  "strap": "A fugitive Peshwa accepted a Company subsidiary force as the price of his restoration, and the Maratha confederacy went to war over it.",
-  "body": "<p>On 31 December 1802 the Peshwa Bajirao II, a refugee at the old Portuguese town of Bassein north of Bombay, signed a treaty with the East India Company. Two months earlier, on 25 October, Yashwantrao Holkar had defeated the combined forces of the Peshwa and Daulatrao Scindia outside Pune, and had installed a rival Peshwa, Amritrao, in the city. Bajirao fled to the coast and put himself under British protection.</p><p>The terms were those Richard Wellesley had already applied to Hyderabad in 1798 and Mysore in 1799. The Peshwa agreed to receive a permanent subsidiary force of six battalions of Company infantry with artillery, to cede territory yielding revenue sufficient to pay for it, to dismiss Europeans of any nation at war with Britain, to give up his claims on Surat and to submit his disputes with other states, the Nizam and the Gaekwad in particular, to Company arbitration. He was not to make war or treaties without British consent. In return the Company undertook to restore him. Arthur Wellesley marched from Mysore and entered Pune on 20 April 1803, and Bajirao was reinstalled in May.</p><p>The treaty placed the nominal head of the Maratha state in the position of a client. Scindia and Raghuji Bhonsle of Nagpur, who regarded the Peshwa’s sovereignty as something held in common by the confederacy, refused to accept it, and their refusal brought on the second Anglo-Maratha war of 1803 to 1805. Holkar fought separately and later. Bajirao kept his throne for fifteen more years, a Company resident at his elbow, and in 1817 tried to undo the arrangement by force.</p>",
+  "strap": "Holkar took Pune and the Peshwa fled to the Company; the treaty signed at Bassein bought his restoration at the price of a subsidiary force, and the confederacy went to war over it.",
+  "body": "<p>On 31 December 1802 the Peshwa Bajirao II, a refugee at the old Portuguese town of Bassein north of Bombay, signed a treaty with the East India Company. Two months earlier, on 25 October, Yashwantrao Holkar had defeated the combined forces of the Peshwa and Daulatrao Scindia outside Pune and had installed a rival Peshwa, Amritrao, in the city. The battle was the settling of a family account as much as a bid for power: Bajirao had had Holkar’s brother Vithoji trampled to death by an elephant the year before, and Yashwantrao had come to Pune for redress the Peshwa’s government would not give. Bajirao fled to the coast and put himself under British protection.</p><p>The terms were those Richard Wellesley had already applied to Hyderabad in 1798 and Mysore in 1799. The Peshwa agreed to receive a permanent subsidiary force of six battalions of Company infantry with artillery, to cede territory yielding revenue sufficient to pay for it, to dismiss Europeans of any nation at war with Britain, to give up his claims on Surat and to submit his disputes with other states, the Nizam and the Gaekwad in particular, to Company arbitration. He was not to make war or treaties without British consent. In return the Company undertook to restore him. Arthur Wellesley marched from Mysore and entered Pune on 20 April 1803, and Bajirao was reinstalled in May.</p><p>The treaty placed the nominal head of the Maratha state in the position of a client. Scindia and Raghuji Bhonsle of Nagpur, who regarded the Peshwa’s sovereignty as something held in common by the confederacy, refused to accept it, and their refusal brought on the second Anglo-Maratha war of 1803 to 1805. Holkar fought separately and later. Bajirao kept his throne for fifteen more years, a Company resident at his elbow, and in 1817 tried to undo the arrangement by force.</p>",
   "story": "Bassein is the moment the Company’s subsidiary system reached the centre of Maratha sovereignty. Since 1719 the Peshwa had held his authority as minister of the Chhatrapati at Satara, exercised through a confederacy of houses who owed him a loyalty they interpreted freely. By taking a subsidiary force he mortgaged that authority to a third party. Scindia and Bhonsle grasped that a Peshwa protected by Company battalions was no longer their Peshwa. The layered Maratha order, in which sovereignty was shared and contested, could not absorb a partner that insisted on being paramount.",
   "sources": [
    {
@@ -4855,6 +4855,82 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html",
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "madurai-southern-conquest",
+  "title": "Madurai and the southern conquest",
+  "date_label": "c. 1335–1378",
+  "year": 1335,
+  "year_end": 1378,
+  "period": 1,
+  "polities": [
+   "vijayanagara",
+   "delhi",
+   "other"
+  ],
+  "kind": "event",
+  "place": "Madurai, Tamil Nadu",
+  "lat": 9.925,
+  "lon": 78.12,
+  "strap": "Delhi's southernmost province became an independent sultanate about 1335; a generation later Kumara Kampana conquered it for Vijayanagara, and a Tungabhadra kingdom became an empire of the whole peninsula.",
+  "body": "<p>When Delhi's hold on the far south failed, it failed into a state. About 1335 the governor at Madurai, Jalaluddin Ahsan Shah, declared himself sultan, and for four decades the old Pandya country was ruled by a line of short-reigned sultans of whom the traveller Ibn Battuta – whose father-in-law was one of them – left an unsparing portrait. The sultanate's wars ran north: Hoysala Ballala III, the last great king of the old order, was captured and killed at its hands in 1342 while besieging Madurai, and his kingdom's remnants passed within a decade to the new power on the Tungabhadra. The far south of the 1340s was thus a mirror of the Deccan itself: a Delhi succession state and a Hindu successor kingdom, sorting out the same inheritance.</p>\n<p>The conquest that ended it was the work of Bukka I's son Kumara Kampana, and it came in stages through the 1350s and 1360s: first the Tamil marchlands, where the Sambuvaraya chiefs of Tondaimandalam were reduced and then absorbed, and finally, conventionally about 1370–1371, Madurai itself. The date is less certain than the convention suggests – the sultanate's own coinage seems to run to about 1378, and the campaign's chronology is built from inscriptions and a poem – but the poem is remarkable: the <em>Madhuravijayam</em>, 'the conquest of Madurai', composed in Sanskrit by Kampana's own wife Gangadevi, who frames the war as the rescue of the Tamil temples and gives the expedition the only contemporary literary account of Vijayanagara conquest that survives. Tradition adds the restoration of the great Vaishnava shrine at Srirangam, whose image returned from decades of exile.</p>\n<p>The conquest made Vijayanagara what the rest of this collection assumes it to be. A kingdom of the Tungabhadra frontier acquired the temple cities, ports and revenues of the Tamil plain, and with them the role its kings claimed thereafter: protectors of the southern order against the sultanates of the north. The nayaka system through which the empire later governed the south was seeded in these campaigns, and when Paes and Nunes describe an empire reaching to Rameswaram, or the nayakas of Madurai and Thanjavur appear after Talikota, they are living in the world Kampana's war made. He did not live to see it settle; he died about 1374, before his father, and the south passed to the crown's viceroys.</p>",
+  "story": "Period 1 explains how Vijayanagara was founded and how it fought the Bahmanis; this entry explains how it became an empire. The southern conquest gives the collection its missing geography – everything below the Tungabhadra – and its first instance of a pattern that recurs to 1799: a peninsular power legitimising itself as the protector of the south against the north. The nayakas, Srirangapatna and even the Aravidu retreat southward after Talikota all descend from Kampana's campaigns.",
+  "sources": [
+   {
+    "title": "Burton Stein, Vijayanagara (The New Cambridge History of India, I.2) (Cambridge University Press, 1989)",
+    "url": "https://doi.org/10.1017/CHOL9780521266932"
+   },
+   {
+    "title": "Gangadevi, translated by S. Thiruvenkatachari, Madhura Vijayam (Annamalai University, 1957)",
+    "url": "https://search.worldcat.org/search?q=Gangadevi+Madhuravijayam+Thiruvenkatachari"
+   },
+   {
+    "title": "Wikipedia, ‘Madurai Sultanate’",
+    "url": "https://en.wikipedia.org/wiki/Madurai_Sultanate"
+   }
+  ],
+  "related_maps": [
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html",
+   "1599__SouthIndia__Ruscelli-Rosaccio__Calecut-Nuova-Tavola.html"
+  ]
+ },
+ {
+  "id": "salar-jang-hyderabad",
+  "title": "Salar Jang remakes Hyderabad",
+  "date_label": "1853–1875, ministry to 1883",
+  "year": 1853,
+  "year_end": 1875,
+  "period": 7,
+  "polities": [
+   "hyderabad",
+   "crown",
+   "company"
+  ],
+  "kind": "person",
+  "place": "Hyderabad, Telangana",
+  "lat": 17.385,
+  "lon": 78.486,
+  "strap": "Appointed diwan at twenty-four in the year of the Berar assignment, Mir Turab Ali Khan, Salar Jang, spent thirty years building the Nizam's state a modern administration – the Deccan's other settlement, made from inside.",
+  "body": "<p>Mir Turab Ali Khan, remembered by his title Salar Jang, became diwan of Hyderabad in May 1853, in the same weeks in which the treaty assigning Berar was extracted from his master. He was about twenty-four, from a family that had supplied the state's ministers for generations, and he inherited a government that was close to a fiction: the revenue farmed out wholesale, the army in arrears and mortgaged to its own commanders, Arab and Rohilla military creditors garrisoning the city, and the Company's Residency – with the Berar treaty in hand – treating the state's insolvency as its licence. His ministry, which lasted until his death in 1883, was spent taking that government back.</p>\n<p>The reforms came in layers. Revenue farming was abolished district by district and replaced, in the reorganisation of the 1860s, with regular districts and talukas under salaried officers – a structure deliberately parallel to British India's, run in the Nizam's name. Separate departments for revenue, justice, police, public works and education were carved out of the old undivided household government; courts were regularised; the coinage was reformed; schools culminating in the city's new colleges began training the administrators the system needed, though the higher ranks were increasingly filled by recruited outsiders, north Indians and others, whose rise the old Hyderabadi nobility resented. The railway from Wadi reached Hyderabad in 1874 as the Nizam's State Railway, financed by the state itself – a fact Salar Jang made a point of. In 1857 he had made the choice on which everything else rested: he kept Hyderabad with the British, and the attack on the Residency in July 1857 was repulsed with the government's help. The Deccan stayed quiet, and the debt was acknowledged on both sides – though his repeated campaigns for the restoration of Berar, pressed to the end of his life, were always politely defeated.</p>\n<p>Salar Jang's Hyderabad is the counterpart, inside a surviving Indian sovereignty, of everything the Bombay entries in this period describe. The same decades that produced the revenue survey and the Inam Commission in the British Deccan produced districts, settlements and record rooms in the Nizam's; the difference was that Hyderabad's modernisation was carried out by an Indian minister for an Indian ruler, under a paramount power that would neither annex the state nor quite let it govern itself. Historians of the princely order treat his ministry as its outstanding case: proof that the 'native state' could reform itself, and proof of how narrow the space for doing so had become.</p>",
+  "story": "Period 7 watches the British Deccan being surveyed, assessed and codified; this entry keeps the other Deccan in view. While the Inam Commission worked through the Bombay districts, Salar Jang was building the Nizam's own bureaucracy a few hundred kilometres east – the layered sovereignty of the collection's argument now expressed as two rival modernisations, one colonial and one princely, on the same plateau. It also closes the Hyderabad thread that runs from Nizam-ul-Mulk through the Residency and the Berar assignment.",
+  "sources": [
+   {
+    "title": "V. K. Bawa, The Nizam between Moghuls and British: Hyderabad under Salar Jang I (S. Chand, 1986)",
+    "url": "https://search.worldcat.org/search?q=Bawa+The+Nizam+between+Moghuls+and+British+Hyderabad+under+Salar+Jang"
+   },
+   {
+    "title": "Sarojini Regani, Nizam–British Relations, 1724–1857 (Concept Publishing, 1988)",
+    "url": "https://search.worldcat.org/search?q=Regani+Nizam-British+Relations+1724-1857"
+   },
+   {
+    "title": "Wikipedia, ‘Salar Jung I’",
+    "url": "https://en.wikipedia.org/wiki/Salar_Jung_I"
+   }
+  ],
+  "related_maps": [
+   "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html",
+   "1883__India__Letts__India-11.html"
   ]
  }
 ];

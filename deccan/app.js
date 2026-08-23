@@ -200,12 +200,30 @@
     var want = location.hash.replace(/^#/, '');
     if (want.indexOf('readings-') === 0) { var el = document.getElementById(want); if (el) el.scrollIntoView(); }
   }
+  function chronologyView() {
+    setTitle("Chronology – The Deccan, 1336–1875", "A detailed chronology of the Deccan from 1296 to 1900, including context events beyond the collection's entries.");
+    var C = window.DECCAN_CHRONOLOGY || [];
+    function item(it) {
+      return '<li class="rd"><span class="k">' + E(it.d) + '</span><p class="c">' + E(it.t) +
+        (it.e && byId[it.e] ? ' <a href="#' + it.e + '">Entry \u2192</a>' : '') + '</p></li>';
+    }
+    var secs = C.map(function (sec, i) {
+      return '<section class="rdsec" id="chr-' + i + '"><div class="period-head"><span class="ttl">' + E(sec.title) + '</span><span class="yrs">' + E(sec.years) + '</span></div><ul class="rdlist">' + sec.items.map(item).join('') + '</ul></section>';
+    }).join('');
+    var toc = '<p class="measure muted">' + C.map(function (sec, i) { return '<a href="#chr-' + i + '">' + E(sec.title) + '</a>'; }).join(' \u00b7 ') + '</p>';
+    app.innerHTML = '<div class="wrap"><p><a class="back" href="#">\u2190 Timeline</a></p>' +
+      '<div class="chapter-head measure"><p class="eyebrow">Chronology</p><h1>The Deccan, year by year</h1>' +
+      '<p class="intro">A detailed chronology of the whole span, from the Khalji raids to the first histories. Events with an entry in the collection carry a link; the rest are context \u2013 the connective tissue the entries assume.</p></div>' +
+      '<div class="prose"><p>Dates follow the collection\u2019s own entries where they exist; disputed dates are marked as such there. The chronology is broader than the collection by design \u2013 an event\u2019s absence from the entries is a curatorial choice, not a verdict on its importance.</p></div>' + toc + secs + '</div>';
+  }
+
   var pendingShow = null;
 
   function route() {
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
     if (!h) { home(); window.scrollTo(0, 0); if (pendingShow) { var m = app.querySelector('.mk[data-id="' + pendingShow + '"]'); if (m) { m.dispatchEvent(new Event("click")); m.scrollIntoView({block: "center"}); } pendingShow = null; } return; }
     if (h === "readings" || h.indexOf("readings-") === 0) { readingsView(); if (h === "readings") window.scrollTo(0, 0); return; }
+    if (h === "chronology" || h.indexOf("chr-") === 0) { chronologyView(); if (h === "chronology") window.scrollTo(0, 0); else { var ce = document.getElementById(h); if (ce) ce.scrollIntoView(); } return; }
     var pm = /^p([1-7])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
