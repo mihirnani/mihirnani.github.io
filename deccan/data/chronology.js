@@ -20,8 +20,8 @@ window.DECCAN_CHRONOLOGY = [
   "items": [
    {"d": "c. 1325–1475", "t": "Reddi and Velama kingdoms rule coastal Andhra and Telangana between the greater powers.", "e": "reddi-velama-kingdoms"},
    {"d": "c. 1336–1346", "t": "Vijayanagara founded on the Tungabhadra, beside the shrine of Pampa and Virupaksha at Hampi.", "e": "founding-of-vijayanagara-1336"},
-   {"d": "1342", "t": "Hoysala Ballala III killed at Madurai; his kingdom’s remnants pass to Vijayanagara over the next decade.", "e": "madurai-southern-conquest"},
-   {"d": "3 August 1347", "t": "Zafar Khan is proclaimed sultan as Alauddin Hasan Bahman Shah – at Daulatabad by most accounts, at Gulbarga in some – and the new state’s capital is soon fixed at Gulbarga.", "e": "hasan-gangu-bahmani-1347"},
+   {"d": "1342", "t": "Hoysala Ballala III captured at Kannanur Koppam while campaigning against the Madurai sultanate, and put to death; his kingdom’s remnants pass to Vijayanagara over the next decade.", "e": "madurai-southern-conquest"},
+   {"d": "3 August 1347", "t": "Zafar Khan is proclaimed Alauddin Hasan Bahman Shah; the sources differ on the setting, several placing the proclamation at Gulbarga, which became the first Bahmani capital.", "e": "hasan-gangu-bahmani-1347"},
    {"d": "14th–15th c.", "t": "The war-horse import trade through the west-coast ports; the temple-and-nayankara order in the south; the contested Raichur doab between the two powers.", "e": "horse-trade-origins"},
    {"d": "1362–1420", "t": "The first Bahmani–Vijayanagara wars.", "e": "bahmani-vijayanagara-wars"},
    {"d": "c. 1352–1371", "t": "Kumara Kampana’s southern campaigns for Vijayanagara: the Sambuvarayas reduced, then Madurai conquered; the empire reaches Rameswaram.", "e": "madurai-southern-conquest"},

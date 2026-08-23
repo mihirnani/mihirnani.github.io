@@ -9,7 +9,7 @@
     mysore: "Mysore", hyderabad: "Hyderabad", company: "East India Company", crown: "British Crown", portuguese: "Portuguese", other: "Other"};
   var KIND = {battle: "Battle", treaty: "Treaty", person: "Person", place: "Place", document: "Document",
     object: "Object", institution: "Institution", event: "Event"};
-  var ROWS = [["delhi", "Delhi sultanate", 1327, 1347], ["vijayanagara", "Vijayanagara", 1336, 1646], ["bahmani", "Bahmani sultanate", 1347, 1518], ["sultanates", "Deccan sultanates", 1490, 1687],
+  var ROWS = [["delhi", "Delhi sultanate", 1327, 1347], ["vijayanagara", "Vijayanagara", 1336, 1646], ["bahmani", "Bahmani sultanate", 1347, 1528], ["sultanates", "Deccan sultanates", 1490, 1687],
     ["mughal", "Mughal empire", 1596, 1761], ["maratha", "Marathas", 1646, 1818], ["mysore", "Mysore", 1761, 1880],
     ["hyderabad", "Hyderabad", 1724, 1880], ["portuguese", "Portuguese", 1510, 1739], ["company", "East India Company", 1611, 1858], ["crown", "British Crown", 1858, 1876]];
   var E = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]; }); };
@@ -29,13 +29,13 @@
 
   /* ---------- timeline ---------- */
   function timelineSvg() {
-    var X0 = 150, X1 = 1380, W = 1400, Y0 = 52, RH = 38, y0 = 1322, y1 = 1880;
+    var X0 = 150, X1 = 1380, W = 1400, Y0 = 68, RH = 38, y0 = 1322, y1 = 1880;
     var H = Y0 + RH * ROWS.length + 30;
     var x = function (yr) { return X0 + (yr - y0) / (y1 - y0) * (X1 - X0); };
     var s = ['<svg viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Timeline of the Deccan, 1327 to 1876, by polity">'];
     periods.forEach(function (p, i) {
-      s.push('<rect class="pband' + (i % 2 ? " alt" : "") + '" x="' + x(p.start).toFixed(1) + '" y="' + (Y0 - 30) + '" width="' + (x(p.end) - x(p.start)).toFixed(1) + '" height="' + (H - Y0 + 30) + '"/>');
-      s.push('<text class="ptitle" x="' + (x(p.start) + 6).toFixed(1) + '" y="' + (Y0 - 16) + '">' + E((p.short || p.title).toUpperCase()) + '</text>');
+      s.push('<rect class="pband' + (i % 2 ? " alt" : "") + '" x="' + x(p.start).toFixed(1) + '" y="' + (Y0 - 46) + '" width="' + (x(p.end) - x(p.start)).toFixed(1) + '" height="' + (H - Y0 + 46) + '"/>');
+      s.push('<text class="ptitle" x="' + (x(p.start) + 6).toFixed(1) + '" y="' + (Y0 - (i % 2 ? 16 : 32)) + '">' + E((p.short || p.title).toUpperCase()) + '</text>');
     });
     for (var yr = 1350; yr <= 1880; yr += 50) {
       s.push('<line class="grid" x1="' + x(yr).toFixed(1) + '" y1="' + (Y0 - 4) + '" x2="' + x(yr).toFixed(1) + '" y2="' + (H - 24) + '"/>');
