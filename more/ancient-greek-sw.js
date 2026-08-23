@@ -6,7 +6,7 @@
 "use strict";
 
 const CACHE_PREFIX = "ancient-greek-";
-const CACHE_VERSION = "v4";
+const CACHE_VERSION = "v5";
 const CACHE_NAME = `${CACHE_PREFIX}${CACHE_VERSION}`;
 
 const APP_PAGE = "/more/ancient-greek.html";
