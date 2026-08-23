@@ -155,7 +155,7 @@ def rfc(d):
     y, m, dd = map(int, d.split("-")); return email.utils.format_datetime(datetime.datetime(y, m, dd, 6, 0, tzinfo=datetime.timezone.utc))
 def absolutise(h):  # make relative image/link paths absolute for feed readers
     return re.sub(r'(src|href)="(?!https?:|mailto:|#)([^"]+)"', lambda m: '%s="%s%s"' % (m.group(1), BASE, m.group(2)), h)
-feed = ['<?xml version="1.0" encoding="UTF-8"?>',
+feed = ['<?xml version="1.0" encoding="UTF-8"?>', '<?xml-stylesheet type="text/xsl" href="feed.xsl"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">', '<channel>',
         '<title>%s – Curiosities</title>' % TITLE, '<link>%s</link>' % BASE, '<description>%s</description>' % html.escape(DESC),
         '<language>en</language>', '<lastBuildDate>%s</lastBuildDate>' % now,

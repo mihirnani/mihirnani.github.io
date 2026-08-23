@@ -106,7 +106,8 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html",
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
   ]
  },
  {
@@ -144,7 +145,9 @@ window.DECCAN_ENTRIES = [
     "url": "https://whc.unesco.org/en/list/241/"
    }
   ],
-  "related_maps": []
+  "related_maps": [
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
+  ]
  },
  {
   "id": "horse-trade-origins",
@@ -1072,7 +1075,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html",
-   "1570__India__Ortelius__Indiae-Orientalis.html"
+   "1570__India__Ortelius__Indiae-Orientalis.html",
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
   ]
  },
  {
@@ -1228,7 +1232,8 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1570__India__Ortelius__Indiae-Orientalis.html"
+   "1570__India__Ortelius__Indiae-Orientalis.html",
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
   ]
  },
  {
@@ -1264,7 +1269,8 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
+   "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html",
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
   ]
  },
  {
@@ -1460,7 +1466,8 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1570__India__Ortelius__Indiae-Orientalis.html"
+   "1570__India__Ortelius__Indiae-Orientalis.html",
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
   ]
  },
  {
@@ -1499,7 +1506,8 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1623__India__Mercator-Hondius__India-Orientalis.html"
+   "1623__India__Mercator-Hondius__India-Orientalis.html",
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
   ],
   "period": 3
  },
@@ -1744,7 +1752,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
-   "1654__India__Sanson__India-Below-and-Beyond-the-Ganges.html"
+   "1654__India__Sanson__India-Below-and-Beyond-the-Ganges.html",
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
   ],
   "period": 3
  },
@@ -2174,7 +2183,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1682__India__DuVal__Empire-du-Mogol.html",
-   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
   ],
   "period": 3
  },
@@ -4478,5 +4488,373 @@ window.DECCAN_ENTRIES = [
   ],
   "coda": true,
   "coda_order": 2
+ },
+ {
+  "id": "deccan-famine-1630",
+  "title": "The Deccan famine of 1630–32",
+  "date_label": "1630–1632",
+  "year": 1630,
+  "year_end": 1632,
+  "period": 3,
+  "polities": [
+   "mughal",
+   "sultanates"
+  ],
+  "kind": "event",
+  "place": "Khandesh and the northern Deccan",
+  "lat": 20.9,
+  "lon": 75.6,
+  "strap": "Two failed monsoons and a war-stripped countryside produced one of the worst famines in Deccan history, emptying Khandesh and the Ahmadnagar country while Shah Jahan's armies campaigned through them.",
+  "body": "<p>The monsoon failed over western India in 1630 and again, after excessive rain destroyed the intervening crop, in 1631. The failure fell on a countryside already stripped by war: Shah Jahan had come south in 1630 to finish the Nizam Shahi state, and imperial and Deccani armies were living off the land between the Tapti and the Bhima. The result, in Gujarat, Khandesh and the northern Deccan, was a mortality that contemporaries struggled to describe. The English factor Peter Mundy, travelling from Surat to Agra through Khandesh in 1631, recorded roads lined with the dead and towns – Burhanpur among them – reduced to a fraction of their people; the Dutch merchant Johan van Twist, in Gujarat, wrote an account of the same months that became one of the most cited famine narratives of the century.</p>\n<p>The Mughal chronicles acknowledge the disaster. The Padshahnama records the emperor remitting revenue and opening soup kitchens at Burhanpur, the campaign headquarters – measures real but small against the scale. Modern estimates of deaths run into the millions, with slaving, grain speculation and flight compounding the harvest failure; the famine is one reason the population and revenue figures of the region take decades to recover. Its political timing mattered. The Nizam Shahi state, defending itself with a devastated base, lost Daulatabad in 1633 and was extinguished as an independent power by the settlement of 1636; the famine is part of why the end came as it did, and why Aurangzeb, as viceroy after 1636, inherited a Deccan of empty villages whose revenue could not pay for its government.</p>\n<p>Historians treat 1630–32 as a structural event as much as a catastrophe. It marks the limit of what the early modern Deccan state, of any dynasty, could do for its cultivators; the measures available – remissions, kitchens, imported grain – were those a camp could improvise. The famine also enters the European archive with unusual force, because it happened along the Surat–Agra road where the Company's factors and travellers wrote their letters; the Deccan's dead were counted, this once, in English and Dutch.</p>",
+  "story": "The timeline's wars are fought over a countryside that could stop feeding them at any time, and 1630–32 is the reminder. It stands behind the end of Ahmadnagar in 1636, behind the empty Deccan that frustrated Aurangzeb's revenue officers, and behind every later entry in which harvests, credit and survival decide more than battles do – down to the riots of 1875, which also began with the price of grain and debt.",
+  "sources": [
+   {
+    "title": "John F. Richards, The Mughal Empire (The New Cambridge History of India, I.5) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CBO9780511584060"
+   },
+   {
+    "title": "Richard Carnac Temple (ed.), The Travels of Peter Mundy in Europe and Asia, 1608–1667, vol. II: Travels in Asia (Hakluyt Society, 1914)",
+    "url": "https://search.worldcat.org/search?q=Travels+of+Peter+Mundy+in+Europe+and+Asia+Hakluyt+vol+II"
+   },
+   {
+    "title": "Wikipedia, ‘Deccan famine of 1630–1632’",
+    "url": "https://en.wikipedia.org/wiki/Deccan_famine_of_1630%E2%80%931632"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html",
+   "1654__India__Sanson__India-Below-and-Beyond-the-Ganges.html"
+  ]
+ },
+ {
+  "id": "tukaram-varkari",
+  "title": "Tukaram and the Varkari tradition",
+  "date_label": "c. 1608–1650",
+  "year": 1608,
+  "year_end": 1650,
+  "period": 3,
+  "polities": [
+   "sultanates",
+   "maratha",
+   "other"
+  ],
+  "kind": "person",
+  "place": "Dehu, Maharashtra",
+  "lat": 18.718,
+  "lon": 73.767,
+  "strap": "A grocer of Dehu whose Marathi abhangas made him the most loved of the Varkari sants, the devotional counterpart to the courts and armies of the seventeenth-century Deccan.",
+  "body": "<p>Tukaram was born at Dehu on the Indrayani, near Pune, into a kunbi family that kept a small shop and had hereditary rights in the village. The conventional dates are about 1608 to about 1650, with little certain at either end; his death is remembered in the tradition as an ascent to heaven, which historians read as an early and contested disappearance. After losses in the famine years of the 1620s – the tradition remembers a wife and child dead of hunger – he turned to the worship of Vitthal (Vithoba) of Pandharpur, and began to compose abhangas, short Marathi devotional poems in a metre made for singing. Between four and five thousand are attributed to him, a corpus edited and argued over ever since. The most famous legend has the Dehu Brahmins forcing him to sink his manuscripts in the Indrayani, and the river returning them after thirteen days.</p>\n<p>He stood in a tradition already three centuries old. The Varkari sampradaya – the ‘pilgrim path’ whose practice is the twice-yearly walk to Pandharpur – reaches back to Dnyaneshwar, whose Marathi commentary on the Gita was composed about 1290 under the Yadavas, and to Namdev the tailor; Eknath of Paithan had renewed it in the sixteenth century under the Nizam Shahis. Its sants were by design not courtly figures: a tailor, a potter, a maidservant, a grocer. Tukaram's poems speak in that register – of shopkeeping, debt, bad harvests and the irrelevance of ritual status against devotion – and they made the case, more durably than any court text, for Marathi as a language of religion. His contemporary Ramdas, author of the Dasbodh, stands slightly apart: an ascetic organiser of maths whose later association with Shivaji became a fixture of Maratha memory, though the tradition that he was Shivaji's guru is not supported by the early evidence, and stories linking Shivaji to Tukaram are likewise late.</p>\n<p>The transmission is itself part of the history. The poems lived orally and in family manuscripts – a Dehu manuscript is held by tradition to be partly in the poet's hand – until the eighteenth-century hagiographer Mahipati fixed the sants' lives in his compendia, and a government-sponsored edition of 1873 printed the corpus in the same decade in which this timeline closes. By then the pilgrimage, with the palkhis carrying the sandals of Dnyaneshwar from Alandi and Tukaram from Dehu to Pandharpur, had taken the form it still has: the largest recurring assembly of the Marathi countryside, older than any of the states in this collection and outlasting all of them.</p>",
+  "story": "The collection gives the sultanates a rich religious culture – Gesudaraz, the Sufi shrines, Ibrahim II's Kitab-i-Nauras – and this entry restores the Marathi half of that world. The Varkari sants, not the courts, are where the language of the later Maratha polity learned to speak about worth and standing; when Shivaji's coronation and the Peshwas' Pune appear later in the timeline, the countryside they governed sang Tukaram.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "Dilip Chitre (tr.), Says Tuka: Selected Poetry of Tukaram (Penguin, 1991)",
+    "url": "https://search.worldcat.org/search?q=Dilip+Chitre+Says+Tuka+Selected+Poetry+of+Tukaram"
+   },
+   {
+    "title": "Wikipedia, ‘Tukaram’",
+    "url": "https://en.wikipedia.org/wiki/Tukaram"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
+  "id": "madanna-akkanna",
+  "title": "Madanna and Akkanna at Golconda",
+  "date_label": "c. 1674–1686",
+  "year": 1674,
+  "year_end": 1686,
+  "period": 3,
+  "polities": [
+   "sultanates",
+   "mughal",
+   "maratha"
+  ],
+  "kind": "person",
+  "place": "Hyderabad and Golconda, Telangana",
+  "lat": 17.383,
+  "lon": 78.401,
+  "strap": "Two Telugu Brahmin brothers ran the Qutb Shahi state in its last dozen years, allied it with Shivaji, and were murdered by its own nobles as Aurangzeb closed in.",
+  "body": "<p>Madanna, a Telugu Niyogi Brahmin who had risen through the Golconda revenue offices, became chief minister of the young sultan Abul Hasan Qutb Shah about 1674, with the title Surya Prakasha Rao; his brother Akkanna held high military and administrative office beside him. Their ascendancy was the culmination of something visible at Golconda for decades – the Qutb Shahi state's reliance on Telugu Brahmin administrators for its revenue machinery – but no Hindu minister had held such power in any sultanate court. Madanna tightened the farming of the revenue, dealt directly with the European companies at Masulipatnam, and conducted a foreign policy of buying safety: tribute to the Mughals when unavoidable, and subsidy to the Marathas as a counterweight.</p>\n<p>The Maratha alliance was his signature. In 1677 Shivaji came to Hyderabad on his way south, was received with honour, and left with a treaty: Golconda money helped pay for the Karnataka campaign that gave the Marathas Jinji and Vellore, and the two powers divided the old Bijapuri Karnatak between them on paper. For Aurangzeb, already persuaded that the Deccan sultanates were faithless, a Brahmin-run Golconda subsidising the Marathas was a standing provocation, and Mughal demands on Abul Hasan repeatedly named the brothers. In March 1686, with Bijapur under siege and a Mughal army under Prince Muazzam near Hyderabad, a faction of Golconda nobles – with the connivance, the chronicles say, of women of the royal household – had Madanna and Akkanna seized in the street and killed, and their heads sent to the Mughal camp.</p>\n<p>The murder bought nothing. Aurangzeb took Hyderabad's submission, returned the next year, and extinguished the dynasty at Golconda in September 1687. Historians have read the brothers variously – Richards as able fiscal centralisers whose exactions also strained the state, Eaton and others as the clearest case of the Deccan's composite ruling culture, in which a Persianate sultanate could be administered in Telugu by Brahmins without ceasing to be itself. In Telugu memory they survive as founders of temples and patrons; in the Mughal record, as the excuse.</p>",
+  "story": "The entry sits between the fall of Bijapur and Golconda and the earlier portrait of the Qutb Shahi state, and answers a question the conquest narrative skips: who was actually running the last sultanate, and for whom. It is also a hinge to the Maratha entries – Shivaji's southern campaign was financed at Hyderabad – and a late, doomed instance of the plateau's oldest habit, the sharing of sovereignty across religion that Talikota had failed to end.",
+  "sources": [
+   {
+    "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
+    "url": "https://archive.org/details/mughaladministra0000rich"
+   },
+   {
+    "title": "Haroon Khan Sherwani, History of the Qutb Shahi Dynasty (Munshiram Manoharlal, 1974)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20the%20Qutb%20Shahi%20Dynasty%20Haroon%20Khan%20Sherwani"
+   },
+   {
+    "title": "Wikipedia, ‘Madanna and Akkanna’",
+    "url": "https://en.wikipedia.org/wiki/Madanna_and_Akkanna"
+   }
+  ],
+  "related_maps": [
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html",
+   "1682__India__DuVal__Empire-du-Mogol.html"
+  ]
+ },
+ {
+  "id": "papadu-revolt",
+  "title": "Papadu",
+  "date_label": "c. 1695–1710",
+  "year": 1695,
+  "year_end": 1710,
+  "period": 4,
+  "polities": [
+   "mughal",
+   "other"
+  ],
+  "kind": "person",
+  "place": "Shahpur, near Warangal, Telangana",
+  "lat": 17.99,
+  "lon": 79.53,
+  "strap": "A toddy-tapper's son who built a fort, an army and a fifteen-year bandit kingdom in Mughal Telangana, and sacked Warangal while the empire argued over Aurangzeb's succession.",
+  "body": "<p>Sarvai Papadu – Papadu, or Papanna – came from a family of toddy-tappers, a caste near the bottom of Telangana's rural order, in the country north-east of Hyderabad. From the mid-1690s he gathered a following of the young and landless, fortified a hill at Shahpur on the Hyderabad–Warangal road, and lived by raiding the traffic and the towns of a province that the Mughal conquest of 1687 had annexed but not settled. Twice the government reduced him and twice he returned, buying or fighting his way back to his forts and recruiting across caste lines – his lieutenants included Muslims, and his army anyone the old order had no place for.</p>\n<p>His moment came with Aurangzeb's death. In 1708, while the princes fought over the succession and the Deccan's governors watched Delhi, Papadu stormed Warangal, the second city of Telangana, and carried off its notables for ransom and its wealth to Shahpur. For about two years he was the effective power on that road, issuing his own dignities and treating with the crumbling province almost as one chief to another – contemporary report even has the new emperor Bahadur Shah, passing south, acknowledging him. The reaction assembled slowly: the zamindars whose order he had upended, the caste bodies he had offended, and finally a Mughal siege of Shahpur in 1710 that took the fort. Papadu was executed, and by later account his head went to Delhi.</p>\n<p>Richards reconstructed the episode from the Persian records of the Hyderabad province; Eaton made Papadu one of the eight lives of his social history, as the clearest evidence that the Mughal conquest had loosened rather than fixed the Deccan's social order. A man of servile caste had held forts, commanded Rajputs and Afghans, and taxed a royal road for a decade – none of which the old sultanate world had allowed. In Telangana folk memory he survives as a hero; in the timeline he is the underside of the interregnum whose upper side is the rise of the Nizam.</p>",
+  "story": "Between Aurangzeb's death and the Nizam's founding of the Hyderabad state, the timeline's attention is on princes and viziers; Papadu is what the same years looked like from below. His career is the social history of the conquest – an annexed province, a broken order, and the brief, armed mobility of those the order had held down – and it foreshadows a theme that returns with the Pindaris a century later.",
+  "sources": [
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708"
+   },
+   {
+    "title": "John F. Richards, Mughal Administration in Golconda (Clarendon Press, Oxford, 1975)",
+    "url": "https://archive.org/details/mughaladministra0000rich"
+   },
+   {
+    "title": "Wikipedia, ‘Papadu’",
+    "url": "https://en.wikipedia.org/wiki/Papadu"
+   }
+  ],
+  "related_maps": [
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
+  ]
+ },
+ {
+  "id": "bussy-hyderabad",
+  "title": "Bussy and the French at Hyderabad",
+  "date_label": "1751–1758, Circars to 1766",
+  "year": 1751,
+  "year_end": 1766,
+  "period": 4,
+  "polities": [
+   "hyderabad",
+   "other",
+   "company"
+  ],
+  "kind": "person",
+  "place": "Hyderabad, Telangana",
+  "lat": 17.385,
+  "lon": 78.486,
+  "strap": "For seven years a French officer and his sepoys were the power behind the Nizam's throne, paid with the Northern Circars – the first European-managed court in the Deccan, and the model the English perfected.",
+  "body": "<p>Nizam-ul-Mulk's death in 1748 opened a succession war at Hyderabad that ran in parallel with the Anglo-French contest in the Carnatic. Dupleix, governor of Pondicherry, backed a grandson, Muzaffar Jang, and when he was killed in 1751 the French candidate became his uncle Salabat Jang – escorted to the masnad by a French corps under Charles de Bussy. Bussy then stayed. His disciplined sepoy force, kept in the Nizam's service but under French command, made him indispensable against Maratha pressure and court rivals; to pay for it, in 1753 Salabat Jang assigned to the French Company the Northern Circars, the coastal districts from Guntur to the Chilka lake that had been Golconda's window on the Bay of Bengal. It was subsidy in the precise form the English would later make a system: a European force maintained inside an Indian state, paid by the alienation of that state's revenue.</p>\n<p>Bussy's ascendancy was never quiet – he faced the diwan Shah Nawaz Khan's intrigues, a court party that wanted him gone, and in 1756 a siege of his quarters at Hyderabad that he survived by holding the Char Mahal until relief came – but for seven years French officers collected Deccan revenues and French policy had a vote in the Nizam's councils. The system fell with the French war effort in India. In 1758 Lally, hard-pressed at Madras, recalled Bussy south; an English force under Francis Forde, sent by Clive from Bengal, defeated the French at Condore in December 1758 and took Masulipatnam in April 1759, and Salabat Jang changed sides. His brother Nizam Ali deposed him in 1762. The Circars followed the victors: a firman of 1765 from the Mughal emperor granted them to the English Company, and a treaty with Nizam Ali in 1766 confirmed the transfer against an annual payment and the promise of troops.</p>\n<p>Historians read the episode as the true rehearsal for the subsidiary alliance of 1798 – Faruqui's study of the eighteenth-century Nizamat treats the French years as the moment Hyderabad learned that a European detachment could be both shield and master. The difference was only durability: Bussy's system rested on one remarkable officer and a company that lost its war, Wellesley's on an institution. When the timeline reaches 1798 and the English subsidiary force at Hyderabad, the Nizam's court had seen it all before, in French.</p>",
+  "story": "The Carnatic wars entry brings the European rivalry to the Deccan's edge; this one brings it inside the Nizam's palace. Bussy supplies the missing link between the succession chaos after Nizam-ul-Mulk and the subsidiary alliance of 1798 – the proof, a half-century early, that the price of a European bodyguard was a province, and that the Deccan's coastal revenue could anchor a European empire's finances.",
+  "sources": [
+   {
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://doi.org/10.1017/S0026749X07003290"
+   },
+   {
+    "title": "Sarojini Regani, Nizam–British Relations, 1724–1857 (Concept Publishing, 1988)",
+    "url": "https://search.worldcat.org/search?q=Regani+Nizam-British+Relations+1724-1857"
+   },
+   {
+    "title": "Wikipedia, ‘Marquis de Bussy-Castelnau’",
+    "url": "https://en.wikipedia.org/wiki/Marquis_de_Bussy-Castelnau"
+   }
+  ],
+  "related_maps": [
+   "1752__SouthIndia__dAnville__Carte-de-lInde-Southern.html",
+   "1763__India__Dury__East-Indies.html"
+  ]
+ },
+ {
+  "id": "udgir-1760",
+  "title": "Udgir, 1760",
+  "date_label": "3 February 1760",
+  "year": 1760,
+  "period": 4,
+  "polities": [
+   "maratha",
+   "hyderabad"
+  ],
+  "kind": "battle",
+  "place": "Udgir, Maharashtra",
+  "lat": 18.393,
+  "lon": 77.117,
+  "strap": "Sadashivrao Bhau's methodical destruction of the Nizam's army brought the Marathas their largest cession of Deccan territory – eleven months before the same commander marched to Panipat.",
+  "body": "<p>Through the 1750s the Peshwa's government pressed the Nizam's dominions from the west in a series of short wars – Bhalki in 1752, Sindkhed in 1757 – each ending in a cession. The campaign of 1759–60 was the largest. Sadashivrao Bhau, the Peshwa Nanasaheb's cousin and the ablest organiser in the Maratha service, brought against Salabat Jang and his brother Nizam Ali an army built around the new trained infantry and artillery under Ibrahim Khan Gardi, lately of the French service at Hyderabad. Near Udgir, on the Bidar frontier, the Maratha army caught the Nizam's forces on the march in early February 1760, cut them off from supply, and broke them with artillery in a battle that was more siege than melee.</p>\n<p>The treaty that followed was the high-water mark of Maratha power in the peninsula. The Nizam ceded territory reckoned at some sixty lakhs of rupees of annual revenue, and with it a chain of the Deccan's historic strongpoints: Ahmadnagar, Daulatabad, Bijapur and Burhanpur among them. The forts that had anchored the Nizam Shahi, Adil Shahi and Mughal Deccans in turn now flew Maratha colours, and Pune's writ ran, on paper, from the Tapti to the Tungabhadra. Udgir also confirmed the military lesson Bussy had taught at Hyderabad: Ibrahim Khan's disciplined musketry and guns had decided the field, and the Bhau drew the conclusion that such infantry could decide any field.</p>\n<p>The sequel gave the victory its irony. Within weeks the news from the north – Ahmad Shah Abdali wintering in the Doab, the Maratha position at Delhi collapsing – pulled the victor of Udgir out of the Deccan. The Bhau marched north in March 1760 with the core of the Udgir army and Ibrahim Khan's guns, and lost all of it at Panipat the following January. Nizam Ali, who had signed the cessions, spent the next years taking much of them back, and the frontier settled roughly where it had been. Udgir thus stands twice in the histories: as the Maratha state's greatest Deccan victory, and as the reason its best army and commander were available to be destroyed a thousand kilometres away.</p>",
+  "story": "The timeline runs from Palkhed to Panipat with the Nizam–Maratha contest mostly offstage; Udgir puts its climax back in view. It is the moment the two successor states of the Mughal Deccan measured each other conclusively – and the hinge that connects the Deccan's local politics to the catastrophe at Panipat, where the Udgir army went to die.",
+  "sources": [
+   {
+    "title": "G. S. Sardesai, New History of the Marathas, 3 vols (Phoenix Publications, Bombay, 1946)",
+    "url": "https://archive.org/details/dli.ernet.236030"
+   },
+   {
+    "title": "Uday S. Kulkarni, Solstice at Panipat, 14 January 1761: An Authentic Account of the Campaign of Panipat (Mula Mutha Publishers, Pune, 2011)",
+    "url": "https://search.worldcat.org/search?q=Solstice%20at%20Panipat%20Uday%20Kulkarni"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Udgir’",
+    "url": "https://en.wikipedia.org/wiki/Battle_of_Udgir"
+   }
+  ],
+  "related_maps": [
+   "1763__India__Dury__East-Indies.html",
+   "1752__India__dAnville__lInde-Composite.html"
+  ]
+ },
+ {
+  "id": "pollilur-1780",
+  "title": "Pollilur, 1780",
+  "date_label": "10 September 1780",
+  "year": 1780,
+  "period": 5,
+  "polities": [
+   "mysore",
+   "company"
+  ],
+  "kind": "battle",
+  "place": "Pollilur, near Kanchipuram, Tamil Nadu",
+  "lat": 12.87,
+  "lon": 79.72,
+  "strap": "Haidar Ali and Tipu annihilated Baillie's column near Kanchipuram – the Company's worst defeat in India to that date, remembered in captivity narratives and painted on Tipu's palace wall.",
+  "body": "<p>In July 1780 Haidar Ali came down the ghats into the Carnatic with the largest army Mysore ever fielded, in answer to the Company's seizure of Mahé and its alliance-making against him. The Madras government, caught dispersed, ordered Colonel William Baillie's detachment from Guntur to join the main force under Sir Hector Munro near Kanchipuram. On 10 September, at Pollilur, Tipu intercepted Baillie with the Mysore advance guard and Haidar brought up the main army; Munro, a few miles away, did not march to the guns. Baillie's square held under artillery and rocket fire until its ammunition tumbrils exploded, and was then ridden down. Of some 3,800 men, most were killed; about 200 Europeans were taken, Baillie among them. Munro retreated to Madras, throwing his guns into a temple tank at Kanchipuram.</p>\n<p>It was the heaviest blow British arms had suffered in India, and contemporaries said so; Hastings called it the severest since the beginning of the Company's wars. The prisoners' fate became a literature. Marched to Srirangapatna, the survivors lived for years in Haidar's and then Tipu's forts – some in chains, some forcibly circumcised and enrolled in Mysore service – and the captivity narratives they published on release, with their mixture of suffering, resentment and unwilling fascination, fixed the British image of Tipu for a generation, as Colley and Teltscher have shown. Baillie himself died a prisoner in 1782.</p>\n<p>Mysore remembered the day differently. Tipu commissioned an immense mural of the battle for the Daria Daulat Bagh, his summer palace at Srirangapatna – Baillie's square breaking around the exploding tumbril, Haidar and Tipu serene on their elephants – and had it maintained as the centrepiece of the palace's decoration, where it survives. The war itself turned: Eyre Coote beat Haidar at Porto Novo the next summer, Haidar died in 1782, and the Treaty of Mangalore in 1784 restored the status quo. But Pollilur remained the proof, for Mysore and for every Indian power watching, that a Company army could be not merely checked but erased.</p>",
+  "story": "Between the first Anglo-Mysore war and the treaties of the 1780s and 1790s, the timeline needs the battle that made Mysore the Company's most feared enemy. Pollilur is also the collection's clearest case of contested memory: the same afternoon exists as British captivity narrative and as Mysorean palace mural, and Tipu's Tiger – elsewhere in this timeline – snarls from the same emotional ground.",
+  "sources": [
+   {
+    "title": "Mohibbul Hasan, History of Tipu Sultan (Bibliophile, Calcutta, 1951)",
+    "url": "https://archive.org/details/dli.csl.6359"
+   },
+   {
+    "title": "Linda Colley, Captives: Britain, Empire and the World, 1600–1850 (Jonathan Cape, London, 2002)",
+    "url": "https://search.worldcat.org/search?q=Linda+Colley+Captives+Britain+Empire+and+the+World"
+   },
+   {
+    "title": "Wikipedia, ‘Battle of Pollilur (1780)’",
+    "url": "https://en.wikipedia.org/wiki/Battle_of_Pollilur_(1780)"
+   }
+  ],
+  "related_maps": [
+   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
+   "1782__India__Rennell__Hindoostan-2-Sheet.html"
+  ]
+ },
+ {
+  "id": "phule-satyashodhak",
+  "title": "Jotirao Phule",
+  "date_label": "1848–1873",
+  "year": 1848,
+  "year_end": 1873,
+  "period": 7,
+  "polities": [
+   "company",
+   "crown"
+  ],
+  "kind": "person",
+  "place": "Pune, Maharashtra",
+  "lat": 18.516,
+  "lon": 73.856,
+  "strap": "A Pune gardener-caste schoolmaster who opened a girls' school in 1848, wrote Gulamgiri against Brahmin dominance, and founded the Satyashodhak Samaj in 1873 – the settlement era's great dissenting voice.",
+  "body": "<p>Jotirao Govindrao Phule belonged to the Mali, gardener, caste of Pune, his family grown modestly prosperous supplying flowers – hence ‘Phule’. Educated at the Scottish Mission's school, he opened a school for girls at Budhwar Peth in 1848, teaching there himself with his wife Savitribai, whom he had taught to read; it is commonly counted the first girls' school run by Indians in western India, and it earned the couple ostracism and eviction. Schools for Dalit children followed in the early 1850s, then a home for widows and their infants, and the opening of his household well to untouchables – each act a deliberate breach in the ritual order of the old Peshwa capital.</p>\n<p>His writing made the breach doctrinal. In ballads, plays and tracts – above all Gulamgiri, ‘Slavery’, of 1873, dedicated with pointed irony to the American abolitionists – Phule inverted the historical mythology of Brahmin Pune: the Aryan conquest became an enslavement of the indigenous majority, the demon kings of Puranic story became its lost sovereigns, and Shivaji became a cultivator-king rather than a protector of Brahmins. Where Ranade's generation read the Maratha past as a proto-nation betrayed, Phule read it as a caste order the Company's schools and courts had accidentally cracked open – which is why, almost alone among the era's public men, he treated British rule as an opportunity for the shudra before it was a humiliation for the nation.</p>\n<p>On 24 September 1873 he founded the Satyashodhak Samaj, the ‘Truth-Seekers' Society’, to carry the programme: education for the low castes and women, marriage and funeral rites without Brahmin priests, and a running critique, in the Samaj's newspapers and speeches, of priestcraft and of the moneylender–clerk–priest triad that sat on the cultivator. Its early membership came from Pune's Malis, Kunbis and artisans, its later strength from the countryside; O'Hanlon's study traces how its idiom entered the peasant world whose distress broke out in the riots of 1875, though the Samaj itself preached self-help rather than revolt. Phule died in 1890, having taken in his last years the title by which Maharashtra remembers him: Mahatma.</p>",
+  "story": "The timeline's final period is the Company's and Crown's settlement of the Deccan, and its coda belongs to Ranade's generation of historians; Phule is the countervoice both require. Writing in the decade of the Watan Act and the Deccan Riots, he read the same rural order the Riots Commission would document – cultivator, moneylender, clerk, priest – and asked, before anyone else in the collection, whose Deccan the histories were about.",
+  "sources": [
+   {
+    "title": "Rosalind O'Hanlon, Caste, Conflict and Ideology: Mahatma Jotirao Phule and Low Caste Protest in Nineteenth-Century Western India (Cambridge University Press, 1985)",
+    "url": "https://books.google.com/books/about/Caste_Conflict_and_Ideology.html?id=5kMrsTj1NeYC"
+   },
+   {
+    "title": "Jotirao Phule, translated by P. G. Patil, Slavery (Gulamgiri), in Collected Works of Mahatma Jotirao Phule, vol. I (Government of Maharashtra, 1991)",
+    "url": "https://search.worldcat.org/search?q=Collected+Works+of+Mahatma+Jotirao+Phule+Patil+Slavery"
+   },
+   {
+    "title": "Wikipedia, ‘Jyotirao Phule’",
+    "url": "https://en.wikipedia.org/wiki/Jyotirao_Phule"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "railway-bhor-ghat",
+  "title": "The railway climbs the ghats",
+  "date_label": "1853–1863",
+  "year": 1853,
+  "year_end": 1863,
+  "period": 7,
+  "polities": [
+   "company",
+   "crown"
+  ],
+  "kind": "institution",
+  "place": "Bhor Ghat, Maharashtra",
+  "lat": 18.76,
+  "lon": 73.38,
+  "strap": "India's first train ran from Bombay in 1853; ten years and a mountain later, the Bhor Ghat incline put the Deccan within a day of the port and changed what the plateau grew, owed and remembered.",
+  "body": "<p>The Great Indian Peninsula Railway ran India's first passenger train from Bombay's Bori Bunder to Thane, twenty-one miles, on 16 April 1853. The line was a commercial and imperial project at once: guaranteed five per cent by the government, promoted in Manchester and London by interests that wanted Deccan cotton, and aimed from the first at the wall of the Western Ghats. The wall was the hard part. The Bhor Ghat incline, carrying the line from Karjat up to Khandala and Lonavala on the Pune side, took eight years, twenty-five tunnels and viaducts across ravines, a reversing station at the summit approach, and a workforce that peaked above forty thousand; Kerr's history of the railway works reckons the human cost of the Ghat inclines in the tens of thousands dead, of accident and epidemic. The incline opened in 1863, the parallel Thal Ghat incline for the north-eastern line by 1865, and Bombay was joined to Pune, then to the cotton districts, and in 1871 – meeting the Madras line – to the far side of the peninsula.</p>\n<p>The timing was providential for one trade above all. The line reached toward Berar and the Deccan cotton tracts exactly as the American Civil War made Indian cotton briefly the most valuable crop in the world, and the railway, the cotton boom and the Bombay money market of the 1860s fed one another; Khandesh and Berar towns on the line – Bhusawal, Khamgaon with its branch – became cotton marts of a new kind. But the railway's effects outran cotton. Grain now moved toward prices rather than merely away from famine, pilgrims reached Pandharpur and Nashik by ticket, recruits and troops moved on timetables – the lesson of 1857 was in the alignments – and the up-country moneylender got a postal money order system to collect through. The Deccan's distances, which had defended it against every empire in this timeline, stopped defending it.</p>\n<p>The plateau's economic historians treat the railway as the settlement's enforcing mechanism: Guha and Charlesworth both note that the export booms and the debt crises of the later nineteenth century travelled on the same rails. The Murray's Handbook tourist who reached Hampi from Hospet station belongs to the same change – the Deccan of this timeline, a fortnight's march from the coast for Tughluq or Aurangzeb or Wellesley, had become a place one visited between trains.</p>",
+  "story": "Every earlier entry in the collection moves at the speed of bullock and horse; after this one, nothing does. The incline up the Bhor Ghat is the settlement era's equivalent of the Raichur doab or the harbour of Bombay – the piece of geography whose conquest reorganised everything around it – and it is the precondition for the cotton boom, the riots' credit economy, and the railway-guidebook Deccan with which the map collection closes.",
+  "sources": [
+   {
+    "title": "Ian J. Kerr, Building the Railways of the Raj, 1850–1900 (Oxford University Press, Delhi, 1995)",
+    "url": "https://search.worldcat.org/search?q=Ian+Kerr+Building+the+Railways+of+the+Raj"
+   },
+   {
+    "title": "Sumit Guha, The Agrarian Economy of the Bombay Deccan, 1818–1941 (Oxford University Press, 1985)",
+    "url": "https://archive.org/details/agrarianeconomyo0000sumi"
+   },
+   {
+    "title": "Wikipedia, ‘Bhor Ghat’",
+    "url": "https://en.wikipedia.org/wiki/Bhor_Ghat"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
+   "1883__India__Letts__India-11.html"
+  ]
+ },
+ {
+  "id": "cotton-boom-1861",
+  "title": "The cotton boom and bust",
+  "date_label": "1861–1865",
+  "year": 1861,
+  "year_end": 1865,
+  "period": 7,
+  "polities": [
+   "crown",
+   "hyderabad"
+  ],
+  "kind": "event",
+  "place": "Berar and the Deccan cotton tracts",
+  "lat": 20.7,
+  "lon": 76.57,
+  "strap": "The American Civil War made Deccan cotton briefly the most valuable harvest in the world; the crash of 1865 left the debts whose collection ended in the riots of 1875.",
+  "body": "<p>When the Union blockade shut off the American South in 1861, Lancashire's mills lost the source of three-quarters of their cotton, and the price of Indian cotton roughly quadrupled in four years. The Deccan was the great beneficiary: Berar – administered by the Company and then the Crown since the 1853 assignment, and connected toward Bombay by the new railway – along with Khandesh and the south Maratha country, threw land into cotton as fast as it could be ploughed. Bombay's exports of raw cotton in the peak years were worth more than the whole of India's other trade; villages saw silver as they never had; cultivators in the boom districts rebuilt houses, sank wells, married expensively and borrowed easily, for the sowkar's credit expanded with the price of the crop standing in the field.</p>\n<p>The money pooled most spectacularly in Bombay. The city's share mania of 1863–65 – banks, financial associations, land reclamation companies promoted on cotton profits, with Premchand Roychund's Back Bay reclamation the emblem – collapsed within weeks of Appomattox, as American cotton's return broke the price. The Bank of Bombay had to be reconstructed; fortunes vanished with the tide. In the countryside the reckoning was slower and heavier. Prices fell toward, and then below, their old levels while debts contracted at boom valuations remained, and the revenue settlements revised upward in the good years fell due in the bad ones; the resurveys of the Deccan districts in the late 1860s raised assessments just as the boom's supports were removed.</p>\n<p>The historiography treats the boom as the hinge of the late-colonial rural Deccan. Guha traces the price and credit series; Charlesworth, sceptical of simple stories, still places the post-boom deflation and the transfer of land toward the creditor at the centre of the 1870s crisis; and the Deccan Riots Commission of 1875, looking for the origins of that summer's attacks on the moneylenders' bonds in Poona and Ahmednagar districts, itself pointed to the boom and its aftermath. The riots with which this timeline closes were, among other things, the cotton boom's unpaid bill.</p>",
+  "story": "The collection ends at the Deccan Riots, and this entry supplies their missing cause: the four years in which a war on the far side of the world monetised the Deccan countryside, and the decade in which the tide went out. It joins the Berar assignment, the railway and the revenue survey into one machine – and shows the plateau, for the first time in the timeline, moving entirely to the rhythm of a global market.",
+  "sources": [
+   {
+    "title": "Sumit Guha, The Agrarian Economy of the Bombay Deccan, 1818–1941 (Oxford University Press, 1985)",
+    "url": "https://archive.org/details/agrarianeconomyo0000sumi"
+   },
+   {
+    "title": "Neil Charlesworth, Peasants and Imperial Rule: Agriculture and Agrarian Society in the Bombay Presidency, 1850–1935 (Cambridge University Press, 1985)",
+    "url": "https://www.cambridge.org/core/books/peasants-and-imperial-rule/906A1884C52C41939D7A1FC1E6294D3F"
+   },
+   {
+    "title": "Report of the Committee on the Riots in Poona and Ahmednagar, 1875 (Bombay, 1876)",
+    "url": "https://search.worldcat.org/title/496461176"
+   }
+  ],
+  "related_maps": [
+   "1893__Deccan__Bartholomew__Section-X-Bombay-Berar.html",
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
  }
 ];
