@@ -10,8 +10,8 @@ window.ATLAS_GAZE = {
   },
   {
    "n": 2,
-   "file": "02_Baroque-Mughals-and-Companies.html",
-   "title": "Baroque, Mughals and Companies"
+   "file": "02_The-Great-Mogul-and-the-Companies.html",
+   "title": "The Great Mogul and the Companies"
   },
   {
    "n": 3,

@@ -81,12 +81,23 @@
 
     header {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       align-items: center;
       gap: 1rem;
       padding-bottom: 1.25rem;
       border-bottom: 1px solid var(--line);
     }
+
+    /* The same row of small capitals every collection's masthead carries. */
+    .site-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.4rem; }
+    .site-nav a {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .site-nav a:hover, .site-nav a:focus-visible { color: var(--text); }
 
     .theme-toggle {
       border: 0;
@@ -117,6 +128,13 @@
       font-weight: 500;
       line-height: 1.02;
       letter-spacing: 0.01em;
+    }
+
+    .intro .byline {
+      margin-top: 0.6rem;
+      font-family: "Spectral", Georgia, serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
     }
 
     .intro p {
@@ -321,6 +339,8 @@
 
     @media (max-width: 620px) {
       .page { width: min(100% - 1.4rem, 920px); }
+      .site-nav { gap: 0.3rem 1rem; }
+      .site-nav a { font-size: 0.66rem; letter-spacing: 0.16em; }
       main { padding-top: 2.5rem; }
       .intro { margin-bottom: 2.5rem; }
       .project {
@@ -347,6 +367,13 @@
 <body>
   <div class="page">
     <header>
+      <nav class="site-nav" aria-label="Collections">
+        <a href="https://naniwadekar.com/deccan/">Deccan</a>
+        <a href="https://naniwadekar.com/european-gaze/">Maps</a>
+        <a href="https://naniwadekar.com/basalt-and-laterite/">Basalt</a>
+        <a href="https://naniwadekar.com/sahyadri-birds/">Birds</a>
+        <a href="https://naniwadekar.com/atlas/">Atlas</a>
+      </nav>
       <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
     </header>
 
@@ -354,6 +381,7 @@
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">Curiosities</h1>
         <p>History and natural history, mostly of the Deccan and the Western Ghats.</p>
+        <p class="byline">Assembled by Mihir Naniwadekar, Pune.</p>
       </section>
 
       <div class="columns">
