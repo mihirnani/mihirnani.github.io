@@ -66,6 +66,18 @@
 
   <script src="../deccan/data/entries.js"></script>
   <script src="../basalt-and-laterite/data/entries.js"></script>
+  <script>
+    /* Safari, opened from a folder, will not load the sister collections' files
+       above this one; the published site and other browsers do. When the live
+       files did not arrive, load the snapshot copies kept beside this page
+       (regenerate them with tools/make_snapshot.py after editing a collection). */
+    (function () {
+      var need = [["DECCAN_ENTRIES","deccan-entries.js"],["BL_ENTRIES","basalt-entries.js"]];
+      need.forEach(function (pair) {
+        if (window[pair[0]] === undefined) document.write('<script src="data/snapshot/' + pair[1] + '"><\/script>');
+      });
+    })();
+  </script>
   <script src="data/gaze.js"></script>
   <script src="data/places.js"></script>
   <script src="places.js"></script>
