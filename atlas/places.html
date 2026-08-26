@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A places index across Curiosities: every place in The Deccan, 1336–1875 and Basalt and Laterite, with coordinates, its entries, and the European maps that show it.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>Places – Atlas – Curiosities</title>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../curiosities-icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../curiosities-icon-180.png">
+  <link rel="canonical" href="https://naniwadekar.com/atlas/places.html">
+  <meta property="og:title" content="Places – Atlas – Curiosities"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities">
+  <meta property="og:description" content="A places index across Curiosities: every place in the Deccan and Basalt collections, with coordinates, its entries, and the European maps that show it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naniwadekar.com/atlas/places.html">
+  <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <ul class="nav" aria-label="Atlas">
+        <li><a href="https://naniwadekar.com/">Curiosities</a></li>
+        <li><a href="index.html">Map</a></li>
+        <li><a href="chronology.html">Chronology</a></li>
+        <li><a href="places.html" aria-current="page">Places</a></li>
+      </ul>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
+
+    <main>
+      <section aria-labelledby="page-title" class="intro">
+        <h1 id="page-title">Places</h1>
+        <p>Every place that anchors an entry in <a href="../deccan/">The Deccan, 1336–1875</a> or <a href="../basalt-and-laterite/">Basalt and Laterite</a>, with its coordinates, its entries, and – where the map collection has indexed it – the European maps that show it.</p>
+      </section>
+
+      <section aria-labelledby="places-title" class="section">
+        <h2 class="group-title" id="places-title">The index</h2>
+        <p class="note" id="places-note">Names are the collections' own, spelling variants merged and localities folded into their town; the state is kept. Coordinates are those the entries carry, averaged where a town has several.</p>
+        <div class="place-search"><input id="q" type="search" placeholder="Find a place – a name, a state, an entry" aria-label="Find a place" autocomplete="off"></div>
+        <ul class="places-toc" id="toc"></ul>
+        <div class="places" id="places"><p class="note">Loading the index…</p></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Rendered at load from the collections' own data files; the place table itself (<code>atlas/data/places.js</code>) is generated from them. Part of <a href="https://naniwadekar.com/">Curiosities</a>; also in the atlas: <a href="index.html">the map</a> and <a href="chronology.html">one chronology</a>.</p>
+    </footer>
+  </div>
+
+  <script src="../deccan/data/entries.js"></script>
+  <script src="../basalt-and-laterite/data/entries.js"></script>
+  <script src="data/gaze.js"></script>
+  <script src="data/places.js"></script>
+  <script src="places.js"></script>
+  <script>
+    (function () {
+      var button = document.getElementById("theme-toggle");
+
+      function updateLabel() {
+        var dark = document.documentElement.dataset.theme === "dark";
+        button.textContent = dark ? "Light" : "Dark";
+        button.setAttribute("aria-pressed", String(dark));
+      }
+
+      button.addEventListener("click", function () {
+        var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("root-theme", next);
+        } catch (error) {}
+        updateLabel();
+      });
+
+      updateLabel();
+    })();
+  </script>
+</body>
+</html>

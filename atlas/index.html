@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One map of everything on Curiosities: the entries of The Deccan, 1336–1875 by polity, the places of Basalt and Laterite, and the maps of The European Gaze on India, on one coastline of peninsular India, with a year slider.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>Atlas – Curiosities</title>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../curiosities-icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../curiosities-icon-180.png">
+  <link rel="canonical" href="https://naniwadekar.com/atlas/">
+  <meta property="og:title" content="Atlas – Curiosities"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities">
+  <meta property="og:description" content="One map of everything on Curiosities: the Deccan entries by polity, the places of Basalt and Laterite, and the European maps, on one coastline, with a year slider.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naniwadekar.com/atlas/">
+  <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
+</head>
+<body>
+  <div class="page page--wide">
+    <header>
+      <ul class="nav" aria-label="Atlas">
+        <li><a href="https://naniwadekar.com/">Curiosities</a></li>
+        <li><a href="index.html" aria-current="page">Map</a></li>
+        <li><a href="chronology.html">Chronology</a></li>
+        <li><a href="places.html">Places</a></li>
+      </ul>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
+
+    <main>
+      <section aria-labelledby="page-title" class="intro">
+        <h1 id="page-title">Atlas</h1>
+        <p>One map of everything: the entries of <a href="../deccan/">The Deccan, 1336–1875</a>, the places of <a href="../basalt-and-laterite/">Basalt and Laterite</a>, and the maps of <a href="https://naniwadekar.com/european-gaze/">The European Gaze on India</a>, on one coastline.</p>
+      </section>
+
+      <section aria-labelledby="map-title" class="section">
+        <h2 class="group-title" id="map-title">The peninsula</h2>
+        <p class="note">Circles are Deccan entries, coloured by their principal polity; triangles are Basalt entries, which sit outside the human timeline and are always shown; squares are European maps, one for each map, placed by the region it covers. Move the year to see which Deccan entries and maps belong to it; the rest fade. Hover or tab to a marker for its title; click it for its page.</p>
+        <div id="controls" class="controls" aria-label="Map controls"></div>
+        <div class="map-wrap" id="map-wrap">
+          <div id="map"><p class="note" style="padding:1rem">Loading the map…</p></div>
+          <div class="tooltip" id="tooltip" role="status" hidden></div>
+        </div>
+        <div class="panel" id="panel"><span class="hint">Hover, tap or tab to a marker for a summary; ← and → move the year, + and − step it by ten.</span></div>
+        <div class="beyond" id="beyond"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Coastline and rivers from <a href="https://www.naturalearthdata.com/">Natural Earth</a> (1:50m land, 1:10m rivers; public domain), clipped to the frame and simplified. The projection is equirectangular, with the east–west scale reduced by cos 16° so that the peninsula keeps its shape. The polity colours are the atlas's own; the Deccan collection groups its entries by period. A sketch for orientation, not a claim about any boundary.</p>
+      <p>Part of <a href="https://naniwadekar.com/">Curiosities</a>. Also in the atlas: <a href="chronology.html">one chronology</a> and <a href="places.html">a places index</a>.</p>
+    </footer>
+  </div>
+
+  <script src="../deccan/data/periods.js"></script>
+  <script src="../deccan/data/entries.js"></script>
+  <script src="../basalt-and-laterite/data/periods.js"></script>
+  <script src="../basalt-and-laterite/data/entries.js"></script>
+  <script src="data/coast.js"></script>
+  <script src="data/gaze.js"></script>
+  <script src="app.js"></script>
+  <script>
+    (function () {
+      var button = document.getElementById("theme-toggle");
+
+      function updateLabel() {
+        var dark = document.documentElement.dataset.theme === "dark";
+        button.textContent = dark ? "Light" : "Dark";
+        button.setAttribute("aria-pressed", String(dark));
+      }
+
+      button.addEventListener("click", function () {
+        var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("root-theme", next);
+        } catch (error) {}
+        updateLabel();
+      });
+
+      updateLabel();
+    })();
+  </script>
+</body>
+</html>

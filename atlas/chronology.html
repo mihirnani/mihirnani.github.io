@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="One chronology across Curiosities: deep time from Basalt and Laterite on a logarithmic scale, then human time 1296–1947 merging the Deccan chronology, the Deccan entries and the European maps by year.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>Chronology – Atlas – Curiosities</title>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../curiosities-icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="../curiosities-icon-180.png">
+  <link rel="canonical" href="https://naniwadekar.com/atlas/chronology.html">
+  <meta property="og:title" content="Chronology – Atlas – Curiosities"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities">
+  <meta property="og:description" content="One chronology across Curiosities: deep time on a logarithmic scale, then human time 1296–1947 merging the Deccan chronology, the Deccan entries and the European maps by year.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naniwadekar.com/atlas/chronology.html">
+  <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <ul class="nav" aria-label="Atlas">
+        <li><a href="https://naniwadekar.com/">Curiosities</a></li>
+        <li><a href="index.html">Map</a></li>
+        <li><a href="chronology.html" aria-current="page">Chronology</a></li>
+        <li><a href="places.html">Places</a></li>
+      </ul>
+      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+    </header>
+
+    <main>
+      <section aria-labelledby="page-title" class="intro">
+        <h1 id="page-title">One chronology</h1>
+        <p>Deep time from <a href="../basalt-and-laterite/">Basalt and Laterite</a>, then human time from 1296 to 1947: the <a href="../deccan/#chronology">Deccan chronology</a>, the Deccan entries, and the maps of <a href="https://naniwadekar.com/european-gaze/">The European Gaze</a>, in one order of years.</p>
+      </section>
+
+      <section aria-labelledby="deep-title" class="section" id="deep">
+        <h2 class="group-title" id="deep-title">Deep time · 3,600 million years to the present</h2>
+        <p class="note">Each panel of the band is one of the seven periods of Basalt and Laterite; within a panel the positions run on a logarithmic scale from older, on the left, to younger. Ages are in years before the present, as the collection stores them; a ruler could not hold them.</p>
+        <div id="deep-band"></div>
+        <div class="chron deep" id="deep-list"></div>
+      </section>
+
+      <section aria-labelledby="human-title" class="section" id="human">
+        <h2 class="group-title" id="human-title">Human time · 1296 to 1947</h2>
+        <p class="note">The Deccan chronology's own items, the entries that have no item of their own, the last entries of Basalt and Laterite, and every European map, by year. Items marked <em>Entry</em> and <em>Map</em> link to their pages; the rest are context, as in the chronology itself.</p>
+        <div class="controls" id="human-controls" aria-label="Chronology filters"></div>
+        <div id="human-band"></div>
+        <div class="chron" id="human-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Rendered at load from the collections' own data files – nothing here is retyped. Dates follow each collection: disputed dates are marked as such in the entries, and the maps carry the date on their sheet. Part of <a href="https://naniwadekar.com/">Curiosities</a>; also in the atlas: <a href="index.html">the map</a> and <a href="places.html">the places index</a>.</p>
+    </footer>
+  </div>
+
+  <script src="../deccan/data/periods.js"></script>
+  <script src="../deccan/data/entries.js"></script>
+  <script src="../deccan/data/chronology.js"></script>
+  <script src="../basalt-and-laterite/data/periods.js"></script>
+  <script src="../basalt-and-laterite/data/entries.js"></script>
+  <script src="data/gaze.js"></script>
+  <script src="chronology.js"></script>
+  <script>
+    (function () {
+      var button = document.getElementById("theme-toggle");
+
+      function updateLabel() {
+        var dark = document.documentElement.dataset.theme === "dark";
+        button.textContent = dark ? "Light" : "Dark";
+        button.setAttribute("aria-pressed", String(dark));
+      }
+
+      button.addEventListener("click", function () {
+        var next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        document.documentElement.dataset.theme = next;
+        try {
+          localStorage.setItem("root-theme", next);
+        } catch (error) {}
+        updateLabel();
+      });
+
+      updateLabel();
+    })();
+  </script>
+</body>
+</html>

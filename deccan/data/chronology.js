@@ -46,16 +46,21 @@ window.DECCAN_CHRONOLOGY = [
   "years": "1500–1565",
   "items": [
    {"d": "c. 1490–1518", "t": "Ahmadnagar (founded 1494), Bijapur, Berar, Golconda and Bidar emerge from the Bahmani break-up.", "e": "bahmani-successor-sultanates"},
+   {"d": "1490–1528", "t": "Fathullah Imad-ul-Mulk rules Berar from Elichpur; the Barids govern Bidar behind the last Bahmanis until Kalimullah flees in 1528.", "e": "berar-and-bidar"},
    {"d": "1500–1509", "t": "Cabral and da Gama’s second voyage; Almeida viceroy; the naval battle of Diu (1509) establishes Portuguese naval predominance in the western Indian Ocean."},
    {"d": "25 November 1510", "t": "Albuquerque takes Goa; the horse trade passes through Portuguese hands.", "e": "portuguese-goa-1510"},
+   {"d": "1522 / 1537", "t": "Shah Tahir reaches Ahmadnagar; Burhan Nizam Shah adopts Twelver Shi’ism as the religion of the state.", "e": "burhan-nizam-shah-shah-tahir"},
    {"d": "c. 1500", "t": "Vijayanagara at its height, among the largest cities in the world.", "e": "vijayanagara-city"},
    {"d": "r. 1509–1529", "t": "Krishnadevaraya: the Gajapati war (1512–1519) fixes the Krishna as the eastern frontier; the Amuktamalyada composed.", "e": "krishnadevaraya"},
    {"d": "19 May 1520", "t": "The Battle of Raichur.", "e": "raichur-1520"},
    {"d": "c. 1520–1522", "t": "Domingos Paes describes the capital (Nunes’s chronicle c. 1535–37).", "e": "domingos-paes"},
+   {"d": "23 December 1534", "t": "Bahadur Shah of Gujarat cedes Bassein: the Portuguese Província do Norte, Daman to Chaul, lasts until 1739.", "e": "bassein-provincia-do-norte"},
    {"d": "1518–1590", "t": "Golconda under the early Qutb Shahis; the diamond trade.", "e": "golconda-diamonds"},
+   {"d": "27 July 1550", "t": "Ibrahim Qutb Shah crowned at Golconda after seven years at Vijayanagara; the Hussain Sagar built 1562.", "e": "ibrahim-qutb-shah"},
    {"d": "1529–1542", "t": "Achyutadevaraya’s reign, ending in the succession crisis of 1542."},
    {"d": "1542–1565", "t": "Sadashiva crowned as puppet; Rama Raya rules, playing the sultanates against each other.", "e": "rama-raya"},
    {"d": "1558", "t": "Vijayanagara and Bijapur sack Ahmadnagar’s country – the provocation remembered before 1565."},
+   {"d": "1560", "t": "The Inquisition established at Goa; the First Provincial Council of 1567 follows.", "e": "goa-inquisition-1560"},
    {"d": "January 1565", "t": "Talikota: the army broken in a day, the capital sacked in the months that followed.", "e": "talikota-1565"},
    {"d": "1565–mid-17th c.", "t": "Aravidu Vijayanagara: Tirumala establishes the court at Penukonda and is crowned in 1570; the capital moves to Chandragiri c. 1592 and later Vellore; the line fades in the 1640s."}
   ]
@@ -64,7 +69,7 @@ window.DECCAN_CHRONOLOGY = [
   "title": "The Mughal South",
   "years": "1565–1687",
   "items": [
-   {"d": "1574 / 1619", "t": "Ahmadnagar absorbs Berar; Bijapur later absorbs Bidar."},
+   {"d": "1574 / 1619", "t": "Ahmadnagar absorbs Berar; Bijapur later absorbs Bidar.", "e": "berar-and-bidar"},
    {"d": "r. 1580–1627", "t": "Ibrahim Adil Shah II at Bijapur; the Kitab-i-Nauras; Dakhni’s literary flowering.", "e": "ibrahim-adil-shah-ii"},
    {"d": "1591", "t": "Muhammad Quli Qutb Shah founds Hyderabad.", "e": "hyderabad-founded-1591"},
    {"d": "1595–1600", "t": "Chand Bibi defends Ahmadnagar; Akbar takes the city in 1600.", "e": "chand-bibi-1595"},
@@ -110,7 +115,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "February 1756", "t": "Vijaydurg (Gheria): Company and Peshwa forces destroy Tulaji Angre’s fleet; the Maratha navy broken as a force."},
    {"d": "3 February 1760", "t": "Udgir: the Nizam’s great cession.", "e": "udgir-1760"},
    {"d": "14 January 1761", "t": "Panipat; Haidar Ali completes his rise at Mysore in the same years.", "e": "panipat-1761"},
-   {"d": "1762", "t": "Nizam Ali deposes Salabat Jang."}
+   {"d": "1762", "t": "Nizam Ali deposes Salabat Jang.", "e": "nizam-ali-khan-hyderabad-1763"}
   ]
  },
  {
@@ -118,6 +123,8 @@ window.DECCAN_CHRONOLOGY = [
   "years": "1761–1799",
   "items": [
    {"d": "1761–1772", "t": "Madhavrao I and the recovery after Panipat; Rakshasbhuvan (10 August 1763) restores the balance against the Nizam.", "e": "madhavrao-i"},
+   {"d": "1762–1763", "t": "Nizam Ali deposes Salabat Jang (8 July 1762) and moves the capital from Aurangabad to Hyderabad (1763).", "e": "nizam-ali-khan-hyderabad-1763"},
+   {"d": "c. 1730–1803", "t": "The bankers of the Deccan: Gujarati, gosain and Marwari houses at Hyderabad, the Peshwa’s sahukars at Pune, the Company’s creditors at Bombay.", "e": "bankers-of-the-deccan"},
    {"d": "1767–1769", "t": "The first Anglo-Mysore war ends at Madras on Haidar’s terms.", "e": "first-anglo-mysore-1769"},
    {"d": "30 August 1773", "t": "Peshwa Narayanrao murdered in the Shaniwar Wada; Raghunathrao’s usurpation and the Barbhai council."},
    {"d": "1742–1800", "t": "Nana Phadnavis manages the Pune state through the interregnum.", "e": "nana-phadnavis"},
@@ -125,6 +132,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "10 September 1780", "t": "Pollilur: Baillie’s column destroyed (Porto Novo, 1781, turns the war).", "e": "pollilur-1780"},
    {"d": "1782–1784", "t": "Haidar dies; Tipu succeeds; the Treaty of Mangalore.", "e": "tipu-accession-mangalore-1784"},
    {"d": "1784–1799", "t": "Tipu’s state: reforms, rockets, embassies.", "e": "tipu-reforms"},
+   {"d": "1791–1792", "t": "The Doji Bara, the skull famine, across the Deccan and the Circars after four failed monsoons.", "e": "doji-bara-famine-1791"},
    {"d": "18 March 1792", "t": "The Treaty of Seringapatam: half of Mysore divided among the allies.", "e": "seringapatam-1792"},
    {"d": "12 February 1794", "t": "Mahadji Scindia dies at Pune, at the height of his power in the north.", "e": "mahadji-scindia-kharda-1795"},
    {"d": "11 March 1795", "t": "Kharda: the confederacy’s last joint victory over the Nizam.", "e": "mahadji-scindia-kharda-1795"},
@@ -145,12 +153,13 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "31 December 1802", "t": "The Treaty of Bassein: restoration at the price of a subsidiary force.", "e": "treaty-of-bassein-1802"},
    {"d": "23 September 1803", "t": "Assaye; Argaon and Gawilghur follow; the second Anglo-Maratha war ends in 1805 after Holkar’s separate campaign.", "e": "assaye-1803"},
    {"d": "1803–1820s", "t": "The Hyderabad Residency: indirect rule made architecture.", "e": "hyderabad-residency"},
+   {"d": "1816–1824", "t": "Palmer and Company at Hyderabad: Hastings’s licence, Metcalfe’s audit, the crore of 1823, bankruptcy.", "e": "palmer-and-company"},
    {"d": "1817–1818", "t": "The Pindari campaign and the third Anglo-Maratha war: Kirkee (5 November 1817), Koregaon (1 January 1818), Ashti (19/20 February 1818).", "e": "pindaris-third-war-1817"},
    {"d": "3 June 1818", "t": "The Peshwa surrenders; Satara restored as a small raj; the Deccan Commission begins its work.", "e": "peshwa-surrender-1818"},
    {"d": "25 October 1819", "t": "Elphinstone’s Report on the conquered territories.", "e": "elphinstone-report-1819"},
    {"d": "1824", "t": "The Kittur rising (Rani Chennamma) in the southern Maratha country."},
    {"d": "1826–1831", "t": "Umaji Naik’s Ramoshi rising around Pune; executed 1832."},
-   {"d": "1827", "t": "The Elphinstone Code: the Bombay Regulations consolidate the law of the conquered territories."},
+   {"d": "1827", "t": "The Elphinstone Code: the Bombay Regulations consolidate the law of the conquered territories.", "e": "elphinstone-code-1827"},
    {"d": "1830–1831", "t": "The Nagar revolt; direct administration of Mysore begins.", "e": "nagar-revolt-1831"}
   ]
  },

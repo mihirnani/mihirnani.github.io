@@ -586,7 +586,7 @@ window.DECCAN_ENTRIES = [
   "lat": 17.922,
   "lon": 77.52,
   "strap": "The second Bahmani capital on its basalt plateau: fort, palaces, the tombs at Ashtur, and the Baridi ministers who inherited it.",
-  "body": "<p>Bidar stands on the north-eastern edge of the Karnataka plateau, about 110 kilometres north-east of Gulbarga, on a laterite spur with a steep fall to the plain on three sides. Ahmad Shah I moved the Bahmani capital here around 1430 (the chronicles disagree on the exact year), and the fort he built, with a triple moat cut into the rock and walls of more than five kilometres, is the largest surviving fortress of the Deccan sultanates. Inside it the Bahmanis laid out the Takht Mahal and the Sola Khamba mosque of 1423–24, among the earliest buildings, and a series of palaces whose tile and stucco work was continued and refined after the dynasty fell.</p>\n<p>The Rangin Mahal, the ‘coloured palace’ close to the gate, belongs to that later phase: its wooden columns, its mother-of-pearl inlay in black basalt and its tile panels are work of the Baridi period in the sixteenth century. Outside the walls to the east, at Ashtur, the Bahmani sultans from Ahmad Shah I onward lie in a line of domed tombs; Ahmad Shah's own is painted inside with calligraphy and colour, and is still venerated as the tomb of a wali, a saint. The Baridis built their own tombs in a separate group to the west of the town. Bidar also gave its name to bidri, the inlaid blackened-alloy metalwork that became the region's signature craft.</p>\n<p>From about 1492 real power in Bidar belonged to the minister Qasim Barid, a Turk in Dakhni service, and after him to his son Amir Barid, who kept the last Bahmani sultans as prisoners in the fort until Kalimullah fled in 1528. Ali Barid assumed the royal title in 1542. The Baridi state was the smallest of the five successors and was absorbed by Bijapur in 1619; the Mughals took the fort in 1657.</p>\n<p>Bidar, more than any other site, shows the Bahmani order turning into its successors in one place: the same fort, the same palaces, a different name on the coins.</p>",
+  "body": "<p>Bidar stands on the north-eastern edge of the Karnataka plateau, about 110 kilometres north-east of Gulbarga, on a laterite spur with a steep fall to the plain on three sides. Ahmad Shah I moved the Bahmani capital here around 1430 (the chronicles disagree on the exact year), and the fort he built, with a triple moat cut into the rock and walls of more than five kilometres, is the largest surviving fortress of the Deccan sultanates. Inside it the Bahmanis laid out the Takht Mahal and the Sola Khamba mosque of 1423–24, among the earliest buildings, and a series of palaces whose tile and stucco work was continued and refined after the dynasty fell.</p>\n<p>The Rangin Mahal, the ‘coloured palace’ close to the gate, belongs to that later phase: its wooden columns, its mother-of-pearl inlay in black basalt and its tile panels are work of the Baridi period in the sixteenth century. Outside the walls to the east, at Ashtur, the Bahmani sultans from Ahmad Shah I onward lie in a line of domed tombs; Ahmad Shah's own is painted inside with calligraphy and colour, and is still venerated as the tomb of a wali, a saint. The Baridis built their own tombs in a separate group to the west of the town. Bidar also gave its name to bidri, the inlaid blackened-alloy metalwork that became the region's signature craft.</p>\n<p>From about 1492 real power in Bidar belonged to the minister Qasim Barid, a Turk in Dakhni service, and after him to his son Amir Barid, who kept the last Bahmani sultans as prisoners in the fort until Kalimullah fled in 1528. Ali Barid assumed the royal title in 1542. <a href=\"#berar-and-bidar\">The Baridi state</a> was the smallest of the five successors and was absorbed by Bijapur in 1619; the Mughals took the fort in 1656.</p>\n<p>Bidar, more than any other site, shows the Bahmani order turning into its successors in one place: the same fort, the same palaces, a different name on the coins.</p>",
   "story": "A capital is where layered sovereignty becomes visible as a single building site. At Bidar a sultan's fort was taken over by his minister, the minister's descendants became kings, and then the kings became a province of Bijapur, all without the walls changing. The collection treats Bidar as the hinge between its first period and the sultanate period that follows; the reader who stands in the Rangin Mahal is looking at Bahmani architecture finished by the dynasty that ended the Bahmanis.",
   "sources": [
    {
@@ -956,6 +956,50 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "berar-and-bidar",
+  "title": "Berar and Bidar",
+  "date_label": "1490–1619",
+  "year": 1490,
+  "year_end": 1619,
+  "period": 2,
+  "polities": [
+   "sultanates"
+  ],
+  "kind": "institution",
+  "place": "Achalpur (Elichpur), Maharashtra",
+  "lat": 21.257,
+  "lon": 77.51,
+  "strap": "The two lesser successor states of the Bahmani break-up: Imad Shahi Berar, ruled from Elichpur and swallowed by Ahmadnagar in 1574, and Barid Shahi Bidar, a capital without a country, taken by Bijapur in 1619.",
+  "body": "<p>Of the five successor states, two never grew. Berar, the north-eastern province, went to Fathullah Imad-ul-Mulk, a Kanarese Hindu by birth, captured as a boy and raised a Muslim in Bahmani service, whom Mahmud Gawan had made governor; in 1490 he stopped answering to Bidar. His seat was Elichpur (now Achalpur), his strongholds the hill forts of Gawilgarh and Narnala. Three rulers followed him: Alauddin (1504–1529), who fought Ahmadnagar over the border districts of Pathri and Mahur and called in Bahadur Shah of Gujarat against it in 1528; Darya (1529–1562), who leaned on Bijapur for the same purpose; and Burhan, a child, whose regent Tufal Khan set him aside – in 1568 according to the Deccan chroniclers, in 1561 according to the 1911 Britannica. Murtaza Nizam Shah of Ahmadnagar took the usurpation as his pretext, put Tufal Khan, his son and the deposed sultan to death, and annexed Berar in 1574 (the 1911 <em>Britannica</em> gives 1572). Berar passed to the Mughals in 1596.</p>\n<p><a href=\"#bidar\">Bidar</a> was the reverse case: a capital without a country. Qasim Barid, a Turk in Bahmani service, became minister in the early 1490s and governed in the name of sultans he kept inside the fort. His son Amir Barid held the last of them, Kalimullah, until the sultan fled in 1528, and thereafter ruled a small territory around the city without taking a royal title. Ali Barid, who succeeded him in the early 1540s (the sources give 1540 or 1542), was the first to call himself Shah, built the Rangin Mahal and his own tomb, and brought Bidar’s contingent to Talikota in 1565. In 1619 Ibrahim Adil Shah II of Bijapur took the city and removed Amir Barid III to Bijapur, and Bidar was an Adil Shahi province until Aurangzeb took it in 1656.</p>\n<p>The two states showed that the Bahmani provinces could become kingdoms of very unequal weight, and that the larger would swallow the smaller as soon as a succession or a regency gave them cause.</p>",
+  "story": "The map of ‘five sultanates’ flatters two of them. Berar and Bidar were sovereign in the same sense as Bijapur – khutba, embassies, a contingent at Talikota – and were extinguished by their neighbours rather than by Mughals or Marathas, within a decade of Talikota in the one case and on the eve of the Mughal advance in the other. They are the reminder that layered sovereignty in the Deccan was also a hierarchy of size, and that absorption by a peer was the ordinary end of a small state long before paramountcy was invented.",
+  "sources": [
+   {
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.142905"
+   },
+   {
+    "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+   },
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "Encyclopaedia Britannica, 11th edition (1911), ‘Berar’",
+    "url": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Berar"
+   },
+   {
+    "title": "Wikipedia, ‘Berar sultanate’",
+    "url": "https://en.wikipedia.org/wiki/Berar_sultanate"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html",
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
   "id": "ahmadnagar-nizam-shahis",
   "title": "Ahmadnagar",
   "date_label": "1490–1565",
@@ -971,7 +1015,7 @@ window.DECCAN_ENTRIES = [
   "lat": 19.095,
   "lon": 74.748,
   "strap": "Founded by Malik Ahmad in 1494 as the capital of the Nizam Shahi sultanate, Ahmadnagar was the most Marathi of the successor states and the school of the families who later built the Maratha state.",
-  "body": "<p>Malik Ahmad, son of the Bahmani minister Nizam-ul-Mulk Bahri, made himself independent in the western Deccan in 1490 after defeating the army sent against him, and in 1494 laid out a new capital on the Sina river, which he named Ahmadnagar after himself. He died in about 1510 and was buried there in the garden tomb known as the Bagh Rauza. His son Burhan Nizam Shah I (r. 1510–1553) succeeded as a child and ruled for over forty years; Burhan’s son Hussain (r. 1553–1565) was the sultan who led the coalition at Talikota and died a few months afterwards.</p>\n<p>The dynasty’s origins were local. Nizam-ul-Mulk Bahri had been born a Brahmin, Timappa, from Pathri in the Godavari valley, captured and converted in Bahmani service. Ahmadnagar never had the Persian immigrant establishment that Bijapur and Golconda did, and its armies and revenue offices were filled from the Marathi-speaking country around it. Deshmukhs, the hereditary district headmen, served as captains and collectors; families such as the Jadhavs of Sindkhed and the Bhonsles rose in this service, and Shivaji’s grandfather Maloji held a Nizam Shahi command. Marathi was used in the administration alongside Persian.</p>\n<p>The capital’s stone fort, rebuilt in the 1560s, became one of the strongest in the Deccan. Burhan fought Bijapur and Berar, allied with Vijayanagara against Bijapur in the 1540s, and adopted Shia Islam under the influence of the scholar Shah Tahir. The great bronze gun Malik-i-Maidan had been cast at Ahmadnagar in 1549, under Burhan, by Muhammad bin Hasan Rumi; Hussain, after being humbled by Rama Raya in 1558, set about the alliance that ended Vijayanagara’s power.</p>\n<p>Ahmadnagar was the first of the sultanates to face the Mughals, in 1595, and the first to fall, in 1636. Before that it was the sultanate that taught the Marathas how a state was run.</p>",
+  "body": "<p>Malik Ahmad, son of the Bahmani minister Nizam-ul-Mulk Bahri, made himself independent in the western Deccan in 1490 after defeating the army sent against him, and in 1494 laid out a new capital on the Sina river, which he named Ahmadnagar after himself. He died in about 1510 and was buried there in the garden tomb known as the Bagh Rauza. His son Burhan Nizam Shah I (r. 1510–1553) succeeded as a child and ruled for over forty years; Burhan’s son Hussain (r. 1553–1565) was the sultan who led the coalition at Talikota and died a few months afterwards.</p>\n<p>The dynasty’s origins were local. Nizam-ul-Mulk Bahri had been born a Brahmin, Timappa, from Pathri in the Godavari valley, captured and converted in Bahmani service. Ahmadnagar never had the Persian immigrant establishment that Bijapur and Golconda did, and its armies and revenue offices were filled from the Marathi-speaking country around it. Deshmukhs, the hereditary district headmen, served as captains and collectors; families such as the Jadhavs of Sindkhed and the Bhonsles rose in this service, and Shivaji’s grandfather Maloji held a Nizam Shahi command. Marathi was used in the administration alongside Persian.</p>\n<p>The capital’s stone fort, rebuilt in the 1560s, became one of the strongest in the Deccan. Burhan fought Bijapur and Berar, allied with Vijayanagara against Bijapur in the 1540s, and adopted Shia Islam under the influence of the scholar <a href=\"#burhan-nizam-shah-shah-tahir\">Shah Tahir</a>. The great bronze gun Malik-i-Maidan had been cast at Ahmadnagar in 1549, under Burhan, by Muhammad bin Hasan Rumi; Hussain, after being humbled by Rama Raya in 1558, set about the alliance that ended Vijayanagara’s power.</p>\n<p>Ahmadnagar was the first of the sultanates to face the Mughals, in 1595, and the first to fall, in 1636. Before that it was the sultanate that taught the Marathas how a state was run.</p>",
   "story": "Ahmadnagar is where two polities in this collection overlap. The Nizam Shahi state was a sultanate in form, but its officers were Maratha deshmukhs, and the Bhonsles, Jadhavs and their peers learned revenue, command and court politics in its service before Shivaji turned those skills against the sultanates themselves. The entry makes the point that the Maratha state-building project grew out of the sultanate system rather than in opposition to it.",
   "sources": [
    {
@@ -1160,6 +1204,50 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "burhan-nizam-shah-shah-tahir",
+  "title": "Burhan Nizam Shah and Shah Tahir",
+  "date_label": "1510–1553",
+  "year": 1510,
+  "year_end": 1553,
+  "period": 2,
+  "polities": [
+   "sultanates",
+   "vijayanagara"
+  ],
+  "kind": "person",
+  "place": "Ahmednagar, Maharashtra",
+  "lat": 19.095,
+  "lon": 74.748,
+  "strap": "A child-sultan who reigned for four decades, an Ismaili refugee from Safavid Iran who made his court Shia in 1537, and the shifting alliances with Bijapur and Vijayanagara that led to the marriages of 1564.",
+  "body": "<p>Burhan Nizam Shah I succeeded his father Malik Ahmad at <a href=\"#ahmadnagar-nizam-shahis\">Ahmadnagar</a> as a child of about seven, in 1509 or 1510 according to the source, and reigned until his death on 30 December 1553. The court’s first business was its neighbours. Bijapur was the enemy: Burhan married Ismail Adil Shah’s sister Mariam on the promise of Sholapur as her dowry, the fort was never handed over, and the war for Sholapur ran through the reign. Berar was the smaller rival across the Godavari and Bidar a prize between them. In the 1540s Burhan allied with Rama Raya of Vijayanagara and with Golconda against Bijapur, and the allies invaded Adil Shahi territory; the alliance was one of convenience, and the partners changed with each campaign.</p>\n<p>The court’s most remarkable figure was not a soldier. Shah Tahir Husaini, born near Qazvin, was the imam of the Muhammad-Shahi branch of the Nizari Ismailis. Shah Ismail of Iran ordered his execution; he escaped from Kashan in 1520, sailed to Goa, and in 1522 reached Ahmadnagar, where he became Burhan’s most trusted adviser, lectured weekly at court and served as its diplomat, presenting himself throughout as a Twelver Shia. In 1537 Burhan adopted Twelver Shi’ism as the religion of the state. A Sunni faction under Pir Muhammad Shirwani rose in favour of Burhan’s son Abdul Qadir and was put down. Shah Tahir wrote commentaries on Twelver theology and law, a commentary on Shabistari’s <em>Gulshan-i raz</em> and a diwan of poetry; he died at Ahmadnagar between 1545 and 1549, and his remains were taken to Karbala.</p>\n<p>Burhan’s son Hussain (r. 1553–1565) inherited the war. In 1558 Rama Raya, Ali Adil Shah of Bijapur and Ibrahim Qutb Shah of Golconda invaded the Nizam Shahi country together, laid siege to Ahmadnagar and sent detachments to lay the district waste, withdrawing only when the monsoon broke. The reconciliation of the sultans in 1564 was sealed by marriages – Hussain’s daughter Chand Bibi to Ali Adil Shah, Ali’s sister to Hussain’s son Murtaza – and out of it came the coalition that fought at Talikota in January 1565, where Hussain’s troops took Rama Raya and Hussain had him beheaded. Hussain died on 6 June 1565.</p>",
+  "story": "Ahmadnagar’s adoption of Shi’ism in 1537 was a decision about where the court belonged, in a Persianate world that ran from Safavid Iran to the Deccan by way of Goa, and it was made on the advice of a refugee who, on Daftary’s account, dissimulated his own Ismaili allegiance for the whole of his life. The entry sets that beside the diplomacy of the 1540s and 1550s, in which the same court allied with Vijayanagara against fellow Muslims and then with fellow Muslims against Vijayanagara. Confession and alliance ran on separate tracks; the coalition of 1565 was assembled by marriages, not by faith.",
+  "sources": [
+   {
+    "title": "Farhad Daftary, ‘Shah Tahir Husayni’, Encyclopaedia Islamica (Brill; The Institute of Ismaili Studies)",
+    "url": "https://www.iis.ac.uk/wp-content/uploads/2024/10/husayni-shah-tahir-pdf-132453758.pdf"
+   },
+   {
+    "title": "H. K. Sherwani and P. M. Joshi (eds), History of Medieval Deccan (1295–1724), 2 vols (Government of Andhra Pradesh, Hyderabad, 1973)",
+    "url": "https://archive.org/details/in.ernet.dli.2015.142905"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
+   },
+   {
+    "title": "Robert Sewell, A Forgotten Empire (Vijayanagar): A Contribution to the History of India (Swan Sonnenschein, London, 1900)",
+    "url": "https://www.gutenberg.org/ebooks/3310"
+   },
+   {
+    "title": "Wikipedia, ‘Burhan Nizam Shah I’",
+    "url": "https://en.wikipedia.org/wiki/Burhan_Nizam_Shah_I"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
+  ]
+ },
+ {
   "id": "amuktamalyada",
   "title": "Amuktamalyada",
   "date_label": "c. 1510s–1520s",
@@ -1211,7 +1299,7 @@ window.DECCAN_ENTRIES = [
   "lat": 17.383,
   "lon": 78.401,
   "strap": "The granite fortress of Golconda was the Qutb Shahi capital from 1518 until the founding of Hyderabad in 1591, and the market through which the Krishna valley’s diamonds reached the world.",
-  "body": "<p>Golconda stands on a granite hill west of modern Hyderabad. It had been a Kakatiya outpost and then a Bahmani provincial fort; Sultan Quli Qutb-ul-Mulk, a Turkman from Hamadan who had risen in Bahmani service, governed Telangana from it and in 1518 took the title of sultan, founding the Qutb Shahi dynasty. He and his successors Jamshid and Ibrahim rebuilt the mud fort in stone over the following sixty years: an outer wall some five kilometres round, eight gates, a citadel on the summit, and a water system of cisterns and clay pipes. The royal tombs lie outside the walls to the north.</p>\n<p>The Qutb Shahis were the most Telugu of the sultanates. Ibrahim Qutb Shah (r. 1550–1580) had spent years in exile at Vijayanagara, patronised Telugu poets, and employed Telugu nayaks as soldiers and revenue officers; his court spoke Persian and Telugu side by side. Under him Golconda pushed east into the Krishna and Godavari deltas, taking Kondavidu and the coast at Masulipatnam.</p>\n<p>The diamonds came from alluvial gravels along the Krishna, south and east of the capital. The workings at Kollur near the river, described by the French jeweller Jean-Baptiste Tavernier in the 1650s as employing tens of thousands of diggers, were the most famous; the Koh-i-Noor, the Hope and the Regent are all attributed to the region, though none can be traced to a dated find. The mines were leased by the sultan, and the stones were sold at Golconda, which gave its name to the trade.</p>\n<p>In 1591 Muhammad Quli Qutb Shah founded Hyderabad on the plain below, and Golconda became a citadel and treasury rather than a city. It held out against Aurangzeb for eight months in 1687.</p>",
+  "body": "<p>Golconda stands on a granite hill west of modern Hyderabad. It had been a Kakatiya outpost and then a Bahmani provincial fort; Sultan Quli Qutb-ul-Mulk, a Turkman from Hamadan who had risen in Bahmani service, governed Telangana from it and in 1518 took the title of sultan, founding the Qutb Shahi dynasty. He and his successors Jamshid and Ibrahim rebuilt the mud fort in stone over the following sixty years: an outer wall some five kilometres round, eight gates, a citadel on the summit, and a water system of cisterns and clay pipes. The royal tombs lie outside the walls to the north.</p>\n<p>The Qutb Shahis were the most Telugu of the sultanates. <a href=\"#ibrahim-qutb-shah\">Ibrahim Qutb Shah</a> (r. 1550–1580) had spent years in exile at Vijayanagara, patronised Telugu poets, and employed Telugu nayaks as soldiers and revenue officers; his court spoke Persian and Telugu side by side. Under him Golconda pushed east into the Krishna and Godavari deltas, taking Kondavidu and the coast at Masulipatnam.</p>\n<p>The diamonds came from alluvial gravels along the Krishna, south and east of the capital. The workings at Kollur near the river, described by the French jeweller Jean-Baptiste Tavernier in the 1650s as employing tens of thousands of diggers, were the most famous; the Koh-i-Noor, the Hope and the Regent are all attributed to the region, though none can be traced to a dated find. The mines were leased by the sultan, and the stones were sold at Golconda, which gave its name to the trade.</p>\n<p>In 1591 Muhammad Quli Qutb Shah founded Hyderabad on the plain below, and Golconda became a citadel and treasury rather than a city. It held out against Aurangzeb for eight months in 1687.</p>",
   "story": "Golconda represents the eastern Deccan in the collection and complicates the simple picture of sultanate against Raya. Its rulers were Persian in origin, Shia in confession and Telugu in their administration and their poetry. Its wealth came from a mineral trade that drew Europeans inland long before the Company had any territory. When the collection reaches Hyderabad and the Nizam in later periods, the state they inherit is this one.",
   "sources": [
    {
@@ -1353,6 +1441,49 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "bassein-provincia-do-norte",
+  "title": "Bassein and the Província do Norte",
+  "date_label": "1534–1739",
+  "year": 1534,
+  "year_end": 1739,
+  "period": 2,
+  "polities": [
+   "portuguese",
+   "sultanates",
+   "other"
+  ],
+  "kind": "place",
+  "place": "Vasai (Bassein, Baçaim), Maharashtra",
+  "lat": 19.33,
+  "lon": 72.81,
+  "strap": "Bahadur Shah of Gujarat ceded Bassein to the Portuguese on 23 December 1534; for two centuries the villages between Daman and Chaul were the only Portuguese province in India with fields, revenue and a landed gentry of its own.",
+  "body": "<p>Portuguese ships had sacked Bassein (Baçaim, now Vasai) in 1533; the cession came the year after. Bahadur Shah of Gujarat, facing Humayun’s invasion, bought Portuguese help, and by a treaty signed on 23 December 1534 aboard the galleon <em>São Mateus</em>, with the governor Nuno da Cunha, he ceded Bassein with its dependencies and revenues, the islands of Bombay and Salsette among them; the treaty was ratified in 1535. In the same year he allowed a fort at Diu. When the Mughal danger passed he tried to be rid of it, and on 13 February 1537 he drowned during negotiations aboard a Portuguese ship, each side blaming the other. The Ottoman fleet that joined the Gujarati siege of Diu in September 1538 gave up in November without taking it. Farther south, Chaul had held a Portuguese factory and fort since 1521 by permission of the Nizam Shah, and stood a seven-month siege by Murtaza Nizam Shah in 1570–71. Daman was taken from Gujarat on 2 February 1559. By then the coast from Daman to Chaul, with its islands, was the Província do Norte, the northern province of the Estado da Índia, and Bassein its seat.</p>\n<p>The province was governed as an Indian country. The Portuguese kept the existing revenue system and its tanadars, and granted the villages (aldeias) in emphyteusis – for three lives, or in perpetuity for the smaller holdings – to fidalgos and married settlers, the casados, on condition that the holder lived in the province, kept house and family there and maintained a horse for war; of some eighty grants recorded for Daman and Bassein between 1562 and 1567, thirty-eight required an Arabian horse. About 226 such holders were living at Bassein in 1565. The revenue ran above 100,000 pardaus a year in the mid-sixteenth century – 110,000 in 1552, 90,000 in 1571, 130,000 in 1575 – with the villages of Salsette the most valuable. The island of Bombay was leased in 1554 to the physician Garcia de Orta, and passed to the English crown by the marriage treaty of 1661. Bassein itself, the ‘court of the north’, acquired a cathedral, convents and the manners of a small Lisbon.</p>\n<p>The province ended where it had begun. Chimaji Appa’s campaign of 1737–39 took Thane, Salsette and the outlying forts, and Bassein capitulated on 16 May 1739 (<a href=\"#bassein-1739\">Bassein, 1739</a>); Chaul followed. Goa, Daman and Diu were what remained.</p>",
+  "story": "The northern province is the one place in the collection where a European power held Indian villages on Indian terms – the old revenue system, farmed through settlers who owed military service – and was then dispossessed by an Indian power in its turn. The Portuguese layer of Deccan sovereignty was not only ports and passes; for two hundred years it was also a landed one, and the Marathas audited it out of existence in 1739 as the Company would audit theirs.",
+  "sources": [
+   {
+    "title": "Sanjay Subrahmanyam, The Portuguese Empire in Asia, 1500–1700: A Political and Economic History (Longman, London, 1993)",
+    "url": "https://archive.org/details/portugueseempire0000subr"
+   },
+   {
+    "title": "A. R. Disney, A History of Portugal and the Portuguese Empire, vol. 2: The Portuguese Empire (Cambridge University Press, 2009)",
+    "url": "https://search.worldcat.org/search?q=Disney%20A%20History%20of%20Portugal%20and%20the%20Portuguese%20Empire%20volume%202"
+   },
+   {
+    "title": "Luís Frederico Dias Antunes, ‘A persistência dos sistemas tradicionais de propriedade fundiária em Damão e Baçaim (século XVI)’, in José Vicente Serrão et al. (eds), Property Rights, Land and Territory in the European Overseas Empires (CEHC-IUL, Lisbon, 2014), pp. 155–167",
+    "url": "https://landsoverseas.wordpress.com/wp-content/uploads/2015/05/antunes-ch13.pdf"
+   },
+   {
+    "title": "Wikipedia, ‘Treaty of Bassein (1534)’",
+    "url": "https://en.wikipedia.org/wiki/Treaty_of_Bassein_(1534)"
+   }
+  ],
+  "related_maps": [
+   "1595__India-Arabia__Linschoten__Southwest-Asia.html",
+   "1764__Bombay__Bellin__Plan-de-Bombay.html",
+   "1946__Ministerio-das-Colonias__Goa-Daman-Diu.html"
+  ]
+ },
+ {
   "id": "bijapur-adil-shahis",
   "title": "Bijapur under the Adil Shahis",
   "date_label": "1490–1558",
@@ -1428,6 +1559,95 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": []
+ },
+ {
+  "id": "ibrahim-qutb-shah",
+  "title": "Ibrahim Qutb Shah",
+  "date_label": "r. 1550–1580",
+  "year": 1550,
+  "year_end": 1580,
+  "period": 2,
+  "polities": [
+   "sultanates",
+   "vijayanagara"
+  ],
+  "kind": "person",
+  "place": "Golconda, Hyderabad, Telangana",
+  "lat": 17.383,
+  "lon": 78.401,
+  "strap": "Seven years a guest at Vijayanagara, thirty a sultan at Golconda: the Qutb Shahi ruler who was praised in Telugu as Malkibharama, built the Hussain Sagar, and marched against his former host in 1565.",
+  "body": "<p>Ibrahim was a younger son of Sultan Quli, the founder of <a href=\"#golconda-diamonds\">Golconda</a>. When his brother Jamshid took the throne in 1543 Ibrahim fled south across the Krishna to Vijayanagara, where Rama Raya received him and kept him for seven years, a guest and a card to be played. He married there, and the later Telugu tradition remembered him under a Telugu name. When Jamshid died in 1550 the nobles set aside his infant son, and Ibrahim rode north to be crowned at Golconda on 27 July 1550. He was the first of his line to use the title of sultan.</p>\n<p>He ruled a Telugu country and did not pretend otherwise. The poets Addanki Gangadhara and Kandukuri Rudrakavi wrote for him and called him Malkibharama, and Ponnaganti Telaganarya wrote for his officer Amin Khan; Telugu nayaks served as soldiers and revenue officers, and Persian and Arabic verse was patronised beside Telugu. The works of the reign were practical. The mud fort of Golconda was rebuilt in stone; in 1562 a tank was built across a tributary of the Musi east of the fort and named the Hussain Sagar after Hussain Shah Wali, the saint-engineer credited with its construction; the Ibrahim Bagh was laid out; and in 1578 a bridge of twenty-two arches, the Purana Pul, carried the road from the fort across the Musi to the plain where his son would found Hyderabad. The kingdom pushed east and south in the same years, into the Krishna delta and towards the coast.</p>\n<p>In 1565 Ibrahim joined the coalition of the sultans against Vijayanagara. He had married a daughter of Hussain Nizam Shah, and the marriages of 1564 bound him to the league as they bound Ahmadnagar and Bijapur. After Talikota Golconda took the forts of the Telugu coast and its hinterland one by one – Rajahmundry in 1572, Kondapalli, Vinukonda, Kondavidu in 1579 and Udayagiri. Ibrahim died on 5 June 1580 after a short illness and was succeeded by his son Muhammad Quli, who in 1591 founded Hyderabad on the far side of his father’s bridge.</p>",
+  "story": "Ibrahim is the collection’s clearest case of a sovereign made by his rival. He owed his life and his throne to Vijayanagara’s hospitality, ruled a Telugu country in Telugu, and marched against Rama Raya when the balance of the plateau required it. Dynastic, confessional and linguistic lines all crossed in him, and none of them decided his alliances. The Deccan of the two Deccans was one political world with two capitals.",
+  "sources": [
+   {
+    "title": "Haroon Khan Sherwani, History of the Qutb Shahi Dynasty (Munshiram Manoharlal, 1974)",
+    "url": "https://search.worldcat.org/search?q=History%20of%20the%20Qutb%20Shahi%20Dynasty%20Haroon%20Khan%20Sherwani"
+   },
+   {
+    "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8) (Cambridge University Press, 2005)",
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
+   },
+   {
+    "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
+    "url": "https://doi.org/10.1017/CHOL9780521563215"
+   },
+   {
+    "title": "Los Angeles County Museum of Art, ‘Sultan Ibrahim Qutb Shah (r. 1550–1580)’, folio from a History of the Qutb Shahi Sultans (manuscript dated 1610–11)",
+    "url": "https://collections.lacma.org/object/224366"
+   },
+   {
+    "title": "Wikipedia, ‘Ibrahim Quli Qutb Shah Wali’",
+    "url": "https://en.wikipedia.org/wiki/Ibrahim_Quli_Qutb_Shah_Wali"
+   }
+  ],
+  "related_maps": [
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html",
+   "1570__India__Ortelius__Indiae-Orientalis.html"
+  ]
+ },
+ {
+  "id": "goa-inquisition-1560",
+  "title": "The Goa Inquisition",
+  "date_label": "1560–1812",
+  "year": 1560,
+  "year_end": 1812,
+  "period": 2,
+  "polities": [
+   "portuguese"
+  ],
+  "kind": "institution",
+  "place": "Old Goa, Goa",
+  "lat": 15.503,
+  "lon": 73.912,
+  "strap": "The tribunal of the Holy Office set up at Goa in 1560 tried converts and New Christians for two and a half centuries; its numbers are known only from the lists that survived the destruction of its archive.",
+  "body": "<p>Francis Xavier asked King João III for an inquisition at Goa in a letter of 16 May 1546, written from Amboina. The tribunal was established in 1560 under Cardinal Henrique, the inquisitor-general of Portugal, and its first inquisitor, Aleixo Dias Falcão, took up residence in the former palace of the Adil Shahi governors, the Sabaio’s palace, on the main square of Old Goa. Its judges answered to Lisbon and to no one in India. Its subjects were Christians: the New Christians of Jewish descent who had settled in the Portuguese towns, and the far larger number of Indian converts accused of keeping Hindu or Muslim practice.</p>\n<p>Around it church and crown narrowed the ground on which non-Christians could stand. A royal letter of 1569 recorded that the Hindu temples of the Portuguese territories had all been demolished. The First Provincial Council of Goa, held in 1567 under Archbishop Gaspar de Leão, passed more than a hundred decrees, among them the exclusion of qadis from Portuguese territory and rules forbidding converts to keep their former Hindu names; in 1684 a decree made Portuguese compulsory and suppressed Konkani in public. Seventy-one autos-da-fé are recorded between 1600 and 1773, the last on 7 February 1773; the list for the first four decades has not survived. The French physician Charles Dellon, arrested at Daman in 1673, was held at Goa, sentenced at an auto-da-fé to the galleys and released after intervention from France; his <em>Relation de l’Inquisition de Goa</em> (Leiden, 1687), translated at once into English, Dutch and German, was the account through which Europe knew the tribunal.</p>\n<p>The numbers are given here as the surviving lists give them, because the tribunal’s own records were destroyed after its abolition. In 1623 João Delgado Figueira, its deputy and prosecutor, compiled a <em>Reportório</em> of 3,800 cases dispatched between 1561 and 1623. For the whole period from 1561 to the first suppression in 1774 Teotonio de Souza’s count from the surviving lists is at least 16,202 persons brought to trial. The nineteenth-century list of the autos of 1600–1773, printed in Cunha Rivara’s <em>Chronista de Tissuary</em>, counts 4,046 persons sentenced, of whom 121 were burnt: 57 in person and 64 in effigy. Larger totals in circulation have no basis in any surviving list. The Inquisition was suppressed in 1774; it was restored in 1778 and abolished in 1812 under British pressure.</p>",
+  "story": "The Inquisition is the one institution in the collection that claimed sovereignty over belief, and it shows the Portuguese layer at its most unlike the others. The sultanates and Vijayanagara taxed and hired across the religious line; Goa after 1560 tried to erase that line inside its walls, while the traffic of horses, grain and people across the Goa frontier went on regardless. The destroyed archive cannot settle the numbers either way, and the collection gives only what the surviving lists give.",
+  "sources": [
+   {
+    "title": "Anant Kakba Priolkar, The Goa Inquisition: Being a Quatercentenary Commemoration Study of the Inquisition in India (Bombay University Press, 1961)",
+    "url": "https://search.worldcat.org/search?q=Priolkar%20The%20Goa%20Inquisition%201961"
+   },
+   {
+    "title": "Teotonio R. de Souza, ‘The Goa Inquisition’ (reprinted, Acta Indica)",
+    "url": "https://ishwarsharan.com/features/the-goa-inquisition-t-r-de-souza/"
+   },
+   {
+    "title": "Bruno Feitler, ‘João Delgado Figueira e o “Reportorio” da Inquisição de Goa: uma base de dados. Problemas metodológicos’",
+    "url": "https://www.academia.edu/5926557/Jo%C3%A3o_Delgado_Figueira_e_o_Reportorio_da_Inquisi%C3%A7%C3%A3o_de_Goa_uma_base_de_dados_Problemas_metodol%C3%B3gicos"
+   },
+   {
+    "title": "Charles Dellon, Relation de l’Inquisition de Goa (Daniel Gaasbeek, Leiden, 1687)",
+    "url": "https://search.worldcat.org/search?q=Dellon%20Relation%20de%20l%27Inquisition%20de%20Goa%201687"
+   },
+   {
+    "title": "Wikipedia, ‘Goa Inquisition’",
+    "url": "https://en.wikipedia.org/wiki/Goa_Inquisition"
+   }
+  ],
+  "related_maps": [
+   "1595__India-Arabia__Linschoten__Southwest-Asia.html",
+   "1946__Ministerio-das-Colonias__Goa-Daman-Diu.html"
+  ]
  },
  {
   "id": "talikota-1565",
@@ -2645,7 +2865,7 @@ window.DECCAN_ENTRIES = [
   "lat": 19.33,
   "lon": 72.81,
   "strap": "Chimaji Appa’s capture of the Portuguese fortress of Baçaim ended the Província do Norte and left Bombay surrounded by Maratha territory.",
-  "body": "<p>Baçaim, Bassein to the English and now Vasai, was the capital of the Portuguese Província do Norte, the strip of coast and islands between Daman and Bombay that Portugal had held since 1534. It had a cathedral, convents, a fidalgo society and a stone fortress. In 1737 the Peshwa’s brother Chimaji Appa opened a campaign against the province, taking Thane and most of Salsette island that year and then reducing the outlying forts one by one. The siege of Baçaim itself began on 17 February 1739. Maratha sappers mined the walls, the garrison repulsed several assaults at heavy cost, and on 16 May 1739 the Portuguese commander capitulated on terms. The garrison marched out with colours flying and drums beating and was shipped to Bombay; the Maratha flag went up over the fort on 23 May.</p>\n<p>Portuguese losses in the siege were reckoned at about eight hundred. The Marathas also took Chaul the following year, leaving Portugal only Daman, Diu and Goa on the west coast. Churches in the conquered territory were closed or demolished, and the Christian population of Salsette and Bassein, many of them converts of the previous two centuries, came under Maratha revenue administration. The Company at Bombay, which had watched the campaign with some alarm, stayed neutral, took in Portuguese refugees, and noted that its island was now bounded on every landward side by the Peshwa.</p>\n<p>Bassein was one of the most consequential Indian victories over a European fortified possession in the eighteenth century, and it closed the Portuguese chapter of the Deccan that had opened at Goa in 1510. It also set up the geography of the next eighty years. Salsette and Bassein were what the Company wanted from the Marathas in the 1770s; Salsette it took in 1774, and at Bassein itself, in December 1802, Bajirao II signed the treaty that made the Peshwa a Company dependant.</p>",
+  "body": "<p>Baçaim, Bassein to the English and now Vasai, was the capital of the Portuguese <a href=\"#bassein-provincia-do-norte\">Província do Norte</a>, the strip of coast and islands between Daman and Bombay that Portugal had held since 1534. It had a cathedral, convents, a fidalgo society and a stone fortress. In 1737 the Peshwa’s brother Chimaji Appa opened a campaign against the province, taking Thane and most of Salsette island that year and then reducing the outlying forts one by one. The siege of Baçaim itself began on 17 February 1739. Maratha sappers mined the walls, the garrison repulsed several assaults at heavy cost, and on 16 May 1739 the Portuguese commander capitulated on terms. The garrison marched out with colours flying and drums beating and was shipped to Bombay; the Maratha flag went up over the fort on 23 May.</p>\n<p>Portuguese losses in the siege were reckoned at about eight hundred. The Marathas also took Chaul the following year, leaving Portugal only Daman, Diu and Goa on the west coast. Churches in the conquered territory were closed or demolished, and the Christian population of Salsette and Bassein, many of them converts of the previous two centuries, came under Maratha revenue administration. The Company at Bombay, which had watched the campaign with some alarm, stayed neutral, took in Portuguese refugees, and noted that its island was now bounded on every landward side by the Peshwa.</p>\n<p>Bassein was one of the most consequential Indian victories over a European fortified possession in the eighteenth century, and it closed the Portuguese chapter of the Deccan that had opened at Goa in 1510. It also set up the geography of the next eighty years. Salsette and Bassein were what the Company wanted from the Marathas in the 1770s; Salsette it took in 1774, and at Bassein itself, in December 1802, Bajirao II signed the treaty that made the Peshwa a Company dependant.</p>",
   "story": "Bassein shows the oldest European layer in the Deccan removed by the newest Indian one. The Portuguese had been a sovereign presence on the coast since before Vijayanagara fell; in 1739 they became a remnant at Goa. But the conquest also brought the Marathas to the edge of Bombay harbour, and the fortress they took became, in 1802, the place where the Company took the Peshwa.",
   "sources": [
    {
@@ -2878,6 +3098,99 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1782__India__Rennell__Hindoostan-2-Sheet.html",
    "1763__India__Dury__East-Indies.html"
+  ]
+ },
+ {
+  "id": "bankers-of-the-deccan",
+  "title": "The bankers of the Deccan",
+  "date_label": "c. 1730–1803",
+  "year": 1761,
+  "year_end": 1803,
+  "period": 5,
+  "polities": [
+   "maratha",
+   "hyderabad",
+   "company",
+   "other"
+  ],
+  "kind": "institution",
+  "place": "Pune, Maharashtra",
+  "lat": 18.52,
+  "lon": 73.856,
+  "strap": "Sahukars and shroffs lent to the Peshwa, the Nizam and the Company alike, moved their money by hundi and took assignments of land revenue as security; the ‘great firm’ argument and its critics.",
+  "body": "<p>Every state in this collection ran on credit. Revenue came in after the harvest and armies had to be paid before the campaign, and the gap was bridged by sahukars, bankers, and shroffs, money-changers, who lent to the state, farmed its revenues and moved its money by hundi, the bill of exchange payable at another town on sight or after a fixed term.</p>\n<p>At Pune the Peshwa’s bankers included families from Surat, a port the Marathas had sacked in 1664 and 1670, who settled at Pune under the Peshwas, where some acquired mint privileges and became bankers to the state. At Hyderabad the Gujarati houses of Karwan Sahu were settled by the seventeenth century, the firm of Hari Das Kishen Das arriving in 1729; gosain bankers came with the first Nizam and lived in Begum Bazar; Marwari houses followed from the 1750s – Moti Ram Surat Ram in 1750, Umarsi Sajan Mal and Shivdut Ram between 1762 and 1803, Mahanand Ram Puran Mal in 1801–02. Karen Leonard’s study of these firms shows what they did: they lent to the Nizam’s government against assignments of land revenue which they collected themselves, lent to talukdars the nazrana that bought a revenue contract, lent to nobles, kept Arab and Pathan retainers as their agents, and drew hundis on the Presidency towns to pay what Hyderabad owed the Company. The Company on its side borrowed too. Lakshmi Subramanian has traced how the Bombay government, which had little revenue of its own before 1818, financed its Maratha wars from the banias of Surat and Bombay.</p>\n<p>Leonard argued in 1979 that the shift of the great banking houses’ support from Delhi to the regional powers and the Company between about 1650 and 1750 was the decisive cause of Mughal decline. John Richards, replying in the same journal in 1981, found the thesis unproven on the evidence of Mughal state finance, and C. A. Bayly set the bankers inside a wider commercial society of towns and markets on which the successor states, and then the Company, rested. Whatever the verdict on the empire, the Deccan bears out the bankers’ side of the case: no state here paid an army without them, and the Company, when it came, first borrowed from them and then, at Hyderabad in 1823, took their place.</p>",
+  "story": "Layered sovereignty had a fiscal counterpart. The bankers lent to several sovereigns at once, took assignments of revenue from each as security, and treated a Peshwa, a Nizam and a Company as three customers. The audit of the last period – the Inam Commission, the Watan Act – was among other things a decision that credit and sovereignty should no longer be shared; <a href=\"#palmer-and-company\">Palmer and Company</a> at Hyderabad is where that decision was first made.",
+  "sources": [
+   {
+    "title": "Karen Leonard, ‘The “Great Firm” Theory of the Decline of the Mughal Empire’, Comparative Studies in Society and History 21 (2), pp. 151–167 (Cambridge University Press, 1979)",
+    "url": "https://doi.org/10.1017/S0010417500012792"
+   },
+   {
+    "title": "Karen Leonard, ‘Banking Firms in Nineteenth-Century Hyderabad Politics’, Modern Asian Studies 15 (2), pp. 177–201 (Cambridge University Press, 1981)",
+    "url": "https://escholarship.org/uc/item/53g0f246"
+   },
+   {
+    "title": "John F. Richards, ‘Mughal State Finance and the Premodern World Economy’, Comparative Studies in Society and History 23 (2), pp. 285–308 (Cambridge University Press, 1981)",
+    "url": "https://search.worldcat.org/search?q=Richards%20Mughal%20State%20Finance%20and%20the%20Premodern%20World%20Economy%201981"
+   },
+   {
+    "title": "C. A. Bayly, Rulers, Townsmen and Bazaars: North Indian Society in the Age of British Expansion, 1770–1870 (Cambridge University Press, 1983)",
+    "url": "https://search.worldcat.org/search?q=Bayly%20Rulers%2C%20Townsmen%20and%20Bazaars%201983"
+   },
+   {
+    "title": "Lakshmi Subramanian, Indigenous Credit and Imperial Expansion: Bombay, Surat and the West Coast (Oxford University Press, Delhi, 1996)",
+    "url": "https://search.worldcat.org/search?q=Lakshmi%20Subramanian%20Indigenous%20Credit%20and%20Imperial%20Expansion"
+   },
+   {
+    "title": "Wikipedia, ‘Hundi’",
+    "url": "https://en.wikipedia.org/wiki/Hundi"
+   }
+  ],
+  "related_maps": [
+   "1782__India__Rennell__Hindoostan-2-Sheet.html",
+   "1764__Bombay__Bellin__Plan-de-Bombay.html"
+  ]
+ },
+ {
+  "id": "nizam-ali-khan-hyderabad-1763",
+  "title": "Nizam Ali Khan and the move to Hyderabad",
+  "date_label": "r. 1762–1803",
+  "year": 1762,
+  "year_end": 1803,
+  "period": 5,
+  "polities": [
+   "hyderabad",
+   "maratha",
+   "company"
+  ],
+  "kind": "person",
+  "place": "Chowmahalla, Hyderabad, Telangana",
+  "lat": 17.358,
+  "lon": 78.472,
+  "strap": "Asaf Jah II deposed his brother in 1762, moved the capital from Aurangabad to Hyderabad in 1763, fought the Marathas, sold the Circars for troops and ended as the first prince inside Wellesley’s subsidiary system.",
+  "body": "<p>Nizam Ali Khan, a younger son of Nizam-ul-Mulk born in 1734, deposed his brother Salabat Jang on 8 July 1762 (Salabat was killed in prison at Bidar on 16 September 1763) and reigned until 6 August 1803. In 1763 he moved the seat of government from Aurangabad, his father’s viceregal seat, to Hyderabad, the old Qutb Shahi city. The same year Madhavrao and Raghunathrao beat him at Rakshasbhuvan on the Godavari, and the treaty that followed at Aurangabad cost him territory reckoned at eighty-two lakhs a year, more than Udgir had.</p>\n<p>His dealings with the Company exchanged territory for troops: by the treaty of 12 November 1766 the Company undertook to maintain troops for him, and by that of Masulipatam of 1 March 1768 he acknowledged the emperor’s grant of the Northern Circars to the Company for an annual payment; Guntur, reserved for his brother Basalat Jang, followed in 1788. He joined the Company and the Marathas against Tipu in 1790 and took his share of Mysore in 1792 and 1799. Kharda in 1795 decided him: his minister Aristu Jah (the Mashir-ul-Mulk of the Kharda entry) was handed over as a hostage and kept at Pune until 1797. The treaty of 1 September 1798 followed (<a href=\"#subsidiary-alliance-1798\">the subsidiary alliance</a>), and in 1800 the Mysore districts were ceded to pay for the force.</p>\n<p>Aristu Jah was diwan from 1778 until his death in 1804, except for the two years the Marathas held him. Mir Alam led the contingent at Srirangapatna in 1799 and became diwan in 1804; Salar Jung, the minister of the 1850s, descended from him. Michel Raymond, a Frenchman in the Nizam’s service from about 1785, raised a corps of some fourteen thousand men, was Musa Ram to the city’s Hindus and Musa Rahim to its Muslims, and died in March 1798, months before his corps was disarmed. The Chowmahalla, begun under Salabat Jang in 1750, was his seat, though the four palaces that give it its name belong to his successors; the Company’s Residency rose across the river in the year of his death.</p>",
+  "story": "Nizam Ali’s reign is the collection’s fifth period in one life: an heir of the Mughal Deccan who beat and was beaten by the Marathas, sold provinces to the Company for troops, kept a French corps until the Company disarmed it, and ended as the first subsidiary ally. The move to Hyderabad made the Asaf Jahi state a Deccan state rather than a Mughal viceroyalty encamped at Aurangabad; the treaty of 1798 ended its power to choose its allies. Both were his doing.",
+  "sources": [
+   {
+    "title": "Munis D. Faruqui, At Empire's End: The Nizam, Hyderabad and Eighteenth-Century India, Modern Asian Studies 43 (1), pp. 5–43 (Cambridge University Press, 2009)",
+    "url": "https://doi.org/10.1017/S0026749X07003290"
+   },
+   {
+    "title": "Sarojini Regani, Nizam–British Relations, 1724–1857 (Concept Publishing, 1988)",
+    "url": "https://search.worldcat.org/search?q=Regani%20Nizam-British%20Relations%201724-1857"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Wikipedia, ‘Nizam Ali Khan, Asaf Jah II’",
+    "url": "https://en.wikipedia.org/wiki/Nizam_Ali_Khan,_Asaf_Jah_II"
+   }
+  ],
+  "related_maps": [
+   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html",
+   "1800__India__Faden__India-Peninsula.html"
   ]
  },
  {
@@ -3210,6 +3523,49 @@ window.DECCAN_ENTRIES = [
   ]
  },
  {
+  "id": "doji-bara-famine-1791",
+  "title": "The Doji Bara famine",
+  "date_label": "1791–1792",
+  "year": 1791,
+  "year_end": 1792,
+  "period": 5,
+  "polities": [
+   "maratha",
+   "hyderabad",
+   "mysore",
+   "company"
+  ],
+  "kind": "event",
+  "place": "Bijapur (Vijayapura), Karnataka",
+  "lat": 16.83,
+  "lon": 75.71,
+  "strap": "Three failed monsoons from 1789 and a poor fourth produced the ‘skull famine’ across the Deccan, Hyderabad and the Circars in the middle of the third Mysore war; the Company’s first famine measures in the south were made in the same months as the Treaty of Seringapatam.",
+  "body": "<p>The monsoon failed over peninsular India in 1789, 1790 and 1791, and 1792 was little better. William Roxburgh, the Company’s botanist at Samalkot in the Northern Circars, kept a rain gauge: 77.5 inches in 1788, 47.7 in 1789, 17.4 in 1790, 26.1 in 1791, 37.1 in 1792. Richard Grove read the record as the great El Niño of 1789–93, whose effects he traced from Mexico to Australia. In the Deccan the famine was remembered as the Doji Bara, the skull famine, from the bones of the unburied that lay whitening the roads and the fields; the Bombay Gazetteer’s account of the Bijapur country in 1791 says the ground was covered with the skulls of the dead. It struck Hyderabad, the southern Maratha country of Dharwar, Belgaum and Bijapur, Gujarat and Marwar, the Madras districts and the Northern Circars.</p>\n<p>In the Circars the Company was the government, and there the famine was counted. By November 1792 more than 600,000 deaths were attributed to the drought in the Circars, and in some districts up to half the population died in 1792. The Madras government suspended import duties on grain, prohibited the export of rice from Tanjore, distributed rice at Vizagapatam and employed two thousand of the destitute on public works paid in grain: small measures against the mortality, and among the earliest the Company took against famine in the south. For India as a whole Grove extrapolated a mortality of perhaps eleven million for the years 1788–94; the figure is an extrapolation and is given as such.</p>\n<p>The famine fell in the middle of the third Anglo-Mysore war. Cornwallis’s army, before Srirangapatna in May 1791, could not feed itself; he destroyed his siege train in the last week of May and retreated, and the Maratha army under Hari Pant Phadke joined him days too late; Parashuram Bhau’s army, campaigning in the west, had come through a Dharwar so desolate that it nearly starved on its return. The Treaty of Seringapatam was signed on 18 March 1792 in a famine year. The Peshwa, the Nizam, Tipu and the Company each fought through the scarcity, and none of them could feed the country they were fighting over.</p>",
+  "story": "Between the famine of 1630 and the great famine of 1876–78, which lies outside the collection’s span, 1791–92 is the Deccan’s hinge of hunger. It fell in the decade when four powers were deciding the peninsula’s future and showed what none of them could do. The Company’s relief in the Circars is the first trace in the collection of a state counting its dead and paying wages in grain; the mortality is given as Grove gives it, as an estimate, because the Deccan outside the Circars was not counted at all.",
+  "sources": [
+   {
+    "title": "Richard H. Grove, ‘The Great El Niño of 1789–93 and its Global Consequences: Reconstructing an Extreme Climate Event in World Environmental History’, The Medieval History Journal 10 (1–2), pp. 75–98 (Sage, 2007)",
+    "url": "https://doi.org/10.1177/097194580701000203"
+   },
+   {
+    "title": "Gazetteer of the Bombay Presidency, vol. XXIII: Bijápur (Government Central Press, Bombay, 1884) (quoted from Grove and from the Wikipedia article; the volume itself was not consulted)",
+    "url": "https://search.worldcat.org/search?q=Gazetteer%20of%20the%20Bombay%20Presidency%20Bijapur%201884"
+   },
+   {
+    "title": "Wikipedia, ‘Third Anglo-Mysore War’",
+    "url": "https://en.wikipedia.org/wiki/Third_Anglo-Mysore_War"
+   },
+   {
+    "title": "Wikipedia, ‘Doji bara famine’",
+    "url": "https://en.wikipedia.org/wiki/Doji_bara_famine"
+   }
+  ],
+  "related_maps": [
+   "1792__SouthIndia__Faden__Peninsula-of-India-to-Cape-Comorin.html",
+   "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
+  ]
+ },
+ {
   "id": "tipus-tiger",
   "title": "Tipu’s Tiger",
   "date_label": "c. 1793",
@@ -3310,7 +3666,7 @@ window.DECCAN_ENTRIES = [
   "lat": 18.636,
   "lon": 75.473,
   "strap": "The death of the confederacy’s greatest soldier in 1794 and, a year later, the last united Maratha campaign, which humbled the Nizam at Kharda.",
-  "body": "<p>Mahadji Scindia died at his camp at Wanowrie, outside Pune, in February 1794; sources give 12 or 13 February. He had been the dominant Maratha figure in Hindustan since Salbai. Appointed vakil-i-mutlaq, regent of the empire, by Shah Alam II in 1784, he governed Delhi in the emperor’s name, built with the Savoyard officer Benoît de Boigne a trained infantry of several brigades with its own artillery, was checked by the Rajputs at Lalsot in 1787 and crushed them at Patan and Merta in 1790. He had come south in 1792 to assert himself at Pune against Nana Phadnavis; the two were reconciled before his death, and his grand-nephew Daulatrao, aged fourteen, succeeded him.</p>\n<p>A year later the confederacy fought its last campaign as a single body. The Nizam, Nizam Ali, had refused the chauth arrears claimed by Pune and had raised a trained corps under the French officer Michel Raymond. Nana assembled Scindia, Holkar, the Bhonsle of Nagpur, the Gaekwad and the Patwardhans under Parashuram Bhau, and met the Nizam at Kharda, in what is now Ahmednagar district, on 11 March 1795. The Nizam’s infantry gave way after an initial exchange and his army fell back on the fort of Kharda, where it was besieged and starved. He came to terms in April: he gave up his minister Mashir-ul-Mulk to Maratha custody, ceded territory including Daulatabad and the Aurangabad and Sholapur districts, and promised an indemnity of three crore rupees.</p>\n<p>The Company, bound by treaty to the Nizam, stayed neutral under Sir John Shore. The Nizam drew the lesson that his survival depended on a better protector, and three years later he took the Company’s subsidiary force.</p>\n<p>Kharda was a victory with no sequel. Madhavrao II died in October 1795, the confederacy dissolved into the succession struggle, and Daulatrao’s troops were looting Pune within two years. Kharda was the last campaign in which the principal houses of the confederacy assembled as a single force.</p>",
+  "body": "<p>Mahadji Scindia died at his camp at Wanowrie, outside Pune, in February 1794; sources give 12 or 13 February. He had been the dominant Maratha figure in Hindustan since Salbai. Appointed vakil-i-mutlaq, regent of the empire, by Shah Alam II in 1784, he governed Delhi in the emperor’s name, built with the Savoyard officer Benoît de Boigne a trained infantry of several brigades with its own artillery, was checked by the Rajputs at Lalsot in 1787 and crushed them at Patan and Merta in 1790. He had come south in 1792 to assert himself at Pune against Nana Phadnavis; the two were reconciled before his death, and his grand-nephew Daulatrao, aged fourteen, succeeded him.</p>\n<p>A year later the confederacy fought its last campaign as a single body. The Nizam, <a href=\"#nizam-ali-khan-hyderabad-1763\">Nizam Ali</a>, had refused the chauth arrears claimed by Pune and had raised a trained corps under the French officer Michel Raymond. Nana assembled Scindia, Holkar, the Bhonsle of Nagpur, the Gaekwad and the Patwardhans under Parashuram Bhau, and met the Nizam at Kharda, in what is now Ahmednagar district, on 11 March 1795. The Nizam’s infantry gave way after an initial exchange and his army fell back on the fort of Kharda, where it was besieged and starved. He came to terms in April: he gave up his minister Mashir-ul-Mulk to Maratha custody, ceded territory including Daulatabad and the Aurangabad and Sholapur districts, and promised an indemnity of three crore rupees.</p>\n<p>The Company, bound by treaty to the Nizam, stayed neutral under Sir John Shore. The Nizam drew the lesson that his survival depended on a better protector, and three years later he took the Company’s subsidiary force.</p>\n<p>Kharda was a victory with no sequel. Madhavrao II died in October 1795, the confederacy dissolved into the succession struggle, and Daulatrao’s troops were looting Pune within two years. Kharda was the last campaign in which the principal houses of the confederacy assembled as a single force.</p>",
   "story": "Mahadji’s career shows one Deccan house acting as sovereign in Hindustan in the emperor’s name, and Kharda shows the confederacy still able to impose itself on the Nizam in 1795. Both are at the edge of the period. The Nizam’s response, to exchange Maratha overlordship for Company protection, is the mechanism by which the layered order was replaced: each power, pressed by its neighbour, sought the Company as guarantor, and the Company accepted on its own terms.",
   "sources": [
    {
@@ -3351,7 +3707,7 @@ window.DECCAN_ENTRIES = [
   "lat": 17.385,
   "lon": 78.487,
   "strap": "Wellesley’s treaty with the Nizam, the model for the system by which Indian states paid for the Company’s troops and gave up their foreign relations.",
-  "body": "<p>On 1 September 1798 the Nizam of Hyderabad signed a treaty with the East India Company by which the Company’s force at his capital was raised to six thousand sepoys with artillery, to be paid for by an annual subsidy of twenty-four lakh rupees, and the Nizam undertook to disband his French-officered corps and to make no treaty with another power without the Company’s consent. Lord Mornington, later Marquess Wellesley, had arrived as Governor-General in May; this was his first act of policy.</p>\n<p>Subsidy arrangements were not new. The Company had kept paid detachments with the Nawab of Arcot and the Nawab of Awadh for decades, and a smaller force had been at Hyderabad since 1768. What Wellesley added was system: the force to be large enough to dominate the state, the ruler’s foreign relations to pass entirely through the Company, and a Resident to sit at court. The Nizam’s position after Kharda, with the Marathas holding his minister and his territory, made him the willing first subject. The French corps, some fourteen thousand men raised by Michel Raymond, who had died in March 1798, and now under Piron, was surrounded and disarmed by the Company’s troops in October without a shot, under the eye of the Resident James Achilles Kirkpatrick.</p>\n<p>The treaty was renewed and enlarged in 1800, when the Nizam ceded the districts he had gained from Mysore in 1792 and 1799 to pay the subsidy in land rather than cash; these became the Ceded Districts of the Madras Presidency. Mysore received a subsidiary treaty on its restoration in 1799, Awadh in 1801, the Peshwa at Bassein in 1802, and the Gaekwad and others after. By 1805 most of the larger Indian states were inside the system.</p>\n<p>The subsidiary alliance turned sovereignty inside out. The ruler kept his throne, his revenue and his internal administration, and lost war, diplomacy and in practice the choice of his ministers. Hyderabad remained nominally sovereign until 1948 on these terms.</p>",
+  "body": "<p>On 1 September 1798 the Nizam of Hyderabad signed a treaty with the East India Company by which the Company’s force at his capital was raised to six thousand sepoys with artillery, to be paid for by an annual subsidy of twenty-four lakh rupees, and the Nizam undertook to disband his French-officered corps and to make no treaty with another power without the Company’s consent. Lord Mornington, later Marquess Wellesley, had arrived as Governor-General in May; this was his first act of policy.</p>\n<p>Subsidy arrangements were not new. The Company had kept paid detachments with the Nawab of Arcot and the Nawab of Awadh for decades, and a smaller force had been at Hyderabad since 1768. What Wellesley added was system: the force to be large enough to dominate the state, the ruler’s foreign relations to pass entirely through the Company, and a Resident to sit at court. <a href=\"#nizam-ali-khan-hyderabad-1763\">The Nizam’s</a> position after Kharda, with the Marathas holding his minister and his territory, made him the willing first subject. The French corps, some fourteen thousand men raised by Michel Raymond, who had died in March 1798, and now under Piron, was surrounded and disarmed by the Company’s troops in October without a shot, under the eye of the Resident James Achilles Kirkpatrick.</p>\n<p>The treaty was renewed and enlarged in 1800, when the Nizam ceded the districts he had gained from Mysore in 1792 and 1799 to pay the subsidy in land rather than cash; these became the Ceded Districts of the Madras Presidency. Mysore received a subsidiary treaty on its restoration in 1799, Awadh in 1801, the Peshwa at Bassein in 1802, and the Gaekwad and others after. By 1805 most of the larger Indian states were inside the system.</p>\n<p>The subsidiary alliance turned sovereignty inside out. The ruler kept his throne, his revenue and his internal administration, and lost war, diplomacy and in practice the choice of his ministers. Hyderabad remained nominally sovereign until 1948 on these terms.</p>",
   "story": "The subsidiary alliance is the instrument by which plural sovereignty in the Deccan was converted into paramountcy without formal conquest. Each state kept its outward form and surrendered the substance, and the Company acquired armies it did not have to pay for. The Nizam’s treaty of 1798 is the template; within four years Mysore and Pune had followed, and the three powers that had shared the Deccan with the Company in 1792 were all its dependants.",
   "sources": [
    {
@@ -3643,7 +3999,7 @@ window.DECCAN_ENTRIES = [
   "lat": 17.386,
   "lon": 78.482,
   "strap": "A Palladian mansion on the Musi housed the Company’s agent at the Nizam’s court, and the banking house next to it showed how power there was actually exercised.",
-  "body": "<p>James Achilles Kirkpatrick, Resident at Hyderabad from 1798 to 1805, began in 1803 to build a new Residency on land given by the Nizam at Koti, on the north bank of the Musi opposite the old city. The design was by Lieutenant Samuel Russell of the Madras Engineers: a Palladian house with a portico of six Corinthian columns facing the river, a durbar hall under a domed ceiling and a double staircase guarded by lions, set in a walled garden with a zenana. Kirkpatrick, who had negotiated the subsidiary treaty of 1798, married Khair-un-Nissa, a young noblewoman of the court, in 1800; the marriage and its consequences for his career are the subject of William Dalrymple’s <em>White Mughals</em>. He died in Calcutta in 1805 before the house was finished.</p><p>The Residency was the Company’s instrument at Hyderabad. The Nizam remained sovereign in form, with his own ministers, army and revenue, but the Resident controlled the subsidiary force and the state’s foreign relations, and in practice had a voice in the appointment of the minister. Under Henry Russell, Resident from 1810 to 1820, that influence ran through money. William Palmer, son of a Company general and a Mughal begum, founded William Palmer and Company in Hyderabad in 1810 and, with an exemption from Hastings in 1816 from the rule against lending to princes, advanced large sums at high interest to the Nizam’s government through the minister Chandu Lal. Charles Metcalfe, Resident from 1820, found that the loans were in part fictitious and that the firm was secured on the state’s revenues. The Court of Directors withdrew the exemption and the house failed, and Hastings’s connection with it damaged his reputation.</p><p>The Residency survived the Nizam’s state and became a women’s college of Osmania University in 1949. It was restored between 2002 and 2023.</p>",
+  "body": "<p>James Achilles Kirkpatrick, Resident at Hyderabad from 1798 to 1805, began in 1803 to build a new Residency on land given by the Nizam at Koti, on the north bank of the Musi opposite the old city. The design was by Lieutenant Samuel Russell of the Madras Engineers: a Palladian house with a portico of six Corinthian columns facing the river, a durbar hall under a domed ceiling and a double staircase guarded by lions, set in a walled garden with a zenana. Kirkpatrick, who had negotiated the subsidiary treaty of 1798, married Khair-un-Nissa, a young noblewoman of the court, in 1800; the marriage and its consequences for his career are the subject of William Dalrymple’s <em>White Mughals</em>. He died in Calcutta in 1805 before the house was finished.</p><p>The Residency was the Company’s instrument at Hyderabad. The Nizam remained sovereign in form, with his own ministers, army and revenue, but the Resident controlled the subsidiary force and the state’s foreign relations, and in practice had a voice in the appointment of the minister. Under Henry Russell, Resident from 1810 to 1820, that influence ran through money. William Palmer, son of a Company general and a Mughal begum, founded <a href=\"#palmer-and-company\">William Palmer and Company</a> in Hyderabad in 1810 and, with an exemption from Hastings in 1816 from the rule against lending to princes, advanced large sums at high interest to the Nizam’s government through the minister Chandu Lal. Charles Metcalfe, Resident from 1820, found the firm secured on the state’s revenues and exercising a power over its government that he thought dangerous. The Court of Directors withdrew the exemption and the house failed, and Hastings’s connection with it damaged his reputation.</p><p>The Residency survived the Nizam’s state and became a women’s college of Osmania University in 1949. It was restored between 2002 and 2023.</p>",
   "story": "Hyderabad is the collection’s clearest case of a sovereignty preserved and hollowed at once. The Nizam’s dynasty, founded in 1724 as a Mughal governorship turned hereditary, outlasted every other Deccan polity, and the Residency is why. It allowed the Company to govern through the Nizam rather than instead of him, by controlling his army, his debts and his minister. The building’s classical front, facing the old city across the river, states the relationship exactly.",
   "sources": [
    {
@@ -3666,6 +4022,43 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
+  "id": "palmer-and-company",
+  "title": "Palmer and Company",
+  "date_label": "1810–1824",
+  "year": 1816,
+  "year_end": 1824,
+  "period": 6,
+  "polities": [
+   "hyderabad",
+   "company"
+  ],
+  "kind": "institution",
+  "place": "Koti, Hyderabad, Telangana",
+  "lat": 17.386,
+  "lon": 78.482,
+  "strap": "A Hyderabad banking house with an Anglo-Indian name lent to the Nizam at twenty-four per cent under a Governor-General’s licence; when the Resident audited it, the Company became the Nizam’s creditor itself.",
+  "body": "<p>William Palmer, son of General William Palmer and of Faiz-un-Nissa Begum of the Awadh ruling family, founded William Palmer and Company at Hyderabad in 1810 with the Gujarati banker Benkati Das. Like the city’s other houses it lent to the Nizam’s government, his ministers and his troops at the usual two per cent a month, twenty-four per cent a year. As a Eurasian, Palmer was outside the Act of 1797 forbidding British subjects to lend to Indian princes without the Governor-General’s leave; when Sir William Rumbold, a British subject married to a ward of the Governor-General, became a partner in 1815, the firm needed a licence, and Lord Hastings, on the Advocate-General’s advice, granted the exemption in 1816.</p>\n<p>Henry Russell, Resident from 1810 to 1820, backed the ‘Aurangabad arrangement’ of 1818, first suggested to Palmer by the Company’s agent at Aurangabad, George Sydenham, by which the firm made its first large loan to the Nizam’s government to pay the reformed troops in Berar; in July 1820 the Governor-General sanctioned a further loan of sixty lakhs to the minister Chandu Lal, proposed by Chandu Lal, Palmer and the Resident together. In the same year London ordered the licence of 1816 cancelled, Russell resigned, and Charles Metcalfe arrived as Resident. Metcalfe thought the business illegal and dangerous – it drew the firm ‘quite out of their sphere of merchants’ – and wanted the Nizam to borrow from the Company instead, at six per cent, against territorial security.</p>\n<p>When the firm’s claim reached a crore of rupees, Hastings insisted on liquidation: in 1823 the Company remitted a crore to Hyderabad to pay off the debt, and the Nizam relinquished in perpetuity the seven lakhs a year the Company had paid him as peshkash for the Northern Circars. The house went bankrupt in 1824; Hastings’s conduct was censured and inquired into in England after he left India in 1823. The Marwari Puran Mal and then the Parsi Pestonji took its place in paying the Nizam’s contingent; their debt was what Dalhousie called in with Berar in 1853.</p>",
+  "story": "Palmer and Company is the first audit in the collection. The Resident went through the Nizam’s debts and found that a private house had become a sovereign’s treasury; the remedy was for the Company to become the creditor itself, and the peshkash surrendered in 1823 was the first instalment of a process that ended with <a href=\"#berar-assignment-1853\">the Berar assignment</a>. Leonard’s point that the firm was an ordinary Indian banking house is what makes the episode matter: what the Company suppressed was not an abuse but the normal financing of a Deccan state, and it put itself in the bankers’ place.",
+  "sources": [
+   {
+    "title": "Karen Leonard, ‘Palmer and Company: An Indian Banking Firm in Hyderabad State’, Modern Asian Studies 47 (4), pp. 1157–1184 (Cambridge University Press, 2013)",
+    "url": "https://escholarship.org/uc/item/6kh143zj"
+   },
+   {
+    "title": "Karen Leonard, ‘Banking Firms in Nineteenth-Century Hyderabad Politics’, Modern Asian Studies 15 (2), pp. 177–201 (Cambridge University Press, 1981)",
+    "url": "https://escholarship.org/uc/item/53g0f246"
+   },
+   {
+    "title": "Sarojini Regani, Nizam–British Relations, 1724–1857 (Concept Publishing, 1988)",
+    "url": "https://search.worldcat.org/search?q=Regani%20Nizam-British%20Relations%201724-1857"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
+   "1831__India__John-Walker__Newly-Constructed-Map-of-India.html"
   ]
  },
  {
@@ -3887,7 +4280,7 @@ window.DECCAN_ENTRIES = [
   "lat": 18.5204,
   "lon": 73.8567,
   "strap": "The Commissioner of the Deccan described the Peshwa’s government as he found it and argued for keeping much of it, for the moment, intact.",
-  "body": "<p>Mountstuart Elphinstone, Resident at Pune from 1811 and Commissioner of the Deccan from 1818, submitted his <em>Report on the Territories Conquered from the Paishwa</em> to the Supreme Government on 25 October 1819, shortly before leaving to become Governor of Bombay. It runs to some hundred printed pages and is the fullest contemporary description of how the Maratha state worked at the level of the district and the village: the mamlatdar and his establishment, the hereditary deshmukh and deshpande, the patil and kulkarni, the village panchayat, the Hindu law as administered by shastris, and the revenue system of fixed village assessments and farming that Nana Phadnavis had maintained and Bajirao II had let decay.</p><p>Elphinstone’s recommendations were cautious. He thought the Peshwa’s system, though corrupt in its last years, was adapted to the country and understood by the people, and that sudden change would do harm. He proposed retaining the mamlatdars and the village officers, keeping panchayats for civil disputes, codifying rather than replacing Hindu law, and settling the revenue at moderate rates on the basis of existing village records, with a survey to follow. He was sceptical of the ryotwari settlement of Madras, which assessed each cultivator separately, and warned against the class of English collectors who would sweep away every intermediate authority. The reserved jagirs of chiefs who had submitted were to be confirmed.</p><p>The report set the tone for the Deccan’s first decade under the Company. Its successors did not all share its patience. Within a few years the collectors were pressing for detailed field surveys and individual assessments, and R. K. Pringle’s survey of the 1820s moved the Deccan toward ryotwari on principles Elphinstone had mistrusted.</p>",
+  "body": "<p>Mountstuart Elphinstone, Resident at Pune from 1811 and Commissioner of the Deccan from 1818, submitted his <em>Report on the Territories Conquered from the Paishwa</em> to the Supreme Government on 25 October 1819, shortly before leaving to become Governor of Bombay. It runs to some hundred printed pages and is the fullest contemporary description of how the Maratha state worked at the level of the district and the village: the mamlatdar and his establishment, the hereditary deshmukh and deshpande, the patil and kulkarni, the village panchayat, the Hindu law as administered by shastris, and the revenue system of fixed village assessments and farming that Nana Phadnavis had maintained and Bajirao II had let decay.</p><p>Elphinstone’s recommendations were cautious. He thought the Peshwa’s system, though corrupt in its last years, was adapted to the country and understood by the people, and that sudden change would do harm. He proposed retaining the mamlatdars and the village officers, keeping panchayats for civil disputes, <a href=\"#elphinstone-code-1827\">codifying rather than replacing Hindu law</a>, and settling the revenue at moderate rates on the basis of existing village records, with a survey to follow. He was sceptical of the ryotwari settlement of Madras, which assessed each cultivator separately, and warned against the class of English collectors who would sweep away every intermediate authority. The reserved jagirs of chiefs who had submitted were to be confirmed.</p><p>The report set the tone for the Deccan’s first decade under the Company. Its successors did not all share its patience. Within a few years the collectors were pressing for detailed field surveys and individual assessments, and R. K. Pringle’s survey of the 1820s moved the Deccan toward ryotwari on principles Elphinstone had mistrusted.</p>",
   "story": "The Report is a conqueror’s inventory of the sovereignties it had displaced. Elphinstone recorded, with care, the layers that had accumulated under sultanate, Mughal and Maratha rule: hereditary district officers with rights older than any state, village bodies, jagirdars, sardars. His instinct was to leave them standing under a Company roof. That the roof was now the Company’s was never in question. The document shows paramountcy at its most conservative, and shows why even conservative paramountcy ends the plurality it describes.",
   "sources": [
    {
@@ -3909,6 +4302,50 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
+  ]
+ },
+ {
+  "id": "elphinstone-code-1827",
+  "title": "The Elphinstone Code",
+  "date_label": "1 January 1827",
+  "year": 1827,
+  "year_end": null,
+  "period": 6,
+  "polities": [
+   "company"
+  ],
+  "kind": "document",
+  "place": "Bombay (Mumbai), Maharashtra",
+  "lat": 18.93,
+  "lon": 72.833,
+  "strap": "The Bombay Regulations of 1827 put the courts, the police, the revenue and the ‘usage of the country’ into one code, the first systematic code in British India, and wrote the panchayat and the village officer into Company law.",
+  "body": "<p>On 1 January 1827 the Government of Bombay promulgated a code of twenty-six Regulations, with a twenty-seventh for the revenue of Bombay town for the territories under its authority. Compiled during Mountstuart Elphinstone’s governorship (1819–1827) by a committee of civil servants, with information gathered at Pune and from interviews with members of the castes at Surat, it is usually described as the first systematic code of law in British India: Cornwallis’s forty-eight Bengal Regulations of 1 May 1793 had been promulgated together, but as a body of regulations rather than a code, and Bengal and Madras had added to theirs piecemeal since. Regulation XXIX, passed on 1 August 1827, brought the Deccan and Khandesh, administered since 1818 outside the Regulations, under the first twenty-six from 1 September; Elphinstone left Bombay in November 1827 and John Malcolm succeeded him on 1 November.</p>\n<p>The Code defined the civil courts, the criminal courts and the Collector. Regulation IV laid down, in section 26, the law the courts were to apply: Acts of Parliament and Regulations of Government where they reached the case; failing them, the usage of the country in which the suit arose; failing that, the law of the defendant; and in the absence of specific law and usage, ‘justice, equity and good conscience’. Hindu and Muslim law thus entered the courts as the law of the defendant rather than as codes of their own, and custom took precedence over both. Regulation VII allowed civil disputes to be settled by a panchayat of arbitrators, on the parties’ consent alone; Regulations IV and XIII let judges sit with ‘respectable natives’ as assessors or jurors, whose advice did not bind them. Regulation XII made the village answerable for robberies it failed to prevent or detect. Regulation XVI defined the powers of the Collector and Regulation XVII the assessment and collection of the land revenue, with the patil and kulkarni retained as the agents of collection under the Collector, their hereditary tenure left as the <a href=\"#elphinstone-report-1819\">Report of 1819</a> had found it.</p>\n<p>The Code governed the Presidency for a generation. The Indian Penal Code of 1860 and the Code of Criminal Procedure of 1861 replaced its criminal parts, and the word panchayat disappeared from the judicial vocabulary with them; the Land Revenue Code of 1879 superseded Regulation XVII and the Hereditary Offices Act of 1874 took over the village officers. Section 26 of Regulation IV outlived all of them, and remained the rule of decision for personal law in the Bombay districts until the Shariat Act of 1937 cut into it.</p>",
+  "story": "The Code is the legal form of Elphinstone’s Report. It wrote the panchayat, the village officer and the usage of the country into Company law, and by doing so subordinated them to it: a custom that a Collector’s court recognises is a custom the court can also refuse. The audit of the last period – the survey, the Inam Commission, the Watan Act – was conducted under this Code’s procedure, by the courts and Collectors it created.",
+  "sources": [
+   {
+    "title": "Kenneth Ballhatchet, Social Policy and Social Change in Western India, 1817–1830 (Oxford University Press, London, 1957)",
+    "url": "https://archive.org/details/socialpolicysoci0000ball"
+   },
+   {
+    "title": "James Jaffe, ‘The Indian Panchayat, Access to Knowledge and Criminal Prosecutions in Colonial Bombay, 1827–61’, Law and History Review 38 (1) (Cambridge University Press, 2020)",
+    "url": "https://www.academia.edu/44582541/The_Indian_Panchayat_Access_to_Knowledge_and_Criminal_Prosecutions_in_Colonial_Bombay_1827_61"
+   },
+   {
+    "title": "Bombay Acts and Regulations: Bombay Regulations (1827–34) and Supreme Council Acts solely relating to Bombay (1834–94)",
+    "url": "https://books.google.com/books/about/Bombay_Acts_and_Regulations_Bombay_Regul.html?id=RjcbAAAAYAAJ"
+   },
+   {
+    "title": "Marathi Vishwakosh, ‘एल्फिन्स्टन कायदेसंहिता (बॉम्बे कोड ऑफ रेग्युलेशन-१८२७)’",
+    "url": "https://marathivishwakosh.org/51858/"
+   },
+   {
+    "title": "Wikipedia, ‘Mountstuart Elphinstone’",
+    "url": "https://en.wikipedia.org/wiki/Mountstuart_Elphinstone"
+   }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
+   "1831__India__John-Walker__Newly-Constructed-Map-of-India.html"
   ]
  },
  {
