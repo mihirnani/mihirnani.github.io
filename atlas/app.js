@@ -38,6 +38,10 @@
   /* ---------- state ---------- */
   var show = {deccan: true, basalt: true, gaze: true}, year = null, polPick = new Set();
   var items = [];   // {kind, id, x, y, href, title, date, pol, y0, y1, el}
+  var selected = null;            // the marker a touch has picked; a second tap on it opens the page
+  var lastPointerType = "mouse";  // "mouse", "pen", "touch" or "keyboard" – decides the tooltip's wording and the tap-twice rule
+  document.addEventListener("pointerdown", function (ev) { lastPointerType = ev.pointerType || "mouse"; }, true);
+  document.addEventListener("keydown", function () { lastPointerType = "keyboard"; }, true);
 
   function polityOf(e) {
     var p = e.polities[0];
@@ -141,6 +145,7 @@
     });
     s.push("</svg>");
     mapEl.innerHTML = s.join("\n");
+    wrap.style.setProperty("--ar", (W / H).toFixed(4));   /* style.css caps the height through the width */
     mapEl.querySelectorAll(".mk").forEach(function (a) { items[+a.dataset.i].el = a; });
   }
 
@@ -217,9 +222,15 @@
   }
 
   /* ---------- tooltip and panel ---------- */
+  function select(it) {
+    if (selected && selected.el) selected.el.classList.remove("on");
+    selected = it;
+    if (it && it.el) it.el.classList.add("on");
+  }
   function showTip(it) {
     var el = it.el, r = el.getBoundingClientRect(), wr = wrap.getBoundingClientRect();
-    tip.innerHTML = '<div class="t">' + E(it.title) + '</div><span class="d">' + E(it.date) + "</span>";
+    var how = lastPointerType === "touch" ? (selected === it ? "tap again to open" : "tap to select, again to open") : "click to open";
+    tip.innerHTML = '<div class="t">' + E(it.title) + '</div><span class="d">' + E(it.date) + ' — <span class="how">' + how + "</span></span>";
     tip.hidden = false;
     var x = r.left - wr.left + wrap.scrollLeft + r.width / 2 + 10, y = r.top - wr.top + r.height / 2 - 12;
     if (x + 270 > wrap.scrollLeft + wrap.clientWidth) x = r.left - wr.left + wrap.scrollLeft - 270;
@@ -234,6 +245,19 @@
     mapEl.addEventListener("mouseout", function (ev) { if (ev.target.closest(".mk")) hideTip(); });
     mapEl.addEventListener("focusin", function (ev) { var a = ev.target.closest(".mk"); if (a) showTip(items[+a.dataset.i]); });
     mapEl.addEventListener("focusout", hideTip);
+    /* touch: the first tap on a marker selects it and fills the panel; a second tap on the same marker follows the link.
+       Mouse, pen and keyboard (Enter, or Space via the handler below) follow the link at once, as before. */
+    mapEl.addEventListener("click", function (ev) {
+      var a = ev.target.closest(".mk"); if (!a) return;
+      var it = items[+a.dataset.i];
+      if (lastPointerType === "touch" && selected !== it) {
+        ev.preventDefault();
+        select(it);
+        showTip(it);
+        return;
+      }
+      select(it);
+    });
     mapEl.addEventListener("keydown", function (ev) {
       var a = ev.target.closest(".mk"); if (!a || ev.key !== " ") return;
       ev.preventDefault(); a.click();

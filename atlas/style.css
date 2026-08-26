@@ -1,23 +1,28 @@
 /* Atlas – shared style for the map, the chronology and the places index.
-   The tokens and the type follow the front page of Curiosities exactly; the collection colours
+   The ground is the collections' parchment (the palette of deccan/style.css: page, panel, text, muted, line, accent),
+   so the three pages sit beside the Deccan page; the type follows the front page. The collection colours
    (--map, --deccan, --stone) are the front page's own, and --atlas is the section's colour. */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap");
 
 :root,
 :root[data-theme="light"] {
-  --bg: #f5f1e8;
-  --text: #27231e;
-  --muted: #6f685d;
-  --line: #d8d0c3;
+  --bg: #ece3d1;                       /* page – the collections' --ink */
+  --glow: #f6efdf;                     /* the collections' radial glow at the top of the page */
+  --mat: #fbf6ea;                      /* panels – the collections' --mat */
+  --text: #2b2420;
+  --muted: #8a7c66;
+  --line: rgba(60, 45, 25, 0.18);
   --panel: rgba(70, 50, 25, 0.05);
+  --accent: #8c2f32;
+  --shadow: rgba(60, 40, 15, 0.18);
   --map: #9e5b2b;
   --deccan: #8c2f32;
   --stone: #59504a;
   --atlas: #2f5f6e;
-  --sea: #eef3f2;
-  --land: #f8f4ea;
-  --coast: #8a8074;
-  --river: #6f9bb3;
+  --sea: #e2d8c1;                      /* a shade below the page, so the land (a panel) lifts off it */
+  --land: #fbf6ea;
+  --coast: #7a6c56;
+  --river: #5f8aa3;
   /* polities of the Deccan collection – the collection itself has no colours; these are the atlas's */
   --pol-delhi: #5b5b8f;
   --pol-vijayanagara: #b5771a;
@@ -30,21 +35,25 @@
   --pol-portuguese: #6b8e23;
   --pol-company: #8c2f32;
   --pol-crown: #3f3a35;
-  --pol-other: #8a8074;
+  --pol-other: #7d7060;                /* was #8a8074, which was the coastline's own grey */
 }
 
 :root[data-theme="dark"] {
-  --bg: #111311;
-  --text: #ece7dd;
-  --muted: #aaa397;
-  --line: #353934;
+  --bg: #0d0d0f;
+  --glow: #1a1a1e;
+  --mat: #1a1a1e;
+  --text: #e9e3d6;
+  --muted: #938b7b;
+  --line: rgba(233, 227, 214, 0.14);
   --panel: rgba(255, 250, 240, 0.035);
+  --accent: #d98c6a;
+  --shadow: rgba(0, 0, 0, 0.65);
   --map: #d09a68;
   --deccan: #d98c6a;
   --stone: #bdb2a4;
   --atlas: #7fb7c8;
-  --sea: #0e1416;
-  --land: #1a1d1a;
+  --sea: #000;
+  --land: #1a1a1e;
   --coast: #8f877a;
   --river: #4d7c93;
   --pol-delhi: #a9a9dc;
@@ -67,6 +76,8 @@ body {
   margin: 0;
   min-height: 100vh;
   background: var(--bg);
+  background-image: radial-gradient(120% 80% at 50% -10%, var(--glow) 0%, var(--bg) 60%);
+  background-attachment: fixed;
   color: var(--text);
   font-family: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   font-size: 1rem;
@@ -272,12 +283,16 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
   -webkit-overflow-scrolling: touch;
 }
 
+/* The SVG scales with its width through the viewBox; --ar (width/height) is set by app.js. Below the
+   side-by-side breakpoint the height is capped so that the panel under the map is at most a flick away:
+   the width is the lesser of the box and the cap × aspect ratio, and the height follows from the viewBox. */
 .map-wrap svg {
   display: block;
-  width: 100%;
+  width: min(100%, calc(min(100vh - 8rem, 640px) * var(--ar, 1.2017)));
   max-width: 100%;
   min-width: 560px;
   height: auto;
+  margin: 0 auto;
   font-family: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
@@ -286,13 +301,13 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .map-wrap .graticule { fill: none; stroke: var(--line); stroke-width: 0.6; stroke-dasharray: 2 3; }
 .map-wrap .grat-lbl { fill: var(--muted); font-size: 8.5px; letter-spacing: 0.06em; }
 .map-wrap .rlbl { fill: var(--river); font-size: 9px; font-style: italic; }
-.map-wrap .plbl { fill: var(--muted); font-size: 9.5px; letter-spacing: 0.04em; paint-order: stroke; stroke: var(--sea); stroke-width: 2.5px; stroke-linejoin: round; }
+.map-wrap .plbl { fill: var(--muted); font-size: 9.5px; letter-spacing: 0.04em; paint-order: stroke; stroke: var(--land); stroke-width: 2.5px; stroke-linejoin: round; }
 .map-wrap .plbl-dot { fill: var(--muted); }
 
 .map-wrap .mk { cursor: pointer; transition: opacity 0.2s; outline: none; }
-.map-wrap .mk.deccan { fill: var(--c); stroke: var(--bg); stroke-width: 0.9; }
-.map-wrap .mk.basalt { fill: var(--stone); stroke: var(--bg); stroke-width: 0.9; }
-.map-wrap .mk.gaze { fill: var(--map); stroke: var(--bg); stroke-width: 0.8; }
+.map-wrap .mk.deccan { fill: var(--c); stroke: var(--land); stroke-width: 0.9; }
+.map-wrap .mk.basalt { fill: var(--stone); stroke: var(--land); stroke-width: 0.9; }
+.map-wrap .mk.gaze { fill: var(--map); stroke: var(--land); stroke-width: 0.8; }
 .map-wrap .mk.dim { opacity: 0.14; }
 .map-wrap .mk:hover, .map-wrap .mk:focus-visible, .map-wrap .mk.on { stroke: var(--text); stroke-width: 1.4; opacity: 1; }
 .map-wrap .mk.hide { display: none; }
@@ -305,23 +320,25 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
   max-width: 260px;
   padding: 0.45rem 0.65rem;
   border: 1px solid var(--line);
-  background: var(--bg);
+  background: var(--mat);
   color: var(--text);
   font-size: 0.85rem;
   line-height: 1.35;
   pointer-events: none;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 12px var(--shadow);
 }
 
 .tooltip[hidden] { display: none; }
 .tooltip .t { font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif; font-size: 1.1rem; line-height: 1.15; }
 .tooltip .d { display: block; margin-top: 0.15rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.tooltip .how { font-style: italic; letter-spacing: 0.02em; text-transform: none; }
 
 .panel {
   border: 1px solid var(--line);
   border-top: 0;
   padding: 0.9rem 1.1rem;
   min-height: 4.4rem;
+  background: var(--mat);
   font-size: 0.95rem;
 }
 
@@ -333,6 +350,7 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .panel p { margin: 0; }
 
 .beyond { margin-top: 1.2rem; }
+.beyond:empty { display: none; }
 .beyond ul { margin: 0.3rem 0 0; padding: 0; list-style: none; columns: 2; column-gap: 2rem; font-size: 0.9rem; }
 .beyond li { break-inside: avoid; padding: 0.2rem 0; border-bottom: 1px solid var(--line); }
 .beyond li a { text-decoration: none; }
@@ -340,14 +358,29 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .beyond .d { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 0.5rem; }
 .beyond .r { color: var(--muted); font-size: 0.85rem; }
 
+/* ---- map and panel side by side from 900px ---- */
+@media (min-width: 900px) {
+  .atlas-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(17rem, 1fr);
+    gap: 0 1.4rem;
+    align-items: start;
+  }
+  /* whichever column is the shorter stays in view while the other scrolls; the header is not sticky, so top is a small margin */
+  .atlas-map, .atlas-side { position: sticky; top: 1rem; }
+  .atlas-grid .map-wrap svg { width: 100%; min-width: 0; }
+  .atlas-side .panel { border-top: 1px solid var(--line); }
+  .atlas-side .beyond ul { columns: 1; }
+}
+
 /* ---- the chronology ---- */
-.band-svg { display: block; width: 100%; height: auto; margin-top: 1rem; border: 1px solid var(--line); background: var(--panel); font-family: inherit; }
+.band-svg { display: block; width: 100%; height: auto; margin-top: 1rem; border: 1px solid var(--line); background: var(--mat); font-family: inherit; }
 .band-svg text { fill: var(--muted); font-size: 9.5px; }
 .band-svg .pt { fill: var(--text); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; }
 .band-svg .pband { fill: var(--stone); opacity: 0.05; }
 .band-svg .pband.alt { opacity: 0.11; }
 .band-svg .tick { stroke: var(--line); }
-.band-svg .mk { fill: var(--stone); stroke: var(--bg); stroke-width: 0.8; cursor: pointer; }
+.band-svg .mk { fill: var(--stone); stroke: var(--mat); stroke-width: 0.8; cursor: pointer; }
 .band-svg .mk:hover, .band-svg .mk:focus-visible { stroke: var(--text); outline: none; }
 .band-svg .mk.deccan, .band-svg .mk.entry { fill: var(--deccan); }
 .band-svg .mk.gaze { fill: var(--map); }
@@ -430,7 +463,7 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .place li .loc { color: var(--muted); font-size: 0.85rem; font-style: italic; }
 
 .place-search { margin: 1rem 0 0; max-width: 420px; }
-.place-search input { width: 100%; font: inherit; font-size: 0.95rem; padding: 0.5rem 0.8rem; color: var(--text); background: var(--panel); border: 1px solid var(--line); border-radius: 4px; }
+.place-search input { width: 100%; font: inherit; font-size: 0.95rem; padding: 0.5rem 0.8rem; color: var(--text); background: var(--mat); border: 1px solid var(--line); border-radius: 4px; }
 .place-search input:focus { outline: none; border-color: var(--atlas); }
 .place-search input::placeholder { color: var(--muted); font-style: italic; }
 .place.hide { display: none; }

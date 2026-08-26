@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="One map of everything on Curiosities: the entries of The Deccan, 1336–1875 by polity, the places of Basalt and Laterite, and the maps of The European Gaze on India, on one coastline of peninsular India, with a year slider.">
   <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ece3d1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
   <title>Atlas – Curiosities</title>
 
   <script>
@@ -56,14 +56,20 @@
 
       <section aria-labelledby="map-title" class="section">
         <h2 class="group-title" id="map-title">The peninsula</h2>
-        <p class="note">Circles are Deccan entries, coloured by their principal polity; triangles are Basalt entries, which sit outside the human timeline and are always shown; squares are European maps, one for each map, placed by the region it covers. Move the year to see which Deccan entries and maps belong to it; the rest fade. Hover or tab to a marker for its title; click it for its page.</p>
+        <p class="note">Circles are Deccan entries, coloured by their principal polity; triangles are Basalt entries, which sit outside the human timeline and are always shown; squares are European maps, one for each map, placed by the region it covers. Move the year to see which Deccan entries and maps belong to it; the rest fade. Hover, tap or tab to a marker and its summary appears in the panel beside the map (below it on a narrow screen); click the marker, or tap it a second time, for its page.</p>
         <div id="controls" class="controls" aria-label="Map controls"></div>
-        <div class="map-wrap" id="map-wrap">
-          <div id="map"><p class="note" style="padding:1rem">Loading the map…</p></div>
-          <div class="tooltip" id="tooltip" role="status" hidden></div>
+        <div class="atlas-grid">
+          <div class="atlas-map">
+            <div class="map-wrap" id="map-wrap">
+              <div id="map"><p class="note" style="padding:1rem">Loading the map…</p></div>
+              <div class="tooltip" id="tooltip" role="status" hidden></div>
+            </div>
+          </div>
+          <aside class="atlas-side" aria-label="Selected marker and lists beyond the frame">
+            <div class="panel" id="panel"><span class="hint">Hover, tap or tab to a marker for a summary here; click it, or tap it again, to open its page. ← and → move the year, + and − step it by ten.</span></div>
+            <div class="beyond" id="beyond"></div>
+          </aside>
         </div>
-        <div class="panel" id="panel"><span class="hint">Hover, tap or tab to a marker for a summary; ← and → move the year, + and − step it by ten.</span></div>
-        <div class="beyond" id="beyond"></div>
       </section>
     </main>
 
