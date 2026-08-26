@@ -480,3 +480,8 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
 .tl-wrap .plbl{fill:var(--paper); font-size:12px; font-family:'Cormorant Garamond',serif}
 .geo-head{margin-top:3.5rem}
 .tl-wrap .geonote{margin:0; padding:.4rem .8rem .6rem; font-size:.7rem; letter-spacing:.06em; color:var(--muted); font-style:italic}
+
+/* Site footer, shared across Curiosities: centred, small, two lines that never
+   break mid-sentence. */
+.foot-line { display: block; white-space: nowrap; }
+@media (max-width: 360px) { .foot-line { white-space: normal; } }

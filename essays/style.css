@@ -42,5 +42,7 @@ article .notes ol { padding-left:1.2rem }
 .pager a:hover { text-decoration:underline }
 .pager .dir { display:block; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--muted) }
 .pager .next { margin-left:auto; text-align:right }
-footer.bottom { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted) }
+footer.bottom { margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid var(--line); font-size:.8rem; color:var(--muted); text-align:center }
+.foot-line { display:block; white-space:nowrap }
+@media (max-width:360px) { .foot-line { white-space:normal } }
 @media (max-width:620px){ .page{ width:min(100% - 1.4rem, 720px) } header.top{ flex-wrap:wrap } }
