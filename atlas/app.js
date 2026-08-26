@@ -132,7 +132,7 @@
     items.forEach(function (it, i) {
       var label = it.title + ", " + it.date;
       var open = '<a class="mk ' + it.kind + '" href="' + E(it.href) + '" data-i="' + i + '" tabindex="0" aria-label="' + E(label) + '"' +
-        (it.kind === "deccan" ? ' style="--c:var(--pol-' + it.pol + ')"' : "") + (it.kind === "gaze" ? ' target="_blank" rel="noopener"' : "") + ">";
+        (it.kind === "deccan" ? ' style="--c:var(--pol-' + it.pol + ')"' : "") + ">";
       var glyph;
       if (it.kind === "deccan") glyph = '<circle cx="' + f1(it.x) + '" cy="' + f1(it.y) + '" r="' + R + '"/>';
       else if (it.kind === "basalt") glyph = '<polygon points="' + f1(it.x) + "," + f1(it.y - 5) + " " + f1(it.x + 4.6) + "," + f1(it.y + 3.2) + " " + f1(it.x - 4.6) + "," + f1(it.y + 3.2) + '"/>';
@@ -225,8 +225,8 @@
     if (x + 270 > wrap.scrollLeft + wrap.clientWidth) x = r.left - wr.left + wrap.scrollLeft - 270;
     tip.style.left = Math.max(0, x) + "px"; tip.style.top = Math.max(0, y) + "px";
     var col = it.kind === "deccan" ? "The Deccan" : it.kind === "basalt" ? "Basalt and Laterite" : "The European Gaze";
-    panel.innerHTML = '<div class="t"><a href="' + E(it.href) + '"' + (it.kind === "gaze" ? ' target="_blank" rel="noopener"' : "") + ">" + E(it.title) + "</a></div>" +
-      '<span class="d">' + E(it.date) + " · " + col + "</span><p>" + E(it.sub) + ' <a href="' + E(it.href) + '"' + (it.kind === "gaze" ? ' target="_blank" rel="noopener"' : "") + ">Open →</a></p>";
+    panel.innerHTML = '<div class="t"><a href="' + E(it.href) + '"' + ">" + E(it.title) + "</a></div>" +
+      '<span class="d">' + E(it.date) + " · " + col + "</span><p>" + E(it.sub) + ' <a href="' + E(it.href) + '"' + ">Open →</a></p>";
   }
   function hideTip() { tip.hidden = true; }
   function wire() {
@@ -249,7 +249,7 @@
       '<p class="note">European maps in the collection whose subject lies outside, or far beyond, the peninsula: ocean charts, Asia as a whole, the Punjab and the north.</p>' +
       "<ul>" + order.map(function (r) {
         return byRegion[r].map(function (m) {
-          return '<li><span class="d">' + E(m.date_label) + '</span><a href="' + E(gaze.base + m.file) + '" target="_blank" rel="noopener">' + E(m.maker) + ", " + E(m.title) + '</a> <span class="r">· ' + E(REGION_NAME[r] || r) + "</span></li>";
+          return '<li><span class="d">' + E(m.date_label) + '</span><a href="' + E(gaze.base + m.file) + '">' + E(m.maker) + ", " + E(m.title) + '</a> <span class="r">· ' + E(REGION_NAME[r] || r) + "</span></li>";
         }).join("");
       }).join("") + "</ul>";
     /* entries whose place is off the map, or which have no place at all */

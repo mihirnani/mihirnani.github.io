@@ -141,7 +141,7 @@
       if (it.kind === "chron") body = '<span class="k">' + (it.e ? "" : "") + "</span>" + E(it.text) + (it.e ? ' <a href="' + DECCAN + "#" + E(it.e) + '">Entry →</a>' : "");
       else if (it.kind === "entry") body = '<span class="k">Entry</span><a href="' + DECCAN + "#" + E(it.e) + '">' + E(it.text) + '</a> <span class="strap">' + E(it.strap) + "</span>";
       else if (it.kind === "basalt") body = '<span class="k">Basalt</span><a href="' + BASALT + "#" + E(it.b) + '">' + E(it.text) + '</a> <span class="strap">' + E(it.strap) + "</span>";
-      else body = '<span class="k">Map</span><a href="' + E(gaze.base + it.file) + '" target="_blank" rel="noopener">' + E(it.text) + "</a>" + (it.room ? ' <span class="strap">Room ' + it.room + "</span>" : "");
+      else body = '<span class="k">Map</span><a href="' + E(gaze.base + it.file) + '">' + E(it.text) + "</a>" + (it.room ? ' <span class="strap">Room ' + it.room + "</span>" : "");
       s.push('<li class="' + it.kind + '" id="h-' + i + '"><span class="d">' + E(it.d) + "</span><span>" + body + "</span></li>");
     });
     if (cur >= 0) s.push("</ol></section>");

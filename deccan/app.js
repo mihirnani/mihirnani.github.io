@@ -221,7 +221,7 @@
     setTitle(e.title + " (" + e.date_label + ") – The Deccan, 1336–1875", e.strap);
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#' + prev.id + '"><span class="dir">← Previous · ' + E(prev.date_label) + '</span><span class="nt">' + E(prev.title) + '</span></a>' : "") +
       (nxt ? '<a class="next" href="#' + nxt.id + '"><span class="dir">Next · ' + E(nxt.date_label) + ' →</span><span class="nt">' + E(nxt.title) + '</span></a>' : "") + '</nav>';
-    var maps = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '" target="_blank" rel="noopener">' + E(mapTitle(fn)) + '</a>'; }).join(" · ") + '</p>' : "";
+    var maps = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '">' + E(mapTitle(fn)) + '</a>'; }).join(" · ") + '</p>' : "";
     var srcLi = function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + '</a></li>'; };
     var isRef = function (s) { return /^(Wikipedia|Britannica)/.test(s.title); };
     var srcMain = e.sources.filter(function (s) { return !isRef(s); }), srcRef = e.sources.filter(isRef);

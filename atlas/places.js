@@ -33,7 +33,7 @@
     return "";
   }
   function row(kind, href, title, date, loc, blank) {
-    return '<li class="' + kind + '"><span class="k">' + (kind === "deccan" ? "Deccan" : kind === "basalt" ? "Basalt" : "Map") + '</span><a href="' + E(href) + '"' + (blank ? ' target="_blank" rel="noopener"' : "") + ">" + E(title) + "</a>" +
+    return '<li class="' + kind + '"><span class="k">' + (kind === "deccan" ? "Deccan" : kind === "basalt" ? "Basalt" : "Map") + '</span><a href="' + E(href) + '"' + ">" + E(title) + "</a>" +
       (date ? ' <span class="d">· ' + E(date) + "</span>" : "") + (loc ? ' <span class="loc">' + E(loc) + "</span>" : "") + "</li>";
   }
   function placeHtml(p) {
