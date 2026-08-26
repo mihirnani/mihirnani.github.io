@@ -75,7 +75,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1595–1600", "t": "Chand Bibi defends Ahmadnagar; Akbar takes the city in 1600.", "e": "chand-bibi-1595"},
    {"d": "c. 1548–1626", "t": "Malik Ambar’s defence of the Nizam Shahi state; Khirki (later Aurangabad) founded 1610; Bhatvadi 1624.", "e": "malik-ambar"},
    {"d": "c. 1608–1650", "t": "Tukaram at Dehu; the Varkari tradition’s seventeenth-century flowering (Ramdas 1608–1681).", "e": "tukaram-varkari"},
-   {"d": "1611–1668", "t": "The Company’s first footholds: Masulipatnam, Madras, Bombay.", "e": "company-factories"},
+   {"d": "1611–1668", "t": "The Company’s first Deccan footholds: Masulipatnam, Madras, Bombay.", "e": "company-factories"},
    {"d": "1594–1664", "t": "Shahji Bhonsle between Ahmadnagar, Bijapur and the Mughals.", "e": "shahji-bhonsle"},
    {"d": "1630–1632", "t": "The great Deccan famine; Daulatabad falls 1633; the Nizam Shahi state extinguished 1636.", "e": "deccan-famine-1630"},
    {"d": "1646", "t": "Shivaji takes Torna.", "e": "shivaji-torna-1646"},
@@ -191,7 +191,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1876–1878", "t": "The Great Deccan famine – outside the collection’s span by design."},
    {"d": "1879", "t": "Vasudev Balwant Phadke’s rising – likewise outside the span."},
    {"d": "1827–1893", "t": "The Deccan as the Company drew it: the map record.", "e": "deccan-as-the-company-saw-it"},
-   {"d": "1870–1900", "t": "Ranade and the first histories; Sewell’s A Forgotten Empire published 1900.", "e": "ranade-and-the-first-histories"}
+   {"d": "1870–1900", "t": "Ranade and the new Maratha histories; Sewell’s A Forgotten Empire published 1900.", "e": "ranade-and-the-first-histories"}
   ]
  }
 ];
