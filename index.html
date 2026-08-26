@@ -305,6 +305,10 @@
       color: var(--muted);
     }
 
+    .site-foot { margin: 2.4rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); font-size: 0.9rem; color: var(--muted); }
+    .site-foot a { text-decoration: none; }
+    .site-foot a:hover { text-decoration: underline; }
+
     .also a { text-decoration: none; }
     .also a:hover { text-decoration: underline; }
 
@@ -417,8 +421,6 @@
            replace the <template> and </template> lines with
            <div class="columns columns--with-essays"> around the two groups above and
            this section, restoring the 3fr/2fr layout in the CSS. -->
-      <p class="also">Corrections and questions: <a href="mailto:mihir@naniwadekar.in">mihir@naniwadekar.in</a></p>
-
       <template id="essays-column">
         <section aria-labelledby="essays-title" class="project-group col col--essays">
           <h2 class="group-title" id="essays-title">Essays</h2>
@@ -431,6 +433,9 @@
         </section>
       </template>
     </main>
+
+    <footer class="site-foot">A non-commercial study collection. Errors may be pointed out by writing to <a class="mail" href="#" data-u="mihir" data-d="naniwadekar.in">mihir [at] naniwadekar [dot] in</a>.</footer>
+    <script>(function(){var l=document.querySelectorAll("a.mail");for(var i=0;i<l.length;i++){var a=l[i],m=a.getAttribute("data-u")+"@"+a.getAttribute("data-d");a.href="mailto:"+m;a.textContent=m;}})();</script>
 
   </div>
 
