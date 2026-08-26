@@ -247,10 +247,12 @@
 
     .columns {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: clamp(2rem, 6vw, 5rem);
       align-items: start;
     }
+
+    .columns + .project-group { margin-top: clamp(2.2rem, 5vw, 3.4rem); }
 
     .col { margin-top: 0; }
 
@@ -327,7 +329,9 @@
   <link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
+  <!-- Parked with the essays column: the RSS feed link.
   <link rel="alternate" type="application/rss+xml" title="Essays – Curiosities" href="https://naniwadekar.com/essays/feed.xml">
+  -->
   <meta property="og:title" content="Curiosities"><meta name="twitter:card" content="summary_large_image"><meta property="og:site_name" content="Curiosities">
   <meta property="og:description" content="History and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and essays.">
   <meta property="og:type" content="website">
@@ -347,8 +351,7 @@
       </section>
 
       <div class="columns">
-        <div class="col">
-        <section aria-labelledby="history-title" class="project-group">
+        <section aria-labelledby="history-title" class="project-group col">
           <h2 class="group-title" id="history-title">History</h2>
           <div class="projects">
             <a class="project project--maps" href="https://naniwadekar.com/european-gaze/">
@@ -366,11 +369,10 @@
               </div>
               <span aria-hidden="true">Visit &rarr;</span>
             </a>
-
           </div>
         </section>
 
-        <section aria-labelledby="natural-history-title" class="project-group">
+        <section aria-labelledby="natural-history-title" class="project-group col">
           <h2 class="group-title" id="natural-history-title">Natural History</h2>
           <div class="projects">
             <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
@@ -390,23 +392,32 @@
             </a>
           </div>
         </section>
+      </div>
 
-        <section aria-labelledby="atlas-title" class="project-group">
-          <h2 class="group-title" id="atlas-title">Across the collections</h2>
-          <div class="projects">
-            <a class="project project--atlas" href="https://naniwadekar.com/atlas/">
-              <div>
-                <h3>Atlas</h3>
-                <p>The glue: one map of everything &ndash; the Deccan entries by polity, the places of Basalt and Laterite, and the European maps, on one coastline with a year slider &ndash; with one chronology from deep time to 1947, and a places index across the site.</p>
-              </div>
-              <span aria-hidden="true">Visit &rarr;</span>
-            </a>
-          </div>
-        </section>
-
-        <p class="also"><a href="https://naniwadekar.com/more/">Also: an Ancient Greek course, and three small games &rarr;</a></p>
+      <section aria-labelledby="atlas-title" class="project-group">
+        <h2 class="group-title" id="atlas-title">Across the collections</h2>
+        <div class="projects">
+          <a class="project project--atlas" href="https://naniwadekar.com/atlas/">
+            <div>
+              <h3>Atlas</h3>
+              <p>The glue: one map of everything &ndash; the Deccan entries by polity, the places of Basalt and Laterite, and the European maps, on one coastline with a year slider &ndash; with one chronology from deep time to 1947, and a places index across the site.</p>
+            </div>
+            <span aria-hidden="true">Visit &rarr;</span>
+          </a>
         </div>
+      </section>
 
+      <!-- Parked for now: the link to the courses and games page.
+      <p class="also"><a href="https://naniwadekar.com/more/">Also: an Ancient Greek course, and three small games &rarr;</a></p>
+      -->
+
+      <!-- The essays column is parked until the essays are written. It sits inside a
+           <template>, which the browser never renders, so essays/build.py can keep
+           refreshing the list between the essays:start/end markers. To bring it back,
+           replace the <template> and </template> lines with
+           <div class="columns columns--with-essays"> around the two groups above and
+           this section, restoring the 3fr/2fr layout in the CSS. -->
+      <template id="essays-column">
         <section aria-labelledby="essays-title" class="project-group col col--essays">
           <h2 class="group-title" id="essays-title">Essays</h2>
           <p class="col-intro"><a href="https://naniwadekar.com/essays/">All essays</a> &middot; <a href="https://naniwadekar.com/essays/feed.xml">RSS</a></p>
@@ -416,7 +427,7 @@
 <!-- essays:end -->
           </ul>
         </section>
-      </div>
+      </template>
     </main>
 
   </div>
