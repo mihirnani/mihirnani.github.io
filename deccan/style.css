@@ -155,15 +155,27 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
   .masthead {
     align-items: center;
     flex-wrap: wrap;
-    gap: .55rem .9rem;
-    padding: .75rem 1rem;
+    gap: .3rem .9rem;
+    padding: .7rem 1rem .6rem;
   }
 
+  /* Phone order: title with the theme button beside it; the subtitle under
+     the title; then one wrapped row of links, left-aligned. */
   .masthead a.site {
-    flex: 1 1 auto;
+    order: 1;
+    flex: 1 1 0;
     min-width: 0;
-    font-size: 1.3rem;
-    line-height: 1.1;
+    font-size: 1.22rem;
+    line-height: 1.15;
+  }
+
+  .theme-toggle {
+    order: 2;
+    flex: 0 0 auto;
+    margin-left: auto;
+    min-height: 2rem;
+    padding: .35rem .6rem;
+    font-size: .58rem;
   }
 
   .masthead .yrs {
@@ -171,16 +183,26 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
     flex: 1 0 100%;
     font-size: .64rem;
     letter-spacing: .2em;
+    margin-top: -.15rem;
+  }
+
+  .masthead .nav-break {
+    order: 4;
+    flex-basis: 100%;
+    height: 0;
   }
 
   .masthead .navlink {
+    order: 5;
     margin-left: 0;
+    margin-right: .2rem;
+    font-size: .66rem;
+    letter-spacing: .16em;
+    line-height: 1.9;
   }
 
-  .theme-toggle {
+  .masthead .navlink.home {
     margin-left: 0;
-    min-height: 2.5rem;
-    padding: .55rem .8rem;
   }
 
   .wrap {
@@ -287,27 +309,28 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
   }
 
   .masthead {
-    gap: .5rem .7rem;
+    gap: .25rem .7rem;
   }
 
   .masthead a.site {
-    flex-basis: 100%;
-    font-size: 1.2rem;
+    flex: 1 1 0;
+    font-size: 1.18rem;
   }
 
   .masthead .navlink {
     margin-left: 0;
-    min-height: 2.5rem;
+    margin-right: .15rem;
+    min-height: 2.1rem;
     display: inline-flex;
     align-items: center;
   }
 
   .masthead .yrs {
-    order: 4;
+    order: 3;
   }
 
   .theme-toggle {
-    min-height: 2.5rem;
+    min-height: 2rem;
   }
 
   .wrap {
