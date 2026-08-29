@@ -94,7 +94,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Phillip B. Wagoner, ‘Sultan among Hindu Kings’, Journal of Asian Studies 55:4 (1996)",
-    "url": "https://www.jstor.org/stable/2646491"
+    "url": "https://www.jstor.org/stable/2646526"
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
@@ -518,7 +518,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Phillip B. Wagoner, ‘Sultan among Hindu Kings’, Journal of Asian Studies 55:4 (1996)",
-    "url": "https://www.jstor.org/stable/2646491"
+    "url": "https://www.jstor.org/stable/2646526"
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
@@ -553,7 +553,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CBO9780511781391"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
@@ -708,7 +708,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CBO9780511781391"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "H. K. Sherwani, Mahmud Gawan, the Great Bahmani Wazir (Kitabistan, 1942)",
@@ -754,7 +754,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CBO9780511781391"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Wikipedia, ‘Afanasy Nikitin’",
@@ -791,7 +791,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CBO9780511781391"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "Wikipedia, ‘Mahmud Gawan Madrasa’",
@@ -821,7 +821,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
-    "url": "https://doi.org/10.1017/CBO9780511781391"
+    "url": "https://doi.org/10.1017/CHOL9780521254847"
    },
    {
     "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
@@ -3138,7 +3138,7 @@ window.DECCAN_ENTRIES = [
     "url": "https://search.worldcat.org/search?q=Bayly%20Rulers%2C%20Townsmen%20and%20Bazaars%201983"
    },
    {
-    "title": "Lakshmi Subramanian, Indigenous Credit and Imperial Expansion: Bombay, Surat and the West Coast (Oxford University Press, Delhi, 1996)",
+    "title": "Lakshmi Subramanian, Indigenous Capital and Imperial Expansion: Bombay, Surat and the West Coast (Oxford University Press, Delhi, 1996)",
     "url": "https://search.worldcat.org/search?q=Lakshmi%20Subramanian%20Indigenous%20Credit%20and%20Imperial%20Expansion"
    },
    {

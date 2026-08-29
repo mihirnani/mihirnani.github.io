@@ -10,6 +10,33 @@ window.DECCAN_READINGS = {
    "kind": "book"
   },
   {
+   "author": "Lauren Benton",
+   "title": "Law and Colonial Cultures: Legal Regimes in World History, 1400–1900",
+   "publisher": "Cambridge University Press",
+   "year": 2002,
+   "note": "Comparative background for jurisdictional pluralism and the movement from overlapping legal orders toward more hierarchical colonial regimes.",
+   "url": "https://doi.org/10.1017/CBO9780511512117",
+   "kind": "book"
+  },
+  {
+   "author": "Lauren Benton",
+   "title": "A Search for Sovereignty: Law and Geography in European Empires, 1400–1900",
+   "publisher": "Cambridge University Press",
+   "year": 2009,
+   "note": "Provides a comparative vocabulary for corridors, enclaves, irregular jurisdiction and differentiated imperial space. Use comparatively, not as an interpretive template into which Deccan evidence must fit.",
+   "url": "https://doi.org/10.1017/CBO9780511988905",
+   "kind": "book"
+  },
+  {
+   "author": "Lauren Benton and Richard J. Ross (eds.)",
+   "title": "Legal Pluralism and Empires, 1500–1850",
+   "publisher": "New York University Press",
+   "year": 2013,
+   "note": "Useful comparative essays on jurisdiction, composite polities and the political imagination of plural law.",
+   "url": "https://doi.org/10.18574/nyu/9780814771167.001.0001",
+   "kind": "book"
+  },
+  {
    "author": "Richard M. Eaton",
    "title": "A Social History of the Deccan, 1300–1761: Eight Indian Lives (The New Cambridge History of India, I.8)",
    "publisher": "Cambridge University Press",
@@ -34,6 +61,15 @@ window.DECCAN_READINGS = {
    "year": 1993,
    "note": "The standard one-volume English history of the Maratha polity from the Deccan sultanate service families to the fall of the Peshwa. Strong on revenue and military organisation; the obvious spine for periods 2 to 5.",
    "url": "https://doi.org/10.1017/CHOL9780521268837",
+   "kind": "book"
+  },
+  {
+   "author": "Dirk H. A. Kolff",
+   "title": "Naukar, Rajput, and Sepoy: The Ethnohistory of the Military Labour Market in Hindustan, 1450–1850",
+   "publisher": "Cambridge University Press",
+   "year": 1990,
+   "note": "A northern-Indian study, but a valuable comparator for military service, mobile warrior labour and the limits of assuming fixed ethnic-state identities. ### Source caution The bakhars are indispensable but should not be treated as transparent factual narratives. Their date of composition, manuscript history, patronage and relationship to later colonial and nationalist historiography are part of the evidence. —",
+   "url": "https://search.worldcat.org/search?q=Kolff+Naukar+Rajput+and+Sepoy",
    "kind": "book"
   },
   {
@@ -70,6 +106,15 @@ window.DECCAN_READINGS = {
    "year": 1989,
    "note": "A short interpretative history of the empire, arguing for a segmentary state with a strong military core. Brief, and contested in its model, but the usual starting point.",
    "url": "https://doi.org/10.1017/CHOL9780521266932",
+   "kind": "book"
+  },
+  {
+   "author": "Philip J. Stern",
+   "title": "The Company-State: Corporate Sovereignty and the Early Modern Foundations of the British Empire in India",
+   "publisher": "Oxford University Press",
+   "year": 2011,
+   "note": "Essential for the Company's status as a political and sovereign body before territorial conquest, deriving authority from overlapping European and Asian grants, jurisdictions and practices.",
+   "url": "https://doi.org/10.1093/acprof:oso/9780195393736.001.0001",
    "kind": "book"
   },
   {
@@ -110,6 +155,15 @@ window.DECCAN_READINGS = {
   }
  ],
  "6": [
+  {
+   "author": "Lauren Benton and Lisa Ford",
+   "title": "Rage for Order: The British Empire and the Origins of International Law, 1800–1850",
+   "publisher": "Harvard University Press",
+   "year": 2016,
+   "note": "Best used for the later transition: how officials increasingly tried to order plural jurisdictions and peripheral violence within a more coherent imperial hierarchy. ### Methodological caution “Sovereignty” should remain a question, not an answer. The project should actively test at least four alternatives: kingship and protection; fiscal and service claims; jurisdiction; and political allegiance. An institution can be important without being best described as an expression of sovereignty. —",
+   "url": "https://doi.org/10.4159/9780674972780",
+   "kind": "book"
+  },
   {
    "author": "Francis Buchanan",
    "title": "A Journey from Madras through the Countries of Mysore, Canara, and Malabar, 3 vols",
@@ -192,6 +246,15 @@ window.DECCAN_READINGS = {
    "kind": "book"
   },
   {
+   "author": "Michael H. Fisher",
+   "title": "Indirect Rule in India: Residents and the Residency System, 1764–1858",
+   "publisher": "Oxford University Press",
+   "year": 1991,
+   "note": "The best broad study of the Residency system and the emergence of a specialised British 'political' service. Hyderabad is central to the larger problem even when the book ranges across India.",
+   "url": "https://search.worldcat.org/search?q=Michael+Fisher+Indirect+Rule+in+India+Residents",
+   "kind": "book"
+  },
+  {
    "author": "Robert Eric Frykenberg",
    "title": "Guntur District 1788–1848: A History of Local Influence and Central Authority in South India",
    "publisher": "Clarendon Press, Oxford",
@@ -230,6 +293,15 @@ window.DECCAN_READINGS = {
  ],
  "5": [
   {
+   "author": "C. A. Bayly",
+   "title": "Rulers, Townsmen and Bazaars: North Indian Society in the Age of British Expansion, 1770–1870",
+   "publisher": "Cambridge University Press",
+   "year": 1983,
+   "note": "Northern Indian in emphasis but conceptually invaluable on merchants, information, credit and the political economy of state formation.",
+   "url": "https://search.worldcat.org/search?q=Bayly+Rulers+Townsmen+and+Bazaars",
+   "kind": "book"
+  },
+  {
    "author": "Tipu Sultan, translated by William Kirkpatrick",
    "title": "Select Letters of Tippoo Sultan to Various Public Functionaries",
    "publisher": "Black, Parry, and Kingsbury, London",
@@ -237,6 +309,33 @@ window.DECCAN_READINGS = {
    "note": "Translations of some four hundred of Tipu's official letters of 1785–1786, taken from Seringapatam in 1799 and published with hostile commentary by the Company's Persian translator. The main body of Tipu's own words in English, to be read with the editor's bias in mind.",
    "url": "https://archive.org/details/selectlettersoft00tipu",
    "kind": "primary"
+  },
+  {
+   "author": "Pamela Nightingale",
+   "title": "Trade and Empire in Western India, 1784–1806",
+   "publisher": "Cambridge University Press",
+   "year": 1970,
+   "note": "Important for the Bombay Presidency, commercial interests and imperial expansion before and during the Second Anglo-Maratha War.",
+   "url": "https://search.worldcat.org/search?q=Nightingale+Trade+and+Empire+in+Western+India+1784-1806",
+   "kind": "book"
+  },
+  {
+   "author": "Lakshmi Subramanian",
+   "title": "Indigenous Capital and Imperial Expansion: Bombay, Surat and the West Coast",
+   "publisher": "Oxford University Press",
+   "year": 1996,
+   "note": "Essential for merchants, credit, Bombay and the Indian commercial networks through which Company power expanded.",
+   "url": "https://search.worldcat.org/search?q=Subramanian+Indigenous+Capital+and+Imperial+Expansion+Bombay+Surat",
+   "kind": "book"
+  },
+  {
+   "author": "Robert Travers",
+   "title": "Ideology and Empire in Eighteenth-Century India: The British in Bengal",
+   "publisher": "Cambridge University Press",
+   "year": 2007,
+   "note": "Bengal is the case study, but the conceptual problem is directly relevant: how Company rulers used and reconstructed Mughal forms to legitimate new authority.",
+   "url": "https://doi.org/10.1017/CBO9780511497438",
+   "kind": "book"
   },
   {
    "author": "Mark Wilks",
@@ -321,6 +420,24 @@ window.DECCAN_READINGS = {
   }
  ],
  "4": [
+  {
+   "author": "Muzaffar Alam",
+   "title": "The Crisis of Empire in Mughal North India: Awadh and Punjab, 1707–48",
+   "publisher": "Oxford University Press, 2nd edition",
+   "year": 2013,
+   "note": "Geographically outside the Deccan but historiographically indispensable for understanding regionalisation without equating it with instantaneous imperial disappearance.",
+   "url": "https://doi.org/10.1093/acprof:oso/9780198077411.001.0001",
+   "kind": "book"
+  },
+  {
+   "author": "Satish Chandra",
+   "title": "Parties and Politics at the Mughal Court, 1707–1740",
+   "publisher": "Oxford University Press, 4th edition",
+   "year": 2002,
+   "note": "First published 1959. Useful background to post-Aurangzeb court politics and the imperial context in which the Nizam and Maratha claims developed. ### Productive tension Richards establishes the institutional reality and coercive reach of Mughal centralisation. Hasan shows how that authority was made and remade through local relations. Alam shows that regionalisation could preserve Mughal forms while redistributing power. These positions should be read against one another. —",
+   "url": "https://search.worldcat.org/search?q=Satish+Chandra+Parties+and+Politics+at+the+Mughal+Court",
+   "kind": "book"
+  },
   {
    "author": "James Grant Duff",
    "title": "A History of the Mahrattas, 3 vols",
@@ -459,6 +576,42 @@ window.DECCAN_READINGS = {
  ],
  "3": [
   {
+   "author": "Jos J. L. Gommans",
+   "title": "Mughal Warfare: Indian Frontiers and High Roads to Empire, 1500–1700",
+   "publisher": "Routledge",
+   "year": 2002,
+   "note": "Particularly useful for cavalry, military labour, communications, frontiers and the physical mechanics of projecting power.",
+   "url": "https://doi.org/10.4324/9780203402580",
+   "kind": "book"
+  },
+  {
+   "author": "Irfan Habib",
+   "title": "The Agrarian System of Mughal India, 1556–1707",
+   "publisher": "Oxford University Press, 2nd revised edition",
+   "year": 1999,
+   "note": "Fundamental for land revenue, zamindars, jagirdars, agrarian production and the fiscal foundations of Mughal power. The second edition (1999) remains widely cited; use one edition consistently.",
+   "url": "https://india.oup.com/product/the-agrarian-system-of-mughal-india-1556-1707-9780198077428/",
+   "kind": "book"
+  },
+  {
+   "author": "Farhat Hasan",
+   "title": "State and Locality in Mughal India: Power Relations in Western India, c.1572–1730",
+   "publisher": "Cambridge University Press",
+   "year": 2004,
+   "note": "Crucial for seeing imperial sovereignty as a process negotiated through locality, officials, merchants and local power-holders rather than merely as a structure emanating from court.",
+   "url": "https://search.worldcat.org/search?q=Farhat+Hasan+State+and+Locality+in+Mughal+India",
+   "kind": "book"
+  },
+  {
+   "author": "Om Prakash",
+   "title": "European Commercial Enterprise in Pre-Colonial India (The New Cambridge History of India, II.5)",
+   "publisher": "Cambridge University Press",
+   "year": 1998,
+   "note": "The best broad synthesis for placing European companies inside rather than outside Indian commercial and political systems.",
+   "url": "https://doi.org/10.1017/CHOL9780521257589",
+   "kind": "book"
+  },
+  {
    "author": "Krishnaji Anant Sabhasad, translated by Surendra Nath Sen",
    "title": "Siva Chhatrapati: Being a Translation of Sabhasad Bakhar with Extracts from Chitnis and Sivadigvijaya, with Notes",
    "publisher": "University of Calcutta",
@@ -540,6 +693,15 @@ window.DECCAN_READINGS = {
    "note": "Briggs's translation of the Tarikh-i Firishta, written at Bijapur around 1610 and still the main narrative source for the Bahmanis and the successor sultanates. The translation is loose and abridged but has been the working text in English for two centuries.",
    "url": "https://archive.org/details/dli.csl.7467",
    "kind": "source-edition"
+  },
+  {
+   "author": "Emma J. Flatt",
+   "title": "The Courts of the Deccan Sultanates: Living Well in the Persian Cosmopolis",
+   "publisher": "Cambridge University Press",
+   "year": 2019,
+   "note": "Essential for understanding Ahmadnagar, Bijapur and Golconda as political, intellectual and ethical worlds connected to the Persian cosmopolis rather than merely as dynastic precursors to later states.",
+   "url": "https://doi.org/10.1017/9781108680530",
+   "kind": "book"
   },
   {
    "author": "Phillip B. Wagoner",
@@ -814,6 +976,24 @@ window.DECCAN_READINGS = {
    "note": "The official enquiry into the attacks on moneylenders at Supa, Kedgaon and the surrounding villages in May 1875 – its evidence on debt, civil-court decrees and land transfer made the Deccan ryot a fixture of Indian economic debate. Its diagnosis led directly to the Deccan Agriculturists' Relief Act of 1879.",
    "url": "https://search.worldcat.org/title/report-of-the-committee-on-the-riots-in-poona-and-ahmednagar-1875-with-appendices/oclc/496461176",
    "kind": "primary"
+  },
+  {
+   "author": "Thomas R. Metcalf",
+   "title": "Ideologies of the Raj (The New Cambridge History of India, III.4)",
+   "publisher": "Cambridge University Press",
+   "year": 1994,
+   "note": "A broader nineteenth-century synthesis useful for situating western Indian institutional change within changing British ideas of rule.",
+   "url": "https://doi.org/10.1017/CHOL9780521395472",
+   "kind": "book"
+  },
+  {
+   "author": "Barbara N. Ramusack",
+   "title": "The Indian Princes and their States (The New Cambridge History of India, III.6)",
+   "publisher": "Cambridge University Press",
+   "year": 2003,
+   "note": "Later and broader than the collection's core period, but useful for locating Hyderabad and Mysore within the longer history of indirect rule, subordinate alliance and princely sovereignty. —",
+   "url": "https://doi.org/10.1017/CHOL9780521267274",
+   "kind": "book"
   },
   {
    "author": "M. G. Ranade",
