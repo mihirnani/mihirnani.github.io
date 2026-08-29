@@ -1,20 +1,17 @@
 """Build atlas/data/places.js: places of the Deccan and Basalt collections, normalised and merged.
 Only ids are stored per place; titles and dates are read from the collections' own entries.js at load.
-Run: python3 atlas/tools/make_places.py  (needs node to read the data files)"""
-import json, re, subprocess
-import os
+Run: python3 atlas/tools/make_places.py"""
+import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))                 # the site repository
 GAZE = os.environ.get("GAZE_DIR", os.path.abspath(os.path.join(ROOT, "..", "european-gaze")))   # the map collection's repository
 OUT = os.path.join(ROOT, "atlas", "data", "places.js")
 
-def load(path, var):
-    js = ("const fs=require('fs'),vm=require('vm');const w={};vm.runInNewContext(fs.readFileSync(%r,'utf8'),{window:w});"
-          "process.stdout.write(JSON.stringify(w[%r]));" % (path, var))
-    return json.loads(subprocess.check_output(["node", "-e", js]))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+from data import load
 
-deccan = load(f"{ROOT}/deccan/data/entries.js", "DECCAN_ENTRIES")
-basalt = load(f"{ROOT}/basalt-and-laterite/data/entries.js", "BL_ENTRIES")
+deccan = load(f"{ROOT}/deccan/data/entries.js")
+basalt = load(f"{ROOT}/basalt-and-laterite/data/entries.js")
 
 # Spelling variants -> one canonical name (the collection's most common modern form, old name in brackets)
 ALIAS = {
@@ -23,8 +20,12 @@ ALIAS = {
     "gulbarga (kalaburagi)": "Kalaburagi (Gulbarga)", "kalaburagi (gulbarga)": "Kalaburagi (Gulbarga)",
     "mysore": "Mysuru (Mysore)", "mysuru": "Mysuru (Mysore)",
     "vasai (bassein)": "Vasai (Bassein)", "vasai": "Vasai (Bassein)",
+    "vasai (bassein, baçaim)": "Vasai (Bassein)",
     "vijayapura (bijapur)": "Bijapur", "bijapur": "Bijapur",
+    "bijapur (vijayapura)": "Bijapur",
     "hyderabad and golconda": "Hyderabad", "hyderabad": "Hyderabad",
+    "bombay (mumbai)": "Mumbai", "mumbai": "Mumbai",
+    "achalpur (elichpur)": "Achalpur", "achalpur": "Achalpur",
     "mahabaleshwar crest": "Mahabaleshwar", "mahabaleshwar": "Mahabaleshwar",
     "pollilur": "Pollilur",
     "rakkasagi-tangadagi": "Rakkasagi-Tangadagi (Talikota)",
@@ -37,7 +38,19 @@ STATES = {"Maharashtra", "Karnataka", "Telangana", "Andhra Pradesh", "Tamil Nadu
 QUALIFIER = re.compile(r"^(near |on the |source of the )|\bdistrict$|\bvalley$", re.I)
 
 def split(place):
-    parts = [p.strip() for p in place.split(",")]
+    """'Vasai (Bassein, Baçaim), Maharashtra' -> (['Vasai (Bassein, Baçaim)'], 'Maharashtra').
+    Commas inside brackets belong to the name, not to the address."""
+    parts, depth, buf = [], 0, ""
+    for ch in place:
+        if ch in "([":
+            depth += 1
+        elif ch in ")]":
+            depth = max(0, depth - 1)
+        if ch == "," and depth == 0:
+            parts.append(buf.strip()); buf = ""
+        else:
+            buf += ch
+    parts.append(buf.strip())
     state = parts[-1] if len(parts) > 1 and parts[-1] in STATES else ""
     core = parts[:-1] if state else parts
     return core, state

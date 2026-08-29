@@ -1,5 +1,5 @@
-/* gaze.js – the map list of The European Gaze on India, read from the collection's filenames
-   (YEAR__Region__Maker__Title.html), page titles and room pages. Generated; regenerate rather than edit. */
+/* gaze.js – the map list of The European Gaze on India, taken from that collection's
+   data/maps.js and data/rooms.js. Generated; regenerate rather than edit. */
 window.ATLAS_GAZE = {
  "base": "https://naniwadekar.com/european-gaze/",
  "rooms": [
@@ -21,7 +21,7 @@ window.ATLAS_GAZE = {
   {
    "n": 4,
    "file": "04_Home-Ground-Bombay-and-Deccan.html",
-   "title": "Home Ground Bombay and Deccan"
+   "title": "Home Ground: Bombay and the Deccan"
   },
   {
    "n": 5,

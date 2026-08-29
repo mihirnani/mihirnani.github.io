@@ -7,11 +7,16 @@ this runs them in the right order:
   1. tools/shell.py            the shared <head>, masthead and footer of the two
                                timeline collections, and their copy of the
                                shared stylesheet
-  2. atlas/tools/make_snapshot.py   the atlas's local copies of the collections'
+  2. ../european-gaze/build.py the map collection's pages, from its own data
+                               files (skipped if that repository is not beside
+                               this one)
+  3. atlas/tools/make_snapshot.py   the atlas's local copies of the collections'
                                data, used only when the atlas is opened from a
                                local folder
-  3. text/build.py             the text edition: one static page per entry
-  4. essays/build.py           the essays, their index and their feed
+  4. atlas/tools/make_gaze.py  the atlas's map layer, from the map collection's data
+  5. atlas/tools/make_places.py     the atlas's places index
+  6. text/build.py             the text edition: one static page per entry
+  7. essays/build.py           the essays, their index and their feed
 
 Run it after editing any data file, any page body, or assets/collection.css.
 Everything it writes is derived; the data files and page bodies are the source.
@@ -19,7 +24,8 @@ Everything it writes is derived; the data files and page bodies are the source.
 import pathlib, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-STEPS = ["tools/shell.py", "atlas/tools/make_snapshot.py", "text/build.py", "essays/build.py"]
+STEPS = ["tools/shell.py", "../european-gaze/build.py", "atlas/tools/make_snapshot.py",
+         "atlas/tools/make_gaze.py", "atlas/tools/make_places.py", "text/build.py", "essays/build.py"]
 
 def main():
     failed = []
