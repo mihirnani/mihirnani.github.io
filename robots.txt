@@ -13,3 +13,4 @@ Sitemap: https://naniwadekar.com/deccan/sitemap.xml
 Sitemap: https://naniwadekar.com/essays/sitemap.xml
 Sitemap: https://naniwadekar.com/basalt-and-laterite/sitemap.xml
 Sitemap: https://naniwadekar.com/atlas/sitemap.xml
+Sitemap: https://naniwadekar.com/text/sitemap.xml
