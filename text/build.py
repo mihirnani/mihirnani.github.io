@@ -79,7 +79,7 @@ def map_title(fn):
     parts = fn.replace(".html", "").split("__")
     year = re.sub(r"^c", "", parts[0])
     name = parts[-1].replace("-", " ")
-    maker = parts[2].replace("-", " ") if len(parts) > 2 else ""
+    maker = parts[2].replace("-", " ") if len(parts) > 3 else ""
     return "%s, %s (%s)" % (maker, name, year) if maker else "%s (%s)" % (name, year)
 
 def fmt_age(a):
@@ -102,8 +102,7 @@ def sort_title(title):
 
 # ---------------------------------------------------------------- page shell
 NAV = [("deccan/index.html", "Deccan"), ("deccan/chronology.html", "Chronology"),
-       ("deccan/reading.html", "Reading"), ("deccan/by-title.html", "A–Z"),
-       ("basalt/index.html", "Basalt")]
+       ("deccan/reading.html", "Reading"), ("basalt/index.html", "Basalt")]
 
 def page(rel, title, desc, body):
     """Write one page.  rel is the path below text/, e.g. deccan/hampi.html."""

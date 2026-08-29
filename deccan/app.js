@@ -19,7 +19,7 @@
 
   function mapTitle(fn) {
     var p = fn.replace(".html", "").split("__");
-    var yr = p[0].replace(/^c/, ""), name = p[p.length - 1].replace(/-/g, " "), maker = p.length > 2 ? p[2].replace(/-/g, " ") : "";
+    var yr = p[0].replace(/^c/, ""), name = p[p.length - 1].replace(/-/g, " "), maker = p.length > 3 ? p[2].replace(/-/g, " ") : "";
     return maker ? maker + ", " + name + " (" + yr + ")" : name + " (" + yr + ")";
   }
   function setTitle(t, desc) {
