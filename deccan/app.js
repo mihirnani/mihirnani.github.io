@@ -22,6 +22,12 @@
     var yr = p[0].replace(/^c/, ""), name = p[p.length - 1].replace(/-/g, " "), maker = p.length > 3 ? p[2].replace(/-/g, " ") : "";
     return maker ? maker + ", " + name + " (" + yr + ")" : name + " (" + yr + ")";
   }
+  /* An entry's picture, when it has one: the image on a mat, the caption and credit beneath. */
+  function figure(e) {
+    var im = e.image; if (!im) return "";
+    var cap = E(im.caption) + ' <span class="credit">Photograph: <a href="' + E(im.source) + '" target="_blank" rel="noopener noreferrer">' + E(im.credit) + '</a>, <a href="' + E(im.license_url) + '" target="_blank" rel="noopener noreferrer">' + E(im.license) + "</a>" + (im.note ? ", " + E(im.note) : "") + ".</span>";
+    return '<figure class="entry-fig"><div class="mat"><img src="' + E(im.file) + '" alt="' + E(im.alt) + '" width="' + im.width + '" height="' + im.height + '" loading="lazy"></div><figcaption>' + cap + "</figcaption></figure>";
+  }
   function setTitle(t, desc) {
     document.title = t;
     var m = document.querySelector('meta[name="description"]'); if (m && desc) m.setAttribute("content", desc);
@@ -229,7 +235,7 @@
     var srcs = srcMain.map(srcLi).join(""), refs = srcRef.map(srcLi).join("");
     var byline = [e.date_label, KIND[e.kind], e.place || ""].filter(Boolean).join(" · ");
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#p' + p.n + '">← ' + E(p.title) + ', ' + E(p.years) + '</a></p>' +
-      '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + '</div></div>' +
+      '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + '</div></div>' + figure(e) +
       '<div class="prose">' + e.body + '</div>' +
       '<div class="story"><p class="subhead">In the story</p><p>' + e.story + '</p></div>' +
       '<div class="prose">' + maps + '</div>' +

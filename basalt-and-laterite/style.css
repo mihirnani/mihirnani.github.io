@@ -459,6 +459,14 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
 .elist .s{font-size:.9rem; color:var(--paper-dim); margin:0}
 .elist .k{font-size:.66rem; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-top:.3rem}
 .entry-head{max-width:var(--measure)}
+/* an entry's picture: on a mat like the map plates, the caption and credit beneath */
+.entry-fig{margin:0 0 2rem; max-width:var(--measure)}
+.entry-fig .mat{background:var(--mat); border:1px solid var(--line); padding:.6rem}
+.entry-fig img{display:block; max-width:100%; height:auto; margin:0 auto}  /* a small picture stays its own size */
+.entry-fig figcaption{margin:.6rem .1rem 0; font-size:.88rem; line-height:1.5; color:var(--paper-dim)}
+.entry-fig .credit{color:var(--muted); font-size:.8rem}
+.entry-fig .credit a{color:var(--muted); text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:.15em}
+.entry-fig .credit a:hover{color:var(--accent-bright)}
 .entry-head h1{font-family:'Cormorant Garamond',serif; font-weight:500; font-size:clamp(2rem,5vw,3.2rem); line-height:1.05; margin:.1em 0 .3em; color:var(--paper)}
 .entry-head .byline{color:var(--muted); font-style:italic; margin:0 0 1.4rem}
 .story{border-left:2px solid var(--accent); padding:.2rem 0 .2rem 1.1rem; margin:1.6rem 0; color:var(--paper-dim); max-width:var(--measure)}

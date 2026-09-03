@@ -31,7 +31,19 @@ window.BL_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Peninsular_Gneiss"
    }
   ],
-  "deccan": []
+  "deccan": [],
+  "image": {
+   "file": "img/peninsular-gneiss.jpg",
+   "width": 1600,
+   "height": 1200,
+   "alt": "Bare grey gneiss sloping up to the Kempegowda tower at Lalbagh, Bengaluru",
+   "caption": "The Peninsular Gneiss at Lalbagh, Bengaluru: the bare rock of the hill, with the Kempegowda tower on its crest. A national geological monument since 1975.",
+   "credit": "Utpal Basu",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Peninsular_Gneiss_in_the_Lalbagh_Botanical_Garden_-_panoramio_(1).jpg",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "dharwar-greenstones",
@@ -64,7 +76,19 @@ window.BL_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Dharwar_Craton"
    }
   ],
-  "deccan": []
+  "deccan": [],
+  "image": {
+   "file": "img/dharwar-greenstones.jpg",
+   "width": 962,
+   "height": 559,
+   "alt": "Relief map of peninsular India and the surrounding ocean floor with the Dharwar craton outlined",
+   "caption": "The Dharwar craton, outlined, on a relief map of the peninsula and the ocean floor around it.",
+   "credit": "Skhlaw",
+   "source": "https://commons.wikimedia.org/wiki/File:Dharwar_Craton.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "kolar-gold",
@@ -137,7 +161,19 @@ window.BL_ENTRIES = [
     "id": "hampi-virupaksha",
     "label": "Virupaksha and the sacred centre (before 1500)"
    }
-  ]
+  ],
+  "image": {
+   "file": "img/closepet-granite.jpg",
+   "width": 1600,
+   "height": 1067,
+   "alt": "Rounded granite boulders along the Tungabhadra river at Hampi",
+   "caption": "Boulders of the Closepet Granite on the Tungabhadra at Hampi – the stone of Vijayanagara, weathered into the rounded forms the city was built among.",
+   "credit": "Vyacheslav Argenberg",
+   "source": "https://commons.wikimedia.org/wiki/File:Hampi,_Tungabhadra_River,_India.jpg",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "cuddapah-basin",
@@ -384,7 +420,19 @@ window.BL_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Deccan_Traps"
    }
   ],
-  "deccan": []
+  "deccan": [],
+  "image": {
+   "file": "img/deccan-traps.jpg",
+   "width": 1600,
+   "height": 987,
+   "alt": "Satellite view of stepped basalt hills in Maharashtra",
+   "caption": "The Deccan Traps from orbit: flat-topped hills and terraced slopes in Maharashtra, each step a lava flow, in a SkySat image of 22 March 2018.",
+   "credit": "Planet Labs Inc.",
+   "source": "https://commons.wikimedia.org/wiki/File:Deccan_Traps_Maharashtra_India_22Mar2018_SkySat.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "intertrappean-beds",
@@ -601,7 +649,19 @@ window.BL_ENTRIES = [
   ],
   "related_maps": [
    "1893__India__Bartholomew__Land-Surface-Features.html"
-  ]
+  ],
+  "image": {
+   "file": "img/laterite.jpg",
+   "width": 376,
+   "height": 816,
+   "alt": "Carved laterite pillars of a temple",
+   "caption": "Laterite cut and carved for a temple: the porous, rust-coloured stone that hardens in air.",
+   "credit": "Kishore Verma",
+   "source": "https://commons.wikimedia.org/wiki/File:Laterite_stone_temple.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "monsoon",
@@ -825,7 +885,19 @@ window.BL_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Hire_Benakal"
    }
   ],
-  "deccan": []
+  "deccan": [],
+  "image": {
+   "file": "img/megaliths-iron.jpg",
+   "width": 1600,
+   "height": 1200,
+   "alt": "Granite slab dolmens on a rocky hilltop at Hire Benakal",
+   "caption": "Dolmens at Hire Benakal, Koppal district: slabs of the local granite set up as tombs in the Iron Age, several hundred of them on one hill.",
+   "credit": "Sudeep M",
+   "source": "https://commons.wikimedia.org/wiki/File:Pre-historic_tombs-1.JPG",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "water-between-the-flows",
@@ -911,7 +983,19 @@ window.BL_ENTRIES = [
     "id": "railway-bhor-ghat",
     "label": "The railway climbs the ghats (1853–1863)"
    }
-  ]
+  ],
+  "image": {
+   "file": "img/basalt-caves.jpg",
+   "width": 1600,
+   "height": 1200,
+   "alt": "The carved facade of Ellora Cave 10 cut into the basalt cliff",
+   "caption": "Cave 10 at Ellora, the Vishvakarma chaitya, cut into the basalt of the Trap in the seventh century: the rock is the building.",
+   "credit": "Shivashanky",
+   "source": "https://commons.wikimedia.org/wiki/File:Ellora_Cave_No._10.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "stones-of-the-forts",

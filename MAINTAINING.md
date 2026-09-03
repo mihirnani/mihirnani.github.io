@@ -91,6 +91,20 @@ deploys the three site repositories on push, usually within a minute or two;
    file page itself, not from memory.
 3. No build: the page reads the JSON directly. Check, commit, push.
 
+### Add a picture to a Deccan or Basalt entry
+
+1. Save the image in the site repository as `deccan/img/<id>.jpg` or
+   `basalt-and-laterite/img/<id>.jpg`, about 1,600 px on the long side (never upscale a
+   small one). Note its pixel width and height.
+2. In the entry's Markdown, add an `image` block to the front matter — copy one from a
+   Basalt entry that has one: `file` (`img/<id>.jpg`), `width`, `height`, `alt`, `caption`,
+   `credit` (the photographer), `source` (the Commons file page or wherever it came from),
+   `license` and `license_url`, and `note` ("via Wikimedia Commons, resized"). For a
+   Commons image, take the author and licence from the file page itself.
+3. Build, check, commit, push — the text repo and the hub. The build refuses an entry
+   whose image block is incomplete or whose file is not in the repository. The text
+   edition carries no pictures, by design.
+
 ### Add a bird species
 
 Copy a record in `birds.json`, give it a new `id` (the URL hash), and fill in every field;
