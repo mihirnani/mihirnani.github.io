@@ -235,6 +235,15 @@
 
     .col { margin-top: 0; }
 
+    /* The two columns share their rows, so the second entry in each starts on the same
+       line and the rules between entries line up across the page. (Browsers without
+       subgrid simply stack each column on its own, as before.) */
+    @supports (grid-template-rows: subgrid) {
+      .columns { grid-template-rows: auto auto auto; row-gap: 0; }
+      .col { display: grid; grid-template-rows: subgrid; grid-row: span 3; }
+      .col .projects { display: contents; }
+    }
+
     .col-intro {
       margin: 0 0 0.8rem;
       color: var(--muted);
