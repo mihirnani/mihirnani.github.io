@@ -91,7 +91,7 @@ window.ATLAS_GAZE = {
    "room": 1
   },
   {
-   "file": "1595__India-Arabia__Linschoten__Southwest-Asia.html",
+   "file": "1596__India-Arabia__Linschoten__Southwest-Asia.html",
    "year": 1595,
    "approx": false,
    "date_label": "1596",
@@ -411,7 +411,7 @@ window.ATLAS_GAZE = {
    "room": 3
   },
   {
-   "file": "c1820__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
+   "file": "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
    "year": 1820,
    "approx": true,
    "date_label": "1808",

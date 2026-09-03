@@ -1200,7 +1200,7 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1519__IndianOcean__Hollanda-Reinel__Folio-3-recto-North-Indian-ocean.html",
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html"
+   "1596__India-Arabia__Linschoten__Southwest-Asia.html"
   ]
  },
  {
@@ -1478,7 +1478,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html",
+   "1596__India-Arabia__Linschoten__Southwest-Asia.html",
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
    "1946__Ministerio-das-Colonias__Goa-Daman-Diu.html"
   ]
@@ -1645,7 +1645,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html",
+   "1596__India-Arabia__Linschoten__Southwest-Asia.html",
    "1946__Ministerio-das-Colonias__Goa-Daman-Diu.html"
   ]
  },
@@ -1888,7 +1888,7 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html",
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html"
+   "1596__India-Arabia__Linschoten__Southwest-Asia.html"
   ],
   "period": 3
  },
@@ -2250,7 +2250,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "1595__India-Arabia__Linschoten__Southwest-Asia.html"
+   "1596__India-Arabia__Linschoten__Southwest-Asia.html"
   ],
   "period": 3
  },
@@ -3895,7 +3895,7 @@ window.DECCAN_ENTRIES = [
    }
   ],
   "related_maps": [
-   "c1820__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
+   "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
    "1922__India__Survey-of-India__GTS-Index.html",
    "1782__India__Rennell__Hindoostan-2-Sheet.html"
   ]
