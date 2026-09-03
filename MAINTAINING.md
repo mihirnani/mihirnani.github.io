@@ -49,6 +49,8 @@ deploys the three site repositories on push, usually within a minute or two;
    in the entry's `related_maps`, and the entry goes in the `deccan` list of
    `curiosities-text/maps/<map-id>.md` (the label there is `title (date_label)`, exactly as
    in the entry). The entry page then names the map and the map page names the entry.
+   A Basalt entry links to maps the same way — `related_maps` on the entry, a `basalt` list
+   on the map — and to Deccan entries through its `deccan` list.
 4. Build, check, commit, push.
 
 ### Add a map to The European Gaze

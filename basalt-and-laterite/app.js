@@ -5,6 +5,12 @@
 (function () {
   "use strict";
   var DEC = "https://naniwadekar.com/deccan/";
+  var EG = "https://naniwadekar.com/european-gaze/";
+  function mapTitle(fn) {
+    var p = fn.replace(".html", "").split("__");
+    var yr = p[0].replace(/^c/, ""), name = p[p.length - 1].replace(/-/g, " "), maker = p.length > 3 ? p[2].replace(/-/g, " ") : "";
+    return maker ? maker + ", " + name + " (" + yr + ")" : name + " (" + yr + ")";
+  }
   var ROCK = {craton: "The old craton", basin: "Sedimentary basins", plate: "The moving plate", basalt: "The Traps",
     land: "Landforms and rivers", laterite: "Laterite", soil: "Soil", life: "Life", people: "People and stone"};
   var KIND = {formation: "Formation", process: "Process", event: "Event", place: "Place", object: "Object", person: "Person", document: "Document"};
@@ -225,6 +231,7 @@
     var nav = '<nav class="mapnav">' + (prev ? '<a class="prev" href="#' + prev.id + '"><span class="dir">← Previous · ' + E(prev.date_label) + '</span><span class="nt">' + E(prev.title) + "</span></a>" : "") +
       (nxt ? '<a class="next" href="#' + nxt.id + '"><span class="dir">Next · ' + E(nxt.date_label) + ' →</span><span class="nt">' + E(nxt.title) + "</span></a>" : "") + "</nav>";
     var dl = e.deccan && e.deccan.length ? '<p class="subhead">In the Deccan timeline</p><p>' + e.deccan.map(function (d) { return '<a href="' + DEC + "#" + d.id + '">' + E(d.label) + "</a>"; }).join(" · ") + "</p>" : "";
+    var ml = e.related_maps && e.related_maps.length ? '<p class="subhead">In the map collection</p><p>' + e.related_maps.map(function (fn) { return '<a href="' + EG + fn + '">' + E(mapTitle(fn)) + "</a>"; }).join(" · ") + "</p>" : "";
     var srcLi = function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + "</a></li>"; };
     var isRef = function (s) { return /^(Wikipedia|Britannica)/.test(s.title); };
     var srcMain = e.sources.filter(function (s) { return !isRef(s); }), srcRef = e.sources.filter(isRef);
@@ -235,7 +242,7 @@
       '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + "</div></div>" +
       '<div class="prose">' + e.body + "</div>" +
       '<div class="story"><p class="subhead">In the story</p><p>' + e.story + "</p></div>" +
-      '<div class="prose">' + dl + "</div>" +
+      '<div class="prose">' + dl + ml + "</div>" +
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + "</ul>" + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + "</ul>" : "") + "</div>" +
       '<dl class="meta"><dt>Age</dt><dd>' + E(e.date_label) + (e.age >= 1e6 ? " (about " + fmtAge(e.age) + " ago)" : "") + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ", " + E(p.years) + "</a></dd>" +
       "<dt>Material</dt><dd>" + e.rocks.map(function (x) { return ROCK[x]; }).join(" · ") + "</dd><dt>Kind</dt><dd>" + KIND[e.kind] + "</dd>" +

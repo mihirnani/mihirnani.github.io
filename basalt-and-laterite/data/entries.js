@@ -243,6 +243,11 @@ window.BL_ENTRIES = [
     "id": "golconda-diamonds",
     "label": "Golconda and its diamonds (1518–1590)"
    }
+  ],
+  "related_maps": [
+   "1733__SouthIndia__Homann-Heirs__Malabar-Coromandel-Ceylon.html",
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html",
+   "1719__SouthIndia__Chatelain__Carte-Nouvelle-des-Terres.html"
   ]
  },
  {
@@ -512,6 +517,10 @@ window.BL_ENTRIES = [
     "id": "railway-bhor-ghat",
     "label": "The railway climbs the ghats (1853–1863)"
    }
+  ],
+  "related_maps": [
+   "1800__India__Faden__India-Peninsula.html",
+   "1809__Malabar__Arrowsmith__Province-of-Malabar-Composite.html"
   ]
  },
  {
@@ -549,6 +558,9 @@ window.BL_ENTRIES = [
     "id": "raichur-doab-frontier",
     "label": "The Raichur doab (c. 1350–1565)"
    }
+  ],
+  "related_maps": [
+   "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
   ]
  },
  {
@@ -586,6 +598,9 @@ window.BL_ENTRIES = [
     "id": "bidar",
     "label": "Bidar (c. 1430–1619)"
    }
+  ],
+  "related_maps": [
+   "1893__India__Bartholomew__Land-Surface-Features.html"
   ]
  },
  {
@@ -705,6 +720,9 @@ window.BL_ENTRIES = [
     "id": "deccan-riots-1875",
     "label": "The Deccan Riots (May–June 1875)"
    }
+  ],
+  "related_maps": [
+   "1893__India__Bartholomew__Land-Surface-Features.html"
   ]
  },
  {
@@ -943,6 +961,9 @@ window.BL_ENTRIES = [
     "id": "bijapur-golconda-fall-1687",
     "label": "Aurangzeb takes Bijapur and Golconda (1686–1687)"
    }
+  ],
+  "related_maps": [
+   "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
   ]
  },
  {
@@ -981,6 +1002,11 @@ window.BL_ENTRIES = [
     "id": "golconda-diamonds",
     "label": "Golconda and its diamonds (1518–1590)"
    }
+  ],
+  "related_maps": [
+   "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html",
+   "1733__SouthIndia__Homann-Heirs__Malabar-Coromandel-Ceylon.html",
+   "1719__SouthIndia__Chatelain__Carte-Nouvelle-des-Terres.html"
   ]
  },
  {
@@ -1052,6 +1078,10 @@ window.BL_ENTRIES = [
     "id": "lambton-gts-1802",
     "label": "Lambton and the Great Trigonometrical Survey (10 April 1802)"
    }
+  ],
+  "related_maps": [
+   "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
+   "1922__India__Survey-of-India__GTS-Index.html"
   ]
  },
  {

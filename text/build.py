@@ -466,6 +466,10 @@ def build_basalt(periods, entries, deccan_entries):
             b.append('<h2 class="subhead">In the Deccan timeline</h2><p class="links">%s</p>'
                      % " · ".join('<a href="../deccan/%s.html">%s</a>' % (esc(x["id"]), esc(x["label"]))
                                   for x in e["deccan"] if x["id"] in dec_by_id))
+        if e.get("related_maps"):
+            b.append('<h2 class="subhead">In the map collection</h2><p class="links">%s</p>'
+                     % " · ".join('<a href="%s%s">%s</a>' % (EG, esc(fn), esc(map_title(fn)))
+                                  for fn in e["related_maps"]))
         b.append('<div class="sources">%s</div>' % source_list(e["sources"]))
         dl = ['<dl class="meta">',
               "<dt>Age</dt><dd>%s</dd>" % esc(e["date_label"]),
