@@ -172,7 +172,9 @@
       var k = b.dataset.pol; if (polPick.has(k)) polPick.delete(k); else polPick.add(k);
       apply();
     });
-    document.addEventListener("keydown", function (ev) {
+    /* year keys work only while focus is inside the map section (the map itself is focusable), so they
+       do not take the arrow keys away from the rest of the page */
+    (document.getElementById("map-section") || document).addEventListener("keydown", function (ev) {
       var a = document.activeElement, tag = a && a.tagName;
       if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || ev.altKey || ev.ctrlKey || ev.metaKey) return;
       var step = 0;
@@ -217,7 +219,7 @@
     if (year != null) {
       var per = (window.DECCAN_PERIODS || []).filter(function (p) { return p.start <= year && year < p.end; })[0];
       panel.innerHTML = '<span class="d">' + year + (per ? " · " + E(per.title) + ", " + E(per.years) : "") + "</span><p>" + n + " markers in this year’s window; the rest are faded. " +
-        '<span class="hint">← → move the year, + − step by ten, Esc shows all years.</span></p>';
+        '<span class="hint">With the map focused: ← → move the year, + − step by ten, Esc shows all years.</span></p>';
     }
   }
 

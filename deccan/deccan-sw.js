@@ -1,9 +1,12 @@
 /* The Deccan, 1336–1875 – offline service worker. Pages network-first, shell cached. */
-const VERSION = "v31";
+const VERSION = "v32";
 const PREFIX = "deccan-";
 const APP_CACHE = `${PREFIX}app-${VERSION}`;
 const PAGE_CACHE = `${PREFIX}pages-${VERSION}`;
-const APP_SHELL = ["./", "./index.html", "./about.html", "./style.css", "./offline.html", "./app.js", "./data/entries.js", "./data/periods.js", "./data/readings.js", "./data/chronology.js", "./deccan.webmanifest", "./deccan-icon-192.png", "./deccan-icon-180.png"];
+const APP_SHELL = ["./", "./index.html", "./about.html", "./style.css", "./offline.html", "./app.js", "./data/entries.js", "./data/periods.js", "./data/readings.js", "./data/chronology.js", "./deccan.webmanifest", "./deccan-icon-192.png", "./deccan-icon-180.png",
+  /* the site's self-hosted type, which style.css imports from the domain root */
+  "/assets/fonts/fonts.css", "/assets/fonts/cormorant-garamond-var.woff2", "/assets/fonts/cormorant-garamond-italic-var.woff2",
+  "/assets/fonts/spectral-light.woff2", "/assets/fonts/spectral-regular.woff2", "/assets/fonts/spectral-medium.woff2", "/assets/fonts/spectral-italic.woff2"];
 self.addEventListener("install", (event) => {
   event.waitUntil((async () => {
     const cache = await caches.open(APP_CACHE);

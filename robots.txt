@@ -6,11 +6,3 @@ Disallow: /deccan/offline.html
 Disallow: /deccan/404.html
 
 Sitemap: https://naniwadekar.com/sitemap-index.xml
-Sitemap: https://naniwadekar.com/sitemap.xml
-Sitemap: https://naniwadekar.com/european-gaze/sitemap.xml
-Sitemap: https://naniwadekar.com/sahyadri-birds/sitemap.xml
-Sitemap: https://naniwadekar.com/deccan/sitemap.xml
-Sitemap: https://naniwadekar.com/essays/sitemap.xml
-Sitemap: https://naniwadekar.com/basalt-and-laterite/sitemap.xml
-Sitemap: https://naniwadekar.com/atlas/sitemap.xml
-Sitemap: https://naniwadekar.com/text/sitemap.xml

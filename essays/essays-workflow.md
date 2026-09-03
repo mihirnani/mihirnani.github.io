@@ -41,6 +41,15 @@ of each essay, and refreshes the latest-essays list on the site's front page. Co
 Edit the `.md`, optionally add `updated: YYYY-MM-DD` to its front matter, run the script, commit.
 Do not edit the generated `.html` – the next build overwrites it.
 
+## Listing the section
+
+`essays/build.py` starts with `UNLISTED = True`: every essay page and the index carry
+`<meta name="robots" content="noindex">`, no `sitemap.xml` is written, and the section is
+left out of the site's sitemaps and the front page. When the essays are ready, set it to
+`False`, run the script, add `https://naniwadekar.com/essays/sitemap.xml` to
+`sitemap-index.xml`, and bring the essays column back on the front page (see the note in
+`index.html`).
+
 ## Other things
 
 - A draft you are not ready to publish: give it a name without the date prefix
@@ -49,5 +58,5 @@ Do not edit the generated `.html` – the next build overwrites it.
 - `_shell.html` is the page frame (header, footer, theme toggle) and `style.css` the look;
   `_template.html` is only for an essay written in raw HTML, which still works.
 - The feed title and description are set at the top of `build.py`.
-- The builder uses the Python `markdown` package if it is installed (`pip install markdown`
-  adds tables and a few extras); otherwise its own converter handles everything listed above.
+- The builder has its own small Markdown converter and no dependencies, so the same source
+  gives the same page on every machine; `feed.xml`'s build date is the newest essay's date.

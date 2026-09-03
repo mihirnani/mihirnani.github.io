@@ -142,7 +142,7 @@
       '<p class="measure muted">The story is told through seven periods, from the Peninsular Gneiss to the first geologists. Click a marker on the band or browse the periods below; every entry has its own page, with sources; where the deep history surfaces in the human record, an entry also links into the companion <a href="' + DEC + '">Deccan timeline</a>. Positions on the band are on a logarithmic scale – deep time does not fit a ruler.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a rock, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Material</span>' + chipsRock + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
-      '<div class="tl-wrap" id="tl">' + bandSvg() + "</div>" +
+      '<div class="tl-wrap band" id="tl">' + bandSvg() + "</div>" +
       '<div class="tl-panel" id="tlpanel"><span class="hint">Click a marker for a summary. Each panel is one period; within a panel, positions run on a logarithmic scale from older (left) to younger (right).</span></div>' +
       '<div class="entries" id="entries">' + sections + '<p class="empty" id="empty" hidden>No entries match.</p></div>' +
       '<div class="geo-head period-head" style="margin-top:3.5rem"><span class="no">·</span><span class="ttl">The Deccan on the ground</span><span class="yrs">' + nP + ' places</span><p class="desc">Every entry is anchored to a place; the sketch shows where the deep history surfaces. Marker size follows the number of entries.</p></div>' +
@@ -199,7 +199,7 @@
     app.querySelectorAll(".mk").forEach(function (m) {
       var e = byId[m.dataset.id];
       var ok = (!rockSel.size || e.rocks.some(function (p) { return rockSel.has(p); })) && (!kindSel.size || kindSel.has(e.kind)) && matches(e);
-      m.classList.toggle("dim", !ok);
+      m.classList.toggle("dim", !ok); m.setAttribute("tabindex", ok ? "0" : "-1");
     });
   }
 
@@ -234,7 +234,7 @@
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#p' + p.n + '">← ' + E(p.title) + ", " + E(p.years) + "</a></p>" +
       '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + "</div></div>" +
       '<div class="prose">' + e.body + "</div>" +
-      '<div class="story"><p class="subhead">In the story</p><p>' + E(e.story) + "</p></div>" +
+      '<div class="story"><p class="subhead">In the story</p><p>' + e.story + "</p></div>" +
       '<div class="prose">' + dl + "</div>" +
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + "</ul>" + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + "</ul>" : "") + "</div>" +
       '<dl class="meta"><dt>Age</dt><dd>' + E(e.date_label) + (e.age >= 1e6 ? " (about " + fmtAge(e.age) + " ago)" : "") + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ", " + E(p.years) + "</a></dd>" +

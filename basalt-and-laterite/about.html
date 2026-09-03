@@ -25,7 +25,7 @@
 <a class="navlink" href="https://naniwadekar.com/atlas/">Atlas</a>
 <a class="navlink" href="https://naniwadekar.com/text/">Text</a>
 <a class="navlink" href="about.html">About</a>
-<button aria-label="Toggle light or dark theme" aria-pressed="true" class="theme-toggle" id="themeBtn" type="button">Theme</button></div>
+<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>
 <div class="wrap">
 <p><a class="back" href="index.html">← The collection</a></p>
 <div class="chapter-head measure">
@@ -53,7 +53,7 @@
   function sync(){
     var dark=document.documentElement.getAttribute('data-theme')==='dark';
     b.textContent=dark?'Light':'Dark';
-    b.setAttribute('aria-pressed',String(dark));
+    b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
   }
   b.addEventListener('click',function(){
     var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';

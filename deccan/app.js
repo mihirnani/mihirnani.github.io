@@ -81,13 +81,13 @@
         '<ul class="elist">' + es.map(card).join("") + '</ul></section>';
     }).join("");
     var codas = entries.filter(function (e) { return e.coda; });
-    if (codas.length) sections += '<section class="period" id="seccoda" data-period="coda"><div class="period-head"><span class="no">·</span><span class="ttl">Codas</span><span class="yrs">after 1875</span><p class="desc">Two entries that sit outside the numbered chronology: the first historians of what had been lost, and the maps on which the Company drew the result.</p></div><ul class="elist">' + codas.map(card).join("") + '</ul></section>';
+    if (codas.length) sections += '<section class="period" id="seccoda" data-period="coda"><div class="period-head"><span class="no">·</span><span class="ttl">Codas</span><span class="yrs">outside the numbered chronology</span><p class="desc">Two entries that sit outside the numbered chronology: the first historians of what had been lost, and the maps on which the Company drew the result.</p></div><ul class="elist">' + codas.map(card).join("") + '</ul></section>';
     app.innerHTML = '<div class="wrap">' +
       '<p class="eyebrow">A Timeline Collection</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate, to the Company takeover and the tumultuous end of the nineteenth century. A story of a plateau where sovereignty was repeatedly shared and inherited, and finally audited.</p>' +
-      '<p class="measure muted">The story is told through seven periods and eleven polities. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to a companion <a href="' + EG + '">map collection</a>. A broad overview can be obtained through the <a href="#chronology">detailed chronology</a>; a <a href="#readings">bibliography</a> can also be accessed.</p>' +
+      '<p class="lede measure">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate, to the Company takeover and the Deccan Riots of 1875. A story of a plateau where sovereignty was repeatedly shared and inherited, and finally audited.</p>' +
+      '<p class="measure muted">The story is told through seven periods and eleven polities. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to a companion <a href="' + EG + '">map collection</a>. For the whole span at a glance, read the <a href="#chronology">detailed chronology</a>; for the shelf behind the entries, the <a href="#readings">bibliography</a>.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap" id="tl">' + timelineSvg() + '</div>' +
@@ -196,7 +196,7 @@
     app.querySelectorAll(".mk").forEach(function (m) {
       var e = byId[m.dataset.id];
       var ok = (!pol.size || e.polities.some(function (p) { return pol.has(p); })) && (!kind.size || kind.has(e.kind)) && matches(e);
-      m.classList.toggle("dim", !ok);
+      m.classList.toggle("dim", !ok); m.setAttribute("tabindex", ok ? "0" : "-1");
     });
   }
 
@@ -231,7 +231,7 @@
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#p' + p.n + '">← ' + E(p.title) + ', ' + E(p.years) + '</a></p>' +
       '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + '</div></div>' +
       '<div class="prose">' + e.body + '</div>' +
-      '<div class="story"><p class="subhead">In the story</p><p>' + E(e.story) + '</p></div>' +
+      '<div class="story"><p class="subhead">In the story</p><p>' + e.story + '</p></div>' +
       '<div class="prose">' + maps + '</div>' +
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + '</ul>' + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + '</ul>' : '') + '</div>' +
       '<dl class="meta"><dt>Date</dt><dd>' + E(e.date_label) + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ', ' + E(p.years) + '</a></dd>' +

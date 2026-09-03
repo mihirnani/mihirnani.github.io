@@ -1,91 +1,29 @@
+#!/usr/bin/env python3
 """Build atlas/data/places.js: places of the Deccan and Basalt collections, normalised and merged.
 Only ids are stored per place; titles and dates are read from the collections' own entries.js at load.
+The spelling rules live in tools/places.py, shared with the text edition's by-place index.
 Run: python3 atlas/tools/make_places.py"""
-import json, os, re, sys
+import json, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))                 # the site repository
-GAZE = os.environ.get("GAZE_DIR", os.path.abspath(os.path.join(ROOT, "..", "european-gaze")))   # the map collection's repository
 OUT = os.path.join(ROOT, "atlas", "data", "places.js")
 
 sys.path.insert(0, os.path.join(ROOT, "tools"))
 from data import load
+from places import Places, REGION, key_of
 
-deccan = load(f"{ROOT}/deccan/data/entries.js")
-basalt = load(f"{ROOT}/basalt-and-laterite/data/entries.js")
-
-# Spelling variants -> one canonical name (the collection's most common modern form, old name in brackets)
-ALIAS = {
-    "ahmednagar": "Ahmadnagar", "ahmadnagar district": "Ahmadnagar",
-    "chennai (madras)": "Chennai", "chennai": "Chennai",
-    "gulbarga (kalaburagi)": "Kalaburagi (Gulbarga)", "kalaburagi (gulbarga)": "Kalaburagi (Gulbarga)",
-    "mysore": "Mysuru (Mysore)", "mysuru": "Mysuru (Mysore)",
-    "vasai (bassein)": "Vasai (Bassein)", "vasai": "Vasai (Bassein)",
-    "vasai (bassein, baçaim)": "Vasai (Bassein)",
-    "vijayapura (bijapur)": "Bijapur", "bijapur": "Bijapur",
-    "bijapur (vijayapura)": "Bijapur",
-    "hyderabad and golconda": "Hyderabad", "hyderabad": "Hyderabad",
-    "bombay (mumbai)": "Mumbai", "mumbai": "Mumbai",
-    "achalpur (elichpur)": "Achalpur", "achalpur": "Achalpur",
-    "mahabaleshwar crest": "Mahabaleshwar", "mahabaleshwar": "Mahabaleshwar",
-    "pollilur": "Pollilur",
-    "rakkasagi-tangadagi": "Rakkasagi-Tangadagi (Talikota)",
-}
-# places that are regions, institutions or abroad rather than points on the peninsula
-REGION = {"Berar and the Deccan cotton tracts", "Khandesh and the northern Deccan", "The Konkan edge",
-          "The literature", "The Narmada valley", "Victoria and Albert Museum", "Delhi", "Réunion"}
-STATES = {"Maharashtra", "Karnataka", "Telangana", "Andhra Pradesh", "Tamil Nadu", "Kerala", "Goa", "Gujarat",
-          "Madhya Pradesh", "Uttar Pradesh", "Haryana", "Delhi", "London", "Indian Ocean"}
-QUALIFIER = re.compile(r"^(near |on the |source of the )|\bdistrict$|\bvalley$", re.I)
-
-def split(place):
-    """'Vasai (Bassein, Baçaim), Maharashtra' -> (['Vasai (Bassein, Baçaim)'], 'Maharashtra').
-    Commas inside brackets belong to the name, not to the address."""
-    parts, depth, buf = [], 0, ""
-    for ch in place:
-        if ch in "([":
-            depth += 1
-        elif ch in ")]":
-            depth = max(0, depth - 1)
-        if ch == "," and depth == 0:
-            parts.append(buf.strip()); buf = ""
-        else:
-            buf += ch
-    parts.append(buf.strip())
-    state = parts[-1] if len(parts) > 1 and parts[-1] in STATES else ""
-    core = parts[:-1] if state else parts
-    return core, state
-
-# first pass: collect the names that stand alone, so 'Lalbagh, Bengaluru' can fold into 'Bengaluru'
-def canon_name(core):
-    """core = the comma parts before the state. Returns (name, locality)"""
-    name = core[0]
-    key = name.lower()
-    if key in ALIAS:
-        return ALIAS[key], None
-    if len(core) >= 2:
-        mid = core[1]
-        if not QUALIFIER.search(mid) and mid.lower() in ALIAS_CITIES:
-            return ALIAS.get(mid.lower(), mid), name  # locality within a city
-    return name, None
-
-all_places = [e.get("place") for e in deccan + basalt if e.get("place")]
-plain = set()
-for p in all_places:
-    core, st = split(p)
-    if len(core) == 1:
-        plain.add(ALIAS.get(core[0].lower(), core[0]).lower())
-        plain.add(core[0].lower())
-ALIAS_CITIES = plain
+deccan = load("deccan/data/entries.js")
+basalt = load("basalt-and-laterite/data/entries.js")
+P = Places(deccan + basalt)
 
 places = {}
 def add(e, coll):
     p = e.get("place")
     if not p:
         return
-    core, state = split(p)
-    name, locality = canon_name(core)
+    name, state, locality = P.canon(p)
     kind = "region" if name in REGION else "place"
-    key = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    key = key_of(name)
     rec = places.setdefault(key, {"key": key, "name": name, "state": state, "kind": kind,
                                   "aliases": [], "lat": [], "lon": [], "deccan": [], "basalt": []})
     if not rec["state"] and state:
@@ -120,7 +58,7 @@ print("in both collections:", both)
 js = ("/* places.js – the places of the Deccan and Basalt & Laterite collections, normalised from each entry's\n"
       "   `place` field ('X, State' -> X; spelling variants merged; localities folded into their city; the state kept).\n"
       "   Only entry ids are stored here; titles, dates and each entry's own place label come from the collections' data files at load.\n"
-      "   Generated by a script over deccan/data/entries.js and basalt-and-laterite/data/entries.js; regenerate rather than edit. */\n"
+      "   Generated by atlas/tools/make_places.py over deccan/data/entries.js and basalt-and-laterite/data/entries.js; regenerate rather than edit. */\n"
       "window.ATLAS_PLACES = " + json.dumps(out, ensure_ascii=False, indent=1) + ";\n")
 open(OUT, "w", encoding="utf-8").write(js)
 print("wrote", OUT, len(js.encode()), "bytes")

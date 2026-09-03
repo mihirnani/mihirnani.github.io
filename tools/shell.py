@@ -13,7 +13,9 @@ this once.  To change a page's title or description, edit PAGES.  The bodies are
 never touched.
 
 The collections' stylesheet is written once, at assets/collection.css, and this
-script copies it into each collection folder as style.css.  The copy is what the
+script copies it into each collection folder as style.css.  The stylesheet imports
+the site's self-hosted type by absolute path (/assets/fonts/fonts.css), so the copy
+needs no rewriting and the fonts are fetched once for the whole domain.  The copy is what the
 pages and the offline service workers load - a service worker can only cache
 files inside its own folder - so the copies are generated, never edited: change
 assets/collection.css and run this script.  A collection that later needs rules
@@ -54,7 +56,7 @@ THEME_SCRIPT = """<script>(function(){
   function sync(){
     var dark=document.documentElement.getAttribute('data-theme')==='dark';
     b.textContent=dark?'Light':'Dark';
-    b.setAttribute('aria-pressed',String(dark));
+    b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
   }
   b.addEventListener('click',function(){
     var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
@@ -150,8 +152,7 @@ def masthead(coll):
             '<a class="navlink home" href="%s/">Curiosities</a>\n'
             '%s'
             '<a class="navlink" href="about.html">About</a>\n'
-            '<button aria-label="Toggle light or dark theme" aria-pressed="true" class="theme-toggle" '
-            'id="themeBtn" type="button">Theme</button></div>') % (coll["name"], coll["tagline"], SITE, links)
+            '<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>') % (coll["name"], coll["tagline"], SITE, links)
 
 def tail(coll):
     parts = [FOOTER, MAIL_SCRIPT, THEME_SCRIPT]

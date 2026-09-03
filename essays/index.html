@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Essays from Curiosities.">
+  <meta name="robots" content="noindex">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
@@ -33,7 +34,7 @@
   <div class="page">
     <header class="top">
       <nav><a href="https://naniwadekar.com/">Curiosities</a><a href="index.html">Essays</a><a href="feed.xml">RSS</a></nav>
-      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
     <main>
 <p class="eyebrow">Curiosities</p><h1>Essays</h1><p class="intro">Essays from Curiosities. <a href="feed.xml">Subscribe by RSS</a>.</p><ul class="essays"><li><span class="d">22 August 2026</span><h2><a href="2026-08-22-welcome-to-curiosities.html">Welcome to Curiosities</a></h2><p>What this site is, what is on it, and what the essays will be.</p></li></ul>
@@ -44,7 +45,7 @@
   <script>
     (function () {
       var b = document.getElementById("theme-toggle");
-      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-pressed", String(d)); }
+      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-label", d ? "Switch to light theme" : "Switch to dark theme"); }
       b.addEventListener("click", function () {
         var n = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = n; try { localStorage.setItem("root-theme", n); } catch (e) {} u();

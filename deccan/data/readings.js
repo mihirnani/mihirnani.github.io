@@ -68,7 +68,7 @@ window.DECCAN_READINGS = {
    "title": "Naukar, Rajput, and Sepoy: The Ethnohistory of the Military Labour Market in Hindustan, 1450–1850",
    "publisher": "Cambridge University Press",
    "year": 1990,
-   "note": "A northern-Indian study, but a valuable comparator for military service, mobile warrior labour and the limits of assuming fixed ethnic-state identities. ### Source caution The bakhars are indispensable but should not be treated as transparent factual narratives. Their date of composition, manuscript history, patronage and relationship to later colonial and nationalist historiography are part of the evidence. —",
+   "note": "A northern-Indian study, but a valuable comparator for military service, mobile warrior labour and the limits of assuming fixed ethnic-state identities.",
    "url": "https://search.worldcat.org/search?q=Kolff+Naukar+Rajput+and+Sepoy",
    "kind": "book"
   },
@@ -160,7 +160,7 @@ window.DECCAN_READINGS = {
    "title": "Rage for Order: The British Empire and the Origins of International Law, 1800–1850",
    "publisher": "Harvard University Press",
    "year": 2016,
-   "note": "Best used for the later transition: how officials increasingly tried to order plural jurisdictions and peripheral violence within a more coherent imperial hierarchy. ### Methodological caution “Sovereignty” should remain a question, not an answer. The project should actively test at least four alternatives: kingship and protection; fiscal and service claims; jurisdiction; and political allegiance. An institution can be important without being best described as an expression of sovereignty. —",
+   "note": "Best used for the later transition: how officials increasingly tried to order plural jurisdictions and peripheral violence within a more coherent imperial hierarchy.",
    "url": "https://doi.org/10.4159/9780674972780",
    "kind": "book"
   },
@@ -320,6 +320,15 @@ window.DECCAN_READINGS = {
    "kind": "book"
   },
   {
+   "author": "Sarojini Regani",
+   "title": "Nizam–British Relations, 1724–1857",
+   "publisher": "Concept Publishing, New Delhi",
+   "year": 1988,
+   "note": "A narrative of the Nizam's dealings with the Company from Nizam-ul-Mulk to 1857, written from the Hyderabad and Residency records: the Circars, the subsidiary treaties of 1798 and 1800, the Contingent and the Berar assignment. The standard reference for the treaty sequence the entries on Hyderabad follow.",
+   "url": "https://books.google.com/books?id=9Fb26pWqhScC",
+   "kind": "book"
+  },
+  {
    "author": "Lakshmi Subramanian",
    "title": "Indigenous Capital and Imperial Expansion: Bombay, Surat and the West Coast",
    "publisher": "Oxford University Press",
@@ -434,7 +443,7 @@ window.DECCAN_READINGS = {
    "title": "Parties and Politics at the Mughal Court, 1707–1740",
    "publisher": "Oxford University Press, 4th edition",
    "year": 2002,
-   "note": "First published 1959. Useful background to post-Aurangzeb court politics and the imperial context in which the Nizam and Maratha claims developed. ### Productive tension Richards establishes the institutional reality and coercive reach of Mughal centralisation. Hasan shows how that authority was made and remade through local relations. Alam shows that regionalisation could preserve Mughal forms while redistributing power. These positions should be read against one another. —",
+   "note": "First published 1959. Useful background to post-Aurangzeb court politics and the imperial context in which the Nizam and Maratha claims developed.",
    "url": "https://search.worldcat.org/search?q=Satish+Chandra+Parties+and+Politics+at+the+Mughal+Court",
    "kind": "book"
   },
@@ -722,6 +731,15 @@ window.DECCAN_READINGS = {
    "kind": "early"
   },
   {
+   "author": "Henry Cousens",
+   "title": "Bijapur and its Architectural Remains, with an Historical Outline of the Adil Shahi Dynasty (Archaeological Survey of India, Imperial Series XXXVII)",
+   "publisher": "Government Central Press, Bombay",
+   "year": 1916,
+   "note": "The Survey's monograph on Bijapur: a building-by-building record of the city with an outline of the dynasty drawn from Firishta and the inscriptions. Dated in its judgements but still the fullest architectural inventory, and the source of most later plans and measurements.",
+   "url": "https://archive.org/details/dli.ministry.25421",
+   "kind": "early"
+  },
+  {
    "author": "Richard M. Eaton",
    "title": "Sufis of Bijapur 1300–1700: Social Roles of Sufis in Medieval India",
    "publisher": "Princeton University Press",
@@ -991,7 +1009,7 @@ window.DECCAN_READINGS = {
    "title": "The Indian Princes and their States (The New Cambridge History of India, III.6)",
    "publisher": "Cambridge University Press",
    "year": 2003,
-   "note": "Later and broader than the collection's core period, but useful for locating Hyderabad and Mysore within the longer history of indirect rule, subordinate alliance and princely sovereignty. —",
+   "note": "Later and broader than the collection's core period, but useful for locating Hyderabad and Mysore within the longer history of indirect rule, subordinate alliance and princely sovereignty.",
    "url": "https://doi.org/10.1017/CHOL9780521267274",
    "kind": "book"
   },
@@ -1029,6 +1047,15 @@ window.DECCAN_READINGS = {
    "year": 1985,
    "note": "The wider synthesis – the ryotwari survey settlement at work, the village of 1850, revision settlements, credit, famine and the peasant in politics. Particularly useful on how the Wingate–Goldsmid system was administered and revised after 1868.",
    "url": "https://www.cambridge.org/core/books/peasants-and-imperial-rule/906A1884C52C41939D7A1FC1E6294D3F",
+   "kind": "book"
+  },
+  {
+   "author": "Ian Copland",
+   "title": "The British Raj and the Indian Princes: Paramountcy in Western India, 1857–1930",
+   "publisher": "Orient Longman, Bombay",
+   "year": 1982,
+   "note": "How paramountcy was practised after 1858 in the Bombay Presidency's princely states and jagirs, from the Political Agent's office outward. Begins where this collection ends, but its account of residency, tribute, succession and lapse is the frame for the jagirdar and Satara entries.",
+   "url": "https://archive.org/details/britishrajindian0000copl",
    "kind": "book"
   },
   {

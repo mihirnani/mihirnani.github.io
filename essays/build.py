@@ -3,23 +3,25 @@
 
 Write each essay as Markdown in this folder, named YYYY-MM-DD-slug.md, beginning with a short
 front-matter block (see _template.md).  The script converts every .md to a matching .html page
-(using the `markdown` package if installed, else a built-in converter that covers headings,
-paragraphs, emphasis, links, images, blockquotes, lists, code and footnotes), then (re)writes:
+with its own small converter (headings, paragraphs, emphasis, links, images, blockquotes, lists,
+code and footnotes - no external package, so the output is the same on every machine), then (re)writes:
   index.html   – the list of essays, newest first
   feed.xml     – an RSS 2.0 feed of the same (full text of each essay included)
-  sitemap.xml  – one line per essay
+  sitemap.xml  – one line per essay (only when the section is listed; see UNLISTED)
 and fills in the previous/next links at the foot of every essay.
 Hand-written .html essays made from _template.html still work.  Only files named YYYY-MM-DD-slug are treated as essays; anything else (templates, notes) is ignored.
+
+UNLISTED: while True, every page here carries <meta name="robots" content="noindex">, no sitemap.xml
+is written, and the section is left out of the site's sitemaps and feed links.  The folder stays
+live for anyone with the address.  Set it to False when the essays are ready to be found.
 """
 import re, os, glob, html, datetime, email.utils
 
+UNLISTED = True
+
 # ---------------------------------------------------------------- markdown
 def md_to_html(text):
-    try:
-        import markdown  # optional: pip install markdown
-        return markdown.markdown(text, extensions=["footnotes", "smarty", "tables", "fenced_code", "attr_list"])
-    except ImportError:
-        return _mini_md(text)
+    return _mini_md(text)
 
 def _inline(t):
     t = html.escape(t, quote=False)
@@ -91,7 +93,7 @@ TITLE = "Essays"
 DESC = "Essays from Curiosities."
 
 def nice(d):
-    y, m, dd = map(int, d.split("-")); return datetime.date(y, m, dd).strftime("%-d %B %Y")
+    y, m, dd = map(int, d.split("-")); return "%d %s" % (dd, datetime.date(y, m, dd).strftime("%B %Y"))
 
 def meta(s, name):
     m = re.search(r'<meta\s+name="%s"\s+content="([^"]*)"' % name, s) or re.search(r'<meta\s+content="([^"]*)"\s+name="%s"' % name, s)
@@ -99,6 +101,9 @@ def meta(s, name):
 
 # ---- convert markdown essays to html pages ----
 shell = open(os.path.join(HERE, "_shell.html"), encoding="utf-8").read()
+if UNLISTED:
+    shell = shell.replace('  <meta name="color-scheme" content="light dark">',
+                          '  <meta name="robots" content="noindex">\n  <meta name="color-scheme" content="light dark">', 1)
 DATED = re.compile(r"^\d{4}-\d{2}-\d{2}-.+")   # only files named YYYY-MM-DD-slug are essays
 for f in sorted(glob.glob(os.path.join(HERE, "*.md"))):
     b = os.path.basename(f)
@@ -134,11 +139,16 @@ essays.sort(key=lambda e: e["date"], reverse=True)
 for i, e in enumerate(essays):
     newer = essays[i - 1] if i > 0 else None
     older = essays[i + 1] if i < len(essays) - 1 else None
-    nav = '<nav class="pager">'
-    if older: nav += '<a class="prev" href="%s"><span class="dir">← Earlier</span>%s</a>' % (older["file"], html.escape(older["title"]))
-    if newer: nav += '<a class="next" href="%s"><span class="dir">Later →</span>%s</a>' % (newer["file"], html.escape(newer["title"]))
-    nav += '</nav>'
-    s = re.sub(r'<nav class="pager">.*?</nav>', nav, e["html"], flags=re.S) if '<nav class="pager">' in e["html"] else e["html"].replace("</article>", "</article>\n" + nav, 1)
+    nav = ""
+    if older or newer:
+        nav = '<nav class="pager" aria-label="Neighbouring essays">'
+        if older: nav += '<a class="prev" href="%s"><span class="dir">← Earlier</span>%s</a>' % (older["file"], html.escape(older["title"]))
+        if newer: nav += '<a class="next" href="%s"><span class="dir">Later →</span>%s</a>' % (newer["file"], html.escape(newer["title"]))
+        nav += '</nav>'
+    if '<nav class="pager"' in e["html"]:
+        s = re.sub(r'\n?<nav class="pager"[^>]*>.*?</nav>', ("\n" + nav) if nav else "", e["html"], flags=re.S)
+    else:
+        s = e["html"].replace("</article>", "</article>\n" + nav, 1) if nav else e["html"]
     if s != e["html"]:
         open(os.path.join(HERE, e["file"]), "w", encoding="utf-8").write(s); e["html"] = s
 
@@ -150,11 +160,12 @@ index = shell.replace("{{TITLE}}", "Essays – Curiosities").replace("{{DESC}}",
 open(os.path.join(HERE, "index.html"), "w", encoding="utf-8").write(index)
 
 # ---- feed ----
-now = email.utils.format_datetime(datetime.datetime.now(datetime.timezone.utc))
 def rfc(d):
     y, m, dd = map(int, d.split("-")); return email.utils.format_datetime(datetime.datetime(y, m, dd, 6, 0, tzinfo=datetime.timezone.utc))
 def absolutise(h):  # make relative image/link paths absolute for feed readers
     return re.sub(r'(src|href)="(?!https?:|mailto:|#)([^"]+)"', lambda m: '%s="%s%s"' % (m.group(1), BASE, m.group(2)), h)
+# lastBuildDate is the newest essay's date, not the clock, so a rebuild without a new essay changes nothing
+now = rfc(max([e["updated"] for e in essays] + [e["date"] for e in essays])) if essays else rfc("2026-08-22")
 feed = ['<?xml version="1.0" encoding="UTF-8"?>', '<?xml-stylesheet type="text/xsl" href="feed.xsl"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">', '<channel>',
         '<title>%s – Curiosities</title>' % TITLE, '<link>%s</link>' % BASE, '<description>%s</description>' % html.escape(DESC),
@@ -167,12 +178,17 @@ for e in essays:
 feed += ['</channel>', '</rss>', '']
 open(os.path.join(HERE, "feed.xml"), "w", encoding="utf-8").write("\n".join(feed))
 
-# ---- sitemap ----
-sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-      '  <url><loc>%s</loc><lastmod>%s</lastmod><priority>0.8</priority></url>' % (BASE, datetime.date.today().isoformat())]
-sm += ['  <url><loc>%s</loc><lastmod>%s</lastmod><priority>0.7</priority></url>' % (e["url"], e["updated"]) for e in essays]
-sm += ['</urlset>', '']
-open(os.path.join(HERE, "sitemap.xml"), "w", encoding="utf-8").write("\n".join(sm))
+# ---- sitemap (the index page is as new as the newest essay; nothing is stamped with today) ----
+sm_path = os.path.join(HERE, "sitemap.xml")
+if UNLISTED:
+    if os.path.exists(sm_path): os.remove(sm_path)
+else:
+    newest = max([e["updated"] for e in essays] + [e["date"] for e in essays]) if essays else None
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+          '  <url><loc>%s</loc>%s<priority>0.8</priority></url>' % (BASE, ("<lastmod>%s</lastmod>" % newest) if newest else "")]
+    sm += ['  <url><loc>%s</loc><lastmod>%s</lastmod><priority>0.7</priority></url>' % (e["url"], e["updated"]) for e in essays]
+    sm += ['</urlset>', '']
+    open(sm_path, "w", encoding="utf-8").write("\n".join(sm))
 # ---- latest essays on the site's front page ----
 root_index = os.path.join(os.path.dirname(HERE), "index.html")
 if os.path.exists(root_index):
@@ -181,4 +197,5 @@ if os.path.exists(root_index):
                      (nice(e["date"]), e["file"], html.escape(e["title"]), html.escape(e["desc"])) for e in essays[:4])
     r2 = re.sub(r"<!-- essays:start -->.*?<!-- essays:end -->", "<!-- essays:start -->\n" + latest + "<!-- essays:end -->", r, flags=re.S)
     if r2 != r: open(root_index, "w", encoding="utf-8").write(r2)
-print("built %d essay(s): index.html, feed.xml, sitemap.xml, and the front-page list" % len(essays))
+print("built %d essay(s): index.html, feed.xml, %s, and the front-page list%s"
+      % (len(essays), "no sitemap" if UNLISTED else "sitemap.xml", " (UNLISTED: noindex on every page)" if UNLISTED else ""))

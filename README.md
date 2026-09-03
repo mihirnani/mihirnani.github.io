@@ -33,16 +33,44 @@ which runs, in order:
    each collection as `style.css` (each collection needs its own copy so that
    its offline service worker can cache it). To add a section to the navigation
    of every page, edit `SECTIONS` there and run this once.
-2. `atlas/tools/make_snapshot.py` — refreshes the atlas's local copies of the
+2. `../european-gaze/build.py` — the map collection's pages, from its own data
+   (skipped if that repository is not checked out beside this one).
+3. `atlas/tools/make_snapshot.py` — refreshes the atlas's local copies of the
    collections' data, used only when the atlas is opened from a local folder.
-3. `text/build.py` — regenerates the text edition: one page per entry, per
-   period, the chronology, the bibliography and the indexes.
-4. `essays/build.py` — rebuilds the essay pages, index and feed from Markdown.
+4. `atlas/tools/make_gaze.py` — the atlas's map layer, from `european-gaze/data`.
+5. `atlas/tools/make_places.py` — the atlas's places index; the spelling rules
+   it applies live in `tools/places.py` and are shared with the text edition.
+6. `text/build.py` — regenerates the text edition: one page per entry, per
+   period, the chronology, the bibliography and the indexes. Its sitemap's
+   `lastmod` is the date of the last commit to the data files, so a rebuild
+   does not claim every page changed.
+7. `essays/build.py` — rebuilds the essay pages, index and feed from Markdown.
+   While `UNLISTED = True` at the top of that script the essays carry
+   `noindex`, no sitemap is written and the section stays out of the site's
+   sitemaps; flip it when there are essays to be found.
 
 Everything those scripts write is derived. Edit the data files, the page bodies,
 `assets/collection.css`, or the tables inside the scripts — never the generated
 copies (`text/deccan/*.html`, `text/basalt/*.html`, `deccan/style.css`,
-`basalt-and-laterite/style.css`, `atlas/data/snapshot/*`).
+`basalt-and-laterite/style.css`, `atlas/data/snapshot/*`, `atlas/data/gaze.js`,
+`atlas/data/places.js`).
+
+`tools/data.py` is the one parser for the `window.NAME = {...}` data files;
+every generator reads through it.
+
+## Type and third-party requests
+
+The two typefaces, Cormorant Garamond and Spectral (SIL Open Font License),
+are served from `assets/fonts/` and imported by every stylesheet as
+`/assets/fonts/fonts.css`. No page loads anything from another domain: no
+font service, no analytics, no CDN. The companion repositories import the same
+file by the same absolute path.
+
+## Unlisted sections
+
+`essays/` and `more/` are live but carry `noindex` and are left out of the
+sitemaps and the front page until they are ready. `404.html` at the root is the
+site's not-found page (GitHub Pages serves only the root one for this domain).
 
 ## Companion repositories
 

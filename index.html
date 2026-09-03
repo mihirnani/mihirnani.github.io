@@ -22,7 +22,7 @@
   </script>
 
   <style>
-    @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap");
+    @import url("/assets/fonts/fonts.css");   /* self-hosted Cormorant Garamond and Spectral, SIL OFL – see assets/fonts/ */
 
     :root,
     :root[data-theme="light"] {
@@ -33,11 +33,7 @@
       --map: #9e5b2b;
       --birds: #2c6e49;
       --deccan: #8c2f32;
-      --essays: #7b1f2d;
-      --greek: #0f5e7f;
-      --math: #6f4aa8;
-      --starweaver: #8a5a18;
-      --toybox: #4e6b50;
+      --essays: #7b1f2d;   /* the parked essays column */
       --stone: #59504a;
       --atlas: #2f5f6e;
       --textedition: #4a5d3a;
@@ -52,10 +48,6 @@
       --birds: #83bc99;
       --deccan: #d98c6a;
       --essays: #e48b97;
-      --greek: #79c0dd;
-      --math: #b69ae0;
-      --starweaver: #e2ba68;
-      --toybox: #83bc99;
       --stone: #bdb2a4;
       --atlas: #7fb7c8;
       --textedition: #a8bd91;
@@ -132,13 +124,6 @@
       letter-spacing: 0.01em;
     }
 
-    .intro .byline {
-      margin-top: 0.6rem;
-      font-family: "Spectral", Georgia, serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.02em;
-    }
-
     .intro p {
       max-width: 690px;
       margin: 0.9rem 0 0;
@@ -207,12 +192,6 @@
     .project--atlas:focus-visible h3 { color: var(--atlas); }
     .project--text:hover h3,
     .project--text:focus-visible h3 { color: var(--textedition); }
-    .project--math:hover h3,
-    .project--math:focus-visible h3 { color: var(--math); }
-    .project--starweaver:hover h3,
-    .project--starweaver:focus-visible h3 { color: var(--starweaver); }
-    .project--toybox:hover h3,
-    .project--toybox:focus-visible h3 { color: var(--toybox); }
 
     .project:hover span,
     .project:focus-visible span { color: var(--text); }
@@ -226,14 +205,12 @@
     .project-group--light .project h3 { font-size: clamp(1.35rem, 3vw, 1.7rem); }
     .project-group--light .project p { font-size: 0.95rem; }
 
-    .about,
-    .install {
+    .about {
       margin-top: clamp(2.5rem, 6vw, 4rem);
       max-width: 690px;
     }
 
-    .about h2,
-    .install h2 {
+    .about h2 {
       margin: 0 0 0.7rem;
       font-size: 0.72rem;
       font-weight: 400;
@@ -242,30 +219,14 @@
       color: var(--muted);
     }
 
-    .about p,
-    .install p { margin: 0 0 0.8rem; }
+    .about p { margin: 0 0 0.8rem; }
 
-    .about .colophon,
-    .install .note {
+    .about .colophon {
       color: var(--muted);
       font-size: 0.9rem;
     }
 
-    .install ol {
-      margin: 0 0 0.8rem;
-      padding-left: 1.2rem;
-    }
-
-    .install li { margin: 0 0 0.35rem; }
-
-    .install .share-glyph {
-      display: inline-block;
-      border: 1px solid var(--line);
-      border-radius: 5px;
-      padding: 0 0.35em;
-      font-size: 0.85em;
-      line-height: 1.4;
-    }
+    .about a { text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 
     .columns {
       display: grid;
@@ -284,6 +245,7 @@
       font-size: 0.95rem;
     }
 
+    /* The parked essays column (see the <template> below) and the parked "Also" line. */
     .latest {
       list-style: none;
       margin: 0;
@@ -359,10 +321,7 @@
   <link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
-  <!-- Parked with the essays column: the RSS feed link.
-  <link rel="alternate" type="application/rss+xml" title="Essays – Curiosities" href="https://naniwadekar.com/essays/feed.xml">
-  -->
-  <meta property="og:title" content="Curiosities"><meta name="twitter:card" content="summary_large_image"><meta property="og:site_name" content="Curiosities">
+  <meta property="og:title" content="Curiosities"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities">
   <meta property="og:description" content="History and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and essays.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://naniwadekar.com/">
@@ -377,8 +336,9 @@
         <a href="https://naniwadekar.com/basalt-and-laterite/">Basalt</a>
         <a href="https://naniwadekar.com/sahyadri-birds/">Birds</a>
         <a href="https://naniwadekar.com/atlas/">Atlas</a>
+        <a href="https://naniwadekar.com/text/">Text</a>
       </nav>
-      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
 
     <main>
@@ -403,7 +363,7 @@
             <a class="project project--deccan" href="https://naniwadekar.com/deccan/">
               <div>
                 <h3>The Deccan, 1336&ndash;1875</h3>
-                <p>Five centuries of the Deccan, from the founding of Vijayanagara and the Bahmani sultanate to the Deccan Riots of 1875, in a collection of entries &ndash; battles, treaties, people, places, documents &ndash; arranged in seven periods with the polities as a filter, and linked to the maps.</p>
+                <p>Five centuries of the Deccan, from the founding of Vijayanagara and the Bahmani sultanate to the Deccan Riots of 1875. A collection of entries &ndash; battles, treaties, people, places, documents &ndash; in seven periods, with the polities as a filter and links to the maps.</p>
               </div>
               <span aria-hidden="true">Visit &rarr;</span>
             </a>
@@ -438,7 +398,7 @@
           <a class="project project--atlas" href="https://naniwadekar.com/atlas/">
             <div>
               <h3>Atlas</h3>
-              <p>The glue: one map of everything &ndash; the Deccan entries by polity, the places of Basalt and Laterite, and the European maps, on one coastline with a year slider &ndash; with one chronology from deep time to 1947, and a places index across the site.</p>
+              <p>One map of everything &ndash; the Deccan entries by polity, the places of Basalt and Laterite, and the European maps, on one coastline with a year slider &ndash; with one chronology from deep time to 1947, and a places index across the site.</p>
             </div>
             <span aria-hidden="true">Visit &rarr;</span>
           </a>
@@ -450,6 +410,13 @@
             <span aria-hidden="true">Read &rarr;</span>
           </a>
         </div>
+      </section>
+
+      <section aria-labelledby="about-title" class="about">
+        <h2 id="about-title">About</h2>
+        <p>Curiosities is a study site kept by Mihir Naniwadekar: collections on the history and natural history of the Deccan and the Western Ghats, made for the pleasure of finding things out and for anyone who shares it. It is non-commercial &ndash; nothing is sold, tracked or advertised.</p>
+        <p>The site is built by hand: plain HTML, one stylesheet per look, no framework, and a few scripts that keep the generated parts in step. The entries name their sources, and each collection&rsquo;s About page says how it was put together and checked. The two typefaces are served from this domain; no page makes a request to a third party.</p>
+        <p class="colophon">Last updated September 2026. Errors may be pointed out by writing to <a class="mail" href="#" data-u="mihir" data-d="naniwadekar.in">mihir [at] naniwadekar [dot] in</a>.</p>
       </section>
 
       <!-- Parked for now: the link to the courses and games page.
@@ -486,8 +453,9 @@
 
       function updateLabel() {
         var dark = document.documentElement.dataset.theme === "dark";
+        /* the label names the action, so the button is a plain command, not a pressed toggle */
         button.textContent = dark ? "Light" : "Dark";
-        button.setAttribute("aria-pressed", String(dark));
+        button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
       }
 
       button.addEventListener("click", function () {

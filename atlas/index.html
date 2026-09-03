@@ -35,7 +35,8 @@
 <body>
   <div class="page page--wide">
     <header>
-      <ul class="nav" aria-label="Atlas">
+      <nav aria-label="Atlas">
+      <ul class="nav">
         <li><a href="https://naniwadekar.com/">Curiosities</a></li>
         <li><a href="https://naniwadekar.com/deccan/">Deccan</a></li>
         <li><a href="https://naniwadekar.com/european-gaze/">Maps</a></li>
@@ -46,7 +47,8 @@
         <li><a href="chronology.html">Chronology</a></li>
         <li><a href="places.html">Places</a></li>
       </ul>
-      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
 
     <main>
@@ -55,19 +57,19 @@
         <p>One map of everything: the entries of <a href="../deccan/">The Deccan, 1336–1875</a>, the places of <a href="../basalt-and-laterite/">Basalt and Laterite</a>, and the maps of <a href="https://naniwadekar.com/european-gaze/">The European Gaze on India</a>, on one coastline.</p>
       </section>
 
-      <section aria-labelledby="map-title" class="section">
+      <section aria-labelledby="map-title" class="section" id="map-section">
         <h2 class="group-title" id="map-title">The peninsula</h2>
         <p class="note">Circles are Deccan entries, coloured by their principal polity; triangles are Basalt entries, which sit outside the human timeline and are always shown; squares are European maps, one for each map, placed by the region it covers. Move the year to see which Deccan entries and maps belong to it; the rest fade. Hover, tap or tab to a marker and its summary appears in the panel beside the map (below it on a narrow screen); click the marker, or tap it a second time, for its page.</p>
         <div id="controls" class="controls" aria-label="Map controls"></div>
         <div class="atlas-grid">
           <div class="atlas-map">
             <div class="map-wrap" id="map-wrap">
-              <div id="map"><p class="note" style="padding:1rem">Loading the map…</p></div>
+              <div id="map" tabindex="0" aria-label="The map. With the map focused, the left and right arrow keys move the year, plus and minus step it by ten, and Escape shows all years."><p class="note" style="padding:1rem">Loading the map…</p></div>
               <div class="tooltip" id="tooltip" role="status" hidden></div>
             </div>
           </div>
           <aside class="atlas-side" aria-label="Selected marker and lists beyond the frame">
-            <div class="panel" id="panel"><span class="hint">Hover, tap or tab to a marker for a summary here; click it, or tap it again, to open its page. ← and → move the year, + and − step it by ten.</span></div>
+            <div class="panel" id="panel"><span class="hint">Hover, tap or tab to a marker for a summary here; click it, or tap it again, to open its page. With the map or its controls focused, ← and → move the year, + and − step it by ten.</span></div>
             <div class="beyond" id="beyond"></div>
           </aside>
         </div>
@@ -107,8 +109,9 @@
 
       function updateLabel() {
         var dark = document.documentElement.dataset.theme === "dark";
+        /* the label names the action, so the button is a plain command, not a pressed toggle */
         button.textContent = dark ? "Light" : "Dark";
-        button.setAttribute("aria-pressed", String(dark));
+        button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
       }
 
       button.addEventListener("click", function () {

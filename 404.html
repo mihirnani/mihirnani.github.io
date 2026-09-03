@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111311" media="(prefers-color-scheme: dark)">
+  <title>Not found – Curiosities</title>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("root-theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <style>
+    @import url("/assets/fonts/fonts.css");
+    :root, :root[data-theme="light"] { --bg: #f5f1e8; --text: #27231e; --muted: #6f685d; --line: #d8d0c3; }
+    :root[data-theme="dark"] { --bg: #111311; --text: #ece7dd; --muted: #aaa397; --line: #353934; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--text);
+      font-family: "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif; line-height: 1.6; }
+    a { color: inherit; }
+    .page { width: min(100% - 2rem, 920px); margin: 0 auto; padding: 2rem 0 4rem; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+      padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.4rem; }
+    .site-nav a { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+    .site-nav a:hover, .site-nav a:focus-visible { color: var(--text); }
+    main { padding-top: clamp(2.5rem, 7vw, 4.5rem); max-width: 690px; }
+    .eyebrow { margin: 0 0 0.7rem; color: var(--muted); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; }
+    h1 { margin: 0; font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+      font-size: clamp(2.3rem, 7vw, 4.5rem); font-weight: 500; line-height: 1.02; }
+    p { margin: 0.9rem 0 0; color: var(--muted); font-family: "Cormorant Garamond", Garamond, Georgia, serif;
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem); letter-spacing: 0.025em; }
+    ul { margin: 1.6rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+    li { padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+    li a { text-decoration: none; font-family: "Cormorant Garamond", Garamond, Georgia, serif; font-size: 1.35rem; }
+    li a:hover, li a:focus-visible { text-decoration: underline; }
+    li span { color: var(--muted); font-size: 0.95rem; margin-left: 0.6rem; }
+    .site-foot { margin: 2.4rem 0 0; padding-top: 1.2rem; border-top: 1px solid var(--line); font-size: 0.8rem; color: var(--muted); text-align: center; }
+    .site-foot a { text-decoration: none; }
+    .site-foot a:hover { text-decoration: underline; }
+  </style>
+  <link rel="icon" href="/curiosities-icon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/curiosities-icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="/curiosities-icon-180.png">
+</head>
+<body>
+  <div class="page">
+    <header>
+      <nav class="site-nav" aria-label="Collections">
+        <a href="https://naniwadekar.com/deccan/">Deccan</a>
+        <a href="https://naniwadekar.com/european-gaze/">Maps</a>
+        <a href="https://naniwadekar.com/basalt-and-laterite/">Basalt</a>
+        <a href="https://naniwadekar.com/sahyadri-birds/">Birds</a>
+        <a href="https://naniwadekar.com/atlas/">Atlas</a>
+        <a href="https://naniwadekar.com/text/">Text</a>
+      </nav>
+    </header>
+    <main>
+      <p class="eyebrow">Curiosities</p>
+      <h1>Not on the map</h1>
+      <p>There is no page at this address. It may have been moved or renamed as a collection was revised, or the link may be mistyped.</p>
+      <ul>
+        <li><a href="https://naniwadekar.com/">Curiosities</a><span>the front page</span></li>
+        <li><a href="https://naniwadekar.com/deccan/">The Deccan, 1336–1875</a><span>the timeline</span></li>
+        <li><a href="https://naniwadekar.com/european-gaze/">The European Gaze on India</a><span>the maps</span></li>
+        <li><a href="https://naniwadekar.com/basalt-and-laterite/">Basalt and Laterite</a><span>the making of the Deccan</span></li>
+        <li><a href="https://naniwadekar.com/sahyadri-birds/">Birds of the Sahyadris</a><span>the field guide</span></li>
+        <li><a href="https://naniwadekar.com/atlas/">Atlas</a><span>one map, one chronology, a places index</span></li>
+        <li><a href="https://naniwadekar.com/text/">Text edition</a><span>every entry as a plain page – the place to look for an entry by name</span></li>
+      </ul>
+    </main>
+    <footer class="site-foot">Part of <a href="https://naniwadekar.com/">Curiosities</a>. A non-commercial study collection.</footer>
+  </div>
+</body>
+</html>

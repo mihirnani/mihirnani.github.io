@@ -35,7 +35,8 @@
 <body>
   <div class="page">
     <header>
-      <ul class="nav" aria-label="Atlas">
+      <nav aria-label="Atlas">
+      <ul class="nav">
         <li><a href="https://naniwadekar.com/">Curiosities</a></li>
         <li><a href="https://naniwadekar.com/deccan/">Deccan</a></li>
         <li><a href="https://naniwadekar.com/european-gaze/">Maps</a></li>
@@ -46,7 +47,8 @@
         <li><a href="chronology.html" aria-current="page">Chronology</a></li>
         <li><a href="places.html">Places</a></li>
       </ul>
-      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
 
     <main>
@@ -103,8 +105,9 @@
 
       function updateLabel() {
         var dark = document.documentElement.dataset.theme === "dark";
+        /* the label names the action, so the button is a plain command, not a pressed toggle */
         button.textContent = dark ? "Light" : "Dark";
-        button.setAttribute("aria-pressed", String(dark));
+        button.setAttribute("aria-label", dark ? "Switch to light theme" : "Switch to dark theme");
       }
 
       button.addEventListener("click", function () {

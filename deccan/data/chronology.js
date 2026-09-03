@@ -64,7 +64,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1550s–1560s", "t": "Bijapur, Ahmadnagar, Golconda and Bidar repeatedly change alliances with one another and with Vijayanagara; the coalition of 1565 was therefore the outcome of fluid interstate politics, not a permanent religious bloc."},
    {"d": "1560", "t": "The Goa Inquisition is established; the First Provincial Council follows in 1567.", "e": "goa-inquisition-1560"},
    {"d": "23 January 1565", "t": "At Rakshasi-Tangadi, commonly called Talikota, the allied sultanate army defeats Vijayanagara and Rama Raya is killed. The metropolitan complex at Vijayanagara is plundered and substantially abandoned over the following months, but the empire survives under the Aravidu dynasty.", "e": "talikota-1565"},
-   {"d": "1565–mid-17th c.", "t": "Aravidu Vijayanagara continues from Penukonda, Chandragiri and later Vellore; imperial authority fragments among regional nayakas and successor houses through the seventeenth century."}
+   {"d": "1565–mid-17th c.", "t": "Aravidu Vijayanagara continues from Penukonda, Chandragiri and later Vellore; imperial authority fragments among regional nayakas and successor houses through the seventeenth century.", "e": "nayakas"}
   ]
  },
  {
@@ -76,14 +76,15 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "r. 1580–1627", "t": "Ibrahim Adil Shah II rules Bijapur; the Kitab-i-Nauras and court patronage make his reign a high point of Dakhni literary and musical culture.", "e": "ibrahim-adil-shah-ii"},
    {"d": "1591", "t": "Muhammad Quli Qutb Shah founds Hyderabad beside the Musi, shifting the Qutb Shahi political centre beyond Golconda fort.", "e": "hyderabad-founded-1591"},
    {"d": "1595–1600", "t": "Chand Bibi leads the defence of Ahmadnagar during Mughal intervention in the succession crisis; Akbar’s forces take Ahmadnagar city in 1600, but the Nizam Shahi state survives.", "e": "chand-bibi-1595"},
+   {"d": "August 1600", "t": "Prince Daniyal and the Khan-i-Khanan storm Ahmadnagar fort after a four-month siege; Akbar organises Khandesh, Berar and Ahmadnagar as the first Mughal subahs south of the Narmada, and takes Asirgarh in January 1601.", "e": "akbar-ahmadnagar-1600"},
    {"d": "1601", "t": "Akbar conquers Khandesh after the fall of Asirgarh, ending the Faruqi dynasty and carrying Mughal administration to the Deccan’s northern frontier."},
    {"d": "c. 1548–1626", "t": "Malik Ambar rebuilds Nizam Shahi power through mobile warfare, revenue reform and alliance; Khirki, later Aurangabad, is developed as his capital, and Mughal forces are defeated at Bhatvadi in 1624.", "e": "malik-ambar"},
    {"d": "c. 1608–1649", "t": "Tukaram at Dehu becomes the best-known poet-saint of the seventeenth-century Varkari flowering; Ramdas (1608–1681) represents another influential devotional current.", "e": "tukaram-varkari"},
-   {"d": "1610", "t": "Raja Wodeyar takes control of Srirangapatna, the former Vijayanagara viceregal seat, establishing the capital from which the Mysore state expands over the next century and a half."},
+   {"d": "1610", "t": "Raja Wodeyar takes control of Srirangapatna, the former Vijayanagara viceregal seat, establishing the capital from which the Mysore state expands over the next century and a half.", "e": "srirangapatna"},
    {"d": "1611–1668", "t": "The English East India Company establishes factories at Masulipatnam, Madras and eventually Bombay – footholds on the Deccan’s maritime approaches rather than a single territorial advance.", "e": "company-factories"},
    {"d": "1594–1664", "t": "Shahji Bhonsle serves successively and sometimes simultaneously within Ahmadnagar, Bijapur and Mughal political worlds; his career exemplifies mobile service elites before Shivaji’s independent power.", "e": "shahji-bhonsle"},
    {"d": "1630–1632", "t": "A severe famine strikes Gujarat and the Deccan; Mughal pressure continues, Daulatabad falls in 1633, and the Nizam Shahi kingdom is extinguished in 1636.", "e": "deccan-famine-1630"},
-   {"d": "1636", "t": "Shah Jahan’s Deccan settlement partitions former Ahmadnagar territory and compels Bijapur and Golconda to accept Mughal suzerainty and defined frontiers; the settlement gives both sultanates room for major southward expansion."},
+   {"d": "1636", "t": "Shah Jahan’s Deccan settlement partitions former Ahmadnagar territory and compels Bijapur and Golconda to accept Mughal suzerainty and defined frontiers; the settlement gives both sultanates room for major southward expansion.", "e": "fall-of-ahmadnagar-1636"},
    {"d": "1646", "t": "Shivaji takes Torna and begins the sustained acquisition of forts and local authority in the western Deccan.", "e": "shivaji-torna-1646"},
    {"d": "1656–1657", "t": "Bijapur’s succession crisis invites Mughal intervention; Aurangzeb campaigns in the Deccan before the imperial war of succession calls him north. The Gol Gumbaz mausoleum complex belongs to the same mid-century Bijapur high point.", "e": "gol-gumbaz"},
    {"d": "10 November 1659", "t": "Afzal Khan is killed during his meeting with Shivaji below Pratapgad; the ensuing Maratha victory transforms the balance in the western Deccan.", "e": "afzal-khan-pratapgad-1659"},
@@ -111,7 +112,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "3 March 1707", "t": "Aurangzeb dies near Ahmadnagar. Shahu is released from Mughal captivity; his victory over Tarabai’s forces at Khed begins a divided Maratha kingship.", "e": "aurangzeb-dies-1707"},
    {"d": "1708–1731", "t": "Satara and Kolhapur emerge as rival Chhatrapati courts; the Treaty of Warna in 1731 formalises the division.", "e": "satara-and-pune"},
    {"d": "1713–1720", "t": "Balaji Vishwanath becomes Peshwa and turns the office into the principal executive instrument of Shahu’s expanding state; negotiations at Delhi culminate in the imperial grants of 1719."},
-   {"d": "c. 1715–1716", "t": "The Ajnapatra, traditionally attributed to Ramchandra Pant Amatya but with disputed authorship, sets out a Marathi language of kingship, forts, service, revenue and political prudence."},
+   {"d": "19 November 1715", "t": "The Ajnapatra, traditionally attributed to Ramchandra Pant Amatya but with disputed authorship, sets out a Marathi language of kingship, forts, service, revenue and political prudence.", "e": "ajnapatra"},
    {"d": "1713–1729", "t": "Kanhoji Angre dominates much of the Konkan naval and coastal system, compelling Europeans and Maratha rivals alike to negotiate with his house.", "e": "kanhoji-angre"},
    {"d": "1719", "t": "Mughal sanads recognise Shahu’s claims to chauth and sardeshmukhi from the six Deccan subahs, giving an imperial documentary form to Maratha fiscal claims.", "e": "shahu-and-the-sanads-1719"},
    {"d": "11 October 1724", "t": "At Shakar Kheda, Nizam-ul-Mulk defeats Mubariz Khan and establishes the durable autonomy of the Asaf Jahi state while retaining Mughal titles and political idioms.", "e": "nizam-ul-mulk-1724"},
@@ -186,7 +187,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1830s–1850s", "t": "Colonial officials recast older watans, inams, jagirs, mirasi claims and village offices as legally classifiable rights, while local elites adapt older documentary practices to the new courts and revenue state.", "e": "elphinstone-to-inam"},
    {"d": "1835–1847", "t": "The Bombay revenue survey moves from Pringle’s criticised assessments to the Goldsmid-Wingate system, based on systematic measurement, classification and long-term rates.", "e": "pringle-wingate-survey-1835"},
    {"d": "1844–1845", "t": "The Gadkari rising at Kolhapur challenges changes in military service, revenue and local authority under British intervention."},
-   {"d": "1848", "t": "Satara is annexed after the death of Shahaji (Appa Saheb) without a recognised natural heir; in Pune, Jyotirao and Savitribai Phule open a school for girls.", "e": "satara-lapse-1848"},
+   {"d": "1848", "t": "Satara is annexed after the death of Shahaji (Appa Saheb) without a recognised natural heir; in Pune, Jotirao and Savitribai Phule open a school for girls.", "e": "satara-lapse-1848"},
    {"d": "1852", "t": "Survey disturbances in Khandesh expose conflict between ryotwari measurement, customary landholding and rural authority."},
    {"d": "1852–1863", "t": "The Bombay Inam Commission investigates and adjudicates claims to alienated revenue, turning Marathi and Persian documents into a new colonial archive of legally validated property.", "e": "inam-commission-1852"},
    {"d": "21 May 1853", "t": "Berar is assigned to British administration to secure the Hyderabad Contingent; in the same month Salar Jang I becomes diwan, beginning a long programme of administrative reform.", "e": "berar-assignment-1853"},
@@ -198,7 +199,7 @@ window.DECCAN_CHRONOLOGY = [
    {"d": "1861–1865", "t": "The American Civil War drives an extraordinary cotton boom in the Bombay-Deccan economy; the boom collapses into the Bombay financial crash of 1865.", "e": "cotton-boom-1861"},
    {"d": "1863", "t": "The Summary Settlement Acts replace the Inam Commission’s case-by-case historical adjudication with a more standardised quit-rent compromise for many surviving inam claims."},
    {"d": "1867 / 1881", "t": "The British government resolves in principle to restore Mysore to its dynasty in 1867; rendition to Maharaja Chamarajendra Wodeyar X follows in 1881.", "e": "mysore-rendition-question"},
-   {"d": "1873", "t": "Jyotirao Phule publishes Gulamgiri and founds the Satyashodhak Samaj on 24 September, creating a durable anti-caste social and political organisation in western India.", "e": "phule-satyashodhak"},
+   {"d": "1873", "t": "Jotirao Phule publishes Gulamgiri and founds the Satyashodhak Samaj on 24 September, creating a durable anti-caste social and political organisation in western India.", "e": "phule-satyashodhak"},
    {"d": "1874–1875", "t": "The Bombay Hereditary Offices Act comes into force in February 1875, further codifying the colonial state’s treatment of watan offices.", "e": "bombay-hereditary-offices-act-1874"},
    {"d": "12 May–June 1875", "t": "The Deccan Riots begin at Supa and spread through parts of Poona and Ahmednagar districts. Cultivators attack moneylenders and debt records amid indebtedness, post-cotton-boom contraction, revenue pressure and unequal credit relations; the Deccan Riots Commission follows.", "e": "deccan-riots-1875"}
   ]

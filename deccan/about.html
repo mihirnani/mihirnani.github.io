@@ -25,7 +25,7 @@
 <a class="navlink" href="https://naniwadekar.com/atlas/">Atlas</a>
 <a class="navlink" href="https://naniwadekar.com/text/">Text</a>
 <a class="navlink" href="about.html">About</a>
-<button aria-label="Toggle light or dark theme" aria-pressed="true" class="theme-toggle" id="themeBtn" type="button">Theme</button></div>
+<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>
 <div class="wrap"><p><a class="back" href="index.html">← Timeline</a></p><div class="chapter-head measure"><p class="eyebrow">About the Collection</p><h1>About</h1></div><div class="brief measure">A collection of entries on the Deccan across five centuries, from the founding of Vijayanagara and the Bahmani sultanate to the Deccan Riots of 1875, arranged as a timeline in seven periods – and an argument about how sovereignty there was shared, and then was not.</div>
 <div class="prose">
 <p>Between the 1330s and the 1870s the plateau south of the Narmada was ruled by more powers at once than any other part of India: the Bahmani sultanate and then its five successors, Vijayanagara and its nayakas, the Mughal empire, the Marathas under a king and then under the Peshwas, the Nizam at Hyderabad, Haidar Ali and Tipu Sultan at Mysore, the Portuguese at Goa and the East India Company at Madras and Bombay. They fought, but they also taxed the same villages, hired the same soldiers, recognised one another’s grants and sent embassies to one another’s courts. This collection reads the period as the story of that layered sovereignty: made in the fourteenth century, reordered between 1799 and 1831 into a hierarchy under a single paramount power, and then, between 1831 and 1875, made legible and subordinate – when the hereditary claims to revenue, office and service the Company had inherited were measured, called in and adjudicated, and finally entered in a register under the Bombay Hereditary Offices Act. The colonial state did not abolish the old order; it audited it. The hereditary offices themselves survived, as statutory categories, until independent India abolished them between 1950 and 1963. The entries separate the documentary record (the body of each page) from the collection’s own reading of it (the paragraph headed “In the story”); where the body ventures an interpretation it says so.</p>
@@ -47,7 +47,7 @@
   function sync(){
     var dark=document.documentElement.getAttribute('data-theme')==='dark';
     b.textContent=dark?'Light':'Dark';
-    b.setAttribute('aria-pressed',String(dark));
+    b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
   }
   b.addEventListener('click',function(){
     var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';

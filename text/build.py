@@ -16,13 +16,18 @@ Only style.css and this file are written by a human.
 
 No dependencies beyond the standard library.
 """
-import collections, datetime, html, json, pathlib, re, shutil
+import collections, datetime, html, os, pathlib, re, shutil, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT  = ROOT / "text"
 SITE = "https://naniwadekar.com"
 EG   = SITE + "/european-gaze/"
+GAZE = pathlib.Path(os.environ.get("GAZE_DIR", ROOT.parent / "european-gaze"))   # the map collection's repository
 TODAY = datetime.date.today().isoformat()
+
+sys.path.insert(0, str(ROOT / "tools"))
+from data import load as load_data          # the one parser for window.NAME = {...} files
+from places import Places                   # the one reading of the entries' place fields
 
 DEC_TITLE = "The Deccan, 1336–1875"
 BAS_TITLE = "Basalt and Laterite"
@@ -41,19 +46,34 @@ KIND_B = {"formation": "Formation", "process": "Process", "event": "Event", "pla
 
 # ---------------------------------------------------------------- data
 def load(rel):
-    """Read one of the collections' data files.  Each is a single JSON value
-    behind a `window.NAME =` wrapper, so the browser can load it as a script."""
-    text = (ROOT / rel).read_text(encoding="utf-8")
-    m = re.search(r"window\.[A-Za-z0-9_]+\s*=\s*", text)
-    if not m:
-        raise SystemExit("no window.<NAME> = ... assignment in " + rel)
-    body = text[m.end():].strip()
-    if body.endswith(";"):
-        body = body[:-1]
+    """Read one of the collections' data files through tools/data.py."""
+    return load_data(rel, root=ROOT)
+
+def git_date(*rels):
+    """The date of the last commit that touched any of these files, as YYYY-MM-DD;
+    None when git or the history is not available.  Used for the sitemap's lastmod,
+    so that a rebuild does not claim every page changed today."""
     try:
-        return json.loads(body)
-    except json.JSONDecodeError as err:
-        raise SystemExit("%s is not valid JSON after the wrapper: %s" % (rel, err))
+        out = subprocess.run(["git", "log", "-1", "--format=%cs", "--"] + [str(r) for r in rels],
+                             cwd=str(ROOT), capture_output=True, text=True, timeout=30)
+        d = out.stdout.strip()
+        return d if re.match(r"^\d{4}-\d{2}-\d{2}$", d) else None
+    except Exception:
+        return None
+
+def gaze_titles():
+    """id -> 'Maker, Title (date)' from the map collection's own data/maps.js, when it is
+    checked out beside this repository.  Falls back to the file name otherwise."""
+    path = GAZE / "data" / "maps.js"
+    if not path.exists():
+        return {}
+    out = {}
+    for m in load_data(path):
+        label = "%s, %s (%s)" % (m["maker"], m.get("short") or m["title"], m.get("title_date") or m["date_label"])
+        out[m["id"]] = label
+        out[m["id"].split("__", 1)[-1]] = label      # the same map if only its year prefix was revised
+    return out
+GAZE_TITLES = {}
 
 # ---------------------------------------------------------------- helpers
 # entry id -> the collection it lives in; filled in by main() and used to turn the
@@ -75,8 +95,13 @@ def esc(s):
     return html.escape("" if s is None else str(s), quote=True)
 
 def map_title(fn):
-    """1827__Deccan__Vandermaelen__Guzerate.html -> Vandermaelen, Guzerate (1827)."""
-    parts = fn.replace(".html", "").split("__")
+    """The map's maker, title and date from european-gaze/data/maps.js; failing that,
+    1827__Deccan__Vandermaelen__Guzerate.html -> Vandermaelen, Guzerate (1827)."""
+    mid = fn.replace(".html", "")
+    hit = GAZE_TITLES.get(mid) or GAZE_TITLES.get(mid.split("__", 1)[-1])
+    if hit:
+        return hit
+    parts = mid.split("__")
     year = re.sub(r"^c", "", parts[0])
     name = parts[-1].replace("-", " ")
     maker = parts[2].replace("-", " ") if len(parts) > 3 else ""
@@ -107,6 +132,7 @@ NAV = [("deccan/index.html", "Deccan"), ("deccan/chronology.html", "Chronology")
 def page(rel, title, desc, body):
     """Write one page.  rel is the path below text/, e.g. deccan/hampi.html."""
     up = "../" * rel.count("/")
+    url = SITE + "/text/" + (rel[:-len("index.html")] if rel.endswith("index.html") else rel)
     nav = "".join(
         '<a href="%s%s"%s>%s</a>\n' % (up, href, ' aria-current="page"' if href == rel else "", esc(label))
         for href, label in NAV)
@@ -121,14 +147,15 @@ def page(rel, title, desc, body):
 <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
 <title>{title}</title>
 <link rel="stylesheet" href="{up}style.css">
-<link rel="canonical" href="{site}/text/{rel}">
+<link rel="canonical" href="{url}">
 <link rel="icon" href="{up}../curiosities-icon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="{up}../curiosities-icon-192.png" sizes="192x192" type="image/png">
 <meta property="og:site_name" content="Curiosities">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
-<meta property="og:url" content="{site}/text/{rel}">
+<meta property="og:url" content="{url}">
+<meta name="twitter:card" content="summary">
 </head>
 <body>
 <header class="mast">
@@ -149,7 +176,7 @@ def page(rel, title, desc, body):
 """
     path = OUT / rel
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(doc.format(desc=esc(desc), title=esc(title), up=up, site=SITE, rel=rel,
+    path.write_text(doc.format(desc=esc(desc), title=esc(title), up=up, site=SITE, url=url,
                                nav=nav, body=body), encoding="utf-8")
     return rel
 
@@ -219,6 +246,27 @@ def grouped(entries, key, labels, href, meta):
                     [entry_li(e, href(e), meta(e)) for e in es]))
     return out
 
+PLACES = None   # tools/places.Places over both collections; set in main()
+
+def place_groups(entries, P, order):
+    """Group entries by canonical place: [(anchor, heading, [entries])] alphabetical, plus the unplaced."""
+    groups, unplaced = {}, []
+    for e in entries:
+        if not e.get("place"):
+            unplaced.append(e); continue
+        name, state, _ = P.canon(e["place"])
+        head = name + (", " + state if state else "")
+        groups.setdefault(head, []).append(e)
+    out = []
+    for head in sorted(groups, key=lambda h: h.lower()):
+        es = sorted(groups[head], key=order)
+        out.append((re.sub(r"[^a-z0-9]+", "-", head.lower()).strip("-"), head, es))
+    return out, sorted(unplaced, key=order)
+
+def place_meta(e, meta):
+    """The entry's own place label, added to its usual meta line when the heading is the canonical name."""
+    return meta(e) + " · " + e["place"]
+
 # ---------------------------------------------------------------- the Deccan
 def build_deccan(periods, entries, chron, readings, basalt_entries):
     rels = []
@@ -248,7 +296,7 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
         b.append('<div class="head"><h1>%s</h1><p class="byline">%s</p><p class="brief">%s</p></div>'
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "deccan"))
-        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % esc(e["story"]))
+        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "deccan"))
         if e.get("related_maps"):
             b.append('<h2 class="subhead">In the map collection</h2><p class="links">%s</p>'
                      % " · ".join('<a href="%s%s">%s</a>' % (EG, esc(fn), esc(map_title(fn)))
@@ -344,11 +392,12 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
                            crumbs("A–Z"), "Entries A–Z", "All %d entries by title." % len(entries),
                            [(k.lower(), k, [entry_li(e, href(e), meta(e)) for e in es]) for k, es in letters.items()]))
     by_year = sorted(entries, key=lambda e: (e["year"], sort_title(e["title"])))
+    span = "%d–%d" % (min(e["year"] for e in entries), max(e.get("year_end") or e["year"] for e in entries))
     rels.append(index_page("deccan/by-date.html", "Entries by date – " + DEC_TITLE,
                            "Every entry in The Deccan, 1336–1875, in date order.",
                            crumbs("By date"), "Entries by date",
                            "All %d entries in the order they begin, codas included." % len(entries),
-                           [("all", "1327–1900", [entry_li(e, href(e), meta(e)) for e in by_year])], jump=False))
+                           [("all", span, [entry_li(e, href(e), meta(e)) for e in by_year])], jump=False))
     rels.append(index_page("deccan/by-kind.html", "Entries by kind – " + DEC_TITLE,
                            "The entries of The Deccan, 1336–1875, grouped by kind: battles, treaties, persons, places, documents, objects, institutions and events.",
                            crumbs("By kind"), "Entries by kind", "",
@@ -358,21 +407,21 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
                            crumbs("By polity"), "Entries by polity",
                            "An entry appears under every polity it concerns.",
                            grouped(by_year, lambda e: e["polities"], POL, href, meta)))
-    places = collections.OrderedDict()
-    for e in sorted(entries, key=lambda e: ((e.get("place") or "").lower(), e["year"])):
-        places.setdefault(e.get("place") or "Unplaced", []).append(e)
+    places, unplaced = place_groups(entries, PLACES, lambda e: e["year"])
     rels.append(index_page("deccan/by-place.html", "Entries by place – " + DEC_TITLE,
                            "The entries of The Deccan, 1336–1875, grouped by the place each is set in.",
                            crumbs("By place"), "Entries by place",
-                           "%d places, west to east and north to south as the ground has them." % len(places),
-                           [(re.sub(r"[^a-z0-9]+", "-", k.lower()), k,
-                             [entry_li(e, href(e), meta(e)) for e in es]) for k, es in places.items()], jump=False))
+                           "%d places, in alphabetical order; spellings and localities are folded into one name, "
+                           "and each entry keeps its own place label." % len(places),
+                           [(k, h, [entry_li(e, href(e), place_meta(e, meta)) for e in es]) for k, h, es in places]
+                           + ([("unplaced", "No single place", [entry_li(e, href(e), meta(e)) for e in unplaced])] if unplaced else []),
+                           jump=False))
 
     # ---- collection contents
     b = [crumb([("../index.html", "Text edition"), (None, DEC_TITLE)])]
     b.append('<div class="head"><p class="eyebrow">A collection in seven periods</p><h1>%s</h1>'
              '<p class="lede">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate, '
-             'to the Company takeover and the tumultuous end of the nineteenth century. A story of a plateau where '
+             'to the Company takeover and the Deccan Riots of 1875. A story of a plateau where '
              'sovereignty was repeatedly shared and inherited, and finally audited.</p></div>' % esc(DEC_TITLE))
     b.append('<ul class="tools"><li><a href="chronology.html">The chronology, year by year</a></li>'
              '<li><a href="reading.html">Readings – the standard scholarship</a></li>'
@@ -412,7 +461,7 @@ def build_basalt(periods, entries, deccan_entries):
         b.append('<div class="head"><h1>%s</h1><p class="byline">%s</p><p class="brief">%s</p></div>'
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "basalt"))
-        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % esc(e["story"]))
+        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "basalt"))
         if e.get("deccan"):
             b.append('<h2 class="subhead">In the Deccan timeline</h2><p class="links">%s</p>'
                      % " · ".join('<a href="../deccan/%s.html">%s</a>' % (esc(x["id"]), esc(x["label"]))
@@ -476,15 +525,14 @@ def build_basalt(periods, entries, deccan_entries):
                            "The entries of Basalt and Laterite grouped by the ground they concern: the craton, the basins, the plate, the Traps, landforms, laterite, soil, life and people.",
                            crumbs("By rock"), "Entries by rock", "An entry appears under every heading it concerns.",
                            grouped(by_age, lambda e: e["rocks"], ROCK, href, meta)))
-    places = collections.OrderedDict()
-    for e in sorted(entries, key=lambda e: ((e.get("place") or "").lower(), -e["age"])):
-        places.setdefault(e.get("place") or "Unplaced", []).append(e)
+    places, unplaced = place_groups(entries, PLACES, lambda e: -e["age"])
     rels.append(index_page("basalt/by-place.html", "Entries by place – " + BAS_TITLE,
                            "The entries of Basalt and Laterite grouped by the place each is set in.",
                            crumbs("By place"), "Entries by place",
-                           "%d places where the ground can be seen." % len(places),
-                           [(re.sub(r"[^a-z0-9]+", "-", k.lower()), k,
-                             [entry_li(e, href(e), meta(e)) for e in es]) for k, es in places.items()], jump=False))
+                           "%d places where the ground can be seen, in alphabetical order." % len(places),
+                           [(k, h, [entry_li(e, href(e), place_meta(e, meta)) for e in es]) for k, h, es in places]
+                           + ([("unplaced", "No single place", [entry_li(e, href(e), meta(e)) for e in unplaced])] if unplaced else []),
+                           jump=False))
 
     b = [crumb([("../index.html", "Text edition"), (None, BAS_TITLE)])]
     b.append('<div class="head"><p class="eyebrow">A collection in seven periods</p><h1>%s</h1>'
@@ -536,15 +584,21 @@ def build_home(dec_entries, bas_entries, chron, readings):
              'data: the timeline, the sketch maps, the atlas and the filters are there, and nothing here is a '
              'different version of the text. The map collection, <a href="%s">The European Gaze on India</a>, is not '
              'included, its subject being the images themselves.</p>'
+             '<p>The pages carry no scripts and make no third-party requests: each loads only its own stylesheet '
+             'and the site’s two typefaces, served from this domain. Saved to disk, a page falls back to the '
+             'reader’s own serif.</p>'
              '<p>Last built %s.</p></div>' % (SITE, EG, TODAY))
     return [page("index.html", "Text edition – Curiosities",
                  "The Deccan, 1336–1875 and Basalt and Laterite as plain HTML pages without scripts: one address per "
                  "entry, a full chronology, a bibliography, and indexes by date, kind, polity, rock and place.",
                  "\n".join(b))]
 
-def write_sitemap(rels):
-    urls = "".join("  <url><loc>%s/text/%s</loc><lastmod>%s</lastmod></url>\n"
-                   % (SITE, r.replace("index.html", "") if r.endswith("/index.html") or r == "index.html" else r, TODAY)
+def write_sitemap(rels, lastmod):
+    """lastmod: the date of the last commit to the data files (or None, in which case it is omitted);
+    every page here is derived from them, so no page is newer than that."""
+    stamp = ("<lastmod>%s</lastmod>" % lastmod) if lastmod else ""
+    urls = "".join("  <url><loc>%s/text/%s</loc>%s</url>\n"
+                   % (SITE, r.replace("index.html", "") if r.endswith("/index.html") or r == "index.html" else r, stamp)
                    for r in rels)
     (OUT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -563,6 +617,9 @@ def main():
 
     LINKMAP.update({e["id"]: "deccan" for e in dec_e})
     LINKMAP.update({e["id"]: "basalt" for e in bas_e})
+    global PLACES
+    PLACES = Places(dec_e + bas_e)
+    GAZE_TITLES.update(gaze_titles())
 
     for sub in ("deccan", "basalt"):
         if (OUT / sub).exists():
@@ -571,7 +628,7 @@ def main():
     rels = build_deccan(dec_p, dec_e, chron, readings, bas_e)
     rels += build_basalt(bas_p, bas_e, dec_e)
     rels += build_home(dec_e, bas_e, chron, readings)
-    write_sitemap(sorted(rels))
+    write_sitemap(sorted(rels), git_date("deccan/data", "basalt-and-laterite/data", "text/build.py", "text/style.css"))
     print("text edition: %d pages (%d Deccan entries, %d Basalt entries) written to %s"
           % (len(rels), len(dec_e), len(bas_e), OUT))
 

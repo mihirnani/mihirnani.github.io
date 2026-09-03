@@ -25,8 +25,9 @@
 <a class="navlink" href="https://naniwadekar.com/atlas/">Atlas</a>
 <a class="navlink" href="https://naniwadekar.com/text/">Text</a>
 <a class="navlink" href="about.html">About</a>
-<button aria-label="Toggle light or dark theme" aria-pressed="true" class="theme-toggle" id="themeBtn" type="button">Theme</button></div>
+<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>
 <div id="app"><div class="wrap"><p class="empty">Loading the collection…</p></div></div>
+<noscript><div class="wrap"><p class="empty">This page needs JavaScript to render the collection. The same entries are available as plain pages in the <a href="https://naniwadekar.com/text/basalt/">text edition</a>.</p></div></noscript>
 <script src="data/periods.js"></script>
 <script src="data/entries.js"></script>
 <script src="app.js"></script>
@@ -38,7 +39,7 @@
   function sync(){
     var dark=document.documentElement.getAttribute('data-theme')==='dark';
     b.textContent=dark?'Light':'Dark';
-    b.setAttribute('aria-pressed',String(dark));
+    b.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
   }
   b.addEventListener('click',function(){
     var next=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';

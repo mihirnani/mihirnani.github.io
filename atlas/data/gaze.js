@@ -92,7 +92,7 @@ window.ATLAS_GAZE = {
   },
   {
    "file": "1596__India-Arabia__Linschoten__Southwest-Asia.html",
-   "year": 1595,
+   "year": 1596,
    "approx": false,
    "date_label": "1596",
    "region": "India-Arabia",
@@ -371,6 +371,16 @@ window.ATLAS_GAZE = {
    "room": 3
   },
   {
+   "file": "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
+   "year": 1808,
+   "approx": false,
+   "date_label": "1808",
+   "region": "SouthIndia",
+   "maker": "Lambton GTS",
+   "title": "Triangulation across the Indian Peninsula",
+   "room": 3
+  },
+  {
    "file": "1809__Malabar__Arrowsmith__Province-of-Malabar-Composite.html",
    "year": 1809,
    "approx": false,
@@ -408,16 +418,6 @@ window.ATLAS_GAZE = {
    "region": "India",
    "maker": "Carey Lavoisne",
    "title": "Geographical, Historical, and Statistical Map of India",
-   "room": 3
-  },
-  {
-   "file": "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
-   "year": 1820,
-   "approx": true,
-   "date_label": "1808",
-   "region": "SouthIndia",
-   "maker": "Lambton GTS",
-   "title": "Triangulation across the Indian Peninsula",
    "room": 3
   },
   {

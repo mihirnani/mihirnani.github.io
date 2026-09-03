@@ -1,13 +1,14 @@
 /* The text edition of Curiosities.
-   One stylesheet, no scripts. Light and dark follow the reader's system setting;
-   there is no theme switch here because a switch needs JavaScript. Everything
+   One stylesheet, no scripts, no third-party requests: the two typefaces are the
+   site's own, served from /assets/fonts/. Light and dark follow the reader's system
+   setting; there is no theme switch here because a switch needs JavaScript. Everything
    degrades to readable text if the fonts, or this file, fail to load. */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url("/assets/fonts/fonts.css");   /* self-hosted Cormorant Garamond and Spectral, SIL OFL – see assets/fonts/ */
 
 :root{
   --ink:#ece3d1; --panel:rgba(70,50,25,.05); --paper:#2b2420; --paper-dim:#4d4338;
-  --muted:#8a7c66; --accent:#8c2f32; --accent-bright:#a63b3e; --line:rgba(60,45,25,.18);
+  --muted:#6b5f4d; --accent:#8c2f32; --accent-bright:#a63b3e; --line:rgba(60,45,25,.18);
   --link-hover:#6b1f22;
   --measure:38em;
 }

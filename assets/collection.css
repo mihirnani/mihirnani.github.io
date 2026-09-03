@@ -1,10 +1,10 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Spectral:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url("/assets/fonts/fonts.css");   /* self-hosted Cormorant Garamond and Spectral, SIL OFL – see assets/fonts/ */
 
 /* ---- LIGHT (paper) is the default ---- */
 :root, [data-theme="light"]{
   --ink:#ece3d1; --ink-2:#e4d9c2; --panel:rgba(70,50,25,.05);
-  --paper:#2b2420; --paper-dim:#4d4338; --muted:#8a7c66;
+  --paper:#2b2420; --paper-dim:#4d4338; --muted:#6b5f4d;   /* 4.9:1 on --ink; the old #8a7c66 was 3.2:1 */
   --accent:#8c2f32; --accent-bright:#a63b3e; --line:rgba(60,45,25,.18);
   --mat:#fbf6ea; --glow:#f6efdf; --bar:rgba(236,227,209,.8);
   --link-hover:#6b1f22; --shadow:rgba(60,40,15,.18);
@@ -485,3 +485,17 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
    break mid-sentence. */
 .foot-line { display: block; white-space: nowrap; }
 @media (max-width: 360px) { .foot-line { white-space: normal; } }
+
+/* ---- Accessibility and hint fixes for the two timeline collections (review, Sept 2026).
+   Kept as one block at the end so it merges cleanly with other edits to this file. ---- */
+/* Visible keyboard focus on the interactive SVG markers, the filter chips and the search box. */
+.tl-wrap .mk:focus-visible, .tl-wrap .gmk:focus-visible{outline:none; stroke:var(--paper); stroke-width:3.5; r:8}
+.chip:focus-visible{outline:2px solid var(--accent-bright); outline-offset:2px}
+.search input:focus-visible{outline:2px solid var(--accent-bright); outline-offset:1px; border-color:var(--accent)}
+.back:focus-visible, .mapnav a:focus-visible, .theme-toggle:focus-visible{outline:2px solid var(--accent-bright); outline-offset:2px}
+/* The "scroll sideways" hint belongs to the Deccan timeline only: not under the sketch map,
+   and with different wording under Basalt and Laterite's deep-time band. */
+@media (max-width:820px){
+  .tl-wrap#geo::after{content:none}
+  .tl-wrap.band::after{content:"Scroll sideways for later periods →"}
+}

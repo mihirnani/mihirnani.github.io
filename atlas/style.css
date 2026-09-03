@@ -2,7 +2,7 @@
    The ground is the collections' parchment (the palette of deccan/style.css: page, panel, text, muted, line, accent),
    so the three pages sit beside the Deccan page; the type follows the front page. The collection colours
    (--map, --deccan, --stone) are the front page's own, and --atlas is the section's colour. */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap");
+@import url("/assets/fonts/fonts.css");   /* self-hosted Cormorant Garamond and Spectral, SIL OFL – see assets/fonts/ */
 
 :root,
 :root[data-theme="light"] {
@@ -10,7 +10,7 @@
   --glow: #f6efdf;                     /* the collections' radial glow at the top of the page */
   --mat: #fbf6ea;                      /* panels – the collections' --mat */
   --text: #2b2420;
-  --muted: #8a7c66;
+  --muted: #6b5f4d;                    /* 4.9:1 on --bg; the collections' old #8a7c66 was 3.2:1 */
   --line: rgba(60, 45, 25, 0.18);
   --panel: rgba(70, 50, 25, 0.05);
   --accent: #8c2f32;
@@ -119,6 +119,8 @@ header {
 .nav a { text-decoration: none; }
 .nav a:hover, .nav a:focus-visible { color: var(--text); text-decoration: underline; outline: none; }
 .nav a[aria-current="page"] { color: var(--atlas); }
+header nav { min-width: 0; }
+#map:focus-visible { outline: 2px solid var(--atlas); outline-offset: 2px; }
 
 .theme-toggle {
   border: 0;

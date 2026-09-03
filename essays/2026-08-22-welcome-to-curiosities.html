@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="What this site is, what is on it, and what the essays will be.">
+  <meta name="robots" content="noindex">
   <meta name="date" content="2026-08-22">
   <meta name="author" content="Mihir Naniwadekar">
   <meta name="source" content="2026-08-22-welcome-to-curiosities.md">
@@ -36,7 +37,7 @@
   <div class="page">
     <header class="top">
       <nav><a href="https://naniwadekar.com/">Curiosities</a><a href="index.html">Essays</a><a href="feed.xml">RSS</a></nav>
-      <button aria-label="Toggle light and dark theme" class="theme-toggle" id="theme-toggle" type="button">Dark</button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
     <main>
 <article>
@@ -47,7 +48,6 @@
 <p>This is where the first essay will go. The essays will appear fortnightly and can be followed by RSS; the feed is at <a href="feed.xml">feed.xml</a>.</p>
 <p>Until the text is written, this page stands in for it so that the list, the feed and the links all work.</p>
 </article>
-<nav class="pager"></nav>
     </main>
     <footer class="bottom"><span class="foot-line">Part of <a href="https://naniwadekar.com/">Curiosities</a>. A non-commercial study collection.</span> <span class="foot-line">Errors may be pointed out by writing to <a class="mail" href="#" data-u="mihir" data-d="naniwadekar.in">mihir [at] naniwadekar [dot] in</a>.</span></footer>
 <script>(function(){var l=document.querySelectorAll("a.mail");for(var i=0;i<l.length;i++){var a=l[i],m=a.getAttribute("data-u")+"@"+a.getAttribute("data-d");a.href="mailto:"+m;a.textContent=m;}})();</script>
@@ -55,7 +55,7 @@
   <script>
     (function () {
       var b = document.getElementById("theme-toggle");
-      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-pressed", String(d)); }
+      function u() { var d = document.documentElement.dataset.theme === "dark"; b.textContent = d ? "Light" : "Dark"; b.setAttribute("aria-label", d ? "Switch to light theme" : "Switch to dark theme"); }
       b.addEventListener("click", function () {
         var n = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
         document.documentElement.dataset.theme = n; try { localStorage.setItem("root-theme", n); } catch (e) {} u();
