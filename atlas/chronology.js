@@ -138,7 +138,7 @@
         cur = ei;
       }
       var body;
-      if (it.kind === "chron") body = '<span class="k">' + (it.e ? "" : "") + "</span>" + E(it.text) + (it.e ? ' <a href="' + DECCAN + "#" + E(it.e) + '">Entry →</a>' : "");
+      if (it.kind === "chron") body = it.e ? '<span class="k">Entry</span><a href="' + DECCAN + "#" + E(it.e) + '">' + E(it.text) + "</a>" : E(it.text);
       else if (it.kind === "entry") body = '<span class="k">Entry</span><a href="' + DECCAN + "#" + E(it.e) + '">' + E(it.text) + '</a> <span class="strap">' + E(it.strap) + "</span>";
       else if (it.kind === "basalt") body = '<span class="k">Basalt</span><a href="' + BASALT + "#" + E(it.b) + '">' + E(it.text) + '</a> <span class="strap">' + E(it.strap) + "</span>";
       else body = '<span class="k">Map</span><a href="' + E(gaze.base + it.file) + '">' + E(it.text) + "</a>" + (it.room ? ' <span class="strap">Room ' + it.room + "</span>" : "");

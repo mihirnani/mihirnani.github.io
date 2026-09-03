@@ -393,7 +393,7 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 
 .era {
   display: grid;
-  grid-template-columns: 5.5rem minmax(0, 1fr);
+  grid-template-columns: 6.5rem minmax(0, 1fr);
   gap: 0 1.4rem;
   border-bottom: 1px solid var(--line);
 }
@@ -406,7 +406,7 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 
 .era .band .sticky { position: sticky; top: 1rem; }
 .era .band .n { display: block; font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif; font-size: 1.3rem; color: var(--band, var(--muted)); line-height: 1; }
-.era .band .ttl { display: block; margin-top: 0.3rem; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); line-height: 1.35; }
+.era .band .ttl { display: block; margin-top: 0.3rem; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); line-height: 1.35; hyphens: auto; }
 .era .band .yrs { display: block; margin-top: 0.25rem; font-size: 0.75rem; color: var(--muted); }
 
 .era ol { margin: 0; padding: 0.6rem 0; list-style: none; }
@@ -426,7 +426,7 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .era li.entry .k { color: var(--deccan); }
 .era li.basalt .k { color: var(--stone); }
 .era li.gaze .k { color: var(--map); }
-.era li.chron .k { color: var(--muted); }
+.era li.chron .k { color: var(--deccan); }
 .era li a { text-decoration: none; }
 .era li a:hover, .era li a:focus-visible { text-decoration: underline; }
 .era li .strap { color: var(--muted); font-size: 0.9rem; }
@@ -486,7 +486,8 @@ footer p { margin: 0 0 0.5rem; }
 
 @media (max-width: 820px) {
   .place { grid-template-columns: 1fr; gap: 0.3rem; }
-  .era { grid-template-columns: 4rem minmax(0, 1fr); gap: 0 0.9rem; }
+  .era { grid-template-columns: 5.4rem minmax(0, 1fr); gap: 0 0.9rem; }
+  .era .band .ttl { font-size: 0.6rem; letter-spacing: 0.05em; }
   .era li { grid-template-columns: 1fr; gap: 0; }
   .era li .d { padding-top: 0; }
   .beyond ul { columns: 1; }
@@ -496,8 +497,14 @@ footer p { margin: 0 0 0.5rem; }
   .page, .page--wide { width: min(100% - 1.4rem, 920px); }
   main { padding-top: 2.5rem; }
   header { flex-wrap: wrap; }
-  .era { grid-template-columns: 3.2rem minmax(0, 1fr); gap: 0 0.7rem; }
-  .era .band .ttl { font-size: 0.62rem; letter-spacing: 0.08em; }
+  /* On a phone the era heading runs across the top of its list instead of down a side column. */
+  .era { display: block; }
+  .era .band { border-right: 0; border-top: 3px solid var(--band, var(--line)); padding: 0.55rem 0 0.1rem; }
+  .era .band .sticky { position: static; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.6rem; }
+  .era .band .n { font-size: 1.1rem; }
+  .era .band .ttl, .era .band .yrs { display: inline; margin-top: 0; }
+  .era .band .ttl { font-size: 0.66rem; letter-spacing: 0.08em; }
+  .era .band .yrs { font-size: 0.72rem; }
   .era .band .yrs { font-size: 0.68rem; }
   .map-wrap::after { content: "Scroll sideways for the east coast \2192"; display: block; position: sticky; left: 0; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); padding: 0.3rem 0.8rem 0.6rem; }
 }
