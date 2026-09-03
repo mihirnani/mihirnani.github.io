@@ -16,7 +16,6 @@ this runs them in the right order:
   4. atlas/tools/make_gaze.py  the atlas's map layer, from the map collection's data
   5. atlas/tools/make_places.py     the atlas's places index
   6. text/build.py             the text edition: one static page per entry
-  7. essays/build.py           the essays, their index and their feed
 
 Run it after editing any data file, any page body, or assets/collection.css.
 Everything it writes is derived; the data files and page bodies are the source.
@@ -25,7 +24,7 @@ import pathlib, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 STEPS = ["tools/shell.py", "../european-gaze/build.py", "atlas/tools/make_snapshot.py",
-         "atlas/tools/make_gaze.py", "atlas/tools/make_places.py", "text/build.py", "essays/build.py"]
+         "atlas/tools/make_gaze.py", "atlas/tools/make_places.py", "text/build.py"]
 
 def main():
     failed = []

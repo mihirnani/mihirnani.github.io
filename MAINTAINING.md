@@ -11,7 +11,7 @@ generated file, the next build overwrites your edit.
 
 ## The three repositories
 
-    mihirnani.github.io/   the hub: front page, Deccan, Basalt and Laterite, atlas, text edition, essays
+    mihirnani.github.io/   the hub: front page, Deccan, Basalt and Laterite, atlas, text edition
     european-gaze/         the map collection (deployed at /european-gaze/)
     sahyadri-birds/        the bird guide (deployed at /sahyadri-birds/)
 
@@ -88,13 +88,6 @@ Copy a record in `birds.json`, give it a new `id` (the URL hash), and fill in ev
 `order_id`, `family_id` and `group_id` must exist in `families.json`. Names follow the
 AviList version named on the About page; use its spelling and hyphenation.
 
-### Write or update an essay
-
-See `essays/essays-workflow.md` — Markdown in, everything else generated. While
-`UNLISTED = True` at the top of `essays/build.py` the section is live but hidden from
-search engines, sitemaps and the front page; flip it, rebuild, and follow the three steps in
-that file when the first essay is ready.
-
 ### Change the navigation or the footer on every page
 
 Edit `SECTIONS`, `FOOTER` or the masthead template in `tools/shell.py`; mirror the same change
@@ -104,7 +97,7 @@ in `european-gaze/build.py` (which owns the map collection's shell) and by hand 
 ### Change the look
 
 Timeline collections: `assets/collection.css` (copied to each collection's `style.css` by the
-build). The map collection, the atlas, the text edition, the essays and Birds each have
+build). The map collection, the atlas, the text edition and Birds each have
 their own stylesheet, edited in place. The typefaces are in `assets/fonts/`; every
 stylesheet imports `/assets/fonts/fonts.css`.
 

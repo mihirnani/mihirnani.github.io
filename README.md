@@ -5,7 +5,7 @@ package manager: plain HTML, one stylesheet per look, and a few Python scripts
 that generate the parts which would otherwise have to be kept in step by hand.
 
 `MAINTAINING.md` beside this file has the routines: how to add an entry, a map, a
-photograph or an essay, and what to run afterwards.
+photograph, and what to run afterwards.
 
 ## Layout
 
@@ -15,7 +15,6 @@ photograph or an essay, and what to run afterwards.
     basalt-and-laterite/      Basalt and Laterite     — data + single-page renderer
     atlas/                    one map across the collections
     text/                     the text edition: static pages, generated
-    essays/                   essays, generated from Markdown
     tools/                    the build scripts
 
 The two collections keep their content in `data/*.js` — JSON behind a
@@ -46,10 +45,6 @@ which runs, in order:
    period, the chronology, the bibliography and the indexes. Its sitemap's
    `lastmod` is the date of the last commit to the data files, so a rebuild
    does not claim every page changed.
-7. `essays/build.py` — rebuilds the essay pages, index and feed from Markdown.
-   While `UNLISTED = True` at the top of that script the essays carry
-   `noindex`, no sitemap is written and the section stays out of the site's
-   sitemaps; flip it when there are essays to be found.
 
 Everything those scripts write is derived. Edit the data files, the page bodies,
 `assets/collection.css`, or the tables inside the scripts — never the generated
@@ -68,11 +63,10 @@ are served from `assets/fonts/` and imported by every stylesheet as
 font service, no analytics, no CDN. The companion repositories import the same
 file by the same absolute path.
 
-## Unlisted sections
+## Not found
 
-`essays/` is live but carries `noindex` and is left out of the
-sitemaps and the front page until there are essays to list. `404.html` at the root is the
-site's not-found page (GitHub Pages serves only the root one for this domain).
+`404.html` at the root is the site's not-found page (GitHub Pages serves only the root
+one for this domain).
 
 ## Companion repositories
 
