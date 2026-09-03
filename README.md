@@ -17,11 +17,12 @@ photograph, and what to run afterwards.
     text/                     the text edition: static pages, generated
     tools/                    the build scripts
 
-The two collections keep their content in `data/*.js` — JSON behind a
-`window.NAME =` wrapper, so the pages also work when opened from a local folder.
-**Those files are the single source of truth.** The renderers, the atlas, the
-text edition and the search indexes all read them; nothing else holds a
-second copy of the prose.
+The text of the two collections lives as Markdown in the `curiosities-text`
+repository beside this one, and `data/*.js` here — JSON behind a `window.NAME =`
+wrapper, so the pages also work when opened from a local folder — is built from
+it by the first step of the build. **The Markdown is the source; the data files
+are generated.** The renderers, the atlas, the text edition and the search
+indexes all read the data files; nothing else holds a copy of the prose.
 
 ## Building
 
@@ -29,6 +30,8 @@ second copy of the prose.
 
 which runs, in order:
 
+0. `../curiosities-text/tools/assemble.py` — the collections' data files from the
+   Markdown (skipped, with a note, if that repository is not beside this one).
 1. `tools/shell.py` — writes the `<head>`, masthead and footer of the two
    collections' pages from one table, and copies `assets/collection.css` into
    each collection as `style.css` (each collection keeps its own copy so that it
@@ -46,9 +49,10 @@ which runs, in order:
    `lastmod` is the date of the last commit to the data files, so a rebuild
    does not claim every page changed.
 
-Everything those scripts write is derived. Edit the data files, the page bodies,
-`assets/collection.css`, or the tables inside the scripts — never the generated
-copies (`text/deccan/*.html`, `text/basalt/*.html`, `deccan/style.css`,
+Everything those scripts write is derived. Edit the Markdown in `curiosities-text`,
+the page bodies, `assets/collection.css`, or the tables inside the scripts — never
+the generated copies (`deccan/data/*.js`, `basalt-and-laterite/data/*.js`,
+`text/deccan/*.html`, `text/basalt/*.html`, `deccan/style.css`,
 `basalt-and-laterite/style.css`, `atlas/data/snapshot/*`, `atlas/data/gaze.js`,
 `atlas/data/places.js`).
 
@@ -70,6 +74,7 @@ one for this domain).
 
 ## Companion repositories
 
+- `curiosities-text` — the text of the Deccan, Basalt and the map commentaries, as Markdown; the source
 - `european-gaze` — The European Gaze on India (one static page per map)
 - `sahyadri-birds` — Birds of the Sahyadris
 

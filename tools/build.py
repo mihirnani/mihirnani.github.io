@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Build the whole site.  Run from anywhere:  python3 tools/build.py
 
-The site has no framework and no dependencies; it has four small generators, and
+The site has no framework and no dependencies; it has a few small generators, and
 this runs them in the right order:
 
+  0. ../curiosities-text/tools/assemble.py   the collections' data files, from the
+                               Markdown in the curiosities-text repository beside
+                               this one (that repository is the source of the text)
   1. tools/shell.py            the shared <head>, masthead and footer of the two
                                timeline collections, and their copy of the
                                shared stylesheet
@@ -17,13 +20,14 @@ this runs them in the right order:
   5. atlas/tools/make_places.py     the atlas's places index
   6. text/build.py             the text edition: one static page per entry
 
-Run it after editing any data file, any page body, or assets/collection.css.
-Everything it writes is derived; the data files and page bodies are the source.
+Run it after editing the text (in ../curiosities-text), any page body, or
+assets/collection.css.  Everything it writes is derived, the data files included;
+the Markdown and the page bodies are the source.
 """
 import pathlib, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-STEPS = ["tools/shell.py", "../european-gaze/build.py", "atlas/tools/make_snapshot.py",
+STEPS = ["../curiosities-text/tools/assemble.py", "tools/shell.py", "../european-gaze/build.py", "atlas/tools/make_snapshot.py",
          "atlas/tools/make_gaze.py", "atlas/tools/make_places.py", "text/build.py"]
 
 def main():

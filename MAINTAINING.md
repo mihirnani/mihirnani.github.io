@@ -5,45 +5,50 @@ other half: what to actually do, in order, for the changes you are likely to mak
 recipe ends the same way — build, check, commit, push — so that part is written once, at the
 end.
 
-The one rule behind all of it: **content lives in data files and hand-written pages; anything
-whose first line says "generated" or "do not edit" is rebuilt from them.** If you edit a
-generated file, the next build overwrites your edit.
+The one rule behind all of it: **the text lives as Markdown in `curiosities-text`, the
+Birds data in its JSON, and the page shells in hand-written HTML; anything whose first line
+says "generated" or "do not edit" is rebuilt from those.** The collections' `data/*.js`
+files are generated too. If you edit a generated file, the next build overwrites your edit.
 
-## The three repositories
+## The four repositories
 
+    curiosities-text/      the text: one Markdown file per entry, period, map and room (an Obsidian vault)
     mihirnani.github.io/   the hub: front page, Deccan, Basalt and Laterite, atlas, text edition
     european-gaze/         the map collection (deployed at /european-gaze/)
     sahyadri-birds/        the bird guide (deployed at /sahyadri-birds/)
 
-They must sit beside one another in one folder: the hub's build reads `../european-gaze/`.
-Each is its own git repository and is pushed separately; GitHub Pages deploys each on push,
-usually within a minute or two.
+They must sit beside one another in one folder: the builds read `../curiosities-text/` and
+`../european-gaze/`. Each is its own git repository and is pushed separately; GitHub Pages
+deploys the three site repositories on push, usually within a minute or two;
+`curiosities-text` is not deployed, only read at build time.
 
 ## Recipes
 
-### Change the wording of a Deccan or Basalt entry
+### Change the wording of an entry or a map commentary
 
-1. Edit the entry in `deccan/data/entries.js` (or `basalt-and-laterite/data/entries.js`).
-   The prose fields hold HTML: `<em>` for italics, `<a href>` for links, curly quotes and
-   spaced en dashes ( – ) as in the rest of the collection. Keep the file valid JSON behind
-   the `window.NAME =` wrapper — a stray comma breaks the whole page.
-2. Build, check, commit, push (below). The text edition and the atlas pick the change up
-   from the build; the illustrated page reads the data file directly.
+1. Edit the Markdown in `curiosities-text`: `deccan/entries/<id>.md`,
+   `basalt/entries/<id>.md` or `maps/<id>.md`. Ordinary Markdown — `*italics*`,
+   `[text](other-entry.md)` for a link to another entry, blank lines between paragraphs,
+   curly quotes and spaced en dashes ( – ) as in the rest of the collection. The strap
+   (first paragraph) is plain text. `curiosities-text/README.md` shows the shape.
+2. Build, check, commit, push (below) — the build assembles the data files from the
+   Markdown, then everything derived from them. Commit `curiosities-text` too.
 
 ### Add a Deccan entry
 
-1. Copy an existing record in `deccan/data/entries.js` and give it a new `id` (lower-case,
-   hyphens; it becomes the URL `#<id>`), a `title`, `period`, `polities`, `kind`, `place`
-   with `lat`/`lon` for the atlas, `date_label` with `year` (and `year_end`) for the
-   timeline, a `strap`, the `body`, the `story` paragraph, `sources`, and `related_maps`
-   (a list of map ids from `european-gaze/data/maps.js`, or `[]`).
-2. If it belongs in the detailed chronology, add an item to `deccan/data/chronology.js`
-   with `"e": "<id>"` so the item links to it. If it rests on a work not yet in the
-   bibliography, add the work to `deccan/data/readings.js`.
-3. If a map illustrates it, the link is made on both sides: the map's id goes in the
-   entry's `related_maps`, and the entry goes in that map's `deccan` list in
-   `../european-gaze/data/maps.js` (the label there is `title (date_label)`, exactly as in
-   the entry). The entry page then names the map and the map page names the entry.
+1. In `curiosities-text/deccan/entries/`, copy the nearest existing file to `<id>.md`
+   (lower-case, hyphens; it becomes the URL `#<id>`) and fill in the front matter — `id`
+   (matching the file name), `title`, `period`, `polities`, `kind`, `place` with `lat`/`lon`
+   for the atlas, `date_label` with `year` (and `year_end`) for the timeline, `sources`,
+   and `related_maps` (the map pages' file names, or `[]`) — then the strap, the body and
+   the `## In the story` paragraph.
+2. If it belongs in the detailed chronology, add a line to `deccan/chronology.md` in the
+   right section, ending ` → [Entry](entries/<id>.md)`. If it rests on a work not yet in
+   the bibliography, add the work to `deccan/readings.md`.
+3. If a map illustrates it, the link is made on both sides: the map page's file name goes
+   in the entry's `related_maps`, and the entry goes in the `deccan` list of
+   `curiosities-text/maps/<map-id>.md` (the label there is `title (date_label)`, exactly as
+   in the entry). The entry page then names the map and the map page names the entry.
 4. Build, check, commit, push.
 
 ### Add a map to The European Gaze
@@ -59,16 +64,18 @@ usually within a minute or two.
            vips dzsave master.jpg img/dzi/<id> --suffix .jpg[Q=85] --tile-size 510 --overlap 1
    Keep the master in `img/` — it is ignored by git and stays on this machine only.
    (Without tiles the page simply shows the display image; the viewer is optional.)
-3. Add a record to `data/maps.js`: copy the nearest existing one and fill in `id`, `year`,
-   `region`, `maker` (a display name, e.g. `d’Anville`), `date_label`, `title`, `short`,
-   `byline`, `brief`, the `image` and `thumb` blocks with the pixel sizes, `room`, the
-   `deccan` links, the `prose` (subheads as `<p class="subhead">…</p>`, ending with
-   "The gaze"), and the `meta` rows. The build adds the Rumsey credit row itself whenever
-   a `Source record` row links to davidrumsey.com.
-4. Hang it: add the `id` to the right room's list in `data/rooms.js`, in order.
+3. In `curiosities-text/maps/`, copy the nearest existing file to `<id>.md` and fill in
+   the front matter — `id`, `year`, `region`, `maker` (a display name, e.g. `d’Anville`),
+   `date_label`, `title`, `short`, `byline`, the `image` and `thumb` blocks with the pixel
+   sizes, `room`, the `deccan` links and the `meta` rows — then the brief as the first
+   paragraph and the commentary under `##` subheads, ending with `## The gaze`. The build
+   adds the Rumsey credit row itself whenever a `Source record` row links to
+   davidrumsey.com.
+4. Hang it: add the `id` to the right room's `maps` list in `curiosities-text/maps/rooms/`,
+   in order.
 5. Add the page to `sitemap.xml`.
-6. Build (from the hub, so the atlas and text edition see it), check, commit, push — this
-   repository and, because its generated files changed, the hub too.
+6. Build (from the hub, so the atlas and text edition see it), check, commit, push —
+   `curiosities-text`, this repository and, because its generated files changed, the hub.
 
 ### Add or replace a photograph in Birds
 
@@ -112,13 +119,15 @@ footer.
 ## Build, check, commit, push
 
     cd mihirnani.github.io
-    python3 tools/build.py          # also builds ../european-gaze; ~10 s
+    python3 tools/build.py          # assembles the data from ../curiosities-text, then
+                                    # builds this repository and ../european-gaze; ~10 s
 
 Then look at what changed before committing:
 
     git status --short              # in each repository you touched
 
-A build after a data edit should change only files derived from that data. If it touches
+A build after a text edit should change only the data file for that collection and the
+pages derived from it. If it touches
 193 text-edition pages when you changed one entry, something upstream changed (a template,
 the date rule) — look before you commit. Open the changed page locally (double-click the
 HTML; every collection works from a folder, without the fonts) or wait for the push and look
@@ -126,18 +135,19 @@ at it live.
 
     git add -A && git commit -m "Deccan: add the entry on X" && git push
 
-Commit the generated files together with the data that produced them, so a checkout is
-always consistent. If you changed the Gaze data, push both repositories.
+Commit the generated files together with the Markdown that produced them — the text repo
+and the site repo in the same sitting — so a checkout is always consistent.
 
 ## Things that bite
 
 - **Caching.** There are no service workers; the pages are ordinary static files and a
   reload shows the current version. If a stylesheet or data file looks stale, it is the
   browser's own cache — a hard reload clears it.
-- **Valid JSON.** The data files are JSON. A missing comma or a stray straight quote inside
-  a string takes the whole page down; the build will tell you the line.
-- **HTML inside strings.** Quotes inside the prose fields must be curly (’ “ ”) or escaped;
-  attribute quotes inside links must be `\"`.
+- **Front matter.** The build reads the plain YAML the files use; if Obsidian or a hand
+  edit writes something it cannot read, the build stops and names the file and line.
+  A colon-and-space inside an unquoted value is the usual cause — quote the value.
+- **Birds is still JSON.** A missing comma in `birds.json` takes the page down; check the
+  file parses before committing.
 - **Ids are URLs.** Renaming an `id` breaks every link to it — in the other collections,
   the atlas, the text edition and anyone's bookmarks. If you must, leave a redirect stub at
   the old address, as was done for two maps in September 2026.

@@ -451,21 +451,21 @@ window.ATLAS_PLACES = [
   "aliases": [
    "Golconda, Hyderabad, Telangana",
    "Hyderabad, Telangana",
+   "Hyderabad and Golconda, Telangana",
    "Chowmahalla, Hyderabad, Telangana",
-   "Koti, Hyderabad, Telangana",
-   "Hyderabad and Golconda, Telangana"
+   "Koti, Hyderabad, Telangana"
   ],
   "deccan": [
    "golconda-diamonds",
    "ibrahim-qutb-shah",
    "hyderabad-founded-1591",
+   "madanna-akkanna",
    "bijapur-golconda-fall-1687",
+   "bussy-hyderabad",
    "nizam-ali-khan-hyderabad-1763",
    "subsidiary-alliance-1798",
    "hyderabad-residency",
    "palmer-and-company",
-   "madanna-akkanna",
-   "bussy-hyderabad",
    "salar-jang-hyderabad"
   ],
   "basalt": [
@@ -730,8 +730,8 @@ window.ATLAS_PLACES = [
    "Madurai, Tamil Nadu"
   ],
   "deccan": [
-   "nayakas",
-   "madurai-southern-conquest"
+   "madurai-southern-conquest",
+   "nayakas"
   ],
   "basalt": [],
   "lat": 9.925,
@@ -990,9 +990,9 @@ window.ATLAS_PLACES = [
    "pune-colonial",
    "elphinstone-report-1819",
    "elphinstone-to-inam",
+   "phule-satyashodhak",
    "inam-commission-1852",
-   "ranade-and-the-first-histories",
-   "phule-satyashodhak"
+   "ranade-and-the-first-histories"
   ],
   "basalt": [],
   "lat": 18.523,
