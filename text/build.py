@@ -420,9 +420,10 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
     # ---- collection contents
     b = [crumb([("../index.html", "Text edition"), (None, DEC_TITLE)])]
     b.append('<div class="head"><p class="eyebrow">A collection in seven periods</p><h1>%s</h1>'
-             '<p class="lede">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate, '
-             'to the Company takeover and the Deccan Riots of 1875. A story of a plateau where '
-             'sovereignty was repeatedly shared and inherited, and finally audited.</p></div>' % esc(DEC_TITLE))
+             '<p class="lede">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate '
+             'to the Company takeover and the Deccan Riots of 1875. The story of a plateau where sovereignty was '
+             'repeatedly shared and inherited, until one power made itself paramount and reduced the rest to a '
+             'register.</p></div>' % esc(DEC_TITLE))
     b.append('<ul class="tools"><li><a href="chronology.html">The chronology, year by year</a></li>'
              '<li><a href="reading.html">Readings – the standard scholarship</a></li>'
              '<li><a href="by-title.html">Entries A–Z</a></li><li><a href="by-date.html">Entries by date</a></li>'

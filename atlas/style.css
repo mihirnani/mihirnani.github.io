@@ -117,6 +117,9 @@ header {
 }
 
 .nav a { text-decoration: none; }
+/* the family of collections, quieter; a hairline before the atlas's own pages */
+.nav li.family a { color: var(--muted); }
+.nav li.local:first-of-type, .nav li.family + li.local { padding-left: 1.1rem; border-left: 1px solid var(--line); }
 .nav a:hover, .nav a:focus-visible { color: var(--text); text-decoration: underline; outline: none; }
 .nav a[aria-current="page"] { color: var(--atlas); }
 header nav { min-width: 0; }
@@ -498,6 +501,7 @@ footer p { margin: 0 0 0.5rem; }
   main { padding-top: 2.5rem; }
   header { flex-wrap: wrap; }
   /* On a phone the era heading runs across the top of its list instead of down a side column. */
+  .nav li.local:first-of-type, .nav li.family + li.local { padding-left: 0; border-left: 0; }
   .era { display: block; }
   .era .band { border-right: 0; border-top: 3px solid var(--band, var(--line)); padding: 0.55rem 0 0.1rem; }
   .era .band .sticky { position: static; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.6rem; }

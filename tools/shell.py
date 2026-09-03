@@ -135,12 +135,13 @@ def head(cfg, coll):
 def masthead(coll):
     links = "".join('<a class="navlink" href="%s">%s</a>\n' % (href, label)
                     for key, label, href in SECTIONS if key != coll["key"])
+    # Two groups, marked as such: the family of collections (muted) and this collection's own pages.
     return ('<div class="masthead"><a class="site" href="index.html">%s</a>\n'
             '<span class="yrs">%s</span>\n'
             '<span class="nav-break" aria-hidden="true"></span>\n'
-            '<a class="navlink home" href="%s/">Curiosities</a>\n'
-            '%s'
-            '<a class="navlink" href="about.html">About</a>\n'
+            '<nav class="nav-family" aria-label="Curiosities"><a class="navlink home" href="%s/">Curiosities</a>\n'
+            '%s</nav>\n'
+            '<nav class="nav-local" aria-label="This collection"><a class="navlink" href="about.html">About</a></nav>\n'
             '<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>') % (coll["name"], coll["tagline"], SITE, links)
 
 def tail(coll):

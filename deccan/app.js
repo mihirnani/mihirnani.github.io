@@ -86,7 +86,7 @@
       '<p class="eyebrow">A Timeline Collection</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate, to the Company takeover and the Deccan Riots of 1875. A story of a plateau where sovereignty was repeatedly shared and inherited, and finally audited.</p>' +
+      '<p class="lede measure">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate to the Company takeover and the Deccan Riots of 1875. The story of a plateau where sovereignty was repeatedly shared and inherited, until one power made itself paramount and reduced the rest to a register.</p>' +
       '<p class="measure muted">The story is told through seven periods and eleven polities. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to a companion <a href="' + EG + '">map collection</a>. For the whole span at a glance, read the <a href="#chronology">detailed chronology</a>; for the shelf behind the entries, the <a href="#readings">bibliography</a>.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
