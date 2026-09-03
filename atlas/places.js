@@ -125,7 +125,7 @@
         var file = typeof m === "string" ? m : (m.file || m.href || m.id);
         if (!file || ul.querySelector('a[href$="' + file + '"]')) return;
         var mt = mapTitle(file), base = (gaze && gaze.base) || "https://naniwadekar.com/european-gaze/";
-        var src = m.sources || [], how = src.indexOf("notes") >= 0 ? "" : src.indexOf("deccan") >= 0 ? "via the Deccan entries" : src.indexOf("region") >= 0 ? "within the sheet’s region" : "";
+        var src = m.sources || [], how = src.indexOf("notes") >= 0 ? "" : src.indexOf("deccan") >= 0 ? "linked from a Deccan entry" : src.indexOf("region") >= 0 ? "the sheet covers the region" : "";
         ul.insertAdjacentHTML("beforeend", row("gaze", /^https?:/.test(file) ? file : base + file, mt.t, m.date || mt.d, how, true));
         added++;
       });

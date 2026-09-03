@@ -14,8 +14,8 @@
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --ink:#0d0d0f; --panel:rgba(255,250,240,.035); --paper:#e9e3d6; --paper-dim:#c7c0b1;
-    --muted:#938b7b; --accent:#d98c6a; --accent-bright:#f0a887; --line:rgba(233,227,214,.14);
+    --ink:#16120e; --panel:rgba(255,250,240,.035); --paper:#e9e3d6; --paper-dim:#c7c0b1;
+    --muted:#938b7b; --accent:#d98c6a; --accent-bright:#f0a887; --line:rgba(233,227,214,.22);
     --link-hover:#ffc9b3;
   }
 }

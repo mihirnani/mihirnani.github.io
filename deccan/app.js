@@ -71,7 +71,7 @@
 
   /* ---------- views ---------- */
   function home() {
-    setTitle("The Deccan, 1336–1875 · a timeline from Vijayanagara to the Company");
+    setTitle("The Deccan, 1336–1875 · a timeline from Vijayanagara to the Raj");
     var chipsPol = Object.keys(POL).filter(function (k) { return k !== "other"; }).map(function (k) { return '<button class="chip' + (pol.has(k) ? " on" : "") + '" data-f="pol" data-v="' + k + '" type="button">' + E(POL[k]) + '</button>'; }).join("");
     var chipsKind = Object.keys(KIND).map(function (k) { return '<button class="chip' + (kind.has(k) ? " on" : "") + '" data-f="kind" data-v="' + k + '" type="button">' + E(KIND[k]) + '</button>'; }).join("");
     var sections = periods.map(function (p) {

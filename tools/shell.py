@@ -74,12 +74,12 @@ FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/">Curiosities</a>
 # ---- the collections that share the shell
 COLLECTIONS = {
     "deccan": dict(
-        key="deccan", name="The Deccan, 1336–1875", tagline="Vijayanagara to the Company",
+        key="deccan", name="The Deccan, 1336–1875", tagline="Vijayanagara to the Raj",
         css=["style.css"],
         head_extra=('<link href="deccan.webmanifest" rel="manifest"/>'
                     '<link href="deccan-icon-180.png" rel="apple-touch-icon"/>'
                     '<meta content="#ece3d1" media="(prefers-color-scheme: light)" name="theme-color"/>'
-                    '<meta content="#0d0d0f" media="(prefers-color-scheme: dark)" name="theme-color"/>'
+                    '<meta content="#16120e" media="(prefers-color-scheme: dark)" name="theme-color"/>'
                     '<meta content="yes" name="apple-mobile-web-app-capable"/>'
                     '<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>'
                     '<meta content="Deccan" name="apple-mobile-web-app-title"/>'
@@ -98,8 +98,8 @@ COLLECTIONS = {
 PAGES = {
     "deccan/index.html": dict(
         collection="deccan", url=SITE + "/deccan/",
-        title="The Deccan, 1336–1875 · a timeline from Vijayanagara to the Company",
-        desc="A timeline of the Deccan from Vijayanagara to the Company: entries on Vijayanagara, the Bahmanis "
+        title="The Deccan, 1336–1875 · a timeline from Vijayanagara to the Raj",
+        desc="A timeline of the Deccan from Vijayanagara to the Raj: entries on Vijayanagara, the Bahmanis "
              "and their successors, the Mughals, the Marathas, Mysore, Hyderabad, the colonial takeover and the "
              "settlement that followed it, 1336 to 1875."),
     "deccan/about.html": dict(

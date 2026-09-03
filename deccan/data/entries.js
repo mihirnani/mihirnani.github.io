@@ -376,7 +376,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, 2001)",
-    "url": "https://doi.org/10.1093/oso/9780195136616.001.0001"
+    "url": "https://doi.org/10.1093/0195136616.001.0001"
    }
   ],
   "related_maps": []
@@ -481,7 +481,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Encyclopaedia Iranica, ‘Gīsūdarāz’",
-    "url": "https://iranicaonline.org/articles/gisudaraz"
+    "url": "https://iranicaonline.org/articles/gisu-daraz"
    },
    {
     "title": "H. K. Sherwani, The Bahmanis of the Deccan (Munshiram Manoharlal, 1985)",
@@ -523,7 +523,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Cynthia Talbot, Precolonial India in Practice: Society, Region, and Identity in Medieval Andhra (Oxford University Press, 2001)",
-    "url": "https://doi.org/10.1093/oso/9780195136616.001.0001"
+    "url": "https://doi.org/10.1093/0195136616.001.0001"
    },
    {
     "title": "Wikipedia, ‘Kumara Vyasa’",
@@ -630,7 +630,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+    "url": "https://archive.org/details/bidaritshistorya035483mbp"
    },
    {
     "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
@@ -826,7 +826,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+    "url": "https://archive.org/details/bidaritshistorya035483mbp"
    },
    {
     "title": "Richard M. Eaton, A Social History of the Deccan, 1300–1761: Eight Indian Lives (Cambridge University Press, 2005)",
@@ -901,7 +901,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Robert Sewell, A Forgotten Empire (Vijayanagar) (Swan Sonnenschein, 1900)",
-    "url": "https://archive.org/details/forgottenempirev00sewe"
+    "url": "https://archive.org/details/aforgottenempir00paesgoog"
    },
    {
     "title": "Britannica, ‘Saluva dynasty’",
@@ -939,7 +939,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "E. G. Ravenstein (ed.), A Journal of the First Voyage of Vasco da Gama, 1497–1499 (Hakluyt Society, 1898)",
-    "url": "https://archive.org/details/journaloffirstvo00velh"
+    "url": "https://archive.org/details/journaloffirstvo0000unse"
    },
    {
     "title": "M. N. Pearson, The Portuguese in India, New Cambridge History of India I.1 (Cambridge University Press, 1987)",
@@ -1101,7 +1101,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "G. Yazdani, Bidar: Its History and Monuments (Oxford University Press, 1947)",
-    "url": "https://archive.org/details/in.ernet.dli.2015.58633"
+    "url": "https://archive.org/details/bidaritshistorya035483mbp"
    },
    {
     "title": "George Michell and Mark Zebrowski, Architecture and Art of the Deccan Sultanates, New Cambridge History of India I.7 (Cambridge University Press, 1999)",
@@ -2696,7 +2696,7 @@ window.DECCAN_ENTRIES = [
   "sources": [
    {
     "title": "Richard M. Eaton, ‘Tarabai (1675–1761): The Rise of Brahmins in Politics’, in A Social History of the Deccan, 1300–1761 (Cambridge University Press, 2005)",
-    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/tarabai-16751761-the-rise-of-brahmins-in-politics/047C683C223579529A84EC66D9A68F5A"
+    "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708tarabai-16751761-the-rise-of-brahmins-in-politics/047C683C223579529A84EC66D9A68F5A"
    },
    {
     "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
@@ -2987,8 +2987,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://doi.org/10.1017/CHOL9780521268837"
    },
    {
-    "title": "Wikipedia, ‘Battle of Palkhed’",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Palkhed"
+    "title": "Wikipedia, ‘Bajirao I’",
+    "url": "https://en.wikipedia.org/wiki/Bajirao_I"
    }
   ],
   "related_maps": [
@@ -3225,8 +3225,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://search.worldcat.org/search?q=Solstice%20at%20Panipat%20Uday%20Kulkarni"
    },
    {
-    "title": "Wikipedia, ‘Battle of Udgir’",
-    "url": "https://en.wikipedia.org/wiki/Battle_of_Udgir"
+    "title": "Wikipedia, ‘Sadashivrao Bhau’",
+    "url": "https://en.wikipedia.org/wiki/Sadashivrao_Bhau"
    }
   ],
   "related_maps": [
@@ -4183,8 +4183,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://doi.org/10.1017/CBO9780511583285"
    },
    {
-    "title": "Britannica, ‘Great Trigonometrical Survey’",
-    "url": "https://www.britannica.com/topic/Great-Trigonometrical-Survey"
+    "title": "Wikipedia, ‘Great Trigonometrical Survey’",
+    "url": "https://en.wikipedia.org/wiki/Great_Trigonometrical_Survey"
    },
    {
     "title": "Wikipedia, ‘William Lambton’",
@@ -4874,7 +4874,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "Britannica, ‘James Andrew Broun Ramsay, marquess of Dalhousie’",
-    "url": "https://www.britannica.com/biography/James-Andrew-Broun-Ramsay-Marquess-and-10th-Earl-of-Dalhousie"
+    "url": "https://www.britannica.com/biography/James-Andrew-Broun-Ramsay-Marquess-of-Dalhousie"
    },
    {
     "title": "Wikipedia, ‘Raja Shahaji of Satara’",
@@ -4919,7 +4919,7 @@ window.DECCAN_ENTRIES = [
    },
    {
     "title": "The Bombay Rent-Free Estates Act, Act XI of 1852 (text)",
-    "url": "https://www.indiacode.nic.in/bitstream/123456789/19027/1/a1852-11.pdf"
+    "url": "https://archive.org/details/1852MH11"
    }
   ],
   "related_maps": [

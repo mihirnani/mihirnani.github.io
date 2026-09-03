@@ -124,8 +124,8 @@ window.BL_ENTRIES = [
     "url": "https://search.worldcat.org/search?q=Radhakrishna+Vaidyanadhan+Geology+of+Karnataka"
    },
    {
-    "title": "Wikipedia, ‘Closepet Granite’",
-    "url": "https://en.wikipedia.org/wiki/Closepet_granite"
+    "title": "M. Jayananda and B. Mahabaleswar, ‘Relationship between shear zones and igneous activity: the Closepet Granite of southern India’, Proceedings of the Indian Academy of Sciences (Earth and Planetary Sciences) 100 (1991)",
+    "url": "https://www.ias.ac.in/article/fulltext/jess/100/01/0031-0036"
    }
   ],
   "deccan": [
@@ -166,8 +166,8 @@ window.BL_ENTRIES = [
     "url": "https://search.worldcat.org/search?q=Krishnan+Geology+of+India+and+Burma"
    },
    {
-    "title": "Wikipedia, ‘Cuddapah Basin’",
-    "url": "https://en.wikipedia.org/wiki/Cuddapah_Basin"
+    "title": "Dilip Saha, Sarbani Patranabis-Deb and Amlan Banerjee, ‘Current status of stratigraphy of the Proterozoic Cuddapah Basin, southern India’, Journal of the Geological Society of India 100 (2024)",
+    "url": "https://doi.org/10.17491/jgsi/2024/174038"
    }
   ],
   "deccan": []
@@ -821,8 +821,8 @@ window.BL_ENTRIES = [
     "url": "https://www.cambridge.org/core/journals/antiquity/article/abs/udayaravi-s-moorti-megalithic-culture-of-south-india-socioeconomic-perspectives-xxiv-134-pages-54-tables-11-figures-1994-varanasi-ganga-kaveri-isbn-8185694052-hardback-rs-400-40-30/BE0B13599B61B6819ED1C75EDDCC93EE"
    },
    {
-    "title": "Wikipedia, ‘Hirebenakal’",
-    "url": "https://en.wikipedia.org/wiki/Hirebenakal"
+    "title": "Wikipedia, ‘Hire Benakal’",
+    "url": "https://en.wikipedia.org/wiki/Hire_Benakal"
    }
   ],
   "deccan": []
@@ -986,7 +986,7 @@ window.BL_ENTRIES = [
   "sources": [
    {
     "title": "Jean-Baptiste Tavernier, translated by V. Ball, Travels in India, 2 vols (Macmillan, London, 1889)",
-    "url": "https://archive.org/details/travelsinindiaba01tave"
+    "url": "https://archive.org/details/travelsinindia00tave"
    },
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -1062,7 +1062,7 @@ window.BL_ENTRIES = [
   "sources": [
    {
     "title": "H. B. Medlicott and W. T. Blanford, A Manual of the Geology of India, 2 vols (Geological Survey of India, Calcutta, 1879)",
-    "url": "https://archive.org/details/manualofgeologyo01medl"
+    "url": "https://archive.org/details/manualofgeologyo01geol"
    },
    {
     "title": "Deepak Kumar, Science and the Raj: A Study of British India (Oxford University Press, Delhi, second edition, 2006)",

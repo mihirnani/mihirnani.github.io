@@ -39,12 +39,12 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #0d0d0f;
-  --glow: #1a1a1e;
-  --mat: #1a1a1e;
+  --bg: #16120e;
+  --glow: #241d17;
+  --mat: #221b16;
   --text: #e9e3d6;
   --muted: #938b7b;
-  --line: rgba(233, 227, 214, 0.14);
+  --line: rgba(233, 227, 214, 0.22);
   --panel: rgba(255, 250, 240, 0.035);
   --accent: #d98c6a;
   --shadow: rgba(0, 0, 0, 0.65);

@@ -884,7 +884,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 2005,
    "note": "A history of the plateau told through eight biographies; the first three – Pratapa Rudra of Warangal, the Sufi Muhammad Gisu Daraz at Gulbarga, and Mahmud Gawan – cover the Tughluq conquest, the Bahmani court and the Deccani–Westerner conflict. The best single starting point for the period.",
-   "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/",
+   "url": "https://www.cambridge.org/core/books/social-history-of-the-deccan-13001761/94B955438388C26562F08912D1B0F708",
    "kind": "book"
   },
   {
@@ -893,7 +893,7 @@ window.DECCAN_READINGS = {
    "publisher": "Cambridge University Press",
    "year": 1999,
    "note": "The standard modern political history of the sultanate to 1400, with a critical reading of the Persian chronicles. Essential for Muhammad bin Tughluq's Deccan policy, the transfer of the capital to Daulatabad and the loss of the south in the 1340s.",
-   "url": "https://www.cambridge.org/core/books/delhi-sultanate/",
+   "url": "https://books.google.com/books?id=lt2tqOpVRKgC",
    "kind": "book"
   },
   {

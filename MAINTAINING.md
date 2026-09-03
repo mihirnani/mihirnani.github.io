@@ -140,6 +140,18 @@ at it live.
 Commit the generated files together with the Markdown that produced them — the text repo
 and the site repo in the same sitting — so a checkout is always consistent.
 
+## Checking the links
+
+Internal links are checked by the build's own consistency rules (a room hangs only maps
+that exist, a chronology item names a real entry). External links — the source records,
+the bibliography, the photograph credits — go stale on their own, so once or twice a year:
+
+    python3 tools/check_links.py
+
+runs every external link across all four repositories and prints the ones that no
+longer answer, with the file that carries them. A 403 or 429 is usually a site that
+dislikes scripts rather than a dead link; open those by hand.
+
 ## Things that bite
 
 - **Caching.** There are no service workers; the pages are ordinary static files and a

@@ -144,7 +144,7 @@ def page(rel, title, desc, body):
 <meta name="description" content="{desc}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ece3d1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#16120e" media="(prefers-color-scheme: dark)">
 <title>{title}</title>
 <link rel="stylesheet" href="{up}style.css">
 <link rel="canonical" href="{url}">

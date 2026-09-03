@@ -13,10 +13,10 @@
 }
 /* ---- DARK (gallery) – opt-in ---- */
 [data-theme="dark"]{
-  --ink:#0d0d0f; --ink-2:#141417; --panel:rgba(255,250,240,.035);
+  --ink:#16120e; --ink-2:#221b16; --panel:rgba(255,250,240,.035);
   --paper:#e9e3d6; --paper-dim:#c7c0b1; --muted:#938b7b;
-  --accent:#d98c6a; --accent-bright:#f0a887; --line:rgba(233,227,214,.14);
-  --mat:#000; --glow:#1a1a1e; --bar:rgba(13,13,15,.72);
+  --accent:#d98c6a; --accent-bright:#f0a887; --line:rgba(233,227,214,.22);
+  --mat:#0e0b09; --glow:#241d17; --bar:rgba(22,18,14,.78);
   --link-hover:#ffc9b3; --shadow:rgba(0,0,0,.65);
 }
 :root{ --measure:38em; }
