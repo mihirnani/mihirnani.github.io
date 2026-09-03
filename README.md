@@ -4,6 +4,9 @@ A hand-built, non-commercial study site. No framework, no dependencies, no
 package manager: plain HTML, one stylesheet per look, and a few Python scripts
 that generate the parts which would otherwise have to be kept in step by hand.
 
+`MAINTAINING.md` beside this file has the routines: how to add an entry, a map, a
+photograph or an essay, and what to run afterwards.
+
 ## Layout
 
     index.html                the front page (its own self-contained styles)
