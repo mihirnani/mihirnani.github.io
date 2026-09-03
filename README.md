@@ -16,7 +16,6 @@ photograph or an essay, and what to run afterwards.
     atlas/                    one map across the collections
     text/                     the text edition: static pages, generated
     essays/                   essays, generated from Markdown
-    more/                     a Greek course and three games
     tools/                    the build scripts
 
 The two collections keep their content in `data/*.js` — JSON behind a
@@ -33,8 +32,8 @@ which runs, in order:
 
 1. `tools/shell.py` — writes the `<head>`, masthead and footer of the two
    collections' pages from one table, and copies `assets/collection.css` into
-   each collection as `style.css` (each collection needs its own copy so that
-   its offline service worker can cache it). To add a section to the navigation
+   each collection as `style.css` (each collection keeps its own copy so that it
+   can be opened from a folder on its own). To add a section to the navigation
    of every page, edit `SECTIONS` there and run this once.
 2. `../european-gaze/build.py` — the map collection's pages, from its own data
    (skipped if that repository is not checked out beside this one).
@@ -71,8 +70,8 @@ file by the same absolute path.
 
 ## Unlisted sections
 
-`essays/` and `more/` are live but carry `noindex` and are left out of the
-sitemaps and the front page until they are ready. `404.html` at the root is the
+`essays/` is live but carries `noindex` and is left out of the
+sitemaps and the front page until there are essays to list. `404.html` at the root is the
 site's not-found page (GitHub Pages serves only the root one for this domain).
 
 ## Companion repositories

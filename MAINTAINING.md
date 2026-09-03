@@ -27,8 +27,7 @@ usually within a minute or two.
    The prose fields hold HTML: `<em>` for italics, `<a href>` for links, curly quotes and
    spaced en dashes ( – ) as in the rest of the collection. Keep the file valid JSON behind
    the `window.NAME =` wrapper — a stray comma breaks the whole page.
-2. Bump `VERSION` in `deccan/deccan-sw.js` (Basalt has no service worker).
-3. Build, check, commit, push (below). The text edition and the atlas pick the change up
+2. Build, check, commit, push (below). The text edition and the atlas pick the change up
    from the build; the illustrated page reads the data file directly.
 
 ### Add a Deccan entry
@@ -45,7 +44,7 @@ usually within a minute or two.
    entry's `related_maps`, and the entry goes in that map's `deccan` list in
    `../european-gaze/data/maps.js` (the label there is `title (date_label)`, exactly as in
    the entry). The entry page then names the map and the map page names the entry.
-4. Bump `VERSION` in `deccan/deccan-sw.js`. Build, check, commit, push.
+4. Build, check, commit, push.
 
 ### Add a map to The European Gaze
 
@@ -67,7 +66,7 @@ usually within a minute or two.
    "The gaze"), and the `meta` rows. The build adds the Rumsey credit row itself whenever
    a `Source record` row links to davidrumsey.com.
 4. Hang it: add the `id` to the right room's list in `data/rooms.js`, in order.
-5. Add the page to `sitemap.xml`. Bump `VERSION` in `european-gaze-sw.js`.
+5. Add the page to `sitemap.xml`.
 6. Build (from the hub, so the atlas and text edition see it), check, commit, push — this
    repository and, because its generated files changed, the hub too.
 
@@ -81,15 +80,13 @@ usually within a minute or two.
    `source_note` ("via Wikimedia Commons, resized" for Commons images; leave it out for your
    own). Remove `"pending": true`. For a Commons image, copy the author and licence from the
    file page itself, not from memory.
-3. Bump `VERSION` in `sahyadri-birds-sw.js` (images are cached by version). No build: the
-   page reads the JSON directly. Check, commit, push.
+3. No build: the page reads the JSON directly. Check, commit, push.
 
 ### Add a bird species
 
 Copy a record in `birds.json`, give it a new `id` (the URL hash), and fill in every field;
 `order_id`, `family_id` and `group_id` must exist in `families.json`. Names follow the
-AviList version named on the About page; use its spelling and hyphenation. Bump the
-service-worker `VERSION`.
+AviList version named on the About page; use its spelling and hyphenation.
 
 ### Write or update an essay
 
@@ -141,9 +138,9 @@ always consistent. If you changed the Gaze data, push both repositories.
 
 ## Things that bite
 
-- **Service workers.** Returning visitors see the old page until the worker updates, and it
-  updates only when `VERSION` changes and on the *second* visit after that. If a change
-  does not show up for you, bump the version and reload twice.
+- **Caching.** There are no service workers; the pages are ordinary static files and a
+  reload shows the current version. If a stylesheet or data file looks stale, it is the
+  browser's own cache — a hard reload clears it.
 - **Valid JSON.** The data files are JSON. A missing comma or a stray straight quote inside
   a string takes the whole page down; the build will tell you the line.
 - **HTML inside strings.** Quotes inside the prose fields must be curly (’ “ ”) or escaped;

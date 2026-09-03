@@ -16,5 +16,4 @@ Editing the data files is all that is needed to change the content of this page.
 (`<head>`, masthead, footer) and `style.css` are generated from the root by `tools/shell.py`, and the
 text edition, atlas snapshot and search indexes are rebuilt from these data files by
 `python3 tools/build.py` in the repository root – see the root `README.md`. Do not edit `style.css`
-here; edit `assets/collection.css`. After changing the data, bump `VERSION` in `deccan-sw.js` so that
-offline copies refresh.
+here; edit `assets/collection.css`.
