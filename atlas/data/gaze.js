@@ -46,7 +46,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1519",
    "region": "IndianOcean",
-   "maker": "Hollanda Reinel",
+   "maker": "Homem and the Reinels",
    "title": "Northern Indian Ocean with Arabia and India",
    "room": 6
   },
@@ -56,7 +56,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1525",
    "region": "India",
-   "maker": "Ptolemy Grueninger",
+   "maker": "Fries, after Waldseemüller",
    "title": "Tab. Moderna Indiae",
    "room": 1
   },
@@ -116,7 +116,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1599",
    "region": "SouthIndia",
-   "maker": "Ruscelli Rosaccio",
+   "maker": "Ruscelli and Rosaccio",
    "title": "Calecut Nuova Tavola",
    "room": 1
   },
@@ -136,7 +136,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1623",
    "region": "India",
-   "maker": "Mercator Hondius",
+   "maker": "Mercator–Hondius",
    "title": "India Orientalis",
    "room": 1
   },
@@ -156,7 +156,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1682",
    "region": "India",
-   "maker": "DuVal",
+   "maker": "Du Val",
    "title": "Empire du Mogol",
    "room": 2
   },
@@ -186,7 +186,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1706",
    "region": "Deccan",
-   "maker": "Van der Aa Methold",
+   "maker": "Van der Aa, after Methold",
    "title": "The Kingdoms of Golconda, Tenasserim, Pegu and Arakan",
    "room": 2
   },
@@ -196,7 +196,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1708",
    "region": "BayOfBengal",
-   "maker": "Jaillot Mortier",
+   "maker": "Mortier",
    "title": "The Bay of Bengal, Ceylon, the Maldives and the Andaman Islands",
    "room": 2
   },
@@ -226,7 +226,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1728",
    "region": "IndianOcean",
-   "maker": "Halley Senex",
+   "maker": "Senex and Halley",
    "title": "A chart of the East Indian Ocean",
    "room": 6
   },
@@ -236,7 +236,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1728",
    "region": "IndianOcean",
-   "maker": "Halley Senex",
+   "maker": "Senex and Halley",
    "title": "A correct sea chart of the whole world",
    "room": 6
   },
@@ -256,7 +256,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1752",
    "region": "India",
-   "maker": "dAnville",
+   "maker": "d’Anville",
    "title": "Carte de l’Inde",
    "room": 2
   },
@@ -266,7 +266,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1752",
    "region": "SouthIndia",
-   "maker": "dAnville",
+   "maker": "d’Anville",
    "title": "Carte de l’Inde – southern sheets",
    "room": 2
   },
@@ -296,7 +296,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1779",
    "region": "SEAsia",
-   "maker": "Santini Robert",
+   "maker": "Santini, after Robert de Vaugondy",
    "title": "Les Indes Orientales",
    "room": 2
   },
@@ -326,7 +326,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1788",
    "region": "India",
-   "maker": "Schraembl after Rennell",
+   "maker": "Schrämbl, after Rennell",
    "title": "Neueste Karte von Hindostan und Bengalen",
    "room": 3
   },
@@ -336,7 +336,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1789",
    "region": "India",
-   "maker": "Akerman",
+   "maker": "Åkerman",
    "title": "Mappa geogr. Indiæ Orientalis",
    "room": 3
   },
@@ -376,7 +376,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1808",
    "region": "SouthIndia",
-   "maker": "Lambton GTS",
+   "maker": "Lambton",
    "title": "Triangulation across the Indian Peninsula",
    "room": 3
   },
@@ -406,7 +406,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1810",
    "region": "Bombay",
-   "maker": "dApres de Mannevillette",
+   "maker": "d’Après de Mannevillette",
    "title": "Plan du Port de Bombay",
    "room": 4
   },
@@ -416,7 +416,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1820",
    "region": "India",
-   "maker": "Carey Lavoisne",
+   "maker": "Carey and Lavoisne",
    "title": "Geographical, Historical, and Statistical Map of India",
    "room": 3
   },
@@ -426,7 +426,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1825",
    "region": "India",
-   "maker": "Vivien de St Martin",
+   "maker": "Vivien de Saint-Martin",
    "title": "Carte Générale des Indes",
    "room": 3
   },
@@ -496,7 +496,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "c.1851",
    "region": "India",
-   "maker": "Tallis Martin",
+   "maker": "Tallis",
    "title": "The Overland Route to India",
    "room": 5
   },
@@ -506,7 +506,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "c.1851",
    "region": "SouthIndia",
-   "maker": "Tallis Martin",
+   "maker": "Tallis",
    "title": "Southern India, including the Presidencies of Bombay and Madras",
    "room": 5
   },
@@ -526,7 +526,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1856",
    "region": "Deccan",
-   "maker": "SDUK Walker",
+   "maker": "Walker, for the SDUK",
    "title": "India III: Bombay",
    "room": 4
   },
@@ -536,7 +536,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1856",
    "region": "Punjab",
-   "maker": "SDUK Walker",
+   "maker": "Walker, for the SDUK",
    "title": "India XI: Punjab, Lahore and Ladakh",
    "room": 5
   },
@@ -566,7 +566,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1859",
    "region": "Deccan",
-   "maker": "Josenhans Basel",
+   "maker": "Josenhans, Basel Mission",
    "title": "Süd Mahratta (South Maratha)",
    "room": 4
   },
@@ -576,7 +576,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "c.1866",
    "region": "SEAsia",
-   "maker": "Klun Lange",
+   "maker": "Klun and Lange",
    "title": "Südost-Asien",
    "room": 5
   },
@@ -646,7 +646,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1901",
    "region": "India",
-   "maker": "Cram Murray Aaron",
+   "maker": "Clare, for Cram",
    "title": "Historical Map of British India since A.D. 1751",
    "room": 5
   },
@@ -656,7 +656,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1911",
    "region": "Deccan",
-   "maker": "Murray Handbook",
+   "maker": "Murray’s Handbook",
    "title": "Hampi: Ruins of Vijayanagar",
    "room": 4
   },
@@ -696,7 +696,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1946",
    "region": "India",
-   "maker": "GSGS",
+   "maker": "War Office, G.S.G.S.",
    "title": "India Showing Civil Divisions – Boundaries of Pakistan (Case A / Case B)",
    "room": 7
   },
@@ -706,7 +706,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1946",
    "region": "Goa",
-   "maker": "Ministerio das Colonias",
+   "maker": "Ministério das Colónias",
    "title": "Carta demográfica do Estado da Índia – Goa, Damão and Diu",
    "room": 7
   },
@@ -716,7 +716,7 @@ window.ATLAS_GAZE = {
    "approx": false,
    "date_label": "1947",
    "region": "Punjab",
-   "maker": "Home Sphere",
+   "maker": "Percy Home, The Sphere",
    "title": "Where Pakistan and India Come Face to Face – the Punjab",
    "room": 7
   }
