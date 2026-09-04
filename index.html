@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A Fragmented Peninsula – history and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and the making of the plateau itself.">
+  <meta name="description" content="A Fragmented Peninsula – history and natural history of the Deccan: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and the making of the plateau itself.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#f5f1e8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#16120e" media="(prefers-color-scheme: dark)">
@@ -224,6 +224,21 @@
 
     .about a { text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
 
+    /* The footer is not another section of the page: a hairline, then two quiet lines
+       at the measure the About paragraph keeps. (The collections get this from
+       assets/collection.css; the front page carries its own styles.) */
+    .site-foot {
+      margin-top: clamp(2.5rem, 6vw, 4rem);
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      max-width: 690px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.65;
+    }
+
+    .site-foot .foot-line { display: block; }
+
     .columns {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -274,7 +289,7 @@
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
   <meta property="og:title" content="A Fragmented Peninsula: the making of the Deccan"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="A Fragmented Peninsula">
-  <meta property="og:description" content="History and natural history, mostly of the Deccan and the Western Ghats: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and the making of the plateau itself.">
+  <meta property="og:description" content="History and natural history of the Deccan: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and the making of the plateau itself.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://naniwadekar.com/">
   <meta property="og:image" content="https://naniwadekar.com/curiosities-icon-512.png">
@@ -296,7 +311,7 @@
     <main>
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">A Fragmented Peninsula</h1>
-        <p>History and natural history, mostly of the Deccan and the Western Ghats.</p>
+        <p>History and natural history of the Deccan.</p>
 
       </section>
 
