@@ -89,7 +89,7 @@
     var codas = entries.filter(function (e) { return e.coda; });
     if (codas.length) sections += '<section class="period" id="seccoda" data-period="coda"><div class="period-head"><span class="no">·</span><span class="ttl">Codas</span><span class="yrs">outside the numbered chronology</span><p class="desc">Two entries that sit outside the numbered chronology: the first historians of what had been lost, and the maps on which the Company drew the result.</p></div><ul class="elist">' + codas.map(card).join("") + '</ul></section>';
     app.innerHTML = '<div class="wrap">' +
-      '<p class="eyebrow">A Timeline Collection</p>' +
+      '<p class="eyebrow">History</p>' +
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
       '<p class="lede measure">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate to the Company takeover and the Deccan Riots of 1875. The story of a plateau where sovereignty was repeatedly shared and inherited, until one power made itself paramount and reduced the rest to a register.</p>' +

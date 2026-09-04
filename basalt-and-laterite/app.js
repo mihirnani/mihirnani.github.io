@@ -147,7 +147,7 @@
     var gd = geoData(), nP = Object.keys(gd.groups).length;
     var farNames = gd.far.map(function (e) { return E((e.place || "").split(",")[0]); }).filter(Boolean).filter(function (v, i, a) { return a.indexOf(v) === i; });
     app.innerHTML = '<div class="wrap">' +
-      '<p class="eyebrow">A Deep-Time Collection</p>' +
+      '<p class="eyebrow">Geology</p>' +
       '<h1 class="hero-h1">Basalt and<br/>Laterite</h1>' +
       '<div class="rule"></div>' +
       '<p class="lede measure">The making of the Deccan: nearly four billion years of the plateau – craton and covering basins, the breakup of Gondwana, the Trap eruptions, the shaping of scarp, river and soil – ending in the landscape on which the Deccan’s human history was made.</p>' +
