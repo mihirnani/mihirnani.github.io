@@ -66,7 +66,7 @@ THEME_SCRIPT = """<script>(function(){
   sync();
 })();</script>"""
 
-FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/">A Fragmented Peninsula</a>. A non-commercial study '
+FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/"><em>A Fragmented Peninsula</em></a>. A non-commercial study '
           'collection.</span> <span class="foot-line">Errors may be pointed out by writing to '
           '<a class="mail" href="#" data-u="mihir" data-d="naniwadekar.in">mihir [at] naniwadekar [dot] in</a>.'
           '</span></footer>') % SITE

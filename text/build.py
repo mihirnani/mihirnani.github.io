@@ -184,7 +184,7 @@ def page(rel, title, desc, body):
 {body}
 </main>
 <footer>
-<span class="foot-line">The text edition of <a href="{site}/">A Fragmented Peninsula</a>: every entry as plain HTML, no scripts. The illustrated site has the <a href="{site}/deccan/">timeline</a>, the <a href="{site}/atlas/">atlas</a> and the <a href="{site}/european-gaze/">map collection</a>. A non-commercial study collection.</span>
+<span class="foot-line">The text edition of <a href="{site}/"><em>A Fragmented Peninsula</em></a>: every entry as plain HTML, no scripts. The illustrated site has the <a href="{site}/deccan/">timeline</a>, the <a href="{site}/atlas/">atlas</a> and the <a href="{site}/european-gaze/">map collection</a>. A non-commercial study collection.</span>
 <span class="foot-line">Errors may be pointed out by writing to mihir [at] naniwadekar [dot] in.</span>
 </footer>
 </body>
