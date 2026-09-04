@@ -34,7 +34,20 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Reddi_Kingdom"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "image": {
+   "file": "img/reddi-velama-kingdoms.jpg",
+   "width": 611,
+   "height": 837,
+   "alt": "A published plate showing a stack of inscribed copper plates held by a ring and seal, with the seal and ring shown separately below",
+   "caption": "The Puvvada plates of Prolaya Vema Reddi, published in 1962: a copper-plate grant on its ring and seal, the instrument by which a warrior lineage recorded that it now granted land.",
+   "credit_label": "Plate",
+   "credit": "N. Ramesan",
+   "source": "https://commons.wikimedia.org/wiki/File:Puvvada_Plates_of_Prolaya_Vema.png",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "tughluq-daulatabad-1327",
@@ -69,7 +82,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1827__Deccan__Vandermaelen__Guzerate-Chandeish-Aurungabad.html"
-  ]
+  ],
+  "image": {
+   "file": "img/tughluq-daulatabad-1327.jpg",
+   "width": 408,
+   "height": 596,
+   "alt": "A painted miniature of a bearded sultan in an orange robe seated cross-legged on a throne, an attendant offering a cup",
+   "caption": "Muhammad bin Tughluq enthroned, in a painting of about 1534: the sultan who ordered Delhi south to Daulatabad in 1327 and gave the order up within a decade.",
+   "credit_label": "Painting",
+   "credit": "Unknown artist",
+   "source": "https://commons.wikimedia.org/wiki/File:Muhammad_bin_Tughlaq_crop.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "from the Indian Museum, Kolkata, via Wikimedia Commons"
+  }
  },
  {
   "id": "madurai-southern-conquest",
@@ -342,7 +368,19 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
-  ]
+  ],
+  "image": {
+   "file": "img/raichur-doab-frontier.jpg",
+   "width": 1600,
+   "height": 1067,
+   "alt": "Ruined stone ramparts running along a granite outcrop under a pale sky",
+   "caption": "The walls of Raichur fort along their granite ridge: first built in 1294, and for two centuries the prize in most of the wars between the northern and southern powers.",
+   "credit": "Madhu B M",
+   "source": "https://commons.wikimedia.org/wiki/File:Raichur_Fort_1.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "vijayanagara-temple-state",
@@ -455,7 +493,20 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Taj_ud-Din_Firuz_Shah"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "image": {
+   "file": "img/firuz-shah-bahmani.jpg",
+   "width": 507,
+   "height": 1600,
+   "alt": "A tall paper farman in Persian script, its head marked by a heavy black tughra, with seals in the margins",
+   "caption": "A farman of Firuz Shah Bahmani dated 14 May 1406, headed by the tughra and countersigned in the margins – the year of his second war with Vijayanagara.",
+   "credit_label": "Document",
+   "credit": "Feroz Shah Bahmani",
+   "source": "https://commons.wikimedia.org/wiki/File:Farman_Of_Feroz_Shah_Bahmani_-_14_-05_-1406_A.D.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "from the Andhra Pradesh State Archives, via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "gesudaraz-gulbarga",
@@ -1199,7 +1250,19 @@ window.DECCAN_ENTRIES = [
    "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html",
    "1570__India__Ortelius__Indiae-Orientalis.html",
    "1911__Deccan__Murray-Handbook__Hampi-Ruins-of-Vijayanagar.html"
-  ]
+  ],
+  "image": {
+   "file": "img/vijayanagara-city.jpg",
+   "width": 1600,
+   "height": 800,
+   "alt": "A wide view over the ruins at Hampi, with the tall gopuram of the Virupaksha temple rising above colonnades, boulders and scrub",
+   "caption": "The Virupaksha temple and its gopuram above the ruined colonnades at Hampi, the shrine that stood on the Tungabhadra before the city was founded around it.",
+   "credit": "iMahesh",
+   "source": "https://commons.wikimedia.org/wiki/File:Wide_angle_of_Galigopuram_of_Virupaksha_Temple,_Hampi_(04)_(cropped).jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "krishnadevaraya",
@@ -1238,7 +1301,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1525__India__Ptolemy-Grueninger__Tabula-Moderna-Indiae.html"
-  ]
+  ],
+  "image": {
+   "file": "img/krishnadevaraya.jpg",
+   "width": 960,
+   "height": 1323,
+   "alt": "A published plate of three standing copper figures, a crowned king with palms joined between two queens in the same attitude, against a temple wall",
+   "caption": "The copper portraits of Krishnadevaraya with Chinnadevi and Tirumaladevi, standing where he had them set up at Tirumala in 1518 – photographed for the Tirupati Devasthanam Epigraphical Report of 1930.",
+   "credit_label": "Plate",
+   "credit": "The Tirupati Devasthanam Epigraphical Report (1930)",
+   "source": "https://commons.wikimedia.org/wiki/File:Bronze_statues_of_King_Krishnadevaraya_and_his_queen_consorts,_Chinna_Devi_and_Tirumala_Devi.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "burhan-nizam-shah-shah-tahir",
@@ -1686,7 +1762,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1596__India-Arabia__Linschoten__Southwest-Asia.html",
    "1946__Ministerio-das-Colonias__Goa-Daman-Diu.html"
-  ]
+  ],
+  "image": {
+   "file": "img/goa-inquisition-1560.jpg",
+   "width": 1195,
+   "height": 1600,
+   "alt": "An engraved banner showing a Dominican friar holding an olive branch and a sword, above a dog carrying a torch",
+   "caption": "The standard of the Holy Office as Bernard Picart engraved it in 1722: mercy and justice, the olive branch and the sword, over the Domini canis with its torch.",
+   "credit_label": "Engraving",
+   "credit": "Bernard Picart",
+   "source": "https://commons.wikimedia.org/wiki/File:Banner_of_the_Inquisition_in_Goa.jpg",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "note": "via the Wellcome Collection and Wikimedia Commons, resized"
+  }
  },
  {
   "id": "talikota-1565",
@@ -2324,7 +2413,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1682__India__DuVal__Empire-du-Mogol.html"
-  ]
+  ],
+  "image": {
+   "file": "img/shaista-khan-surat.jpg",
+   "width": 404,
+   "height": 258,
+   "alt": "A dark night interior: a turbaned man escaping through a window while another lunges at him with a raised sword, women recoiling at the left",
+   "caption": "Shaista Khan going through the window, in another of Dhurandhar's illustrations for the Raja of Aundh – the moment the chronicles record, painted long after and from them.",
+   "credit_label": "Painting",
+   "credit": "M. V. Dhurandhar",
+   "source": "https://commons.wikimedia.org/wiki/File:Shaistekhan_Surprised.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "maratha-navy-sindhudurg",
@@ -2515,7 +2617,20 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Shivaji"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "image": {
+   "file": "img/raigad-coronation-1674.jpg",
+   "width": 960,
+   "height": 686,
+   "alt": "A watercolour of a crowded durbar hall, a figure enthroned beneath a gilded canopy at the right with more than a hundred attendants and women in the foreground",
+   "caption": "The coronation durbar as M. V. Dhurandhar imagined it, with more than a hundred figures in attendance – one of a series he made for Balasaheb Pantpratinidhi, Raja of Aundh, nearly 250 years after the event.",
+   "credit_label": "Painting",
+   "credit": "M. V. Dhurandhar",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Coronation_Durbar_with_over_100_characters_depicted_in_attendance.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "bijapur-golconda-fall-1687",
@@ -2713,7 +2828,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1719__SouthIndia__Chatelain__Carte-Nouvelle-des-Terres.html"
-  ]
+  ],
+  "image": {
+   "file": "img/tarabai.jpg",
+   "width": 863,
+   "height": 1600,
+   "alt": "A watercolour of a woman in a pink sari riding a dark horse with a drawn sword, leading armed men up a hillside below a fort",
+   "caption": "Tarabai leading her horse below a hill fort – not a likeness but an imagining, painted by M. V. Dhurandhar in 1927, when the Maratha past was being pictured afresh for princely and nationalist patrons.",
+   "credit_label": "Painting",
+   "credit": "M. V. Dhurandhar",
+   "source": "https://commons.wikimedia.org/wiki/File:Maharani_Tarabai_of_Karvir.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "aurangzeb-dies-1707",
@@ -2835,7 +2963,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
    "1728__IndianOcean__Halley-Senex__Chart-of-the-East-Indian-Ocean.html"
-  ]
+  ],
+  "image": {
+   "file": "img/kanhoji-angre.jpg",
+   "width": 1483,
+   "height": 1600,
+   "alt": "A framed pencil and wash portrait drawing of a moustached man in a turban and pearl necklaces, photographed behind glass",
+   "caption": "A portrait drawing of Kanhoji Angre kept by his descendants at Alibag, of unknown date and hand; no likeness taken from life is known.",
+   "credit_label": "Photograph",
+   "credit": "Pratish Khedekar",
+   "source": "https://commons.wikimedia.org/wiki/File:Sarkhel_Kanhoji_Angre_I.jpg",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "photographed by permission of the Angre family, via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "ajnapatra",
@@ -3075,7 +3216,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
    "1810__Bombay__dApres-de-Mannevillette__Plan-du-Port-de-Bombay.html"
-  ]
+  ],
+  "image": {
+   "file": "img/bassein-1739.jpg",
+   "width": 1600,
+   "height": 1264,
+   "alt": "A pen-and-ink manuscript plan of a bastioned fortress on a creek, with a keyed legend at the upper left and siege trenches running towards the walls",
+   "caption": "A Portuguese plan of the siege drawn in 1739, its legend naming each bastion in turn and the lines of approach running in from the north – the fortress as its defenders saw it fall.",
+   "credit_label": "Plan",
+   "credit": "Anonymous",
+   "source": "https://commons.wikimedia.org/wiki/File:Maratha_siege_of_Vasai,_1739.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "from the Biblioteca Nacional de Portugal, via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "maratha-confederacy",
@@ -3410,7 +3564,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1782__India__Rennell__Hindoostan-2-Sheet.html",
    "1763__India__Dury__East-Indies.html"
-  ]
+  ],
+  "image": {
+   "file": "img/madhavrao-i.jpg",
+   "width": 635,
+   "height": 865,
+   "alt": "A profile portrait of a young man in a white robe and turban with a gold halo behind his head, holding a flower, against a plain ground",
+   "caption": "Madhavrao I painted by Bhoj Raj in about 1763, two years into the office he took at sixteen – one of the few portraits here made while its subject was alive.",
+   "credit_label": "Painting",
+   "credit": "Bhoj Raj",
+   "source": "https://commons.wikimedia.org/wiki/File:Madhavrao_I_Peshwa.png",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "from the Yale Center for British Art, via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "nizam-ali-khan-hyderabad-1763",
@@ -3579,7 +3746,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1788__India__Rennell__Hindoostan-Mogul-Empire-SurveyOfIndia.html"
-  ]
+  ],
+  "image": {
+   "file": "img/nana-phadnavis.jpg",
+   "width": 1392,
+   "height": 1600,
+   "alt": "An oil portrait in profile of a man in a white turban set with a jewelled aigrette and a drop of pearls, wearing a pearl necklace and a gold-bordered shawl",
+   "caption": "Nana Phadnavis painted from life by John Thomas Seton in 1778, four years into the quarter-century in which he ran the Pune government without ever holding the office.",
+   "credit_label": "Painting",
+   "credit": "John Thomas Seton",
+   "source": "https://commons.wikimedia.org/wiki/File:John_Thomas_Seton_-_Portrait_of_Nana_Fadnavis.Jpeg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "wadgaon-salbai",
@@ -3943,7 +4123,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html"
-  ]
+  ],
+  "image": {
+   "file": "img/tipus-tiger.jpg",
+   "width": 768,
+   "height": 520,
+   "alt": "A painted wooden tiger crouched over a prostrate European figure, with an organ keyboard set into the tiger's flank",
+   "caption": "The tiger as the Victoria and Albert Museum shows it, the keyboard open in its flank: South Indian carving over a European organ, made about 1793 and in London since 1808.",
+   "credit_label": "Photograph",
+   "credit": "Victoria and Albert Museum",
+   "source": "https://commons.wikimedia.org/wiki/File:Tipu's_Tiger_with_keyboard_on_display_2006AH4168.jpg",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "mahadji-scindia-kharda-1795",
@@ -4112,7 +4305,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1800__SouthIndia__Wilkinson__Southern-Province-of-Hindoostan.html",
    "1809__Malabar__Arrowsmith__Province-of-Malabar-Sheet-1.html"
-  ]
+  ],
+  "image": {
+   "file": "img/colin-mackenzie.jpg",
+   "width": 1080,
+   "height": 1600,
+   "alt": "An oil portrait of a grey-haired officer in a red coat standing with three Indian assistants, a Jain hill shrine behind them",
+   "caption": "Mackenzie with three of his assistants, painted by Thomas Hickey in 1816: the collection was made by the men standing beside him, and the picture is one of the few that says so.",
+   "credit_label": "Painting",
+   "credit": "Thomas Hickey",
+   "source": "https://commons.wikimedia.org/wiki/File:Colonel_Colin_Mackenzie_and_his_Indian_pandits_by_Thomas_Hickey.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "mysore-restored-1799",
@@ -4236,7 +4442,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1800__India__Faden__India-Peninsula.html",
    "1810__Bombay__dApres-de-Mannevillette__Plan-du-Port-de-Bombay.html"
-  ]
+  ],
+  "image": {
+   "file": "img/treaty-of-bassein-1802.jpg",
+   "width": 1076,
+   "height": 1600,
+   "alt": "A monochrome illustration of the Peshwa seated at a table with British officers, a paper between them and attendants standing behind",
+   "caption": "Bajirao II at the table with the Company's officers – not a record of the day but an imagining, drawn by V. M. Khare for N. C. Kelkar's Marathe va Ingraj in 1918.",
+   "credit_label": "Illustration",
+   "credit": "V. M. Khare",
+   "source": "https://commons.wikimedia.org/wiki/File:Rao_Baji_signing_the_Treaty_of_Vasai.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "assaye-1803",
@@ -4397,7 +4616,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1820__India__Carey-Lavoisne__India.html",
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
-  ]
+  ],
+  "image": {
+   "file": "img/pindaris-third-war-1817.jpg",
+   "width": 1600,
+   "height": 1072,
+   "alt": "A hand-coloured lithograph of a battle, red-coated cavalry charging from the left into massed horsemen and elephants with canopied howdahs, dead and wounded in the foreground",
+   "caption": "The Bengal and Madras light cavalry charging at Nagpore on 16 December 1817, published the year after: what began as a sweep against the Pindaris had become a war against the Maratha states themselves.",
+   "credit_label": "Lithograph",
+   "credit": "Denis Dighton, after Robert Woolf",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Last_Charge_of_the_6th_Regment_of_Bengal_and_the_6th_Regiment_of_Madras_Light_Cavalry_on_the_16th_December_1817_(cropped).jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "from the Anne S. K. Brown Military Collection, Brown University Library, via Wikimedia Commons, resized"
+  }
  },
  {
   "id": "deccan-commission",
@@ -4599,7 +4831,20 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1827__Deccan__Vandermaelen__Bejapoor-Bijapur.html"
-  ]
+  ],
+  "image": {
+   "file": "img/elphinstone-report-1819.jpg",
+   "width": 698,
+   "height": 1600,
+   "alt": "A white marble standing statue of a man in a cloak on an inscribed plinth, set in a stone recess",
+   "caption": "Elphinstone in the crypt of St Paul's, raised by public subscription in 1863 and inscribed to the historian of early India – the Deccan report read back in London as a career.",
+   "credit_label": "Photograph",
+   "credit": "Stephencdickson",
+   "source": "https://commons.wikimedia.org/wiki/File:Mountstuart_Elphinstone's_memorial_in_St_Pauls_Cathedral.JPG",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+   "note": "via Wikimedia Commons, cropped and resized"
+  }
  },
  {
   "id": "elphinstone-code-1827",
@@ -5002,7 +5247,20 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html",
    "1883__India__Letts__India-11.html"
-  ]
+  ],
+  "image": {
+   "file": "img/railway-bhor-ghat.jpg",
+   "width": 822,
+   "height": 600,
+   "alt": "A wood engraving looking across a wooded ravine in the Western Ghats, arched viaducts carrying a railway along the far hillside and two figures on a path in the foreground",
+   "caption": "The Bhor Ghat incline in the Illustrated London News of 21 September 1867: the viaducts strung along the far scarp, and the wall of the Ghats the line took eight years to climb.",
+   "credit_label": "Engraving",
+   "credit": "Unknown artist",
+   "source": "https://commons.wikimedia.org/wiki/File:The_Bhore_Ghaut_incline_(a_very_taxing_track_engineering_feat),_from_the_Illustrated_London_News,_1867.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons"
+  }
  },
  {
   "id": "salar-jang-hyderabad",
@@ -5322,6 +5580,19 @@ window.DECCAN_ENTRIES = [
   "related_maps": [
    "1901__India__Cram-Murray-Aaron__Historical-Map-of-British-India.html"
   ],
+  "image": {
+   "file": "img/ranade-and-the-first-histories.jpg",
+   "width": 977,
+   "height": 1275,
+   "alt": "A halftone portrait photograph of an elderly bearded man in profile wearing a pale cap and a dark coat over a white shawl",
+   "caption": "Ranade as the Telugu weekly Andhra Patrika printed him in its 1911 annual, ten years after his death: the Poona judge who answered Grant Duff, claimed by a readership two languages away.",
+   "credit_label": "Photograph",
+   "credit": "Andhra Patrika",
+   "source": "https://commons.wikimedia.org/wiki/File:Mahadev_Govind_Ranade_garu1911.jpg",
+   "license": "Public domain",
+   "license_url": "https://en.wikipedia.org/wiki/Public_domain",
+   "note": "via Wikimedia Commons, resized"
+  },
   "coda": true,
   "coda_order": 1
  },

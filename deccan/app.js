@@ -25,7 +25,7 @@
   /* An entry's picture, when it has one: the image on a mat, the caption and credit beneath. */
   function figure(e) {
     var im = e.image; if (!im) return "";
-    var cap = E(im.caption) + ' <span class="credit">Photograph: <a href="' + E(im.source) + '" target="_blank" rel="noopener noreferrer">' + E(im.credit) + '</a>, <a href="' + E(im.license_url) + '" target="_blank" rel="noopener noreferrer">' + E(im.license) + "</a>" + (im.note ? ", " + E(im.note) : "") + ".</span>";
+    var cap = E(im.caption) + ' <span class="credit">' + E(im.credit_label || "Photograph") + ': <a href="' + E(im.source) + '" target="_blank" rel="noopener noreferrer">' + E(im.credit) + '</a>, <a href="' + E(im.license_url) + '" target="_blank" rel="noopener noreferrer">' + E(im.license) + "</a>" + (im.note ? ", " + E(im.note) : "") + ".</span>";
     return '<figure class="entry-fig"><div class="mat"><img src="' + E(im.file) + '" alt="' + E(im.alt) + '" width="' + im.width + '" height="' + im.height + '" loading="lazy"></div><figcaption>' + cap + "</figcaption></figure>";
   }
   function setTitle(t, desc) {
