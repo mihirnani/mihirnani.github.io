@@ -1768,7 +1768,7 @@ window.DECCAN_ENTRIES = [
    "width": 1195,
    "height": 1600,
    "alt": "An engraved banner showing a Dominican friar holding an olive branch and a sword, above a dog carrying a torch",
-   "caption": "The standard of the Holy Office as Bernard Picart engraved it in 1722: mercy and justice, the olive branch and the sword, over the Domini canis with its torch.",
+   "caption": "The standard of the Holy Office as Bernard Picart engraved it in 1722: mercy and justice, the olive branch and the sword, over the Domini canis with its torch. Around it, temples came down, old names were forbidden, and in 1684 Konkani itself was put out of public use.",
    "credit_label": "Engraving",
    "credit": "Bernard Picart",
    "source": "https://commons.wikimedia.org/wiki/File:Banner_of_the_Inquisition_in_Goa.jpg",
