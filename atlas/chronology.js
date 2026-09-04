@@ -77,12 +77,12 @@
       var y = yearOf(it.d, it.e && byId[it.e] ? byId[it.e].year : null);
       if (y == null) return;
       if (it.e) linked[it.e] = true;
-      items.push({y: y, ord: 0, kind: "chron", d: it.d, text: it.t, e: it.e && byId[it.e] ? it.e : null});
+      items.push({y: y, ord: 0, kind: "chron", sec: si, d: it.d, text: it.t, e: it.e && byId[it.e] ? it.e : null});
     });
   });
   dEntries.forEach(function (e) {
     if (linked[e.id]) return;
-    items.push({y: e.year, ord: 1, kind: "entry", d: e.date_label, text: e.title, e: e.id, strap: e.strap});
+    items.push({y: e.year, ord: 1, kind: "entry", per: e.coda ? null : e.period, d: e.date_label, text: e.title, e: e.id, strap: e.strap});
   });
   bEntries.forEach(function (e) {
     var y = PRESENT - e.age;
@@ -93,14 +93,24 @@
     if (m.year < H0 || m.year > H1) return;
     items.push({y: m.year, ord: 3, kind: "gaze", d: m.date_label, text: m.maker + ", " + m.title, file: m.file, room: m.room});
   });
-  items.sort(function (a, b) { return a.y - b.y || a.ord - b.ord || (a.text < b.text ? -1 : 1); });
-
   /* eras: the backdrop before the collection, the Deccan's seven periods, and the horizon after them */
   var eras = [{n: "·", title: chron[0].title.replace(/ – .*$/, ""), short: "Backdrop", years: H0 + "–" + dPeriods[0].start, start: H0, end: dPeriods[0].start, color: "var(--muted)"}];
   dPeriods.forEach(function (p) { eras.push({n: "0" + p.n, title: p.title, short: p.short, years: p.years, start: p.start, end: p.end, color: "var(--deccan)"}); });
   var last = dPeriods[dPeriods.length - 1].end;
   eras.push({n: "·", title: "After the close", short: "After", years: last + "–" + H1, start: last, end: H1 + 1, color: "var(--muted)"});
   function eraOf(y) { for (var i = eras.length - 1; i >= 0; i--) if (y >= eras[i].start) return i; return 0; }
+
+  /* An item belongs to the era its author put it in - the chronology section it was written under,
+     or the entry's own period - not to whatever era its first four-digit year happens to fall in.
+     The periods share their boundary years (... 1687-1761, 1761-1799 ...) and eraOf resolves a
+     boundary to the later one, so Panipat closed the Maratha Century in the Markdown and opened
+     Mysore here; span labels like "c. 1730-1803" parse to their first year and travel further still.
+     Maps and Basalt entries carry no Deccan period, so those still go by year. */
+  var sectionsMatchEras = chron.length === eras.length;
+  items.forEach(function (it) {
+    it.era = (it.sec != null && sectionsMatchEras) ? it.sec : (it.per != null ? it.per : eraOf(it.y));
+  });
+  items.sort(function (a, b) { return a.era - b.era || a.y - b.y || a.ord - b.ord || (a.text < b.text ? -1 : 1); });
 
   var show = {chron: true, entry: true, basalt: true, gaze: true};
   function humanBand() {
@@ -130,7 +140,7 @@
   function humanList() {
     var s = [], cur = -1;
     items.forEach(function (it, i) {
-      var ei = eraOf(it.y);
+      var ei = it.era;
       if (ei !== cur) {
         if (cur >= 0) s.push("</ol></section>");
         var er = eras[ei];
