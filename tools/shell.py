@@ -32,7 +32,7 @@ SECTIONS = [
     ("deccan",  "Deccan", SITE + "/deccan/"),
     ("gaze",    "Maps",   SITE + "/european-gaze/"),
     ("basalt",  "Basalt", SITE + "/basalt-and-laterite/"),
-    ("birds",   "Birds",  SITE + "/sahyadri-birds/"),
+  # ("birds",   "Birds",  SITE + "/sahyadri-birds/"),   # hidden until the guide is ready — uncomment to restore Birds
     ("atlas",   "Atlas",  SITE + "/atlas/"),
     ("text",    "Text",   SITE + "/text/"),
 ]
