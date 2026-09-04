@@ -122,6 +122,22 @@ def slug_letter(title):
     c = t[0].upper()
     return c if c.isalpha() else "#"
 
+def figure(e, coll):
+    """An entry's picture, where the illustrated collection has one.  The files stay with that
+       collection; the text edition points at them rather than keeping a second copy."""
+    im = e.get("image")
+    if not im:
+        return ""
+    base = "../../deccan/" if coll == "deccan" else "../../basalt-and-laterite/"
+    credit = ('<span class="credit">%s: <a href="%s">%s</a>, <a href="%s">%s</a>%s.</span>'
+              % (esc(im.get("credit_label") or "Photograph"), esc(im["source"]), esc(im["credit"]),
+                 esc(im["license_url"]), esc(im["license"]),
+                 ", " + esc(im["note"]) if im.get("note") else ""))
+    return ('<figure class="entry-fig"><img src="%s%s" alt="%s" width="%d" height="%d" loading="lazy">'
+            '<figcaption>%s %s</figcaption></figure>'
+            % (base, esc(im["file"]), esc(im["alt"]), im["width"], im["height"],
+               esc(im["caption"]), credit))
+
 def sort_title(title):
     return re.sub(r"^(The|A|An)\s+", "", title, flags=re.I).lower()
 
@@ -168,7 +184,7 @@ def page(rel, title, desc, body):
 {body}
 </main>
 <footer>
-<span class="foot-line">The text edition of <a href="{site}/">Curiosities</a>: every entry as plain HTML, no scripts. A non-commercial study collection.</span>
+<span class="foot-line">The text edition of <a href="{site}/">Curiosities</a>: every entry as plain HTML, no scripts. The illustrated site has the <a href="{site}/deccan/">timeline</a>, the <a href="{site}/atlas/">atlas</a> and the <a href="{site}/european-gaze/">map collection</a>. A non-commercial study collection.</span>
 <span class="foot-line">Errors may be pointed out by writing to mihir [at] naniwadekar [dot] in.</span>
 </footer>
 </body>
@@ -295,6 +311,7 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
         b.append('<article class="entry">')
         b.append('<div class="head"><h1>%s</h1><p class="byline">%s</p><p class="brief">%s</p></div>'
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
+        b.append(figure(e, "deccan"))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "deccan"))
         b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "deccan"))
         if e.get("related_maps"):
@@ -461,6 +478,7 @@ def build_basalt(periods, entries, deccan_entries):
         b.append('<article class="entry">')
         b.append('<div class="head"><h1>%s</h1><p class="byline">%s</p><p class="brief">%s</p></div>'
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
+        b.append(figure(e, "basalt"))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "basalt"))
         b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "basalt"))
         if e.get("deccan"):

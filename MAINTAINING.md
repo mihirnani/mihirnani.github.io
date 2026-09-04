@@ -101,8 +101,9 @@ deploys the three site repositories on push, usually within a minute or two;
    `license` and `license_url`, and `note` ("via Wikimedia Commons, resized"). For a
    Commons image, take the author and licence from the file page itself.
 3. Build, check, commit, push — the text repo and the hub. The build refuses an entry
-   whose image block is incomplete or whose file is not in the repository. The text
-   edition carries no pictures, by design.
+   whose image block is incomplete or whose file is not in the repository. The text edition
+   shows the picture too, pointing at the same file in the illustrated collection; what it
+   leaves out, by design, is the scripts and the maps.
 
 ### Add a bird species
 
