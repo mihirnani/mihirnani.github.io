@@ -1,4 +1,0 @@
-# Crawlers read https://naniwadekar.com/robots.txt; this file is kept for the standalone GitHub Pages URL.
-User-agent: *
-Allow: /
-Sitemap: https://naniwadekar.com/deccan/sitemap.xml

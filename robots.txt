@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /european-gaze/offline.html
-Disallow: /european-gaze/404.html
-Disallow: /deccan/offline.html
-Disallow: /deccan/404.html
 
 Sitemap: https://naniwadekar.com/sitemap-index.xml

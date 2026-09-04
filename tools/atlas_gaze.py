@@ -6,15 +6,14 @@ rooms.js - and keeps only what the atlas needs: a year, a region, a maker, a
 title and a room per map.  (Until August 2026 this script recovered those facts
 by parsing the collection's HTML pages; the collection now keeps them as data.)
 
-Run: python3 atlas/tools/make_gaze.py   (set GAZE_DIR if the map collection is
+Run: python3 tools/atlas_gaze.py   (set GAZE_DIR if the map collection is
 not checked out beside this repository)
 """
 import os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
+ROOT = os.path.abspath(os.path.join(HERE, ".."))
 GAZE = os.environ.get("GAZE_DIR", os.path.abspath(os.path.join(ROOT, "..", "european-gaze")))
-sys.path.insert(0, os.path.join(ROOT, "tools"))
 from data import load, dump
 
 BASE = "https://naniwadekar.com/european-gaze/"

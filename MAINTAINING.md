@@ -1,7 +1,6 @@
 # Maintaining Curiosities — the routines
 
-The root `README.md` says what each folder is and what the build does. This file is the
-other half: what to actually do, in order, for the changes you are likely to make. Every
+The root `README.md` says what is where. This file is the other half: what to actually do, in order, for the changes you are likely to make. Every
 recipe ends the same way — build, check, commit, push — so that part is written once, at the
 end.
 
@@ -67,16 +66,16 @@ deploys the three site repositories on push, usually within a minute or two;
    Keep the master in `img/` — it is ignored by git and stays on this machine only.
    (Without tiles the page simply shows the display image; the viewer is optional.)
 3. In `curiosities-text/maps/`, copy the nearest existing file to `<id>.md` and fill in
-   the front matter — `id`, `year`, `region`, `maker` (a display name, e.g. `d’Anville`),
-   `date_label`, `title`, `short`, `byline`, the `image` and `thumb` blocks with the pixel
-   sizes, `room`, the `deccan` links and the `meta` rows — then the brief as the first
+   the front matter — `id`, `year` and `approx` (true when the year is a guess), `region`,
+   `maker` (a display name, e.g. `d’Anville`), `date_label`, `title`, `short`, `byline`,
+   the `image` and `thumb` blocks with the pixel sizes, `room`, the `deccan` links (and
+   `basalt`, if any) and the `meta` rows — then the brief as the first
    paragraph and the commentary under `##` subheads, ending with `## The gaze`. The build
    adds the Rumsey credit row itself whenever a `Source record` row links to
    davidrumsey.com.
 4. Hang it: add the `id` to the right room's `maps` list in `curiosities-text/maps/rooms/`,
-   in order.
-5. Add the page to `sitemap.xml`.
-6. Build (from the hub, so the atlas and text edition see it), check, commit, push —
+   in order. (The sitemap is written by the build.)
+5. Build (from the hub, so the atlas and text edition see it), check, commit, push —
    `curiosities-text`, this repository and, because its generated files changed, the hub.
 
 ### Add or replace a photograph in Birds
@@ -115,7 +114,8 @@ AviList version named on the About page; use its spelling and hyphenation.
 
 Edit `SECTIONS`, `FOOTER` or the masthead template in `tools/shell.py`; mirror the same change
 in `european-gaze/build.py` (which owns the map collection's shell) and by hand in
-`sahyadri-birds/index.html` and the atlas pages, which keep their own mastheads. Build.
+`sahyadri-birds/index.html` and the atlas pages, which keep their own mastheads. The text
+edition has a masthead of its own, without the family navigation, in `text/build.py`. Build.
 
 ### Change the look
 
@@ -137,6 +137,10 @@ footer.
     cd mihirnani.github.io
     python3 tools/build.py          # assembles the data from ../curiosities-text, then
                                     # builds this repository and ../european-gaze; ~10 s
+
+Every sitemap except Birds' one-liner is written by the build and never edited by hand.
+Each page is dated from the last commit that touched it, so the dates run one commit
+behind your latest edit; that is harmless.
 
 Then look at what changed before committing:
 
@@ -178,7 +182,8 @@ dislikes scripts rather than a dead link; open those by hand.
   file parses before committing.
 - **Ids are URLs.** Renaming an `id` breaks every link to it — in the other collections,
   the atlas, the text edition and anyone's bookmarks. If you must, leave a redirect stub at
-  the old address, as was done for two maps in September 2026.
+  the old address: a page with `<meta http-equiv="refresh">` to the new one and
+  `<meta name="robots" content="noindex">`, kept for a few months.
 - **The Rumsey licence.** Non-commercial, share-alike, credit line required; the build adds
   the credit, but keep the site non-commercial and keep the source record on every page.
 - **Size.** The Gaze repository deploys under GitHub Pages' 1 GB limit only because the

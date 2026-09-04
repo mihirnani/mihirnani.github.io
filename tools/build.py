@@ -13,12 +13,13 @@ this runs them in the right order:
   2. ../european-gaze/build.py the map collection's pages, from its own data
                                files (skipped if that repository is not beside
                                this one)
-  3. atlas/tools/make_snapshot.py   the atlas's local copies of the collections'
+  3. tools/atlas_snapshot.py   the atlas's local copies of the collections'
                                data, used only when the atlas is opened from a
                                local folder
-  4. atlas/tools/make_gaze.py  the atlas's map layer, from the map collection's data
-  5. atlas/tools/make_places.py     the atlas's places index
+  4. tools/atlas_gaze.py       the atlas's map layer, from the map collection's data
+  5. tools/atlas_places.py     the atlas's places index
   6. text/build.py             the text edition: one static page per entry
+  7. tools/sitemaps.py         the sitemaps and their index, dated from git
 
 Run it after editing the text (in ../curiosities-text), any page body, or
 assets/collection.css.  Everything it writes is derived, the data files included;
@@ -27,8 +28,8 @@ the Markdown and the page bodies are the source.
 import pathlib, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-STEPS = ["../curiosities-text/tools/assemble.py", "tools/shell.py", "../european-gaze/build.py", "atlas/tools/make_snapshot.py",
-         "atlas/tools/make_gaze.py", "atlas/tools/make_places.py", "text/build.py"]
+STEPS = ["../curiosities-text/tools/assemble.py", "tools/shell.py", "../european-gaze/build.py", "tools/atlas_snapshot.py",
+         "tools/atlas_gaze.py", "tools/atlas_places.py", "text/build.py", "tools/sitemaps.py"]
 
 def main():
     failed = []

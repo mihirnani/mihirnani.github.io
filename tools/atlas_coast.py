@@ -1,9 +1,9 @@
 """Build atlas/data/coast.js from Natural Earth 1:50m land and 1:10m rivers (public domain).
-Clip to 68-88E, 8-24N; Douglas-Peucker at 0.02 deg. Run: python3 atlas/tools/make_coast.py"""
+Clip to 68-88E, 8-24N; Douglas-Peucker at 0.02 deg. Run: python3 tools/atlas_coast.py"""
 import json, math, sys, urllib.request
 import os
 HERE = os.path.dirname(os.path.abspath(__file__))
-ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))                 # the site repository
+ROOT = os.path.abspath(os.path.join(HERE, ".."))                       # the site repository
 GAZE = os.environ.get("GAZE_DIR", os.path.abspath(os.path.join(ROOT, "..", "european-gaze")))   # the map collection's repository
 import tempfile
 SCR = os.environ.get("NE_CACHE", os.path.join(tempfile.gettempdir(), "natural-earth"))   # downloaded GeoJSON is cached here

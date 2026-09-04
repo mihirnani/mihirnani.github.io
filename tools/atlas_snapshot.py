@@ -8,7 +8,7 @@ when those globals are missing the pages load these copies instead. Run this
 after editing the collections so the copies do not drift; on the web the
 copies are never used."""
 import shutil, pathlib
-root = pathlib.Path(__file__).resolve().parents[2]
+root = pathlib.Path(__file__).resolve().parents[1]
 out = root / "atlas" / "data" / "snapshot"
 out.mkdir(parents=True, exist_ok=True)
 pairs = {

@@ -72,26 +72,19 @@ FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/">Curiosities</a>
           '</span></footer>') % SITE
 
 # ---- the collections that share the shell
+# Both collections use the site's icons; neither is an installable app of its own.
+COLLECTION_HEAD = ('<link href="../curiosities-icon-32.png" rel="icon" sizes="32x32" type="image/png"/>'
+                   '<link href="../curiosities-icon-192.png" rel="icon" sizes="192x192" type="image/png"/>'
+                   '<link href="../curiosities-icon-180.png" rel="apple-touch-icon"/>'
+                   '<meta content="#ece3d1" media="(prefers-color-scheme: light)" name="theme-color"/>'
+                   '<meta content="#16120e" media="(prefers-color-scheme: dark)" name="theme-color"/>')
 COLLECTIONS = {
     "deccan": dict(
         key="deccan", name="The Deccan, 1336–1875", tagline="Vijayanagara to the Raj",
-        css=["style.css"],
-        head_extra=('<link href="deccan.webmanifest" rel="manifest"/>'
-                    '<link href="deccan-icon-180.png" rel="apple-touch-icon"/>'
-                    '<meta content="#ece3d1" media="(prefers-color-scheme: light)" name="theme-color"/>'
-                    '<meta content="#16120e" media="(prefers-color-scheme: dark)" name="theme-color"/>'
-                    '<meta content="yes" name="apple-mobile-web-app-capable"/>'
-                    '<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>'
-                    '<meta content="Deccan" name="apple-mobile-web-app-title"/>'
-                    '<link href="deccan-icon-192.png" rel="icon" sizes="192x192" type="image/png"/>'),
-        og_image=SITE + "/deccan/deccan-icon-512.png"),
+        css=["style.css"], head_extra=COLLECTION_HEAD, og_image=SITE + "/curiosities-icon-512.png"),
     "basalt-and-laterite": dict(
         key="basalt", name="Basalt and Laterite", tagline="The making of the Deccan",
-        css=["style.css"],
-        head_extra=('<link href="../curiosities-icon-32.png" rel="icon" sizes="32x32" type="image/png"/>'
-                    '<link href="../curiosities-icon-192.png" rel="icon" sizes="192x192" type="image/png"/>'
-                    '<link href="../curiosities-icon-180.png" rel="apple-touch-icon"/>'),
-        og_image=SITE + "/curiosities-icon-512.png"),
+        css=["style.css"], head_extra=COLLECTION_HEAD, og_image=SITE + "/curiosities-icon-512.png"),
 }
 
 # ---- the pages the shell owns: path -> collection, title, description, url
