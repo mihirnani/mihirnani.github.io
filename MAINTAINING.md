@@ -1,4 +1,4 @@
-# Maintaining Curiosities — the routines
+# Maintaining A Fragmented Peninsula — the routines
 
 The root `README.md` says what is where. This file is the other half: what to actually do, in order, for the changes you are likely to make. Every
 recipe ends the same way — build, check, commit, push — so that part is written once, at the

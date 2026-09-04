@@ -513,7 +513,7 @@ footer p { margin: 0 0 0.5rem; }
   .map-wrap::after { content: "Scroll sideways for the east coast \2192"; display: block; position: sticky; left: 0; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); padding: 0.3rem 0.8rem 0.6rem; }
 }
 
-/* Site footer, shared across Curiosities: centred, small, two lines that never
+/* Site footer, shared across the site: centred, small, two lines that never
    break mid-sentence. */
 .foot-line { display: block; white-space: nowrap; }
 @media (max-width: 360px) { .foot-line { white-space: normal; } }

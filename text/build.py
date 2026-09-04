@@ -166,7 +166,7 @@ def page(rel, title, desc, body):
 <link rel="canonical" href="{url}">
 <link rel="icon" href="{up}../curiosities-icon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="{up}../curiosities-icon-192.png" sizes="192x192" type="image/png">
-<meta property="og:site_name" content="Curiosities">
+<meta property="og:site_name" content="A Fragmented Peninsula">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -175,7 +175,7 @@ def page(rel, title, desc, body):
 </head>
 <body>
 <header class="mast">
-<a class="site" href="{up}index.html">Curiosities <span class="ed">Text edition</span></a>
+<a class="site" href="{up}index.html">A Fragmented Peninsula <span class="ed">Text edition</span></a>
 <nav class="navlinks" aria-label="Text edition">
 {nav}</nav>
 <a class="outlink" href="{site}/">Illustrated site &rarr;</a>
@@ -184,7 +184,7 @@ def page(rel, title, desc, body):
 {body}
 </main>
 <footer>
-<span class="foot-line">The text edition of <a href="{site}/">Curiosities</a>: every entry as plain HTML, no scripts. The illustrated site has the <a href="{site}/deccan/">timeline</a>, the <a href="{site}/atlas/">atlas</a> and the <a href="{site}/european-gaze/">map collection</a>. A non-commercial study collection.</span>
+<span class="foot-line">The text edition of <a href="{site}/">A Fragmented Peninsula</a>: every entry as plain HTML, no scripts. The illustrated site has the <a href="{site}/deccan/">timeline</a>, the <a href="{site}/atlas/">atlas</a> and the <a href="{site}/european-gaze/">map collection</a>. A non-commercial study collection.</span>
 <span class="foot-line">Errors may be pointed out by writing to mihir [at] naniwadekar [dot] in.</span>
 </footer>
 </body>
@@ -584,7 +584,7 @@ def build_basalt(periods, entries, deccan_entries):
 def build_home(dec_entries, bas_entries, chron, readings):
     lines = sum(len(s["items"]) for s in chron)
     books = sum(len(v) for v in readings.values())
-    b = ['<div class="head"><p class="eyebrow">Curiosities</p><h1>The text edition</h1>'
+    b = ['<div class="head"><p class="eyebrow">A Fragmented Peninsula</p><h1>The text edition</h1>'
          '<p class="lede">The same collections as the illustrated site, written out as ordinary pages: no scripts, '
          'no maps, no timelines. Every entry has its own address, reads in any browser, prints, and can be saved to '
          'disk and opened again in twenty years.</p></div>']
@@ -614,7 +614,7 @@ def build_home(dec_entries, bas_entries, chron, readings):
              'and the site’s two typefaces, served from this domain. Saved to disk, a page falls back to the '
              'reader’s own serif.</p>'
              '<p>Last built %s.</p></div>' % (SITE, EG, TODAY))
-    return [page("index.html", "Text edition – Curiosities",
+    return [page("index.html", "Text edition – A Fragmented Peninsula",
                  "The Deccan, 1336–1875 and Basalt and Laterite as plain HTML pages without scripts: one address per "
                  "entry, a full chronology, a bibliography, and indexes by date, kind, polity, rock and place.",
                  "\n".join(b))]

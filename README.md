@@ -1,4 +1,4 @@
-# Curiosities — naniwadekar.com
+# A Fragmented Peninsula — naniwadekar.com
 
 A hand-built, non-commercial study site. No framework, no dependencies, no
 package manager: plain HTML, one stylesheet per look, and a few Python scripts

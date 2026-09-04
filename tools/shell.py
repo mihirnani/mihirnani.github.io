@@ -66,7 +66,7 @@ THEME_SCRIPT = """<script>(function(){
   sync();
 })();</script>"""
 
-FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/">Curiosities</a>. A non-commercial study '
+FOOTER = ('<footer><span class="foot-line">Part of <a href="%s/">A Fragmented Peninsula</a>. A non-commercial study '
           'collection.</span> <span class="foot-line">Errors may be pointed out by writing to '
           '<a class="mail" href="#" data-u="mihir" data-d="naniwadekar.in">mihir [at] naniwadekar [dot] in</a>.'
           '</span></footer>') % SITE
@@ -83,7 +83,7 @@ COLLECTIONS = {
         key="deccan", name="The Deccan, 1336–1875", tagline="Vijayanagara to the Raj",
         css=["style.css"], head_extra=COLLECTION_HEAD, og_image=SITE + "/curiosities-icon-512.png"),
     "basalt-and-laterite": dict(
-        key="basalt", name="Basalt and Laterite", tagline="The making of the Deccan",
+        key="basalt", name="Basalt and Laterite", tagline="Four billion years of the plateau",
         css=["style.css"], head_extra=COLLECTION_HEAD, og_image=SITE + "/curiosities-icon-512.png"),
 }
 
@@ -101,8 +101,8 @@ PAGES = {
         desc="What the Deccan timeline collection is, how it is arranged, and how the entries were written and checked."),
     "basalt-and-laterite/index.html": dict(
         collection="basalt-and-laterite", url=SITE + "/basalt-and-laterite/",
-        title="Basalt and Laterite · the making of the Deccan",
-        desc="Basalt and Laterite: the making of the Deccan. Nearly four billion years of the plateau – craton, "
+        title="Basalt and Laterite · four billion years of the plateau",
+        desc="Basalt and Laterite: nearly four billion years of the plateau – craton, "
              "Gondwana, the Trap eruptions, escarpment, laterite and black soil – ending in the landscape on which "
              "the Deccan’s human history was made."),
     "basalt-and-laterite/about.html": dict(
@@ -121,7 +121,7 @@ def head(cfg, coll):
 <meta content="light dark" name="color-scheme"/>
 <title>{title}</title>
 {boot}{css}
-<link href="{url}" rel="canonical"/><meta content="{title}" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="Curiosities"><meta content="{desc}" property="og:description"/><meta content="website" property="og:type"/><meta content="{url}" property="og:url"/>{og_image}
+<link href="{url}" rel="canonical"/><meta content="{title}" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="A Fragmented Peninsula"><meta content="{desc}" property="og:description"/><meta content="website" property="og:type"/><meta content="{url}" property="og:url"/>{og_image}
 {extra}</head>""".format(desc=cfg["desc"], title=cfg["title"], boot=THEME_BOOT, css=css,
                          url=cfg["url"], og_image=og_image, extra=coll["head_extra"])
 
@@ -132,7 +132,7 @@ def masthead(coll):
     return ('<div class="masthead"><a class="site" href="index.html">%s</a>\n'
             '<span class="yrs">%s</span>\n'
             '<span class="nav-break" aria-hidden="true"></span>\n'
-            '<nav class="nav-family" aria-label="Curiosities"><a class="navlink home" href="%s/">Curiosities</a>\n'
+            '<nav class="nav-family" aria-label="A Fragmented Peninsula"><a class="navlink home" href="%s/">Peninsula</a>\n'
             '%s</nav>\n'
             '<nav class="nav-local" aria-label="This collection"><a class="navlink" href="about.html">About</a></nav>\n'
             '<button class="theme-toggle" id="themeBtn" type="button" aria-label="Switch to dark theme">Dark</button></div>') % (coll["name"], coll["tagline"], SITE, links)

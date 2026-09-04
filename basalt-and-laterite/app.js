@@ -133,7 +133,7 @@
 
   /* ---------- views ---------- */
   function home() {
-    setTitle("Basalt and Laterite · the making of the Deccan");
+    setTitle("Basalt and Laterite · four billion years of the plateau");
     var chipsRock = Object.keys(ROCK).map(function (k) { return '<button class="chip' + (rockSel.has(k) ? " on" : "") + '" data-f="rock" data-v="' + k + '" type="button">' + E(ROCK[k]) + "</button>"; }).join("");
     var chipsKind = Object.keys(KIND).map(function (k) { return '<button class="chip' + (kindSel.has(k) ? " on" : "") + '" data-f="kind" data-v="' + k + '" type="button">' + E(KIND[k]) + "</button>"; }).join("");
     var sections = periods.map(function (p) {
@@ -150,7 +150,7 @@
       '<p class="eyebrow">Geology</p>' +
       '<h1 class="hero-h1">Basalt and<br/>Laterite</h1>' +
       '<div class="rule"></div>' +
-      '<p class="lede measure">The making of the Deccan: nearly four billion years of the plateau – craton and covering basins, the breakup of Gondwana, the Trap eruptions, the shaping of scarp, river and soil – ending in the landscape on which the Deccan’s human history was made.</p>' +
+      '<p class="lede measure">Nearly four billion years of the plateau – craton and covering basins, the breakup of Gondwana, the Trap eruptions, the shaping of scarp, river and soil – ending in the landscape on which the Deccan’s human history was made.</p>' +
       '<p class="measure muted">The story is told through seven periods, from the Peninsular Gneiss to the first geologists. Click a marker on the band or browse the periods below; every entry has its own page, with sources; where the deep history surfaces in the human record, an entry also links into the companion <a href="' + DEC + '">Deccan timeline</a>. Positions on the band are on a logarithmic scale – deep time does not fit a ruler.</p>' +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a rock, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Material</span>' + chipsRock + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
