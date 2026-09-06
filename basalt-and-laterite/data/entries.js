@@ -15,7 +15,7 @@ window.BL_ENTRIES = [
   "lat": 12.949,
   "lon": 77.585,
   "strap": "The grey banded gneisses that floor the southern peninsula are among the oldest rocks in India; the hill in Bengaluru’s Lalbagh garden is their classic exposure, protected as a national geological monument.",
-  "body": "<p>Under everything else in this collection lies grey gneiss: a banded, streaky rock formed when granites and older crust were kneaded together at depth, exposed today wherever the cover has worn away between Bengaluru, Mysore and the Tungabhadra. Geologists call it the Peninsular Gneiss, a name fixed by W. F. Smeeth of the Mysore Geological Department in 1916, and its classic exposure is a piece of civic furniture – the whaleback hill in the Lalbagh botanical garden in Bengaluru, protected as a national geological monument. Radiometric dates from the gneisses run from about 3,400 to 2,500 million years, with some components older still; they record not one event but a series of remeltings spread over most of a billion years.</p>\n<p>The gneiss is the reason the southern Deccan behaves as it does. Rock this old and this thoroughly worked is cold, thick and stable – a craton – and cratons neither fold into young mountains nor subside into deep basins; they persist, wearing down slowly, while events happen on top of them and around their edges. The subdued, boulder-strewn uplands of the southern plateau, the shallow soils, the bare grey sheets that carry the hill forts of the later timeline – these are the surface manners of a craton.</p>\n<p>The banding itself is the archive. Each grey and pale stripe is a pulse of melting or deformation, and unpicking their sequence – which band cuts which – is done exactly as a historian collates chronicles, except that the dates come from uranium and lead. The collection therefore starts here, with a rock whose biography was already complete before there was an atmosphere worth breathing above it.</p>",
+  "body": "<p>Under everything else in this collection lies grey gneiss: a banded, streaky rock formed when granites and older crust were kneaded together at depth, exposed today wherever the cover has worn away between Bengaluru, Mysore and the Tungabhadra. Geologists call it the Peninsular Gneiss, a name fixed by W. F. Smeeth of the Mysore Geological Department in 1916, and its classic exposure is a piece of civic furniture – the whaleback hill in the Lalbagh botanical garden in Bengaluru, protected as a national geological monument. Radiometric dates from the gneisses run from about 3,400 to 2,500 million years, with some components older still; they record not one event but a series of remeltings spread over most of a billion years.</p>\n<p>The gneiss is the reason the southern Deccan behaves as it does. Rock this old and this thoroughly worked is cold, thick and stable – a craton – and cratons neither fold into young mountains nor subside into deep basins; they persist, wearing down slowly, while events happen on top of them and around their edges. The subdued, boulder-strewn uplands of the southern plateau, the shallow soils, the bare grey sheets that carry the hill forts of the later timeline – these are the surface manners of a craton. South of Bengaluru the gneiss passes into the <a href=\"#charnockite-nilgiris\">charnockite country</a>, where the same crust was cooked deeper and stands higher.</p>\n<p>The banding itself is the archive. Each grey and pale stripe is a pulse of melting or deformation, and unpicking their sequence – which band cuts which – is done exactly as a historian collates chronicles, except that the dates come from uranium and lead. The collection therefore starts here, with a rock whose biography was already complete before there was an atmosphere worth breathing above it.</p>",
   "story": "Every later entry stands on this one. The craton’s stability is why the Deccan’s history is a story of surfaces – lava poured on it, soils formed from it, forts built of it – rather than of the ground itself convulsing; the plateau’s role as history’s stage begins with the gneiss that made it rigid.",
   "sources": [
    {
@@ -61,7 +61,7 @@ window.BL_ENTRIES = [
   "lon": 75.008,
   "strap": "Belts of altered lavas and sediments folded into the gneiss country – the remains of Archaean sea floors, and the source of the craton’s iron, manganese and gold.",
   "body": "<p>Running north-north-west through the gneiss country are long, narrow belts of darker rock: altered basalts, cherts, banded iron formations and greywackes, squeezed and steepened between the grey gneisses like folders in a press. These are the Dharwar greenstone belts, named from the town of Dharwad, and they are the remains of Archaean basins and sea floors – volcanic and sedimentary piles laid down between roughly 2,900 and 2,600 million years ago and then caught in the collisions that welded the craton. Their sequences were first classified by Robert Bruce Foote of the Geological Survey of India, who named the Dharwar System in the Survey’s Records in 1888 after the district he had spent years mapping; the work was carried on by the Mysore Geological Department, which Foote came out of retirement to found and direct in 1894, and ‘Dharwar’ became a term used across Indian geology.</p>\n<p>The belts matter to history because ore concentrates in them. The banded iron formations of Sandur, beside the ground where the ashmounds and then Vijayanagara later stood, fed iron smelting from the Iron Age to the modern mines; the manganese of the same belts, the chromite, and above all the gold – the quartz reefs of the Kolar and Hutti belts – are all Dharwar inheritances. When a later entry finds furnaces or mines in the middle Deccan, the ground beneath is almost always a greenstone belt.</p>\n<p>To a geologist the belts are also the peninsula’s earliest scenery: pillow lavas that erupted under Archaean seas, gravels from vanished islands. The Deccan’s oldest landscapes survive only in this compressed, tilted form, filed vertically in the craton – an archive turned on its edge.</p>",
-  "story": "The greenstones are where the plateau’s underground wealth enters the story: the gold, iron and manganese that later entries – and the Deccan timeline’s states – mine, tax and fight over were laid down here, two and a half billion years before anyone owned them.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -104,7 +104,7 @@ window.BL_ENTRIES = [
   "lat": 12.954,
   "lon": 78.273,
   "strap": "Gold-bearing quartz veins in a greenstone belt east of Bengaluru, worked in antiquity, reopened under the Raj, and mined to depths of three kilometres before closing in 2001.",
-  "body": "<p>The Kolar belt is a sliver of greenstone – dark amphibolites, once Archaean lavas – threaded with quartz veins carrying gold, emplaced around 2,550 million years ago in the craton’s final consolidation. Ancient workings pit the outcrop: fire-set galleries and spoil heaps that the nineteenth-century engineers found already sunk tens of metres into the lode, evidence of organised mining generally attributed to the early centuries AD and perhaps earlier. Gold from peninsular workings of this kind circulated through every state in the Deccan timeline; the ‘nine lakhs of pagodas’ of the medieval chronicles were struck, ultimately, from rocks like these.</p>\n<p>The modern chapter began in 1880 when John Taylor and Sons took up the concession, and for decades Kolar Gold Fields was among the deepest mines in the world and among the great industrial enclaves of the Raj – with, from 1902, the Shivanasamudram hydroelectric scheme built largely to power it, the first long transmission line in India. Mining followed the Champion Lode down more than three kilometres before rising costs and dwindling grade closed the field in 2001. The deep galleries found a second life hosting early cosmic-ray and neutrino experiments – physics done at the bottom of Archaean rock because nowhere else in India was so deep and so quiet.</p>\n<p>Geologically, Kolar is the type case of what a greenstone belt gives a civilisation: a mineral endowment fixed in the Archaean, spent across three thousand years of history, and exhausted in one industrial century.</p>",
+  "body": "<p>The Kolar belt is a sliver of greenstone – dark amphibolites, once Archaean lavas – threaded with quartz veins carrying gold, emplaced around 2,550 million years ago in the craton’s final consolidation. Ancient workings pit the outcrop: fire-set galleries and spoil heaps that the nineteenth-century engineers found already sunk tens of metres into the lode, evidence of organised mining generally attributed to the early centuries AD and perhaps earlier. Gold from peninsular workings of this kind circulated through every state in the Deccan timeline; the ‘nine lakhs of pagodas’ of the medieval chronicles were struck, ultimately, from rocks like these.</p>\n<p>The modern chapter began in 1880 when John Taylor and Sons took up the concession, and for decades Kolar Gold Fields was among the deepest mines in the world and among the great industrial enclaves of the Raj – with, from 1902, the Shivanasamudram hydroelectric scheme built largely to power it, the first long transmission line in India. Mining followed the Champion Lode down more than three kilometres before rising costs and dwindling grade closed the field in 2001. The deep galleries also hosted, while the mine was still working, early cosmic-ray and neutrino experiments – physics done at the bottom of Archaean rock because nowhere else in India was so deep and so quiet.</p>\n<p>Geologically, Kolar is the type case of what a greenstone belt gives a civilisation: a mineral endowment fixed in the Archaean, spent across three thousand years of history, and exhausted in one industrial century.</p>",
   "story": "Kolar compresses this collection’s whole argument: an Archaean event, a medieval revenue stream, a colonial industry and a modern closure in a single place. It is the plateau as bank account – deposits made before life left the sea, drawn down by every state from the nayakas to the Raj.",
   "sources": [
    {
@@ -123,6 +123,52 @@ window.BL_ENTRIES = [
   "deccan": []
  },
  {
+  "id": "charnockite-nilgiris",
+  "title": "Charnockite and the Nilgiris",
+  "date_label": "c. 2,500 Ma; named 1893",
+  "age": 2500000000,
+  "period": 1,
+  "rocks": [
+   "craton"
+  ],
+  "kind": "formation",
+  "place": "St Thomas Mount, Chennai",
+  "lat": 13.005,
+  "lon": 80.196,
+  "strap": "The dark, greasy-looking granulite named in 1893 from Job Charnock’s tombstone; the rock of the Nilgiris, the Shevaroys and the far south, where the craton’s floor was cooked deepest.",
+  "body": "<p>In 1893 Thomas Holland of the Geological Survey examined the stone of Job Charnock’s tomb in St John’s churchyard in Calcutta, cut two centuries earlier from the quarries of St Thomas Mount near Madras, and found under the microscope a rock that fitted none of the existing names: quartz and feldspar in a granitic fabric, with the pyroxene hypersthene where mica should have been. He called it charnockite, after the founder of the city the tombstone stood in, and in 1900 described the ‘charnockite series’ across the peninsula in a memoir that gave the word to petrology everywhere. It was a Deccan naming, like laterite’s: a European reading a rock in India and sending the name home.</p>\n<p>Charnockite is a granulite – a rock metamorphosed at the base of thick continental crust, at 700 to 900 °C and depths of twenty to thirty kilometres, hot and dry enough that the water-bearing minerals broke down and pyroxene grew instead. Its dark, greenish, greasy look on a fresh surface comes from that history, and so does its distribution. South of a line through Bengaluru the Dharwar craton passes into the Southern Granulite Terrain, and the great massifs of the south are charnockite: the Nilgiris, a block of it lifted to 2,600 metres at Doddabetta; the Shevaroys and the Biligirirangans; the Palni and Cardamom hills beyond the Palghat gap. The Nilgiri rocks were cooked about 2,500 million years ago, in the same consolidation that made the <a href=\"#closepet-granite\">Closepet Granite</a>; the granulites of the far south, around Madurai and Trivandrum, were reworked again about 550 million years ago, when the pieces of Gondwana were being sutured and what is now Kerala was joined to Madagascar and East Africa.</p>\n<p>The rock is where the collection’s basement meets its people. Charnockite from Pallavaram and St Thomas Mount built Madras, and the Mount is the hill from which the Deccan timeline’s Lambton measured his first baseline in 1802. The Nilgiris, the highest ground in the peninsula, are the one part of the plateau that stands above the level of the Traps: a block of the oldest crust over the youngest cover, cool enough for the Company to build a hill station on and for the tea that replaced the shola. The granulite hills, the Ghats and the gap at Palghat are also a boundary in the other timeline – the frontier of its southern conquests and its Mysore wars, and the edge of the country in which Vijayanagara’s nayakas became kings.</p>",
+  "story": "",
+  "sources": [
+   {
+    "title": "T. H. Holland, ‘The Charnockite Series, a Group of Archaean Hypersthenic Rocks in Peninsular India’, Memoirs of the Geological Survey of India 28, part 2 (1900), 119–249",
+    "url": "https://search.worldcat.org/search?q=Holland+charnockite+series+Memoirs+Geological+Survey+of+India+1900"
+   },
+   {
+    "title": "A. P. Subramaniam, ‘Charnockites and Granulites of Southern India: A Review’, Bulletin of the Geological Society of Denmark 17 (1967), 473–493",
+    "url": "https://2dgf.dk/xpdf/bull17-04-473-503.pdf"
+   },
+   {
+    "title": "H. M. Rajesh and M. Santosh, ‘Charnockites and Charnockites’, Geoscience Frontiers 3 (2012), 737–744",
+    "url": "https://www.sciencedirect.com/science/article/pii/S1674987112000874"
+   },
+   {
+    "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
+    "url": "https://doi.org/10.1007/978-3-319-25029-8"
+   },
+   {
+    "title": "Wikipedia, ‘Charnockite’",
+    "url": "https://en.wikipedia.org/wiki/Charnockite"
+   }
+  ],
+  "deccan": [
+   {
+    "id": "lambton-gts-1802",
+    "label": "Lambton and the Great Trigonometrical Survey (10 April 1802)"
+   }
+  ],
+  "related_maps": []
+ },
+ {
   "id": "closepet-granite",
   "title": "The Closepet Granite",
   "date_label": "c. 2,500 Ma",
@@ -137,7 +183,7 @@ window.BL_ENTRIES = [
   "lon": 77.28,
   "strap": "A four-hundred-kilometre ribbon of pink granite marking the craton’s final welding – and, weathered into domes and boulder piles, the theatrical scenery of the southern Deccan.",
   "body": "<p>About 2,500 million years ago, at the close of the Archaean, a belt of granite magma rose through the middle of the Dharwar country and froze into a north–south ribbon several hundred kilometres long and twenty to thirty wide. It is named the Closepet Granite from the old name of Ramanagara, the town south-west of Bengaluru whose bare domes – familiar to film audiences as the landscape of <em>Sholay</em> – are its most theatrical outcrop. The granite’s emplacement is generally read as part of the final suturing of the western and eastern halves of the Dharwar craton: the last major magmatic act of the basement, after which the southern peninsula was essentially complete.</p>\n<p>Granite of this kind weathers in a signature way. Water works down the joints, rotting the rock at depth into rounded cores; when erosion strips the rotten matrix, the cores emerge as tors, domes and perched boulders. The result, wherever the Closepet belt and its relatives outcrop, is the extraordinary scenery of the middle Deccan – whalebacks, balancing rocks, heaps of spheroidal boulders piled like masonry by no one. The most famous stretch of such country in the world is along the Tungabhadra at Hampi, in granites of the same cratonic family: the boulder landscape that astonished Paes and frames the Vijayanagara entries of the Deccan timeline is Archaean granite plus two billion years of patient chemistry.</p>\n<p>The boulders also built. Granite country supplies effortless megaliths, natural walls and quarries that split along sheets; the fortifications of Hampi and the cyclopean walls of the southern hill forts are the Closepet style of landscape turned directly into architecture.</p>",
-  "story": "This entry explains the look of the southern Deccan – the boulder scenery that every traveller from Abdur Razzaq to the Murray’s Handbook tourist described at Hampi. The granite’s weathering is the invisible collaborator of Vijayanagara’s builders: the empire’s walls were half-made by chemistry before a mason touched them.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -222,8 +268,8 @@ window.BL_ENTRIES = [
   "lat": 22.1,
   "lon": 76.3,
   "strap": "An ancient fault zone – Son, Narmada, Tapti – runs east–west across the shield’s waist, reactivated in age after age; it explains the two west-flowing rivers, much of where the Traps’ feeders rose, and the plateau’s northern edge.",
-  "body": "<p>Across the top of the peninsula, from the Gulf of Khambhat toward the Son valley, runs a belt of ancient faults that geologists group as the Son–Narmada–Tapti lineament – ‘SONATA’ in the literature’s affectionate shorthand. It is one of the oldest structures in India: an ancient Precambrian tectonic boundary and weakness zone – its exact relation to the shield’s collisional sutures is still debated – along which the crust has given way, again and again, whenever stress returned. Nothing about it belongs to a single age; its identity is precisely that it keeps coming back.</p>\n<p>Its reactivations organise several of this collection’s entries. Gondwana rifting reactivated parts of the zone, while other Gondwana rifts – the Godavari trough of the coal entry among them – opened elsewhere across the shield; in the late Cretaceous the sea leaned in along it, and the Lameta plains of the dinosaur entry lie on its line; when the Traps erupted, substantial feeders and intrusions of the province exploited the same corridor, which bounds the lava country’s northern edge. And it answers the question the rivers entry raises: the Narmada and the Tapti, the two great exceptions that flow west in long straight troughs while every other major river obeys the eastward tilt, are not defying the plateau’s geometry but following the scar – rift valleys in the old zone, each pair of walls a fault.</p>\n<p>The structure is not finished. Moderate earthquakes track it across the shield – the Jabalpur earthquake of 1997, near the Lameta country, was a reminder – and geophysical surveys image it as a deep-reaching boundary still taking up strain as India presses into Asia. The plateau’s stable face, this entry is the reminder, rests on old stitching.</p>",
-  "story": "The lineament is the collection’s hidden hinge: it gathers the Lameta plains, the Traps’ northern feeders and the two west-flowing rivers into one structure, and gives the plateau’s northern edge its logic. It is the Deccan’s oldest boundary still at work – the deep-time counterpart of the frontier rivers in the human timeline.",
+  "body": "<p>Across the top of the peninsula, from the Gulf of Khambhat toward the Son valley, runs a belt of ancient faults that geologists group as the Son–Narmada–Tapti lineament – ‘SONATA’ in the literature’s affectionate shorthand. It is one of the oldest structures in India: an ancient Precambrian tectonic boundary and weakness zone – its exact relation to the shield’s collisional sutures is still debated – along which the crust has given way, again and again, whenever stress returned. Nothing about it belongs to a single age; its identity is precisely that it keeps coming back.</p>\n<p>Its reactivations organise several of this collection’s entries. Gondwana rifting reactivated parts of the zone, while other Gondwana rifts – the Godavari trough of the coal entry among them – opened elsewhere across the shield; in the late Cretaceous the sea leaned in along it, and the Lameta plains of the dinosaur entry lie on its line; when the Traps erupted, substantial feeders and intrusions of the province exploited the same corridor, which threads the lava country’s northern reaches, the Malwa flows lying beyond it. And it answers the question the rivers entry raises: the Narmada and the Tapti, the two great exceptions that flow west in long straight troughs while every other major river obeys the eastward tilt, are not defying the plateau’s geometry but following the scar – rift valleys in the old zone, each pair of walls a fault.</p>\n<p>The structure is not finished. Moderate earthquakes track it across the shield – the Jabalpur earthquake of 1997, near the Lameta country, was a reminder, and <a href=\"#koyna-latur-earthquakes\">Koyna and Killari</a> showed what the plateau’s other faults can do – and geophysical surveys image it as a deep-reaching boundary still taking up strain as India presses into Asia. The plateau’s stable face, this entry is the reminder, rests on old stitching.</p>",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -255,7 +301,7 @@ window.BL_ENTRIES = [
   "lon": 77.455,
   "strap": "Pipes of deep-mantle rock that shot through the craton about 1,100 million years ago, carrying diamonds; in the current reconstruction, the likeliest primary source of Golconda’s stones.",
   "body": "<p>Diamonds do not form where they are found. They crystallise more than 150 kilometres down, in the cold root of a craton, and reach the surface only when a peculiar magma – kimberlite – drills up through the crust in eruptions that may last hours. The Dharwar craton’s root was punctured this way in a cluster of episodes around 1,100 million years ago, and the pipes survive as unassuming weathered patches in the Anantapur and Raichur country: the Wajrakarur and Narayanpet kimberlite fields, whose very village name – <em>vajra</em>, diamond – records what was occasionally picked from their soils.</p>\n<p>The pipes themselves were never rich enough to mine in antiquity; erosion did the mining. Over the following billion years the craton’s surface wore down by hundreds of metres, the pipes were beheaded, and their diamonds – indestructible – were released into rivers again and again: some into the Proterozoic conglomerates of the Kurnool group, and, on the current reconstruction, the famous stones by way of an ancestral Penner drainage toward the placers of the Krishna. The primary source of the historic Golconda diamonds – the Kollur stones, the Koh-i-Noor by tradition among them – has never been fixed with certainty; recent work argues the Wajrakarur-type pipes are the likeliest candidates, and rules some long-suspected conglomerates out for the finest stones, so the reconstruction stands as the current best case rather than a closed one.</p>\n<p>Modern exploration has mapped dozens of pipes across the region, and the Wajrakarur field remains one of the places where geologists sample the deep mantle of Archaean India directly: each pipe is a borehole nature drilled, with the cuttings left on the surface.</p>",
-  "story": "This is the deep half of the Golconda story. The Deccan timeline’s diamond entry begins at the washings and the market; this one begins 150 kilometres underground and a billion years earlier, and hands the stones to the Krishna, which delivers them – in this collection’s final period – to the merchants.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -300,9 +346,9 @@ window.BL_ENTRIES = [
   "place": "Ramagundam, Godavari valley, Telangana",
   "lat": 18.755,
   "lon": 79.474,
-  "strap": "An ice age’s boulder beds, then river-swamp forests of Glossopteris, filled the Godavari rift – the coal that fires the modern Deccan was laid down when the plateau stood near the South Pole.",
+  "strap": "An ice age’s boulder beds, then river-swamp forests of Glossopteris, filled the Godavari rift – the coal that fires the modern Deccan was laid down when the plateau stood in high southern latitudes.",
   "body": "<p>In the late Carboniferous the Deccan lay in the far southern latitudes of Gondwana, and ice sheets ground across the craton. Their signature is the Talchir boulder bed – an indurated glacial till with faceted, striated stones – which lies at the base of the Gondwana succession in the major peninsular basins, including the long trough that follows the Godavari. Above the tills, as the ice withdrew, came lakes, then rivers and swamps: the Permian coal measures, built from forests of the tongue-leaved seed fern <em>Glossopteris</em>, whose fossils in India, Africa, Australia, South America and Antarctica became one of the classic arguments for Gondwana’s former unity.</p>\n<p>The Godavari valley coalfield – Singareni, worked since 1889 – is the Deccan’s share of this inheritance, and it is why the modern map of Telangana carries the collieries and power stations of Ramagundam on the same river that earlier entries know for its delta cottons and its ford at Rajahmundry. The coal’s location was set by Permian geography: the Gondwana rifts run where the crust sagged along old basement grains, so even the railway alignments of the coal age follow Precambrian weaknesses.</p>\n<p>The Talchir tills carry one more message. The same rocks, with the same fossils, sit today in the tropics; the plateau has travelled. The Deccan of this entry stood near the South Pole, and its journey north – the subject of the next period – is written in the mismatch between its coal-age climate and its present one.</p>",
-  "story": "The coal entry ties the deep past to the working present, and its glacial base is the collection’s first proof that the plateau has moved across the face of the earth – the fact on which the whole next period turns.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -335,7 +381,7 @@ window.BL_ENTRIES = [
   "lon": 73.3,
   "strap": "The supercontinent tore apart in stages, and each tearing made a piece of India’s outline; the parting from Madagascar, about 88 million years ago, drew the west coast the Ghats now stand behind.",
   "body": "<p>Gondwana did not shatter; it unzipped. From about 180 million years ago rifts opened in sequence – Africa and South America going their way, then India, with Madagascar attached, parting from Antarctica and Australia – and each successful rift left a piece of the Indian margin behind it. The east coast is the older scar; the west coast is the younger, made when Madagascar and India separated around 88 million years ago in a rifting whose volcanic traces survive on both sides of what is now the Arabian Sea. A last parting – the Seychelles block, splitting away within a few million years of the Deccan eruptions – finished the outline.</p>\n<p>A rifted margin has a characteristic anatomy, and the Konkan coast displays it: a straight coastline, a narrow coastal plain on stretched crust, and inland a high shoulder – the uplifted rift flank that erosion has been eating back ever since. The Western Ghats of the later entries are that shoulder in retreat. The peninsula’s eastward tilt, and hence the courses of its great rivers, is inherited from this history – though not from a single moment: successive riftings, the Deccan volcanism and later uplift each renewed the west-high geometry, and erosion and river capture have kept editing the details ever since.</p>\n<p>Breakup also set the Deccan on its collision course. Freed of its neighbours, the Indian plate began moving north across the Tethys ocean at speeds – 15 to 20 centimetres a year at peak – that are among the fastest sustained motions known for a continental plate, a sprint usually attributed to the pull of subducting ocean floor ahead and, latterly, the push of the plume behind. The Deccan spent the Cretaceous as the deck of a moving ship.</p>",
-  "story": "This entry draws the map. The coastline every later collection takes for granted – the harbours of the Company, the ports of the horse trade – is a set of rift scars, and the eastward slant of every river in the Deccan timeline was decided when Madagascar left.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -401,7 +447,7 @@ window.BL_ENTRIES = [
   "lon": 73.66,
   "strap": "Flood basalts a kilometre and more thick buried the western peninsula in geologically instantaneous floods of lava – the event the collection is named for, and the rock the western Deccan is made of.",
   "body": "<p>The Deccan Traps are one of the earth’s great flood-basalt provinces: on the order of a million cubic kilometres of lava, erupted across the boundary between the Cretaceous and the Palaeogene about 66 million years ago, and still covering roughly half a million square kilometres of the western and central peninsula after erosion has taken its share. The lavas came not from cones but from fissures, in flows that ponded and spread for hundreds of kilometres; at Mahabaleshwar the stacked flows stand about 1,200 metres high, and drilling near the coast shows the pile thickening westward. Each flow top weathered a little before the next arrived, and the alternation of massive flow and crumbly flow-top is what gives every Deccan scarp its stepped profile – the ‘trap’ (stair) of the Swedish miners’ term the early geologists borrowed.</p>\n<p>Modern dating has sharpened the event astonishingly. Argon and uranium–lead chronologies agree that the great bulk of the pile erupted within less than a million years spanning the boundary; they disagree, instructively, about the tempo – the uranium–lead work resolves discrete high-volume pulses on both sides of the extinction, while the argon work spreads the volume more continuously, with the larger share after the boundary – and that argument is where the field now lives. For this collection the chronology matters in a simpler way: the entire physical fabric of the western Deccan – every scarp Shivaji fortified, every black soil the Riots Commission surveyed – was manufactured in an interval that, on the craton’s three-and-a-half-billion-year clock, is as brief as the span between the Bahmani revolt and the present is on ours: a geological instant.</p>\n<p>The Traps’ plumbing survives as dykes and as the giant plagioclase basalts that let geologists match flows across hundreds of kilometres, and the province’s stratigraphy – worked out flow by flow up the Ghats – is one of Indian geology’s collective masterpieces, the deep-time equivalent of the Survey’s triangulation in the map collection.</p>",
-  "story": "This is the collection’s central entry, its Talikota: the event from which the region’s very name in this site’s other collections – basalt forts, black soil, stepped scarps – descends. Everything before it is preparation; everything after is weathering.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -513,7 +559,7 @@ window.BL_ENTRIES = [
   "lon": 55.5,
   "strap": "In the standard model, the mantle upwelling that fed the Traps did not die with them: as India moved on, the plume’s later work built the Laccadives, the Maldives and Mauritius, and it erupts today at Réunion.",
   "body": "<p>The standard account of the Traps ties them to a mantle plume – a column of unusually hot rock rising from deep in the mantle – whose massive head reached the base of the Indian plate about 66 million years ago and melted on a scale continents rarely see. The plate, moving north at its Cretaceous sprint, then slid off the plume; the plume stayed. Its subsequent output, tapped through whatever crust happened to be passing, is written across the floor of the Indian Ocean as a chain: the Laccadive and Chagos–Maldive ridges, the Mascarene plateau, Mauritius, and finally the island of Réunion, where the volcano Piton de la Fournaise erupts in the present tense. Read backwards, the chain is a tape recording of India’s motion; read forwards, it is the Traps’ long retirement.</p>\n<p>The plume model has always had dissenters – there are geologists who derive flood basalts from plate-boundary processes and shallow mantle instead – and the argument is one of the standing debates of the science. But the geometry is hard to argue with: the oldest rocks of the chain sit beside the youngest Traps, and the ages young steadily southward for 5,000 kilometres. Few places on earth let you follow a single volcanic engine across sixty-six million years and an ocean.</p>\n<p>For the Deccan the plume is also a reminder of scale: the event that made the plateau’s western half was one incident in the career of a structure that outlived it by the whole length of this collection’s remaining periods, and is not finished.</p>",
-  "story": "The plume gives the Traps a biography beyond the plateau – the eruption as one chapter in an engine’s life that runs on beneath a French island today. It is the collection’s farthest-flung entry, and the sketch map’s one marker beyond the frame.",
+  "story": "",
   "sources": [
    {
     "title": "Vincent Courtillot, Evolutionary Catastrophes: The Science of Mass Extinction (Cambridge University Press, 1999)",
@@ -543,9 +589,9 @@ window.BL_ENTRIES = [
   "place": "Kalsubai, Maharashtra",
   "lat": 19.6,
   "lon": 73.71,
-  "strap": "In a leading geomorphological model, the Western Ghats are less a range that rose than an edge that retreats – the uplifted flank of the rifted coast, renewed by later uplift and eaten eastward by the monsoon for sixty million years.",
+  "strap": "In a leading geomorphological model, the Western Ghats are less a range that rose than an edge that retreats – the uplifted flank of the rifted coast, renewed by later uplift and eaten eastward by the rains since the coast was made.",
   "body": "<p>Seen from the Konkan, the Ghats are a wall; seen from Pune, they are scarcely there – the land simply continues at the higher level. That asymmetry is the giveaway. The Sahyadri crest is a great escarpment of the kind that edges many rifted continents: when the Madagascar and Seychelles partings made the coast, the margin’s flank stood high, and ever since, the wet Konkan face has been cut back eastward by the extravagant erosion of the monsoon front, while the dry plateau top behind wears down hardly at all. The crest at Kalsubai – the highest point in Maharashtra – is a temporary line in a sixty-million-year retreat, generally estimated to have carried the edge scores of kilometres inland from the original rift shoulder.</p>\n<p>The escarpment’s anatomy organised everything later built on it. Trap flows of unequal hardness weather into the stepped scarps, flat-topped spurs and isolated mesas of the western Deccan; each mesa is a ready-made fort, each step a defensible line, and the passes – the ghats that named the range – are the erosion notches through which every army, caravan and railway of the human collections had to file. The rain shadow is equally structural: the same edge that catches six metres of rain on its face delivers the dry plateau behind it, the scarcity that runs through the Deccan timeline’s famines and tank-building.</p>\n<p>Geomorphologists read the escarpment with cosmogenic isotopes and river profiles now, but the essential picture stands: the Deccan’s western wall is the coast’s afterimage – made by rifting, renewed by uplift, and still in slow retreat.</p>",
-  "story": "The escarpment entry explains the collection’s stage machinery: the forts, the passes, the rain and the rain shadow of every human entry are one landform’s work. When the railway climbs the Bhor Ghat in the Deccan timeline, it is climbing this entry.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -586,7 +632,7 @@ window.BL_ENTRIES = [
   "lon": 73.53,
   "strap": "The Godavari rises eighty kilometres from the Arabian Sea and flows fourteen hundred to the Bay of Bengal; the plateau’s eastward tilt – inherited from successive rifting, volcanism and uplift – underlies them all.",
   "body": "<p>At Trimbak, behind Nashik, a spring on a scarp face is honoured as the source of the Godavari; the sea is about eighty kilometres away to the west, and the river turns east and takes 1,465 kilometres to reach the other coast. The Krishna does the same from Mahabaleshwar, the Kaveri from Talakaveri. This is the plateau’s tilt in action: the rifted western margin stands high, the peninsula leans east, and the drainage divide runs absurdly close to the western sea. The short, steep Konkan streams and the immense eastern rivers are two answers to one slope.</p>\n<p>The arrangement is old and largely stable – inherited from the margin’s making and remaking, maintained as the escarpment retreated through the divide’s headwaters – though the details are full of incident: elbows of capture where a Konkan stream has bitten through the crest and beheaded a plateau river, waterfalls like Jog where the Sharavati takes the direct route, and the great gorges where the eastern rivers saw through the Eastern Ghats to their deltas. The two great exceptions – Narmada and Tapti, running west in straight troughs – obey an older structure, <a href=\"#narmada-son-lineament\">the ancient scar treated in its own entry</a>. The deltas themselves – Godavari and Krishna – are the rivers’ final work, built seaward through the later Cenozoic, and the agricultural coasts of the Deccan timeline’s Andhra entries are their product.</p>\n<p>For human history the tilt decided which way the Deccan faces. Its waters, silts and delta ports all discharge east; its rain arrives from the west over the wall. The plateau drinks on one side and pays on the other – a hydrological constitution that no dynasty in the other collection could amend.</p>",
-  "story": "The rivers entry gives the Deccan timeline its geography teacher: the doab at Raichur, the deltas of the Reddis and the Company’s cottons, Pandharpur on the Bhima and Srirangapatna on its island all sit on rivers whose direction was settled here, sixty million years before the first entry.",
+  "story": "",
   "sources": [
    {
     "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
@@ -719,7 +765,7 @@ window.BL_ENTRIES = [
   "lat": 16.48,
   "lon": 76.55,
   "strap": "In a limestone-floored valley near the Krishna, generations of early hominins camped, quarried and left thousands of handaxes – the Deccan’s deepest human archive.",
-  "body": "<p>In the Hunsgi and Baichbal valleys, tributary country of the Krishna in northern Karnataka, K. Paddayya’s excavations from the 1970s onward mapped one of India’s great concentrations of Acheulean sites: dozens of localities where early hominins – no fossils survive here, and the makers are inferred from the tools – made and used the classic large cutting tools, handaxes and cleavers, of the Lower Palaeolithic. The valleys were generous hosts: limestone bedrock with springs that ran in the dry season, silica-rich rock for knapping, and a basin floor that gently buried and preserved the camps. Dating such open sites is hard, but an early electron-spin-resonance estimate at Isampur suggests occupations beyond a million years, though the date remains provisional, with the Acheulean tradition continuing in the region for the better part of a million more.</p>\n<p>What the valleys preserve is not an event but a habit: the same small basins revisited over spans that dwarf the rest of human history, by bands exploiting stone, water and game in a landscape whose essentials – monsoon, scarp, river – earlier entries of this collection had already set. The handaxe people used the plateau’s geology directly, quarrying the siliceous limestone of Isampur and other local stone; their sites cluster on the map exactly as the later entries’ forts and towns do, and for the same reason – geology decides where the Deccan is liveable.</p>\n<p>Hunsgi’s people are the first entry in the plateau’s human column, older than the species that wrote the rest of this site; every subsequent arrival, from the ashmound herders to the Survey’s geologists, walked into a landscape already half a million years into human use.</p>",
+  "body": "<p>In the Hunsgi and Baichbal valleys, tributary country of the Krishna in northern Karnataka, K. Paddayya’s excavations from the 1970s onward mapped one of India’s great concentrations of Acheulean sites: dozens of localities where early hominins – no hominin fossils survive here, and the makers are inferred from the tools – made and used the classic large cutting tools, handaxes and cleavers, of the Lower Palaeolithic. The valleys were generous hosts: limestone bedrock with springs that ran in the dry season, silica-rich rock for knapping, and a basin floor that gently buried and preserved the camps. Dating such open sites is hard, but an early electron-spin-resonance estimate at Isampur suggests occupations beyond a million years, though the date remains provisional, with the Acheulean tradition continuing in the region for the better part of a million more.</p>\n<p>What the valleys preserve is not an event but a habit: the same small basins revisited over spans that dwarf the rest of human history, by bands exploiting stone, water and game in a landscape whose essentials – monsoon, scarp, river – earlier entries of this collection had already set. The handaxe people used the plateau’s geology directly, quarrying the siliceous limestone of Isampur and other local stone; their sites cluster on the map exactly as the later entries’ forts and towns do, and for the same reason – geology decides where the Deccan is liveable.</p>\n<p>Hunsgi’s people are the first entry in the plateau’s human column, older than the species that wrote the rest of this site; every subsequent arrival, from the ashmound herders to the Survey’s geologists, walked into a landscape already half a million years into human use.</p>",
   "story": "The collection’s first inhabitants. Hunsgi resets the scale of the site’s other timeline: the whole Deccan collection, 1336–1875, occupies half a millennium; the handaxe camps of this one valley span perhaps a thousand times that.",
   "sources": [
    {
@@ -736,54 +782,6 @@ window.BL_ENTRIES = [
    }
   ],
   "deccan": []
- },
- {
-  "id": "regur-black-soil",
-  "title": "Regur, the black cotton soil",
-  "date_label": "Quaternary",
-  "age": 1000000,
-  "period": 6,
-  "rocks": [
-   "soil"
-  ],
-  "kind": "formation",
-  "place": "Khamgaon, Berar, Maharashtra",
-  "lat": 20.7,
-  "lon": 76.57,
-  "strap": "The Traps weather into deep black clays that crack in the dry and swell in the rain, hold moisture through the year – and grew the cotton on which the Deccan’s modern history turned.",
-  "body": "<p>Basalt weathers, under the Deccan’s wet–dry regime, into regur: the deep black soils – vertisols, in the modern classification – that floor the Tapti, Godavari and Krishna basins and above all the plains of Berar and Khandesh. Their extraordinary behaviour comes from smectitic clays formed in the basalt’s weathering products: the soils swell shut in the rains, holding moisture deep into the dry season, and crack open in wide polygons as they dry, churning themselves slowly over the years. They are heavy to plough, marvellous at surviving a broken monsoon, and among the most agriculturally consequential soils on earth.</p>\n<p>They are also a Quaternary product with a longer pedigree: many regur plains rework older weathering mantles and alluvium, so the soil is best read as the running balance of the Traps’ decay – the basalt’s chemistry, transposed by a million-odd years of climate into tilth. The old name entered English early; ‘black cotton soil’ entered engineering as a warning, since foundations and rail embankments heave on its swelling clays – a small revenge of the Traps on the railway age.</p>\n<p>The historical charge of this entry sits in the Deccan timeline: regur is why Berar was worth an assignment, why cotton answered the American Civil War from these districts, and why the ryot of the Riots Commission’s report ploughed black fields on basalt. Few soils have carried so much history per hectare.</p>",
-  "story": "Here the collection touches the other timeline most directly: the cotton boom, the Berar assignment and the Deccan Riots are, at one remove, entries about this soil. The Traps erupt in period four; in period six they become an economy.",
-  "sources": [
-   {
-    "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
-    "url": "https://doi.org/10.1007/978-3-319-25029-8"
-   },
-   {
-    "title": "D. K. Pal, ‘Cracking Clay Soils (Vertisols): Pedology, Mineralogy and Taxonomy’, in A Treatise of Indian and Tropical Soils (Springer, Cham, 2017)",
-    "url": "https://doi.org/10.1007/978-3-319-49439-5_2"
-   },
-   {
-    "title": "Wikipedia, ‘Vertisol’",
-    "url": "https://en.wikipedia.org/wiki/Vertisol"
-   }
-  ],
-  "deccan": [
-   {
-    "id": "cotton-boom-1861",
-    "label": "The cotton boom and bust (1861–1865)"
-   },
-   {
-    "id": "berar-assignment-1853",
-    "label": "The Berar assignment (21 May 1853)"
-   },
-   {
-    "id": "deccan-riots-1875",
-    "label": "The Deccan Riots (May–June 1875)"
-   }
-  ],
-  "related_maps": [
-   "1893__India__Bartholomew__Land-Surface-Features.html"
-  ]
  },
  {
   "id": "jwalapuram-toba",
@@ -818,6 +816,54 @@ window.BL_ENTRIES = [
   "deccan": []
  },
  {
+  "id": "regur-black-soil",
+  "title": "Regur, the black cotton soil",
+  "date_label": "Quaternary",
+  "age": 10000,
+  "period": 6,
+  "rocks": [
+   "soil"
+  ],
+  "kind": "formation",
+  "place": "Khamgaon, Berar, Maharashtra",
+  "lat": 20.7,
+  "lon": 76.57,
+  "strap": "The Traps weather into deep black clays that crack in the dry and swell in the rain, hold moisture through the year – and grew the cotton on which the Deccan’s modern history turned.",
+  "body": "<p>Basalt weathers, under the Deccan’s wet–dry regime, into regur: the deep black soils – vertisols, in the modern classification – that floor the Tapti, Godavari and Krishna basins and above all the plains of Berar and Khandesh. Their extraordinary behaviour comes from smectitic clays formed in the basalt’s weathering products: the soils swell shut in the rains, holding moisture deep into the dry season, and crack open in wide polygons as they dry, churning themselves slowly over the years. They are heavy to plough, marvellous at surviving a broken monsoon, and among the most agriculturally consequential soils on earth.</p>\n<p>They are also a Quaternary product with a longer pedigree: many regur plains rework older weathering mantles and alluvium, so the soil is best read as the running balance of the Traps’ decay – the basalt’s chemistry, transposed by the Quaternary’s climates into tilth, the clay inherited from older and wetter weathering and the soil itself largely a Holocene product. The old name entered English early; ‘black cotton soil’ entered engineering as a warning, since foundations and rail embankments heave on its swelling clays – a small revenge of the Traps on the railway age.</p>\n<p>The historical charge of this entry sits in the Deccan timeline: regur is why Berar was worth an assignment, why cotton answered the American Civil War from these districts, and why the ryot of the Riots Commission’s report ploughed black fields on basalt. Few soils have carried so much history per hectare.</p>",
+  "story": "Here the collection touches the other timeline most directly: the cotton boom, the Berar assignment and the Deccan Riots are, at one remove, entries about this soil. The Traps erupt in period four; in period six they become an economy.",
+  "sources": [
+   {
+    "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
+    "url": "https://doi.org/10.1007/978-3-319-25029-8"
+   },
+   {
+    "title": "D. K. Pal, ‘Cracking Clay Soils (Vertisols): Pedology, Mineralogy and Taxonomy’, in A Treatise of Indian and Tropical Soils (Springer, Cham, 2017)",
+    "url": "https://doi.org/10.1007/978-3-319-49439-5_2"
+   },
+   {
+    "title": "Wikipedia, ‘Vertisol’",
+    "url": "https://en.wikipedia.org/wiki/Vertisol"
+   }
+  ],
+  "deccan": [
+   {
+    "id": "cotton-boom-1861",
+    "label": "The cotton boom and bust (1861–1865)"
+   },
+   {
+    "id": "berar-assignment-1853",
+    "label": "The Berar assignment (21 May 1853)"
+   },
+   {
+    "id": "deccan-riots-1875",
+    "label": "The Deccan Riots (May–June 1875)"
+   }
+  ],
+  "related_maps": [
+   "1893__India__Bartholomew__Land-Surface-Features.html"
+  ]
+ },
+ {
   "id": "ashmounds",
   "title": "The ashmounds",
   "date_label": "c. 3000–1200 BC",
@@ -833,7 +879,7 @@ window.BL_ENTRIES = [
   "lon": 76.94,
   "strap": "The Deccan Neolithic’s strangest monuments: hills of vitrified cattle-dung ash, burned and reburned over centuries by the plateau’s first herding villages.",
   "body": "<p>Across the granite country of the middle Deccan – thickest around Ballari, in the same boulder landscape as the later Vijayanagara – stand mounds of ash, some tens of metres across, formed from cattle dung burned at temperatures high enough to fuse it to clinker. Excavation and dating place them in the southern Neolithic, roughly the third and second millennia BC, the work of communities whose economy the sites themselves declare: cattle above all, with millets, small villages on the granite hills, and pens whose accumulated dung was periodically fired in what were evidently deliberate, perhaps ceremonial, conflagrations visible for miles.</p>\n<p>The interpretation has been argued since the mounds were first dug in the nineteenth century – early excavators proposed everything from funeral pyres to iron slag – but the modern consensus, built from Allchin’s survey of 1963 through recent work at Sanganakallu and Kupgal, treats them as the residue of a herding society’s gatherings: seasonal aggregations where feasting, exchange and the firing of the pens marked the calendar. The rock-art on the Kupgal hills, pecked cattle by the hundred, is the same society’s self-portrait.</p>\n<p>The ashmound people matter to this collection as the plateau’s first transformers: the first to make monuments, to concentrate wealth that could be counted in animals, and to begin the long conversion of the granite Deccan into pasture and field. The landscape Vijayanagara later fortified was one their cattle had already made.</p>",
-  "story": "History’s approach march: the first monuments on the granite that will carry Hampi. The ashmounds open the final period because they are where the plateau’s story stops being only natural – the rock is still the stage, but from here the actors keep records in it.",
+  "story": "",
   "sources": [
    {
     "title": "F. R. Allchin, Neolithic Cattle-Keepers of South India: A Study of the Deccan Ashmounds (Cambridge University Press, 1963)",
@@ -866,7 +912,7 @@ window.BL_ENTRIES = [
   "lon": 76.47,
   "strap": "The Iron Age Deccan buried its dead under granite – dolmens, circles and cists by the thousand, as at Hire Benakal – while its smiths learned the iron that became the region’s craft signature.",
   "body": "<p>After the ashmounds, the granite hills acquired cemeteries. The South Indian Iron Age – roughly the last millennium BC, though many megalithic traditions continued into the early centuries AD – is known above all from its megaliths: dolmens, stone circles, cists and cairns, raised in thousands across the Deccan wherever the rock supplied slabs and boulders ready-made. At Hire Benakal, across the Tungabhadra from Hampi, several hundred granite dolmens crowd a single hilltop – one of the subcontinent’s great megalithic landscapes, in the same stone, and by the same logic of easy slabs, as the Neolithic sites before it and the imperial city after.</p>\n<p>The graves’ furniture announces the new economy: iron, in axes, arrowheads, horse-bits and the distinctive Black-and-Red Ware pottery of the period. Iron smelting on the peninsula is now dated in places well back into the second millennium BC, and the Deccan’s ores – the Dharwar belts’ hematite among them – fed a craft tradition that ran unbroken into the historic period. Its eventual masterpiece belongs to a later entry: the crucible steel of Telangana that the world called wootz.</p>\n<p>The megalith builders left no texts, and their social world is reconstructed from graves, settlements and the first inscribed objects that arrive at the period’s end, as the Deccan enters the horizon of the Mauryan south and the early historic towns. In this collection’s terms they complete the plateau’s furnishing: by 300 BC the Deccan has fields, herds, iron, roads and monuments – everything the dynasties of the other timeline will inherit, tax and fight for.</p>",
-  "story": "The megaliths are the granite’s second harvest – the boulder country as burial ground before it was empire – and the iron in the graves begins the technological thread that runs through wootz to the mines and railways at the collection’s end.",
+  "story": "",
   "sources": [
    {
     "title": "Upinder Singh, A History of Ancient and Early Medieval India (Pearson, Delhi, 2008)",
@@ -959,7 +1005,7 @@ window.BL_ENTRIES = [
   "lon": 75.703,
   "strap": "From Bhaja and Karla to Ajanta and Ellora, a thousand years of monks and patrons carved halls, monasteries and whole temples out of the lava pile – architecture by subtraction, in the Deccan’s own rock.",
   "body": "<p>The Trap country is drilled with architecture. Beginning around the second century BC, Buddhist communities on the trade routes over the ghats cut prayer halls and monasteries into the basalt scarps – Bhaja and Karla beside the Bhor Ghat road, Pandavleni above Nashik – and the tradition ran for a millennium through the painted galleries of Ajanta, the Hindu and Jain sequences of Ellora, and the island sanctuary of Elephanta in Bombay harbour, culminating in the Kailasa at Ellora: a full freestanding temple complex excavated top-down from a single slope of flows, perhaps the largest monolithic rock excavation on earth.</p>\n<p>The rock made the method. Trap basalt is massive, fine-grained and horizontally bedded in thick flows – strong enough for wide unsupported spans and soft enough for iron tools; the carvers read the pile like quarrymen, siting halls in workable horizons – many caves stand in the softer amygdaloidal compound flows – working around the cooling joints where they could and exploiting them where they helped. The caves are thus this collection’s rocks used at their most intimate: the intertrappean pauses and flow boundaries of period four reappear as the string-courses and floor levels of period seven. Ajanta’s painters even ground their colours partly from the Traps’ own minerals; the celebrated blue alone was imported lapis.</p>\n<p>The caves also join this site’s collections physically: Karla and Bhaja watch the railway alignment of the Deccan timeline’s Bhor Ghat entry, Ellora stands beside Daulatabad and the Deccan sultanates’ capitals, and Ajanta’s rediscovery in 1819 – by a Madras officer tiger-hunting in the gorge – belongs to the same Company decades as the geologists of this collection’s final entry.</p>",
-  "story": "The Traps as sanctuary: the plateau’s defining rock turned into its greatest art. The caves’ geography – ghat roads, scarps, harbours – recapitulates half the collection, and their rediscovery hands the narrative to the Company readers of the rock with whom it closes.",
+  "story": "",
   "sources": [
    {
     "title": "Walter M. Spink, Ajanta: History and Development (Brill, Leiden, 2005–)",
@@ -1065,8 +1111,8 @@ window.BL_ENTRIES = [
   "lat": 16.67,
   "lon": 80.05,
   "strap": "The river finished what the kimberlites began: at Kollur and the Krishna washings, Golconda’s diamonds were sieved from gravels the craton had been shedding for a billion years.",
-  "body": "<p>The diamonds of the Golconda entries were never mined from solid rock. They were washed: dug from terraces and gravels along the middle Krishna and its neighbours, where the river, cutting through the craton and its Proterozoic covers, had concentrated the indestructible fraction of a billion years of erosion. Kollur, the most famous of the washings, employed tens of thousands in its seventeenth-century peak by the travellers’ accounts – Tavernier, who visited the mines and the Golconda market, is the classic witness – and the great named stones of the tradition, the Koh-i-Noor among them by attribution, are assigned to these gravels.</p>\n<p>This entry closes a chain the collection opened in period two. The stones crystallised in the craton’s mantle root; the Wajrakarur-type kimberlites are the candidate carriers that lifted them; and a long fluvial relay – on the current reconstruction, an ancestral Penner drainage feeding toward the Krishna – re-sorted them into workable placers, the once-suspected Kurnool conglomerates now argued out of the famous stones’ pedigree. A supply line a billion years long, ending in a sieve. The chain is a geological reconstruction rather than a settled pedigree – the pipes are the likeliest primary source, not a proven one – but no rival account now does without the kimberlites. The washings’ geology also explains their economics in the other timeline: placer diamonds need labour and water rather than machinery, so the industry could be taxed, farmed and moved by whichever sultanate or empire held the river.</p>\n<p>The gravels were largely worked out by the eighteenth century, and India’s diamond primacy passed to Brazil and then Africa; modern prospecting has returned upstream, to the pipes themselves. The Deccan’s most glamorous export was, geologically, its most patient.</p>",
-  "story": "The completed circuit: kimberlite to conglomerate to river to market. Where the Deccan timeline’s diamond entry ends at Golconda’s fortunes, this one supplies the plumbing – and shows a state’s revenue as the last stage of a sediment budget.",
+  "body": "<p>The diamonds of the Golconda entries were, with few exceptions, not mined from solid rock – Tavernier’s Raolconda, Ramallakota in the Kurnool country, where the conglomerate itself was cut, is the exception that proves it. Most were washed: dug from terraces and gravels along the middle Krishna and its neighbours, where the river, cutting through the craton and its Proterozoic covers, had concentrated the indestructible fraction of a billion years of erosion. Kollur, the most famous of the washings, employed tens of thousands in its seventeenth-century peak by the travellers’ accounts – Tavernier, who visited the mines and the Golconda market, is the classic witness – and the great named stones of the tradition, the Koh-i-Noor among them by attribution, are assigned to these gravels.</p>\n<p>This entry closes a chain the collection opened in period two. The stones crystallised in the craton’s mantle root; the Wajrakarur-type kimberlites are the candidate carriers that lifted them; and a long fluvial relay – on the current reconstruction, an ancestral Penner drainage feeding toward the Krishna – re-sorted them into workable placers, the once-suspected Kurnool conglomerates now argued out of the famous stones’ pedigree. A supply line a billion years long, ending in a sieve. The chain is a geological reconstruction rather than a settled pedigree – the pipes are the likeliest primary source, not a proven one – but no rival account now does without the kimberlites. The washings’ geology also explains their economics in the other timeline: placer diamonds need labour and water rather than machinery, so the industry could be taxed, farmed and moved by whichever sultanate or empire held the river.</p>\n<p>The gravels were largely worked out by the eighteenth century, and India’s diamond primacy passed to Brazil and then Africa; modern prospecting has returned upstream, to the pipes themselves. The Deccan’s most glamorous export was, geologically, its most patient.</p>",
+  "story": "",
   "sources": [
    {
     "title": "Jean-Baptiste Tavernier, translated by V. Ball, Travels in India, 2 vols (Macmillan, London, 1889)",
@@ -1167,6 +1213,44 @@ window.BL_ENTRIES = [
    "1808__SouthIndia__Lambton-GTS__Peninsula-Triangulation-Asiatic-Researches.html",
    "1922__India__Survey-of-India__GTS-Index.html"
   ]
+ },
+ {
+  "id": "koyna-latur-earthquakes",
+  "title": "Koyna and Killari",
+  "date_label": "1967 and 1993",
+  "age": 59,
+  "period": 7,
+  "rocks": [
+   "basalt",
+   "land"
+  ],
+  "kind": "event",
+  "place": "Koynanagar, Maharashtra",
+  "lat": 17.4,
+  "lon": 73.75,
+  "strap": "The stable plateau shook twice in living memory: at Koyna in 1967, where a new reservoir woke a fault in the Trap pile, and at Killari in 1993, where nothing had warned anyone – two earthquakes that rewrote what a craton is expected to do.",
+  "body": "<p>A craton is supposed to be quiet. The Indian shield sits far from any plate boundary, and until the 1960s the Trap country had no earthquake of note in the written record; the engineers who built on it assumed, reasonably, that the rock beneath them did not move. Two events undid the assumption. In the early hours of 11 December 1967 an earthquake of magnitude about 6.3 struck Koynanagar in the Sahyadri, a few kilometres from the Koyna dam, whose reservoir had been filling since 1962: about 180 people were killed, the township was wrecked, the dam cracked and held. Small shocks had begun as the water rose, and they have continued for decades in the pattern that has made Koyna the world’s type case of reservoir-triggered seismicity – the weight and the seepage of a filled reservoir, acting on faults already close to failure, bringing forward earthquakes the crust would otherwise have stored. The region has produced thousands of shocks since, several above magnitude 5, and a deep-drilling programme begun in the 2010s now watches the process from inside the rock.</p>\n<p>Killari was worse and unexplained. At four in the morning of 30 September 1993 an earthquake of magnitude 6.2 struck the Latur and Osmanabad districts in the middle of the plateau, two hundred kilometres from the Ghats and far from any dam. The focus was shallow, in the Trap pile and the basement beneath it, and the villages of stone and mud on the black soil collapsed on their sleeping occupants: close to ten thousand people died in some fifty villages, one of the deadliest earthquakes ever recorded in a stable continental interior. No fault had been mapped there. The rupture reached the surface as a scarp about a kilometre long, and the argument since has been whether the earthquake reactivated an old structure in the basement or broke a new fault up through the flows. Either way the Deccan’s seismic map was redrawn: the zoning of the peninsula was revised and its lowest zone abolished, and the plateau’s villages are now built, in principle, to a code.</p>\n<p>The two earthquakes are the plateau’s reminder that stability is a rate, not a state. The fractures of the <a href=\"#narmada-son-lineament\">Narmada–Son zone</a>, the openings that carry the <a href=\"#water-between-the-flows\">water between the flows</a>, and the faults the Traps buried are all still there, loaded by the slow push of India into Asia. Koyna showed that a reservoir could trip one; Killari, that one could go off by itself.</p>",
+  "story": "",
+  "sources": [
+   {
+    "title": "H. K. Gupta, ‘A Review of Recent Studies of Triggered Earthquakes by Artificial Water Reservoirs with Special Emphasis on Earthquakes in Koyna, India’, Earth-Science Reviews 58 (2002), 279–310",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012825202000636"
+   },
+   {
+    "title": "L. Seeber, G. Ekström, S. K. Jain, C. V. R. Murty, N. Chandak and J. G. Armbruster, ‘The 1993 Killari Earthquake in Central India: A New Fault in Mesozoic Basalt Flows?’, Journal of Geophysical Research 101 (1996), 8543–8560",
+    "url": "https://doi.org/10.1029/95JB01865"
+   },
+   {
+    "title": "Wikipedia, ‘1967 Koynanagar earthquake’",
+    "url": "https://en.wikipedia.org/wiki/1967_Koynanagar_earthquake"
+   },
+   {
+    "title": "Wikipedia, ‘1993 Latur earthquake’",
+    "url": "https://en.wikipedia.org/wiki/1993_Latur_earthquake"
+   }
+  ],
+  "deccan": [],
+  "related_maps": []
  },
  {
   "id": "plume-debate-coda",

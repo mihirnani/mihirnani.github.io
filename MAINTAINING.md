@@ -39,8 +39,9 @@ deploys the three site repositories on push, usually within a minute or two;
    (lower-case, hyphens; it becomes the URL `#<id>`) and fill in the front matter — `id`
    (matching the file name), `title`, `period`, `polities`, `kind`, `place` with `lat`/`lon`
    for the atlas, `date_label` with `year` (and `year_end`) for the timeline, `sources`,
-   and `related_maps` (the map pages' file names, or `[]`) — then the strap, the body and
-   the `## In the story` paragraph.
+   and `related_maps` (the map pages' file names, or `[]`) — then the strap and the body.
+   Add a `## In the story` paragraph only when the collection has something to say that the
+   body does not; most entries end with the body.
 2. If it belongs in the detailed chronology, add a line to `deccan/chronology.md` in the
    right section, ending ` → [Entry](entries/<id>.md)`. If it rests on a work not yet in
    the bibliography, add the work to `deccan/readings.md`.

@@ -247,7 +247,7 @@
     app.innerHTML = '<div class="wrap"><p><a class="back" href="#p' + p.n + '">← ' + E(p.title) + ", " + E(p.years) + "</a></p>" +
       '<div class="entry-head"><h1>' + E(e.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(e.strap) + "</div></div>" + figure(e) +
       '<div class="prose">' + e.body + "</div>" +
-      '<div class="story"><p class="subhead">In the story</p><p>' + e.story + "</p></div>" +
+      (e.story ? '<div class="story"><p class="subhead">In the story</p><p>' + e.story + "</p></div>" : "") +
       '<div class="prose">' + dl + ml + "</div>" +
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + "</ul>" + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + "</ul>" : "") + "</div>" +
       '<dl class="meta"><dt>Age</dt><dd>' + E(e.date_label) + (e.age >= 1e6 ? " (about " + fmtAge(e.age) + " ago)" : "") + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ", " + E(p.years) + "</a></dd>" +

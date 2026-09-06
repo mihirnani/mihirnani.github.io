@@ -155,6 +155,22 @@ window.ATLAS_PLACES = [
   "spread": 0
  },
  {
+  "key": "bellary",
+  "name": "Bellary",
+  "state": "Karnataka",
+  "kind": "place",
+  "aliases": [
+   "Bellary, Karnataka"
+  ],
+  "deccan": [
+   "munro-ceded-districts-1800"
+  ],
+  "basalt": [],
+  "lat": 15.14,
+  "lon": 76.92,
+  "spread": 0
+ },
+ {
   "key": "bengaluru",
   "name": "Bengaluru",
   "state": "Karnataka",
@@ -273,7 +289,8 @@ window.ATLAS_PLACES = [
   "aliases": [
    "Chennai, Tamil Nadu",
    "Chennai (Madras), Tamil Nadu",
-   "St Thomas Mount, Chennai, Tamil Nadu"
+   "St Thomas Mount, Chennai, Tamil Nadu",
+   "St Thomas Mount, Chennai"
   ],
   "deccan": [
    "company-factories",
@@ -281,10 +298,28 @@ window.ATLAS_PLACES = [
    "colin-mackenzie",
    "lambton-gts-1802"
   ],
-  "basalt": [],
-  "lat": 13.064,
-  "lon": 80.252,
+  "basalt": [
+   "charnockite-nilgiris"
+  ],
+  "lat": 13.052,
+  "lon": 80.241,
   "spread": 0.082
+ },
+ {
+  "key": "cuttack",
+  "name": "Cuttack",
+  "state": "",
+  "kind": "place",
+  "aliases": [
+   "Cuttack, Odisha"
+  ],
+  "deccan": [
+   "gajapatis-of-orissa"
+  ],
+  "basalt": [],
+  "lat": 20.46,
+  "lon": 85.88,
+  "spread": 0
  },
  {
   "key": "daulatabad",
@@ -674,6 +709,22 @@ window.ATLAS_PLACES = [
   "spread": 0
  },
  {
+  "key": "koynanagar",
+  "name": "Koynanagar",
+  "state": "Maharashtra",
+  "kind": "place",
+  "aliases": [
+   "Koynanagar, Maharashtra"
+  ],
+  "deccan": [],
+  "basalt": [
+   "koyna-latur-earthquakes"
+  ],
+  "lat": 17.4,
+  "lon": 73.75,
+  "spread": 0
+ },
+ {
   "key": "kozhikode-calicut",
   "name": "Kozhikode (Calicut)",
   "state": "Kerala",
@@ -841,6 +892,25 @@ window.ATLAS_PLACES = [
   "spread": 0
  },
  {
+  "key": "nagpur",
+  "name": "Nagpur",
+  "state": "Maharashtra",
+  "kind": "place",
+  "aliases": [
+   "Nagpur, Maharashtra",
+   "Takli, Nagpur, Maharashtra"
+  ],
+  "deccan": [
+   "nagpur-bhonsles-lapse-1853"
+  ],
+  "basalt": [
+   "intertrappean-beds"
+  ],
+  "lat": 21.16,
+  "lon": 79.075,
+  "spread": 0.03
+ },
+ {
   "key": "nargund",
   "name": "Nargund",
   "state": "Karnataka",
@@ -935,9 +1005,9 @@ window.ATLAS_PLACES = [
    "pollilur-1780"
   ],
   "basalt": [],
-  "lat": 12.91,
-  "lon": 79.71,
-  "spread": 0.08
+  "lat": 12.87,
+  "lon": 79.72,
+  "spread": 0.0
  },
  {
   "key": "pratapgad",
@@ -978,12 +1048,14 @@ window.ATLAS_PLACES = [
   "kind": "place",
   "aliases": [
    "Pune, Maharashtra",
+   "Shaniwar Wada, Pune, Maharashtra",
    "Khadki, Pune, Maharashtra"
   ],
   "deccan": [
    "satara-and-pune",
    "bajirao-i",
    "bankers-of-the-deccan",
+   "narayanrao-murder-1773",
    "nana-phadnavis",
    "pindaris-third-war-1817",
    "deccan-commission",
@@ -1106,12 +1178,13 @@ window.ATLAS_PLACES = [
    "Satara, Maharashtra"
   ],
   "deccan": [
+   "chauth-and-sardeshmukhi",
    "satara-raj-1818",
    "satara-lapse-1848"
   ],
   "basalt": [],
-  "lat": 17.685,
-  "lon": 73.992,
+  "lat": 17.683,
+  "lon": 73.994,
   "spread": 0.01
  },
  {
@@ -1163,6 +1236,22 @@ window.ATLAS_PLACES = [
   "spread": 0
  },
  {
+  "key": "sringeri",
+  "name": "Sringeri",
+  "state": "Karnataka",
+  "kind": "place",
+  "aliases": [
+   "Sringeri, Karnataka"
+  ],
+  "deccan": [
+   "sringeri-1791"
+  ],
+  "basalt": [],
+  "lat": 13.417,
+  "lon": 75.253,
+  "spread": 0
+ },
+ {
   "key": "srirangapatna",
   "name": "Srirangapatna",
   "state": "Karnataka",
@@ -1179,9 +1268,9 @@ window.ATLAS_PLACES = [
    "seringapatam-1799"
   ],
   "basalt": [],
-  "lat": 12.415,
-  "lon": 76.702,
-  "spread": 0.014
+  "lat": 12.414,
+  "lon": 76.704,
+  "spread": 0.0
  },
  {
   "key": "supa",
@@ -1213,22 +1302,6 @@ window.ATLAS_PLACES = [
   "basalt": [],
   "lat": 21.17,
   "lon": 72.831,
-  "spread": 0
- },
- {
-  "key": "takli",
-  "name": "Takli",
-  "state": "Maharashtra",
-  "kind": "place",
-  "aliases": [
-   "Takli, Nagpur, Maharashtra"
-  ],
-  "deccan": [],
-  "basalt": [
-   "intertrappean-beds"
-  ],
-  "lat": 21.17,
-  "lon": 79.06,
   "spread": 0
  },
  {

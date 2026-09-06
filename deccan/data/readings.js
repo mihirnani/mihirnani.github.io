@@ -203,6 +203,15 @@ window.DECCAN_READINGS = {
    "kind": "book"
   },
   {
+   "author": "T. H. Beaglehole",
+   "title": "Thomas Munro and the Development of Administrative Policy in Madras, 1792–1818",
+   "publisher": "Cambridge University Press",
+   "year": 1966,
+   "note": "The administrative history of ryotwari from the Baramahal and the Ceded Districts to its adoption by Madras; narrower and more exact than Stein's biography on how the settlements were actually made.",
+   "url": "https://search.worldcat.org/search?q=Beaglehole+Thomas+Munro+and+the+Development+of+Administrative+Policy+in+Madras",
+   "kind": "book"
+  },
+  {
    "author": "Bernard S. Cohn",
    "title": "Colonialism and Its Forms of Knowledge: The British in India",
    "publisher": "Princeton University Press",
@@ -582,6 +591,15 @@ window.DECCAN_READINGS = {
    "year": 1928,
    "note": "A study of Maratha armies, forts, navy and pay from Shivaji to the third Anglo-Maratha war. Superseded in parts but still the standard reference on the subject.",
    "url": "https://archive.org/details/in.ernet.dli.2015.102812",
+   "kind": "book"
+  },
+  {
+   "author": "C. U. Wills",
+   "title": "British Relations with the Nagpur State in the 18th Century: An Account, Mainly Based on Contemporary English Records",
+   "publisher": "Government Press, Nagpur",
+   "year": 1926,
+   "note": "The only sustained study of the Nagpur Bhonsles before 1803, from the Company's side of the correspondence; dated in outlook, indispensable for the facts of Raghuji's house.",
+   "url": "https://archive.org/details/in.ernet.dli.2015.278288",
    "kind": "book"
   }
  ],

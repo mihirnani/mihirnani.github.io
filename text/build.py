@@ -314,7 +314,8 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
         b.append(figure(e, "deccan"))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "deccan"))
-        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "deccan"))
+        if e.get("story"):
+            b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "deccan"))
         if e.get("related_maps"):
             b.append('<h2 class="subhead">In the map collection</h2><p class="links">%s</p>'
                      % " · ".join('<a href="%s%s">%s</a>' % (EG, esc(fn), esc(map_title(fn)))
@@ -481,7 +482,8 @@ def build_basalt(periods, entries, deccan_entries):
                  % (esc(e["title"]), esc(byline), esc(e["strap"])))
         b.append(figure(e, "basalt"))
         b.append('<div class="prose">%s</div>' % body_html(e["body"], "basalt"))
-        b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "basalt"))
+        if e.get("story"):
+            b.append('<div class="story"><h2 class="subhead">In the story</h2><p>%s</p></div>' % body_html(e["story"], "basalt"))
         if e.get("deccan"):
             b.append('<h2 class="subhead">In the Deccan timeline</h2><p class="links">%s</p>'
                      % " · ".join('<a href="../deccan/%s.html">%s</a>' % (esc(x["id"]), esc(x["label"]))

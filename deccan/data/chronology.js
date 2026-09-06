@@ -109,7 +109,8 @@ window.DECCAN_CHRONOLOGY = [
    },
    {
     "d": "1430s–1460s",
-    "t": "The Gajapati rulers of Odisha expand into coastal Andhra and periodically threaten Vijayanagara and Bahmani interests, making the eastern Deccan a major three-sided frontier."
+    "t": "The Gajapati rulers of Odisha expand into coastal Andhra and periodically threaten Vijayanagara and Bahmani interests, making the eastern Deccan a major three-sided frontier.",
+    "e": "gajapatis-of-orissa"
    },
    {
     "d": "1442–1444",
@@ -346,6 +347,11 @@ window.DECCAN_CHRONOLOGY = [
     "e": "purandar-1665"
    },
    {
+    "d": "1660s–1670s",
+    "t": "Shivaji levies chauth, a quarter of the assessed revenue, on Mughal and Bijapuri districts he does not govern, and claims the sardeshmukhi over his swarajya; the two claims become the legal form of Maratha co-sovereignty.",
+    "e": "chauth-and-sardeshmukhi"
+   },
+   {
     "d": "1670–1672",
     "t": "Maratha forces recover key forts, sack Surat again and win at Salher, demonstrating the capacity to defeat a Mughal army in a large open battle."
    },
@@ -462,7 +468,8 @@ window.DECCAN_CHRONOLOGY = [
    },
    {
     "d": "c. 1730s–1755",
-    "t": "Raghuji Bhonsle builds the Nagpur kingdom from Berar, expands into Gondwana and Odisha, and sponsors repeated Maratha invasions of Bengal from 1742 to 1751."
+    "t": "Raghuji Bhonsle builds the Nagpur kingdom from Berar, expands into Gondwana and Odisha, and sponsors repeated Maratha invasions of Bengal from 1742 to 1751.",
+    "e": "nagpur-bhonsles-lapse-1853"
    },
    {
     "d": "1746–1763",
@@ -524,7 +531,8 @@ window.DECCAN_CHRONOLOGY = [
    },
    {
     "d": "30 August 1773",
-    "t": "Peshwa Narayanrao is murdered in the Shaniwar Wada; Raghunathrao claims power and the Barbhai council forms around the posthumous heir Madhavrao II."
+    "t": "Peshwa Narayanrao is murdered in the Shaniwar Wada; Raghunathrao claims power and the Barbhai council forms around the posthumous heir Madhavrao II.",
+    "e": "narayanrao-murder-1773"
    },
    {
     "d": "1775",
@@ -558,6 +566,11 @@ window.DECCAN_CHRONOLOGY = [
    {
     "d": "1790–1792",
     "t": "The Third Anglo-Mysore War pits Tipu against a triple alliance of the Company, Hyderabad and the Marathas; the allied army reaches Srirangapatna in 1792."
+   },
+   {
+    "d": "April 1791",
+    "t": "Irregulars attached to the Maratha army sack the Sringeri matha; Tipu Sultan’s letters ordering its restoration, found in 1916, are the best-documented act of his religious policy.",
+    "e": "sringeri-1791"
    },
    {
     "d": "1791–1792",
@@ -610,7 +623,8 @@ window.DECCAN_CHRONOLOGY = [
    },
    {
     "d": "1800",
-    "t": "The Nizam cedes the ‘Ceded Districts’ of Rayalaseema to maintain the subsidiary force, deepening the territorial consequences of the alliance."
+    "t": "The Nizam cedes the ‘Ceded Districts’ of Rayalaseema to maintain the subsidiary force, deepening the territorial consequences of the alliance.",
+    "e": "munro-ceded-districts-1800"
    },
    {
     "d": "10 April 1802",
@@ -733,7 +747,8 @@ window.DECCAN_CHRONOLOGY = [
    },
    {
     "d": "1853–1854",
-    "t": "Raghoji III of Nagpur dies without a natural heir; Dalhousie annexes the Bhonsle state, bringing Nagpur and much of central India under direct Company rule."
+    "t": "Raghoji III of Nagpur dies without a natural heir; Dalhousie annexes the Bhonsle state, bringing Nagpur and much of central India under direct Company rule.",
+    "e": "nagpur-bhonsles-lapse-1853"
    },
    {
     "d": "1853–1863",

@@ -29,7 +29,7 @@ window.BL_PERIODS = [
   "a0": 250000000,
   "a1": 67000000,
   "desc": "Gondwana comes apart, the coasts are made, and India casts off for its sprint north with dinosaurs aboard.",
-  "intro": "The peninsula’s outline is a tearing pattern. From about 180 million years ago Gondwana came apart in stages, and each parting made a piece of the Indian margin: Africa first, then Antarctica and Australia, then – about 88 million years ago – Madagascar, whose departure made the Konkan edge and set the line the Western Ghats would follow. What remained was an island continent moving north at among the fastest sustained speeds known for a continental plate, carrying a cargo of titanosaurs whose bones and eggshells survive in the Lameta beds along the plateau’s northern rim. The period ends with India over a hot spot in the mantle, the fuse already burning under the greatest event in the Deccan’s history."
+  "intro": "The peninsula’s outline is a tearing pattern. From about 180 million years ago Gondwana came apart in stages, and each parting made a piece of the Indian margin: Africa first, then Antarctica and Australia, then – about 88 million years ago – Madagascar, whose departure made the Malabar edge, and at the period’s close the Seychelles, whose parting made the Konkan and set the line the Western Ghats would follow. What remained was an island continent moving north at among the fastest sustained speeds known for a continental plate, carrying a cargo of titanosaurs whose bones and eggshells survive in the Lameta beds along the plateau’s northern rim. The period ends with India over a hot spot in the mantle, a fuse, on the plume reading, already burning under the greatest event in the Deccan’s history."
  },
  {
   "n": 4,
