@@ -119,7 +119,7 @@ def hub_block(all_items):
     return ('\n      <section aria-labelledby="recent-title" class="project-group recent">\n'
             '        <h2 class="group-title" id="recent-title">Recently added</h2>\n'
             '        <ul>%s\n        </ul>\n%s'
-            '        <p class="feedline">Additions are also announced in the site’s <a href="%s/feed.xml">feed</a>.</p>\n'
+            '        <p class="feedline">To follow additions, give a feed reader this page’s address, or the <a href="%s/feed.xml">feed</a>’s.</p>\n'
             '      </section>\n      ' % (lis, rewritten_line(all_items), SITE))
 
 def rewritten_line(all_items, limit=5):

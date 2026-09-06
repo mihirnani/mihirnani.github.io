@@ -698,7 +698,7 @@ def build_home(dec_entries, bas_entries, chron, readings, dec_essays, bas_essays
     recent = recent_items(dec_entries, bas_entries, dec_essays, bas_essays)
     if recent:
         b.append('<h2 class="subhead" id="recent">Recently added</h2><ul class="elist recent">%s</ul>%s'
-                 '<p class="feedline">Additions are also announced in the site’s <a href="%s/feed.xml">feed</a>.</p>'
+                 '<p class="feedline">To follow additions, give a feed reader this page’s address, or the <a href="%s/feed.xml">feed</a>’s.</p>'
                  % ("".join('<li><span class="d">%s · %s</span> <a class="t" href="%s">%s</a><p class="s">%s</p></li>'
                             % (esc(nice_date(d)), esc(coll if kind == "Entry" else kind + ", " + coll), href, esc(title), esc(strap))
                             for d, kind, coll, href, title, strap in recent), rewritten_line(dec_entries, bas_entries), SITE))
