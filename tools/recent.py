@@ -8,7 +8,8 @@ with `added`, the date of the commit that brought its Markdown into curiosities-
 first import does not count); an entry or period introduction carries `rewritten`, and an
 essay `revised`, when a hand has written that date into its front matter.  From those:
 
-    feed.xml                  Atom: additions and rewrites, newest first, the last 40
+    feed.xml                  Atom: additions and rewrites, newest first, the last 40,
+                              each carrying the full text (a reader need not open the site)
     index.html                the block between <!-- recent --> and <!-- /recent -->,
                               and the text inside <span class="rewritten-count">
     deccan/about.html         the text inside <span class="rewritten-count">
@@ -44,11 +45,31 @@ def sort_title(t):
     return re.sub(r"^(The|A|An)\s+", "", t, flags=re.I).lower()
 
 # ---------------------------------------------------------------- the items
+def absolute(body, home):
+    """A body with its in-page links (href="#id") made absolute, to the text edition."""
+    def sub(m):
+        eid = m.group(1)
+        where = home.get(eid)
+        return 'href="%s/text/%s/%s.html"' % (SITE, where, eid) if where else m.group(0)
+    return re.sub(r'href="#([A-Za-z0-9_-]+)"', sub, body)
+
+def entry_text(e, home):
+    parts = [absolute(e["body"], home)]
+    if e.get("story"):
+        parts.append("<h3>In the story</h3><p>%s</p>" % absolute(e["story"], home))
+    return "\n".join(parts)
+
 def items():
-    """Every dated event, newest first: dicts with date, kind, coll, title, href, summary, key."""
+    """Every dated event, newest first: dicts with date, kind, coll, title, href, summary, content, key."""
     out = []
-    def add(date, kind, coll, title, href, summary, key):
-        out.append(dict(date=date, kind=kind, coll=coll, title=title, href=href, summary=summary, key=key))
+    def add(date, kind, coll, title, href, summary, key, content):
+        out.append(dict(date=date, kind=kind, coll=coll, title=title, href=href, summary=summary, key=key, content=content))
+
+    # entry id -> the collection whose text edition holds it, for the links inside a body
+    home = {}
+    for coll, folder in (("deccan", "deccan"), ("basalt", "basalt-and-laterite")):
+        for e in load("%s/data/entries.js" % folder, root=ROOT) + load("%s/data/essays.js" % folder, root=ROOT):
+            home[e["id"]] = coll
 
     for coll, folder, name in (("deccan", "deccan", "The Deccan"), ("basalt", "basalt-and-laterite", "Basalt and Laterite")):
         entries = load("%s/data/entries.js" % folder, root=ROOT)
@@ -56,20 +77,23 @@ def items():
         essays = load("%s/data/essays.js" % folder, root=ROOT)
         for e in entries:
             href = "%s/text/%s/%s.html" % (SITE, coll, e["id"])
+            text = entry_text(e, home)
             if e.get("added"):
-                add(e["added"], "entry", name, e["title"], href, e["strap"], "%s/%s/added" % (coll, e["id"]))
+                add(e["added"], "entry", name, e["title"], href, e["strap"], "%s/%s/added" % (coll, e["id"]), text)
             if e.get("rewritten") and e["rewritten"] != e.get("added"):     # an entry written by hand from the start is an addition, not a rewrite
-                add(e["rewritten"], "rewritten", name, e["title"], href, e["strap"], "%s/%s/rewritten/%s" % (coll, e["id"], e["rewritten"]))
+                add(e["rewritten"], "rewritten", name, e["title"], href, e["strap"], "%s/%s/rewritten/%s" % (coll, e["id"], e["rewritten"]), text)
         for p in periods:
             if p.get("rewritten"):
                 add(p["rewritten"], "rewritten", name, "%s, %s – the period introduction" % (p["title"], p["years"]),
-                    "%s/text/%s/period-%d.html" % (SITE, coll, p["n"]), p["desc"], "%s/period-%d/rewritten/%s" % (coll, p["n"], p["rewritten"]))
+                    "%s/text/%s/period-%d.html" % (SITE, coll, p["n"]), p["desc"], "%s/period-%d/rewritten/%s" % (coll, p["n"], p["rewritten"]),
+                    "<p>%s</p>" % esc(p["intro"]))
         for x in essays:
             href = "%s/text/%s/%s.html" % (SITE, coll, x["id"])
+            text = absolute(x["body"], home)
             if x.get("added"):
-                add(x["added"], "essay", name, x["title"], href, x["summary"], "%s/%s/added" % (coll, x["id"]))
+                add(x["added"], "essay", name, x["title"], href, x["summary"], "%s/%s/added" % (coll, x["id"]), text)
             if x.get("revised"):
-                add(x["revised"], "revised", name, x["title"], href, x["summary"], "%s/%s/revised/%s" % (coll, x["id"], x["revised"]))
+                add(x["revised"], "revised", name, x["title"], href, x["summary"], "%s/%s/revised/%s" % (coll, x["id"], x["revised"]), text)
 
     maps_js = GAZE / "data" / "maps.js"
     if maps_js.exists():
@@ -77,7 +101,7 @@ def items():
             if m.get("added"):
                 title = "%s, %s (%s)" % (m["maker"], m.get("short") or m["title"], m.get("title_date") or m["date_label"])
                 add(m["added"], "map", "The European Gaze on India", title, "%s/european-gaze/%s.html" % (SITE, m["id"]),
-                    plain(m["brief"]), "gaze/%s/added" % m["id"])
+                    plain(m["brief"]), "gaze/%s/added" % m["id"], m["brief"] + "\n" + m["prose"])
 
     out.sort(key=lambda i: (i["coll"], sort_title(i["title"])))      # within a day: by collection, then title
     out.sort(key=lambda i: i["date"], reverse=True)                     # newest day first (a stable sort keeps the order above)
@@ -93,8 +117,9 @@ def feed(all_items):
     for i in picked:
         title = "%s: %s" % (KIND_LABEL[i["kind"]], i["title"])
         rows.append("  <entry>\n    <title>%s</title>\n    <link href=\"%s\"/>\n    <id>tag:naniwadekar.com,2026:%s</id>\n"
-                    "    <updated>%sT00:00:00Z</updated>\n    <category term=\"%s\"/>\n    <summary>%s</summary>\n  </entry>\n"
-                    % (esc(title), esc(i["href"]), esc(i["key"]), i["date"], esc(i["coll"]), esc(i["summary"])))
+                    "    <updated>%sT00:00:00Z</updated>\n    <category term=\"%s\"/>\n    <summary>%s</summary>\n"
+                    "    <content type=\"html\">%s</content>\n  </entry>\n"
+                    % (esc(title), esc(i["href"]), esc(i["key"]), i["date"], esc(i["coll"]), esc(i["summary"]), esc(i["content"])))
     text = ('<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n'
             '  <title>A Fragmented Peninsula</title>\n'
             '  <subtitle>Additions to the collections – new entries, essays and maps – and the entries rewritten by hand.</subtitle>\n'

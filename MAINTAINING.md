@@ -232,8 +232,9 @@ doubled heading.
 ### The feed and "Recently added"
 
 `feed.xml` at the root is an Atom feed of additions — new entries, essays and map
-commentaries — and of entries rewritten by hand, newest first, the last forty; every page's
-`<head>` points a feed reader at it. The front page and the text edition's front page list the
+commentaries — and of entries rewritten by hand, newest first, the last forty, each item
+carrying the whole text, so that a reader can be read in the feed reader without opening the
+site; every page's `<head>` points a feed reader at it. The front page and the text edition's front page list the
 most recent additions. All of it is built by `tools/recent.py` from dates that travel with
 the data: an entry's `added` date is the date of the commit that brought its Markdown into
 `curiosities-text` (files from the first import, 3 September 2026, have none and never count
