@@ -1,7 +1,8 @@
 /* The Deccan, 1336–1875 – single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
    Routes: #          home (timeline + periods)
            #p3        period page
-           #<entry>   entry page                                                   */
+           #<entry>   entry page
+           #<essay>   essay page (data/essays.js; the essays share the entries' address space)  */
 (function () {
   "use strict";
   var EG = "https://naniwadekar.com/european-gaze/";
@@ -14,7 +15,16 @@
     ["hyderabad", "Hyderabad", 1724, 1880], ["portuguese", "Portuguese", 1510, 1739], ["company", "East India Company", 1611, 1858], ["crown", "British Crown", 1858, 1876]];
   var E = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]; }); };
   var app = document.getElementById("app");
-  var entries = [], periods = [], byId = {}, PER = {};
+  var entries = [], periods = [], essays = [], byId = {}, essayById = {}, PER = {};
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function niceDate(iso) { var p = iso.split("-"); return (+p[2]) + " " + MONTHS[+p[1] - 1] + " " + p[0]; }
+  function textStatus(e) { return e.rewritten ? "<dt>Text</dt><dd>" + (e.added === e.rewritten ? "Written" : "Rewritten") + " by hand, " + niceDate(e.rewritten) + "</dd>" : ""; }
+  function essayList() {
+    if (!essays.length) return "";
+    return '<div class="essays measure"><p class="subhead">Essays</p><ul>' + essays.map(function (x) {
+      return '<li><a href="#' + x.id + '">' + E(x.title) + '</a><span class="s">' + E(x.summary) + '</span></li>';
+    }).join("") + '</ul></div>';
+  }
   var pol = new Set(), kind = new Set(), query = "";
 
   function mapTitle(fn) {
@@ -93,7 +103,7 @@
       '<h1 class="hero-h1">The Deccan,<br/>1336–1875</h1>' +
       '<div class="rule"></div>' +
       '<p class="lede measure">500 years in the Deccan, from the founding of Vijayanagara and the Bahmani sultanate to the Deccan Riots of 1875. A plateau where sovereignty was held as a share of the revenue rather than a line on the map, and where the power that ended that did so not on the battlefield but by audit – calling in every grant, office and hereditary right, and entering what survived in a register.</p>' +
-      '<p class="measure muted">The story is told through seven periods and eleven polities. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to a companion <a href="' + EG + '">map collection</a>. For the whole span at a glance, read the <a href="#chronology">detailed chronology</a>; for the shelf behind the entries, the <a href="#readings">bibliography</a>.</p>' +
+      '<p class="measure muted">The story is told through seven periods and eleven polities. Click a marker on the timeline or browse the periods below; every entry has its own page, with sources and links to a companion <a href="' + EG + '">map collection</a>. For the whole span at a glance, read the <a href="#chronology">detailed chronology</a>; for the shelf behind the entries, the <a href="#readings">bibliography</a>.</p>' + essayList() +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a name, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Polity</span>' + chipsPol + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap" id="tl">' + timelineSvg() + '</div>' +
@@ -242,9 +252,22 @@
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + '</ul>' + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + '</ul>' : '') + '</div>' +
       '<dl class="meta"><dt>Date</dt><dd>' + E(e.date_label) + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ', ' + E(p.years) + '</a></dd>' +
       '<dt>Polities</dt><dd>' + e.polities.map(function (x) { return POL[x]; }).join(" · ") + '</dd><dt>Kind</dt><dd>' + KIND[e.kind] + '</dd>' +
-      (e.place ? '<dt>Place</dt><dd>' + E(e.place) + '</dd>' : "") + (e.coda ? '<dt>Status</dt><dd>Coda – outside the numbered chronology</dd>' : '<dt>On the timeline</dt><dd><a href="#" data-show="' + e.id + '">Show on the timeline</a></dd>') + '</dl>' + nav + '</div>';
+      (e.place ? '<dt>Place</dt><dd>' + E(e.place) + '</dd>' : "") + (e.coda ? '<dt>Status</dt><dd>Coda – outside the numbered chronology</dd>' : '<dt>On the timeline</dt><dd><a href="#" data-show="' + e.id + '">Show on the timeline</a></dd>') + textStatus(e) + '</dl>' + nav + '</div>';
     var sh = app.querySelector("[data-show]");
     if (sh) sh.addEventListener("click", function (ev) { ev.preventDefault(); pendingShow = e.id; location.hash = ""; });
+  }
+
+  function essayView(id) {
+    var x = essayById[id];
+    setTitle(x.title + " – The Deccan, 1336–1875", x.summary);
+    var srcLi = function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + '</a></li>'; };
+    var byline = ["Essay", x.added ? "written " + niceDate(x.added) : "", x.revised ? "revised " + niceDate(x.revised) : ""].filter(Boolean).join(" · ");
+    app.innerHTML = '<div class="wrap"><p><a class="back" href="#">← The collection</a></p>' +
+      '<div class="entry-head"><h1>' + E(x.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(x.summary) + '</div></div>' +
+      '<div class="prose">' + x.body + '</div>' +
+      (x.sources && x.sources.length ? '<div class="sources"><p class="subhead">Sources</p><ul>' + x.sources.map(srcLi).join("") + '</ul></div>' : '') +
+      '<dl class="meta"><dt>Kind</dt><dd>Essay</dd>' + (x.added ? '<dt>Written</dt><dd>' + niceDate(x.added) + '</dd>' : '') + (x.revised ? '<dt>Revised</dt><dd>' + niceDate(x.revised) + '</dd>' : '') +
+      '<dt>Text edition</dt><dd><a href="https://naniwadekar.com/text/deccan/' + E(x.id) + '.html">This essay as a plain page</a></dd></dl></div>';
   }
 
   function readingsView() {
@@ -298,6 +321,7 @@
     var pm = /^p([1-7])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
+    if (essayById[h]) { essayView(h); window.scrollTo(0, 0); return; }
     home(); window.scrollTo(0, 0);
     var nf = document.createElement("p"); nf.className = "empty notfound"; nf.setAttribute("role", "status");
     nf.textContent = "There is no entry at \u201c#" + h + "\u201d \u2013 it may have been renamed. The list below is the whole collection; the search box finds an entry by name.";
@@ -315,6 +339,7 @@
     entries = res[0]; periods = res[1];
     entries.sort(function (a, b) { return a.period - b.period || (a.coda ? 1 : 0) - (b.coda ? 1 : 0) || (a.coda_order || 0) - (b.coda_order || 0) || a.year - b.year || (a.id < b.id ? -1 : 1); });
     entries.forEach(function (e) { byId[e.id] = e; }); periods.forEach(function (p) { PER[p.n] = p; });
+    essays = window.DECCAN_ESSAYS || []; essays.forEach(function (x) { essayById[x.id] = x; });
     route();
   }
   if (window.DECCAN_ENTRIES && window.DECCAN_PERIODS) start([window.DECCAN_ENTRIES, window.DECCAN_PERIODS]);

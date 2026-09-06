@@ -3,12 +3,14 @@
 
 Reads the collections' own data files -
 
-    deccan/data/{periods,entries,chronology,readings}.js
-    basalt-and-laterite/data/{periods,entries}.js
+    deccan/data/{periods,entries,chronology,readings,essays}.js
+    basalt-and-laterite/data/{periods,entries,essays}.js
 
 - and writes a plain, static, JavaScript-free edition of both collections into
-this folder: one page per entry, one per period, the chronology, the
-bibliography, and indexes by title, date, kind, polity, rock and place.
+this folder: one page per entry, one per essay, one per period, the chronology,
+the bibliography, and indexes by title, date, kind, polity, rock and place.  The
+front page lists what was added most recently (the data carries the dates) and
+the colophon counts the entries rewritten by hand.
 
 The data files are the single source of truth.  Nothing in text/deccan/ or
 text/basalt/ is ever edited by hand: edit the data, run this script again.
@@ -141,6 +143,30 @@ def figure(e, coll):
 def sort_title(title):
     return re.sub(r"^(The|A|An)\s+", "", title, flags=re.I).lower()
 
+def nice_date(iso):
+    """2026-09-07 -> 7 September 2026."""
+    d = datetime.date.fromisoformat(iso)
+    return "%d %s %d" % (d.day, d.strftime("%B"), d.year)
+
+def text_status(e):
+    """The dl row that says an entry's text is the author's: rewritten by hand, or – when the
+    date is the day the entry was added – written by hand from the start."""
+    if not e.get("rewritten"):
+        return ""
+    verb = "Written" if e.get("added") == e["rewritten"] else "Rewritten"
+    return "<dt>Text</dt><dd>%s by hand, %s</dd>" % (verb, nice_date(e["rewritten"]))
+
+def essay_li(es, href):
+    when = ("Essay · %s" % nice_date(es["added"])) if es.get("added") else "Essay"
+    return ('<li><span class="d">%s</span> <a class="t" href="%s">%s</a><p class="s">%s</p></li>'
+            % (esc(when), href, esc(es["title"]), esc(es["summary"])))
+
+def essays_section(essays, href):
+    if not essays:
+        return ""
+    return ('<section class="group essays" id="essays"><h2>Essays</h2><ul class="elist">%s</ul></section>'
+            % "".join(essay_li(x, href(x)) for x in essays))
+
 # ---------------------------------------------------------------- page shell
 NAV = [("deccan/index.html", "Deccan"), ("deccan/chronology.html", "Chronology"),
        ("deccan/reading.html", "Reading"), ("basalt/index.html", "Basalt")]
@@ -164,6 +190,7 @@ def page(rel, title, desc, body):
 <title>{title}</title>
 <link rel="stylesheet" href="{up}style.css">
 <link rel="canonical" href="{url}">
+<link rel="alternate" type="application/atom+xml" title="A Fragmented Peninsula – additions" href="{site}/feed.xml">
 <link rel="icon" href="{up}../curiosities-icon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="{up}../curiosities-icon-192.png" sizes="192x192" type="image/png">
 <meta property="og:site_name" content="A Fragmented Peninsula">
@@ -284,8 +311,34 @@ def place_meta(e, meta):
     """The entry's own place label, added to its usual meta line when the heading is the canonical name."""
     return meta(e) + " · " + e["place"]
 
+# ---------------------------------------------------------------- essays
+def build_essays(coll, coll_title, essays, illustrated):
+    """One page per essay, beside the collection's entries: text/<coll>/<id>.html."""
+    rels = []
+    for es in essays:
+        b = [crumb([("../index.html", "Text edition"), ("index.html", coll_title), (None, es["title"])])]
+        b.append('<article class="entry essay">')
+        byline = " · ".join(x for x in ["Essay", ("written %s" % nice_date(es["added"])) if es.get("added") else "",
+                                        ("revised %s" % nice_date(es["revised"])) if es.get("revised") else ""] if x)
+        b.append('<div class="head"><h1>%s</h1><p class="byline">%s</p><p class="brief">%s</p></div>'
+                 % (esc(es["title"]), esc(byline), esc(es["summary"])))
+        b.append('<div class="prose">%s</div>' % body_html(es["body"], coll))
+        if es.get("sources"):
+            b.append('<div class="sources">%s</div>' % source_list(es["sources"]))
+        dl = ['<dl class="meta">', "<dt>Kind</dt><dd>Essay</dd>"]
+        if es.get("added"):
+            dl.append("<dt>Written</dt><dd>%s</dd>" % nice_date(es["added"]))
+        if es.get("revised"):
+            dl.append("<dt>Revised</dt><dd>%s</dd>" % nice_date(es["revised"]))
+        dl.append('<dt>Illustrated site</dt><dd><a href="%s#%s">This essay in the collection</a></dd></dl>'
+                  % (illustrated, esc(es["id"])))
+        b.append("".join(dl))
+        b.append("</article>")
+        rels.append(page("%s/%s.html" % (coll, es["id"]), "%s – %s" % (es["title"], coll_title), es["summary"], "\n".join(b)))
+    return rels
+
 # ---------------------------------------------------------------- the Deccan
-def build_deccan(periods, entries, chron, readings, basalt_entries):
+def build_deccan(periods, entries, chron, readings, basalt_entries, essays):
     rels = []
     href = lambda e: e["id"] + ".html"
     per = {p["n"]: p for p in periods}
@@ -338,6 +391,7 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
             dl.append("<dt>Place</dt><dd>%s (%.3f, %.3f)</dd>" % (esc(e["place"]), e["lat"], e["lon"]))
         if e.get("coda"):
             dl.append("<dt>Status</dt><dd>Coda – outside the numbered chronology</dd>")
+        dl.append(text_status(e))
         dl.append('<dt>Illustrated site</dt><dd><a href="%sdeccan/#%s">This entry with the timeline and sketch map</a></dd>'
                   % (SITE + "/", esc(e["id"])))
         dl.append("</dl>")
@@ -449,6 +503,7 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
              '<li><a href="by-title.html">Entries A–Z</a></li><li><a href="by-date.html">Entries by date</a></li>'
              '<li><a href="by-kind.html">Entries by kind</a></li><li><a href="by-polity.html">Entries by polity</a></li>'
              '<li><a href="by-place.html">Entries by place</a></li></ul>')
+    b.append(essays_section(essays, href))
     for p in periods:
         es = [e for e in entries if e["period"] == p["n"] and not e.get("coda")]
         codas = [e for e in entries if e["period"] == p["n"] and e.get("coda")]
@@ -462,10 +517,11 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
     rels.append(page("deccan/index.html", DEC_TITLE + " – text edition",
                      "The full text of The Deccan, 1336–1875: %d entries in seven periods, with the chronology and "
                      "bibliography, as plain pages without scripts." % len(entries), "\n".join(b)))
+    rels += build_essays("deccan", DEC_TITLE, essays, SITE + "/deccan/")
     return rels
 
 # ---------------------------------------------------------------- Basalt and Laterite
-def build_basalt(periods, entries, deccan_entries):
+def build_basalt(periods, entries, deccan_entries, essays):
     rels = []
     href = lambda e: e["id"] + ".html"
     per = {p["n"]: p for p in periods}
@@ -505,6 +561,7 @@ def build_basalt(periods, entries, deccan_entries):
             dl.append("<dt>Place</dt><dd>%s (%.3f, %.3f)</dd>" % (esc(e["place"]), e["lat"], e["lon"]))
         if e.get("coda"):
             dl.append("<dt>Status</dt><dd>Coda – outside the numbered sequence</dd>")
+        dl.append(text_status(e))
         dl.append('<dt>Illustrated site</dt><dd><a href="%sbasalt-and-laterite/#%s">This entry with the deep-time band and map</a></dd>'
                   % (SITE + "/", esc(e["id"])))
         dl.append("</dl>")
@@ -569,6 +626,7 @@ def build_basalt(periods, entries, deccan_entries):
     b.append('<ul class="tools"><li><a href="by-title.html">Entries A–Z</a></li>'
              '<li><a href="by-age.html">Entries by age</a></li><li><a href="by-kind.html">Entries by kind</a></li>'
              '<li><a href="by-rock.html">Entries by rock</a></li><li><a href="by-place.html">Entries by place</a></li></ul>')
+    b.append(essays_section(essays, href))
     for p in periods:
         es = [e for e in entries if e["period"] == p["n"] and not e.get("coda")]
         codas = [e for e in entries if e["period"] == p["n"] and e.get("coda")]
@@ -582,10 +640,42 @@ def build_basalt(periods, entries, deccan_entries):
     rels.append(page("basalt/index.html", BAS_TITLE + " – text edition",
                      "The full text of Basalt and Laterite: %d entries on the geology of the Deccan, as plain pages "
                      "without scripts." % len(entries), "\n".join(b)))
+    rels += build_essays("basalt", BAS_TITLE, essays, SITE + "/basalt-and-laterite/")
     return rels
 
 # ---------------------------------------------------------------- front page and sitemap
-def build_home(dec_entries, bas_entries, chron, readings):
+def recent_items(dec_entries, bas_entries, dec_essays, bas_essays, limit=8):
+    """What was added most recently, across both collections: [(date, kind, collection label, href, title, strap)],
+    newest first.  Entries from the collection's first import carry no date and are not 'recent'."""
+    rows = []
+    for e in dec_entries:
+        if e.get("added"): rows.append((e["added"], "Entry", "The Deccan", "deccan/%s.html" % e["id"], e["title"], e["strap"]))
+    for e in bas_entries:
+        if e.get("added"): rows.append((e["added"], "Entry", "Basalt and Laterite", "basalt/%s.html" % e["id"], e["title"], e["strap"]))
+    for x in dec_essays:
+        if x.get("added"): rows.append((x["added"], "Essay", "The Deccan", "deccan/%s.html" % x["id"], x["title"], x["summary"]))
+    for x in bas_essays:
+        if x.get("added"): rows.append((x["added"], "Essay", "Basalt and Laterite", "basalt/%s.html" % x["id"], x["title"], x["summary"]))
+    rows.sort(key=lambda r: (r[2], sort_title(r[4])))     # within a day: by collection, then title
+    rows.sort(key=lambda r: r[0], reverse=True)             # newest day first
+    return rows[:limit]
+
+def rewritten_line(dec_entries, bas_entries, limit=5):
+    """One line naming the entries most recently rewritten by hand; nothing until there is one."""
+    rows = [(e["rewritten"], "deccan/%s.html" % e["id"], e["title"]) for e in dec_entries if e.get("rewritten") and e["rewritten"] != e.get("added")]
+    rows += [(e["rewritten"], "basalt/%s.html" % e["id"], e["title"]) for e in bas_entries if e.get("rewritten") and e["rewritten"] != e.get("added")]
+    rows.sort(key=lambda r: (r[0], sort_title(r[2])), reverse=True)
+    if not rows:
+        return ""
+    return ('<p class="feedline">Rewritten by hand most recently: %s.</p>'
+            % ", ".join('<a href="%s">%s</a>' % (href, esc(title)) for _, href, title in rows[:limit]))
+
+def rewritten_clause(entries):
+    """' (12 of 177 so far)' once any entry has been rewritten by hand; nothing before."""
+    n = sum(1 for e in entries if e.get("rewritten"))
+    return " (%d of %d so far)" % (n, len(entries)) if n else ""
+
+def build_home(dec_entries, bas_entries, chron, readings, dec_essays, bas_essays):
     lines = sum(len(s["items"]) for s in chron)
     books = sum(len(v) for v in readings.values())
     b = ['<div class="head"><p class="eyebrow">A Fragmented Peninsula</p><h1>The text edition</h1>'
@@ -605,19 +695,26 @@ def build_home(dec_entries, bas_entries, chron, readings):
              '<li><a href="deccan/by-place.html">Deccan entries by place</a></li>'
              '<li><a href="basalt/by-title.html">Basalt entries A–Z</a></li>'
              '<li><a href="basalt/by-age.html">Basalt entries by age</a></li></ul>')
+    recent = recent_items(dec_entries, bas_entries, dec_essays, bas_essays)
+    if recent:
+        b.append('<h2 class="subhead" id="recent">Recently added</h2><ul class="elist recent">%s</ul>%s'
+                 '<p class="feedline">Additions are also announced in the site’s <a href="%s/feed.xml">feed</a>.</p>'
+                 % ("".join('<li><span class="d">%s · %s</span> <a class="t" href="%s">%s</a><p class="s">%s</p></li>'
+                            % (esc(nice_date(d)), esc(coll if kind == "Entry" else kind + ", " + coll), href, esc(title), esc(strap))
+                            for d, kind, coll, href, title, strap in recent), rewritten_line(dec_entries, bas_entries), SITE))
     b.append('<div class="prose colophon"><h2 class="subhead">About this edition</h2>'
              '<p>These pages are generated from the collections’ own data files by <code>text/build.py</code>, '
              'and are never edited by hand. The illustrated site at <a href="%s/">naniwadekar.com</a> reads the same '
              'data: the timeline, the sketch maps, the atlas and the filters are there, and nothing here is a '
              'different version of the text. The map collection, <a href="%s">The European Gaze on India</a>, is not '
              'included, its subject being the images themselves.</p>'
-             '<p>The text itself was first drafted with AI and is being rewritten by hand as time allows; it has been '
+             '<p>The text itself was first drafted with AI and is being rewritten by hand as time allows%s; it has been '
              'cross-checked for accuracy, and each collection’s About page says how. No edition of this size can be '
              'guaranteed free of error; corrections are welcome at the address below.</p>'
              '<p>The pages carry no scripts and make no third-party requests: each loads only its own stylesheet '
              'and the site’s two typefaces, served from this domain. Saved to disk, a page falls back to the '
              'reader’s own serif.</p>'
-             '<p>Last built %s.</p></div>' % (SITE, EG, TODAY))
+             '<p>Last built %s.</p></div>' % (SITE, EG, rewritten_clause(dec_entries + bas_entries), TODAY))
     return [page("index.html", "Text edition – A Fragmented Peninsula",
                  "The Deccan, 1336–1875 and Basalt and Laterite as plain HTML pages without scripts: one address per "
                  "entry, a full chronology, a bibliography, and indexes by date, kind, polity, rock and place.",
@@ -638,15 +735,16 @@ def main():
     dec_p, dec_e = load("deccan/data/periods.js"), load("deccan/data/entries.js")
     chron, readings = load("deccan/data/chronology.js"), load("deccan/data/readings.js")
     bas_p, bas_e = load("basalt-and-laterite/data/periods.js"), load("basalt-and-laterite/data/entries.js")
+    dec_x, bas_x = load("deccan/data/essays.js"), load("basalt-and-laterite/data/essays.js")
 
     reserved = {"index", "chronology", "reading", "by-title", "by-date", "by-age", "by-kind",
                 "by-polity", "by-rock", "by-place"} | {"period-%d" % p["n"] for p in dec_p + bas_p}
-    for e in dec_e + bas_e:
+    for e in dec_e + bas_e + dec_x + bas_x:
         if e["id"] in reserved:
-            raise SystemExit("entry id %r collides with a generated page name" % e["id"])
+            raise SystemExit("id %r collides with a generated page name" % e["id"])
 
-    LINKMAP.update({e["id"]: "deccan" for e in dec_e})
-    LINKMAP.update({e["id"]: "basalt" for e in bas_e})
+    LINKMAP.update({e["id"]: "deccan" for e in dec_e + dec_x})
+    LINKMAP.update({e["id"]: "basalt" for e in bas_e + bas_x})
     global PLACES
     PLACES = Places(dec_e + bas_e)
     GAZE_TITLES.update(gaze_titles())
@@ -655,12 +753,12 @@ def main():
         if (OUT / sub).exists():
             shutil.rmtree(OUT / sub)
 
-    rels = build_deccan(dec_p, dec_e, chron, readings, bas_e)
-    rels += build_basalt(bas_p, bas_e, dec_e)
-    rels += build_home(dec_e, bas_e, chron, readings)
+    rels = build_deccan(dec_p, dec_e, chron, readings, bas_e, dec_x)
+    rels += build_basalt(bas_p, bas_e, dec_e, bas_x)
+    rels += build_home(dec_e, bas_e, chron, readings, dec_x, bas_x)
     write_sitemap(sorted(rels), git_date("deccan/data", "basalt-and-laterite/data", "text/build.py", "text/style.css"))
-    print("text edition: %d pages (%d Deccan entries, %d Basalt entries) written to %s"
-          % (len(rels), len(dec_e), len(bas_e), OUT))
+    print("text edition: %d pages (%d Deccan entries, %d Basalt entries, %d essays) written to %s"
+          % (len(rels), len(dec_e), len(bas_e), len(dec_x) + len(bas_x), OUT))
 
 if __name__ == "__main__":
     main()

@@ -166,7 +166,8 @@ window.BL_ENTRIES = [
     "label": "Lambton and the Great Trigonometrical Survey (10 April 1802)"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "closepet-granite",
@@ -487,7 +488,8 @@ window.BL_ENTRIES = [
   "related_maps": [
    "1764__Bombay__Bellin__Plan-de-Bombay.html",
    "1810__Bombay__dApres-de-Mannevillette__Plan-du-Port-de-Bombay.html"
-  ]
+  ],
+  "added": "2026-09-07"
  },
  {
   "id": "deccan-traps",
@@ -1160,7 +1162,8 @@ window.BL_ENTRIES = [
   ],
   "related_maps": [
    "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
-  ]
+  ],
+  "added": "2026-09-07"
  },
  {
   "id": "stones-of-the-forts",
@@ -1346,7 +1349,8 @@ window.BL_ENTRIES = [
   ],
   "related_maps": [
    "1893__India__Bartholomew__Land-Surface-Features.html"
-  ]
+  ],
+  "added": "2026-09-07"
  },
  {
   "id": "reading-the-rock",
@@ -1426,7 +1430,8 @@ window.BL_ENTRIES = [
    }
   ],
   "deccan": [],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "plume-debate-coda",

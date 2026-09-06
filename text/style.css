@@ -99,6 +99,13 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.9em}
 .tools.big a{font-family:'Cormorant Garamond',Georgia,serif; font-size:1.7rem}
 .tools.big span{display:block; color:var(--paper-dim); font-size:.98rem; margin-top:.2rem}
 
+/* the front page's list of what was added last, and the line under it pointing at the feed */
+.recent{margin-top:.4rem}
+.recent li{padding:.85rem 0}
+.feedline{color:var(--muted); font-size:.9rem; max-width:52em; margin:.9rem 0 0}
+/* a collection's essays, listed above its periods */
+.group.essays{margin:2.4rem 0 .6rem; max-width:52em}
+
 /* ---- periods and groups ---- */
 .period,.group{margin-top:3.4rem}
 .period-head{border-top:1px solid var(--line); padding-top:1.2rem; max-width:52em}

@@ -462,6 +462,13 @@ footer{border-top:1px solid var(--line); margin-top:5rem; padding:2.5rem clamp(1
 .elist .t{display:block; font-family:'Cormorant Garamond',serif; font-size:1.25rem; line-height:1.15; color:var(--paper); margin:.15rem 0 .25rem}
 .elist .s{font-size:.9rem; color:var(--paper-dim); margin:0}
 .elist .k{font-size:.66rem; letter-spacing:.15em; text-transform:uppercase; color:var(--accent); margin-top:.3rem}
+/* a collection's essays, listed under the introduction on the front page */
+.essays{margin:2rem 0 .6rem}
+.essays .subhead{font-size:.72rem; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); margin:0 0 .3rem}
+.essays ul{list-style:none; margin:0; padding:0}
+.essays li{border-top:1px solid var(--line); padding:.7rem 0}
+.essays li a{font-family:'Cormorant Garamond',serif; font-size:1.35rem; line-height:1.15; color:var(--paper)}
+.essays li .s{display:block; font-size:.9rem; color:var(--paper-dim); margin-top:.25rem}
 .entry-head{max-width:var(--measure)}
 /* an entry's picture: on a mat like the map plates, the caption and credit beneath */
 .entry-fig{margin:0 0 2rem; max-width:var(--measure)}

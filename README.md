@@ -10,7 +10,9 @@ that bite. This file only says what is where.
 
 ## Layout
 
-    index.html                the front page (its own self-contained styles)
+    index.html                the front page (its own self-contained styles; the
+                              "Recently added" block in it is written by the build)
+    feed.xml                  the Atom feed of additions and rewrites, generated
     404.html                  the not-found page (Pages serves only the root one)
     assets/collection.css     the stylesheet the two timeline collections share
     assets/fonts/             Cormorant Garamond and Spectral, self-hosted (OFL)
@@ -31,9 +33,9 @@ of the prose.
 ### The two timeline collections
 
 Each is a single page. `app.js` renders the timeline, the period pages, the entry
-pages and (for the Deccan) the chronology and readings from `data/`. Entry URLs
-are `#<entry-id>`, period URLs `#p1` … `#p7`; `#chronology` and `#readings` are
-the Deccan's two list pages; `about.html` is hand-written. Photographs, where an
+pages, the essays and (for the Deccan) the chronology and readings from `data/`.
+Entry and essay URLs are `#<id>`, period URLs `#p1` … `#p7`; `#chronology` and
+`#readings` are the Deccan's two list pages; `about.html` is hand-written. Photographs, where an
 entry has one, are in `img/`. The `<head>`, masthead and footer of these pages and
 their `style.css` are written by `tools/shell.py` from `assets/collection.css`
 and one table — edit those, not the copies.
@@ -46,6 +48,8 @@ and one table — edit those, not the copies.
     tools/atlas_gaze.py       the atlas's map layer, from ../european-gaze/data
     tools/atlas_places.py     the atlas's places index
     tools/atlas_coast.py      the atlas's coastline and rivers (run by hand; needs the network)
+    tools/recent.py           the feed, the front page's "Recently added" block and
+                              the rewritten-by-hand counts, from dates in the data
     tools/sitemaps.py         the sitemaps and their index, dated from git
     tools/data.py             the one parser for the window.NAME = data files
     tools/places.py           the place-name spelling rules, shared with the text edition

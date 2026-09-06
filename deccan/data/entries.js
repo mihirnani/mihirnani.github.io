@@ -458,7 +458,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1706__Deccan__Van-der-Aa-Methold__Koninkryken-van-Golconda.html"
-  ]
+  ],
+  "added": "2026-09-07"
  },
  {
   "id": "bahmani-vijayanagara-wars",
@@ -815,7 +816,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Gajapati_Empire"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "abdur-razzaq-1443",
@@ -2830,7 +2832,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Chauth"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "jinji-1690-1698",
@@ -3861,7 +3864,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Ram_Shastri_Prabhune"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "nana-phadnavis",
@@ -4235,7 +4239,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Sringeri_Sharada_Peetham"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "seringapatam-1792",
@@ -4593,7 +4598,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Ceded_Districts"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "lambton-gts-1802",
@@ -5481,7 +5487,8 @@ window.DECCAN_ENTRIES = [
     "url": "https://en.wikipedia.org/wiki/Kingdom_of_Nagpur"
    }
   ],
-  "related_maps": []
+  "related_maps": [],
+  "added": "2026-09-06"
  },
  {
   "id": "railway-bhor-ghat",
@@ -5736,7 +5743,8 @@ window.DECCAN_ENTRIES = [
   ],
   "related_maps": [
    "1893__India__Bartholomew__Land-Surface-Features.html"
-  ]
+  ],
+  "added": "2026-09-07"
  },
  {
   "id": "mysore-rendition-question",

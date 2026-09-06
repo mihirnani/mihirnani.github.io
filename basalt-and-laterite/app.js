@@ -1,7 +1,8 @@
 /* Basalt and Laterite – single-page renderer. Reads data/entries.js and data/periods.js (loaded as scripts so the page also works from a local folder).
    Routes: #          home (deep-time band + periods)
            #p3        period page
-           #<entry>   entry page                                                   */
+           #<entry>   entry page
+           #<essay>   essay page (data/essays.js; the essays share the entries' address space)  */
 (function () {
   "use strict";
   var DEC = "https://naniwadekar.com/deccan/";
@@ -16,7 +17,16 @@
   var KIND = {formation: "Formation", process: "Process", event: "Event", place: "Place", object: "Object", person: "Person", document: "Document"};
   var E = function (s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return {"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]; }); };
   var app = document.getElementById("app");
-  var entries = [], periods = [], byId = {}, PER = {};
+  var entries = [], periods = [], essays = [], byId = {}, essayById = {}, PER = {};
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function niceDate(iso) { var p = iso.split("-"); return (+p[2]) + " " + MONTHS[+p[1] - 1] + " " + p[0]; }
+  function textStatus(e) { return e.rewritten ? "<dt>Text</dt><dd>" + (e.added === e.rewritten ? "Written" : "Rewritten") + " by hand, " + niceDate(e.rewritten) + "</dd>" : ""; }
+  function essayList() {
+    if (!essays.length) return "";
+    return '<div class="essays measure"><p class="subhead">Essays</p><ul>' + essays.map(function (x) {
+      return '<li><a href="#' + x.id + '">' + E(x.title) + '</a><span class="s">' + E(x.summary) + '</span></li>';
+    }).join("") + '</ul></div>';
+  }
   var rockSel = new Set(), kindSel = new Set(), query = "";
 
   function fmtAge(a) {
@@ -151,7 +161,7 @@
       '<h1 class="hero-h1">Basalt and<br/>Laterite</h1>' +
       '<div class="rule"></div>' +
       '<p class="lede measure">Nearly four billion years of the plateau – craton and covering basins, the breakup of Gondwana, the Trap eruptions, the shaping of scarp, river and soil – ending in the landscape on which the Deccan’s human history was made.</p>' +
-      '<p class="measure muted">The story is told through seven periods, from the Peninsular Gneiss to the first geologists. Click a marker on the band or browse the periods below; every entry has its own page, with sources; where the deep history surfaces in the human record, an entry also links into the companion <a href="' + DEC + '">Deccan timeline</a>. Positions on the band are on a logarithmic scale – deep time does not fit a ruler.</p>' +
+      '<p class="measure muted">The story is told through seven periods, from the Peninsular Gneiss to the first geologists. Click a marker on the band or browse the periods below; every entry has its own page, with sources; where the deep history surfaces in the human record, an entry also links into the companion <a href="' + DEC + '">Deccan timeline</a>. Positions on the band are on a logarithmic scale – deep time does not fit a ruler.</p>' + essayList() +
       '<div class="search"><input id="q" type="search" placeholder="Search the entries – a rock, a place, a word" aria-label="Search entries" value="' + E(query) + '" autocomplete="off"></div>' +
       '<div class="filters" id="filters"><span class="fl">Material</span>' + chipsRock + '<span class="sep"></span><span class="fl">Kind</span>' + chipsKind + '<span class="sep"></span><button class="chip" data-f="clear" type="button">Clear</button></div>' +
       '<div class="tl-wrap band" id="tl">' + bandSvg() + "</div>" +
@@ -252,7 +262,20 @@
       '<div class="sources"><p class="subhead">Sources</p><ul>' + srcs + "</ul>" + (refs ? '<p class="subhead">Quick reference</p><ul>' + refs + "</ul>" : "") + "</div>" +
       '<dl class="meta"><dt>Age</dt><dd>' + E(e.date_label) + (e.age >= 1e6 ? " (about " + fmtAge(e.age) + " ago)" : "") + '</dd><dt>Period</dt><dd><a href="#p' + p.n + '">' + E(p.title) + ", " + E(p.years) + "</a></dd>" +
       "<dt>Material</dt><dd>" + e.rocks.map(function (x) { return ROCK[x]; }).join(" · ") + "</dd><dt>Kind</dt><dd>" + KIND[e.kind] + "</dd>" +
-      (e.place ? "<dt>Place</dt><dd>" + E(e.place) + "</dd>" : "") + (e.coda ? "<dt>Status</dt><dd>Coda – outside the numbered sequence</dd>" : "") + "</dl>" + nav + "</div>";
+      (e.place ? "<dt>Place</dt><dd>" + E(e.place) + "</dd>" : "") + (e.coda ? "<dt>Status</dt><dd>Coda – outside the numbered sequence</dd>" : "") + textStatus(e) + "</dl>" + nav + "</div>";
+  }
+
+  function essayView(id) {
+    var x = essayById[id];
+    setTitle(x.title + " – Basalt and Laterite", x.summary);
+    var srcLi = function (s) { return '<li><a href="' + E(s.url) + '" rel="noopener noreferrer" target="_blank">' + E(s.title) + "</a></li>"; };
+    var byline = ["Essay", x.added ? "written " + niceDate(x.added) : "", x.revised ? "revised " + niceDate(x.revised) : ""].filter(Boolean).join(" · ");
+    app.innerHTML = '<div class="wrap"><p><a class="back" href="#">← The collection</a></p>' +
+      '<div class="entry-head"><h1>' + E(x.title) + '</h1><p class="byline">' + E(byline) + '</p><div class="brief">' + E(x.summary) + "</div></div>" +
+      '<div class="prose">' + x.body + "</div>" +
+      (x.sources && x.sources.length ? '<div class="sources"><p class="subhead">Sources</p><ul>' + x.sources.map(srcLi).join("") + "</ul></div>" : "") +
+      '<dl class="meta"><dt>Kind</dt><dd>Essay</dd>' + (x.added ? "<dt>Written</dt><dd>" + niceDate(x.added) + "</dd>" : "") + (x.revised ? "<dt>Revised</dt><dd>" + niceDate(x.revised) + "</dd>" : "") +
+      '<dt>Text edition</dt><dd><a href="https://naniwadekar.com/text/basalt/' + E(x.id) + '.html">This essay as a plain page</a></dd></dl></div>';
   }
 
   function route() {
@@ -262,6 +285,7 @@
     var pm = /^p([1-7])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
+    if (essayById[h]) { essayView(h); window.scrollTo(0, 0); return; }
     home(); window.scrollTo(0, 0);
     var nf = document.createElement("p"); nf.className = "empty notfound"; nf.setAttribute("role", "status");
     nf.textContent = "There is no entry at \u201c#" + h + "\u201d \u2013 it may have been renamed. The list below is the whole collection; the search box finds an entry by name.";
@@ -279,6 +303,7 @@
     entries = res[0]; periods = res[1];
     entries.sort(function (a, b) { return a.period - b.period || (a.coda ? 1 : 0) - (b.coda ? 1 : 0) || b.age - a.age || (a.id < b.id ? -1 : 1); });
     entries.forEach(function (e) { byId[e.id] = e; }); periods.forEach(function (p) { PER[p.n] = p; });
+    essays = window.BL_ESSAYS || []; essays.forEach(function (x) { essayById[x.id] = x; });
     route();
   }
   if (window.BL_ENTRIES && window.BL_PERIODS) start([window.BL_ENTRIES, window.BL_PERIODS]);

@@ -121,8 +121,8 @@ def head(cfg, coll):
 <meta content="light dark" name="color-scheme"/>
 <title>{title}</title>
 {boot}{css}
-<link href="{url}" rel="canonical"/><meta content="{title}" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="A Fragmented Peninsula"><meta content="{desc}" property="og:description"/><meta content="website" property="og:type"/><meta content="{url}" property="og:url"/>{og_image}
-{extra}</head>""".format(desc=cfg["desc"], title=cfg["title"], boot=THEME_BOOT, css=css,
+<link href="{url}" rel="canonical"/><link href="{site}/feed.xml" rel="alternate" type="application/atom+xml" title="A Fragmented Peninsula – additions"/><meta content="{title}" property="og:title"/><meta name="twitter:card" content="summary"><meta property="og:site_name" content="A Fragmented Peninsula"><meta content="{desc}" property="og:description"/><meta content="website" property="og:type"/><meta content="{url}" property="og:url"/>{og_image}
+{extra}</head>""".format(desc=cfg["desc"], title=cfg["title"], boot=THEME_BOOT, css=css, site=SITE,
                          url=cfg["url"], og_image=og_image, extra=coll["head_extra"])
 
 def masthead(coll):

@@ -263,6 +263,21 @@
     .project-group--atlas .project h3 { font-size: clamp(1.9rem, 4.5vw, 2.7rem); }
     .project-group--atlas .project p { max-width: 720px; }
 
+    /* What was added last (written by tools/recent.py between its markers): a date, a title, a collection. */
+    .recent ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    .recent li {
+      display: grid;
+      grid-template-columns: 11rem minmax(0, 1fr);
+      gap: 0.4rem 1.5rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .recent .when { color: var(--muted); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding-top: 0.45rem; }
+    .recent .what a { font-family: "Cormorant Garamond", "Adobe Garamond Pro", Garamond, Georgia, serif; font-size: 1.35rem; text-decoration: none; }
+    .recent .what a:hover, .recent .what a:focus-visible { text-decoration: underline; }
+    .recent .where { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+    .recent .feedline { margin: 0.8rem 0 0; color: var(--muted); font-size: 0.9rem; }
+
 
 
     @media (max-width: 820px) {
@@ -280,6 +295,8 @@
         gap: 0.75rem;
       }
       .project span { padding-top: 0; }
+      .recent li { grid-template-columns: 1fr; gap: 0.1rem; }
+      .recent .when { padding-top: 0; }
     }
   </style>
 
@@ -287,6 +304,7 @@
   <link rel="icon" href="curiosities-icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="curiosities-icon-180.png">
   <link rel="canonical" href="https://naniwadekar.com/">
+  <link rel="alternate" type="application/atom+xml" title="A Fragmented Peninsula – additions" href="https://naniwadekar.com/feed.xml">
   <meta property="og:title" content="A Fragmented Peninsula: the making of the Deccan"><meta name="twitter:card" content="summary"><meta property="og:site_name" content="A Fragmented Peninsula">
   <meta property="og:description" content="History and natural history of the Deccan: old maps of India, a timeline of the Deccan, a field guide to the birds of the Sahyadris, and the making of the plateau itself.">
   <meta property="og:type" content="website">
@@ -371,9 +389,22 @@
         </div>
       </section>
 
-      <section aria-labelledby="about-title" class="about">
+      <!-- recent -->
+      <section aria-labelledby="recent-title" class="project-group recent">
+        <h2 class="group-title" id="recent-title">Recently added</h2>
+        <ul>
+          <li><span class="when">7 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/basalt/the-passes.html">The passes</a> <span class="where">Basalt and Laterite</span></span></li>
+          <li><span class="when">7 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/basalt/rain-shadow-and-famines.html">The rain shadow and the famines</a> <span class="where">Basalt and Laterite</span></span></li>
+          <li><span class="when">7 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/basalt/rift-coast-and-the-ports.html">The rift coast and the ports</a> <span class="where">Basalt and Laterite</span></span></li>
+          <li><span class="when">7 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/deccan/black-soil-and-the-bonds.html">Black soil and the bonds</a> <span class="where">The Deccan</span></span></li>
+          <li><span class="when">7 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/deccan/doab-from-below.html">The doab from below</a> <span class="where">The Deccan</span></span></li>
+          <li><span class="when">6 September 2026</span><span class="what"><a href="https://naniwadekar.com/text/basalt/charnockite-nilgiris.html">Charnockite and the Nilgiris</a> <span class="where">Basalt and Laterite</span></span></li>
+        </ul>
+        <p class="feedline">Additions are also announced in the site’s <a href="https://naniwadekar.com/feed.xml">feed</a>.</p>
+      </section>
+      <!-- /recent --><section aria-labelledby="about-title" class="about">
         <h2 id="about-title">About</h2>
-        <p><em>A Fragmented Peninsula</em> is a study site maintained by Mihir Naniwadekar: collections on the history and natural history of the Deccan. The choice of which maps and entries to cover is the collector&rsquo;s. The text was first drafted with AI and is being rewritten by hand, entry by entry, as time allows. Dates and names have been checked against the sources each entry lists, but no site of this size can be guaranteed free of error, and corrections are welcome at the address below.</p>
+        <p><em>A Fragmented Peninsula</em> is a study site maintained by Mihir Naniwadekar: collections on the history and natural history of the Deccan. The choice of which maps and entries to cover is the collector&rsquo;s. The text was first drafted with AI and is being rewritten by hand, entry by entry, as time allows<span class="rewritten-count"></span>. Dates and names have been checked against the sources each entry lists, but no site of this size can be guaranteed free of error, and corrections are welcome at the address below.</p>
         <p>Every entry in the Deccan and Basalt and Laterite is also a plain page in the <a href="https://naniwadekar.com/text/">text edition</a>: the place to look one up by name, and the address to link or cite.</p>
       </section>
 

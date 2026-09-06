@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>A Fragmented Peninsula</title>
+  <subtitle>Additions to the collections – new entries, essays and maps – and the entries rewritten by hand.</subtitle>
+  <link href="https://naniwadekar.com/"/>
+  <link rel="self" href="https://naniwadekar.com/feed.xml"/>
+  <id>https://naniwadekar.com/</id>
+  <updated>2026-09-07T00:00:00Z</updated>
+  <author><name>Mihir Naniwadekar</name></author>
+  <entry>
+    <title>New entry: The passes</title>
+    <link href="https://naniwadekar.com/text/basalt/the-passes.html"/>
+    <id>tag:naniwadekar.com,2026:basalt/the-passes/added</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <category term="Basalt and Laterite"/>
+    <summary>The escarpment is a wall with a few doors: the ghats, where a stream has cut the lava pile back far enough for a track. Everything that ever moved between the coast and the plateau – horses, armies, cotton, a railway – went through them, and the states that held them held the Deccan.</summary>
+  </entry>
+  <entry>
+    <title>New entry: The rain shadow and the famines</title>
+    <link href="https://naniwadekar.com/text/basalt/rain-shadow-and-famines.html"/>
+    <id>tag:naniwadekar.com,2026:basalt/rain-shadow-and-famines/added</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <category term="Basalt and Laterite"/>
+    <summary>The escarpment wrings the monsoon out over the Ghats and leaves the plateau behind it dry; the belt in its shadow is where the Deccan’s famines fell, and where the Company first learned to count the dead.</summary>
+  </entry>
+  <entry>
+    <title>New entry: The rift coast and the ports</title>
+    <link href="https://naniwadekar.com/text/basalt/rift-coast-and-the-ports.html"/>
+    <id>tag:naniwadekar.com,2026:basalt/rift-coast-and-the-ports/added</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <category term="Basalt and Laterite"/>
+    <summary>The west coast is a rift scar: a straight edge torn when the Seychelles left, with a narrow shelf below the escarpment and few harbours in it. Where the sea drowned a river mouth there was a port, and the ports – Goa, Chaul, Dabhol, Bhatkal, and at last Bombay – were the doors through which every outside power came.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Black soil and the bonds</title>
+    <link href="https://naniwadekar.com/text/deccan/black-soil-and-the-bonds.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/black-soil-and-the-bonds/added</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The Traps weather into a black clay that holds water and grows cotton; the survey put a price on it, the American war put a market under it, and the debt that followed the market is what the Riots Commission found in the moneylenders’ bonds.</summary>
+  </entry>
+  <entry>
+    <title>New entry: The doab from below</title>
+    <link href="https://naniwadekar.com/text/deccan/doab-from-below.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/doab-from-below/added</id>
+    <updated>2026-09-07T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The wedge between the Krishna and the Tungabhadra is the oldest ground on the plateau, granite and gneiss with a gold belt through it; the two rivers that bound it were the only lines the rock offered, which is why two centuries of states fought over the wedge and none could hold it.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Charnockite and the Nilgiris</title>
+    <link href="https://naniwadekar.com/text/basalt/charnockite-nilgiris.html"/>
+    <id>tag:naniwadekar.com,2026:basalt/charnockite-nilgiris/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="Basalt and Laterite"/>
+    <summary>The dark, greasy-looking granulite named in 1893 from Job Charnock’s tombstone; the rock of the Nilgiris, the Shevaroys and the far south, where the craton’s floor was cooked deepest.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Koyna and Killari</title>
+    <link href="https://naniwadekar.com/text/basalt/koyna-latur-earthquakes.html"/>
+    <id>tag:naniwadekar.com,2026:basalt/koyna-latur-earthquakes/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="Basalt and Laterite"/>
+    <summary>The stable plateau shook twice in living memory: at Koyna in 1967, where a new reservoir woke a fault in the Trap pile, and at Killari in 1993, where nothing had warned anyone – two earthquakes that rewrote what a craton is expected to do.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Chauth and sardeshmukhi</title>
+    <link href="https://naniwadekar.com/text/deccan/chauth-and-sardeshmukhi.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/chauth-and-sardeshmukhi/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The quarter and the tenth: the Maratha claim to a fixed share of other sovereigns’ revenue, first levied by Shivaji, chartered by the emperor in 1719, and the legal form that shared sovereignty took in the eighteenth-century Deccan.</summary>
+  </entry>
+  <entry>
+    <title>New entry: The Gajapatis of Orissa</title>
+    <link href="https://naniwadekar.com/text/deccan/gajapatis-of-orissa.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/gajapatis-of-orissa/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The Suryavamsi kings of Orissa – Kapilendra, Purushottama, Prataparudra – pushed down the Andhra coast for eighty years and were the third power of the Deccan’s first two periods, until Krishnadevaraya drove them back to the Krishna.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Munro and the Ceded Districts</title>
+    <link href="https://naniwadekar.com/text/deccan/munro-ceded-districts-1800.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/munro-ceded-districts-1800/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The districts the Nizam surrendered to the Company in 1800 as the price of its protection, and the collector who settled them field by field with the cultivator himself: the ryotwari system that Madras adopted and that Bombay argued with for fifty years.</summary>
+  </entry>
+  <entry>
+    <title>New entry: The murder of Narayanrao and Ramshastri’s verdict</title>
+    <link href="https://naniwadekar.com/text/deccan/narayanrao-murder-1773.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/narayanrao-murder-1773/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The killing of the Peshwa in his own palace on 30 August 1773, the judge who found his uncle responsible, and the council of ministers that ruled for twenty years in the name of a child born after his father’s death.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Nagpur, from Raghuji to the lapse</title>
+    <link href="https://naniwadekar.com/text/deccan/nagpur-bhonsles-lapse-1853.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/nagpur-bhonsles-lapse-1853/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>The fourth Maratha house, which ruled Berar and the Gond country from Nagpur for a century, raided Bengal, fought the Company at Sitabaldi, and ended in December 1853 as the largest of the states taken by lapse.</summary>
+  </entry>
+  <entry>
+    <title>New entry: Sringeri, 1791</title>
+    <link href="https://naniwadekar.com/text/deccan/sringeri-1791.html"/>
+    <id>tag:naniwadekar.com,2026:deccan/sringeri-1791/added</id>
+    <updated>2026-09-06T00:00:00Z</updated>
+    <category term="The Deccan"/>
+    <summary>In April 1791 Maratha irregulars sacked the Sringeri matha; the Swami turned to Tipu Sultan, whose letters ordering its restoration, found in 1916, are the best-documented act of his religious policy.</summary>
+  </entry>
+</feed>
