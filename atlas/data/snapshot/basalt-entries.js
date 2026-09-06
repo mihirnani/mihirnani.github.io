@@ -380,7 +380,7 @@ window.BL_ENTRIES = [
   "lat": 16.5,
   "lon": 73.3,
   "strap": "The supercontinent tore apart in stages, and each tearing made a piece of India’s outline; the parting from Madagascar, about 88 million years ago, drew the west coast the Ghats now stand behind.",
-  "body": "<p>Gondwana did not shatter; it unzipped. From about 180 million years ago rifts opened in sequence – Africa and South America going their way, then India, with Madagascar attached, parting from Antarctica and Australia – and each successful rift left a piece of the Indian margin behind it. The east coast is the older scar; the west coast is the younger, made when Madagascar and India separated around 88 million years ago in a rifting whose volcanic traces survive on both sides of what is now the Arabian Sea. A last parting – the Seychelles block, splitting away within a few million years of the Deccan eruptions – finished the outline.</p>\n<p>A rifted margin has a characteristic anatomy, and the Konkan coast displays it: a straight coastline, a narrow coastal plain on stretched crust, and inland a high shoulder – the uplifted rift flank that erosion has been eating back ever since. The Western Ghats of the later entries are that shoulder in retreat. The peninsula’s eastward tilt, and hence the courses of its great rivers, is inherited from this history – though not from a single moment: successive riftings, the Deccan volcanism and later uplift each renewed the west-high geometry, and erosion and river capture have kept editing the details ever since.</p>\n<p>Breakup also set the Deccan on its collision course. Freed of its neighbours, the Indian plate began moving north across the Tethys ocean at speeds – 15 to 20 centimetres a year at peak – that are among the fastest sustained motions known for a continental plate, a sprint usually attributed to the pull of subducting ocean floor ahead and, latterly, the push of the plume behind. The Deccan spent the Cretaceous as the deck of a moving ship.</p>",
+  "body": "<p>Gondwana did not shatter; it unzipped. From about 180 million years ago rifts opened in sequence – Africa and South America going their way, then India, with Madagascar attached, parting from Antarctica and Australia – and each successful rift left a piece of the Indian margin behind it. The east coast is the older scar; the west coast is the younger, made when Madagascar and India separated around 88 million years ago in a rifting whose volcanic traces survive on both sides of what is now the Arabian Sea. A last parting – the Seychelles block, splitting away within a few million years of the Deccan eruptions – finished the outline.</p>\n<p>A rifted margin has a characteristic anatomy, and <a href=\"#rift-coast-and-the-ports\">the Konkan coast</a> displays it: a straight coastline, a narrow coastal plain on stretched crust, and inland a high shoulder – the uplifted rift flank that erosion has been eating back ever since. The Western Ghats of the later entries are that shoulder in retreat. The peninsula’s eastward tilt, and hence the courses of its great rivers, is inherited from this history – though not from a single moment: successive riftings, the Deccan volcanism and later uplift each renewed the west-high geometry, and erosion and river capture have kept editing the details ever since.</p>\n<p>Breakup also set the Deccan on its collision course. Freed of its neighbours, the Indian plate began moving north across the Tethys ocean at speeds – 15 to 20 centimetres a year at peak – that are among the fastest sustained motions known for a continental plate, a sprint usually attributed to the pull of subducting ocean floor ahead and, latterly, the push of the plume behind. The Deccan spent the Cretaceous as the deck of a moving ship.</p>",
   "story": "",
   "sources": [
    {
@@ -430,6 +430,64 @@ window.BL_ENTRIES = [
    }
   ],
   "deccan": []
+ },
+ {
+  "id": "rift-coast-and-the-ports",
+  "title": "The rift coast and the ports",
+  "date_label": "c. 65 Ma; ports since antiquity",
+  "age": 65000000,
+  "period": 3,
+  "rocks": [
+   "plate",
+   "land"
+  ],
+  "kind": "place",
+  "place": "Bombay harbour, Maharashtra",
+  "lat": 18.93,
+  "lon": 72.85,
+  "strap": "The west coast is a rift scar: a straight edge torn when the Seychelles left, with a narrow shelf below the escarpment and few harbours in it. Where the sea drowned a river mouth there was a port, and the ports – Goa, Chaul, Dabhol, Bhatkal, and at last Bombay – were the doors through which every outside power came.",
+  "body": "<p>The coast that runs from Surat to Cape Comorin was made twice. The southern stretch, the Malabar and Kanara coast, is the edge Madagascar left about 88 million years ago; the northern, the Konkan, is the younger tear of the <a href=\"#gondwana-breakup\">Seychelles rifting</a> around 65 million years ago, cut through the still-warm Traps, with the Panvel flexure near Bombay tilting the lava flows down toward the sea. A rifted margin has a characteristic shape and the Konkan has it: a coastline drawn almost straight for six hundred kilometres, a coastal plain thirty to sixty kilometres wide of laterite-capped tablelands and rice valleys, and behind it the <a href=\"#great-escarpment\">escarpment</a>, the rift’s uplifted shoulder. Such a coast offers little to a ship. It has no bays worth the name; the rivers that reach it are short and steep, and their mouths, drowned by the sea’s rise since the last ice age, make creeks – estuaries with a bar across the entrance and a tidal channel behind – rather than harbours.</p>\n<p>The creeks were the ports. Sopara and Kalyan in antiquity, Thana, Chaul, Dabhol, Rajapur and Vengurla in the sultanate centuries, Goa on the Mandovi and Zuari, Karwar, Bhatkal and Honavar on the Kanara coast: each was a river mouth where a ship could lie inside the bar and a road climbed to a pass. The <a href=\"https://naniwadekar.com/deccan/#arab-horse-trade\">horse trade</a> of the Deccan timeline came in through them, which is why Bijapur and Vijayanagara fought over Goa and why Albuquerque wanted it; the Portuguese layer of the Deccan was a chain of creek forts, and the Marathas’ sea power under <a href=\"https://naniwadekar.com/deccan/#kanhoji-angre\">Kanhoji Angre</a> rested on the same geography – Kolaba, Suvarnadurg and Vijaydurg on rocky headlands and islets commanding the creeks, Sindhudurg on a rocky islet off Malvan. One place was different. At Bombay a cluster of basalt islands and a drowned valley behind them made the one deep, sheltered anchorage on the whole Konkan coast, and the Company, which had held a creek factory at Surat for half a century, understood what that meant when it took the islands from the Crown in 1668. Bombay became the port of the Deccan because the rift had made a harbour there and nowhere else.</p>\n<p>The coast still sorts its history by geology. The laterite tablelands carry the Konkan’s villages and its old forts; the creeks carry its fishing towns; and the one harbour carries the city that, in the other collection, turned the plateau’s cotton into a boom and its debts into a riot.</p>",
+  "story": "The rift decided where the sea could reach the land, and so where the outsiders came ashore: a straight coast with a dozen creeks and a single harbour. The Portuguese, the Angres and the Company are, in this reading, three ways of holding the same few doors.",
+  "sources": [
+   {
+    "title": "K. S. Valdiya, The Making of India: Geodynamic Evolution (Springer, second edition, 2016)",
+    "url": "https://doi.org/10.1007/978-3-319-25029-8"
+   },
+   {
+    "title": "Vishwas S. Kale (ed.), Landscapes and Landforms of India (Springer, Dordrecht, 2014)",
+    "url": "https://doi.org/10.1007/978-94-017-8029-2"
+   },
+   {
+    "title": "Sanjay Subrahmanyam, The Political Economy of Commerce: Southern India 1500–1650 (Cambridge University Press, 1990)",
+    "url": "https://doi.org/10.1017/CBO9780511563423"
+   },
+   {
+    "title": "Wikipedia, ‘Konkan’",
+    "url": "https://en.wikipedia.org/wiki/Konkan"
+   }
+  ],
+  "deccan": [
+   {
+    "id": "arab-horse-trade",
+    "label": "The horse trade (16th century)"
+   },
+   {
+    "id": "portuguese-goa-1510",
+    "label": "Albuquerque takes Goa (25 November 1510)"
+   },
+   {
+    "id": "company-factories",
+    "label": "Masulipatnam, Madras, Bombay (1611–1668)"
+   },
+   {
+    "id": "kanhoji-angre",
+    "label": "Kanhoji Angre (c. 1669–1729)"
+   }
+  ],
+  "related_maps": [
+   "1764__Bombay__Bellin__Plan-de-Bombay.html",
+   "1810__Bombay__dApres-de-Mannevillette__Plan-du-Port-de-Bombay.html"
+  ]
  },
  {
   "id": "deccan-traps",
@@ -590,7 +648,7 @@ window.BL_ENTRIES = [
   "lat": 19.6,
   "lon": 73.71,
   "strap": "In a leading geomorphological model, the Western Ghats are less a range that rose than an edge that retreats – the uplifted flank of the rifted coast, renewed by later uplift and eaten eastward by the rains since the coast was made.",
-  "body": "<p>Seen from the Konkan, the Ghats are a wall; seen from Pune, they are scarcely there – the land simply continues at the higher level. That asymmetry is the giveaway. The Sahyadri crest is a great escarpment of the kind that edges many rifted continents: when the Madagascar and Seychelles partings made the coast, the margin’s flank stood high, and ever since, the wet Konkan face has been cut back eastward by the extravagant erosion of the monsoon front, while the dry plateau top behind wears down hardly at all. The crest at Kalsubai – the highest point in Maharashtra – is a temporary line in a sixty-million-year retreat, generally estimated to have carried the edge scores of kilometres inland from the original rift shoulder.</p>\n<p>The escarpment’s anatomy organised everything later built on it. Trap flows of unequal hardness weather into the stepped scarps, flat-topped spurs and isolated mesas of the western Deccan; each mesa is a ready-made fort, each step a defensible line, and the passes – the ghats that named the range – are the erosion notches through which every army, caravan and railway of the human collections had to file. The rain shadow is equally structural: the same edge that catches six metres of rain on its face delivers the dry plateau behind it, the scarcity that runs through the Deccan timeline’s famines and tank-building.</p>\n<p>Geomorphologists read the escarpment with cosmogenic isotopes and river profiles now, but the essential picture stands: the Deccan’s western wall is the coast’s afterimage – made by rifting, renewed by uplift, and still in slow retreat.</p>",
+  "body": "<p>Seen from the Konkan, the Ghats are a wall; seen from Pune, they are scarcely there – the land simply continues at the higher level. That asymmetry is the giveaway. The Sahyadri crest is a great escarpment of the kind that edges many rifted continents: when the Madagascar and Seychelles partings made the coast, the margin’s flank stood high, and ever since, the wet Konkan face has been cut back eastward by the extravagant erosion of the monsoon front, while the dry plateau top behind wears down hardly at all. The crest at Kalsubai – the highest point in Maharashtra – is a temporary line in a sixty-million-year retreat, generally estimated to have carried the edge scores of kilometres inland from the original rift shoulder.</p>\n<p>The escarpment’s anatomy organised everything later built on it. Trap flows of unequal hardness weather into the stepped scarps, flat-topped spurs and isolated mesas of the western Deccan; each mesa is a ready-made fort, each step a defensible line, and the passes – the ghats that named the range – are the erosion notches through which every army, caravan and railway of the human collections had to file. The rain shadow is equally structural: the same edge that catches six metres of rain on its face delivers the dry plateau behind it, the scarcity that runs through the Deccan timeline’s famines and tank-building; <a href=\"#rain-shadow-and-famines\">the rain shadow</a> and <a href=\"#the-passes\">the passes</a> have entries of their own.</p>\n<p>Geomorphologists read the escarpment with cosmogenic isotopes and river profiles now, but the essential picture stands: the Deccan’s western wall is the coast’s afterimage – made by rifting, renewed by uplift, and still in slow retreat.</p>",
   "story": "",
   "sources": [
    {
@@ -723,7 +781,7 @@ window.BL_ENTRIES = [
   "lat": 17.93,
   "lon": 73.65,
   "strap": "As the Himalaya and Tibet rose, the seasonal reversal of winds hardened into the monsoon; the Ghats catch it, the plateau lives on the remainder.",
-  "body": "<p>The monsoon is a machine with parts: a summer-heated Asian interior that pulls oceanic air north-west across the Arabian Sea, a winter reversal that sends it back, and – a major control on its strength – the high mass of Tibet and the Himalaya, raised by the collision that began when the drifting India of this collection’s third period finally met Asia. When the machine reached its present strength is disputed. An older reading of marine sediments and fossils put a marked strengthening in the late Miocene, around ten to eight million years ago; more recent syntheses of the Cenozoic record place the establishment of monsoonal rainfall over South Asia much earlier, by the Oligocene, and read the late Miocene as a reorganisation – in several records a weakening – rather than an onset. The chronology remains open. Whatever it proves to be, by the time the Quaternary opens the peninsula’s year has its familiar shape: the rains from the south-west, the long dry, the anxious interval in between.</p>\n<p>The Deccan receives the monsoon through a filter built by its own geology. The escarpment forces the incoming air up and wrings it out – Mahabaleshwar’s crest takes some six metres of rain in a season – while the plateau in the lee lives on sixty to ninety days of what remains, delivered in bursts, varying dangerously from year to year. The rain shadow is not a defect of the system but a consequence of the wall; the same uplifted edge gives the Konkan its extravagance and the Deccan its risk.</p>\n<p>Everything organic in this site’s collections runs on this machine: the forests and birds of the Sahyadris on the wet face, and on the dry side the tanks, wells, famines and harvest calendars of the Deccan timeline – down to the failed monsoons of 1630 and 1791–92 with which that collection reckons.</p>",
+  "body": "<p>The monsoon is a machine with parts: a summer-heated Asian interior that pulls oceanic air north-west across the Arabian Sea, a winter reversal that sends it back, and – a major control on its strength – the high mass of Tibet and the Himalaya, raised by the collision that began when the drifting India of this collection’s third period finally met Asia. When the machine reached its present strength is disputed. An older reading of marine sediments and fossils put a marked strengthening in the late Miocene, around ten to eight million years ago; more recent syntheses of the Cenozoic record place the establishment of monsoonal rainfall over South Asia much earlier, by the Oligocene, and read the late Miocene as a reorganisation – in several records a weakening – rather than an onset. The chronology remains open. Whatever it proves to be, by the time the Quaternary opens the peninsula’s year has its familiar shape: the rains from the south-west, the long dry, the anxious interval in between.</p>\n<p>The Deccan receives the monsoon through a filter built by its own geology. The escarpment forces the incoming air up and wrings it out – Mahabaleshwar’s crest takes some six metres of rain in a season – while the plateau in the lee lives on sixty to ninety days of what remains, delivered in bursts, varying dangerously from year to year. The rain shadow is not a defect of the system but a consequence of the wall; the same uplifted edge gives the Konkan its extravagance and the Deccan its risk.</p>\n<p>Everything organic in this site’s collections runs on this machine: the forests and birds of the Sahyadris on the wet face, and on the dry side the tanks, wells, <a href=\"#rain-shadow-and-famines\">famines</a> and harvest calendars of the Deccan timeline – down to the failed monsoons of 1630 and 1791–92 with which that collection reckons.</p>",
   "story": "The monsoon entry connects the site’s three panels: it is made by the collision that ends this collection’s plate story, it waters the Ghats forests of the bird guide, and its failures drive the famine entries of the Deccan timeline. The plateau’s history is, among other things, sixty rain-days a year with consequences.",
   "sources": [
    {
@@ -846,6 +904,10 @@ window.BL_ENTRIES = [
    }
   ],
   "deccan": [
+   {
+    "id": "black-soil-and-the-bonds",
+    "label": "Black soil and the bonds (1847–1875)"
+   },
    {
     "id": "cotton-boom-1861",
     "label": "The cotton boom and bust (1861–1865)"
@@ -1044,6 +1106,63 @@ window.BL_ENTRIES = [
   }
  },
  {
+  "id": "the-passes",
+  "title": "The passes",
+  "date_label": "1st century BC – 1863",
+  "age": 2100,
+  "period": 7,
+  "rocks": [
+   "basalt",
+   "people"
+  ],
+  "kind": "place",
+  "place": "Nane Ghat, Pune district, Maharashtra",
+  "lat": 19.29,
+  "lon": 73.67,
+  "strap": "The escarpment is a wall with a few doors: the ghats, where a stream has cut the lava pile back far enough for a track. Everything that ever moved between the coast and the plateau – horses, armies, cotton, a railway – went through them, and the states that held them held the Deccan.",
+  "body": "<p>The <a href=\"#great-escarpment\">Great Escarpment</a> drops six hundred to a thousand metres from the plateau to the Konkan along its whole length, in steps of lava flow and scree, and for most of that length it cannot be climbed with a load. Where a west-flowing stream has bitten back into the wall, the flows step down more gently and a path can be made: these are the ghats – Thal above Kasara, Bhor above Khopoli, Nane above Junnar, Malshej, Varandha, Ambenali, Amba above Ratnagiri, Kumbharli above Chiplun, Phonda, Anmod above Goa – perhaps a dozen usable crossings in seven hundred kilometres. Each is a notch in the same rock, a few hundred metres wide, commanded by whatever stands above it.</p>\n<p>They have been the plateau’s doors since there were goods to carry. Nane Ghat has a cave at its head cut in the first century BC by the Satavahanas, with an inscription of the queen Naganika and a great stone jar at the roadside for tolls: the earliest customs post in the peninsula, on the road from the port of Sopara to the capital at Paithan. The horse trade of the <a href=\"https://naniwadekar.com/deccan/#horse-trade-origins\">Deccan timeline</a> came the same way, up from Chaul and Dabhol to Bijapur and Vijayanagara, and the sultanates’ Konkan revenue came down it. Shivaji’s state was, in one reading, a state of the passes: Rajmachi and Lohagad above the Bhor Ghat, Pratapgad above the Par and Ambenali ghats, Torna and Rajgad above the Velhe country, each fort set where it could close a door, and his Konkan campaigns were fought to hold both ends of them. The Company understood the same geography from below. Bombay’s value was that it lay under the two easiest crossings, Thal and Bhor; the road up the Bhor Ghat, opened in 1830, was among the first things the Company built in the conquered Deccan, and the <a href=\"https://naniwadekar.com/deccan/#railway-bhor-ghat\">railway incline</a> that replaced it between 1856 and 1863 – tunnels and viaducts up a gradient of one in thirty-seven, with a reversing station at the top, built by a labour force that cholera and the cliff killed in thousands – put the plateau a day from the port and the cotton of the black soil on the Lancashire market.</p>\n<p>The passes are still the seam. The expressway and the railway use Bhor, the pipelines and the pilgrims use Thal, and the older ghats are footpaths in the monsoon forest with a fort above each, the way they were when a fort was what a pass was for.</p>",
+  "story": "If the escarpment is the Deccan’s defining landform, the passes are where it was negotiated: the dozen places the rock allowed traffic, and therefore the dozen places a state could tax it, block it or pour an army through it. The Satavahana toll jar and the reversing station at Khandala are the same idea in different centuries.",
+  "sources": [
+   {
+    "title": "Vishwas S. Kale (ed.), Landscapes and Landforms of India (Springer, Dordrecht, 2014)",
+    "url": "https://doi.org/10.1007/978-94-017-8029-2"
+   },
+   {
+    "title": "Ian J. Kerr, Building the Railways of the Raj, 1850–1900 (Oxford University Press, Delhi, 1995)",
+    "url": "https://search.worldcat.org/search?q=Ian+Kerr+Building+the+Railways+of+the+Raj"
+   },
+   {
+    "title": "Stewart Gordon, The Marathas 1600–1818 (The New Cambridge History of India, II.4) (Cambridge University Press, 1993)",
+    "url": "https://doi.org/10.1017/CHOL9780521268837"
+   },
+   {
+    "title": "Wikipedia, ‘Naneghat’",
+    "url": "https://en.wikipedia.org/wiki/Naneghat"
+   },
+   {
+    "title": "Wikipedia, ‘Bhor Ghat’",
+    "url": "https://en.wikipedia.org/wiki/Bhor_Ghat"
+   }
+  ],
+  "deccan": [
+   {
+    "id": "horse-trade-origins",
+    "label": "Horses before the Portuguese (14th–15th century)"
+   },
+   {
+    "id": "shivaji-torna-1646",
+    "label": "Shivaji takes Torna (1646)"
+   },
+   {
+    "id": "railway-bhor-ghat",
+    "label": "The railway climbs the ghats (1853–1863)"
+   }
+  ],
+  "related_maps": [
+   "1856__Deccan__SDUK-Walker__India-III-Bombay.html"
+  ]
+ },
+ {
   "id": "stones-of-the-forts",
   "title": "The stones of the forts",
   "date_label": "c. AD 1100–1700",
@@ -1171,6 +1290,63 @@ window.BL_ENTRIES = [
    }
   ],
   "deccan": []
+ },
+ {
+  "id": "rain-shadow-and-famines",
+  "title": "The rain shadow and the famines",
+  "date_label": "monsoon; famines of 1630, 1791 and 1876",
+  "age": 400,
+  "period": 7,
+  "rocks": [
+   "land",
+   "people"
+  ],
+  "kind": "process",
+  "place": "Bellary, Karnataka",
+  "lat": 15.14,
+  "lon": 76.92,
+  "strap": "The escarpment wrings the monsoon out over the Ghats and leaves the plateau behind it dry; the belt in its shadow is where the Deccan’s famines fell, and where the Company first learned to count the dead.",
+  "body": "<p>The <a href=\"#great-escarpment\">Great Escarpment</a> is a wall a thousand kilometres long facing the wind. The south-west monsoon arrives off the Arabian Sea loaded with water, climbs it, and drops most of what it carries on the crest: Mahabaleshwar takes six metres of rain in a season and Agumbe more; the Konkan below takes three. Fifty kilometres east the clouds have given up most of their load, and the plateau lives on the remainder – seven hundred millimetres at Pune, half that at Sholapur, Bijapur and Bellary, falling in a few months and varying from year to year by a third or more. This is the rain shadow, and it is the geography of the Deccan’s hunger: a belt running from Khandesh through the Bombay Deccan into the Ceded Districts and the Hyderabad country, where the rains are just enough in a good year and nothing like enough in a bad one, and where the black soil that holds water so well in the wet years bakes and cracks in the dry ones.</p>\n<p>The other collection’s famines all fell in this belt. The famine of <a href=\"https://naniwadekar.com/deccan/#deccan-famine-1630\">1630–32</a> emptied Khandesh and the Ahmadnagar country; the <a href=\"https://naniwadekar.com/deccan/#doji-bara-famine-1791\">Doji Bara of 1791–92</a>, which Richard Grove has tied to the great El Niño of those years, took the Deccan and the Circars; and the famine of 1876–78, which lies just outside the timeline’s frame, killed something over five million people in the Bombay and Madras Deccan, Mysore and Hyderabad, worst of all in Bellary and its neighbours – the very districts <a href=\"https://naniwadekar.com/deccan/#munro-ceded-districts-1800\">Munro</a> had settled with the ryot eighty years before. The Famine Commission of 1880, which sat after it, drew the ‘famine tract’ of the peninsula on a map, and the tract is the rain shadow, almost line for line. What the Commission proposed – famine codes, relief works, the railways as a means of moving grain – was the first systematic attempt to administer the shadow rather than suffer it.</p>\n<p>The shadow is not fixed. Its edge moves with the strength of each monsoon, and the plateau’s drought years cluster with the failures of the Indian Ocean’s larger weather; the monsoon assembled in the <a href=\"#monsoon\">Cenozoic</a> still delivers its water on the escarpment’s terms. What the rock did was to fix where the risk would lie – on the drier, poorer, cash-assessed ground east of the crest – and what the states did, one after another, was to tax that ground as if the good years were the rule. The famine tract and the audit belt of the other collection are the same country.</p>",
+  "story": "The escarpment decided who would be hungry. Every famine in the Deccan timeline, and the Commission that finally mapped them, is an entry about this shadow – the one place where the plateau’s geology reached most directly into its politics, and did so through the weather.",
+  "sources": [
+   {
+    "title": "Richard H. Grove, ‘The Great El Niño of 1789–93 and its Global Consequences’, The Medieval History Journal 10 (2007)",
+    "url": "https://doi.org/10.1177/097194580701000203"
+   },
+   {
+    "title": "Report of the Indian Famine Commission, 1880 (HMSO, London, 1880)",
+    "url": "https://search.worldcat.org/search?q=Report+of+the+Indian+Famine+Commission+1880"
+   },
+   {
+    "title": "P. D. Clift and R. A. Plumb, The Asian Monsoon: Causes, History and Effects (Cambridge University Press, 2008)",
+    "url": "https://search.worldcat.org/search?q=Clift+Plumb+Asian+Monsoon+Causes+History+Effects"
+   },
+   {
+    "title": "Vishwas S. Kale (ed.), Landscapes and Landforms of India (Springer, Dordrecht, 2014)",
+    "url": "https://doi.org/10.1007/978-94-017-8029-2"
+   },
+   {
+    "title": "Wikipedia, ‘Great Famine of 1876–1878’",
+    "url": "https://en.wikipedia.org/wiki/Great_Famine_of_1876%E2%80%931878"
+   }
+  ],
+  "deccan": [
+   {
+    "id": "deccan-famine-1630",
+    "label": "The Deccan famine of 1630–32 (1630–1632)"
+   },
+   {
+    "id": "doji-bara-famine-1791",
+    "label": "The Doji Bara famine (1791–1792)"
+   },
+   {
+    "id": "munro-ceded-districts-1800",
+    "label": "Munro and the Ceded Districts (1800–1807)"
+   }
+  ],
+  "related_maps": [
+   "1893__India__Bartholomew__Land-Surface-Features.html"
+  ]
  },
  {
   "id": "reading-the-rock",

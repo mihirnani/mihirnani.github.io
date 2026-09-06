@@ -439,9 +439,10 @@ def build_deccan(periods, entries, chron, readings, basalt_entries):
     # ---- collection contents
     b = [crumb([("../index.html", "Text edition"), (None, DEC_TITLE)])]
     b.append('<div class="head"><p class="eyebrow">History</p><h1>%s</h1>'
-             '<p class="lede">500 years in the Deccan: from the founding of Vijayanagara and the Bahmani sultanate '
-             'to the Company takeover and the Deccan Riots of 1875. The story of a plateau where sovereignty was '
-             'repeatedly shared and inherited, until one power made itself paramount and reduced the rest to a '
+             '<p class="lede">500 years in the Deccan, from the founding of Vijayanagara and the Bahmani sultanate '
+             'to the Deccan Riots of 1875. A plateau where sovereignty was held as a share of the revenue rather '
+             'than a line on the map, and where the power that ended that did so not on the battlefield but by '
+             'audit – calling in every grant, office and hereditary right, and entering what survived in a '
              'register.</p></div>' % esc(DEC_TITLE))
     b.append('<ul class="tools"><li><a href="chronology.html">The chronology, year by year</a></li>'
              '<li><a href="reading.html">Readings – the standard scholarship</a></li>'

@@ -165,10 +165,12 @@ window.ATLAS_PLACES = [
   "deccan": [
    "munro-ceded-districts-1800"
   ],
-  "basalt": [],
+  "basalt": [
+   "rain-shadow-and-famines"
+  ],
   "lat": 15.14,
   "lon": 76.92,
-  "spread": 0
+  "spread": 0.0
  },
  {
   "key": "bengaluru",
@@ -279,6 +281,22 @@ window.ATLAS_PLACES = [
   "basalt": [],
   "lat": 26.61,
   "lon": 80.27,
+  "spread": 0
+ },
+ {
+  "key": "bombay-harbour",
+  "name": "Bombay harbour",
+  "state": "Maharashtra",
+  "kind": "place",
+  "aliases": [
+   "Bombay harbour, Maharashtra"
+  ],
+  "deccan": [],
+  "basalt": [
+   "rift-coast-and-the-ports"
+  ],
+  "lat": 18.93,
+  "lon": 72.85,
   "spread": 0
  },
  {
@@ -824,6 +842,22 @@ window.ATLAS_PLACES = [
   "spread": 0
  },
  {
+  "key": "maski",
+  "name": "Maski",
+  "state": "Karnataka",
+  "kind": "place",
+  "aliases": [
+   "Maski, Raichur district, Karnataka"
+  ],
+  "deccan": [
+   "doab-from-below"
+  ],
+  "basalt": [],
+  "lat": 15.95,
+  "lon": 76.65,
+  "spread": 0
+ },
+ {
   "key": "mudgal",
   "name": "Mudgal",
   "state": "Karnataka",
@@ -909,6 +943,22 @@ window.ATLAS_PLACES = [
   "lat": 21.16,
   "lon": 79.075,
   "spread": 0.03
+ },
+ {
+  "key": "nane-ghat",
+  "name": "Nane Ghat",
+  "state": "Maharashtra",
+  "kind": "place",
+  "aliases": [
+   "Nane Ghat, Pune district, Maharashtra"
+  ],
+  "deccan": [],
+  "basalt": [
+   "the-passes"
+  ],
+  "lat": 19.29,
+  "lon": 73.67,
+  "spread": 0
  },
  {
   "key": "nargund",
@@ -1217,6 +1267,22 @@ window.ATLAS_PLACES = [
   "basalt": [],
   "lat": 20.3,
   "lon": 76.45,
+  "spread": 0
+ },
+ {
+  "key": "sholapur",
+  "name": "Sholapur",
+  "state": "Maharashtra",
+  "kind": "place",
+  "aliases": [
+   "Sholapur, Maharashtra"
+  ],
+  "deccan": [
+   "black-soil-and-the-bonds"
+  ],
+  "basalt": [],
+  "lat": 17.68,
+  "lon": 75.91,
   "spread": 0
  },
  {
