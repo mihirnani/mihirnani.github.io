@@ -35,7 +35,6 @@
       --deccan: #8c2f32;
       --stone: #59504a;
       --atlas: #2f5f6e;
-      --textedition: #4a5d3a;
     }
 
     :root[data-theme="dark"] {
@@ -48,7 +47,6 @@
       --deccan: #d98c6a;
       --stone: #bdb2a4;
       --atlas: #7fb7c8;
-      --textedition: #a8bd91;
     }
 
     * { box-sizing: border-box; }
@@ -191,8 +189,6 @@
     .project--stone:focus-visible h3 { color: var(--stone); }
     .project--atlas:hover h3,
     .project--atlas:focus-visible h3 { color: var(--atlas); }
-    .project--text:hover h3,
-    .project--text:focus-visible h3 { color: var(--textedition); }
 
     .project:hover span,
     .project:focus-visible span { color: var(--text); }
@@ -250,17 +246,22 @@
       align-items: start;
     }
 
-    .columns + .project-group { margin-top: clamp(2.2rem, 5vw, 3.4rem); }
-
     .col { margin-top: 0; }
 
-    /* The two columns share the heading row and the top of the entry row, so both
-       columns' first entries start on the same line however many entries follow.
-       (Browsers without subgrid simply stack each column on its own, as before.) */
+    /* The two columns share their rows – the heading, then one row per entry – so the
+       entries and the rules beneath them line up across the page however long each
+       description runs. (Browsers without subgrid simply stack each column on its own.) */
     @supports (grid-template-rows: subgrid) {
-      .columns { grid-template-rows: auto auto; row-gap: 0; }
-      .col { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
+      .columns { grid-template-rows: auto auto auto; row-gap: 0; }
+      .col { display: grid; grid-template-rows: subgrid; grid-row: span 3; }
+      .col .projects { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
     }
+
+    /* The Atlas stands on its own beneath the columns: one row, full width, a size up. */
+    .project-group--atlas { margin-top: clamp(1.4rem, 3vw, 2.2rem); }
+    .project-group--atlas .projects { border-top: 0; }   /* the columns' rules above it are enough */
+    .project-group--atlas .project h3 { font-size: clamp(1.9rem, 4.5vw, 2.7rem); }
+    .project-group--atlas .project p { max-width: 720px; }
 
 
 
@@ -358,8 +359,7 @@
         </section>
       </div>
 
-      <section aria-labelledby="atlas-title" class="project-group">
-        <h2 class="group-title" id="atlas-title">Across the collections</h2>
+      <section aria-label="Across the collections" class="project-group project-group--atlas">
         <div class="projects">
           <a class="project project--atlas" href="https://naniwadekar.com/atlas/">
             <div>
@@ -368,19 +368,13 @@
             </div>
             <span aria-hidden="true">Visit &rarr;</span>
           </a>
-          <a class="project project--text" href="https://naniwadekar.com/text/">
-            <div>
-              <h3>Text edition</h3>
-              <p>One page for every entry in the Deccan and Basalt and Laterite &ndash; the place to look one up by name, the address to link or cite, and the version that works with no scripts at all.</p>
-            </div>
-            <span aria-hidden="true">Read &rarr;</span>
-          </a>
         </div>
       </section>
 
       <section aria-labelledby="about-title" class="about">
         <h2 id="about-title">About</h2>
         <p><em>A Fragmented Peninsula</em> is a study site maintained by M.C. Naniwadekar: collections on the history and natural history of the Deccan. The choice of which maps and entries to cover is the collector&rsquo;s. The text was first drafted with AI and is being rewritten by hand as time allows; it remains a work in progress. It has been cross-checked for accuracy, every entry names its sources, and each collection&rsquo;s About page says how it was put together and checked. However, no site of this size can be guaranteed free of error, and corrections are welcome at the address below.</p>
+        <p>Every entry in the Deccan and Basalt and Laterite is also a plain page in the <a href="https://naniwadekar.com/text/">text edition</a>: the place to look one up by name, the address to link or cite, and the version that works with no scripts at all.</p>
       </section>
 
     </main>
