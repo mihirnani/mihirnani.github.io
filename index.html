@@ -202,10 +202,6 @@
       outline-offset: 6px;
     }
 
-    .project-group--light .project { padding: 1.1rem 0; }
-    .project-group--light .project h3 { font-size: clamp(1.35rem, 3vw, 1.7rem); }
-    .project-group--light .project p { font-size: 0.95rem; }
-
     .about {
       margin-top: clamp(2.5rem, 6vw, 4rem);
       max-width: 690px;
@@ -264,12 +260,6 @@
     @supports (grid-template-rows: subgrid) {
       .columns { grid-template-rows: auto auto; row-gap: 0; }
       .col { display: grid; grid-template-rows: subgrid; grid-row: span 2; }
-    }
-
-    .col-intro {
-      margin: 0 0 0.8rem;
-      color: var(--muted);
-      font-size: 0.95rem;
     }
 
 
@@ -356,6 +346,14 @@
               </div>
               <span aria-hidden="true">Visit &rarr;</span>
             </a>
+
+            <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
+              <div>
+                <h3>Birds of the Sahyadris</h3>
+                <p>A field guide to the birds of the Western Ghats: species notes, classification and status for 152 species, with photographs as they arrive. Still growing, and still being checked.</p>
+              </div>
+              <span aria-hidden="true">Visit &rarr;</span>
+            </a>
           </div>
         </section>
       </div>
@@ -376,20 +374,6 @@
               <p>One page for every entry in the Deccan and Basalt and Laterite &ndash; the place to look one up by name, the address to link or cite, and the version that works with no scripts at all.</p>
             </div>
             <span aria-hidden="true">Read &rarr;</span>
-          </a>
-        </div>
-      </section>
-
-      <section aria-labelledby="progress-title" class="project-group project-group--light">
-        <h2 class="group-title" id="progress-title">Still being made</h2>
-        <p class="col-intro">Begun, and open to read, but not yet finished to the standard of the collections above.</p>
-        <div class="projects">
-          <a class="project project--birds" href="https://naniwadekar.com/sahyadri-birds/">
-            <div>
-              <h3>Birds of the Sahyadris</h3>
-              <p>A searchable field guide to the birds of the Western Ghats, with species notes, classification, status, and photographs. Still growing, and still being checked; most species are yet to be photographed.</p>
-            </div>
-            <span aria-hidden="true">Visit &rarr;</span>
           </a>
         </div>
       </section>
