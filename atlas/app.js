@@ -1,4 +1,4 @@
-/* Atlas – one map of everything. Reads the Deccan and Basalt collections' own data files, the European Gaze
+/* Atlas – one map of the three place-bound collections. Reads the Deccan and Basalt collections' own data files, the European Gaze
    map list (data/gaze.js) and the coastline (data/coast.js), all loaded as scripts so the page works from a folder. */
 (function () {
   "use strict";
