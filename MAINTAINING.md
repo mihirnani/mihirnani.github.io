@@ -99,28 +99,33 @@ not get one: the line means the text is now yours.
 
 An essay is prose at length beside a collection's entries — the place for an argument that
 needs more than an entry's page. `curiosities-text/deccan/essays/the-argument.md` is a
-stub waiting to be written; a new one is a file beside it (or in `basalt/essays/`):
+stub waiting to be written; a new one is a file beside it (or in `basalt/essays/`).
 
-    ---
-    id: the-argument           # the address: deccan/#the-argument and text/deccan/the-argument.html
-    title: Shares and the audit
-    summary: One or two plain sentences, shown under the title and in the lists.
-    draft: true                # while it is being written; remove to publish
-    sources:                   # optional, as in an entry
-      - title: …
-        url: …
-    ---
-
-    The essay: paragraphs, *emphasis*, links to entries as [text](entry-id.md), and
-    sections under `## ` headings. (Comments like those above are for this page only —
-    the front matter takes none.)
-
-An essay shares the entries' address space, so its `id` may not be an entry's. Publishing is
-removing the `draft` line; the build then lists the essay under the collection's
-introduction on its front page and above the periods in the text edition, gives it a page in
-both, dates it from git as an addition, and announces it in the feed. A later substantial
-revision is dated with `revised: YYYY-MM-DD`, which the pages show and the feed announces;
-small edits need no mark.
+1. **The front matter.** `id` matches the file name and is the address
+   (`deccan/#the-argument`, `text/deccan/the-argument.html`); it may not be an entry's id.
+   `title`; `summary`, one or two plain sentences with no italics or links, shown under the
+   title and in the lists; `draft: true` while it is being written; `sources`, optional,
+   in the shape an entry uses. No `#` comments.
+2. **The body**, below the second `---`, follows an entry's rules with one addition. A blank
+   line between every paragraph and every heading — that is how the build tells them apart.
+   The first thing is a paragraph, not a heading. Headings are `## ` lines, as many as you
+   like, nothing deeper. Italics `*so*`. A link to a Deccan entry is `[the words](entry-id.md)`,
+   the id being the file name in `deccan/entries/`; a Basalt entry or a map is linked by its
+   full address (`https://naniwadekar.com/basalt-and-laterite/#regur-black-soil`,
+   `https://naniwadekar.com/european-gaze/<map-id>.html`). No lists, block quotations,
+   footnotes or tables: the reader does not know them. Curly quotes and spaced en dashes as
+   in the rest of the collection.
+3. **While writing**, commit and push the draft as often as you like; with the `draft` line
+   in place the build ignores the file. **To see it**, delete the line, build, open
+   `text/deccan/the-argument.html` or `deccan/index.html#the-argument` from the folder, then
+   put the line back and build again (which removes it from everything); do not commit
+   in between.
+4. **To publish**, delete the `draft` line for good, build, look at the two pages and at the
+   front page (it is the top item under "Recently added"), and commit the text repository and
+   the hub in the same sitting. The essay is dated from that commit — the one that removed
+   the line, not the draft's first — and the feed announces it as "Essay: …".
+5. **Afterwards**, small fixes need nothing. A substantial revision gets a line
+   `revised: YYYY-MM-DD` in the front matter, which the page shows and the feed announces.
 
 ### Add a map to The European Gaze
 
