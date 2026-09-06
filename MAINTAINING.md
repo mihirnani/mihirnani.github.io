@@ -74,7 +74,8 @@ deploys the three site repositories on push, usually within a minute or two;
    adds the Rumsey credit row itself whenever a `Source record` row links to
    davidrumsey.com.
 4. Hang it: add the `id` to the right room's `maps` list in `curiosities-text/maps/rooms/`,
-   in order. (The sitemap is written by the build.)
+   in order. (The sitemap, and the strip of thumbnails each room shows on the front page –
+   its first four plates in hanging order – are written by the build.)
 5. Build (from the hub, so the atlas and text edition see it), check, commit, push —
    `curiosities-text`, this repository and, because its generated files changed, the hub.
 
@@ -83,7 +84,8 @@ deploys the three site repositories on push, usually within a minute or two;
 1. Save the image as `assets/images/species/<species-id>/main.webp` (further photos
    `main1.webp`, `main2.webp` …), long side about 1600 px.
 2. In `assets/data/birds.json`, find the species' `photos` list. Fill in the pending record
-   (or add one): `file`, a `caption` (a sentence, sentence case, no square brackets),
+   (or add one): `file`, its `width` and `height` in pixels (the page reserves the space and
+   never upscales a small picture), a `caption` (a sentence, sentence case, no square brackets),
    `photographer` and `license` as HTML links exactly as the live records have them, and
    `source_note` ("via Wikimedia Commons, resized" for Commons images; leave it out for your
    own). Remove `"pending": true`. For a Commons image, copy the author and licence from the

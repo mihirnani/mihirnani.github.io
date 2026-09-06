@@ -32,7 +32,7 @@ SECTIONS = [
     ("deccan",  "Deccan", SITE + "/deccan/"),
     ("gaze",    "Maps",   SITE + "/european-gaze/"),
     ("basalt",  "Basalt", SITE + "/basalt-and-laterite/"),
-  # ("birds",   "Birds",  SITE + "/sahyadri-birds/"),   # hidden until the guide is ready — uncomment to restore Birds
+    ("birds",   "Birds",  SITE + "/sahyadri-birds/"),
     ("atlas",   "Atlas",  SITE + "/atlas/"),
     ("text",    "Text",   SITE + "/text/"),
 ]
@@ -129,7 +129,7 @@ def masthead(coll):
     links = "".join('<a class="navlink" href="%s">%s</a>\n' % (href, label)
                     for key, label, href in SECTIONS if key != coll["key"])
     # Two groups, marked as such: the family of collections (muted) and this collection's own pages.
-    return ('<div class="masthead"><a class="site" href="index.html">%s</a>\n'
+    return ('<a class="skip" href="#app">Skip to content</a>\n<div class="masthead"><a class="site" href="index.html">%s</a>\n'
             '<span class="yrs">%s</span>\n'
             '<span class="nav-break" aria-hidden="true"></span>\n'
             '<nav class="nav-family" aria-label="A Fragmented Peninsula"><a class="navlink home" href="%s/">Peninsula</a>\n'
@@ -165,7 +165,7 @@ def build():
         text = original = path.read_text(encoding="utf-8")
         for pattern, replacement, what in (
                 (r"<head>.*?</head>", head(cfg, coll), "head"),
-                (r'<div class="masthead">.*?</div>', masthead(coll), "masthead"),
+                (r'(?:<a class="skip"[^>]*>[^<]*</a>\n)?<div class="masthead">.*?</div>', masthead(coll), "masthead"),
                 (r"<footer>.*?</html>\s*$", tail(coll), "footer")):
             text, n = re.subn(pattern, lambda m: replacement, text, count=1, flags=re.S)
             if n != 1:

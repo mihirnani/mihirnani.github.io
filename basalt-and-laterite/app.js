@@ -257,11 +257,15 @@
 
   function route() {
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+    if (h === "app") return;                /* the skip link's target, not a route */
     if (!h) { home(); window.scrollTo(0, 0); return; }
     var pm = /^p([1-7])$/.exec(h);
     if (pm) { periodView(+pm[1]); window.scrollTo(0, 0); return; }
     if (byId[h]) { entryView(h); window.scrollTo(0, 0); return; }
-    home();
+    home(); window.scrollTo(0, 0);
+    var nf = document.createElement("p"); nf.className = "empty notfound"; nf.setAttribute("role", "status");
+    nf.textContent = "There is no entry at \u201c#" + h + "\u201d \u2013 it may have been renamed. The list below is the whole collection; the search box finds an entry by name.";
+    var wrap = app.querySelector(".wrap"); if (wrap) wrap.insertBefore(nf, wrap.firstChild);
   }
   document.addEventListener("keydown", function (e) {
     var a = document.activeElement; if (a && a !== document.body && a !== document.documentElement) return;

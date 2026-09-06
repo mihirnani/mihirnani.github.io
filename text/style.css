@@ -144,3 +144,8 @@ footer .foot-line{display:block}
   .story{border-left:1px solid #999}
   .elist li,.chron li{break-inside:avoid}
 }
+
+/* skip link: the first thing the Tab key reaches, invisible until then */
+.skip{position:absolute; left:-999em; top:.6rem; z-index:100; padding:.5rem .9rem; background:var(--accent);
+  color:var(--ink); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; text-decoration:none}
+.skip:focus{left:.6rem; outline:2px solid var(--paper); outline-offset:2px}

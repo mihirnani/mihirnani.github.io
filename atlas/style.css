@@ -94,6 +94,10 @@ a { color: inherit; }
 
 .page--wide { width: min(100% - 2rem, 1080px); }
 
+/* skip link: the first thing the Tab key reaches, invisible until then */
+.skip { position: absolute; left: -999em; top: .6rem; z-index: 100; padding: .5rem .9rem; background: var(--accent); color: var(--bg); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; }
+.skip:focus { left: .6rem; outline: 2px solid var(--text); outline-offset: 2px; }
+
 header {
   display: flex;
   justify-content: space-between;
@@ -312,7 +316,8 @@ main { padding-top: clamp(2.5rem, 7vw, 4.5rem); }
 .map-wrap .mk { cursor: pointer; transition: opacity 0.2s; outline: none; }
 .map-wrap .mk.deccan { fill: var(--c); stroke: var(--land); stroke-width: 0.9; }
 .map-wrap .mk.basalt { fill: var(--stone); stroke: var(--land); stroke-width: 0.9; }
-.map-wrap .mk.gaze { fill: var(--map); stroke: var(--land); stroke-width: 0.8; }
+.map-wrap .mk.gaze { fill: var(--map); fill-opacity: 0.78; stroke: var(--land); stroke-width: 1; }
+.map-wrap .mk.gaze:hover, .map-wrap .mk.gaze:focus-visible { fill-opacity: 1; }
 .map-wrap .mk.dim { opacity: 0.14; }
 .map-wrap .mk:hover, .map-wrap .mk:focus-visible, .map-wrap .mk.on { stroke: var(--text); stroke-width: 1.4; opacity: 1; }
 .map-wrap .mk.hide { display: none; }

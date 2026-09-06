@@ -174,13 +174,14 @@ def page(rel, title, desc, body):
 <meta name="twitter:card" content="summary">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="mast">
 <a class="site" href="{up}index.html">A Fragmented Peninsula <span class="ed">Text edition</span></a>
 <nav class="navlinks" aria-label="Text edition">
 {nav}</nav>
 <a class="outlink" href="{site}/">Illustrated site &rarr;</a>
 </header>
-<main class="wrap">
+<main class="wrap" id="main" tabindex="-1">
 {body}
 </main>
 <footer>

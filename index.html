@@ -80,6 +80,10 @@
       border-bottom: 1px solid var(--line);
     }
 
+    /* skip link: the first thing the Tab key reaches, invisible until then */
+    .skip { position: absolute; left: -999em; top: .6rem; z-index: 100; padding: .5rem .9rem; background: var(--text); color: var(--bg); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; }
+    .skip:focus { left: .6rem; outline: 2px solid var(--muted); outline-offset: 2px; }
+
     /* The same row of small capitals every collection's masthead carries. */
     .site-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.4rem; }
     .site-nav a {
@@ -300,19 +304,20 @@
 </head>
 <body>
   <div class="page">
+    <a class="skip" href="#main">Skip to content</a>
     <header>
       <nav class="site-nav" aria-label="Collections">
         <a href="https://naniwadekar.com/deccan/">Deccan</a>
         <a href="https://naniwadekar.com/european-gaze/">Maps</a>
         <a href="https://naniwadekar.com/basalt-and-laterite/">Basalt</a>
-        <!-- <a href="https://naniwadekar.com/sahyadri-birds/">Birds</a> --> <!-- hidden until the guide is ready — uncomment to restore Birds -->
+        <a href="https://naniwadekar.com/sahyadri-birds/">Birds</a>
         <a href="https://naniwadekar.com/atlas/">Atlas</a>
         <a href="https://naniwadekar.com/text/">Text</a>
       </nav>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark</button>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section aria-labelledby="page-title" class="intro">
         <h1 id="page-title">A Fragmented Peninsula</h1>
         <p>History and natural history of the Deccan.</p>
@@ -375,7 +380,6 @@
         </div>
       </section>
 
-      <!-- hidden until the guide is ready — uncomment to restore Birds
       <section aria-labelledby="progress-title" class="project-group project-group--light">
         <h2 class="group-title" id="progress-title">Still being made</h2>
         <p class="col-intro">Begun, and open to read, but not yet finished to the standard of the collections above.</p>
@@ -389,7 +393,6 @@
           </a>
         </div>
       </section>
-      -->
 
       <section aria-labelledby="about-title" class="about">
         <h2 id="about-title">About</h2>

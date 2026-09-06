@@ -102,7 +102,7 @@
     /* Gaze region clusters first, so the entry markers flow around them */
     var byRegion = {};
     gaze.maps.forEach(function (m) { (byRegion[m.region] = byRegion[m.region] || []).push(m); });
-    var CELL = 7, GAP = 1.6;
+    var CELL = 6, GAP = 2.6;   /* tiles small and well spaced, so a big region reads as a cluster, not a slab */
     Object.keys(REGION_PT).forEach(function (reg) {
       var list = byRegion[reg]; if (!list) return;
       var cx = px(REGION_PT[reg][1]), cy = py(REGION_PT[reg][0]);
